@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Classical Mechanics and Wave Mechanics | The Live Textbook of Physical Chemistry 2</title>
+  <title>2 Classical Mechanics | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Classical Mechanics and Wave Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="2 Classical Mechanics | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Classical Mechanics and Wave Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="2 Classical Mechanics | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-04" />
+<meta name="date" content="2021-01-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -92,7 +92,12 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Classical Mechanics and Wave Mechanics</a></li>
+<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Classical Mechanics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>2.1</b> Newtonian Formulation</a></li>
+<li class="chapter" data-level="2.2" data-path="Classical.html"><a href="Classical.html#lagrangian-formulation"><i class="fa fa-check"></i><b>2.2</b> Lagrangian Formulation</a></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#hamiltonian-mechanics"><i class="fa fa-check"></i><b>2.3</b> Hamiltonian mechanics</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -114,8 +119,108 @@ MathJax.Hub.Config({
 
             <section class="normal" id="section-">
 <div id="Classical" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Classical Mechanics and Wave Mechanics</h1>
+<h1><span class="header-section-number">2</span> Classical Mechanics</h1>
+<p>Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this environment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.</p>
+<div id="newtonian-formulation" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Newtonian Formulation</h2>
+<p>In classical mechanics, a particle moving in the presence of potential <span class="math inline">\(V(q)\)</span> will experience a force given by:</p>
+<p><span class="math display" id="eq:class1">\[\begin{equation}
+F(q) = -\frac{dV(q)}{dq},
+\tag{2.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(q\)</span> represents the coordinate or the position of the particle. Hence, the particle can be described by the equations of motion:</p>
+<p><span class="math display" id="eq:class2">\[\begin{equation}
+\frac{dp}{dt} = F(q) = -\frac{dV (q)}{dq},\quad \frac{dq}{dt} = \frac{p}{m}.
+\tag{2.2}
+\end{equation}\]</span></p>
+<p>For example, when a particle is attached to a spring and moves along a frictionless surface, the force the particle experiences is <span class="math inline">\(F(q) = -kq\)</span> where <span class="math inline">\(k\)</span> is the spring constant. Then the equations of motion of this particle are</p>
+<p><span class="math display" id="eq:class3">\[\begin{equation}
+\frac{dp}{dt} =\dot{p}=-kq,\quad \frac{dq}{dt} =\dot{q}=p/m
+\tag{2.3}
+\end{equation}\]</span></p>
+<p>Given <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> at some initial time <span class="math inline">\(t_0\)</span>, one can integrate <a href="Classical.html#eq:class2">(2.2)</a> or <a href="Classical.html#eq:class3">(2.3)</a> to obtain <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> for all later time. Notice that only two variables <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are sufficient to describe the state of a particle. These equations of motion are essentially derived using Newton’s law. However, there are at least two other methods of deriving these equations of motion, which are described below.</p>
+</div>
+<div id="lagrangian-formulation" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Lagrangian Formulation</h2>
+<p>Another way to derive the equations of motion for classical mechanics is via the use of the Lagrangian and the principle of least action. The Lagrangian formulation is obtained by starting from the definition of the Lagrangian of the system:</p>
+<p><span class="math display" id="eq:lag1">\[\begin{equation}
+L = K - V,
+\tag{2.4}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(K\)</span> is the kinetic energy, and <span class="math inline">\(V\)</span> is the potential energy. Both are expressed in terms of coordinates <span class="math inline">\((q,\dot{q}\)</span>) where <span class="math inline">\(q\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}_{}\)</span> is the position vector and <span class="math inline">\(\dot{q}\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}_{}\)</span> is the velocity vector. Notice that for a fixed time, <span class="math inline">\(t\)</span>, <span class="math inline">\(q\)</span> and <span class="math inline">\(\dot{q}\)</span> are independent variables, since <span class="math inline">\(\dot{q}\)</span> cannot be derived from <span class="math inline">\(q\)</span> alone.</p>
+<p>The time integral of the Lagrangian is called the <strong>action</strong>, and is defined as:</p>
+<p><span class="math display" id="eq:lag2">\[\begin{equation}
+S = \int_{t_1}^{t_2} L\, dt,
+\tag{2.5}
+\end{equation}\]</span></p>
+<p>which is a functional: it takes in the Lagrangian function for all times between <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> and returns a scalar value. The equations of motion can be derived from the principle of least action,<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> which states that the true evolution of a system <span class="math inline">\(q(t)\)</span> described by the coordinate <span class="math inline">\(q\)</span> between two specified states <span class="math inline">\(q_1 = q(t_1)\)</span> and <span class="math inline">\(q_2 = q(t_2)\)</span> at two specified times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is a stationary point of the action functional. For a stationary point:</p>
+<p><span class="math display" id="eq:lag3">\[\begin{equation}
+\delta     S = \frac{dS}{dq}= 0
+\tag{2.6}
+\end{equation}\]</span></p>
+<p>Requiring that the true trajectory <span class="math inline">\(q(t)\)</span> be a stationary point of the action functional <span class="math inline">\(S\)</span> we obtain the equation of motion. This can be achieved applying classical variational calculus to the variation of the action integral <span class="math inline">\(S\)</span> under perturbations of the path <span class="math inline">\(q(t)\)</span> (eq. <a href="Classical.html#eq:lag3">(2.6)</a>). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p><span class="math display" id="eq:lag4">\[\begin{equation}
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
+\tag{2.7}
+\end{equation}\]</span></p>
+<p>Figure XXX [take this from wikipedia <a href="https://en.wikipedia.org/wiki/Hamilton%27s_principle" class="uri">https://en.wikipedia.org/wiki/Hamilton%27s_principle</a>]</p>
+</div>
+<div id="hamiltonian-mechanics" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Hamiltonian mechanics</h2>
+<p>A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum is defined in terms of the Lagrangian and the coordinates <span class="math inline">\((q,\dot{q})\)</span>:</p>
+<p><span class="math display" id="eq:ham1">\[\begin{equation} 
+p = \frac{\partial L}{\partial\dot q}.
+\tag{2.8}
+\end{equation}\]</span></p>
+<p>The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p><span class="math display" id="eq:ham2">\[\begin{equation} 
+H(p,q) = p\dot{q} - L(q,\dot{q}),
+\tag{2.9}
+\end{equation}\]</span></p>
+<p>The Lagrangian equation of motion becomes a pair of equations known as the Hamiltonian system of equations:</p>
+<p><span class="math display" id="eq:ham3">\[\begin{equation} 
+\begin{aligned}
+\dot{p}=\frac{dp}{dt} &amp;= -\frac{\partial H}{\partial q} \\
+\dot{q}=\frac{dq}{dt} &amp;= +\frac{\partial H}{\partial p},
+\end{aligned}
+\tag{2.10}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(H=H(q,p,t)\)</span> is the Hamiltonian of the system, which often corresponds to its total energy. For a closed system, it is the sum of the kinetic and potential energy in the system:</p>
+<p><span class="math display" id="eq:hamdef">\[\begin{equation}
+H = K + V.
+\tag{2.11}
+\end{equation}\]</span></p>
+<p>Notice the difference between the Hamiltonian, eq. <a href="Classical.html#eq:hamdef">(2.11)</a>, and the Lagrangian, eq. <a href="Classical.html#eq:lag1">(2.4)</a>. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton’s second law, the time evolutions of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton’s equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.</p>
+<blockquote>
 
+<div class="example">
+<p><span id="exm:hamex1" class="example"><strong>Example 2.1  </strong></span><em>Basic Interpretation of Hamiltonian Mechanics</em></p>
+<p>A simple interpretation of Hamiltonian mechanics comes from its application on a one-dimensional system consisting of one particle of mass <span class="math inline">\(m\)</span>. The Hamiltonian can represent the total energy of the system, which is the sum of kinetic and potential energy.</p>
+<p><span class="math display" id="eq:ham4">\[\begin{equation}
+\begin{aligned}
+H &amp;= K+V \\
+K &amp;={\frac {p^{2}}{2m}},\quad V=V(q),
+\end{aligned}
+\tag{2.12}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(q\)</span> is the space coordinate and <span class="math inline">\(p=m\dot{q}\)</span> is the momentum. Then
+<span class="math inline">\(k\)</span> is a function of <span class="math inline">\(p\)</span> alone, while <span class="math inline">\(V\)</span> is a function of <span class="math inline">\(q\)</span> alone.</p>
+<p>In this example, the time derivative of the momentum <span class="math inline">\(p\)</span> equals the Newtonian force, and so the first Hamilton equation means that the force equals the negative gradient of potential energy:</p>
+<p><span class="math display" id="eq:ham5">\[\begin{equation}
+\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial V(q)}{\partial q},
+\tag{2.13}
+\end{equation}\]</span></p>
+<p>which is exactly the first equation of motion in eq. <a href="Classical.html#eq:class2">(2.2)</a> of Newtonian mechanics. Notice that this equaiton could have been easily obtained in the Lagrangian formulation by writing the Lagrangian <a href="Classical.html#eq:lag1">(2.4)</a>, and using the Euler-Lagrange equation, eq. <a href="Classical.html#eq:lag4">(2.7)</a>.
+The time derivative of <span class="math inline">\(q\)</span> is the velocity, and so the second Hamilton equation means that the particle’s velocity equals the derivative of its kinetic energy with respect to its momentum:</p>
+<p><span class="math display" id="eq:ham5">\[\begin{equation}
+\text{Velocity:}\qquad \frac{dq}{dt} = \frac{\partial K}{\partial p} = \frac{\partial \left(\frac{p^2}{2m}\right)}{\partial p} = \frac{p}{m},
+\tag{2.13}
+\end{equation}\]</span></p>
+<p>which is exactly the second equation of motion in eq. <a href="Classical.html#eq:class2">(2.2)</a> of Newtonian mechanics.</p>
+</div>
+</blockquote>
+
+</div>
 </div>
 
 
@@ -124,6 +229,15 @@ MathJax.Hub.Config({
 
 
 
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Sometimes also called principle of stationary action, or variational principle, or Hamilton’s principle.<a href="Classical.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found <a href="https://en.wikipedia.org/wiki/Euler–Lagrange_equation">here</a>.<a href="Classical.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>We have already encountered Legendre transform in <a href="https://peverati.github.io/pchem1/Potentials.html#thermpot">The Live Textbook of Physical Chemistry 1</a> when transforming from the thermodynamic energy to any of the other thermodynamic potentials.<a href="Classical.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
             </section>
 
           </div>
