@@ -1,0 +1,138 @@
+# The Schrödinger Equation {#Schrodinger}
+
+In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger's method involves partial differential equations, whereas Heisenberg's method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger's equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.
+
+## The Time-Independent Schrödinger Equation
+
+We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:
+
+\begin{equation}
+\psi(x,t)=\exp[i(kx-\omega t)],
+(\#eq:sch1)
+\end{equation}
+
+where $x$ is the position, $t$ is time, $k=\frac{2\pi}{\lambda}$ is the wave vector, and $\omega=2\pi\nu$ is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of eq. \@ref(eq:sch1) with respect to the location, which are:
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial \psi}{\partial x} &=ik\exp[i(kx-\omega t)] = ik\psi, \\
+\frac{\partial^2 \psi}{\partial x^2} &=i^2k^2\exp[i(kx-\omega t)] = -k^2\psi,
+\end{aligned}
+(\#eq:sch2)
+\end{equation}
+
+where we have used the fact that $i^2=-1$. 
+
+Assuming that particles behaves as wave—as proven by de Broglie's±we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}/{\hbar}$ to obtain:
+
+\begin{equation}
+\frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
+(\#eq:sch3)
+\end{equation}
+
+which can be rearranged to:
+
+\begin{equation}
+p^2 \psi = -\hbar^2 \frac{\partial^2 \psi}{\partial x^2}.
+(\#eq:sch4)
+\end{equation}
+
+The total energy associated with a wave moving in space is simply the sum of its kinetic and potential energies:
+
+\begin{equation}
+E = \frac {p^{2}}{2m} + V(x),
+(\#eq:sch5)
+\end{equation}
+
+from which we can obtain:
+
+\begin{equation}
+p^2 = 2m[E - V(x)],
+(\#eq:sch6)
+\end{equation}
+
+which we can then replace into eq. \ref(eq:sch4) to obtain:
+
+\begin{equation}
+2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
+(\#eq:sch7)
+\end{equation}
+
+which can then be rearranged to the famous **time-independent Schrödinger equation (TISEq)**:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E\psi,
+(\#eq:TISEq)
+\end{equation}
+
+A two-body problem can also be treated by this equation if the mass $m$ is replaced with a reduced mass $\mu = \frac{m_1 m_2}{m_1+m_2}$.
+
+
+## The Time-Dependent Schrödinger Equation
+
+Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:
+
+\begin{equation}
+i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
+(\#eq:TDSEq)
+\end{equation}
+
+where $V \in \mathbb{R}^{n}$ represents the potential energy of the system.
+Obviously, the time-dependent equation can be used to derive the time-independent equation. If we write the wavefunction as a product of spatial and temporal terms,  $\psi(x, t) = \psi(x) f(t)$, then equation \@ref(eq:TDSEq) becomes: 
+
+\begin{equation}
+\psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
+(\#eq:TDSEq2)
+\end{equation}
+
+which can be rearranged to:
+
+\begin{equation}
+\frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
+(\#eq:TDSEq3)
+\end{equation}
+
+Since the left-hand side of eq. \@ref(eq:TDSEq3) is a function of $t$ only and the right hand side is a function of $x$ only, the two sides must equal a constant. If we tentatively designate this constant $E$ (since the right-hand side clearly must have the dimensions of energy), then we extract two ordinary differential equations, namely:
+
+\begin{equation}
+\frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
+(\#eq:TDSEq4)
+\end{equation}
+
+and:
+\begin{equation}
+-\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x) \psi(x) =
+E \psi(x).
+(\#eq:TDSEq5)
+\end{equation}
+
+The latter equation is the TISEq. The former equation is easily solved to yield 
+
+\begin{equation}
+f(t) = e^{-iEt / \hbar}
+(\#eq:TDSEq6)
+\end{equation}
+
+The solutions of eq. \@ref(eq:TDSEq6), $f(t)$, are purely oscillatory, since $f(t)$ never changes in magnitude. Thus if:
+
+\begin{equation}
+\psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
+(\#eq:TDSEq6)
+\end{equation}
+
+then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity  $\vert \psi(x, t) \vert^2$ is time independent, as we can easily show: 
+
+\begin{equation}
+\vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
+\exp\left(\frac{iEt}{\hbar}\right)\exp\left(\frac{-iEt}{\hbar}\right)=
+\psi^{*}(x) \psi(x).
+(\#eq:TDSEq7)
+\end{equation}
+
+Wave functions of the form of eq. \@ref(eq:TDSEq6) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
+Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](A Brief Review of 
+Elementary Quantum Chemistry).]
+
+\begin{equation}
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
+\end{equation}

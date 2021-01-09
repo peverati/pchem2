@@ -28,12 +28,50 @@ E = n h \nu
 (\#eq:uvcat)
 \end{equation}
 
-Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter $h$. Planck found that for  $h = 6.626 \times 10^{-34}$ J s, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
+Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter $h$. Planck found that for  $h = 6.626 \times 10^{-34} \; \text{J s}$, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
 ## The Photoelectric Effect
 
 In 1886 and 1887, Heinrich Hertz discovered that ultraviolet light can cause electrons to be ejected from a metal surface. According to the classical wave theory of light, the intensity of the light determines the amplitude of the wave, and so a greater light intensity should cause the electrons on the metal to oscillate more violently and to be ejected with a greater kinetic energy. In contrast, the experiment showed that the kinetic energy of the ejected electrons depends on the frequency of the light. The light intensity affects only the number of ejected electrons and not their kinetic energies.
 Einstein tackled the problem of the photoelectric effect in 1905. Instead of assuming that the electronic oscillators had energies given by Planck's formula, eq. \@ref(eq:uvcat), Einstein assumed that the radiation itself consisted of packets of energy $E = h \nu$, which are now called photons. Einstein successfully explained the photoelectric effect using this assumption, and he calculated a value of $h$ close to that obtained by Planck.
 
-Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume ($C_v$) of a crystal is $3 R$, where $R$ is the molar gas constant. This works well for high temperatures, but for low temperatures $C_v$ actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to $E = n h \nu$, Planck's quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).^[The previous 2 sections were adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](A Brief Review of 
+Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume ($C_V$) of a crystal is $3 R$, where $R$ is the molar gas constant. This works well for high temperatures, but for low temperatures $C_V$ actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to $E = n h \nu$, Planck's quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).
+
+## Wave-Particle Duality
+
+Einstein had shown that the momentum of a photon is 
+
+\begin{equation}
+p = \frac{h}{\lambda}.
+(\#eq:wp1)
+\end{equation}
+
+This can be easily shown as follows. Assuming $E = h \nu$ for a photon and  $\lambda \nu = c$ for an electromagnetic wave, we obtain 
+
+\begin{equation}
+E = \frac{h c}{\lambda}
+(\#eq:wp2)
+\end{equation}
+
+Now we use Einstein's relativity result $E = m c^2$ to find 
+\begin{equation}
+\lambda = \frac{h}{mc}
+(\#eq:wp3)
+\end{equation}
+
+which is equivalent to eq. \@ref(eq:wp1). Note that $m$ refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy $h \nu$), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \@ref(eq:wp1) as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.^[The previous 3 sections were adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](A Brief Review of 
 Elementary Quantum Chemistry).]
+
+Rewriting the previous equations in terms of the wave vector, $k=\frac{2\pi}{\lambda}$, and the angular frequency, $\omega=2\pi\nu$, we obtain the following two equations
+
+\begin{equation}
+\begin{aligned}
+p &= \hbar k \\
+E &= \hbar \omega,
+\end{aligned}
+(\#eq:wp1b)
+\end{equation}
+
+which are known as **de Broglie's equations**. We will use those equation to develop wave mechanics in the next chapters.
+
+

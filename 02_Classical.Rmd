@@ -1,7 +1,7 @@
 # Classical Mechanics {#Classical}
 
 
-Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this environment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.
+Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this envirgonment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.
 
 ## Newtonian Formulation
 In classical mechanics, a particle moving in the presence of potential $V(q)$ will experience a force given by:
@@ -35,7 +35,7 @@ L = K - V,
 (\#eq:lag1)
 \end{equation}
 
-where $K$ is the kinetic energy, and $V$ is the potential energy. Both are expressed in terms of coordinates $(q,\dot{q}$) where $q$ $\in$ $\mathbb{R}^{n}_{}$ is the position vector and  $\dot{q}$ $\in$ $\mathbb{R}^{n}_{}$ is the velocity vector. Notice that for a fixed time, $t$, $q$ and $\dot{q}$ are independent variables, since $\dot{q}$ cannot be derived from $q$ alone. 
+where $K$ is the kinetic energy, and $V$ is the potential energy. Both are expressed in terms of coordinates $(q,\dot{q}$) where $q$ $\in$ $\mathbb{R}^{n}$ is the position vector and  $\dot{q}$ $\in$ $\mathbb{R}^{n}$ is the velocity vector. Notice that for a fixed time, $t$, $q$ and $\dot{q}$ are independent variables, since $\dot{q}$ cannot be derived from $q$ alone. 
 
 The time integral of the Lagrangian is called the **action**, and is defined as:
 
@@ -51,7 +51,7 @@ which is a functional: it takes in the Lagrangian function for all times between
 (\#eq:lag3)
 \end{equation}
 
-Requiring that the true trajectory $q(t)$ be a stationary point of the action functional $S$ we obtain the equation of motion. This can be achieved applying classical variational calculus to the variation of the action integral $S$ under perturbations of the path $q(t)$ (eq. \@ref(eq:lag3)). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:^[The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found [here](https://en.wikipedia.org/wiki/Euler–Lagrange_equation).]
+Requiring that the true trajectory $q(t)$ be a stationary point of the action functional $S$ we obtain the equation of motion (figure \@ref(fig:Fig1c2)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) by user Maschen, and distributed under CC0 license). This can be achieved applying classical variational calculus to the variation of the action integral $S$ under perturbations of the path $q(t)$ (eq. \@ref(eq:lag3)). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:^[The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found [here](https://en.wikipedia.org/wiki/Euler–Lagrange_equation).]
 
 \begin{equation}
 \frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
@@ -59,9 +59,9 @@ Requiring that the true trajectory $q(t)$ be a stationary point of the action fu
 \end{equation}
 
 
-Figure XXX [take this from wikipedia https://en.wikipedia.org/wiki/Hamilton%27s_principle]
-
-
+```{r Fig1c2, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Principle of least action: As the system evolves, q traces a path through configuration space (only some are shown). The path taken by the system (red) has a stationary action under small changes in the configuration of the system.'}
+knitr::include_graphics('./img/OEP_wiki1.png')
+```
 
 ## Hamiltonian mechanics
 
@@ -132,3 +132,5 @@ The time derivative of $q$ is the velocity, and so the second Hamilton equation 
 which is exactly the second equation of motion in eq. \@ref(eq:class2) of Newtonian mechanics.
 
 ```
+
+

@@ -105,8 +105,23 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{04 January 2021}
+\date{08 January 2021}
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
 \begin{document}
 \maketitle
 
@@ -181,8 +196,7 @@ Quantum mechanics is an important intellectual achievement of the 20th century. 
 Quantum mechanics has played an important role in photonics, quantum electronics, and micro-electronics. But many more emerging technologies require the understanding of quantum mechanics; and hence, it is important that scientists and engineers understand quantum mechanics better. One area is nano-technologies due to the recent advent of nano-fabrication techniques. Consequently, nano-meter size systems are more common place. In electronics, as transistor devices become smaller, how the electrons move through the device is quite different from when the devices are bigger: nano-electronic transport is quite different from micro-electronic transport.
 The quantization of electromagnetic field is important in the area of nano-optics and quantum optics. It explains how photons interact with atomic systems or materials. It also allows the use of electromagnetic or optical field to carry quantum information. Moreover, quantum mechanics is also needed to understand the interaction of photons with materials in solar cells, as well as many topics in material science.
 When two objects are placed close together, they experience a force called the Casimir force that can only be explained by quantum mechanics. This is important for the understanding of micro/nano-electromechanical sensor systems (M/NEMS). Moreover, the understanding of spins is important in spintronics, another emerging technology where giant magneto-resistance, tunneling magneto-resistance, and spin transfer torque are being used.
-Quantum mechanics is also giving rise to the areas of quantum information, quantum 1
-2 Quantum Mechanics Made Simple communication, quantum cryptography, and quantum computing. It is seen that the richness
+Quantum mechanics is also giving rise to the areas of quantum information, quantum communication, quantum cryptography, and quantum computing. It is seen that the richness
 of quantum physics will greatly affect the future generation technologies in many aspects.
 
 \hypertarget{quantum-mechanics-is-bizarre}{%
@@ -206,7 +220,7 @@ E = n h \nu
 \label{eq:uvcat}
 \end{equation}
 
-Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter \(h\). Planck found that for \(h = 6.626 \times 10^{-34}\) J s, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
+Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter \(h\). Planck found that for \(h = 6.626 \times 10^{-34} \; \text{J s}\), the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
 \hypertarget{the-photoelectric-effect}{%
 \section{The Photoelectric Effect}\label{the-photoelectric-effect}}
@@ -214,9 +228,358 @@ Using statistical mechanics, Planck derived an equation similar to the Rayleigh-
 In 1886 and 1887, Heinrich Hertz discovered that ultraviolet light can cause electrons to be ejected from a metal surface. According to the classical wave theory of light, the intensity of the light determines the amplitude of the wave, and so a greater light intensity should cause the electrons on the metal to oscillate more violently and to be ejected with a greater kinetic energy. In contrast, the experiment showed that the kinetic energy of the ejected electrons depends on the frequency of the light. The light intensity affects only the number of ejected electrons and not their kinetic energies.
 Einstein tackled the problem of the photoelectric effect in 1905. Instead of assuming that the electronic oscillators had energies given by Planck's formula, eq. \eqref{eq:uvcat}, Einstein assumed that the radiation itself consisted of packets of energy \(E = h \nu\), which are now called photons. Einstein successfully explained the photoelectric effect using this assumption, and he calculated a value of \(h\) close to that obtained by Planck.
 
-Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume (\(C_v\)) of a crystal is \(3 R\), where \(R\) is the molar gas constant. This works well for high temperatures, but for low temperatures \(C_v\) actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to \(E = n h \nu\), Planck's quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).\footnote{The previous 2 sections were adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{A\%20Brief\%20Review\%20of\%20Elementary\%20Quantum\%20Chemistry}{here}.}
+Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume (\(C_V\)) of a crystal is \(3 R\), where \(R\) is the molar gas constant. This works well for high temperatures, but for low temperatures \(C_V\) actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to \(E = n h \nu\), Planck's quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).
+
+\hypertarget{wave-particle-duality}{%
+\section{Wave-Particle Duality}\label{wave-particle-duality}}
+
+Einstein had shown that the momentum of a photon is
+
+\begin{equation}
+p = \frac{h}{\lambda}.
+\label{eq:wp1}
+\end{equation}
+
+This can be easily shown as follows. Assuming \(E = h \nu\) for a photon and \(\lambda \nu = c\) for an electromagnetic wave, we obtain
+
+\begin{equation}
+E = \frac{h c}{\lambda}
+\label{eq:wp2}
+\end{equation}
+
+Now we use Einstein's relativity result \(E = m c^2\) to find
+\begin{equation}
+\lambda = \frac{h}{mc}
+\label{eq:wp3}
+\end{equation}
+
+which is equivalent to eq. \eqref{eq:wp1}. Note that \(m\) refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy \(h \nu\)), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \eqref{eq:wp1} as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.\footnote{The previous 3 sections were adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{A\%20Brief\%20Review\%20of\%20Elementary\%20Quantum\%20Chemistry}{here}.}
+
+Rewriting the previous equations in terms of the wave vector, \(k=\frac{2\pi}{\lambda}\), and the angular frequency, \(\omega=2\pi\nu\), we obtain the following two equations
+
+\begin{equation}
+\begin{aligned}
+p &= \hbar k \\
+E &= \hbar \omega,
+\end{aligned}
+\label{eq:wp1b}
+\end{equation}
+
+which are known as \textbf{de Broglie's equations}. We will use those equation to develop wave mechanics in the next chapters.
 
 \hypertarget{Classical}{%
-\chapter{Classical Mechanics and Wave Mechanics}\label{Classical}}
+\chapter{Classical Mechanics}\label{Classical}}
+
+Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this envirgonment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.
+
+\hypertarget{newtonian-formulation}{%
+\section{Newtonian Formulation}\label{newtonian-formulation}}
+
+In classical mechanics, a particle moving in the presence of potential \(V(q)\) will experience a force given by:
+
+\begin{equation}
+F(q) = -\frac{dV(q)}{dq},
+\label{eq:class1}
+\end{equation}
+
+where \(q\) represents the coordinate or the position of the particle. Hence, the particle can be described by the equations of motion:
+
+\begin{equation}
+\frac{dp}{dt} = F(q) = -\frac{dV (q)}{dq},\quad \frac{dq}{dt} = \frac{p}{m}.
+\label{eq:class2}
+\end{equation}
+
+For example, when a particle is attached to a spring and moves along a frictionless surface, the force the particle experiences is \(F(q) = -kq\) where \(k\) is the spring constant. Then the equations of motion of this particle are
+
+\begin{equation}
+\frac{dp}{dt} =\dot{p}=-kq,\quad \frac{dq}{dt} =\dot{q}=p/m
+\label{eq:class3}
+\end{equation}
+
+Given \(p\) and \(q\) at some initial time \(t_0\), one can integrate \eqref{eq:class2} or \eqref{eq:class3} to obtain \(p\) and \(q\) for all later time. Notice that only two variables \(p\) and \(q\) are sufficient to describe the state of a particle. These equations of motion are essentially derived using Newton's law. However, there are at least two other methods of deriving these equations of motion, which are described below.
+
+\hypertarget{lagrangian-formulation}{%
+\section{Lagrangian Formulation}\label{lagrangian-formulation}}
+
+Another way to derive the equations of motion for classical mechanics is via the use of the Lagrangian and the principle of least action. The Lagrangian formulation is obtained by starting from the definition of the Lagrangian of the system:
+
+\begin{equation}
+L = K - V,
+\label{eq:lag1}
+\end{equation}
+
+where \(K\) is the kinetic energy, and \(V\) is the potential energy. Both are expressed in terms of coordinates \((q,\dot{q}\)) where \(q\) \(\in\) \(\mathbb{R}^{n}\) is the position vector and \(\dot{q}\) \(\in\) \(\mathbb{R}^{n}\) is the velocity vector. Notice that for a fixed time, \(t\), \(q\) and \(\dot{q}\) are independent variables, since \(\dot{q}\) cannot be derived from \(q\) alone.
+
+The time integral of the Lagrangian is called the \textbf{action}, and is defined as:
+
+\begin{equation}
+S = \int_{t_1}^{t_2} L\, dt,
+\label{eq:lag2}
+\end{equation}
+
+which is a functional: it takes in the Lagrangian function for all times between \(t_1\) and \(t_2\) and returns a scalar value. The equations of motion can be derived from the principle of least action,\footnote{Sometimes also called principle of stationary action, or variational principle, or Hamilton's principle.} which states that the true evolution of a system \(q(t)\) described by the coordinate \(q\) between two specified states \(q_1 = q(t_1)\) and \(q_2 = q(t_2)\) at two specified times \(t_1\) and \(t_2\) is a stationary point of the action functional. For a stationary point:
+
+\begin{equation}
+\delta     S = \frac{dS}{dq}= 0
+\label{eq:lag3}
+\end{equation}
+
+Requiring that the true trajectory \(q(t)\) be a stationary point of the action functional \(S\) we obtain the equation of motion (figure \ref{fig:Fig1c2}\^{}{[}This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} by user Maschen, and distributed under CC0 license). This can be achieved applying classical variational calculus to the variation of the action integral \(S\) under perturbations of the path \(q(t)\) (eq. \eqref{eq:lag3}). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler---Lagrange equation:\footnote{The mathematical derivation of the Euler---Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found \href{https://en.wikipedia.org/wiki/Euler–Lagrange_equation}{here}.}
+
+\begin{equation}
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
+\label{eq:lag4}
+\end{equation}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_wiki1} 
+
+}
+
+\caption{Principle of least action: As the system evolves, q traces a path through configuration space (only some are shown). The path taken by the system (red) has a stationary action under small changes in the configuration of the system.}\label{fig:Fig1c2}
+\end{figure}
+
+\hypertarget{hamiltonian-mechanics}{%
+\section{Hamiltonian mechanics}\label{hamiltonian-mechanics}}
+
+A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum is defined in terms of the Lagrangian and the coordinates \((q,\dot{q})\):
+
+\begin{equation} 
+p = \frac{\partial L}{\partial\dot q}.
+\label{eq:ham1}
+\end{equation}
+
+The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:\footnote{We have already encountered Legendre transform in \href{https://peverati.github.io/pchem1/Potentials.html\#thermpot}{The Live Textbook of Physical Chemistry 1} when transforming from the thermodynamic energy to any of the other thermodynamic potentials.}
+
+\begin{equation} 
+H(p,q) = p\dot{q} - L(q,\dot{q}),
+\label{eq:ham2}
+\end{equation}
+
+The Lagrangian equation of motion becomes a pair of equations known as the Hamiltonian system of equations:
+
+\begin{equation} 
+\begin{aligned}
+\dot{p}=\frac{dp}{dt} &= -\frac{\partial H}{\partial q} \\
+\dot{q}=\frac{dq}{dt} &= +\frac{\partial H}{\partial p},
+\end{aligned}
+\label{eq:ham3}
+\end{equation}
+
+where \(H=H(q,p,t)\) is the Hamiltonian of the system, which often corresponds to its total energy. For a closed system, it is the sum of the kinetic and potential energy in the system:
+
+\begin{equation}
+H = K + V.
+\label{eq:hamdef}
+\end{equation}
+
+Notice the difference between the Hamiltonian, eq. \eqref{eq:hamdef}, and the Lagrangian, eq. \eqref{eq:lag1}. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton's second law, the time evolutions of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton's equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.
+
+\begin{quote}
+\begin{example}
+\protect\hypertarget{exm:hamex1}{}{\label{exm:hamex1} }\emph{Basic Interpretation of Hamiltonian Mechanics}
+
+A simple interpretation of Hamiltonian mechanics comes from its application on a one-dimensional system consisting of one particle of mass \(m\). The Hamiltonian can represent the total energy of the system, which is the sum of kinetic and potential energy.
+
+\begin{equation}
+\begin{aligned}
+H &= K+V \\
+K &={\frac {p^{2}}{2m}},\quad V=V(q),
+\end{aligned}
+\label{eq:ham4}
+\end{equation}
+
+where \(q\) is the space coordinate and \(p=m\dot{q}\) is the momentum. Then
+\(k\) is a function of \(p\) alone, while \(V\) is a function of \(q\) alone.
+
+In this example, the time derivative of the momentum \(p\) equals the Newtonian force, and so the first Hamilton equation means that the force equals the negative gradient of potential energy:
+
+\begin{equation}
+\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial V(q)}{\partial q},
+\label{eq:ham5}
+\end{equation}
+
+which is exactly the first equation of motion in eq. \eqref{eq:class2} of Newtonian mechanics. Notice that this equaiton could have been easily obtained in the Lagrangian formulation by writing the Lagrangian \eqref{eq:lag1}, and using the Euler-Lagrange equation, eq. \eqref{eq:lag4}.
+The time derivative of \(q\) is the velocity, and so the second Hamilton equation means that the particle's velocity equals the derivative of its kinetic energy with respect to its momentum:
+
+\begin{equation}
+\text{Velocity:}\qquad \frac{dq}{dt} = \frac{\partial K}{\partial p} = \frac{\partial \left(\frac{p^2}{2m}\right)}{\partial p} = \frac{p}{m},
+\label{eq:ham5}
+\end{equation}
+
+which is exactly the second equation of motion in eq. \eqref{eq:class2} of Newtonian mechanics.
+\end{example}
+\end{quote}
+
+\hypertarget{Schrodinger}{%
+\chapter{The Schrödinger Equation}\label{Schrodinger}}
+
+In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger's method involves partial differential equations, whereas Heisenberg's method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger's equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.
+
+\hypertarget{the-time-independent-schruxf6dinger-equation}{%
+\section{The Time-Independent Schrödinger Equation}\label{the-time-independent-schruxf6dinger-equation}}
+
+We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:
+
+\begin{equation}
+\psi(x,t)=\exp[i(kx-\omega t)],
+\label{eq:sch1}
+\end{equation}
+
+where \(x\) is the position, \(t\) is time, \(k=\frac{2\pi}{\lambda}\) is the wave vector, and \(\omega=2\pi\nu\) is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of eq. \eqref{eq:sch1} with respect to the location, which are:
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial \psi}{\partial x} &=ik\exp[i(kx-\omega t)] = ik\psi, \\
+\frac{\partial^2 \psi}{\partial x^2} &=i^2k^2\exp[i(kx-\omega t)] = -k^2\psi,
+\end{aligned}
+\label{eq:sch2}
+\end{equation}
+
+where we have used the fact that \(i^2=-1\).
+
+Assuming that particles behaves as wave---as proven by de Broglie's±we can now use the first of de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}/{\hbar}\) to obtain:
+
+\begin{equation}
+\frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
+\label{eq:sch3}
+\end{equation}
+
+which can be rearranged to:
+
+\begin{equation}
+p^2 \psi = -\hbar^2 \frac{\partial^2 \psi}{\partial x^2}.
+\label{eq:sch4}
+\end{equation}
+
+The total energy associated with a wave moving in space is simply the sum of its kinetic and potential energies:
+
+\begin{equation}
+E = \frac {p^{2}}{2m} + V(x),
+\label{eq:sch5}
+\end{equation}
+
+from which we can obtain:
+
+\begin{equation}
+p^2 = 2m[E - V(x)],
+\label{eq:sch6}
+\end{equation}
+
+which we can then replace into eq. \ref(eq:sch4) to obtain:
+
+\begin{equation}
+2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
+\label{eq:sch7}
+\end{equation}
+
+which can then be rearranged to the famous \textbf{time-independent Schrödinger equation (TISEq)}:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E\psi,
+\label{eq:TISEq}
+\end{equation}
+
+A two-body problem can also be treated by this equation if the mass \(m\) is replaced with a reduced mass \(\mu = \frac{m_1 m_2}{m_1+m_2}\).
+
+\hypertarget{the-time-dependent-schruxf6dinger-equation}{%
+\section{The Time-Dependent Schrödinger Equation}\label{the-time-dependent-schruxf6dinger-equation}}
+
+Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:
+
+\begin{equation}
+i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
+\label{eq:TDSEq}
+\end{equation}
+
+where \(V \in \mathbb{R}^{n}\) represents the potential energy of the system.
+Obviously, the time-dependent equation can be used to derive the time-independent equation. If we write the wavefunction as a product of spatial and temporal terms, \(\psi(x, t) = \psi(x) f(t)\), then equation \eqref{eq:TDSEq} becomes:
+
+\begin{equation}
+\psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
+\label{eq:TDSEq2}
+\end{equation}
+
+which can be rearranged to:
+
+\begin{equation}
+\frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
+\label{eq:TDSEq3}
+\end{equation}
+
+Since the left-hand side of eq. \eqref{eq:TDSEq3} is a function of \(t\) only and the right hand side is a function of \(x\) only, the two sides must equal a constant. If we tentatively designate this constant \(E\) (since the right-hand side clearly must have the dimensions of energy), then we extract two ordinary differential equations, namely:
+
+\begin{equation}
+\frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
+\label{eq:TDSEq4}
+\end{equation}
+
+and:
+\begin{equation}
+-\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x) \psi(x) =
+E \psi(x).
+\label{eq:TDSEq5}
+\end{equation}
+
+The latter equation is the TISEq. The former equation is easily solved to yield
+
+\begin{equation}
+f(t) = e^{-iEt / \hbar}
+\label{eq:TDSEq6}
+\end{equation}
+
+The solutions of eq. \eqref{eq:TDSEq6}, \(f(t)\), are purely oscillatory, since \(f(t)\) never changes in magnitude. Thus if:
+
+\begin{equation}
+\psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
+\label{eq:TDSEq6}
+\end{equation}
+
+then the total wave function \(\psi(x, t)\) differs from \(\psi(x)\) only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity \(\vert \psi(x, t) \vert^2\) is time independent, as we can easily show:
+
+\begin{equation}
+\vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
+\exp\left(\frac{iEt}{\hbar}\right)\exp\left(\frac{-iEt}{\hbar}\right)=
+\psi^{*}(x) \psi(x).
+\label{eq:TDSEq7}
+\end{equation}
+
+Wave functions of the form of eq. \eqref{eq:TDSEq6} are called stationary states. The state \(\psi(x, t)\) is ``stationary,'' but the particle it describes is not!
+Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.\footnote{This sections was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{A\%20Brief\%20Review\%20of\%20Elementary\%20Quantum\%20Chemistry}{here}.}
+
+\begin{equation}
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
+\end{equation}
+
+\hypertarget{Models}{%
+\chapter{Analytically Soluble Models}\label{Models}}
+
+\hypertarget{Hydrogen}{%
+\chapter{The Hydrogen Atom}\label{Hydrogen}}
+
+\hypertarget{Spin}{%
+\chapter{Spin}\label{Spin}}
+
+\hypertarget{Postulates}{%
+\chapter{Postulates of Quantum Mechanics}\label{Postulates}}
+
+\hypertarget{Math1}{%
+\chapter{Mathematical Background 1}\label{Math1}}
+
+\hypertarget{Math2}{%
+\chapter{Mathematical Background 2}\label{Math2}}
+
+\hypertarget{Atoms}{%
+\chapter{Many-Electron Atoms}\label{Atoms}}
+
+\hypertarget{Bond}{%
+\chapter{The Chemical Bond}\label{Bond}}
+
+\hypertarget{Molecules}{%
+\chapter{Energy Levels for Polyatomic Molecules}\label{Molecules}}
+
+\hypertarget{Spectroscopy}{%
+\chapter{Spectroscopy}\label{Spectroscopy}}
 
 \end{document}

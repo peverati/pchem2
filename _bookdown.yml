@@ -1,6 +1,18 @@
 book_filename: "pchem2"
 Rmd_files: ["index.Rmd",
-            "01_Motivation.Rmd"
+            "01_Motivation.Rmd",
+            "02_Classical.Rmd",
+            "03_Schrodinger.Rmd",
+            "04_Models.Rmd",
+            "05_Hydrogen.Rmd",
+            "06_Spin.Rmd",
+            "07_Postulates.Rmd",
+            "08_Math_1.Rmd",
+            "09_Math_2.Rmd",
+            "10_Atoms.Rmd",
+            "11_Bonds.Rmd",
+            "12_Molecules.Rmd",
+            "13_Spectroscopy.Rmd",
               ]
 output_dir: "docs"
 language:

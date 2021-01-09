@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-07" />
+<meta name="date" content="2021-01-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -91,11 +91,29 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#quantum-mechanics-is-bizarre"><i class="fa fa-check"></i><b>1.2</b> Quantum Mechanics is Bizarre</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.5</b> Wave-Particle Duality</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Classical Mechanics and Wave Mechanics</a>
+<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Classical Mechanics</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="Motivation.html"><a href="Motivation.html#introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>2.1</b> Newtonian Formulation</a></li>
+<li class="chapter" data-level="2.2" data-path="Classical.html"><a href="Classical.html#lagrangian-formulation"><i class="fa fa-check"></i><b>2.2</b> Lagrangian Formulation</a></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#hamiltonian-mechanics"><i class="fa fa-check"></i><b>2.3</b> Hamiltonian mechanics</a></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+<li class="chapter" data-level="6" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>6</b> Spin</a></li>
+<li class="chapter" data-level="7" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>7</b> Postulates of Quantum Mechanics</a></li>
+<li class="chapter" data-level="8" data-path="Math1.html"><a href="Math1.html"><i class="fa fa-check"></i><b>8</b> Mathematical Background 1</a></li>
+<li class="chapter" data-level="9" data-path="Math2.html"><a href="Math2.html"><i class="fa fa-check"></i><b>9</b> Mathematical Background 2</a></li>
+<li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a></li>
+<li class="chapter" data-level="11" data-path="Bond.html"><a href="Bond.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond</a></li>
+<li class="chapter" data-level="12" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>12</b> Energy Levels for Polyatomic Molecules</a></li>
+<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -139,17 +157,45 @@ The latest twist to the interpretation in quantum mechanics is the parallel univ
 <h2><span class="header-section-number">1.3</span> The Ultraviolet Catastrophe</h2>
 <p>A blackbody is an idealized object which absorbs and emits all frequencies. Classical physics can be used to derive an equation which describes the intensity of blackbody radiation as a function of frequency for a fixed temperature–the result is known as the Rayleigh-Jeans law. Although the Rayleigh-Jeans law works for low frequencies, it diverges as <span class="math inline">\(\nu^2\)</span>; this divergence for high frequencies is called the ultraviolet catastrophe.
 Max Planck explained the blackbody radiation in 1900 by assuming that the energies of the oscillations of electrons which gave rise to the radiation must be proportional to integral multiples of the frequency, i.e.,</p>
-<p><span class="math display" id="eq:class2" id="eq:class2" id="eq:class1" id="eq:uvcat">\[\begin{equation}
+<p><span class="math display" id="eq:uvcat">\[\begin{equation}
 E = n h \nu
 \tag{1.1}
 \end{equation}\]</span></p>
-<p>Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter <span class="math inline">\(h\)</span>. Planck found that for <span class="math inline">\(h = 6.626 \times 10^{-34}\)</span> J s, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.</p>
+<p>Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter <span class="math inline">\(h\)</span>. Planck found that for <span class="math inline">\(h = 6.626 \times 10^{-34} \; \text{J s}\)</span>, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.</p>
 </div>
 <div id="the-photoelectric-effect" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> The Photoelectric Effect</h2>
 <p>In 1886 and 1887, Heinrich Hertz discovered that ultraviolet light can cause electrons to be ejected from a metal surface. According to the classical wave theory of light, the intensity of the light determines the amplitude of the wave, and so a greater light intensity should cause the electrons on the metal to oscillate more violently and to be ejected with a greater kinetic energy. In contrast, the experiment showed that the kinetic energy of the ejected electrons depends on the frequency of the light. The light intensity affects only the number of ejected electrons and not their kinetic energies.
 Einstein tackled the problem of the photoelectric effect in 1905. Instead of assuming that the electronic oscillators had energies given by Planck’s formula, eq. <a href="Motivation.html#eq:uvcat">(1.1)</a>, Einstein assumed that the radiation itself consisted of packets of energy <span class="math inline">\(E = h \nu\)</span>, which are now called photons. Einstein successfully explained the photoelectric effect using this assumption, and he calculated a value of <span class="math inline">\(h\)</span> close to that obtained by Planck.</p>
-<p>Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume (<span class="math inline">\(C_v\)</span>) of a crystal is <span class="math inline">\(3 R\)</span>, where <span class="math inline">\(R\)</span> is the molar gas constant. This works well for high temperatures, but for low temperatures <span class="math inline">\(C_v\)</span> actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to <span class="math inline">\(E = n h \nu\)</span>, Planck’s quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume (<span class="math inline">\(C_V\)</span>) of a crystal is <span class="math inline">\(3 R\)</span>, where <span class="math inline">\(R\)</span> is the molar gas constant. This works well for high temperatures, but for low temperatures <span class="math inline">\(C_V\)</span> actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to <span class="math inline">\(E = n h \nu\)</span>, Planck’s quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).</p>
+</div>
+<div id="wave-particle-duality" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Wave-Particle Duality</h2>
+<p>Einstein had shown that the momentum of a photon is</p>
+<p><span class="math display" id="eq:wp1">\[\begin{equation}
+p = \frac{h}{\lambda}.
+\tag{1.2}
+\end{equation}\]</span></p>
+<p>This can be easily shown as follows. Assuming <span class="math inline">\(E = h \nu\)</span> for a photon and <span class="math inline">\(\lambda \nu = c\)</span> for an electromagnetic wave, we obtain</p>
+<p><span class="math display" id="eq:wp2">\[\begin{equation}
+E = \frac{h c}{\lambda}
+\tag{1.3}
+\end{equation}\]</span></p>
+<p>Now we use Einstein’s relativity result <span class="math inline">\(E = m c^2\)</span> to find
+<span class="math display" id="eq:wp3">\[\begin{equation}
+\lambda = \frac{h}{mc}
+\tag{1.4}
+\end{equation}\]</span></p>
+<p>which is equivalent to eq. <a href="Motivation.html#eq:wp1">(1.2)</a>. Note that <span class="math inline">\(m\)</span> refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy <span class="math inline">\(h \nu\)</span>), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. <a href="Motivation.html#eq:wp1">(1.2)</a> as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie’s proposition.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>Rewriting the previous equations in terms of the wave vector, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, and the angular frequency, <span class="math inline">\(\omega=2\pi\nu\)</span>, we obtain the following two equations</p>
+<p><span class="math display" id="eq:wp1b">\[\begin{equation}
+\begin{aligned}
+p &amp;= \hbar k \\
+E &amp;= \hbar \omega,
+\end{aligned}
+\tag{1.5}
+\end{equation}\]</span></p>
+<p>which are known as <strong>de Broglie’s equations</strong>. We will use those equation to develop wave mechanics in the next chapters.</p>
 
 </div>
 </div>
@@ -157,7 +203,7 @@ Einstein tackled the problem of the photoelectric effect in 1905. Instead of ass
 <hr />
 <ol start="1">
 <li id="fn1"><p>This section was adapted in part from Prof. Weng Cho CHEW’s Quantum Mechanics Made Simple Lecture Notes available <a href="http://wcchew.ece.illinois.edu/chew/course/qmall20121005.pdf">here</a>.<a href="Motivation.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>The previous 2 sections were adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="A%20Brief%20Review%20of%20Elementary%20Quantum%20Chemistry">here</a>.<a href="Motivation.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>The previous 3 sections were adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="A%20Brief%20Review%20of%20Elementary%20Quantum%20Chemistry">here</a>.<a href="Motivation.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

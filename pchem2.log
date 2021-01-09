@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.4)  7 JAN 2021 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.4)  8 JAN 2021 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -439,8 +439,8 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen187
 \Gm@dimlist=\toks32
 ) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
-s
+Package: fancyhdr 2021/01/04 v4.0 Extensive control of page headers and footers
+
 \f@nch@headwidth=\skip73
 \f@nch@O@elh=\skip74
 \f@nch@O@erh=\skip75
@@ -457,27 +457,42 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count297
 )
-No file pchem2.aux.
+\c@theorem=\count298
+\c@lemma=\count299
+\c@corollary=\count300
+\c@proposition=\count301
+\c@conjecture=\count302
+\c@definition=\count303
+\c@example=\count304
+\c@exercise=\count305
+(./pchem2.aux
+
+LaTeX Warning: Label `eq:ham5' multiply defined.
+
+
+LaTeX Warning: Label `eq:TDSEq6' multiply defined.
+
+)
 \openout1 = `pchem2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
 
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.st
 y
@@ -488,7 +503,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 110.
+Package hyperref Info: Link coloring OFF on input line 125.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -498,11 +513,12 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count298
+\c@section@level=\count306
 )
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 125.
+LaTeX Info: Redefining \pageref on input line 125.
+LaTeX Info: Redefining \nameref on input line 125.
+(./pchem2.out) (./pchem2.out)
 \@outlinefile=\write3
 \openout3 = `pchem2.out'.
 
@@ -514,7 +530,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 
-Package chemgreek Info: Activating mapping `default' on line 110.
+Package chemgreek Info: Activating mapping `default' on line 125.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -550,89 +566,88 @@ Package chemgreek Info: Activating mapping `default' on line 110.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<FrontPage_6x9.pdf, id=4, 433.62pt x 650.43pt>
+<FrontPage_6x9.pdf, id=104, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
-Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 129.
 (pdftex.def)             Requested size: 303.53854pt x 455.30782pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
-Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 129.
 (pdftex.def)             Requested size: 303.53854pt x 455.30782pt.
-<FrontPage_6x9.pdf, id=7, page=1, 433.62pt x 650.43pt>
+<FrontPage_6x9.pdf, id=107, page=1, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 129.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 129.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 129.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 129.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
-Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 114.
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 129.
 (pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
 [1
 
  <./FrontPage_6x9.pdf>] [2{/Users/peve/Library/TinyTeX/texmf-var/fonts/map/pdft
 ex/updmap/pdftex.map}
 
-]
-\tf@toc=\write4
-\openout4 = `pchem2.toc'.
-
-[3] [4
-
-]
-<./img/OEP_Figures.000.jpeg, id=46, 1584.92125pt x 1049.9225pt>
-File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
-<use ./img/OEP_Figures.000.jpeg>
-Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 137.
-(pdftex.def)             Requested size: 242.80655pt x 160.84589pt.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-43.
+] (./pchem2.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-43.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-143.
+2.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-143.
+2.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 143.
+(Font)              <9> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 143.
+(Font)              <6> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 143.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 143
-.
+(Font)              <5> on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 143
-.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [5 <./img/OEP_Figures.000.jpeg>] [6] [7] [8
+) [3])
+\tf@toc=\write4
+\openout4 = `pchem2.toc'.
+
+[4]
+<./img/OEP_Figures.000.jpeg, id=172, 1584.92125pt x 1049.9225pt>
+File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.000.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 152.
+(pdftex.def)             Requested size: 242.80655pt x 160.84589pt.
+[5
+
+ <./img/OEP_Figures.000.jpeg>] [6] [7] [8
 
 ]
 Chapter 1.
@@ -640,36 +655,131 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.186 
+l.201 
        [1
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 193.
-[2]
+(Font)              <7> on input line 208.
+[2] [3] [4] [5] [6
 
-LaTeX Warning: Reference `eq:uvcat' on page 3 undefined on input line 214.
-
-[3] [4]
+]
 Chapter 2.
-pdfTeX warning (ext4): destination with the same identifier (name{introduction}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.222 \section{Introduction}\label{introduction}}
-                                                 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.228 F (q) = -\frac{dV (q)}{dq}
-                                , 
-Here is how much of TeX's memory you used:
- 13174 strings out of 481296
- 197830 string characters out of 5916694
- 514691 words of memory out of 5000000
- 29795 multiletter control sequences out of 15000+600000
- 460237 words of font info for 62 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 68i,18n,80p,1028b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+[7] [8]
+<./img/OEP_wiki1.png, id=280, 1927.2pt x 1406.25375pt>
+File: ./img/OEP_wiki1.png Graphic file (type png)
+<use ./img/OEP_wiki1.png>
+Package pdftex.def Info: ./img/OEP_wiki1.png  used on input line 336.
+(pdftex.def)             Requested size: 212.46317pt x 155.03171pt.
+[9 <./img/OEP_wiki1.png>] [10] [11] [12
 
-!  ==> Fatal error occurred, no output PDF file produced!
+]
+Chapter 3.
+
+Underfull \hbox (badness 1917) in paragraph at lines 423--424
+\T1/lmr/m/n/9 We can start the deriva-tion of the single-particle time-independ
+ent
+ []
+
+[13]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+42.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Reference `(' on page 14 undefined on input line 470.
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 477--478
+[]\T1/lmr/m/n/9 which can then be re-ar-ranged to the fa-mous \T1/lmr/bx/n/9 ti
+me-independent
+ []
+
+[14] [15] [16]
+Chapter 4.
+[17
+
+] [18
+
+]
+Chapter 5.
+[19] [20
+
+]
+Chapter 6.
+[21] [22
+
+]
+Chapter 7.
+[23] [24
+
+]
+Chapter 8.
+[25] [26
+
+]
+Chapter 9.
+[27] [28
+
+]
+Chapter 10.
+[29] [30
+
+]
+Chapter 11.
+[31] [32
+
+]
+Chapter 12.
+[33] [34
+
+]
+Chapter 13.
+[35] (./pchem2.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `pchem2.out' has not changed.
+(rerunfilecheck)             Checksum: ABEF1C2DF897B93A218751CAB850AA7C;4249.
+ ) 
+Here is how much of TeX's memory you used:
+ 13512 strings out of 481296
+ 202410 string characters out of 5916694
+ 521114 words of memory out of 5000000
+ 30007 multiletter control sequences out of 15000+600000
+ 469423 words of font info for 66 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 68i,18n,80p,951b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Us
+ers/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/peve/L
+ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/peve/Library/Ti
+nyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/peve/Library/TinyTeX/
+texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/peve/Library/TinyTeX/texmf-dist
+/fonts/enc/dvips/lm/lm-mathsy.enc}</Users/peve/Library/TinyTeX/texmf-dist/fonts
+/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1
+/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmbx9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
+ex10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pf
+b></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Use
+rs/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve
+/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library
+/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX
+/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/font
+s/type1/public/lm/lmri9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1
+/public/lm/lmro9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public
+/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lms
+y9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm7.pfb>
+Output written on pchem2.pdf (43 pages, 1509376 bytes).
+PDF statistics:
+ 565 PDF objects out of 1000 (max. 8388607)
+ 482 compressed objects within 5 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+
