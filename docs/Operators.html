@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Operators and Mathematical Background | The Live Textbook of Physical Chemistry 2</title>
+  <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Operators and Mathematical Background | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem2" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Operators and Mathematical Background | The Live Textbook of Physical Chemistry 2" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2021-01-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Hydrogen.html"/>
+<link rel="next" href="Spin.html"/>
+<script src="libs/header-attrs-2.5/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 2</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> The Motivation for Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#quantum-mechanics-is-bizarre"><i class="fa fa-check"></i><b>1.2</b> Quantum Mechanics is Bizarre</a></li>
+<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.5</b> Wave-Particle Duality</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Classical Mechanics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>2.1</b> Newtonian Formulation</a></li>
+<li class="chapter" data-level="2.2" data-path="Classical.html"><a href="Classical.html#lagrangian-formulation"><i class="fa fa-check"></i><b>2.2</b> Lagrangian Formulation</a></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#hamiltonian-mechanics"><i class="fa fa-check"></i><b>2.3</b> Hamiltonian mechanics</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-free-particle"><i class="fa fa-check"></i><b>4.1</b> The Free Particle</a></li>
+<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#rigidrotor"><i class="fa fa-check"></i><b>4.2</b> The Particle in a Box</a></li>
+<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.3</b> The Harmonic Oscillator</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.4</b> The Rigid Rotor</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+<li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="Operators.html"><a href="Operators.html#linear-operators"><i class="fa fa-check"></i><b>6.1.1</b> Linear Operators</a></li>
+<li class="chapter" data-level="6.1.2" data-path="Operators.html"><a href="Operators.html#hermitian-operators"><i class="fa fa-check"></i><b>6.1.2</b> Hermitian Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="Operators.html"><a href="Operators.html#eigenfunctions-and-eigenvalues"><i class="fa fa-check"></i><b>6.2</b> Eigenfunctions and Eigenvalues</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a></li>
+<li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a></li>
+<li class="chapter" data-level="9" data-path="Math2.html"><a href="Math2.html"><i class="fa fa-check"></i><b>9</b> Mathematical Background 2</a></li>
+<li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a></li>
+<li class="chapter" data-level="11" data-path="Bond.html"><a href="Bond.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond</a></li>
+<li class="chapter" data-level="12" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>12</b> Energy Levels for Polyatomic Molecules</a></li>
+<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="Operators" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Operators and Mathematical Background</h1>
+<p>So far, we have seen a few simple examples of how to solve the TISEq. For the general case, the mathematical formulation of quantum mechanics is built upon the concept of an operator. An operator is a function over a space of physical states onto another space of physical states. Operators do not exist exclusively in quantum mechanics, but they can also be used in classical mechanics. In chapter <a href="Classical.html#Classical">2</a>, we have seen at least a couple of them, namely the Lagrangian, <span class="math inline">\(L\)</span>, and Hamiltonian, <span class="math inline">\(H\)</span>. In quantum mechanics, however, the concept of an operator is the basis of the complex mathematical treatment that is necessary for more complicated cases. In this chapter, we will discuss the mathematics of quantum mechanical operators, and we will recast the results for the analytical cases in light of the new framework. As we will see, this framework is even simpler than what we have seen in the previous chapter. This simplicity, however, will open the door to the “stranger” side of quantum mechanics.</p>
+<div id="operators-in-quantum-mechanics" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Operators in Quantum Mechanics</h2>
+<p>The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> Operators that possess this property are called <em>Hermitian</em>.
+In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time—or equivalently momentum and time—and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.</p>
+<div id="linear-operators" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Linear Operators</h3>
+<p>Almost all operators encountered in quantum mechanics are linear. A linear operator is any operator<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> <span class="math inline">\(\hat{A}\)</span> satisfying the following two conditions:</p>
+<p><span class="math display" id="eq:linop1">\[\begin{equation}
+\begin{aligned}
+\hat{A} (f + g)  &amp;= \hat{A} f + \hat{A} g, \\
+\hat{A} (c f) &amp;= c \hat{A} f,
+\end{aligned}
+\tag{6.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(c\)</span> is a constant and <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are functions. As an example, consider the operators <span class="math inline">\(\frac{d}{dx}\)</span> and <span class="math inline">\(()^2\)</span>. We can see that <span class="math inline">\(\frac{d}{dx}\)</span> is a linear operator because:</p>
+<p><span class="math display" id="eq:linop2">\[\begin{equation}
+\begin{aligned}
+\frac{d}{dx}[f(x) + g(x)] &amp;=\frac{d}{dx}f(x) + \frac{d}{dx}g(x), \\
+\frac{d}{dx}[c f(x)] &amp;= c (d/dx) f(x).
+\end{aligned}
+\tag{6.2}
+\end{equation}\]</span></p>
+<p>However, <span class="math inline">\(()^2\)</span> is not a linear operator because:</p>
+<p><span class="math display" id="eq:linop3">\[\begin{equation}
+(f(x) + g(x))^2 \neq (f(x))^2 + (g(x))^2
+\tag{6.3}
+\end{equation}\]</span></p>
+</div>
+<div id="hermitian-operators" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Hermitian Operators</h3>
+<p>Hermitian operators are characterized by the self-adjoint property:</p>
+<p><span class="math display" id="eq:hop1">\[\begin{equation}
+\int \psi_a^{*} (\hat{A} \psi_a) =  \int \psi_a (\hat{A} \psi_a)^{*},
+\tag{6.4}
+\end{equation}\]</span></p>
+<p>where the integral is performed over all space. This property guarantees that all the eigenvalues of the operators are real. Defining <span class="math inline">\(a\)</span> as the eigenvalue of operator <span class="math inline">\(\hat{A}\)</span> using:</p>
+<p><span class="math display" id="eq:hop2">\[\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+\tag{6.5}
+\end{equation}\]</span></p>
+<p>we can prove that <span class="math inline">\(a\)</span> is real by replacing eq. <a href="Operators.html#eq:hop2">(6.5)</a> into eq. <a href="Operators.html#eq:hop1">(6.4)</a>:</p>
+<p><span class="math display" id="eq:hop4">\[\begin{equation}
+\begin{aligned}
+a \int \psi_a^{*} \psi_a &amp;= a^{*} \int \psi_a \psi_a^{*} \\
+(a - a^{*}) \int \vert\psi_a\vert^2 &amp;= 0,
+\end{aligned}
+\tag{6.6}
+\end{equation}\]</span></p>
+<p>and since <span class="math inline">\(\vert\psi_a\vert^2\)</span> is never negative, either <span class="math inline">\(a = a^{*}\)</span> or <span class="math inline">\(\psi_a = 0\)</span>. Since <span class="math inline">\(\psi_a = 0\)</span> is not an acceptable wavefunction, <span class="math inline">\(a = a^{*}\)</span>, and <span class="math inline">\(a\)</span> is real.</p>
+<p>The following additional properties of Hermitian operators can also be proven with some work:</p>
+<p><span class="math display" id="eq:hop2b">\[\begin{equation}
+\int \psi^{*}\hat{A} \psi =
+\int (\hat{A} \psi^{*} \psi,
+\tag{6.7}
+\end{equation}\]</span></p>
+<p>and for any two states <span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span>:</p>
+<p><span class="math display" id="eq:hop3">\[\begin{equation}
+\int \psi_1^{*} \hat{A} \psi_2 =
+\int (\hat{A} \psi_1^{*} \psi_2.
+\tag{6.8}
+\end{equation}\]</span></p>
+<p>Taking <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> as eigenfunctions of <span class="math inline">\(\hat{A}\)</span> with eigenvalues <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(a \neq b\)</span>, and using eq. <a href="Operators.html#eq:hop3">(6.8)</a>, we obtain:</p>
+<p><span class="math display" id="eq:hop5">\[\begin{equation}
+\begin{aligned}
+\int \psi_a^{*} \hat{A} \psi_b &amp;= \int (\hat{A} \psi_a)^{*} \psi_b	\\
+b \int \psi_a^{*} \psi_b	&amp;= a^{*} \int \psi_a^{*} \psi_b \\
+(b - a) \int \psi_a^{*} \psi_b &amp;= 0.
+\end{aligned}
+\tag{6.9}
+\end{equation}\]</span></p>
+<p>Thus, since <span class="math inline">\(a = a^{*}\)</span>, and since we assumed <span class="math inline">\(b \neq a\)</span>, we must have <span class="math inline">\(\int \psi_a^{*} \psi_b = 0\)</span>, i.e. <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so).</p>
+</div>
+</div>
+<div id="eigenfunctions-and-eigenvalues" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Eigenfunctions and Eigenvalues</h2>
+<p>As we have already seen, an eigenfunction of an operator <span class="math inline">\(\hat{A}\)</span> is a function <span class="math inline">\(f\)</span> such that the application of <span class="math inline">\(\hat{A}\)</span> on <span class="math inline">\(f\)</span> gives <span class="math inline">\(f\)</span> again, times a constant:</p>
+<p><span class="math display" id="eq:ee1">\[\begin{equation}
+\hat{A} f = k f,
+\tag{6.10}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(k\)</span> is a constant called the eigenvalue. The expectation value of an operator <span class="math inline">\(\hat{A}\)</span> for a system with wave function <span class="math inline">\(\psi(\mathbf{r})\)</span> living in a Hilbert space with unit vector <span class="math inline">\(\mathbf{r}\)</span> (i.e., in three-dimensional Cartesian space <span class="math inline">\(\mathbf{r} = \left\{ x,y,z \right\}\)</span>), is given by:</p>
+<p><span class="math display" id="eq:ee1b">\[\begin{equation}
+&lt;A&gt; = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+\tag{6.11}
+\end{equation}\]</span></p>
+<p>and if <span class="math inline">\(\hat{A}\)</span> is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if <span class="math inline">\(\hat{A}\)</span> is a linear operator with an eigenfunction <span class="math inline">\(g\)</span>, then any multiple of <span class="math inline">\(g\)</span> is also an eigenfunction of <span class="math inline">\(\hat{A}\)</span>.</p>
+<p>When a system is in an eigenstate of observable <span class="math inline">\(A\)</span> (i.e., when the wave function is an eigenfunction of the operator <span class="math inline">\(\hat{A}\)</span>) then the expectation value of <span class="math inline">\(A\)</span> is the eigenvalue of the wave function. Therefore:</p>
+<p><span class="math display" id="eq:ee2">\[\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+\tag{6.12}
+\end{equation}\]</span></p>
+<p>then:</p>
+<p><span class="math display" id="eq:ee3">\[\begin{equation}
+\begin{aligned}
+&lt;A&gt; &amp;= \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r} \\
+&amp;= \int \psi^{*}({\bf r}) a \psi({\bf r}) d{\bf r} \\	 
+&amp;= a \int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = a,	 
+\end{aligned}
+\tag{6.13}
+\end{equation}\]</span></p>
+<p>which implies that:</p>
+<p><span class="math display" id="eq:ee4">\[\begin{equation}
+\int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = 1.
+\tag{6.14}
+\end{equation}\]</span></p>
+<p>This property of wave functions is called normalization, and in the one-electron TISEq guarantees that the maximum probability of finding an electron over the entire space is one.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
+<p>A unique property of quantum mechanics is that a wave function can be expressed not just as a simple eigenfunction, but also as a combination of several of them. We have in part already encountered such property in the previous chapter, where complex hydrogen orbitals have been combined to form corresponding linear ones. As a general example, let us consider a wave function written as a linear combination of two eigenstates of <span class="math inline">\(\hat{A}\)</span>, with eigenvalues <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</p>
+<p><span class="math display" id="eq:ee5">\[\begin{equation}
+\psi = c_a \psi_a + c_b \psi_b,
+\tag{6.15}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\hat{A} \psi_a = a \psi_a\)</span> and <span class="math inline">\(\hat{A} \psi_b = b \psi_b\)</span>. Then, since <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> are orthogonal and normalized (usually abbreviated as orthonormal), the expectation value of <span class="math inline">\(A\)</span> is:</p>
+<p><span class="math display" id="eq:ee6">\[\begin{equation}
+\begin{aligned}
+&lt;A&gt; &amp;= \int \psi^{*} \hat{A} \psi \\
+ 	&amp;= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] \\
+ 	&amp;= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
+\left[ a c_a \psi_a + b c_b \psi_b \right] \\	 
+ 	&amp;= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b + a c_b^{*} c_a \int \psi_b^{*} \psi_a +
+b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\ 
+ 	&amp;= a \vert c_a\vert^2 + b \vert c_b\vert^2.
+\end{aligned}
+\tag{6.16}    
+\end{equation}\]</span></p>
+<p>This result shows that the average value of <span class="math inline">\(A\)</span> is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="11">
+<li id="fn11"><p>But they might not be strictly real.<a href="Operators.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol <span class="math inline">\(\hat{}\)</span> on top of the latter.<a href="Operators.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>Imposing the normalization condition is the best way to find the constant <span class="math inline">\(A\)</span> in the solution of the TISEq for the particle in a box, a topic that we delayed in chapter <a href="Models.html#Models">4</a>.<a href="Operators.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>This section was adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">here</a>.<a href="Operators.html#fnref14" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Hydrogen.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Spin.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/peverati/pchem2/edit/master/06_Operators.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pchem2.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+# Operators and Mathematical Background {#Operators}
+
+So far, we have seen a few simple examples of how to solve the TISEq. For the general case, the mathematical formulation of quantum mechanics is built upon the concept of an operator. An operator is a function over a space of physical states onto another space of physical states. Operators do not exist exclusively in quantum mechanics, but they can also be used in classical mechanics. In chapter \@ref(Classical), we have seen at least a couple of them, namely the Lagrangian, $L$, and Hamiltonian, $H$. In quantum mechanics, however, the concept of an operator is the basis of the complex mathematical treatment that is necessary for more complicated cases. In this chapter, we will discuss the mathematics of quantum mechanical operators, and we will recast the results for the analytical cases in light of the new framework. As we will see, this framework is even simpler than what we have seen in the previous chapter. This simplicity, however, will open the door to the "stranger" side of quantum mechanics.
+
+## Operators in Quantum Mechanics
+
+The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.^[But they might not be strictly real.] Operators that possess this property are called *Hermitian*. 
+In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time—or equivalently momentum and time—and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.
+
+### Linear Operators
+
+Almost all operators encountered in quantum mechanics are linear. A linear operator is any operator^[To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol $\hat{}$ on top of the latter.] $\hat{A}$ satisfying the following two conditions: 
+
+\begin{equation}
+\begin{aligned}
+\hat{A} (f + g)  &= \hat{A} f + \hat{A} g, \\
+\hat{A} (c f) &= c \hat{A} f,
+\end{aligned}
+(\#eq:linop1)
+\end{equation}
+
+where $c$ is a constant and $f$ and $g$ are functions. As an example, consider the operators $\frac{d}{dx}$ and $()^2$. We can see that $\frac{d}{dx}$ is a linear operator because:
+
+\begin{equation}
+\begin{aligned}
+\frac{d}{dx}[f(x) + g(x)] &=\frac{d}{dx}f(x) + \frac{d}{dx}g(x), \\
+\frac{d}{dx}[c f(x)] &= c (d/dx) f(x).
+\end{aligned}
+(\#eq:linop2)
+\end{equation}
+
+However, $()^2$ is not a linear operator because:
+
+\begin{equation}
+(f(x) + g(x))^2 \neq (f(x))^2 + (g(x))^2
+(\#eq:linop3)
+\end{equation}
+
+### Hermitian Operators
+
+Hermitian operators are characterized by the self-adjoint property:
+
+\begin{equation}
+\int \psi_a^{*} (\hat{A} \psi_a) =  \int \psi_a (\hat{A} \psi_a)^{*},
+(\#eq:hop1)
+\end{equation}
+
+where the integral is performed over all space. This property guarantees that all the eigenvalues of the operators are real. Defining $a$ as the eigenvalue of operator $\hat{A}$ using: 
+
+\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+(\#eq:hop2)
+\end{equation}
+
+we can prove that $a$ is real by replacing eq. \@ref(eq:hop2) into eq. \@ref(eq:hop1):
+
+\begin{equation}
+\begin{aligned}
+a \int \psi_a^{*} \psi_a &= a^{*} \int \psi_a \psi_a^{*} \\
+(a - a^{*}) \int \vert\psi_a\vert^2 &= 0,
+\end{aligned}
+(\#eq:hop4)
+\end{equation}
+
+and since $\vert\psi_a\vert^2$ is never negative, either $a = a^{*}$ or $\psi_a = 0$. Since $\psi_a = 0$ is not an acceptable wavefunction, $a = a^{*}$, and $a$ is real.
+
+The following additional properties of Hermitian operators can also be proven with some work:
+
+\begin{equation}
+\int \psi^{*}\hat{A} \psi =
+\int (\hat{A} \psi^{*} \psi,
+(\#eq:hop2b)
+\end{equation}
+
+and for any two states $\psi_1$ and $\psi_2$:
+
+\begin{equation}
+\int \psi_1^{*} \hat{A} \psi_2 =
+\int (\hat{A} \psi_1^{*} \psi_2.
+(\#eq:hop3)
+\end{equation}
+
+Taking $\psi_a$ and $\psi_b$ as eigenfunctions of $\hat{A}$ with eigenvalues $a$ and $b$ with $a \neq b$, and using eq. \@ref(eq:hop3), we obtain:
+
+\begin{equation}
+\begin{aligned}
+\int \psi_a^{*} \hat{A} \psi_b &= \int (\hat{A} \psi_a)^{*} \psi_b	\\
+b \int \psi_a^{*} \psi_b	&= a^{*} \int \psi_a^{*} \psi_b \\
+(b - a) \int \psi_a^{*} \psi_b &= 0.
+\end{aligned}
+(\#eq:hop5)
+\end{equation}
+
+Thus, since $a = a^{*}$, and since we assumed $b \neq a$, we must have $\int \psi_a^{*} \psi_b = 0$, i.e. $\psi_a$ and $\psi_b$ are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so). 
+
+## Eigenfunctions and Eigenvalues
+
+As we have already seen, an eigenfunction of an operator $\hat{A}$ is a function $f$ such that the application of $\hat{A}$ on $f$ gives $f$ again, times a constant: 
+
+\begin{equation}
+\hat{A} f = k f,
+(\#eq:ee1)
+\end{equation}
+
+where $k$ is a constant called the eigenvalue. The expectation value of an operator $\hat{A}$ for a system with wave function $\psi(\mathbf{r})$ living in a Hilbert space with unit vector $\mathbf{r}$ (i.e., in three-dimensional Cartesian space $\mathbf{r} = \left\{ x,y,z \right\}$), is given by: 
+
+\begin{equation}
+<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+(\#eq:ee1b)
+\end{equation}
+
+and if $\hat{A}$ is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if $\hat{A}$ is a linear operator with an eigenfunction $g$, then any multiple of $g$ is also an eigenfunction of $\hat{A}$.
+
+When a system is in an eigenstate of observable $A$ (i.e., when the wave function is an eigenfunction of the operator $\hat{A}$) then the expectation value of $A$ is the eigenvalue of the wave function. Therefore:
+
+\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+(\#eq:ee2)
+\end{equation}
+
+then:
+
+\begin{equation}
+\begin{aligned}
+<A> &= \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r} \\
+&= \int \psi^{*}({\bf r}) a \psi({\bf r}) d{\bf r} \\	 
+&= a \int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = a,	 
+\end{aligned}
+(\#eq:ee3)
+\end{equation}
+
+which implies that:
+
+\begin{equation}
+\int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = 1.
+(\#eq:ee4)
+\end{equation}
+
+This property of wave functions is called normalization, and in the one-electron TISEq guarantees that the maximum probability of finding an electron over the entire space is one.^[Imposing the normalization condition is the best way to find the constant $A$ in the solution of the TISEq for the particle in a box, a topic that we delayed in chapter \@ref(Models).]
+
+A unique property of quantum mechanics is that a wave function can be expressed not just as a simple eigenfunction, but also as a combination of several of them. We have in part already encountered such property in the previous chapter, where complex hydrogen orbitals have been combined to form corresponding linear ones. As a general example, let us consider a wave function written as a linear combination of two eigenstates of $\hat{A}$, with eigenvalues $a$ and $b$:
+
+\begin{equation}
+\psi = c_a \psi_a + c_b \psi_b,
+(\#eq:ee5)
+\end{equation}
+
+where  $\hat{A} \psi_a = a \psi_a$ and  $\hat{A} \psi_b = b \psi_b$. Then, since $\psi_a$ and $\psi_b$ are orthogonal and normalized (usually abbreviated as orthonormal), the expectation value of $A$ is:
+
+\begin{equation}
+\begin{aligned}
+<A> &= \int \psi^{*} \hat{A} \psi \\
+ 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] \\
+ 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
+\left[ a c_a \psi_a + b c_b \psi_b \right] \\	 
+ 	&= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b + a c_b^{*} c_a \int \psi_b^{*} \psi_a +
+b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\ 
+ 	&= a \vert c_a\vert^2 + b \vert c_b\vert^2.
+\end{aligned}
+(\#eq:ee6)    
+\end{equation}
+
+This result shows that the average value of $A$ is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.^[This section was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+

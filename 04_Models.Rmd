@@ -1,3 +1,174 @@
 # Analytically Soluble Models {#Models}
 
+The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
+
+## The Free Particle
+
+By definition, the particle does not feel any external force, therefore $V(x)=0$, and the TISEq is written simply:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+(\#eq:FP1)
+\end{equation}
+
+This equation can be rearranged to:
+
+\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+(\#eq:FP2)
+\end{equation}
+
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. Such a problem is easily solved by the function:
+
+\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+(\#eq:FP3)
+\end{equation}
+
+The first and second derivatives of this function are:
+
+\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+(\#eq:FP4)
+\end{equation}
+
+Comparing the second derivative in eq. \@ref(eq:FP4) with eq. \@ref(eq:FP2), we immediately see that if we set:
+
+\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+(\#eq:FP5)
+\end{equation}
+
+we solve the original differential equation. Considering de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}{\hbar}$, to obtain:
+
+\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+(\#eq:FP6)
+\end{equation}
+
+which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).
+
+## The Particle in a Box {#rigidrotor}
+
+Now we can consider a particle constrained to move in a single dimension, under the influence of a potential $V(x)$ which is zero for  $0 \leq x \leq a$ and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where $V(x)$ is infinite, so $\psi(x)$ is nonzero only within $[0,a]$. The Schrödinger equation is thus:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
+\qquad 0 \leq x \leq a.
+(\#eq:PIB1)
+\end{equation}
+
+In other words, inside the box $\psi(x)$ describes a free particle, but outside the box $\psi(x)=0$. Since the Schrödinger equation involves derivatives, the function that solves it, $\psi(x)$, must be everywhere continuous and everywhere continuously differentiable. This fact means that the value of the wave function at the two extremes must be equal to zero:
+
+\begin{equation}
+\psi(0)=\psi(a)=0.
+(\#eq:PIB2)
+\end{equation}
+
+Inside the box we can use Euler's formula to write the wave function as a linear combination of the positive and negative solutions:
+
+\begin{equation}
+\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
+(\#eq:PIB3)
+\end{equation}
+
+where $A$ and $B$ are constants that we need to determine using the two constraints in eq. \@ref(eq:PIB2). For $B$ it is straightforward to see that:
+
+\begin{equation}
+\psi(0)= 0 + B =0 \; \implies \; B=0.
+(\#eq:PIB4)
+\end{equation}
+
+For $A$ we have:
+
+\begin{equation}
+\psi(a)= A\sin ka = 0,
+(\#eq:PIB5)
+\end{equation}
+
+which is trivially solved by $A=0$, or by the more interesting condition of $ka=n\pi$. The trivial solution corresponds to a wave function uniformly equal to zero everywhere. This wave function is uninteresting, since it describes no particles in no boxes. The second set of solutions, however, is very interesting, since we can write it as:
+
+\begin{equation}
+\psi_n(x)= A\sin\left(\frac{n\pi x}{a} \right)\quad n=1,2,\ldots,\infty,
+(\#eq:PIB6)
+\end{equation}
+
+which represents an infinite set of functions, $\psi_n(x)$, determined by a positive integer number $n$, called *qunatum number*. Since these functions solve the TISEq, they are also called *eigenfunctions*, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \@ref(eq:PIB6) into eq. \@ref(eq:PIB1), to obtain:
+
+\begin{equation}
+E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
+(\#eq:PIB7)
+\end{equation}
+
+A few interesting considerations can be made from the results of eq. \@ref(eq:PIB7). First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, $a$, since:
+
+\begin{equation}
+E_1 = \frac{h^2 }{8 m a^2} \neq 0.
+(\#eq:PIB8)
+\end{equation}
+
+This value is called *zero-point energy (ZPE)*, and is a purely quantum mechanical effect. Notice that we did not solve for the constant $A$. This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate $n_x,n_y,n_z$).
+
+## The Harmonic Oscillator
+
+We now consider a particle subject to a restoring force $F = -kx$, as might arise for a mass-spring system obeying Hooke's Law. The potential is then:
+
+\begin{equation}
+V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
+(\#eq:HO1)
+\end{equation}
+
+If we choose the energy scale such that $V_0 = 0$ then:  $V(x) = (1/2)kx^2$, and the TISEq looks:
+
+\begin{equation}
+- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
+E \psi(x)
+(\#eq:HO2)
+\end{equation}
+
+After some effort, the eigenfunctions are:
+
+\begin{equation}
+\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+(\#eq:HO3)
+\end{equation}
+
+where $H_n$ is the Hermite polynomial of degree $n$, and $\alpha$ and $N_n$ are defined by 
+
+\begin{equation}
+\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
+N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+(\#eq:HO4)
+\end{equation}
+
+The eigenvalues are:
+
+\begin{equation}
+E_n = \hbar \omega (n + \frac{1}{2}),
+(\#eq:HO5)
+\end{equation}
+
+with  $\omega = \sqrt{k/ \mu}$. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to $n=0$, but because of the $\frac{1}{2}$ factor in eq. \@ref(eq:HO5), the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \@ref(eq:HO5). The lowest possible energy (the ZPE) will be $E_0 = \frac{1}{2} \hbar \omega$.
+
+## The Rigid Rotor
+
+The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass $\mu$, at a distance $r$. The cartesian coordinates, $x,y,z$, are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle $\theta$, the longitudinal (azimuth) angle $\phi$, and the distance $r$. The TISEq of the system in spherical coordinates is:
+
+\begin{equation}
+- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
+\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E \psi(r),
+(\#eq:RR1)
+\end{equation}
+
+where $I=\mu r^2$ is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics  $Y_{\ell}^m(\theta, \phi)$.^[For a description of the spherical harmonics see [here](https://en.wikipedia.org/wiki/Spherical_harmonic)] The eigenvalues are simply: 
+
+\begin{equation}
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1).
+(\#eq:RR2)
+\end{equation}
+
+Each energy level $E_{\ell}$ is $2\ell+1$-fold degenerate in $m$, since $m$ can have values  $-\ell, -\ell+1, \ldots, \ell-1, \ell$. Notice also that the energy does not depend on the second index $m$, and the functions with fixed $m=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m$ that appears in the spherical harmonics will assume some importance in future chapters. 
 

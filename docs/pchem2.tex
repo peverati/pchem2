@@ -105,7 +105,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{08 January 2021}
+\date{10 January 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -253,7 +253,7 @@ Now we use Einstein's relativity result \(E = m c^2\) to find
 \label{eq:wp3}
 \end{equation}
 
-which is equivalent to eq. \eqref{eq:wp1}. Note that \(m\) refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy \(h \nu\)), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \eqref{eq:wp1} as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.\footnote{The previous 3 sections were adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{A\%20Brief\%20Review\%20of\%20Elementary\%20Quantum\%20Chemistry}{here}.}
+which is equivalent to eq. \eqref{eq:wp1}. Note that \(m\) refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy \(h \nu\)), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \eqref{eq:wp1} as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.\footnote{The previous 3 sections were adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{here}.}
 
 Rewriting the previous equations in terms of the wave vector, \(k=\frac{2\pi}{\lambda}\), and the angular frequency, \(\omega=2\pi\nu\), we obtain the following two equations
 
@@ -405,7 +405,7 @@ The time derivative of \(q\) is the velocity, and so the second Hamilton equatio
 
 \begin{equation}
 \text{Velocity:}\qquad \frac{dq}{dt} = \frac{\partial K}{\partial p} = \frac{\partial \left(\frac{p^2}{2m}\right)}{\partial p} = \frac{p}{m},
-\label{eq:ham5}
+\label{eq:ham6}
 \end{equation}
 
 which is exactly the second equation of motion in eq. \eqref{eq:class2} of Newtonian mechanics.
@@ -439,7 +439,7 @@ where \(x\) is the position, \(t\) is time, \(k=\frac{2\pi}{\lambda}\) is the wa
 
 where we have used the fact that \(i^2=-1\).
 
-Assuming that particles behaves as wave---as proven by de Broglie's±we can now use the first of de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}/{\hbar}\) to obtain:
+Assuming that particles behaves as wave---as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}/{\hbar}\) to obtain:
 
 \begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
@@ -467,7 +467,7 @@ p^2 = 2m[E - V(x)],
 \label{eq:sch6}
 \end{equation}
 
-which we can then replace into eq. \ref(eq:sch4) to obtain:
+which we can then replace into eq. \eqref{eq:sch4} to obtain:
 
 \begin{equation}
 2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
@@ -533,7 +533,7 @@ The solutions of eq. \eqref{eq:TDSEq6}, \(f(t)\), are purely oscillatory, since 
 
 \begin{equation}
 \psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
-\label{eq:TDSEq6}
+\label{eq:TDSEq6b}
 \end{equation}
 
 then the total wave function \(\psi(x, t)\) differs from \(\psi(x)\) only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity \(\vert \psi(x, t) \vert^2\) is time independent, as we can easily show:
@@ -545,8 +545,8 @@ then the total wave function \(\psi(x, t)\) differs from \(\psi(x)\) only by a p
 \label{eq:TDSEq7}
 \end{equation}
 
-Wave functions of the form of eq. \eqref{eq:TDSEq6} are called stationary states. The state \(\psi(x, t)\) is ``stationary,'' but the particle it describes is not!
-Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.\footnote{This sections was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{A\%20Brief\%20Review\%20of\%20Elementary\%20Quantum\%20Chemistry}{here}.}
+Wave functions of the form of eq. \eqref{eq:TDSEq6b} are called stationary states. The state \(\psi(x, t)\) is ``stationary,'' but the particle it describes is not!
+Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.\footnote{This sections was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{here}.}
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
@@ -555,17 +555,455 @@ Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the tim
 \hypertarget{Models}{%
 \chapter{Analytically Soluble Models}\label{Models}}
 
+The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
+
+\hypertarget{the-free-particle}{%
+\section{The Free Particle}\label{the-free-particle}}
+
+By definition, the particle does not feel any external force, therefore \(V(x)=0\), and the TISEq is written simply:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+\label{eq:FP1}
+\end{equation}
+
+This equation can be rearranged to:
+
+\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+\label{eq:FP2}
+\end{equation}
+
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, \(- \frac{2mE}{\hbar^2}\) multiplied by the function itself. Such a problem is easily solved by the function:
+
+\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+\label{eq:FP3}
+\end{equation}
+
+The first and second derivatives of this function are:
+
+\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+\label{eq:FP4}
+\end{equation}
+
+Comparing the second derivative in eq. \eqref{eq:FP4} with eq. \eqref{eq:FP2}, we immediately see that if we set:
+
+\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+\label{eq:FP5}
+\end{equation}
+
+we solve the original differential equation. Considering de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}{\hbar}\), to obtain:
+
+\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\label{eq:FP6}
+\end{equation}
+
+which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \eqref{eq:FP3} solves the Schrödinger equation for the free particle, it is called an \emph{eigenfunction} (or \emph{eigenstate}) of the TISEq. The energy result of eq. \eqref{eq:FP6} is called \emph{eigenvalue} of the TISEq. Notice that, since \(k\) is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of \(E\) are acceptable).
+
+\hypertarget{rigidrotor}{%
+\section{The Particle in a Box}\label{rigidrotor}}
+
+Now we can consider a particle constrained to move in a single dimension, under the influence of a potential \(V(x)\) which is zero for \(0 \leq x \leq a\) and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where \(V(x)\) is infinite, so \(\psi(x)\) is nonzero only within \([0,a]\). The Schrödinger equation is thus:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
+\qquad 0 \leq x \leq a.
+\label{eq:PIB1}
+\end{equation}
+
+In other words, inside the box \(\psi(x)\) describes a free particle, but outside the box \(\psi(x)=0\). Since the Schrödinger equation involves derivatives, the function that solves it, \(\psi(x)\), must be everywhere continuous and everywhere continuously differentiable. This fact means that the value of the wave function at the two extremes must be equal to zero:
+
+\begin{equation}
+\psi(0)=\psi(a)=0.
+\label{eq:PIB2}
+\end{equation}
+
+Inside the box we can use Euler's formula to write the wave function as a linear combination of the positive and negative solutions:
+
+\begin{equation}
+\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
+\label{eq:PIB3}
+\end{equation}
+
+where \(A\) and \(B\) are constants that we need to determine using the two constraints in eq. \eqref{eq:PIB2}. For \(B\) it is straightforward to see that:
+
+\begin{equation}
+\psi(0)= 0 + B =0 \; \implies \; B=0.
+\label{eq:PIB4}
+\end{equation}
+
+For \(A\) we have:
+
+\begin{equation}
+\psi(a)= A\sin ka = 0,
+\label{eq:PIB5}
+\end{equation}
+
+which is trivially solved by \(A=0\), or by the more interesting condition of \(ka=n\pi\). The trivial solution corresponds to a wave function uniformly equal to zero everywhere. This wave function is uninteresting, since it describes no particles in no boxes. The second set of solutions, however, is very interesting, since we can write it as:
+
+\begin{equation}
+\psi_n(x)= A\sin\left(\frac{n\pi x}{a} \right)\quad n=1,2,\ldots,\infty,
+\label{eq:PIB6}
+\end{equation}
+
+which represents an infinite set of functions, \(\psi_n(x)\), determined by a positive integer number \(n\), called \emph{qunatum number}. Since these functions solve the TISEq, they are also called \emph{eigenfunctions}, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \eqref{eq:PIB6} into eq. \eqref{eq:PIB1}, to obtain:
+
+\begin{equation}
+E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
+\label{eq:PIB7}
+\end{equation}
+
+A few interesting considerations can be made from the results of eq. \eqref{eq:PIB7}. First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, \(a\), since:
+
+\begin{equation}
+E_1 = \frac{h^2 }{8 m a^2} \neq 0.
+\label{eq:PIB8}
+\end{equation}
+
+This value is called \emph{zero-point energy (ZPE)}, and is a purely quantum mechanical effect. Notice that we did not solve for the constant \(A\). This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate \(n_x,n_y,n_z\)).
+
+\hypertarget{the-harmonic-oscillator}{%
+\section{The Harmonic Oscillator}\label{the-harmonic-oscillator}}
+
+We now consider a particle subject to a restoring force \(F = -kx\), as might arise for a mass-spring system obeying Hooke's Law. The potential is then:
+
+\begin{equation}
+V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
+\label{eq:HO1}
+\end{equation}
+
+If we choose the energy scale such that \(V_0 = 0\) then: \(V(x) = (1/2)kx^2\), and the TISEq looks:
+
+\begin{equation}
+- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
+E \psi(x)
+\label{eq:HO2}
+\end{equation}
+
+After some effort, the eigenfunctions are:
+
+\begin{equation}
+\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+\label{eq:HO3}
+\end{equation}
+
+where \(H_n\) is the Hermite polynomial of degree \(n\), and \(\alpha\) and \(N_n\) are defined by
+
+\begin{equation}
+\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
+N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+\label{eq:HO4}
+\end{equation}
+
+The eigenvalues are:
+
+\begin{equation}
+E_n = \hbar \omega (n + \frac{1}{2}),
+\label{eq:HO5}
+\end{equation}
+
+with \(\omega = \sqrt{k/ \mu}\). Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to \(n=0\), but because of the \(\frac{1}{2}\) factor in eq. \eqref{eq:HO5}, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \eqref{eq:HO5}. The lowest possible energy (the ZPE) will be \(E_0 = \frac{1}{2} \hbar \omega\).
+
+\hypertarget{the-rigid-rotor}{%
+\section{The Rigid Rotor}\label{the-rigid-rotor}}
+
+The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass \(\mu\), at a distance \(r\). The cartesian coordinates, \(x,y,z\), are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle \(\theta\), the longitudinal (azimuth) angle \(\phi\), and the distance \(r\). The TISEq of the system in spherical coordinates is:
+
+\begin{equation}
+- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
+\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E \psi(r),
+\label{eq:RR1}
+\end{equation}
+
+where \(I=\mu r^2\) is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics \(Y_{\ell}^m(\theta, \phi)\).\footnote{For a description of the spherical harmonics see \href{https://en.wikipedia.org/wiki/Spherical_harmonic}{here}} The eigenvalues are simply:
+
+\begin{equation}
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1).
+\label{eq:RR2}
+\end{equation}
+
+Each energy level \(E_{\ell}\) is \(2\ell+1\)-fold degenerate in \(m\), since \(m\) can have values \(-\ell, -\ell+1, \ldots, \ell-1, \ell\). Notice also that the energy does not depend on the second index \(m\), and the functions with fixed \(m=-\ell,-\ell+1,\dots,\ell-1,\ell\) have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number \(\ell\), similarly to the previous two cases. The index \(m\) that appears in the spherical harmonics will assume some importance in future chapters.
+
 \hypertarget{Hydrogen}{%
 \chapter{The Hydrogen Atom}\label{Hydrogen}}
+
+In this chapter we will consider the hydrogen atom as a proton fixed at the origin, orbited by an electron of reduced mass \(\mu\). The potential due to electrostatic attraction is:
+
+\begin{equation}
+V(r) = - \frac{e^2}{4 \pi \varepsilon_0 r},
+\label{eq:HA1}
+\end{equation}
+
+where \(\varepsilon_0\) is the constant permittivity of vacuum.
+The kinetic energy term in the Hamiltonian is
+
+\begin{equation}
+K = - \frac{\hbar^2}{2 \mu} \nabla^2,
+\label{eq:HA2}
+\end{equation}
+
+where \(\nabla^2\) is the Laplace operator (\emph{Laplacian}) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the dirst derivative along all three dimension of space is called gradient, which is written in cartesian coordinates \(\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)\). The Laplacian is the divergence \(\nabla \cdot\) of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as \(\nabla\cdot\nabla=\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2},\frac{\partial^2}{\partial z^2}\). The TISEq for the Hydrogen atom is therefore:
+
+\begin{equation}
+{\displaystyle \left(-{\frac {\hbar ^{2}}{2\mu }}\nabla ^{2}-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\right)\psi (r,\theta ,\phi )=E\psi (r,\theta ,\phi )},
+\label{eq:HA2b}
+\end{equation}
+
+which, replacing the Laplacian in spherical coordinates, becomes:
+
+\begin{equation}
+-{\frac {\hbar ^{2}}{2\mu }}\left[{\frac {1}{r^{2}}}{\frac {\partial }{\partial r}}\left(r^{2}{\frac {\partial \psi }{\partial r}}\right)+{\frac {1}{r^{2}\sin \theta }}{\frac {\partial }{\partial \theta }}\left(\sin \theta {\frac {\partial \psi }{\partial \theta }}\right)+{\frac {1}{r^{2}\sin ^{2}\theta }}{\frac {\partial ^{2}\psi }{\partial \phi ^{2}}}\right]-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\psi =E\psi.
+\label{eq:HA3}
+\end{equation}
+
+This equation seems very complicated, but comparing the term in between square brackets with the TISEq of the rigid rotor, we immediately see some connections. Eq. \eqref{eq:HA3} is a separable, partial differential equation that can be solved by factorizing the wave function \(\psi(r, \theta, \phi)\) into \(R_{nl}(r)Y_{\ell}^m(\theta, \phi)\), where \(Y_{\ell}^m(\theta, \phi)\) are again the spherical harmonics that solved the TISEq for the rigid rotor. The radial part \(R(r)\) obeys the equation:
+
+\begin{equation}
+- \frac{\hbar^2}{2 \mu r^2} \frac{d}{dr} \left( r^2 \frac{dR}{dr}
+\right) \left[\frac{\hbar^2 l(l+1)}{2 \mu r^2} + V(r) - E \right] R(r) = 0,
+\label{eq:HA4}
+\end{equation}
+
+which is called the radial equation for the hydrogen atom. The solutions of the radial part are:
+
+\begin{equation}
+R_{nl}(r) = - \left[ \frac{(n - l - 1)!}{2n[(n+l)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{l+3/2}r^l e^{-r/na_0} L_{n+l}^{2l+1}
+\left( \frac{2r}{n a_0} \right)
+\label{eq:HA5}
+\end{equation}
+
+where \(0 \leq l \leq n - 1\), and \(a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2}\) is the Bohr radius. The functions \(L_{n+l}^{2l+1}(2r/na_0)\) are the associated Laguerre functions.
+
+The hydrogen atom eigenvalues are:
+
+\begin{equation}
+\begin{aligned}
+\psi_{nlm}(r,\theta,\phi) &= R_{nl}(r)Y_{\ell}^m(\theta,\phi) = \\
+&= - \left[ \frac{(n - l - 1)!}{2n[(n+l)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{l+3/2}r^l e^{-r/na_0} L_{n+l}^{2l+1}
+\left( \frac{2r}{n a_0} \right) Y_{\ell}^m(\theta,\phi)
+\end{aligned}
+\label{eq:HA6}
+\end{equation}
+
+The quantum numbers \(n,J,m\) can take the following values:
+
+\(n=1,2,3,\ldots,\infty\) (principal quantum number),
+
+\(\ell =0,1,2,\ldots ,n-1\) (azimuthal quantum number),
+
+\(m=-\ell ,\ldots ,\ell\) (magnetic quantum number).
+
+These functions are called the \emph{hydrogen atom orbitals}, and are usually first encountered in introductory chemistry textbooks. Notice that---by definition---an orbital is a complex function (i.e., it has both a real and an imaginary component) that describes \emph{exclusively} one electron. Spherical harmonics are orthogonal to each other and they can be linearly combined them to form new solution to the TISEq where the imaginary part is removed. (Because of the orthogonality of spherical harmonics, the energy spectrum will not be affected by this operation.) These corresponding real orbitals are three-dimensional function that are not easily visualized in a three-dimensional space, since they require a four-dimensional one.\footnote{If it is not clear why you need a 4-D space to visualize a 3-D function, think at the fact that we use a 2-D space (the Cartesian plane) to visualize a 1-D function (\(f(x)\)).} Since there is no real consensus on what a wave function represent, the interpretation of orbitals is not straightforward.\footnote{At least not as straightforward as it is given in introductory chemistry textbooks.} We will return on the interpretation problem in future chapters, but for now it is important to keep in mind these following facts:
+
+\begin{itemize}
+\tightlist
+\item
+  The shape of every hydrogen atom orbital---complex or real---is that of a function on the surface of a sphere (yes, this is true for every single one of them, since they all come from spherical harmonics, which are special functions defined on the surface of a sphere. Hydrogen \(2p\) orbitals in real space \emph{do not} have the shape of a dumbbell, as often is said in general chemistry textbooks. Same goes for \(d, f, \ldots\) orbitals.)
+\item
+  Each orbital is the mathematical description of one---and only one---electron (in other words, orbitals do not ``contain'' electrons, they ``are'' the functions that describe each electron.)
+\item
+  Hydrogen orbitals are defined only for stystems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. \eqref{eq:HA2b} does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter \ref{Atoms} how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)
+\end{itemize}
+
+The hydrogen atom eigenvalues are:
+
+\begin{equation}
+E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
+\label{eq:HA7}
+\end{equation}
+
+Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azimuthal and magnetic quantum numbers, \(\ell\) and \(m\). Energy levels with the same \(n\), but different \(\ell\) and/or \(m\) are called \emph{degenerate states}, since they all have the same energy. This is, once again, source of misinterpretation in most general chemistry textbook:
+
+\begin{itemize}
+\tightlist
+\item
+  According to the TISEq, the \(2s\) and \(2p\) orbitals of the hydrogen atom have the same energy.\footnote{In practice, this is not true, because of a tiny effect called the \href{https://en.wikipedia.org/wiki/Lamb_shift}{Lamb shift}. The description of this effect requires to go beyond the Schrödinger equation---and essentially beyond quantum mechanics---into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the \(2s-2p\) energy difference. The difference that is usually discussed in the context of the aufbau principle is a many-electron effect, as we will discuss in chapter \ref{Atoms}, and does not apply to hydrogen.}
+\end{itemize}
+
+\hypertarget{Operators}{%
+\chapter{Operators and Mathematical Background}\label{Operators}}
+
+So far, we have seen a few simple examples of how to solve the TISEq. For the general case, the mathematical formulation of quantum mechanics is built upon the concept of an operator. An operator is a function over a space of physical states onto another space of physical states. Operators do not exist exclusively in quantum mechanics, but they can also be used in classical mechanics. In chapter \ref{Classical}, we have seen at least a couple of them, namely the Lagrangian, \(L\), and Hamiltonian, \(H\). In quantum mechanics, however, the concept of an operator is the basis of the complex mathematical treatment that is necessary for more complicated cases. In this chapter, we will discuss the mathematics of quantum mechanical operators, and we will recast the results for the analytical cases in light of the new framework. As we will see, this framework is even simpler than what we have seen in the previous chapter. This simplicity, however, will open the door to the ``stranger'' side of quantum mechanics.
+
+\hypertarget{operators-in-quantum-mechanics}{%
+\section{Operators in Quantum Mechanics}\label{operators-in-quantum-mechanics}}
+
+The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.\footnote{But they might not be strictly real.} Operators that possess this property are called \emph{Hermitian}.
+In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time---or equivalently momentum and time---and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.
+
+\hypertarget{linear-operators}{%
+\subsection{Linear Operators}\label{linear-operators}}
+
+Almost all operators encountered in quantum mechanics are linear. A linear operator is any operator\footnote{To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol \(\hat{}\) on top of the latter.} \(\hat{A}\) satisfying the following two conditions:
+
+\begin{equation}
+\begin{aligned}
+\hat{A} (f + g)  &= \hat{A} f + \hat{A} g, \\
+\hat{A} (c f) &= c \hat{A} f,
+\end{aligned}
+\label{eq:linop1}
+\end{equation}
+
+where \(c\) is a constant and \(f\) and \(g\) are functions. As an example, consider the operators \(\frac{d}{dx}\) and \(()^2\). We can see that \(\frac{d}{dx}\) is a linear operator because:
+
+\begin{equation}
+\begin{aligned}
+\frac{d}{dx}[f(x) + g(x)] &=\frac{d}{dx}f(x) + \frac{d}{dx}g(x), \\
+\frac{d}{dx}[c f(x)] &= c (d/dx) f(x).
+\end{aligned}
+\label{eq:linop2}
+\end{equation}
+
+However, \(()^2\) is not a linear operator because:
+
+\begin{equation}
+(f(x) + g(x))^2 \neq (f(x))^2 + (g(x))^2
+\label{eq:linop3}
+\end{equation}
+
+\hypertarget{hermitian-operators}{%
+\subsection{Hermitian Operators}\label{hermitian-operators}}
+
+Hermitian operators are characterized by the self-adjoint property:
+
+\begin{equation}
+\int \psi_a^{*} (\hat{A} \psi_a) =  \int \psi_a (\hat{A} \psi_a)^{*},
+\label{eq:hop1}
+\end{equation}
+
+where the integral is performed over all space. This property guarantees that all the eigenvalues of the operators are real. Defining \(a\) as the eigenvalue of operator \(\hat{A}\) using:
+
+\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+\label{eq:hop2}
+\end{equation}
+
+we can prove that \(a\) is real by replacing eq. \eqref{eq:hop2} into eq. \eqref{eq:hop1}:
+
+\begin{equation}
+\begin{aligned}
+a \int \psi_a^{*} \psi_a &= a^{*} \int \psi_a \psi_a^{*} \\
+(a - a^{*}) \int \vert\psi_a\vert^2 &= 0,
+\end{aligned}
+\label{eq:hop4}
+\end{equation}
+
+and since \(\vert\psi_a\vert^2\) is never negative, either \(a = a^{*}\) or \(\psi_a = 0\). Since \(\psi_a = 0\) is not an acceptable wavefunction, \(a = a^{*}\), and \(a\) is real.
+
+The following additional properties of Hermitian operators can also be proven with some work:
+
+\begin{equation}
+\int \psi^{*}\hat{A} \psi =
+\int (\hat{A} \psi^{*} \psi,
+\label{eq:hop2b}
+\end{equation}
+
+and for any two states \(\psi_1\) and \(\psi_2\):
+
+\begin{equation}
+\int \psi_1^{*} \hat{A} \psi_2 =
+\int (\hat{A} \psi_1^{*} \psi_2.
+\label{eq:hop3}
+\end{equation}
+
+Taking \(\psi_a\) and \(\psi_b\) as eigenfunctions of \(\hat{A}\) with eigenvalues \(a\) and \(b\) with \(a \neq b\), and using eq. \eqref{eq:hop3}, we obtain:
+
+\begin{equation}
+\begin{aligned}
+\int \psi_a^{*} \hat{A} \psi_b &= \int (\hat{A} \psi_a)^{*} \psi_b	\\
+b \int \psi_a^{*} \psi_b	&= a^{*} \int \psi_a^{*} \psi_b \\
+(b - a) \int \psi_a^{*} \psi_b &= 0.
+\end{aligned}
+\label{eq:hop5}
+\end{equation}
+
+Thus, since \(a = a^{*}\), and since we assumed \(b \neq a\), we must have \(\int \psi_a^{*} \psi_b = 0\), i.e.~\(\psi_a\) and \(\psi_b\) are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so).
+
+\hypertarget{eigenfunctions-and-eigenvalues}{%
+\section{Eigenfunctions and Eigenvalues}\label{eigenfunctions-and-eigenvalues}}
+
+As we have already seen, an eigenfunction of an operator \(\hat{A}\) is a function \(f\) such that the application of \(\hat{A}\) on \(f\) gives \(f\) again, times a constant:
+
+\begin{equation}
+\hat{A} f = k f,
+\label{eq:ee1}
+\end{equation}
+
+where \(k\) is a constant called the eigenvalue. The expectation value of an operator \(\hat{A}\) for a system with wave function \(\psi(\mathbf{r})\) living in a Hilbert space with unit vector \(\mathbf{r}\) (i.e., in three-dimensional Cartesian space \(\mathbf{r} = \left\{ x,y,z \right\}\)), is given by:
+
+\begin{equation}
+<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+\label{eq:ee1b}
+\end{equation}
+
+and if \(\hat{A}\) is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if \(\hat{A}\) is a linear operator with an eigenfunction \(g\), then any multiple of \(g\) is also an eigenfunction of \(\hat{A}\).
+
+When a system is in an eigenstate of observable \(A\) (i.e., when the wave function is an eigenfunction of the operator \(\hat{A}\)) then the expectation value of \(A\) is the eigenvalue of the wave function. Therefore:
+
+\begin{equation}
+\hat{A} \psi({\bf r}) = a \psi({\bf r}),
+\label{eq:ee2}
+\end{equation}
+
+then:
+
+\begin{equation}
+\begin{aligned}
+<A> &= \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r} \\
+&= \int \psi^{*}({\bf r}) a \psi({\bf r}) d{\bf r} \\	 
+&= a \int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = a,	 
+\end{aligned}
+\label{eq:ee3}
+\end{equation}
+
+which implies that:
+
+\begin{equation}
+\int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = 1.
+\label{eq:ee4}
+\end{equation}
+
+This property of wave functions is called normalization, and in the one-electron TISEq guarantees that the maximum probability of finding an electron over the entire space is one.\footnote{Imposing the normalization condition is the best way to find the constant \(A\) in the solution of the TISEq for the particle in a box, a topic that we delayed in chapter \ref{Models}.}
+
+A unique property of quantum mechanics is that a wave function can be expressed not just as a simple eigenfunction, but also as a combination of several of them. We have in part already encountered such property in the previous chapter, where complex hydrogen orbitals have been combined to form corresponding linear ones. As a general example, let us consider a wave function written as a linear combination of two eigenstates of \(\hat{A}\), with eigenvalues \(a\) and \(b\):
+
+\begin{equation}
+\psi = c_a \psi_a + c_b \psi_b,
+\label{eq:ee5}
+\end{equation}
+
+where \(\hat{A} \psi_a = a \psi_a\) and \(\hat{A} \psi_b = b \psi_b\). Then, since \(\psi_a\) and \(\psi_b\) are orthogonal and normalized (usually abbreviated as orthonormal), the expectation value of \(A\) is:
+
+\begin{equation}
+\begin{aligned}
+<A> &= \int \psi^{*} \hat{A} \psi \\
+ 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] \\
+ 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
+\left[ a c_a \psi_a + b c_b \psi_b \right] \\	 
+ 	&= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b + a c_b^{*} c_a \int \psi_b^{*} \psi_a +
+b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\ 
+ 	&= a \vert c_a\vert^2 + b \vert c_b\vert^2.
+\end{aligned}
+\label{eq:ee6}    
+\end{equation}
+
+This result shows that the average value of \(A\) is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.\footnote{This section was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{here}.}
 
 \hypertarget{Spin}{%
 \chapter{Spin}\label{Spin}}
 
+Spin is a special property of particles that has no classical analogue. Spin is an intrinsic form of angular momentum carried by elementary particles.
+
 \hypertarget{Postulates}{%
 \chapter{Postulates of Quantum Mechanics}\label{Postulates}}
-
-\hypertarget{Math1}{%
-\chapter{Mathematical Background 1}\label{Math1}}
 
 \hypertarget{Math2}{%
 \chapter{Mathematical Background 2}\label{Math2}}

@@ -23,7 +23,7 @@ where $x$ is the position, $t$ is time, $k=\frac{2\pi}{\lambda}$ is the wave vec
 
 where we have used the fact that $i^2=-1$. 
 
-Assuming that particles behaves as wave—as proven by de Broglie's±we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}/{\hbar}$ to obtain:
+Assuming that particles behaves as wave—as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}/{\hbar}$ to obtain:
 
 \begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
@@ -51,7 +51,7 @@ p^2 = 2m[E - V(x)],
 (\#eq:sch6)
 \end{equation}
 
-which we can then replace into eq. \ref(eq:sch4) to obtain:
+which we can then replace into eq. \@ref(eq:sch4) to obtain:
 
 \begin{equation}
 2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
@@ -117,7 +117,7 @@ The solutions of eq. \@ref(eq:TDSEq6), $f(t)$, are purely oscillatory, since $f(
 
 \begin{equation}
 \psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
-(\#eq:TDSEq6)
+(\#eq:TDSEq6b)
 \end{equation}
 
 then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity  $\vert \psi(x, t) \vert^2$ is time independent, as we can easily show: 
@@ -129,9 +129,8 @@ then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phas
 (\#eq:TDSEq7)
 \end{equation}
 
-Wave functions of the form of eq. \@ref(eq:TDSEq6) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
-Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](A Brief Review of 
-Elementary Quantum Chemistry).]
+Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
+Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-08" />
+<meta name="date" content="2021-01-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -104,11 +104,25 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a></li>
+<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-free-particle"><i class="fa fa-check"></i><b>4.1</b> The Free Particle</a></li>
+<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#rigidrotor"><i class="fa fa-check"></i><b>4.2</b> The Particle in a Box</a></li>
+<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.3</b> The Harmonic Oscillator</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.4</b> The Rigid Rotor</a></li>
+</ul></li>
 <li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
-<li class="chapter" data-level="6" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>6</b> Spin</a></li>
-<li class="chapter" data-level="7" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>7</b> Postulates of Quantum Mechanics</a></li>
-<li class="chapter" data-level="8" data-path="Math1.html"><a href="Math1.html"><i class="fa fa-check"></i><b>8</b> Mathematical Background 1</a></li>
+<li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="Operators.html"><a href="Operators.html#linear-operators"><i class="fa fa-check"></i><b>6.1.1</b> Linear Operators</a></li>
+<li class="chapter" data-level="6.1.2" data-path="Operators.html"><a href="Operators.html#hermitian-operators"><i class="fa fa-check"></i><b>6.1.2</b> Hermitian Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="Operators.html"><a href="Operators.html#eigenfunctions-and-eigenvalues"><i class="fa fa-check"></i><b>6.2</b> Eigenfunctions and Eigenvalues</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a></li>
+<li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a></li>
 <li class="chapter" data-level="9" data-path="Math2.html"><a href="Math2.html"><i class="fa fa-check"></i><b>9</b> Mathematical Background 2</a></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a></li>
 <li class="chapter" data-level="11" data-path="Bond.html"><a href="Bond.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond</a></li>
@@ -136,7 +150,142 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Models" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Analytically Soluble Models</h1>
+<p>The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.</p>
+<div id="the-free-particle" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> The Free Particle</h2>
+<p>By definition, the particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
+<p><span class="math display" id="eq:FP1">\[\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+\tag{4.1}
+\end{equation}\]</span></p>
+<p>This equation can be rearranged to:</p>
+<p><span class="math display" id="eq:FP2">\[\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+\tag{4.2}
+\end{equation}\]</span></p>
+<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
+<p><span class="math display" id="eq:FP3">\[\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+\tag{4.3}
+\end{equation}\]</span></p>
+<p>The first and second derivatives of this function are:</p>
+<p><span class="math display" id="eq:FP4">\[\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+\tag{4.4}
+\end{equation}\]</span></p>
+<p>Comparing the second derivative in eq. <a href="Models.html#eq:FP4">(4.4)</a> with eq. <a href="Models.html#eq:FP2">(4.2)</a>, we immediately see that if we set:</p>
+<p><span class="math display" id="eq:FP5">\[\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+\tag{4.5}
+\end{equation}\]</span></p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.5)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p><span class="math display" id="eq:FP6">\[\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\tag{4.6}
+\end{equation}\]</span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Models.html#eq:FP3">(4.3)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Models.html#eq:FP6">(4.6)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+</div>
+<div id="rigidrotor" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> The Particle in a Box</h2>
+<p>Now we can consider a particle constrained to move in a single dimension, under the influence of a potential <span class="math inline">\(V(x)\)</span> which is zero for <span class="math inline">\(0 \leq x \leq a\)</span> and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where <span class="math inline">\(V(x)\)</span> is infinite, so <span class="math inline">\(\psi(x)\)</span> is nonzero only within <span class="math inline">\([0,a]\)</span>. The Schrödinger equation is thus:</p>
+<p><span class="math display" id="eq:PIB1">\[\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
+\qquad 0 \leq x \leq a.
+\tag{4.7}
+\end{equation}\]</span></p>
+<p>In other words, inside the box <span class="math inline">\(\psi(x)\)</span> describes a free particle, but outside the box <span class="math inline">\(\psi(x)=0\)</span>. Since the Schrödinger equation involves derivatives, the function that solves it, <span class="math inline">\(\psi(x)\)</span>, must be everywhere continuous and everywhere continuously differentiable. This fact means that the value of the wave function at the two extremes must be equal to zero:</p>
+<p><span class="math display" id="eq:PIB2">\[\begin{equation}
+\psi(0)=\psi(a)=0.
+\tag{4.8}
+\end{equation}\]</span></p>
+<p>Inside the box we can use Euler’s formula to write the wave function as a linear combination of the positive and negative solutions:</p>
+<p><span class="math display" id="eq:PIB3">\[\begin{equation}
+\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
+\tag{4.9}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants that we need to determine using the two constraints in eq. <a href="Models.html#eq:PIB2">(4.8)</a>. For <span class="math inline">\(B\)</span> it is straightforward to see that:</p>
+<p><span class="math display" id="eq:PIB4">\[\begin{equation}
+\psi(0)= 0 + B =0 \; \implies \; B=0.
+\tag{4.10}
+\end{equation}\]</span></p>
+<p>For <span class="math inline">\(A\)</span> we have:</p>
+<p><span class="math display" id="eq:PIB5">\[\begin{equation}
+\psi(a)= A\sin ka = 0,
+\tag{4.11}
+\end{equation}\]</span></p>
+<p>which is trivially solved by <span class="math inline">\(A=0\)</span>, or by the more interesting condition of <span class="math inline">\(ka=n\pi\)</span>. The trivial solution corresponds to a wave function uniformly equal to zero everywhere. This wave function is uninteresting, since it describes no particles in no boxes. The second set of solutions, however, is very interesting, since we can write it as:</p>
+<p><span class="math display" id="eq:PIB6">\[\begin{equation}
+\psi_n(x)= A\sin\left(\frac{n\pi x}{a} \right)\quad n=1,2,\ldots,\infty,
+\tag{4.12}
+\end{equation}\]</span></p>
+<p>which represents an infinite set of functions, <span class="math inline">\(\psi_n(x)\)</span>, determined by a positive integer number <span class="math inline">\(n\)</span>, called <em>qunatum number</em>. Since these functions solve the TISEq, they are also called <em>eigenfunctions</em>, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace <a href="Models.html#eq:PIB6">(4.12)</a> into eq. <a href="Models.html#eq:PIB1">(4.7)</a>, to obtain:</p>
+<p><span class="math display" id="eq:PIB7">\[\begin{equation}
+E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
+\tag{4.13}
+\end{equation}\]</span></p>
+<p>A few interesting considerations can be made from the results of eq. <a href="Models.html#eq:PIB7">(4.13)</a>. First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, <span class="math inline">\(a\)</span>, since:</p>
+<p><span class="math display" id="eq:PIB8">\[\begin{equation}
+E_1 = \frac{h^2 }{8 m a^2} \neq 0.
+\tag{4.14}
+\end{equation}\]</span></p>
+<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we did not solve for the constant <span class="math inline">\(A\)</span>. This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate <span class="math inline">\(n_x,n_y,n_z\)</span>).</p>
+</div>
+<div id="the-harmonic-oscillator" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> The Harmonic Oscillator</h2>
+<p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
+<p><span class="math display" id="eq:HO1">\[\begin{equation}
+V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
+\tag{4.15}
+\end{equation}\]</span></p>
+<p>If we choose the energy scale such that <span class="math inline">\(V_0 = 0\)</span> then: <span class="math inline">\(V(x) = (1/2)kx^2\)</span>, and the TISEq looks:</p>
+<p><span class="math display" id="eq:HO2">\[\begin{equation}
+- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
+E \psi(x)
+\tag{4.16}
+\end{equation}\]</span></p>
+<p>After some effort, the eigenfunctions are:</p>
+<p><span class="math display" id="eq:HO3">\[\begin{equation}
+\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+\tag{4.17}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(H_n\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_n\)</span> are defined by</p>
+<p><span class="math display" id="eq:HO4">\[\begin{equation}
+\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
+N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+\tag{4.18}
+\end{equation}\]</span></p>
+<p>The eigenvalues are:</p>
+<p><span class="math display" id="eq:HO5">\[\begin{equation}
+E_n = \hbar \omega (n + \frac{1}{2}),
+\tag{4.19}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to <span class="math inline">\(n=0\)</span>, but because of the <span class="math inline">\(\frac{1}{2}\)</span> factor in eq. <a href="Models.html#eq:HO5">(4.19)</a>, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. <a href="Models.html#eq:HO5">(4.19)</a>. The lowest possible energy (the ZPE) will be <span class="math inline">\(E_0 = \frac{1}{2} \hbar \omega\)</span>.</p>
+</div>
+<div id="the-rigid-rotor" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> The Rigid Rotor</h2>
+<p>The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>. The cartesian coordinates, <span class="math inline">\(x,y,z\)</span>, are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. The TISEq of the system in spherical coordinates is:</p>
+<p><span class="math display" id="eq:RR1">\[\begin{equation}
+- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
+\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E \psi(r),
+\tag{4.20}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^m(\theta, \phi)\)</span>.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> The eigenvalues are simply:</p>
+<p><span class="math display" id="eq:RR2">\[\begin{equation}
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1).
+\tag{4.21}
+\end{equation}\]</span></p>
+<p>Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\(2\ell+1\)</span>-fold degenerate in <span class="math inline">\(m\)</span>, since <span class="math inline">\(m\)</span> can have values <span class="math inline">\(-\ell, -\ell+1, \ldots, \ell-1, \ell\)</span>. Notice also that the energy does not depend on the second index <span class="math inline">\(m\)</span>, and the functions with fixed <span class="math inline">\(m=-\ell,-\ell+1,\dots,\ell-1,\ell\)</span> have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number <span class="math inline">\(\ell\)</span>, similarly to the previous two cases. The index <span class="math inline">\(m\)</span> that appears in the spherical harmonics will assume some importance in future chapters.</p>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="7">
+<li id="fn7"><p>For a description of the spherical harmonics see <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">here</a><a href="Models.html#fnref7" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

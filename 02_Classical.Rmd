@@ -126,7 +126,7 @@ The time derivative of $q$ is the velocity, and so the second Hamilton equation 
 
 \begin{equation}
 \text{Velocity:}\qquad \frac{dq}{dt} = \frac{\partial K}{\partial p} = \frac{\partial \left(\frac{p^2}{2m}\right)}{\partial p} = \frac{p}{m},
-(\#eq:ham5)
+(\#eq:ham6)
 \end{equation}
  
 which is exactly the second equation of motion in eq. \@ref(eq:class2) of Newtonian mechanics.
