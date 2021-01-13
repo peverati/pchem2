@@ -7,6 +7,63 @@ So far, we have seen a few simple examples of how to solve the TISEq. For the ge
 The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.^[But they might not be strictly real.] Operators that possess this property are called *Hermitian*. 
 In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time—or equivalently momentum and time—and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.
 
+In quantum mechanics, physical observables (e.g., energy, momentum, position, etc.) are represented mathematically by operators. For instance, the operator corresponding to energy is the Hamiltonian operator 
+\begin{equation}
+\hat{H} = - \frac{\hbar^2}{2} \sum_i \frac{1}{m_i} \nabla_i^2 + V
+\end{equation}	(31)
+
+where $i$ is an index over all the particles of the system. The expectation value of an operator $\hat{A}$ for a system with wave function $\psi(\mathbf{r})$ living in a Hilbert space with unit vector $\mathbf{r}$ (i.e., in three-dimensional Cartesian space $\mathbf{r} = \left\{ x,y,z \right\}$), is given by: 
+
+\begin{equation}
+<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+(\#eq:ee1b)
+\end{equation}
+
+and if $\hat{A}$ is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if $\hat{A}$ is a linear operator with an eigenfunction $g$, then any multiple of $g$ is also an eigenfunction of $\hat{A}$.
+
+### Basic Properties of Operators
+
+Most of the properties of operators are obvious, but they are summarized below for completeness.
+The sum and difference of two operators $\hat{A}$ and  $\hat{B}$ are given by 
+$\displaystyle (\hat{A} + \hat{B}) f$	$\textstyle =$	$\displaystyle \hat{A} f + \hat{B} f$	(33)
+$\displaystyle (\hat{A} - \hat{B}) f$	$\textstyle =$	$\displaystyle \hat{A} f - \hat{B} f$	(34)
+
+The product of two operators is defined by:
+
+\begin{equation}
+\hat{A} \hat{B} f \equiv \hat{A} [ \hat{B} f ]
+(\#eq:bp1)
+\end{equation}
+
+Two operators are equal if 
+\begin{equation}
+\hat{A} f = \hat{B} f
+(\#eq:bp2)
+\end{equation}
+
+for all functions $f$. The identity operator $\hat{1}$ does nothing (or multiplies by 1):
+
+\begin{equation}
+{\hat 1} f = f
+(\#eq:bp3)
+\end{equation}
+
+The associative law holds for operators:
+
+\begin{equation}
+\hat{A}(\hat{B}\hat{C}) = (\hat{A}\hat{B})\hat{C}
+(\#eq:bp4)
+\end{equation}
+
+The commutative law does not generally hold for operators. In general,  $\hat{A} \hat{B} \neq \hat{B} \hat{A}$. It is convenient to define the quantity:
+
+\begin{equation}
+[\hat{A}, \hat{B}]\equiv \hat{A} \hat{B} - \hat{B} \hat{A}
+(\#eq:bp5)
+\end{equation}
+
+which is called the **commutator** of $\hat{A}$ and $\hat{B}$. Note that the order matters, so that  $[ \hat{A}, \hat{B}] = - [ \hat{B}, \hat{A}]$. If $\hat{A}$ and $\hat{B}$ happen to commute, then  $[\hat{A}, \hat{B}] = 0$.
+
 ### Linear Operators
 
 Almost all operators encountered in quantum mechanics are linear. A linear operator is any operator^[To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol $\hat{}$ on top of the latter.] $\hat{A}$ satisfying the following two conditions: 
@@ -68,7 +125,7 @@ The following additional properties of Hermitian operators can also be proven wi
 
 \begin{equation}
 \int \psi^{*}\hat{A} \psi =
-\int (\hat{A} \psi^{*} \psi,
+\int (\hat{A} \psi)^{*} \psi,
 (\#eq:hop2b)
 \end{equation}
 
@@ -76,7 +133,7 @@ and for any two states $\psi_1$ and $\psi_2$:
 
 \begin{equation}
 \int \psi_1^{*} \hat{A} \psi_2 =
-\int (\hat{A} \psi_1^{*} \psi_2.
+\int (\hat{A} \psi_1)^{*} \psi_2.
 (\#eq:hop3)
 \end{equation}
 
@@ -102,14 +159,7 @@ As we have already seen, an eigenfunction of an operator $\hat{A}$ is a function
 (\#eq:ee1)
 \end{equation}
 
-where $k$ is a constant called the eigenvalue. The expectation value of an operator $\hat{A}$ for a system with wave function $\psi(\mathbf{r})$ living in a Hilbert space with unit vector $\mathbf{r}$ (i.e., in three-dimensional Cartesian space $\mathbf{r} = \left\{ x,y,z \right\}$), is given by: 
-
-\begin{equation}
-<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
-(\#eq:ee1b)
-\end{equation}
-
-and if $\hat{A}$ is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if $\hat{A}$ is a linear operator with an eigenfunction $g$, then any multiple of $g$ is also an eigenfunction of $\hat{A}$.
+where $k$ is a constant called the eigenvalue. 
 
 When a system is in an eigenstate of observable $A$ (i.e., when the wave function is an eigenfunction of the operator $\hat{A}$) then the expectation value of $A$ is the eigenvalue of the wave function. Therefore:
 
@@ -163,3 +213,11 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\
 
 This result shows that the average value of $A$ is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.^[This section was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
 
+Some common operators occurring in quantum mechanics are collected in Table 1, while we discussed the two main one in the sections below.
+
+Table 1 XXX
+
+
+### Hamiltonian Operator
+
+### Angular Momentum Operator

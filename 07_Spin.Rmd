@@ -1,3 +1,134 @@
 # Spin {#Spin}
 
-Spin is a special property of particles that has no classical analogue. Spin is an intrinsic form of angular momentum carried by elementary particles. 
+Spin is a special property of particles that has no classical analogue. Spin is an intrinsic form of angular momentum carried by elementary particles, such as the electron. 
+
+
+## Stern-Gerlach Experiment
+
+In 1920, Otto Stern and Walter Gerlach designed an experiment that unintentionally led to the discovery that electrons have their own individual, continuous spin even as they move along their orbital of an atom. The experiment was done by putting a silver foil in an oven to vaporize its atoms. The silver atoms were collected into a beam that passed through an inhomogeneous magnetic field. The result was that the magnetic beam split the beam into two (and only two) separate ones. The Stern–Gerlach experiment demonstrated that the spatial orientation of angular momentum is quantized into two components (up and down). Thus an atomic-scale system was shown to have intrinsically quantum properties. The experiment is normally conducted using electrically neutral particles such as silver atoms. This avoids the large deflection in the path of a charged particle moving through a magnetic field and allows spin-dependent effects to dominate.
+
+If the particle is treated as a classical spinning magnetic dipole, it will precess in a magnetic field because of the torque that the magnetic field exerts on the dipole. If it moves through a homogeneous magnetic field, the forces exerted on opposite ends of the dipole cancel each other out and the trajectory of the particle is unaffected. However, if the magnetic field is inhomogeneous then the force on one end of the dipole will be slightly greater than the opposing force on the other end, so that there is a net force which deflects the particle's trajectory. If the particles were classical spinning objects, one would expect the distribution of their spin angular momentum vectors to be random and continuous. Each particle would be deflected by an amount proportional to its magnetic moment, producing some density distribution on the detector screen. Instead, the particles passing through the Stern–Gerlach apparatus are equally distributed among two possible values, with half of them ending up at an upper spot ("spin up"), and the other half at the lower spot ("spin down"). Since the particles are deflected by a magnetic field, spin is a magnetic  property that is associated to some intrinsic form of angular momentum. As we saw in chapter \@ref(Operators), the quantization of the angular momentum gives energy levels that are $(2\ell+1)$-fold degenerate. Since along the direction of the magnet we observe only two possible eigenvalues for the spin, we conclude the following value for $s$:
+
+\begin{equation}
+2s+1=2 \quad\Rightarrow\quad s=\frac{1}{2}.
+(\#eq:spin0)
+\end{equation}
+
+The Stern-Gerlach experiment proves that electrons are spin-$\frac{1}{2}$ particles. These have only two possible spin angular momentum values measured along any axis, $+{\frac {\hbar }{2}}$ or $-{\frac {\hbar }{2}}$, a purely quantum mechanical phenomenon. Because its value is always the same, it is regarded as an intrinsic property of electrons, and is sometimes known as "intrinsic angular momentum" (to distinguish it from orbital angular momentum, which can vary and depends on the presence of other particles).
+
+The act of observing (measuring) the momentum along the $z$ direction corresponds to the operator $\hat{S}_z$, which project the value of the total spin operator $\hat{S}^2$ along the $z$ axis. The eigenvalues of the projector operator are:
+
+\begin{equation}
+\hat{S}_z \psi = \hbar m_s \psi,
+(\#eq:spin0b)
+\end{equation}
+
+where $m_s=\left\{-s,+s\right\}=\left\{-\frac{1}{2},+\frac{1}{2}\right\}$ is the spin quantum number along the $z$ component. The eigenvalues for the total spin operator $\hat{S}^2$, similarly to the angular momentum operator $\hat{L}^2$ seen in eq. \@ref(eq:XXX), are:
+
+\begin{equation}
+\hat{S}^2 \psi = \hbar^2 s(s+1) \psi,
+(\#eq:spin0c)
+\end{equation}
+
+The initial state of the particles in the Stern-Gerlach experiment is given by the following wave function:
+
+\begin{equation}
+\psi = c_1\, \psi_{\uparrow} + c_2 \,\psi_{\downarrow},
+(\#eq:spin1)
+\end{equation}
+
+where $\uparrow=+\frac{\hbar}{2}$, $\downarrow=-\frac{\hbar}{2}$, and the coefficients $c_1$ and $c_2$ are complex numbers. In this initial state, spin can point in any direction. The expectation value of the operator $\hat{S}_z$ (the quantity that the Stern-Gerlach experiment measures), can be obtained using eq. \@ref(eq:ee6):
+
+\begin{equation}
+\begin{aligned}
+<S_z> &= \int \psi^{*} \hat{S}_z \psi \, d\mathbf{s} \\
+ &= +\frac{\hbar}{2} \vert c_1\vert^2 -\frac{\hbar}{2} \vert c_2\vert^2,
+\end{aligned}
+(\#eq:spin2)    
+\end{equation}
+
+where the integration is performed along a special coordinate $\mathbf{s}$ composed of only two values, and the coefficient $c_1$ and $c_2$ are complex numbers. Applying the normalization condition, eq. \@ref(eq:ee4) we can obtain:
+
+\begin{equation}
+|c_{1}|^{2}+|c_{2}|^{2}=1 \quad\longrightarrow\quad |c_{1}|^{2}=|c_{2}|^{2}=\frac{1}{2}.
+(\#eq:spin3)    
+\end{equation}
+
+This equation is not sufficient to determine the values of the coefficients since they are complex numbers. Eq. \@ref(eq:spin3), however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, $\psi_{\uparrow}$ and $\psi_{\downarrow}$, will be observed with equal probability of $\frac{1}{2}$.
+
+## Sequential Stern-Gerlach Experiments
+
+An interesting result can be obtain if we link multiple Stern–Gerlach apparatuses into one experiment and we perform the measurement along two orthogonal directions in space. 
+As we showed in the previous section, all particles leaving the first Stern-Gerlach apparatus are in an eigenstate of the $\hat{S}_z$ operator (i.e., their spin is either "up or "down" with respect to the $z$-direction). We can then take either one of the two resulting beams (for simplicity let's take the "spin up" output), and perform another spin measurement on it. If the second measurement is also aligned along the $z$-direction then only one outcome will be measured, since all particles are already in the "spin up" eigenstate of $\hat{S}_z$. In other words, the measurement of a particle being in an eigenstate of the corresponding operator leaves the state unchanged.
+
+If, however, we perform the spin measurement along a direction perpendicular to the original $z$-axis (i.e., the $x$-axis) then the output will equally distribute among "spin up" or ”spin down” in the $x$-direction, which in order to avoid confusion, we can call "spin left" and "spin right". Thus, even though we knew the state of the particles beforehand, in this case the measurement resulted in a random spin flip in either of the measurement directions. Mathematically, this property is expressed by the nonvanishing of the commutator of the spin operators:
+
+\begin{equation}
+\left[\hat{S}_z,\hat{S}_x \right] \neq 0.
+(\#eq:spin4)    
+\end{equation}
+
+We can finally repeat the measurement a third time, with the magnet aligned along the original $z$-direction. According to classical physics, after the second apparatus, we would expect to have one beam with characteristic "spin up" and "spin left", and another with characteristic "spin up" and "spin right". The outcome of the third measurement along the original $z$-axis should be one output with characteristic "spin up", regardless to which beam the magnet is applied (since the "spin down" component should have been "filtered out" by the first experiment, and the "spin left" and "spin right" component should be filtered out by the third magnet). This is not what is observed. The output of the third measurement is—once again—two beams in the $z$ direction, one with "spin up" characteristric and the other with "spin down". 
+
+This experiment shows that spin is not a classical property. The Stern-Gerlach apparatus does not behave as a simple filter, selecting beams with one specific pre-determined characteristic. The second measurement along the $x$ axis destroys the previous determination of the angular momentum in the $z$ direction. This means that this property cannot be measured on two perpendicular directions at the same time. 
+
+
+## Spin Operators
+The mathematics of quantum mechanics tell us that $\hat{S}_z$ and $\hat{S}_x$ do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time. 
+
+In 3-dimensional space there are three directions that are orthogonal to each other $\left\{x,y,z\right\}$. Thus, we can define a third spin projection operator along the $y$ direction, $\hat{S}_y$, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we consider in the previous section. The total spin operator, $\hat{S}^2$, is then simply defined as:
+
+\begin{equation}
+\begin{aligned}
+\hat{S}^2 &=\hat{S}\cdot\hat{S}=\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\right)\cdot\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z \right) \\
+&=\hat{S}_x^2+\hat{S}_y^2+\hat{S}_z^2,
+\end{aligned}
+(\#eq:spop1)    
+\end{equation}
+
+with $\left\{\mathbf{i},\mathbf{j},\mathbf{k}\right\}$ the unitary vectors in three-dimensional space. 
+
+
+Wolfgang Pauli explicitly derived the relationships between all three spin projection operators. Assuming the magnetic ﬁeld along the $z$ axis, Pauli's relations can be written using simple equations involving the two possible eigenstates $\psi_{\uparrow}$ and $\psi_{\downarrow}$:
+
+\begin{equation}
+\begin{aligned}
+\hat{S}_x \psi_{\uparrow} =  \frac{\hbar}{2} \psi_{\downarrow} \qquad \hat{S}_y \psi_{\uparrow} &=  \frac{\hbar}{2} i \psi_{\downarrow} \qquad \hat{S}_z \psi_{\uparrow} =  \frac{\hbar}{2} \psi_{\uparrow} \\
+\hat{S}_x \psi_{\downarrow} =  \frac{\hbar}{2} \psi_{\uparrow} \qquad \hat{S}_y \psi_{\downarrow} &=  - \frac{\hbar}{2} i \psi_{\uparrow} \qquad \hat{S}_z \psi_{\downarrow} =  -\frac{\hbar}{2} \psi_{\downarrow},
+\end{aligned}
+(\#eq:spop2)  
+\end{equation}
+
+where $i$ is the imaginary unit ($i^2=-1$). In other words, for $\hat{S}_z$ we have eigenvalue equations, while the remaining components have the effect of permuting state $\psi_{\uparrow}$ with state $\psi_{\downarrow}$ after multiplication by suitable constants. We can use these equations, together with eq. \@ref(eq:bp5), to calculate the commutator for each couple of spin projector operators:
+
+\begin{equation}
+\begin{aligned}
+\left[\hat{S}_x, \hat{S}_y\right] &= i\hat{S}_z \\
+\left[\hat{S}_y, \hat{S}_z\right] &= i\hat{S}_x \\
+\left[\hat{S}_z, \hat{S}_x\right] &= i\hat{S}_y,
+\end{aligned}
+(\#eq:spop3)  
+\end{equation}
+
+which prove that the three projection operators do not commute with each other.
+
+> ```{example, spinex1}
+*Proof of Commutator Between Spin Projection Operators.*
+
+The equations in \@ref(eq:spop3) can be proved by writing the full eigenvalue equation and solving it using the definition of commutator, eq.\@ref(eq:bp5), in conjunction with Pauli's relation, eqs. \@ref(eq:spop2). For example, for the first couple:
+
+\begin{equation}
+\begin{aligned}
+\left[\hat{S}_x, \hat{S}_y\right] \psi_{\uparrow} &= \hat{S}_x\hat{S}_y\psi_{\uparrow}-\hat{S}_y\hat{S}_x\psi_{\uparrow} \\
+&= \hat{S}_x \left(\frac{\hbar}{2}i \psi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \psi_{\downarrow} \right) \\
+&= \frac{\hbar}{2}i \left(\frac{\hbar}{2}i \psi_{\downarrow} \right)- \frac{\hbar}{2} \left(\frac{\hbar}{2} \psi_{\downarrow} \right) \\
+&= \left(\frac{\hbar}{4}+\frac{\hbar}{4}\right)i\psi_{\uparrow} \\
+&= \frac{\hbar}{2}i \psi_{\uparrow} \\
+&= i\hat{S}_z  \psi_{\uparrow} 
+\end{aligned}
+(\#eq:spop4) 
+\end{equation}
+
+```
+
+

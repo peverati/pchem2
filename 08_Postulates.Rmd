@@ -1,2 +1,79 @@
 # Postulates of Quantum Mechanics {#Postulates}
 
+In order to understand deeper quantum mechanics, scientists have derived a series of axioms that result in what are called *postulates of quantum mechanics*. These are, in fact, assumptions that we need to make to understand how the measured reality relates with the mathematics of quantum mechanics. It is important to notice that the postulates are necessary for the interpretation of the theory, but not for the mathematics behind it. Regarding of whether we interpret it or not, the mathematics is complete and consistent. In fact, as we will see in the next chapter, several controversies regarding the interpretation of the mathematics are still open, and different philosophies have been developed to rationalize the results. Recall also that there are different ways of writing the equation of quantum mechanics, all equivalent to each other (i.e., Schrödinger's differential formulation and Heisenberg's algebraic formulation that we saw in chapter \@ref(Schrodinger)). For these reasons, there is not an agreement on the number of postulates that are necessary to interpret the theory, and some philosophy and/or formulation might require more postulates than others. In this chapter, we will discuss the six postulates, as they are usually presented in chemistry and introductory physics textbooks and as they relate with a basic statistical interpretation of quantum mechanics. Regardless of the philosophical consideration on the meanings and numbers of the postulate, as well as their physical origin, these statements will make the interpretation of the theory a little easier, as we will see in the next chapter.
+
+
+## Postulate 1: The Wave Function Postulate
+
+The state of a quantum mechanical system is completely specified by a function  $\Psi({\bf r}, t)$ that depends on the coordinates of the particle(s) and on time. This function, called the wave function or state function, has the important property that  $\Psi^{*}({\bf r}, t)\Psi({\bf r}, t) d\tau$ is the probability that the particle lies in the volume element $d\tau$ located at ${\bf r}$ at time $t$.
+
+The wave function must satisfy certain mathematical conditions because of this probabilistic interpretation. For the case of a single particle, the probability of finding it somewhere is 1, so that we have the normalization condition 
+
+\begin{equation}
+\int_{-\infty}^{\infty} \Psi^{*}({\bf r}, t) \Psi({\bf r}, t) d\tau = 1
+(\#eq:post1)  
+\end{equation}
+
+It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter \@ref(Models), a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which tipically involve derivation) to be applied without mathematical issues.
+
+## Postulate 2: Experimental Observables
+
+To every observable in classical mechanics there corresponds a linear, Hermitian operator in quantum mechanics. We have in part already discussed this postulate in chapter \@ref(Operators), albeit we didn't call it as such. This postulate is necessary if we require the expectation value of an operator $\hat{A}$ to be real, as it should be.
+
+## Postulate 3: Individual Measurements
+
+In any measurement of the observable associated with operator $\hat{A}$, the only values that will ever be observed are the eigenvalues $a$ that satisfy the eigenvalue equation:
+
+\begin{equation}
+\hat{A} \Psi = a \Psi.
+(\#eq:post2)  
+\end{equation}
+
+This postulate captures the central point of quantum mechanics: the values of dynamical variables can be quantized (although it is still possible to have a continuum of eigenvalues in the case of unbound states). If the system is in an eigenstate of $\hat{A}$ with eigenvalue $a$, then any measurement of the quantity $A$ will yield $a$.
+Although measurements must always yield an eigenvalue, the state does not have to be an eigenstate of $\hat{A}$ initially. 
+
+An arbitrary state can be expanded in the complete set of eigenvectors of $\hat{A}$ $\left(\hat{A}\Psi_i = a_i \Psi_i\right)$ as:
+
+\begin{equation}
+\Psi = \sum_i^{n} c_i \Psi_i,
+(\#eq:post3)  
+\end{equation}
+
+where $n$ may go to infinity. In this case, we only know that the measurement of $A$ will yield one of the values $a_i$, but we don't know which one. However, we do know the probability that eigenvalue $a_i$ will occur (it is the absolute value squared of the coefficient, $\vert c_i\vert^2$, as we obtained already in chapter \@ref(Operators)), leading to the fourth postulate below.
+
+
+## Postulate 4: Expectation Values and Collapse of the Wavefunction
+If a system is in a state described by a normalized wave function $\Psi$, then the average value of the observable corresponding to $\hat{A}$ is given by:
+
+\begin{equation}
+<A> = \int_{-\infty}^{\infty} \Psi^{*} \hat{A} \Psi d\tau.
+(\#eq:post4)  
+\end{equation}
+
+An important consequence of the fourth postulate is that, after measurement of $\Psi$ yields some eigenvalue $a_i$, the wave function immediately "collapses" into the corresponding eigenstate $\Psi_i$. In other words, measurement affects the state of the system. This fact is used in many experimental tests of quantum mechanics, such as the Stern-Gerlach experiment. Think again at the sequential experiment that we discussed in chapter \@ref(Spin). The act of measuring the spin along one coordinate is not simply a "filtration" of some pre-existing feature of the wave function, but rather an act that changes the nature of the wave function itself, affecting the outcome of future experiments. To this act corresponds the collapse of the wave function, a process that remains unexplained to date. Notice how the controversy is not in the mathematics of the experiment, which we already discussed in the previous chapter without issues. The issues rather arise because we don't know how to define the measurement act in itself (other than the fact that it is some form of quantum mechanical procedure with clear and well-defined macroscopic outcomes). This is the reason why the collapse of the wave function is also sometimes called the *measurement problem* of quantum mechanics, and it is still a source of research and debate among modern scientists.
+
+## Postulate 5: Time Evolution
+
+The wave function of a system evolves in time according to the time-dependent Schrödinger equation:
+
+\begin{equation}
+\hat{H} \Psi({\bf r}, t) = i \hbar \frac{\partial \Psi}{\partial t}.
+(\#eq:post5)  
+\end{equation}
+
+The central equation of quantum mechanics must be accepted as a postulate.
+
+
+## Postulate 6: Pauli Exclusion Principle
+
+The total wave function of a system with $N$ spin-$\frac{1}{2}$ particles (also called **fermions**) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called **bosons**), the wave function is symmetric:
+
+\begin{equation}
+\begin{aligned}
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &= - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{fermions}, \\
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &= + \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{bosons}.
+\end{aligned}
+(\#eq:post6)  
+\end{equation}
+
+Electronic spin must be included in this set of coordinates. As we will see in chapter \@ref(Atoms), the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).

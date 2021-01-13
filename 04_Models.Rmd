@@ -170,5 +170,5 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1).
 (\#eq:RR2)
 \end{equation}
 
-Each energy level $E_{\ell}$ is $2\ell+1$-fold degenerate in $m$, since $m$ can have values  $-\ell, -\ell+1, \ldots, \ell-1, \ell$. Notice also that the energy does not depend on the second index $m$, and the functions with fixed $m=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m$ that appears in the spherical harmonics will assume some importance in future chapters. 
+Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m$, since $m$ can have values  $-\ell, -\ell+1, \ldots, \ell-1, \ell$. Notice also that the energy does not depend on the second index $m$, and the functions with fixed $m=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m$ that appears in the spherical harmonics will assume some importance in future chapters. 
 

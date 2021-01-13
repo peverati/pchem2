@@ -1,2 +1,3 @@
-# Mathematical Background 2 {#Math2}
+# Interpretations of Quantum Mechanics {#Interpreations}
 
+## The double slit experiment
