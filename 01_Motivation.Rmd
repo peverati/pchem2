@@ -53,13 +53,13 @@ E = \frac{h c}{\lambda}
 (\#eq:wp2)
 \end{equation}
 
-Now we use Einstein's relativity result $E = m c^2$ to find 
+Now we use Einstein's relativity result, $E = m c^2$, and the definition of mementum $p=mc$, to find:
 \begin{equation}
-\lambda = \frac{h}{mc}
+\lambda = \frac{h}{p},
 (\#eq:wp3)
 \end{equation}
 
-which is equivalent to eq. \@ref(eq:wp1). Note that $m$ refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy $h \nu$), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \@ref(eq:wp1) as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.^[The previous 3 sections were adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+which is equivalent to eq. \@ref(eq:wp1). Note that $m$ refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy $h \nu$), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \@ref(eq:wp3) as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.^[The previous 3 sections were adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
 
 Rewriting the previous equations in terms of the wave vector, $k=\frac{2\pi}{\lambda}$, and the angular frequency, $\omega=2\pi\nu$, we obtain the following two equations
 

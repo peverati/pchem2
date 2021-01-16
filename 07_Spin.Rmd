@@ -14,26 +14,26 @@ If the particle is treated as a classical spinning magnetic dipole, it will prec
 (\#eq:spin0)
 \end{equation}
 
-The Stern-Gerlach experiment proves that electrons are spin-$\frac{1}{2}$ particles. These have only two possible spin angular momentum values measured along any axis, $+{\frac {\hbar }{2}}$ or $-{\frac {\hbar }{2}}$, a purely quantum mechanical phenomenon. Because its value is always the same, it is regarded as an intrinsic property of electrons, and is sometimes known as "intrinsic angular momentum" (to distinguish it from orbital angular momentum, which can vary and depends on the presence of other particles).
+The Stern-Gerlach experiment proves that electrons are spin-$\frac{1}{2}$ particles. These have only two possible spin angular momentum values measured along any axis, $+\frac {\hbar }{2}$ or $-\frac {\hbar }{2}$, a purely quantum mechanical phenomenon. Because its value is always the same, it is regarded as an intrinsic property of electrons, and is sometimes known as "intrinsic angular momentum" (to distinguish it from orbital angular momentum, which can vary and depends on the presence of other particles).
 
 The act of observing (measuring) the momentum along the $z$ direction corresponds to the operator $\hat{S}_z$, which project the value of the total spin operator $\hat{S}^2$ along the $z$ axis. The eigenvalues of the projector operator are:
 
 \begin{equation}
-\hat{S}_z \psi = \hbar m_s \psi,
+\hat{S}_z \phi = \hbar m_s \phi,
 (\#eq:spin0b)
 \end{equation}
 
-where $m_s=\left\{-s,+s\right\}=\left\{-\frac{1}{2},+\frac{1}{2}\right\}$ is the spin quantum number along the $z$ component. The eigenvalues for the total spin operator $\hat{S}^2$, similarly to the angular momentum operator $\hat{L}^2$ seen in eq. \@ref(eq:XXX), are:
+where $m_s=\left\{-s,+s\right\}=\left\{-\frac{1}{2},+\frac{1}{2}\right\}$ is the spin quantum number along the $z$ component. The eigenvalues for the total spin operator $\hat{S}^2$—similarly to the angular momentum operator $\hat{L}^2$ seen in eq. \@ref(eq:angmom1b)—are:
 
 \begin{equation}
-\hat{S}^2 \psi = \hbar^2 s(s+1) \psi,
+\hat{S}^2 \phi = \hbar^2 s(s+1) \phi,
 (\#eq:spin0c)
 \end{equation}
 
 The initial state of the particles in the Stern-Gerlach experiment is given by the following wave function:
 
 \begin{equation}
-\psi = c_1\, \psi_{\uparrow} + c_2 \,\psi_{\downarrow},
+\phi = c_1\, \phi_{\uparrow} + c_2 \,\phi_{\downarrow},
 (\#eq:spin1)
 \end{equation}
 
@@ -41,7 +41,7 @@ where $\uparrow=+\frac{\hbar}{2}$, $\downarrow=-\frac{\hbar}{2}$, and the coeffi
 
 \begin{equation}
 \begin{aligned}
-<S_z> &= \int \psi^{*} \hat{S}_z \psi \, d\mathbf{s} \\
+<S_z> &= \int \phi^{*} \hat{S}_z \phi \, d\mathbf{s} \\
  &= +\frac{\hbar}{2} \vert c_1\vert^2 -\frac{\hbar}{2} \vert c_2\vert^2,
 \end{aligned}
 (\#eq:spin2)    
@@ -54,7 +54,7 @@ where the integration is performed along a special coordinate $\mathbf{s}$ compo
 (\#eq:spin3)    
 \end{equation}
 
-This equation is not sufficient to determine the values of the coefficients since they are complex numbers. Eq. \@ref(eq:spin3), however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, $\psi_{\uparrow}$ and $\psi_{\downarrow}$, will be observed with equal probability of $\frac{1}{2}$.
+This equation is not sufficient to determine the values of the coefficients since they are complex numbers. Eq. \@ref(eq:spin3), however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, $\phi_{\uparrow}$ and $\phi_{\downarrow}$, will be observed with equal probability of $\frac{1}{2}$.
 
 ## Sequential Stern-Gerlach Experiments
 
@@ -76,11 +76,11 @@ This experiment shows that spin is not a classical property. The Stern-Gerlach a
 ## Spin Operators
 The mathematics of quantum mechanics tell us that $\hat{S}_z$ and $\hat{S}_x$ do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time. 
 
-In 3-dimensional space there are three directions that are orthogonal to each other $\left\{x,y,z\right\}$. Thus, we can define a third spin projection operator along the $y$ direction, $\hat{S}_y$, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we consider in the previous section. The total spin operator, $\hat{S}^2$, is then simply defined as:
+In 3-dimensional space there are three directions that are orthogonal to each other $\left\{x,y,z\right\}$. Thus, we can define a third spin projection operator along the $y$ direction, $\hat{S}_y$, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we consider in the previous section. The total spin operator, $\hat{S}^2$, can then be constructed similarly to the total angular momentum operator of eq. \@ref(eq:angmom1), as:
 
 \begin{equation}
 \begin{aligned}
-\hat{S}^2 &=\hat{S}\cdot\hat{S}=\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\right)\cdot\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z \right) \\
+\hat{S}^2 &=\hat{S}\cdot\hat{S}=\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z\right)\cdot\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z \right) \\
 &=\hat{S}_x^2+\hat{S}_y^2+\hat{S}_z^2,
 \end{aligned}
 (\#eq:spop1)    
@@ -89,17 +89,17 @@ In 3-dimensional space there are three directions that are orthogonal to each ot
 with $\left\{\mathbf{i},\mathbf{j},\mathbf{k}\right\}$ the unitary vectors in three-dimensional space. 
 
 
-Wolfgang Pauli explicitly derived the relationships between all three spin projection operators. Assuming the magnetic ﬁeld along the $z$ axis, Pauli's relations can be written using simple equations involving the two possible eigenstates $\psi_{\uparrow}$ and $\psi_{\downarrow}$:
+Wolfgang Pauli explicitly derived the relationships between all three spin projection operators. Assuming the magnetic ﬁeld along the $z$ axis, Pauli's relations can be written using simple equations involving the two possible eigenstates $\phi_{\uparrow}$ and $\phi_{\downarrow}$:
 
 \begin{equation}
 \begin{aligned}
-\hat{S}_x \psi_{\uparrow} =  \frac{\hbar}{2} \psi_{\downarrow} \qquad \hat{S}_y \psi_{\uparrow} &=  \frac{\hbar}{2} i \psi_{\downarrow} \qquad \hat{S}_z \psi_{\uparrow} =  \frac{\hbar}{2} \psi_{\uparrow} \\
-\hat{S}_x \psi_{\downarrow} =  \frac{\hbar}{2} \psi_{\uparrow} \qquad \hat{S}_y \psi_{\downarrow} &=  - \frac{\hbar}{2} i \psi_{\uparrow} \qquad \hat{S}_z \psi_{\downarrow} =  -\frac{\hbar}{2} \psi_{\downarrow},
+\hat{S}_x \phi_{\uparrow} =  \frac{\hbar}{2} \phi_{\downarrow} \qquad \hat{S}_y \phi_{\uparrow} &=  \frac{\hbar}{2} i \phi_{\downarrow} \qquad \hat{S}_z \phi_{\uparrow} =  \frac{\hbar}{2} \phi_{\uparrow} \\
+\hat{S}_x \phi_{\downarrow} =  \frac{\hbar}{2} \phi_{\uparrow} \qquad \hat{S}_y \phi_{\downarrow} &=  - \frac{\hbar}{2} i \phi_{\uparrow} \qquad \hat{S}_z \phi_{\downarrow} =  -\frac{\hbar}{2} \phi_{\downarrow},
 \end{aligned}
 (\#eq:spop2)  
 \end{equation}
 
-where $i$ is the imaginary unit ($i^2=-1$). In other words, for $\hat{S}_z$ we have eigenvalue equations, while the remaining components have the effect of permuting state $\psi_{\uparrow}$ with state $\psi_{\downarrow}$ after multiplication by suitable constants. We can use these equations, together with eq. \@ref(eq:bp5), to calculate the commutator for each couple of spin projector operators:
+where $i$ is the imaginary unit ($i^2=-1$). In other words, for $\hat{S}_z$ we have eigenvalue equations, while the remaining components have the effect of permuting state $\phi_{\uparrow}$ with state $\phi_{\downarrow}$ after multiplication by suitable constants. We can use these equations, together with eq. \@ref(eq:bp5), to calculate the commutator for each couple of spin projector operators:
 
 \begin{equation}
 \begin{aligned}
@@ -119,12 +119,12 @@ The equations in \@ref(eq:spop3) can be proved by writing the full eigenvalue eq
 
 \begin{equation}
 \begin{aligned}
-\left[\hat{S}_x, \hat{S}_y\right] \psi_{\uparrow} &= \hat{S}_x\hat{S}_y\psi_{\uparrow}-\hat{S}_y\hat{S}_x\psi_{\uparrow} \\
-&= \hat{S}_x \left(\frac{\hbar}{2}i \psi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \psi_{\downarrow} \right) \\
-&= \frac{\hbar}{2}i \left(\frac{\hbar}{2}i \psi_{\downarrow} \right)- \frac{\hbar}{2} \left(\frac{\hbar}{2} \psi_{\downarrow} \right) \\
-&= \left(\frac{\hbar}{4}+\frac{\hbar}{4}\right)i\psi_{\uparrow} \\
-&= \frac{\hbar}{2}i \psi_{\uparrow} \\
-&= i\hat{S}_z  \psi_{\uparrow} 
+\left[\hat{S}_x, \hat{S}_y\right] \phi_{\uparrow} &= \hat{S}_x\hat{S}_y\phi_{\uparrow}-\hat{S}_y\hat{S}_x\phi_{\uparrow} \\
+&= \hat{S}_x \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
+&= \frac{\hbar}{2}i \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \frac{\hbar}{2} \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
+&= \left(\frac{\hbar}{4}+\frac{\hbar}{4}\right)i\phi_{\uparrow} \\
+&= \frac{\hbar}{2}i \phi_{\uparrow} \\
+&= i\hat{S}_z  \phi_{\uparrow} 
 \end{aligned}
 (\#eq:spop4) 
 \end{equation}

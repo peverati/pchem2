@@ -1,0 +1,74 @@
+# Quantum Weirdness {#Weirdness}
+In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don't have a classical counterpart, starting from perhaps the most simple but also one of the most revealing: the double-slit experiment.
+
+## The double-slit experiment
+
+The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.
+
+The premises of the experiment are very simple: cut two slits in a solid material (such as a sheet of metal), send light or electrons through them, and observe what happens on a screen position at some distance on the other side. The result of this experiment though are far from straightforward.
+
+Let's first consider the single-slit case. If light consisted of classical particles, and these particles were sent in a straight line through a single-slit and allowed to strike a screen on the other side, we would expect to see a pattern corresponding to the size and shape of the slit. However, when this "single-slit experiment" is actually performed, the pattern on the screen is a diffraction pattern in which the light is spread out. The smaller the slit, the greater the angle of spread. This behavior is typical of waves, where diffraction explains the pattern as being the result of the interference of the waves with the slit.
+
+If one illuminates two parallel slits, the light from the two slits again interferes. Here the interference is a more pronounced pattern with a series of alternating light and dark bands. The width of the bands is a property of the frequency of the illuminating light. The pattern observed on the screen is the result of this interference, as shown in figure \@ref(fig:Fig1c9).^[This diagram is taken from [Wikipedia](https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Single_slit_and_double_slit2.jpg) by user Jordgette, and distributed under CC BY-SA 3.0 license.]
+
+```{r Fig1c9, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Outcomes of single-slit and double-slit experiments.'}
+knitr::include_graphics('./img/OEP_wiki3.jpg')
+```
+
+The interference pattern resulting from the double-slit experiment are observed not only with light, but also with a beam of electrons, and other small particles. 
+
+### The individual particles experiment
+The first twist in the plot is if we perform the experiment by sending individual particles (e.g, either individual photons, or individual electrons). Sending particles through a double-slit apparatus one at a time results in single particles appearing on the screen, as expected. Remarkably, however, an interference pattern emerges when these particles are allowed to build up one by one (figure  \@ref(fig:Fig2c9)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Interference_electrons_double-slit_at_10cm.png) by user Alexandre Gondran, and distributed under CC BY-SA 4.0 license]). The resulting pattern on the screen is the same as if each individual particle had passed through both slits. 
+
+```{r Fig2c9, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Numerical simulation of the double-slit experiment with electrons.'}
+knitr::include_graphics('./img/OEP_wiki4.png')
+```
+
+This variation of the double-slit experiment demonstrates the wave–particle duality: the particle is measured as a single pulse at a single position, while the wave describes the probability of absorbing the particle at a specific place on the screen.
+
+### "Which way" experiment
+A second twist happens if we place particle detectors at the slits with the intent of showing through which slit a particle goes. The interference pattern in this case will disappear. 
+
+This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. The simplest interpretation of this experiment is that the wave function of the photon collapses into a deterministic position due to the interaction with the detector on the slit, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.
+
+The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arise not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of reediming this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).^[The interested student can read more about different interpretations [HERE](https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics).] The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).
+
+## Heisenberg's Uncertainty Principle
+
+Let's now revisit the simple case of a free particle. As we saw in chapter \@ref(Models), the wave function that solved the TISEq: 
+
+\begin{equation}
+\psi(x) = A \exp(\pm ikx),
+(\#eq:heis0)  
+\end{equation}
+
+is the equation of a plane wave along the $x$ direction. This result is in agreement with the de Broglie hypothesis, which says that every object in the universe is a wave. If this wave function describes a particle with mass (such as an electron), freely moving along one spatial direction $x$, it would be reasonable to ask the question: where is the particle located? Analyzing eq. \@ref(eq:heis0), however, it is not possible to answer this question since $\psi(x)$ is delocalized in space from $x=-\infty$ to $x=+\infty$.^[The time-dependent picture does not help us either, but since it is a little more complicated to work with the TDSEq, we are not showing it here.] In other words, the particle position is extremely uncertain because it could be essentially anywhere along the wave.
+
+Thus for a free particle, the particle side of the wave-particle duality seems completely lost. We can, however, bring it back into the picture by writing the wave function as a sum of many plane waves, called a *wave packet*:
+
+\begin{equation} 
+\psi (x)\propto \sum _{n}A_{n}\exp\left(\frac{ip_n x}{\hbar} \right),
+(\#eq:heis1)  
+\end{equation}
+
+where $A_n$ represents the relative contribution of the mode $p_n$ to the overall total. We are allowed to write the wave function this way because each individual plane wave is a solution of the TISEq, and as we already saw in chapter \@ref(Operators) and several other places, the sum of each individual solution is also a solution. An interesting consequence of writing the wave function as a wave packet is that when we sum different waves, they interfere with each other, and they might localize in some region of space (see figure xxx). Thus for a wave function written as in eq. \@ref(eq:heis1), the wave packet can become more localized. We may also make this procedure a step further to the continuum limit, where the wave function goes from a sum to an integral over all possible modes:
+
+\begin{equation}
+\psi (x)=\frac {1}{\sqrt{2\pi\hbar}}\int_{-\infty }^{\infty }\varphi (p)\cdot \exp
+\left(\frac{ip x}{\hbar} \right)\,dp,
+(\#eq:heis2)  
+\end{equation}
+
+where $\varphi(p)$ represents the amplitude of these modes and is called the wave function in momentum space. In mathematical terms, we say that $\varphi (p)$ is the Fourier transform of $\psi (x)$ and that $x$ and $p$ are conjugate variables. Adding together all of these plane waves comes at a cost; namely, the momentum has become less precise since it becomes a mixture of waves of many different momenta.
+
+One way to quantify the precision of the position and momentum is the standard deviation, $\sigma$. Since $|\psi (x)|^{2}$ is a probability density function for position, we calculate its standard deviation. The precision of the position is improved—i.e., reduced $\sigma_x$—by using many plane waves, thereby weakening the precision of the momentum—i.e., increased $\sigma_p$. Another way of stating this is that $\sigma_x$ and $\sigma_p$ have an inverse relationship (once we know one with absolute precision, the other becomes completely unknown). This fact was discovered by Werner Heisenberg and is now called the **Heisenberg's uncertainty principle**. The mathematical treatment of this procedure results in the simple formula:
+
+\begin{equation}
+\sigma_{x}\sigma_{p} \geq \frac{\hbar }{2}.
+(\#eq:heis3)  
+\end{equation}
+
+The uncertainty principle can be extended to any couple of conjugated variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.^[Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.]
+
+## Tunneling
+

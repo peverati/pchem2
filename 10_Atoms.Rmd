@@ -1,1 +1,188 @@
 # Many-Electron Atoms {#Atoms}
+
+When two or more electrons are present in a system, the TISEq equation cannot be solved analytically. Thus for the vast majority of chemical applications, we must rely on approximate methods. We will explore some of these approximations in this and further chapter, starting from the many-electron atoms (all atoms other than hydrogen). It is important to stress that because of the nature of approximations, this is still a very active field of scientific research, and improved methods are developed every year.
+
+The electronic Hamiltonian for a many-electron atom can be written as:
+
+\begin{equation}
+\hat{H}({\bf r}_1,{\bf r}_2,\ldots,{\bf r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \epsilon _{0}}}\sum_{i<j}\frac{1}{r_{ij}},
+(\#eq:atom1)
+\end{equation}
+
+where $Z$ is the nuclear charge, $m$ and $e$ are respectively the mass and charge of an electron, ${\bf r}_i$ and $\nabla_i^2$ are the spatial coordinates and the Laplacian of each electron, $r_{i}=|{\bf r}_i|$, and $r_{{ij}}=|{\bf r}_i-{\bf r}_j|$ is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. \@ref(eq:scheqsimple).
+
+## Many-Electron Wave Functions
+When we have more than one electron, the sixth postulate that we discussed in chapter \@ref(Postulates) comes into place. In other words,  we need to account for the spin of the electrons and we need the wave function to be antisymmetric with respect to exchange of the coordinates of any two electrons. In order to do so, we can define a new variable ${\bf x}$ which represents the set of all four coordinates associated with an electron: three spatial coordinates ${\bf r}$, and one spin coordinate $\mathbf{s}$, i.e.,  ${\bf x} = \{ {\bf r}, {\bf s} \}$. We can then write the electronic wave function as  $\Psi({\bf x}_1, {\bf x}_2, \ldots, {\bf x}_N)$, and we require the sixth postulate to hold by writing:
+
+\begin{equation}
+\Psi\left({\bf x}_1,{\bf x}_2,\ldots, {\bf x}_N\right) = - \Psi\left({\bf x}_2,{\bf x}_1,\ldots, {\bf x}_N\right)
+(\#eq:atom2)  
+\end{equation}
+
+A very important step in simplifying  $\Psi({\bf x})$ is to expand it in terms of a set of one-electron functions. Since we need to take into account the spin coordinate as well, we can defina a new function, called **spin-orbital**, by multiplying a spatial orbital by one of the two spin functions:
+
+\begin{equation}
+\begin{aligned}
+\chi({\bf x}) &= \psi({\bf r}) \phi_{\uparrow}({\bf s}), \\
+\chi({\bf x}) &= \psi({\bf r}) \phi_{\downarrow}({\bf s}).
+\end{aligned}
+(\#eq:atom3)
+\end{equation}
+
+Notice that for a given spatial orbital $\psi({\bf r})$, we can form two spin orbitals, one with $\uparrow$ spin, and one with $\downarrow$ spin (since the spin coordinate ${\bf s}$ has only two possible values, as already discussed in chapter \@ref(Spin)). For the spatial orbitals we can use the same one-particle functions that solve the TISEq for the hydrogen atom, $\psi_{n\ell m_{\ell}}({\bf r})$(eq. \@ref(eq:HA6) in chapter \@ref(Hydrogen)). Notice how each spin-orbital now depends on four quantum numbers, the three for the spatial part, $n,\ell,m_{\ell}$, plus the spin quantum number $m_s$. We need to keep in mind, however, that the spin-orbitals, $\chi_{n\ell m_{\ell} m_{s}}$, *are not* analytic solutions to the TISEq, so the resulting wave function is  *not* the exact wave function of the system, but just an approximation.
+
+Once we have defined one-electron spin-orbitals for each electron in the system, we can use them as the basis for our many-electron wave function. While doing so, we need to make sure to enforce the antisymmetry property of the overall wave function. We will start from the simplest case of an atom with two electrons with coordinates $\mathbf{x}_1$ and $\mathbf{x}_2$, which we put in two spin-orbitals $\chi_1$ and $chi_2$. We can write the total wave function as a linear combination of the two spin-orbitals as:
+
+\begin{equation}
+\begin{aligned}
+\Psi({\bf x}_1, {\bf x}_2) =& b_{11} \chi_1({\bf x}_1) \chi_1({\bf x}_2) + b_{12} \chi_1({\bf x}_1) \chi_2({\bf x}_2) + \\
+& b_{21} \chi_2({\bf x}_1) \chi_1({\bf x}_2) + b_{22} \chi_2({\bf x}_1) \chi_2({\bf x}_2).
+\end{aligned}
+(\#eq:atom4)
+\end{equation}
+
+We then notice that in order for the antisymmetry principle to be obeyed, we need $b_{12} = -b_{21}$ and $b_{11} = b_{22} = 0$, which give:
+
+\begin{equation}
+\Psi({\bf x}_1, {\bf x}_2) = b_{12} \left[ \chi_1({\bf x}_1) \chi_2({\bf x}_2) - \chi_2({\bf x}_1) \chi_1({\bf x}_2)\right].
+(\#eq:atom5)
+\end{equation}
+
+This wave function is sufficient to describe two-electron atoms and ions, such as helium. The numerical coefficient can be determined imposing the normalization condition, and is equal to $b_{12} = \frac{1}{\sqrt{2}}$. For the ground state of helium, we can replace the spatial component of each spin-orbital with the $1s$ hydrogenic orbital, $\psi_{100}$, resulting in:
+
+\begin{equation}
+\begin{aligned}
+\Psi({\bf x}_1, {\bf x}_2) &= \frac{1}{\sqrt{2}} \left[ \psi_{100}({\bf r}_1)\phi_{\uparrow} \; \psi_{100}({\bf r}_2)\phi_{\downarrow} - \psi_{100}({\bf r}_1)\phi_{\downarrow} \; \psi_{100}({\bf r}_2)\phi_{\uparrow} \right] \\
+&= \psi_{100}({\bf r}_1)\psi_{100}({\bf r}_2) \frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right],
+\end{aligned}
+(\#eq:atom6)
+\end{equation}
+
+which clearly shows how we need just one spatial orbital, $\psi_{100}$, to describe the system, while the antisymmetry is taken care by a suitable combination of spin functions, $\frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right]$. Notice also that we commit a small inaccuracy when we say: "two electron occupies one spin-orbital, one electron has spin up, and the other electron has spin down, with configuration: $[\uparrow\downarrow]$", as is typically found in general chemistry textbooks. The reality of the spin configuration is indeed more complicated, and the ground state of helium should be represented as $\frac{1}{\sqrt{2}}\left[\uparrow\downarrow-\downarrow\uparrow\right]$.
+
+In order to generalize from two electrons to $N$, we can first observe how eq. \@ref(eq:atom5) could be easily constructed by placing the spin-orbitals into a $2\times2$ matrix and calculating its determinant:
+
+\begin{equation}
+\Psi({\bf x}_1, {\bf x}_2)= \frac{1}{\sqrt{2}}{\begin{vmatrix} \chi_1({\bf x}_1)&\chi_2({\bf x}_1)\\\chi_1({\bf x}_2)&\chi_2({\bf x}_2)
+\end{vmatrix}},
+(\#eq:atom7)
+\end{equation}
+
+where each column contains one spin-orbital, each row contains the coordinates of a single electron, and the vertical bars around the matrix mean that we need to calculate its determinant. This notation is called the **Slater determinant**, and it is the preferred way of building any $N$-electron wave function. Slater determinants are useful because they can be easily bult for any case of $N$ electrons in $N$ spin-orbitals, and they also automatically enforce the antisymmetry of the resulting wave function. A general Slater determinant is written:
+
+\begin{equation}
+\Psi (\mathbf{x} _{1},\mathbf{x} _{2},\ldots ,\mathbf{x} _{N})={\frac {1}{\sqrt {N!}}}{\begin{vmatrix}\chi _{1}(\mathbf{x} _{1})&\chi _{2}(\mathbf{x} _{1})&\cdots &\chi _{N}(\mathbf{x} _{1})\\\chi _{1}(\mathbf{x} _{2})&\chi _{2}(\mathbf{x} _{2})&\cdots &\chi _{N}(\mathbf{x} _{2})\\\vdots &\vdots &\ddots &\vdots \\\chi _{1}(\mathbf{x} _{N})&\chi _{2}(\mathbf{x} _{N})&\cdots &\chi _{N}(\mathbf{x} _{N})\end{vmatrix}} = |\chi _{1},\chi _{2},\cdots ,\chi _{N}\rangle,
+(\#eq:atom8)
+\end{equation}
+
+where the notation $|\cdots\rangle$ is a shorthand to indicate the Slater determinant where only the diagonal elements are reported.
+
+## Approximated Hamiltonians
+ 
+In order to solve the TISEq for a many-electron atom we also need to approximate the Hamiltonian, since analytic solution using the full Hamiltonian as in eq. \@ref(eq:atom1) are impossible to find. The most significant approximation used in chemistry is called the *variational method*.
+
+### Variational method
+
+The basic idea of the variational method is to guess a "trial" wave function for the problem consisting of some adjustable parameters called "variational parameters". These parameters are adjusted until the energy of the trial wave function is minimized. The resulting trial wave function and its corresponding energy are variational method approximations to the exact wave function and energy.
+
+Why would it make sense that the best approximate trial wave function is the one with the lowest energy? This results from the Variational Theorem, which states that the energy of any trial wave function $E$ is always an upper bound to the exact ground state energy ${\cal E}_0$. This can be proven easily. Let the trial wave function be denoted $\Phi$. Any trial function can formally be expanded as a linear combination of the exact eigenfunctions $\Psi_i$. Of course, in practice, we don't know the $\Psi_i$, since we are applying the variational method to a problem we can't solve analytically. Nevertheless, that doesn't prevent us from using the exact eigenfunctions in our proof, since they certainly exist and form a complete set, even if we don't happen to know them. So, the trial wave function can be written:
+
+\begin{equation}
+\Phi = \sum_i c_i \Psi_i,
+(\#eq:var1)
+\end{equation}
+
+and the approximate energy corresponding to this wave function is:
+
+\begin{equation}
+E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
+(\#eq:var2)
+\end{equation}
+
+where $\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)$ is the ensemble of the spatial coordinates of each electron and the integral symbol is assumed as a $3N$-dimensional integration. Replacing the expansion over the exact wave functions, we obtain:
+
+\begin{equation}
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
+(\#eq:var3)
+\end{equation}
+
+Since the functions $\Psi_j$ are the exact eigenfunctions of ${\hat H}$, we can use  ${\hat H} \Psi_j = {\cal E}_j \Psi_j$ to obtain:
+
+\begin{equation}
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j {\cal E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
+(\#eq:var4)
+\end{equation}
+
+Now using the fact that eigenfunctions of a Hermitian operator form an orthonormal set (or can be made to do so), we can write:
+
+\begin{equation}
+E[\Phi] = \frac{\sum_{i} c_i^* c_i {\cal E}_i}{\sum_{i} c_i^* c_i}.
+(\#eq:var5)
+\end{equation}
+
+We now subtract the exact ground state energy ${\cal E}_0$ from both sides to obtain 
+
+\begin{equation}
+E[\Phi] - {\cal E}_0 = \frac{\sum_i c_i^* c_i ( {\cal E}_i - {\cal E}_0)}{
+\sum_i c_i^* c_i}.
+(\#eq:var6)
+\end{equation}
+
+Since every term on the right-hand side is greater than or equal to zero, the left-hand side must also be greater than or equal to zero:
+
+\begin{equation}
+E[\Phi] \geq {\cal E}_0.
+(\#eq:varprinciple)
+\end{equation}
+
+In other words, the energy of any approximate wave function is always greater than or equal to the exact ground state energy ${\cal E}_0$. 
+
+This explains the strategy of the variational method: since the energy of any approximate trial function is always above the true energy, then any variations in the trial function which lower its energy are necessarily making the approximate energy closer to the exact answer. (The trial wave function is also a better approximation to the true ground state wave function as the energy is lowered, although not necessarily in every possible sense unless the limit $\Phi = \Psi_0$ is reached).
+
+### Approximated solution for the helium atom
+
+We now have all the ingredients to attempt the simplest approximated solution to the TISEq of a many-electron atom. We can start by writing the total wave function using the Slater determinant of eq. \@ref(eq:atom8) in terms of spin-orbitals:
+
+\begin{equation}
+\Psi (\mathbf{x}_{1},\mathbf{x}_{2},\ldots ,\mathbf{x}_{N})= |\chi_{1},\chi_{2},\cdots ,\chi_{N}\rangle = |\psi_{1}\phi_{\uparrow},\psi_{1}\phi_{\downarrow},\cdots ,\psi_{\frac{N}{2}}\phi_{\uparrow},\psi_{\frac{N}{2}}\phi_{\downarrow}\rangle,
+(\#eq:hf1)
+\end{equation}
+
+and then we can replace it into the TISEq for an $N$-electron system. This results into a set of $N$ one-electron equations, one for each electron. When we attempt to solve each individual equation, however, we end up with a problem, since the potential energy in the Hamiltonian of eq. \@ref(eq:atom1) does not have spherical symmetry because of the electron-electron repulsion term. As such, the one-electron TISEq cannot be simply solved in spherical polar coordinates, as we did for the hydrogen atom in chapter \@ref(Hydrogen). The simplest way of circumventing the problem is to neglect the electron-electron repulsion term (i.e., assume that the electrons are not correlated and do not interact with each other). For a 2-electron atom this procedure is straightforward, since the Hamiltonian can be written as a sum of one-electron Hamiltonians:
+
+\begin{equation}
+\hat{H} =\hat{H}_1+\hat{H}_2,
+(\#eq:hf2)
+\end{equation}
+
+with $\hat{H}_1$ and $\hat{H}_2$ looking identical to those used in the TISEq of the hydrogen atom. This one-particle Hamiltonian does not depend on the spin of the electron, and therefore, we can neglect the spin component of the Slater determinant and write the total wave function for the ground state of helium, eq. \@ref(eq:atom5), simply as:
+
+\begin{equation}
+\Psi({\bf r}_1, {\bf r}_2) = \psi_{100}({\bf r}_1)\psi_{100}({\bf r}_2).
+(\#eq:hf3)
+\end{equation}
+
+The overall TISEq reduces to a set of two single-particle equations:
+
+\begin{equation}
+\begin{aligned}
+\hat{H}_1 \psi_{100}({\bf r}_1) &= E_1\psi_{100}({\bf r}_1) \\
+\hat{H}_2 \psi_{100}({\bf r}_2) &= E_2\psi_{100}({\bf r}_2),
+\end{aligned}
+(\#eq:hf4)
+\end{equation}
+
+which can then be solved similarly to those for the hydrogen atom, and the solution be combined to give:
+
+\begin{equation}
+E = E_1+E_2.
+(\#eq:hf5)
+\end{equation}
+
+In other words, the resulting energy eigenvalue for the ground state of the helium atom in this approximation is equal to twice the energy of a $\psi_{100}$, $1s$, orbital. The resulting approximated value for the energy of the helium atom is $7,217 \text{ kJ/mol}$, compared with the exact value of $7,620 \text{ kJ/mol}$.
+
+The nuclear charge $Z$ in the $\psi_{100}$ orbital can be used as a variational parameter in the variational method to obtain a more accurate value of the energy. This method provides a result for the ground-state energy of the helium atom of $7,478 \text{ kJ/mol}$ (only $142 \text{ kJ/mol}$ lower than the exact value), with the nuclear charge parameter minimized at $Z_{\text{min}}=1.6875$. This new value of the nuclear charge can be interpreted as the effective nuclear charge that is felt by one electron when a second electron is present in the atom. This value is lower than the real nuclear charge ($Z=2$) because the interaction between the electron and the nuclei is shielded by presence of the second electron.
+
+This procedure can be extended to atoms with more than two electrons, resulting in the so-called Hartree-Fock method. The procedure, however, is not straightforward. We will explain it in more details in the next chapter, since it is the simplest approximation that also describes the chemical bond.

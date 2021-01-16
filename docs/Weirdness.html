@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2</title>
+  <title>9 Quantum Weirdness | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="9 Quantum Weirdness | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="9 Quantum Weirdness | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="Schrodinger.html"/>
-<link rel="next" href="Hydrogen.html"/>
+<link rel="prev" href="Postulates.html"/>
+<link rel="next" href="Atoms.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -195,143 +195,80 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Models" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Analytically Soluble Models</h1>
-<p>The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.</p>
-<div id="the-free-particle" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> The Free Particle</h2>
-<p>By definition, the particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
-<p><span class="math display" id="eq:FP1">\[\begin{equation}
-- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
-\tag{4.1}
-\end{equation}\]</span></p>
-<p>This equation can be rearranged to:</p>
-<p><span class="math display" id="eq:FP2">\[\begin{equation}
-\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
-\tag{4.2}
-\end{equation}\]</span></p>
-<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
-<p><span class="math display" id="eq:FP3">\[\begin{equation}
-\psi(x) = A \exp(\pm ikx).
-\tag{4.3}
-\end{equation}\]</span></p>
-<p>The first and second derivatives of this function are:</p>
-<p><span class="math display" id="eq:FP4">\[\begin{equation}
-\begin{aligned}
-\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
-\end{aligned}
-\tag{4.4}
-\end{equation}\]</span></p>
-<p>Comparing the second derivative in eq. <a href="Models.html#eq:FP4">(4.4)</a> with eq. <a href="Models.html#eq:FP2">(4.2)</a>, we immediately see that if we set:</p>
-<p><span class="math display" id="eq:FP5">\[\begin{equation}
-k^2 = \frac{2mE}{\hbar^2},
-\tag{4.5}
-\end{equation}\]</span></p>
-<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.5)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
-<p><span class="math display" id="eq:FP6">\[\begin{equation}
-E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
-\tag{4.6}
-\end{equation}\]</span></p>
-<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Models.html#eq:FP3">(4.3)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Models.html#eq:FP6">(4.6)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+<div id="Weirdness" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Quantum Weirdness</h1>
+<p>In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don’t have a classical counterpart, starting from perhaps the most simple but also one of the most revealing: the double-slit experiment.</p>
+<div id="the-double-slit-experiment" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> The double-slit experiment</h2>
+<p>The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.</p>
+<p>The premises of the experiment are very simple: cut two slits in a solid material (such as a sheet of metal), send light or electrons through them, and observe what happens on a screen position at some distance on the other side. The result of this experiment though are far from straightforward.</p>
+<p>Let’s first consider the single-slit case. If light consisted of classical particles, and these particles were sent in a straight line through a single-slit and allowed to strike a screen on the other side, we would expect to see a pattern corresponding to the size and shape of the slit. However, when this “single-slit experiment” is actually performed, the pattern on the screen is a diffraction pattern in which the light is spread out. The smaller the slit, the greater the angle of spread. This behavior is typical of waves, where diffraction explains the pattern as being the result of the interference of the waves with the slit.</p>
+<p>If one illuminates two parallel slits, the light from the two slits again interferes. Here the interference is a more pronounced pattern with a series of alternating light and dark bands. The width of the bands is a property of the frequency of the illuminating light. The pattern observed on the screen is the result of this interference, as shown in figure <a href="Weirdness.html#fig:Fig1c9">9.1</a>.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<div class="figure" style="text-align: center"><span id="fig:Fig1c9"></span>
+<img src="img/OEP_wiki3.jpg" alt="Outcomes of single-slit and double-slit experiments." width="70%" />
+<p class="caption">
+Figure 9.1: Outcomes of single-slit and double-slit experiments.
+</p>
 </div>
-<div id="rigidrotor" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> The Particle in a Box</h2>
-<p>Now we can consider a particle constrained to move in a single dimension, under the influence of a potential <span class="math inline">\(V(x)\)</span> which is zero for <span class="math inline">\(0 \leq x \leq a\)</span> and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where <span class="math inline">\(V(x)\)</span> is infinite, so <span class="math inline">\(\psi(x)\)</span> is nonzero only within <span class="math inline">\([0,a]\)</span>. The Schrödinger equation is thus:</p>
-<p><span class="math display" id="eq:PIB1">\[\begin{equation}
-- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
-\qquad 0 \leq x \leq a.
-\tag{4.7}
-\end{equation}\]</span></p>
-<p>In other words, inside the box <span class="math inline">\(\psi(x)\)</span> describes a free particle, but outside the box <span class="math inline">\(\psi(x)=0\)</span>. Since the Schrödinger equation involves derivatives, the function that solves it, <span class="math inline">\(\psi(x)\)</span>, must be everywhere continuous and everywhere continuously differentiable. This fact means that the value of the wave function at the two extremes must be equal to zero:</p>
-<p><span class="math display" id="eq:PIB2">\[\begin{equation}
-\psi(0)=\psi(a)=0.
-\tag{4.8}
-\end{equation}\]</span></p>
-<p>Inside the box we can use Euler’s formula to write the wave function as a linear combination of the positive and negative solutions:</p>
-<p><span class="math display" id="eq:PIB3">\[\begin{equation}
-\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
-\tag{4.9}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants that we need to determine using the two constraints in eq. <a href="Models.html#eq:PIB2">(4.8)</a>. For <span class="math inline">\(B\)</span> it is straightforward to see that:</p>
-<p><span class="math display" id="eq:PIB4">\[\begin{equation}
-\psi(0)= 0 + B =0 \; \implies \; B=0.
-\tag{4.10}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(A\)</span> we have:</p>
-<p><span class="math display" id="eq:PIB5">\[\begin{equation}
-\psi(a)= A\sin ka = 0,
-\tag{4.11}
-\end{equation}\]</span></p>
-<p>which is trivially solved by <span class="math inline">\(A=0\)</span>, or by the more interesting condition of <span class="math inline">\(ka=n\pi\)</span>. The trivial solution corresponds to a wave function uniformly equal to zero everywhere. This wave function is uninteresting, since it describes no particles in no boxes. The second set of solutions, however, is very interesting, since we can write it as:</p>
-<p><span class="math display" id="eq:PIB6">\[\begin{equation}
-\psi_n(x)= A\sin\left(\frac{n\pi x}{a} \right)\quad n=1,2,\ldots,\infty,
-\tag{4.12}
-\end{equation}\]</span></p>
-<p>which represents an infinite set of functions, <span class="math inline">\(\psi_n(x)\)</span>, determined by a positive integer number <span class="math inline">\(n\)</span>, called <em>qunatum number</em>. Since these functions solve the TISEq, they are also called <em>eigenfunctions</em>, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace <a href="Models.html#eq:PIB6">(4.12)</a> into eq. <a href="Models.html#eq:PIB1">(4.7)</a>, to obtain:</p>
-<p><span class="math display" id="eq:PIB7">\[\begin{equation}
-E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
-\tag{4.13}
-\end{equation}\]</span></p>
-<p>A few interesting considerations can be made from the results of eq. <a href="Models.html#eq:PIB7">(4.13)</a>. First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, <span class="math inline">\(a\)</span>, since:</p>
-<p><span class="math display" id="eq:PIB8">\[\begin{equation}
-E_1 = \frac{h^2 }{8 m a^2} \neq 0.
-\tag{4.14}
-\end{equation}\]</span></p>
-<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we did not solve for the constant <span class="math inline">\(A\)</span>. This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate <span class="math inline">\(n_x,n_y,n_z\)</span>).</p>
+<p>The interference pattern resulting from the double-slit experiment are observed not only with light, but also with a beam of electrons, and other small particles.</p>
+<div id="the-individual-particles-experiment" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> The individual particles experiment</h3>
+<p>The first twist in the plot is if we perform the experiment by sending individual particles (e.g, either individual photons, or individual electrons). Sending particles through a double-slit apparatus one at a time results in single particles appearing on the screen, as expected. Remarkably, however, an interference pattern emerges when these particles are allowed to build up one by one (figure <a href="Weirdness.html#fig:Fig2c9">9.2</a><a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>). The resulting pattern on the screen is the same as if each individual particle had passed through both slits.</p>
+<div class="figure" style="text-align: center"><span id="fig:Fig2c9"></span>
+<img src="img/OEP_wiki4.png" alt="Numerical simulation of the double-slit experiment with electrons." width="70%" />
+<p class="caption">
+Figure 9.2: Numerical simulation of the double-slit experiment with electrons.
+</p>
 </div>
-<div id="the-harmonic-oscillator" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> The Harmonic Oscillator</h2>
-<p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
-<p><span class="math display" id="eq:HO1">\[\begin{equation}
-V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
-\tag{4.15}
-\end{equation}\]</span></p>
-<p>If we choose the energy scale such that <span class="math inline">\(V_0 = 0\)</span> then: <span class="math inline">\(V(x) = \frac{1}{2}kx^2\)</span>, and the TISEq looks:</p>
-<p><span class="math display" id="eq:HO2">\[\begin{equation}
-- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
-E \psi(x)
-\tag{4.16}
-\end{equation}\]</span></p>
-<p>After some effort, the eigenfunctions are:</p>
-<p><span class="math display" id="eq:HO3">\[\begin{equation}
-\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
-\tag{4.17}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(H_n\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_n\)</span> are defined by</p>
-<p><span class="math display" id="eq:HO4">\[\begin{equation}
-\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
-\tag{4.18}
-\end{equation}\]</span></p>
-<p>The eigenvalues are:</p>
-<p><span class="math display" id="eq:HO5">\[\begin{equation}
-E_n = \hbar \omega (n + \frac{1}{2}),
-\tag{4.19}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to <span class="math inline">\(n=0\)</span>, but because of the <span class="math inline">\(\frac{1}{2}\)</span> factor in eq. <a href="Models.html#eq:HO5">(4.19)</a>, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. <a href="Models.html#eq:HO5">(4.19)</a>. The lowest possible energy (the ZPE) will be <span class="math inline">\(E_0 = \frac{1}{2} \hbar \omega\)</span>.</p>
+<p>This variation of the double-slit experiment demonstrates the wave–particle duality: the particle is measured as a single pulse at a single position, while the wave describes the probability of absorbing the particle at a specific place on the screen.</p>
 </div>
-<div id="the-rigid-rotor" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> The Rigid Rotor</h2>
-<p>The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>. The cartesian coordinates, <span class="math inline">\(x,y,z\)</span>, are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. The TISEq of the system in spherical coordinates is:</p>
-<p><span class="math display" id="eq:RR1">\[\begin{equation}
-- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
-\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E_{\ell} \psi(r),
-\tag{4.20}
+<div id="which-way-experiment" class="section level3" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> “Which way” experiment</h3>
+<p>A second twist happens if we place particle detectors at the slits with the intent of showing through which slit a particle goes. The interference pattern in this case will disappear.</p>
+<p>This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. The simplest interpretation of this experiment is that the wave function of the photon collapses into a deterministic position due to the interaction with the detector on the slit, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.</p>
+<p>The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arise not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of reediming this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).</p>
+</div>
+</div>
+<div id="heisenbergs-uncertainty-principle" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Heisenberg’s Uncertainty Principle</h2>
+<p>Let’s now revisit the simple case of a free particle. As we saw in chapter <a href="Models.html#Models">4</a>, the wave function that solved the TISEq:</p>
+<p><span class="math display" id="eq:heis0">\[\begin{equation}
+\psi(x) = A \exp(\pm ikx),
+\tag{9.1}  
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> The eigenvalues are simply:</p>
-<p><span class="math display" id="eq:RR2">\[\begin{equation}
-E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
-\tag{4.21}
+<p>is the equation of a plane wave along the <span class="math inline">\(x\)</span> direction. This result is in agreement with the de Broglie hypothesis, which says that every object in the universe is a wave. If this wave function describes a particle with mass (such as an electron), freely moving along one spatial direction <span class="math inline">\(x\)</span>, it would be reasonable to ask the question: where is the particle located? Analyzing eq. <a href="Weirdness.html#eq:heis0">(9.1)</a>, however, it is not possible to answer this question since <span class="math inline">\(\psi(x)\)</span> is delocalized in space from <span class="math inline">\(x=-\infty\)</span> to <span class="math inline">\(x=+\infty\)</span>.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> In other words, the particle position is extremely uncertain because it could be essentially anywhere along the wave.</p>
+<p>Thus for a free particle, the particle side of the wave-particle duality seems completely lost. We can, however, bring it back into the picture by writing the wave function as a sum of many plane waves, called a <em>wave packet</em>:</p>
+<p><span class="math display" id="eq:heis1">\[\begin{equation} 
+\psi (x)\propto \sum _{n}A_{n}\exp\left(\frac{ip_n x}{\hbar} \right),
+\tag{9.2}  
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\ell=0,1,2,\ldots\)</span> is the <em>azimuthal quantum number</em>, and <span class="math inline">\(m_{\ell}=\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> is the <em>magnetic quantum number</em>. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Notice that the energy does not depend on the second index <span class="math inline">\(m_{\ell}\)</span>, and the functions with fixed <span class="math inline">\(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\)</span> have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number <span class="math inline">\(\ell\)</span>, similarly to the previous two cases. The index <span class="math inline">\(m_{\ell}\)</span> that appears in the spherical harmonics will assume some importance in future chapters.</p>
+<p>where <span class="math inline">\(A_n\)</span> represents the relative contribution of the mode <span class="math inline">\(p_n\)</span> to the overall total. We are allowed to write the wave function this way because each individual plane wave is a solution of the TISEq, and as we already saw in chapter <a href="Operators.html#Operators">6</a> and several other places, the sum of each individual solution is also a solution. An interesting consequence of writing the wave function as a wave packet is that when we sum different waves, they interfere with each other, and they might localize in some region of space (see figure xxx). Thus for a wave function written as in eq. <a href="Weirdness.html#eq:heis1">(9.2)</a>, the wave packet can become more localized. We may also make this procedure a step further to the continuum limit, where the wave function goes from a sum to an integral over all possible modes:</p>
+<p><span class="math display" id="eq:heis2">\[\begin{equation}
+\psi (x)=\frac {1}{\sqrt{2\pi\hbar}}\int_{-\infty }^{\infty }\varphi (p)\cdot \exp
+\left(\frac{ip x}{\hbar} \right)\,dp,
+\tag{9.3}  
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\varphi(p)\)</span> represents the amplitude of these modes and is called the wave function in momentum space. In mathematical terms, we say that <span class="math inline">\(\varphi (p)\)</span> is the Fourier transform of <span class="math inline">\(\psi (x)\)</span> and that <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> are conjugate variables. Adding together all of these plane waves comes at a cost; namely, the momentum has become less precise since it becomes a mixture of waves of many different momenta.</p>
+<p>One way to quantify the precision of the position and momentum is the standard deviation, <span class="math inline">\(\sigma\)</span>. Since <span class="math inline">\(|\psi (x)|^{2}\)</span> is a probability density function for position, we calculate its standard deviation. The precision of the position is improved—i.e., reduced <span class="math inline">\(\sigma_x\)</span>—by using many plane waves, thereby weakening the precision of the momentum—i.e., increased <span class="math inline">\(\sigma_p\)</span>. Another way of stating this is that <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_p\)</span> have an inverse relationship (once we know one with absolute precision, the other becomes completely unknown). This fact was discovered by Werner Heisenberg and is now called the <strong>Heisenberg’s uncertainty principle</strong>. The mathematical treatment of this procedure results in the simple formula:</p>
+<p><span class="math display" id="eq:heis3">\[\begin{equation}
+\sigma_{x}\sigma_{p} \geq \frac{\hbar }{2}.
+\tag{9.4}  
+\end{equation}\]</span></p>
+<p>The uncertainty principle can be extended to any couple of conjugated variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
+</div>
+<div id="tunneling" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Tunneling</h2>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="8">
-<li id="fn8"><p>For a description of the spherical harmonics see <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">here</a><a href="Models.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<ol start="16">
+<li id="fn16"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Single_slit_and_double_slit2.jpg">Wikipedia</a> by user Jordgette, and distributed under CC BY-SA 3.0 license.<a href="Weirdness.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Interference_electrons_double-slit_at_10cm.png">Wikipedia</a> by user Alexandre Gondran, and distributed under CC BY-SA 4.0 license<a href="Weirdness.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>The interested student can read more about different interpretations <a href="https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics">HERE</a>.<a href="Weirdness.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn19"><p>The time-dependent picture does not help us either, but since it is a little more complicated to work with the TDSEq, we are not showing it here.<a href="Weirdness.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.<a href="Weirdness.html#fnref20" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -339,8 +276,8 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
           </div>
         </div>
       </div>
-<a href="Schrodinger.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Hydrogen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Postulates.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Atoms.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -371,7 +308,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/04_Models.Rmd",
+"link": "https://github.com/peverati/pchem2/edit/master/09_Weirdness.Rmd",
 "text": "Edit"
 },
 "history": {

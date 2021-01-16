@@ -15,7 +15,7 @@ K = - \frac{\hbar^2}{2 \mu} \nabla^2,
 (\#eq:HA2)
 \end{equation}
 
-where $\nabla^2$ is the Laplace operator (*Laplacian*) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the first derivative along all three dimension of space is called gradient, which is written in cartesian coordinates $\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)$. The Laplacian is the divergence $\nabla \cdot$ of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as $\nabla\cdot\nabla=\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2},\frac{\partial^2}{\partial z^2}$. The TISEq for the Hydrogen atom is therefore:
+where $\nabla^2$ is the Laplace operator (*Laplacian*) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the first derivative along all three dimension of space is called gradient, which is written in cartesian coordinates $\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)$. The Laplacian is the divergence $\nabla \cdot$ of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as $\nabla^2=\nabla\cdot\nabla=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2},\frac{\partial^2}{\partial z^2}$. The TISEq for the Hydrogen atom is therefore:
 
 \begin{equation}
 {\displaystyle \left(-{\frac {\hbar ^{2}}{2\mu }}\nabla ^{2}-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\right)\psi (r,\theta ,\phi )=E\psi (r,\theta ,\phi )},
@@ -29,42 +29,42 @@ which, replacing the Laplacian in spherical coordinates, becomes:
 (\#eq:HA3)
 \end{equation}
 
-This equation seems very complicated, but comparing the term in between square brackets with the TISEq of the rigid rotor, we immediately see some connections. Eq. \@ref(eq:HA3) is a separable, partial differential equation that can be solved by factorizing the wave function $\psi(r, \theta, \phi)$ into  $R_{nl}(r)Y_{\ell}^m(\theta, \phi)$, where  $Y_{\ell}^m(\theta, \phi)$ are again the spherical harmonics that solved the TISEq for the rigid rotor. The radial part $R(r)$ obeys the equation:
+This equation seems very complicated, but comparing the term in between square brackets with the TISEq of the rigid rotor, we immediately see some connections. Eq. \@ref(eq:HA3) is a separable, partial differential equation that can be solved by factorizing the wave function $\psi(r, \theta, \phi)$ into  $R_{nl}(r)Y_{\ell}^{m_{\ell}}(\theta, \phi)$, where  $Y_{\ell}^{m_{\ell}}(\theta, \phi)$ are again the spherical harmonics that solved the TISEq for the rigid rotor. The radial part $R(r)$ obeys the equation:
 
 \begin{equation}
 - \frac{\hbar^2}{2 \mu r^2} \frac{d}{dr} \left( r^2 \frac{dR}{dr}
-\right) \left[\frac{\hbar^2 l(l+1)}{2 \mu r^2} + V(r) - E \right] R(r) = 0,
+\right) \left[\frac{\hbar^2 \ell(\ell+1)}{2 \mu r^2} + V(r) - E \right] R(r) = 0,
 (\#eq:HA4)
 \end{equation}
 
 which is called the radial equation for the hydrogen atom. The solutions of the radial part are: 
 
 \begin{equation}
-R_{nl}(r) = - \left[ \frac{(n - l - 1)!}{2n[(n+l)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{l+3/2}r^l e^{-r/na_0} L_{n+l}^{2l+1}
+R_{n\ell}(r) = - \left[ \frac{(n - \ell - 1)!}{2n[(n+\ell)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{\ell+3/2}r^{\ell} e^{-r/na_0} L_{n+\ell}^{2\ell+1}
 \left( \frac{2r}{n a_0} \right)
 (\#eq:HA5)
 \end{equation}
 
-where  $0 \leq l \leq n - 1$, and $a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2}$ is the Bohr radius. The functions  $L_{n+l}^{2l+1}(2r/na_0)$ are the associated Laguerre functions. 
+where  $0 \leq \ell \leq n - 1$, and $a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2}$ is the Bohr radius. The functions  $L_{n+\ell}^{2\ell+1}\left(\frac{2r}{na_0}\right)$ are the associated Laguerre functions. 
 
-The hydrogen atom eigenvalues are:
+The hydrogen atom eigenfunctions are:
 
 \begin{equation}
 \begin{aligned}
-\psi_{nlm}(r,\theta,\phi) &= R_{nl}(r)Y_{\ell}^m(\theta,\phi) = \\
-&= - \left[ \frac{(n - l - 1)!}{2n[(n+l)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{l+3/2}r^l e^{-r/na_0} L_{n+l}^{2l+1}
-\left( \frac{2r}{n a_0} \right) Y_{\ell}^m(\theta,\phi)
+\psi_{n\ell m_{\ell}}(r,\theta,\phi) &= R_{n\ell}(r)Y_{\ell}^{m_{\ell}}(\theta,\phi) = \\
+&= - \left[ \frac{(n - \ell - 1)!}{2n[(n+\ell)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{\ell+3/2}r^{\ell} e^{-r/na_0} L_{n+\ell}^{2\ell+1}
+\left( \frac{2r}{n a_0} \right) Y_{\ell}^{m_{\ell}}(\theta,\phi)
 \end{aligned}
 (\#eq:HA6)
 \end{equation}
 
-The quantum numbers $n,J,m$ can take the following values:
+The quantum numbers $n,\ell,m_{\ell}$ can take the following values:
 
 $n=1,2,3,\ldots,\infty$ (principal quantum number),
 
 $\ell =0,1,2,\ldots ,n-1$ (azimuthal quantum number),
 
-$m=-\ell ,\ldots ,\ell$ (magnetic quantum number).
+$m_{\ell}=-\ell ,\ldots ,\ell$ (magnetic quantum number).
 
 These functions are called the *hydrogen atom orbitals*, and are usually first encountered in introductory chemistry textbooks. Notice that—by definition—an orbital is a complex function (i.e., it has both a real and an imaginary component) that describes *exclusively* one electron. Spherical harmonics are orthogonal to each other and they can be linearly combined them to form new solution to the TISEq where the imaginary part is removed. (Because of the orthogonality of spherical harmonics, the energy spectrum will not be affected by this operation.) These corresponding real orbitals are three-dimensional function that are not easily visualized in a three-dimensional space, since they require a four-dimensional one.^[If it is not clear why you need a 4-D space to visualize a 3-D function, think at the fact that we use a 2-D space (the Cartesian plane) to visualize a 1-D function ($f(x)$).] Since there is no real consensus on what a wave function represent, the interpretation of orbitals is not straightforward.^[At least not as straightforward as it is given in introductory chemistry textbooks.] We will return on the interpretation problem in future chapters, but for now it is important to keep in mind these following facts:
 

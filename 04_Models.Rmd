@@ -121,7 +121,7 @@ V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
 (\#eq:HO1)
 \end{equation}
 
-If we choose the energy scale such that $V_0 = 0$ then:  $V(x) = (1/2)kx^2$, and the TISEq looks:
+If we choose the energy scale such that $V_0 = 0$ then:  $V(x) = \frac{1}{2}kx^2$, and the TISEq looks:
 
 \begin{equation}
 - \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
@@ -159,16 +159,16 @@ The rigid rotor is a simple model of a rotating stick in three dimensions (or, i
 
 \begin{equation}
 - \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
-\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E \psi(r),
+\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E_{\ell} \psi(r),
 (\#eq:RR1)
 \end{equation}
 
-where $I=\mu r^2$ is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics  $Y_{\ell}^m(\theta, \phi)$.^[For a description of the spherical harmonics see [here](https://en.wikipedia.org/wiki/Spherical_harmonic)] The eigenvalues are simply: 
+where $I=\mu r^2$ is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics  $Y_{\ell}^{m_{\ell}}(\theta, \phi)$.^[For a description of the spherical harmonics see [here](https://en.wikipedia.org/wiki/Spherical_harmonic)] The eigenvalues are simply: 
 
 \begin{equation}
-E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1).
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 (\#eq:RR2)
 \end{equation}
 
-Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m$, since $m$ can have values  $-\ell, -\ell+1, \ldots, \ell-1, \ell$. Notice also that the energy does not depend on the second index $m$, and the functions with fixed $m=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m$ that appears in the spherical harmonics will assume some importance in future chapters. 
+where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m_{\ell}$ that appears in the spherical harmonics will assume some importance in future chapters. 
 

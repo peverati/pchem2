@@ -14,14 +14,14 @@ F(q) = -\frac{dV(q)}{dq},
 where $q$ represents the coordinate or the position of the particle. Hence, the particle can be described by the equations of motion:
 
 \begin{equation}
-\frac{dp}{dt} = F(q) = -\frac{dV (q)}{dq},\quad \frac{dq}{dt} = \frac{p}{m}.
+\frac{dp}{dt} = \dot{p} = F(q) = -\frac{dV (q)}{dq},\quad \frac{dq}{dt} =\dot{q}= \frac{p}{m}.
 (\#eq:class2)
 \end{equation}
 
 For example, when a particle is attached to a spring and moves along a frictionless surface, the force the particle experiences is $F(q) = -kq$ where $k$ is the spring constant. Then the equations of motion of this particle are
 
 \begin{equation}
-\frac{dp}{dt} =\dot{p}=-kq,\quad \frac{dq}{dt} =\dot{q}=p/m
+\dot{p}=-kq,\quad \dot{q}=p/m
 (\#eq:class3)
 \end{equation}
 
@@ -51,7 +51,7 @@ which is a functional: it takes in the Lagrangian function for all times between
 (\#eq:lag3)
 \end{equation}
 
-Requiring that the true trajectory $q(t)$ be a stationary point of the action functional $S$ we obtain the equation of motion (figure \@ref(fig:Fig1c2)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) by user Maschen, and distributed under CC0 license). This can be achieved applying classical variational calculus to the variation of the action integral $S$ under perturbations of the path $q(t)$ (eq. \@ref(eq:lag3)). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:^[The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found [here](https://en.wikipedia.org/wiki/Euler–Lagrange_equation).]
+Requiring that the true trajectory $q(t)$ be a stationary point of the action functional $S$ we obtain the equation of motion (figure \@ref(fig:Fig1c2)^[This diagram is taken from [Wikipedia](https://en.wikipedia.org) by user Maschen, and distributed under CC0 license]). This can be achieved applying classical variational calculus to the variation of the action integral $S$ under perturbations of the path $q(t)$, eq. \@ref(eq:lag3). The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:^[The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found [here](https://en.wikipedia.org/wiki/Euler–Lagrange_equation).]
 
 \begin{equation}
 \frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
