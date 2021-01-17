@@ -10,8 +10,8 @@ Rmd_files: ["index.Rmd",
             "08_Postulates.Rmd",
             "09_Weirdness.Rmd",
             "10_Atoms.Rmd",
-            "11_Bonds.Rmd",
-            "12_Molecules.Rmd",
+            "11_Molecules.Rmd",
+            "12_Bonds.Rmd",
             "13_Spectroscopy.Rmd",
               ]
 output_dir: "docs"

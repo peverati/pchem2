@@ -5,11 +5,11 @@ When two or more electrons are present in a system, the TISEq equation cannot be
 The electronic Hamiltonian for a many-electron atom can be written as:
 
 \begin{equation}
-\hat{H}({\bf r}_1,{\bf r}_2,\ldots,{\bf r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \epsilon _{0}}}\sum_{i<j}\frac{1}{r_{ij}},
+\hat{H}({\bf r}_1,{\bf r}_2,\ldots,{\bf r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m_e }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \epsilon _{0}}}\sum_{i<j}\frac{1}{r_{ij}},
 (\#eq:atom1)
 \end{equation}
 
-where $Z$ is the nuclear charge, $m$ and $e$ are respectively the mass and charge of an electron, ${\bf r}_i$ and $\nabla_i^2$ are the spatial coordinates and the Laplacian of each electron, $r_{i}=|{\bf r}_i|$, and $r_{{ij}}=|{\bf r}_i-{\bf r}_j|$ is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. \@ref(eq:scheqsimple).
+where $Z$ is the nuclear charge, $m_e$ and $e$ are respectively the mass and charge of an electron, ${\bf r}_i$ and $\nabla_i^2$ are the spatial coordinates and the Laplacian of each electron, $r_{i}=|{\bf r}_i|$, and $r_{{ij}}=|{\bf r}_i-{\bf r}_j|$ is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. \@ref(eq:scheqsimple).
 
 ## Many-Electron Wave Functions
 When we have more than one electron, the sixth postulate that we discussed in chapter \@ref(Postulates) comes into place. In other words,  we need to account for the spin of the electrons and we need the wave function to be antisymmetric with respect to exchange of the coordinates of any two electrons. In order to do so, we can define a new variable ${\bf x}$ which represents the set of all four coordinates associated with an electron: three spatial coordinates ${\bf r}$, and one spin coordinate $\mathbf{s}$, i.e.,  ${\bf x} = \{ {\bf r}, {\bf s} \}$. We can then write the electronic wave function as  $\Psi({\bf x}_1, {\bf x}_2, \ldots, {\bf x}_N)$, and we require the sixth postulate to hold by writing:

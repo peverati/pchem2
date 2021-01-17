@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.13)  15 JAN 2021 23:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.13)  16 JAN 2021 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -468,16 +468,7 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@exercise=\count306
 (./pchem2.aux
 
-LaTeX Warning: Label `eq:hf2' multiply defined.
-
-
-LaTeX Warning: Label `eq:hf3' multiply defined.
-
-
-LaTeX Warning: Label `eq:hf4' multiply defined.
-
-
-LaTeX Warning: Label `eq:hf5' multiply defined.
+LaTeX Warning: Label `eq:molham11' multiply defined.
 
 )
 \openout1 = `pchem2.aux'.
@@ -573,7 +564,7 @@ Package chemgreek Info: Activating mapping `default' on line 133.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<FrontPage_6x9.pdf, id=200, 433.62pt x 650.43pt>
+<FrontPage_6x9.pdf, id=209, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
 Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 137.
@@ -582,7 +573,7 @@ File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf>
 Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 137.
 (pdftex.def)             Requested size: 303.53854pt x 455.30782pt.
-<FrontPage_6x9.pdf, id=203, page=1, 433.62pt x 650.43pt>
+<FrontPage_6x9.pdf, id=212, page=1, 433.62pt x 650.43pt>
 File: FrontPage_6x9.pdf Graphic file (type pdf)
 <use FrontPage_6x9.pdf, page 1>
 Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 137.
@@ -651,7 +642,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]
-<./img/OEP_Figures.000.jpeg, id=302, 1584.92125pt x 1049.9225pt>
+<./img/OEP_Figures.000.jpeg, id=314, 1584.92125pt x 1049.9225pt>
 File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
 <use ./img/OEP_Figures.000.jpeg>
 Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 160.
@@ -678,7 +669,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 Chapter 2.
 [7] [8]
-<./img/OEP_wiki1.png, id=411, 1927.2pt x 1406.25375pt>
+<./img/OEP_wiki1.png, id=421, 1927.2pt x 1406.25375pt>
 File: ./img/OEP_wiki1.png Graphic file (type png)
 <use ./img/OEP_wiki1.png>
 Package pdftex.def Info: ./img/OEP_wiki1.png  used on input line 344.
@@ -742,7 +733,7 @@ Overfull \hbox (20.8538pt too wide) in alignment at lines 1079--1162
  []
 
 [32] [33] [34]
-<./img/OEP_wiki2.png, id=717, 501.875pt x 572.1375pt>
+<./img/OEP_wiki2.png, id=727, 501.875pt x 572.1375pt>
 File: ./img/OEP_wiki2.png Graphic file (type png)
 <use ./img/OEP_wiki2.png>
 Package pdftex.def Info: ./img/OEP_wiki2.png  used on input line 1256.
@@ -769,13 +760,13 @@ Chapter 9.
 
 
 ]
-<./img/OEP_wiki3.jpg, id=830, 562.1pt x 423.5825pt>
+<./img/OEP_wiki3.jpg, id=840, 562.1pt x 423.5825pt>
 File: ./img/OEP_wiki3.jpg Graphic file (type jpg)
 <use ./img/OEP_wiki3.jpg>
 Package pdftex.def Info: ./img/OEP_wiki3.jpg  used on input line 1502.
 (pdftex.def)             Requested size: 212.46806pt x 160.10986pt.
 [48 <./img/OEP_wiki3.jpg>]
-<./img/OEP_wiki4.png, id=842, 1092.7224pt x 731.3724pt>
+<./img/OEP_wiki4.png, id=852, 1092.7224pt x 731.3724pt>
 File: ./img/OEP_wiki4.png Graphic file (type png)
 <use ./img/OEP_wiki4.png>
 Package pdftex.def Info: ./img/OEP_wiki4.png  used on input line 1518.
@@ -800,12 +791,16 @@ Chapter 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[61] [62] [63] [64] [65] [66] [67] [68
-
-
-]
+[61] [62] [63] [64] [65] [66]
 Chapter 12.
-[69] [70
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 1921.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 1921.
+[67
+
+
+] [68] [69] [70
 
 
 ]
@@ -815,14 +810,14 @@ Chapter 13.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `pchem2.out' has not changed.
-(rerunfilecheck)             Checksum: 37FE503982067B7309852A0EC3442618;9247.
+(rerunfilecheck)             Checksum: 4D31FFFA0933F2EF1660189B798B9F27;9694.
  ) 
 Here is how much of TeX's memory you used:
- 13968 strings out of 481290
- 209350 string characters out of 5916572
- 542328 words of memory out of 5000000
- 30220 multiletter control sequences out of 15000+600000
- 478350 words of font info for 69 fonts, out of 8000000 for 9000
+ 14016 strings out of 481290
+ 209951 string characters out of 5916572
+ 543565 words of memory out of 5000000
+ 30249 multiletter control sequences out of 15000+600000
+ 492261 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  71i,18n,80p,1665b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/
@@ -840,22 +835,24 @@ rs/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve
 /Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Librar
 y/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyT
 eX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve/Library/TinyTeX/texm
-f-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/f
-onts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/typ
-e1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/publi
-c/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr
-i9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb>
-</Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users
-/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/L
-ibrary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/
-TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></Users/peve/Library
-/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></Users/peve/
-Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on pchem2.pdf (81 pages, 2623189 bytes).
+f-dist/fonts/type1/public/lm/lmr10.pfb></Users/peve/Library/TinyTeX/texmf-dist/
+fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/publ
+ic/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
+r8.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><
+/Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/
+peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb></Users/peve/Li
+brary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/T
+inyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/
+texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msbm10.pfb></Users/peve/Library/TinyTeX/texmf-
+dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></Users/peve/Library/TinyTeX
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on pchem2.pdf (81 pages, 2664521 bytes).
 PDF statistics:
- 1203 PDF objects out of 1440 (max. 8388607)
- 1065 compressed objects within 11 object streams
- 384 named destinations out of 1000 (max. 500000)
- 438 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1238 PDF objects out of 1440 (max. 8388607)
+ 1098 compressed objects within 11 object streams
+ 395 named destinations out of 1000 (max. 500000)
+ 454 words of extra memory for PDF output out of 10000 (max. 10000000)
 

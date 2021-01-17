@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2</title>
+  <title>12 The Chemical Bond | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="12 The Chemical Bond | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Analytically Soluble Models | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="12 The Chemical Bond | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="Schrodinger.html"/>
-<link rel="next" href="Hydrogen.html"/>
+<link rel="prev" href="Molecules.html"/>
+<link rel="next" href="Spectroscopy.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -199,152 +199,89 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Models" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Analytically Soluble Models</h1>
-<p>The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.</p>
-<div id="the-free-particle" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> The Free Particle</h2>
-<p>By definition, the particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
-<p><span class="math display" id="eq:FP1">\[\begin{equation}
-- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
-\tag{4.1}
+<div id="Bonds" class="section level1" number="12">
+<h1><span class="header-section-number">12</span> The Chemical Bond</h1>
+<p>In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the <span class="math inline">\(\mathrm{H}_2^+\)</span> molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and use a set tailored for molecules, called <em>atomic units (a.u.)</em>. This set of units is built by setting <span class="math inline">\(\hbar=e=m_e=a_0=1\)</span>. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a>, simply becomes <span class="math inline">\(E_n=-\frac{1}{2n^2}\)</span> in the a.u. of energy, which are called Hartrees.</p>
+<div id="the-chemical-bond-in-mathrmh_2" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> The chemical bond in <span class="math inline">\(\mathrm{H}_2^+\)</span></h2>
+<p>This system has only one electron, but since its geometry is not spherical (figure XXX), the TISEq cannot be solved analytically as for the hydrogen atom.</p>
+<p>The geometry pf the system The electron is at point <span class="math inline">\(P\)</span>, while the two protons are at position <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at a fixed distance <span class="math inline">\(R\)</span>. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:</p>
+<p><span class="math display" id="eq:bond1">\[\begin{equation}
+\hat{H} = \hat{H}_e+\frac{1}{R} =\left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
+\tag{12.1}
 \end{equation}\]</span></p>
-<p>This equation can be rearranged to:</p>
-<p><span class="math display" id="eq:FP2">\[\begin{equation}
-\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
-\tag{4.2}
+<p>As a first approximation to the variational wave function, we can build the one-electron molecular orbital (MO) by linearly combine two <span class="math inline">\(1s\)</span> hydrogenic orbitals centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively:</p>
+<p><span class="math display" id="eq:bond2">\[\begin{equation}
+\varphi = c_1 a + c_2 b,
+\tag{12.2}
 \end{equation}\]</span></p>
-<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
-<p><span class="math display" id="eq:FP3">\[\begin{equation}
-\psi(x) = A \exp(\pm ikx).
-\tag{4.3}
-\end{equation}\]</span></p>
-<p>The first and second derivatives of this function are:</p>
-<p><span class="math display" id="eq:FP4">\[\begin{equation}
+<p>with:</p>
+<p><span class="math display" id="eq:bond3">\[\begin{equation}
 \begin{aligned}
-\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+a &amp;= 1s_A = \left( \psi_{100} \right)_A\\
+b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
-\tag{4.4}
+\tag{12.3}
 \end{equation}\]</span></p>
-<p>Comparing the second derivative in eq. <a href="Models.html#eq:FP4">(4.4)</a> with eq. <a href="Models.html#eq:FP2">(4.2)</a>, we immediately see that if we set:</p>
-<p><span class="math display" id="eq:FP5">\[\begin{equation}
-k^2 = \frac{2mE}{\hbar^2},
-\tag{4.5}
+<p>Using eq. <a href="Molecules.html#eq:molham11">(11.11)</a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The secular equation, eq. <a href="Molecules.html#eq:molham12">(11.12)</a> can then be written:</p>
+<p><span class="math display" id="eq:bond4">\[\begin{equation}
+\begin{vmatrix}
+H_{aa}-E   &amp; H_{ab}-ES \\\
+H_{ab}-ES  &amp; H_{aa}-E
+\end{vmatrix}=0
+\tag{12.4}
 \end{equation}\]</span></p>
-<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.5)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
-<p><span class="math display" id="eq:FP6">\[\begin{equation}
-E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
-\tag{4.6}
+<p>The expansion of the determinant results into:</p>
+<p><span class="math display" id="eq:bond5">\[\begin{equation}
+\begin{aligned}
+(H_{aa}-E)^2 &amp;=(H_{ab}-ES)^2 \\
+H_{aa}-E &amp;= \pm (H_{ab}-ES), \\
+\end{aligned}
+\tag{12.5}
 \end{equation}\]</span></p>
-<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Models.html#eq:FP3">(4.3)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Models.html#eq:FP6">(4.6)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+<p>with roots:</p>
+<p><span class="math display" id="eq:bond6">\[\begin{equation}
+\begin{aligned}
+E_{+} &amp;= \frac{H_{aa}+H_{ab}}{1+S} = H_{aa}+\frac{H_{ba}-SH_{aa}}{1+S}, \\
+E_{-} &amp;= \frac{H_{aa}-H_{ab}}{1-S} = H_{aa}-\frac{H_{ba}-SH_{aa}}{1-S}, 
+\end{aligned}
+\tag{12.6}
+\end{equation}\]</span></p>
+<p>the first corresponding to the ground state, the second to the first excited state. Solving for the best value for the coefficients of the linear combination for the ground state <span class="math inline">\(E_{+}\)</span>, we obtain:</p>
+<p><span class="math display" id="eq:bond7">\[\begin{equation}
+c_1=c_2=\frac{1}{\sqrt{2+2S}},
+\tag{12.7}
+\end{equation}\]</span></p>
+<p>which gives the bonding MO:</p>
+<p><span class="math display" id="eq:bond8">\[\begin{equation}
+\varphi{+}=\frac{a+b}{\sqrt{2+2S}}.
+\tag{12.8}
+\end{equation}\]</span></p>
+<p>Proceeding similarly for the excited state, we obtain:</p>
+<p><span class="math display" id="eq:bond9">\[\begin{equation}
+c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
+\tag{12.9}
+\end{equation}\]</span></p>
+<p>which gives the antibonding MO:</p>
+<p><span class="math display" id="eq:bond10">\[\begin{equation}
+\varphi{-}=\frac{b-a}{\sqrt{2-2S}}.
+\tag{12.10}
+\end{equation}\]</span></p>
+<p>These results can be summarized in the molecular orbital diagram of figure xxx.</p>
+<p>Calculating the values for the integrals and repeating these calculations for different internuclear distances, <span class="math inline">\(R\)</span>, results in the plot of figure XXX. As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).</p>
 </div>
-<div id="rigidrotor" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> The Particle in a Box</h2>
-<p>Now we can consider a particle constrained to move in a single dimension, under the influence of a potential <span class="math inline">\(V(x)\)</span> which is zero for <span class="math inline">\(0 \leq x \leq a\)</span> and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where <span class="math inline">\(V(x)\)</span> is infinite, so <span class="math inline">\(\psi(x)\)</span> is nonzero only within <span class="math inline">\([0,a]\)</span>. The Schrödinger equation is thus:</p>
-<p><span class="math display" id="eq:PIB1">\[\begin{equation}
-- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
-\qquad 0 \leq x \leq a.
-\tag{4.7}
-\end{equation}\]</span></p>
-<p>In other words, inside the box <span class="math inline">\(\psi(x)\)</span> describes a free particle, but outside the box <span class="math inline">\(\psi(x)=0\)</span>. Since the Schrödinger equation involves derivatives, the function that solves it, <span class="math inline">\(\psi(x)\)</span>, must be everywhere continuous and everywhere continuously differentiable. This fact means that the value of the wave function at the two extremes must be equal to zero:</p>
-<p><span class="math display" id="eq:PIB2">\[\begin{equation}
-\psi(0)=\psi(a)=0.
-\tag{4.8}
-\end{equation}\]</span></p>
-<p>Inside the box we can use Euler’s formula to write the wave function as a linear combination of the positive and negative solutions:</p>
-<p><span class="math display" id="eq:PIB3">\[\begin{equation}
-\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
-\tag{4.9}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants that we need to determine using the two constraints in eq. <a href="Models.html#eq:PIB2">(4.8)</a>. For <span class="math inline">\(B\)</span> it is straightforward to see that:</p>
-<p><span class="math display" id="eq:PIB4">\[\begin{equation}
-\psi(0)= 0 + B =0 \; \implies \; B=0.
-\tag{4.10}
-\end{equation}\]</span></p>
-<p>For <span class="math inline">\(A\)</span> we have:</p>
-<p><span class="math display" id="eq:PIB5">\[\begin{equation}
-\psi(a)= A\sin ka = 0,
-\tag{4.11}
-\end{equation}\]</span></p>
-<p>which is trivially solved by <span class="math inline">\(A=0\)</span>, or by the more interesting condition of <span class="math inline">\(ka=n\pi\)</span>. The trivial solution corresponds to a wave function uniformly equal to zero everywhere. This wave function is uninteresting, since it describes no particles in no boxes. The second set of solutions, however, is very interesting, since we can write it as:</p>
-<p><span class="math display" id="eq:PIB6">\[\begin{equation}
-\psi_n(x)= A\sin\left(\frac{n\pi x}{a} \right)\quad n=1,2,\ldots,\infty,
-\tag{4.12}
-\end{equation}\]</span></p>
-<p>which represents an infinite set of functions, <span class="math inline">\(\psi_n(x)\)</span>, determined by a positive integer number <span class="math inline">\(n\)</span>, called <em>qunatum number</em>. Since these functions solve the TISEq, they are also called <em>eigenfunctions</em>, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace <a href="Models.html#eq:PIB6">(4.12)</a> into eq. <a href="Models.html#eq:PIB1">(4.7)</a>, to obtain:</p>
-<p><span class="math display" id="eq:PIB7">\[\begin{equation}
-E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
-\tag{4.13}
-\end{equation}\]</span></p>
-<p>A few interesting considerations can be made from the results of eq. <a href="Models.html#eq:PIB7">(4.13)</a>. First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, <span class="math inline">\(a\)</span>, since:</p>
-<p><span class="math display" id="eq:PIB8">\[\begin{equation}
-E_1 = \frac{h^2 }{8 m a^2} \neq 0.
-\tag{4.14}
-\end{equation}\]</span></p>
-<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we did not solve for the constant <span class="math inline">\(A\)</span>. This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate <span class="math inline">\(n_x,n_y,n_z\)</span>).</p>
-</div>
-<div id="the-harmonic-oscillator" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> The Harmonic Oscillator</h2>
-<p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
-<p><span class="math display" id="eq:HO1">\[\begin{equation}
-V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
-\tag{4.15}
-\end{equation}\]</span></p>
-<p>If we choose the energy scale such that <span class="math inline">\(V_0 = 0\)</span> then: <span class="math inline">\(V(x) = \frac{1}{2}kx^2\)</span>, and the TISEq looks:</p>
-<p><span class="math display" id="eq:HO2">\[\begin{equation}
-- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
-E \psi(x)
-\tag{4.16}
-\end{equation}\]</span></p>
-<p>After some effort, the eigenfunctions are:</p>
-<p><span class="math display" id="eq:HO3">\[\begin{equation}
-\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
-\tag{4.17}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(H_n\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_n\)</span> are defined by</p>
-<p><span class="math display" id="eq:HO4">\[\begin{equation}
-\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
-\tag{4.18}
-\end{equation}\]</span></p>
-<p>The eigenvalues are:</p>
-<p><span class="math display" id="eq:HO5">\[\begin{equation}
-E_n = \hbar \omega (n + \frac{1}{2}),
-\tag{4.19}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to <span class="math inline">\(n=0\)</span>, but because of the <span class="math inline">\(\frac{1}{2}\)</span> factor in eq. <a href="Models.html#eq:HO5">(4.19)</a>, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. <a href="Models.html#eq:HO5">(4.19)</a>. The lowest possible energy (the ZPE) will be <span class="math inline">\(E_0 = \frac{1}{2} \hbar \omega\)</span>.</p>
-</div>
-<div id="the-rigid-rotor" class="section level2" number="4.4">
-<h2><span class="header-section-number">4.4</span> The Rigid Rotor</h2>
-<p>The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>. The cartesian coordinates, <span class="math inline">\(x,y,z\)</span>, are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. The TISEq of the system in spherical coordinates is:</p>
-<p><span class="math display" id="eq:RR1">\[\begin{equation}
-- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
-\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E_{\ell} \psi(r),
-\tag{4.20}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> The eigenvalues are simply:</p>
-<p><span class="math display" id="eq:RR2">\[\begin{equation}
-E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
-\tag{4.21}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\ell=0,1,2,\ldots\)</span> is the <em>azimuthal quantum number</em>, and <span class="math inline">\(m_{\ell}=\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> is the <em>magnetic quantum number</em>. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Notice that the energy does not depend on the second index <span class="math inline">\(m_{\ell}\)</span>, and the functions with fixed <span class="math inline">\(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\)</span> have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number <span class="math inline">\(\ell\)</span>, similarly to the previous two cases. The index <span class="math inline">\(m_{\ell}\)</span> that appears in the spherical harmonics will assume some importance in future chapters.</p>
+<div id="the-chemical-bond-in-mathrmh_2-1" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> The chemical bond in <span class="math inline">\(\mathrm{H}_2\)</span></h2>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="8">
-<li id="fn8"><p>For a description of the spherical harmonics see <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">here</a><a href="Models.html#fnref8" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="Schrodinger.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Hydrogen.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Molecules.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Spectroscopy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -375,7 +312,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/04_Models.Rmd",
+"link": "https://github.com/peverati/pchem2/edit/master/12_Bonds.Rmd",
 "text": "Edit"
 },
 "history": {

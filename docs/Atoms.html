@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-15" />
+<meta name="date" content="2021-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="Weirdness.html"/>
-<link rel="next" href="Bond.html"/>
+<link rel="next" href="Molecules.html"/>
 <script src="libs/header-attrs-2.5/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -161,19 +161,23 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="Bond.html"><a href="Bond.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond</a>
+<li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Molecules</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="Bond.html"><a href="Bond.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
+<li class="chapter" data-level="11.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="Bond.html"><a href="Bond.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
+<li class="chapter" data-level="11.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="Bond.html"><a href="Bond.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
-<li class="chapter" data-level="11.3" data-path="Bond.html"><a href="Bond.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
+<li class="chapter" data-level="11.2" data-path="Molecules.html"><a href="Molecules.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
+<li class="chapter" data-level="11.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="Bond.html"><a href="Bond.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
+<li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>12</b> Polyatomic Molecules</a></li>
+<li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2"><i class="fa fa-check"></i><b>12.1</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2^+\)</span></a></li>
+<li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2-1"><i class="fa fa-check"></i><b>12.2</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2\)</span></a></li>
+</ul></li>
 <li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -200,10 +204,10 @@ MathJax.Hub.Config({
 <p>When two or more electrons are present in a system, the TISEq equation cannot be solved analytically. Thus for the vast majority of chemical applications, we must rely on approximate methods. We will explore some of these approximations in this and further chapter, starting from the many-electron atoms (all atoms other than hydrogen). It is important to stress that because of the nature of approximations, this is still a very active field of scientific research, and improved methods are developed every year.</p>
 <p>The electronic Hamiltonian for a many-electron atom can be written as:</p>
 <p><span class="math display" id="eq:atom1">\[\begin{equation}
-\hat{H}({\bf r}_1,{\bf r}_2,\ldots,{\bf r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \epsilon _{0}}}\sum_{i&lt;j}\frac{1}{r_{ij}},
+\hat{H}({\bf r}_1,{\bf r}_2,\ldots,{\bf r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m_e }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \epsilon _{0}}}\sum_{i&lt;j}\frac{1}{r_{ij}},
 \tag{10.1}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\({\bf r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|{\bf r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|{\bf r}_i-{\bf r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. <a href="Operators.html#eq:scheqsimple">(6.24)</a>.</p>
+<p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m_e\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\({\bf r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|{\bf r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|{\bf r}_i-{\bf r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. <a href="Operators.html#eq:scheqsimple">(6.24)</a>.</p>
 <div id="many-electron-wave-functions" class="section level2" number="10.1">
 <h2><span class="header-section-number">10.1</span> Many-Electron Wave Functions</h2>
 <p>When we have more than one electron, the sixth postulate that we discussed in chapter <a href="Postulates.html#Postulates">8</a> comes into place. In other words, we need to account for the spin of the electrons and we need the wave function to be antisymmetric with respect to exchange of the coordinates of any two electrons. In order to do so, we can define a new variable <span class="math inline">\({\bf x}\)</span> which represents the set of all four coordinates associated with an electron: three spatial coordinates <span class="math inline">\({\bf r}\)</span>, and one spin coordinate <span class="math inline">\(\mathbf{s}\)</span>, i.e., <span class="math inline">\({\bf x} = \{ {\bf r}, {\bf s} \}\)</span>. We can then write the electronic wave function as <span class="math inline">\(\Psi({\bf x}_1, {\bf x}_2, \ldots, {\bf x}_N)\)</span>, and we require the sixth postulate to hold by writing:</p>
@@ -345,7 +349,7 @@ E = E_1+E_2.
         </div>
       </div>
 <a href="Weirdness.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Bond.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Molecules.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-15" />
+<meta name="date" content="2021-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -161,19 +161,23 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="Bond.html"><a href="Bond.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond</a>
+<li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Molecules</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="Bond.html"><a href="Bond.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
+<li class="chapter" data-level="11.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="Bond.html"><a href="Bond.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
+<li class="chapter" data-level="11.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="Bond.html"><a href="Bond.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
-<li class="chapter" data-level="11.3" data-path="Bond.html"><a href="Bond.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
+<li class="chapter" data-level="11.2" data-path="Molecules.html"><a href="Molecules.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
+<li class="chapter" data-level="11.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="Bond.html"><a href="Bond.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
+<li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>12</b> Polyatomic Molecules</a></li>
+<li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2"><i class="fa fa-check"></i><b>12.1</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2^+\)</span></a></li>
+<li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2-1"><i class="fa fa-check"></i><b>12.2</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2\)</span></a></li>
+</ul></li>
 <li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -242,7 +246,7 @@ Figure 9.2: Numerical simulation of the double-slit experiment with electrons.
 \psi (x)\propto \sum _{n}A_{n}\exp\left(\frac{ip_n x}{\hbar} \right),
 \tag{9.2}  
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(A_n\)</span> represents the relative contribution of the mode <span class="math inline">\(p_n\)</span> to the overall total. We are allowed to write the wave function this way because each individual plane wave is a solution of the TISEq, and as we already saw in chapter <a href="Operators.html#Operators">6</a> and several other places, the sum of each individual solution is also a solution. An interesting consequence of writing the wave function as a wave packet is that when we sum different waves, they interfere with each other, and they might localize in some region of space (see figure xxx). Thus for a wave function written as in eq. <a href="Weirdness.html#eq:heis1">(9.2)</a>, the wave packet can become more localized. We may also make this procedure a step further to the continuum limit, where the wave function goes from a sum to an integral over all possible modes:</p>
+<p>where <span class="math inline">\(A_n\)</span> represents the relative contribution of the mode <span class="math inline">\(p_n\)</span> to the overall total. We are allowed to write the wave function this way because each individual plane wave is a solution of the TISEq, and as we already saw in chapter <a href="Operators.html#Operators">6</a> and several other places, the sum of each individual solution is also a solution. An interesting consequence of writing the wave function as a wave packet is that when we sum different waves, they interfere with each other, and they might localize in some region of space. Thus for a wave function written as in eq. <a href="Weirdness.html#eq:heis1">(9.2)</a>, the wave packet can become more localized. We may also make this procedure a step further to the continuum limit, where the wave function goes from a sum to an integral over all possible modes:</p>
 <p><span class="math display" id="eq:heis2">\[\begin{equation}
 \psi (x)=\frac {1}{\sqrt{2\pi\hbar}}\int_{-\infty }^{\infty }\varphi (p)\cdot \exp
 \left(\frac{ip x}{\hbar} \right)\,dp,

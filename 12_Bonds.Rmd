@@ -1,0 +1,96 @@
+# The Chemical Bond {#Bonds}
+
+In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the $\mathrm{H}_2^+$ molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and  use a set tailored for molecules, called *atomic units (a.u.)*. This set of units is built by setting $\hbar=e=m_e=a_0=1$. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \@ref(eq:HA7), simply becomes $E_n=-\frac{1}{2n^2}$ in the a.u. of energy, which are called Hartrees.
+
+## The chemical bond in $\mathrm{H}_2^+$
+
+This system has only one electron, but since its geometry is not spherical (figure XXX), the TISEq cannot be solved analytically as for the hydrogen atom. 
+
+The geometry pf the system The electron is at point $P$, while the two protons are at position $A$ and $B$ at a fixed distance $R$. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as: 
+
+\begin{equation}
+\hat{H} = \hat{H}_e+\frac{1}{R} =\left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
+(\#eq:bond1)
+\end{equation}
+
+As a first approximation to the variational wave function, we can build the one-electron molecular orbital (MO) by linearly combine two $1s$ hydrogenic orbitals centered at $A$ and $B$, respectively:
+
+\begin{equation}
+\varphi = c_1 a + c_2 b,
+(\#eq:bond2)
+\end{equation}
+
+with:
+
+\begin{equation}
+\begin{aligned}
+a &= 1s_A = \left( \psi_{100} \right)_A\\
+b &= 1s_B = \left( \psi_{100} \right)_B.
+\end{aligned}
+(\#eq:bond3)
+\end{equation}
+
+Using eq. \@ref(eq:molham11) and considering that the nuclei are identical, we can define the integrals $H_{aa}=H_{bb}, H_{ab}=H_{ba}$ and $S_{ab}=S$ (while $S_{aa}=1$ because the hydrogen atom orbitals are normalized). The secular equation, eq. \@ref(eq:molham12) can then be written:
+
+\begin{equation}
+\begin{vmatrix}
+H_{aa}-E   & H_{ab}-ES \\\
+H_{ab}-ES  & H_{aa}-E
+\end{vmatrix}=0
+(\#eq:bond4)
+\end{equation}
+
+The expansion of the determinant results into:
+
+\begin{equation}
+\begin{aligned}
+(H_{aa}-E)^2 &=(H_{ab}-ES)^2 \\
+H_{aa}-E &= \pm (H_{ab}-ES), \\
+\end{aligned}
+(\#eq:bond5)
+\end{equation}
+
+with roots:
+
+\begin{equation}
+\begin{aligned}
+E_{+} &= \frac{H_{aa}+H_{ab}}{1+S} = H_{aa}+\frac{H_{ba}-SH_{aa}}{1+S}, \\
+E_{-} &= \frac{H_{aa}-H_{ab}}{1-S} = H_{aa}-\frac{H_{ba}-SH_{aa}}{1-S}, 
+\end{aligned}
+(\#eq:bond6)
+\end{equation}
+
+the first corresponding to the ground state, the second to the first excited state. Solving for the best value for the coefficients of the linear combination for the ground state $E_{+}$, we obtain:
+
+\begin{equation}
+c_1=c_2=\frac{1}{\sqrt{2+2S}},
+(\#eq:bond7)
+\end{equation}
+
+which gives the bonding MO:
+
+\begin{equation}
+\varphi{+}=\frac{a+b}{\sqrt{2+2S}}.
+(\#eq:bond8)
+\end{equation}
+
+Proceeding similarly for the excited state, we obtain:
+
+\begin{equation}
+c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
+(\#eq:bond9)
+\end{equation}
+
+which gives the antibonding MO:
+
+\begin{equation}
+\varphi{-}=\frac{b-a}{\sqrt{2-2S}}.
+(\#eq:bond10)
+\end{equation}
+
+These results can be summarized in the molecular orbital diagram of figure xxx.
+
+Calculating the values for the integrals and repeating these calculations for different internuclear distances, $R$, results in the plot of figure XXX. As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).
+
+## The chemical bond in $\mathrm{H}_2$
+
