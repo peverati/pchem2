@@ -4,12 +4,16 @@ In this chapter we will see a couple of examples of how the concept and mathemat
 
 ## The chemical bond in $\mathrm{H}_2^+$
 
-This system has only one electron, but since its geometry is not spherical (figure XXX), the TISEq cannot be solved analytically as for the hydrogen atom. 
+This system has only one electron, but since its geometry is not spherical (figure \@ref(fig:Fig1c12)), the TISEq cannot be solved analytically as for the hydrogen atom. 
 
-The geometry pf the system The electron is at point $P$, while the two protons are at position $A$ and $B$ at a fixed distance $R$. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as: 
+```{r Fig1c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Geometry of the hydrogen molecular cation.'}
+knitr::include_graphics('./img/OEP_figure1.jpeg')
+```
+
+The electron is at point $P$, while the two protons are at position $A$ and $B$ at a fixed distance $R$. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as: 
 
 \begin{equation}
-\hat{H} = \hat{H}_e+\frac{1}{R} =\left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
+\hat{H} = \hat{H}_e+\frac{1}{R} = \left( -\frac{1}{2}\nabla^2-\frac{1}{\mathbf{r}_A}-\frac{1}{\mathbf{r}_B} \right)+\frac{1}{R}
 (\#eq:bond1)
 \end{equation}
 
@@ -70,7 +74,7 @@ c_1=c_2=\frac{1}{\sqrt{2+2S}},
 which gives the bonding MO:
 
 \begin{equation}
-\varphi{+}=\frac{a+b}{\sqrt{2+2S}}.
+\varphi_{+}=\frac{a+b}{\sqrt{2+2S}}.
 (\#eq:bond8)
 \end{equation}
 
@@ -84,13 +88,66 @@ c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
 which gives the antibonding MO:
 
 \begin{equation}
-\varphi{-}=\frac{b-a}{\sqrt{2-2S}}.
+\varphi_{-}=\frac{b-a}{\sqrt{2-2S}}.
 (\#eq:bond10)
 \end{equation}
 
-These results can be summarized in the molecular orbital diagram of figure xxx.
+These results can be summarized in the molecular orbital diagram of figure \@ref(fig:Fig2c12) We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for $S\neq0$, the antibonding level being more repulsive and the bonding less attractive than the symmetric case occurring for $S = 0$.
 
-Calculating the values for the integrals and repeating these calculations for different internuclear distances, $R$, results in the plot of figure XXX. As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).
+```{r Fig2c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Molecular orbitals diagram for the hydrogen molecular cation.'}
+knitr::include_graphics('./img/OEP_figure2.jpeg')
+```
+
+Calculating the values for the integrals and repeating these calculations for different internuclear distances, $R$, results in the plot of figure \@ref(fig:Fig3c12) As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).
+
+```{r Fig3c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Born-Oppenheimer energy landscape for the hydrogen molecular cation.'}
+knitr::include_graphics('./img/OEP_figure3.jpeg')
+```
 
 ## The chemical bond in $\mathrm{H}_2$
 
+```{r Fig4c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Geometry of the hydrogen molecule.'}
+knitr::include_graphics('./img/OEP_figure4.jpeg')
+```
+
+We can now examine the formation of the two-electron chemical bond in the $\text{H}_2$ molecule. With reference to figure \@ref(fig:Fig4c12), the molecular Hamiltonian for $\text{H}_2$ in a.u. in the Born-Oppenheimer approximation will be: 
+
+\begin{equation}
+\begin{aligned}
+\hat{H} &= \hat{H}_e+\frac{1}{R} \\
+&=\left( -\frac{1}{2}\nabla^2_1-\frac{1}{\mathbf{r}_{A1}}-\frac{1}{\mathbf{r}_{B1}} \right)+\left( -\frac{1}{2}\nabla^2_2-\frac{1}{\mathbf{r}_{A2}}-\frac{1}{\mathbf{r}_{B2}} \right)+\frac{1}{r_{12}}+\frac{1}{R}\\
+&= \hat{h}_1+\hat{h}_2+\frac{1}{r_{12}}+\frac{1}{R},
+\end{aligned}
+(\#eq:bond11)
+\end{equation}
+
+where $\hat{h}$ is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function by considering two $1s$ atomic orbitals $a(\mathbf{r}_1)$ and $b(\mathbf{r}_2)$ centered at $A$ and $B$, respectively, having an overlap $S$. If we Neglect the electron-electron repulsion term, $\frac{1}{r_{12}}$, the resulting Hartree-Fock equations are exactly the same as in the previous case. The most important difference, though, is that in this case we need to consider the spin of the two electrons. Proceeding similarly to what we have done for the many-electron atom in chapter \@ref(Atoms), we can build an antisymmetric wave function for $\text{H}_2$ using a Slater determinant of doubly occupied MOs. For the ground state, we can use the lowest energy orbital obtained from the solution of the Hartree-Fock equations, which we already obtained in eq. \@ref(eq:bond8). Using a notation that is based on the symmetry of the molecule, this bonding orbital in $\text{H}_2$ is usually called $\sigma_g$, where $\sigma$ refers to the $\sigma$ bond that forms between the two atoms. The Slater determinant for the ground state is therefore:^[Compare this equation to \@ref(eq:atom6) for the helium atom.]
+
+\begin{equation}
+\Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\phi_{\uparrow},\sigma_{g}\phi_{\downarrow}\rangle,=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right],
+(\#eq:bond12)
+\end{equation}
+
+where:
+
+\begin{equation}
+\sigma_{g}=\varphi_{+}=\frac{\left(\psi_{100}\right)_A+\left(\psi_{100}\right)_B}{\sqrt{2+2S}}.
+(\#eq:bond13)
+\end{equation}
+
+The energies and the resulting MO diagram is similar to that for $\mathrm{H}_2^+$, with the only difference that two electron will be described by the same $\sigma_g$ MO (figure \@ref(fig:Fig5c12)). 
+
+```{r Fig5c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Molecular orbitals diagram for the hydrogen molecule.'}
+knitr::include_graphics('./img/OEP_figure5.jpeg')
+```
+
+As for the many-electron atoms, the Hartree-Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the bond distance of $R_e=1.4\;a_0$ is $E= -0.17447\;E_h$. The variational result obtained with the wave function in eq. \@ref(eq:bond12) is $E= -0.12778\;E_h$, which is $\sim 73 \%$ of the exact value. The variational coefficient (i.e., the orbital exponent, $c_0$, that enters the $1s$ orbital formula $\psi_{100}=\frac{1}{\pi}\exp[c_0r]$) is optimized at $c_0=1.1695$, a value that shows how the orbitals significantly contract due to spherical polarization.
+
+If we scan the Born-Oppenheimer energy landscape using the wave function in eq. \@ref(eq:bond12) as we have done for $\mathrm{H}_2^+$,  we obtain the plot in figure \@ref(fig:Fig6c12).
+
+```{r Fig6c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Born-Oppenheimer energy landscape for the hydrogen molecule.'}
+knitr::include_graphics('./img/OEP_figure6.jpeg')
+```
+
+
+As we can see, the Hartree-Fock results for $\mathrm{H}_2$ describes the formation of the bond qualitatively around the bond distance (minimum of the curve), but they fail to describe the molecule at dissociation. This happens because in eq. \@ref(eq:bond12) both electrons are in the same orbital with opposite spin (electrons are coupled), and the orbital is shared among both centers. At dissociation, this corresponds to an erroneous ionic dissociation state where both electron are localized on either one of the two centers (this center is therefore negatively charged), with the other proton left without electrons. This is in contrast with the correct dissociation, where each electron should be localized around each center (and therefore, it should be uncoupled from the other electron). This error is once again the result of the approximations that are necessary to treat the TISEq of a many-electron system. It is obviously not a failure of quantum mechanics, and it can be easily corrected using more accurate approximations on modern computers. 

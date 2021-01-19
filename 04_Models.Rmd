@@ -147,7 +147,7 @@ N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
 The eigenvalues are:
 
 \begin{equation}
-E_n = \hbar \omega (n + \frac{1}{2}),
+E_n = \hbar \omega \left(n + \frac{1}{2} \right),
 (\#eq:HO5)
 \end{equation}
 

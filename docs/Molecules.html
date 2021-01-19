@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-16" />
+<meta name="date" content="2021-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,22 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2"><i class="fa fa-check"></i><b>12.1</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2^+\)</span></a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2-1"><i class="fa fa-check"></i><b>12.2</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
+<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>13.1</b> Rotational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.1.1</b> Rotation of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>13.2</b> Vibrational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.1</b> Vibration of heteronuclear diatomic molecules</a></li>
+<li class="chapter" data-level="13.2.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.2</b> Vibration of homonuclear diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>13.3</b> Electronic Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -291,9 +306,9 @@ As a final note, in the remainder of this textbook we will confuse the term “t
 \tag{11.11}
 \end{equation}\]</span></p>
 <p>to simplify eq. <a href="Atoms.html#eq:var4">(10.12)</a> to:</p>
-<p><span class="math display" id="eq:molham11">\[\begin{equation}
+<p><span class="math display" id="eq:molham11b">\[\begin{equation}
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
-\tag{11.11}
+\tag{11.12}
 \end{equation}\]</span></p>
 <p>Differentiating this energy with respect to the expansion coefficients <span class="math inline">\(c_i\)</span> yields a non-trivial solution only if the following “secular determinant” equals zero:</p>
 <p><span class="math display" id="eq:molham12">\[\begin{equation}
@@ -303,9 +318,9 @@ H_{21}-ES_{21}   &amp; H_{22}-ES_{22}   &amp; \cdots &amp; H_{2m}-ES_{2m}\\\
 \vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\\
 H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
 \end{vmatrix}=0
-\tag{11.12}
+\tag{11.13}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(m\)</span> is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients <span class="math inline">\(c_i\)</span> in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the <strong>self-consistent-field (SCF) procedure</strong>. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. <a href="Molecules.html#eq:molham12">(11.12)</a>. This solution gives updated values of the coefficients, which can then be used to created an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.</p>
+<p>where <span class="math inline">\(m\)</span> is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients <span class="math inline">\(c_i\)</span> in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the <strong>self-consistent-field (SCF) procedure</strong>. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. <a href="Molecules.html#eq:molham12">(11.13)</a>. This solution gives updated values of the coefficients, which can then be used to created an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.</p>
 
 </div>
 </div>

@@ -116,7 +116,7 @@ to simplify eq. \@ref(eq:var4) to:
 
 \begin{equation}
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
-(\#eq:molham11)
+(\#eq:molham11b)
 \end{equation}
 
 Differentiating this energy with respect to the expansion coefficients $c_i$ yields a non-trivial solution only if the following "secular determinant" equals zero: 

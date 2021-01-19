@@ -72,3 +72,57 @@ The uncertainty principle can be extended to any couple of conjugated variables,
 
 ## Tunneling
 
+Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to "tunnel through" the barrier following a purely quantum mechanical phenomenon (figure \@ref(fig:Fig3c9)).^[This diagram is taken from [Wikipedia](https://en.wikipedia.org/wiki/Quantum_tunnelling#/media/File:TunnelEffektKling1.png) by user Felix Kling, and distributed under CC BY-SA 3.0 license.]
+
+```{r Fig3c9, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased.'}
+knitr::include_graphics('./img/OEP_wiki9.png')
+```
+
+To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier ($V_0$) decays in the potential as a function of $A_0\exp[-\alpha x]$, where $A_0$ is the amplitude at the boundary, $\alpha$ is proportional to the potential, and $x$ is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is "leaking" through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.
+
+Tunneling can be described using the TISEq, eq. \@ref(eq:hamilt1). For the tunneling problem we can take the potential $V$ to be zero for all space, except for the region inside the barrier (between $0$ and $a$):
+
+\begin{equation}
+V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<a \\ 0\quad&\text{if}\; a\leq x< \infty \end{cases}.
+(\#eq:tunn1)  
+\end{equation}
+ 
+To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:
+
+\begin{equation}
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<a \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; a\leq x< \infty \end{cases}
+(\#eq:tunn2)  
+\end{equation}
+
+where $k=\frac{\sqrt{2mE}}{\hbar}$, and $\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}$. To enforce continuity, we must have at the first boundary:
+
+\begin{equation}
+A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
+(\#eq:tunn3)  
+\end{equation}
+
+which implies that  $A=0$, and $B=C+D$. At the opposite boundary:
+
+\begin{equation}
+A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
+(\#eq:tunn4)  
+\end{equation}
+
+We notice that, as $a$ goes to infinity, the right hand side of eq. \@ref(eq:tunn4) goes to infinity, which does not make physical sense. To reconcile this,  we must set $D=0$. 
+
+For the final region, $E$ and $F$, present a potentially intractable problem. However, if one realizes that the value at the boundary $a$ is driving the wave in the region $a$ to infinity, it may also be realized that the wave function could be rewritten as $C\exp[-\alpha a]\cos[k(x-a)]$, phase shifting the wave function by the value of $a$,
+ and setting the amplitude to the boundary value. Summarizing, the wave function is:
+
+\begin{equation}
+\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&\text{if}\; a\leq x< \infty. \end{cases}
+(\#eq:tunn5)  
+\end{equation}
+
+Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as  $\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)$, where $a$ is the width of the barrier, and  $(V_0-E)$ is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
+
+\begin{equation}
+\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+(\#eq:tunn6)  
+\end{equation}
+
+As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that $k$ is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter \@ref(Models).

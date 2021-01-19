@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-01-16" />
+<meta name="date" content="2021-01-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -178,7 +178,22 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2"><i class="fa fa-check"></i><b>12.1</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2^+\)</span></a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-mathrmh_2-1"><i class="fa fa-check"></i><b>12.2</b> The chemical bond in <span class="math inline">\(\mathrm{H}_2\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a></li>
+<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>13.1</b> Rotational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.1.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.1.1</b> Rotation of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>13.2</b> Vibrational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.1</b> Vibration of heteronuclear diatomic molecules</a></li>
+<li class="chapter" data-level="13.2.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.2</b> Vibration of homonuclear diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>13.3</b> Electronic Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -262,6 +277,47 @@ Figure 9.2: Numerical simulation of the double-slit experiment with electrons.
 </div>
 <div id="tunneling" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Tunneling</h2>
+<p>Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to “tunnel through” the barrier following a purely quantum mechanical phenomenon (figure <a href="Weirdness.html#fig:Fig3c9">9.3</a>).<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a></p>
+<div class="figure" style="text-align: center"><span id="fig:Fig3c9"></span>
+<img src="img/OEP_wiki9.png" alt="Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased." width="70%" />
+<p class="caption">
+Figure 9.3: Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased.
+</p>
+</div>
+<p>To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier (<span class="math inline">\(V_0\)</span>) decays in the potential as a function of <span class="math inline">\(A_0\exp[-\alpha x]\)</span>, where <span class="math inline">\(A_0\)</span> is the amplitude at the boundary, <span class="math inline">\(\alpha\)</span> is proportional to the potential, and <span class="math inline">\(x\)</span> is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is “leaking” through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.</p>
+<p>Tunneling can be described using the TISEq, eq. <a href="Operators.html#eq:hamilt1">(6.23)</a>. For the tunneling problem we can take the potential <span class="math inline">\(V\)</span> to be zero for all space, except for the region inside the barrier (between <span class="math inline">\(0\)</span> and <span class="math inline">\(a\)</span>):</p>
+<p><span class="math display" id="eq:tunn1">\[\begin{equation}
+V=\begin{cases} 0\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ V_0\quad&amp;\text{if}\; 0&lt;x&lt;a \\ 0\quad&amp;\text{if}\; a\leq x&lt; \infty \end{cases}.
+\tag{9.5}  
+\end{equation}\]</span></p>
+<p>To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:</p>
+<p><span class="math display" id="eq:tunn2">\[\begin{equation}
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&amp;\text{if}\; 0&lt;x&lt;a \\ E\sin (kx)+F\cos (kx) \quad&amp;\text{if}\; a\leq x&lt; \infty \end{cases}
+\tag{9.6}  
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(k=\frac{\sqrt{2mE}}{\hbar}\)</span>, and <span class="math inline">\(\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}\)</span>. To enforce continuity, we must have at the first boundary:</p>
+<p><span class="math display" id="eq:tunn3">\[\begin{equation}
+A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
+\tag{9.7}  
+\end{equation}\]</span></p>
+<p>which implies that <span class="math inline">\(A=0\)</span>, and <span class="math inline">\(B=C+D\)</span>. At the opposite boundary:</p>
+<p><span class="math display" id="eq:tunn4">\[\begin{equation}
+A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
+\tag{9.8}  
+\end{equation}\]</span></p>
+<p>We notice that, as <span class="math inline">\(a\)</span> goes to infinity, the right hand side of eq. <a href="Weirdness.html#eq:tunn4">(9.8)</a> goes to infinity, which does not make physical sense. To reconcile this, we must set <span class="math inline">\(D=0\)</span>.</p>
+<p>For the final region, <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, present a potentially intractable problem. However, if one realizes that the value at the boundary <span class="math inline">\(a\)</span> is driving the wave in the region <span class="math inline">\(a\)</span> to infinity, it may also be realized that the wave function could be rewritten as <span class="math inline">\(C\exp[-\alpha a]\cos[k(x-a)]\)</span>, phase shifting the wave function by the value of <span class="math inline">\(a\)</span>,
+and setting the amplitude to the boundary value. Summarizing, the wave function is:</p>
+<p><span class="math display" id="eq:tunn5">\[\begin{equation}
+\psi=\begin{cases} B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ B \exp(-\alpha x)  \quad&amp;\text{if}\; 0&lt;x&lt;a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&amp;\text{if}\; a\leq x&lt; \infty. \end{cases}
+\tag{9.9}  
+\end{equation}\]</span></p>
+<p>Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as <span class="math inline">\(\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\)</span>, where <span class="math inline">\(a\)</span> is the width of the barrier, and <span class="math inline">\((V_0-E)\)</span> is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:</p>
+<p><span class="math display" id="eq:tunn6">\[\begin{equation}
+\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+\tag{9.10}  
+\end{equation}\]</span></p>
+<p>As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that <span class="math inline">\(k\)</span> is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter <a href="Models.html#Models">4</a>.</p>
 
 </div>
 </div>
@@ -273,6 +329,7 @@ Figure 9.2: Numerical simulation of the double-slit experiment with electrons.
 <li id="fn18"><p>The interested student can read more about different interpretations <a href="https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics">HERE</a>.<a href="Weirdness.html#fnref18" class="footnote-back">↩︎</a></p></li>
 <li id="fn19"><p>The time-dependent picture does not help us either, but since it is a little more complicated to work with the TDSEq, we are not showing it here.<a href="Weirdness.html#fnref19" class="footnote-back">↩︎</a></p></li>
 <li id="fn20"><p>Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.<a href="Weirdness.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Quantum_tunnelling#/media/File:TunnelEffektKling1.png">Wikipedia</a> by user Felix Kling, and distributed under CC BY-SA 3.0 license.<a href="Weirdness.html#fnref21" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

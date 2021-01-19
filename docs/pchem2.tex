@@ -113,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{16 January 2021}
+\date{18 January 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -713,7 +713,7 @@ N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
 The eigenvalues are:
 
 \begin{equation}
-E_n = \hbar \omega (n + \frac{1}{2}),
+E_n = \hbar \omega \left(n + \frac{1}{2} \right),
 \label{eq:HO5}
 \end{equation}
 
@@ -1574,6 +1574,66 @@ The uncertainty principle can be extended to any couple of conjugated variables,
 \hypertarget{tunneling}{%
 \section{Tunneling}\label{tunneling}}
 
+Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to ``tunnel through'' the barrier following a purely quantum mechanical phenomenon (figure \ref{fig:Fig3c9}).\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Quantum_tunnelling\#/media/File:TunnelEffektKling1.png}{Wikipedia} by user Felix Kling, and distributed under CC BY-SA 3.0 license.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_wiki9} 
+
+}
+
+\caption{Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased.}\label{fig:Fig3c9}
+\end{figure}
+
+To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier (\(V_0\)) decays in the potential as a function of \(A_0\exp[-\alpha x]\), where \(A_0\) is the amplitude at the boundary, \(\alpha\) is proportional to the potential, and \(x\) is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is ``leaking'' through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.
+
+Tunneling can be described using the TISEq, eq. \eqref{eq:hamilt1}. For the tunneling problem we can take the potential \(V\) to be zero for all space, except for the region inside the barrier (between \(0\) and \(a\)):
+
+\begin{equation}
+V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<a \\ 0\quad&\text{if}\; a\leq x< \infty \end{cases}.
+\label{eq:tunn1}  
+\end{equation}
+
+To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:
+
+\begin{equation}
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<a \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; a\leq x< \infty \end{cases}
+\label{eq:tunn2}  
+\end{equation}
+
+where \(k=\frac{\sqrt{2mE}}{\hbar}\), and \(\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}\). To enforce continuity, we must have at the first boundary:
+
+\begin{equation}
+A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
+\label{eq:tunn3}  
+\end{equation}
+
+which implies that \(A=0\), and \(B=C+D\). At the opposite boundary:
+
+\begin{equation}
+A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
+\label{eq:tunn4}  
+\end{equation}
+
+We notice that, as \(a\) goes to infinity, the right hand side of eq. \eqref{eq:tunn4} goes to infinity, which does not make physical sense. To reconcile this, we must set \(D=0\).
+
+For the final region, \(E\) and \(F\), present a potentially intractable problem. However, if one realizes that the value at the boundary \(a\) is driving the wave in the region \(a\) to infinity, it may also be realized that the wave function could be rewritten as \(C\exp[-\alpha a]\cos[k(x-a)]\), phase shifting the wave function by the value of \(a\),
+and setting the amplitude to the boundary value. Summarizing, the wave function is:
+
+\begin{equation}
+\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&\text{if}\; a\leq x< \infty. \end{cases}
+\label{eq:tunn5}  
+\end{equation}
+
+Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as \(\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\), where \(a\) is the width of the barrier, and \((V_0-E)\) is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
+
+\begin{equation}
+\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+\label{eq:tunn6}  
+\end{equation}
+
+As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that \(k\) is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter \ref{Models}.
+
 \hypertarget{Atoms}{%
 \chapter{Many-Electron Atoms}\label{Atoms}}
 
@@ -1895,7 +1955,7 @@ to simplify eq. \eqref{eq:var4} to:
 
 \begin{equation}
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
-\label{eq:molham11}
+\label{eq:molham11b}
 \end{equation}
 
 Differentiating this energy with respect to the expansion coefficients \(c_i\) yields a non-trivial solution only if the following ``secular determinant'' equals zero:
@@ -1920,12 +1980,21 @@ In this chapter we will see a couple of examples of how the concept and mathemat
 \hypertarget{the-chemical-bond-in-mathrmh_2}{%
 \section{\texorpdfstring{The chemical bond in \(\mathrm{H}_2^+\)}{The chemical bond in \textbackslash mathrm\{H\}\_2\^{}+}}\label{the-chemical-bond-in-mathrmh_2}}
 
-This system has only one electron, but since its geometry is not spherical (figure XXX), the TISEq cannot be solved analytically as for the hydrogen atom.
+This system has only one electron, but since its geometry is not spherical (figure \ref{fig:Fig1c12}), the TISEq cannot be solved analytically as for the hydrogen atom.
 
-The geometry pf the system The electron is at point \(P\), while the two protons are at position \(A\) and \(B\) at a fixed distance \(R\). Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure1} 
+
+}
+
+\caption{Geometry of the hydrogen molecular cation.}\label{fig:Fig1c12}
+\end{figure}
+
+The electron is at point \(P\), while the two protons are at position \(A\) and \(B\) at a fixed distance \(R\). Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:
 
 \begin{equation}
-\hat{H} = \hat{H}_e+\frac{1}{R} =\left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
+\hat{H} = \hat{H}_e+\frac{1}{R} = \left( -\frac{1}{2}\nabla^2-\frac{1}{\mathbf{r}_A}-\frac{1}{\mathbf{r}_B} \right)+\frac{1}{R}
 \label{eq:bond1}
 \end{equation}
 
@@ -1986,7 +2055,7 @@ c_1=c_2=\frac{1}{\sqrt{2+2S}},
 which gives the bonding MO:
 
 \begin{equation}
-\varphi{+}=\frac{a+b}{\sqrt{2+2S}}.
+\varphi_{+}=\frac{a+b}{\sqrt{2+2S}}.
 \label{eq:bond8}
 \end{equation}
 
@@ -2000,18 +2069,326 @@ c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
 which gives the antibonding MO:
 
 \begin{equation}
-\varphi{-}=\frac{b-a}{\sqrt{2-2S}}.
+\varphi_{-}=\frac{b-a}{\sqrt{2-2S}}.
 \label{eq:bond10}
 \end{equation}
 
-These results can be summarized in the molecular orbital diagram of figure xxx.
+These results can be summarized in the molecular orbital diagram of figure \ref{fig:Fig2c12} We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for \(S\neq0\), the antibonding level being more repulsive and the bonding less attractive than the symmetric case occurring for \(S = 0\).
 
-Calculating the values for the integrals and repeating these calculations for different internuclear distances, \(R\), results in the plot of figure XXX. As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure2} 
+
+}
+
+\caption{Molecular orbitals diagram for the hydrogen molecular cation.}\label{fig:Fig2c12}
+\end{figure}
+
+Calculating the values for the integrals and repeating these calculations for different internuclear distances, \(R\), results in the plot of figure \ref{fig:Fig3c12} As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure3} 
+
+}
+
+\caption{Born-Oppenheimer energy landscape for the hydrogen molecular cation.}\label{fig:Fig3c12}
+\end{figure}
 
 \hypertarget{the-chemical-bond-in-mathrmh_2-1}{%
 \section{\texorpdfstring{The chemical bond in \(\mathrm{H}_2\)}{The chemical bond in \textbackslash mathrm\{H\}\_2}}\label{the-chemical-bond-in-mathrmh_2-1}}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure4} 
+
+}
+
+\caption{Geometry of the hydrogen molecule.}\label{fig:Fig4c12}
+\end{figure}
+
+We can now examine the formation of the two-electron chemical bond in the \(\text{H}_2\) molecule. With reference to figure \ref{fig:Fig4c12}, the molecular Hamiltonian for \(\text{H}_2\) in a.u. in the Born-Oppenheimer approximation will be:
+
+\begin{equation}
+\begin{aligned}
+\hat{H} &= \hat{H}_e+\frac{1}{R} \\
+&=\left( -\frac{1}{2}\nabla^2_1-\frac{1}{\mathbf{r}_{A1}}-\frac{1}{\mathbf{r}_{B1}} \right)+\left( -\frac{1}{2}\nabla^2_2-\frac{1}{\mathbf{r}_{A2}}-\frac{1}{\mathbf{r}_{B2}} \right)+\frac{1}{r_{12}}+\frac{1}{R}\\
+&= \hat{h}_1+\hat{h}_2+\frac{1}{r_{12}}+\frac{1}{R},
+\end{aligned}
+\label{eq:bond11}
+\end{equation}
+
+where \(\hat{h}\) is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function by considering two \(1s\) atomic orbitals \(a(\mathbf{r}_1)\) and \(b(\mathbf{r}_2)\) centered at \(A\) and \(B\), respectively, having an overlap \(S\). If we Neglect the electron-electron repulsion term, \(\frac{1}{r_{12}}\), the resulting Hartree-Fock equations are exactly the same as in the previous case. The most important difference, though, is that in this case we need to consider the spin of the two electrons. Proceeding similarly to what we have done for the many-electron atom in chapter \ref{Atoms}, we can build an antisymmetric wave function for \(\text{H}_2\) using a Slater determinant of doubly occupied MOs. For the ground state, we can use the lowest energy orbital obtained from the solution of the Hartree-Fock equations, which we already obtained in eq. \eqref{eq:bond8}. Using a notation that is based on the symmetry of the molecule, this bonding orbital in \(\text{H}_2\) is usually called \(\sigma_g\), where \(\sigma\) refers to the \(\sigma\) bond that forms between the two atoms. The Slater determinant for the ground state is therefore:\footnote{Compare this equation to \eqref{eq:atom6} for the helium atom.}
+
+\begin{equation}
+\Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\phi_{\uparrow},\sigma_{g}\phi_{\downarrow}\rangle,=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right],
+\label{eq:bond12}
+\end{equation}
+
+where:
+
+\begin{equation}
+\sigma_{g}=\varphi_{+}=\frac{\left(\psi_{100}\right)_A+\left(\psi_{100}\right)_B}{\sqrt{2+2S}}.
+\label{eq:bond13}
+\end{equation}
+
+The energies and the resulting MO diagram is similar to that for \(\mathrm{H}_2^+\), with the only difference that two electron will be described by the same \(\sigma_g\) MO (figure \ref{fig:Fig5c12}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure5} 
+
+}
+
+\caption{Molecular orbitals diagram for the hydrogen molecule.}\label{fig:Fig5c12}
+\end{figure}
+
+As for the many-electron atoms, the Hartree-Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the bond distance of \(R_e=1.4\;a_0\) is \(E= -0.17447\;E_h\). The variational result obtained with the wave function in eq. \eqref{eq:bond12} is \(E= -0.12778\;E_h\), which is \(\sim 73 \%\) of the exact value. The variational coefficient (i.e., the orbital exponent, \(c_0\), that enters the \(1s\) orbital formula \(\psi_{100}=\frac{1}{\pi}\exp[c_0r]\)) is optimized at \(c_0=1.1695\), a value that shows how the orbitals significantly contract due to spherical polarization.
+
+If we scan the Born-Oppenheimer energy landscape using the wave function in eq. \eqref{eq:bond12} as we have done for \(\mathrm{H}_2^+\), we obtain the plot in figure \ref{fig:Fig6c12}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_figure6} 
+
+}
+
+\caption{Born-Oppenheimer energy landscape for the hydrogen molecule.}\label{fig:Fig6c12}
+\end{figure}
+
+As we can see, the Hartree-Fock results for \(\mathrm{H}_2\) describes the formation of the bond qualitatively around the bond distance (minimum of the curve), but they fail to describe the molecule at dissociation. This happens because in eq. \eqref{eq:bond12} both electrons are in the same orbital with opposite spin (electrons are coupled), and the orbital is shared among both centers. At dissociation, this corresponds to an erroneous ionic dissociation state where both electron are localized on either one of the two centers (this center is therefore negatively charged), with the other proton left without electrons. This is in contrast with the correct dissociation, where each electron should be localized around each center (and therefore, it should be uncoupled from the other electron). This error is once again the result of the approximations that are necessary to treat the TISEq of a many-electron system. It is obviously not a failure of quantum mechanics, and it can be easily corrected using more accurate approximations on modern computers.
+
 \hypertarget{Spectroscopy}{%
 \chapter{Spectroscopy}\label{Spectroscopy}}
+
+The primary method of measuring the energy levels of a material is through the use of electromagnetic radiation. Experiments involving electromagnetic radiation---matter interaction are called spectroscopies. Since the energy levels of atoms and molecules are discontinuous, they absorb or emit light only at specific energies. These specific values correspond to the energy level difference between the initial and final states and they can be measured as signals in spectroscopic experiments. The intensity of the experimental signals depends on the population of the initial state involved in the transition.
+
+Depending on the type of radiation, as well as the shape of the molecules and the inner details of the instrument that is used, some transition might be visible by the experiment (allowed), while others might not be (forbidden). The analysis of allowed and forbidden transition for each type of spectroscopy results into some mathematical formula that are called \textbf{selection rules}.
+
+To summarize, spectroscopy is mainly the result of the following three effects:
+
+\begin{itemize}
+\tightlist
+\item
+  The energy levels of the atoms or molecules (determining the position of the signals).
+\item
+  The population of the energy levels (determining the intensity of the signals).
+\item
+  The selection rules that account for the symmetry and the interaction with the instrument.
+\end{itemize}
+
+Spectroscopy is the most important experimental verification of quantum mechanics, since we can use it to validate its theoretical results on the energy levels of atoms and molecules.
+
+\hypertarget{rotational-spectroscopy}{%
+\section{Rotational Spectroscopy}\label{rotational-spectroscopy}}
+
+Rotational spectroscopy is concerned with the measurement of the energies of transitions between quantized rotational states of molecules in the gas phase. Rotational transitions of molecules are usually measured in the range \(1-10\; \text{cm}^{-1}\) (microwave radiation) and rotational spectroscopy is therefore usually referred to as \emph{microwave spectroscopy}.
+
+Rotational spectroscopy is actively used by astrophysicists to explore the chemical composition of the interstellar medium using radio telescopes.
+
+The rotational energies are derived theoretically by considering the molecules to be rigid rotors and applying the same treatment that we saw in chapter \ref{Models}. Correction terms might be applied to account for deviation from the ideal rigid rotor case. As we saw in chapter \ref{Models}, the quantized rotational energy levels of a rigid rotor depend on the angular moment of inertia, which in turn depends on the masses of the nuclei and the internuclear distance. Reversing the theoretical procedure of obtaining the energy levels from the distances, we can use the experimental energy levels to derive very precise values of molecular bond lengths (and in some complex case, also of angles). We will discuss below the simplest case of a diatomic molecule. For non-linear molecules, the moments of inertia are multiple, and only a few analytical method of solving the TISEq are available. For the most complicated cases, numerical methods can be used.
+
+\hypertarget{rotation-of-diatomic-molecules}{%
+\subsection{Rotation of diatomic molecules}\label{rotation-of-diatomic-molecules}}
+
+Transitions between rotational states can be observed in molecules with a permanent electric dipole moment. The rigid rotor is a good starting point from which to construct a model of a rotating molecule. It is assumed that component atoms are point masses connected by rigid bonds. A linear molecule lies on a single axis and each atom moves on the surface of a sphere around the center of mass. The two degrees of rotational freedom correspond to the spherical coordinates, \(\theta\) and \(\varphi\), which describe the direction of the molecular axis. The quantum state is determined by two quantum numbers \(J\) and \(M\). \(J\) defines the magnitude of the rotational angular momentum, and \(M\) its component about an axis fixed in space, such as an external electric or magnetic field. In the absence of external fields, the energy depends only on \(J\). Under the rigid rotor model, the rotational energy levels, \(F(J)\), of the molecule can be expressed as:
+
+\begin{equation}
+F\left(J\right)=BJ\left(J+1\right)\qquad J=0,1,2,\ldots
+\label{eq:rot1}
+\end{equation}
+
+where \(B\) is the rotational constant of the molecule and is related to its moment of inertia. In a diatomic molecule the moment of inertia about an axis perpendicular to the molecular axis is unique, so:
+
+\begin{equation}
+B={\frac{h}{8\pi ^{2}cI_{B}}}={\frac{h}{8\pi ^{2}cI_{C}}},
+\label{eq:rot2}
+\end{equation}
+
+with:
+
+\begin{equation}
+ I=\frac{m_1m_2}{m_1 +m_2}d^2 
+ \label{eq:rot3}
+\end{equation}
+
+where \(m_1\) and \(m_2\) are the masses of the atoms and \(d\) is the distance between them.
+
+The selection rule for rotational spectroscopy dictate that during emission or absorption the rotational quantum number has to change by unity:
+
+\begin{equation}
+ \Delta J = J^{{\prime }} - J^{{\prime \prime }} = \pm 1,
+ \label{eq:rot4}
+\end{equation}
+
+where \(J^{{\prime }}\) denotes the lower level and \(J^{{\prime \prime }}\) denotes the upper level involved in the transition. Thus, the locations of the lines in a rotational spectrum will be given by
+
+\begin{equation}
+{\tilde  \nu }_{{J^{{\prime }}\leftrightarrow J^{{\prime \prime }}}}=F\left(J^{{\prime }}\right)-F\left(J^{{\prime \prime }}\right)=2B\left(J^{{\prime \prime }}+1\right)\qquad J^{{\prime \prime }}=0,1,2,\ldots
+\label{eq:rot5}
+\end{equation}
+
+The diagram illustrates rotational transitions that obey the \(\Delta J=1\) selection rule is in figure .\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Rotational_spectroscopy\#/media/File:Rotational_spectrum_example.png}{Wikipedia} by user Nnrw, and distributed under CC BY\_SA 3.0 license.} The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent \(J^{{\prime \prime}}{\leftarrow}J^{{\prime }}\) transitions are separated by \(2B\) in the observed spectrum. Frequency or wavenumber units can also be used for the \(x\) axis of this plot.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_wiki5} 
+
+}
+
+\caption{Rotational energy levels and line positions calculated in the rigid rotor approximation.}\label{fig:Fig1c13}
+\end{figure}
+
+The probability of a transition taking place is the most important factor influencing the intensity of an observed rotational line. This probability is proportional to the population of the initial state involved in the transition. The population of a rotational state depends on two factors. The number of molecules in an excited state with quantum number \(J\), relative to the number of molecules in the ground state, \(N_J/N_0\) is given by the Boltzmann distribution:
+
+\begin{equation}
+\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =e^{-\frac {BhcJ(J+1)}{kT}},
+\label{eq:rot6}
+\end{equation}
+
+where \(k\) is the Boltzmann constant and \(T\) is the absolute temperature. This factor decreases as \(J\) increases. The second factor is the degeneracy of the rotational state, which is equal to \(2J+1\). This factor increases as \(J\) increases. Combining the two factors we obtain:
+
+\begin{equation}
+\mathrm{population} \propto (2J+1)e^{-\frac{E_J}{kT}},
+\label{eq:rot7}
+\end{equation}
+
+in agreement with the experimental shape of rotational spectra of diatomic molecules.
+
+\hypertarget{vibrational-spectroscopy}{%
+\section{Vibrational Spectroscopy}\label{vibrational-spectroscopy}}
+
+Vibrational spectroscopy is concerned with the measurement of the energies of transitions between quantized vibrational states of molecules in the gas phase. These transitions usually occur in the middle infrared (IR) region of the electromagnetic wave at approximately \(4,000-400\;\text{cm}^{-1}\) (\(2.5-25\;\mu \text{m}\)). In the gas phase, vibrational transitions are almost always accompanied by changes in rotational energy. Transitions involving changes in both vibrational and rotational states are usually abbreviated as rovibrational transitions. Since changes in rotational energy levels are typically much smaller than changes in vibrational energy levels, changes in rotational state are said to give fine structure to the vibrational spectrum. For a given vibrational transition, the same theoretical treatment that we saw in the previous section for pure rotational spectroscopy gives the rotational quantum numbers, energy levels, and selection rules.
+
+As we have done in the previous section, we will discuss below the simplest case of a diatomic molecule. For non-linear molecules the spectra becomes complicated to calculate, but their interpretation remains an important tool for the analysis of chemical structures.
+
+\hypertarget{vibration-of-heteronuclear-diatomic-molecules}{%
+\subsection{Vibration of heteronuclear diatomic molecules}\label{vibration-of-heteronuclear-diatomic-molecules}}
+
+Diatomic molecules with the general formula \(\mathrm{AB}\) have one normal mode of vibration involving stretching of the \(\mathrm{A}-\mathrm{B}\) bond. The vibrational term values, \(G(v)\) can be calculated with the harmonic approximation that we discussed in chapter \ref{Models}. The resulting equidistant energy levels depend on one vibrational quantum number \(v\):
+
+\begin{equation}
+G(v) = \omega_e \left( v + \frac{1}{2} \right),
+\label{eq:vib1}
+\end{equation}
+
+where \(\omega_e\) is the harmonic frequency around equilibrium. When the molecule is in the gas phase, it can rotate about an axis, perpendicular to the molecular axis, passing through the center of mass of the molecule. As we discussed in the previous section, the rotational energy is also quantized, and depend on the rotational quantum number \(J\). The values of the ro-vibrational states are found (in wavenumbers) by combining the expressions for vibration and rotation:
+
+\begin{equation}
+G(v)+F_{v}(J)=\left[\omega_e \left(v + \frac{1}{2} \right) +B_{v}J(J+1)\right],
+\label{eq:vib2}
+\end{equation}
+
+where \(F_{v}(J)\) are the rotational levels at each vibrational state \(v\).\footnote{This is just a first approximation to rovibrational spectroscopy. Corrections for anharmonicity centrifugal distortion are necessary to closely match experimental spectra.}
+
+The selection rule for electric dipole allowed ro-vibrational transitions, in the case of a diamagnetic diatomic molecule is:
+
+\begin{equation} 
+\Delta v=\pm 1\ (\pm 2,\pm 3,\ldots),\; \Delta J=\pm 1.
+\label{eq:vib3}
+\end{equation}
+
+The transition with \(\Delta v =\pm 1\) is known as the \emph{fundamental transition}, while the others are called \emph{overtones}. The selection rule has two consequences:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Both the vibrational and rotational quantum numbers must change. The transition \(\Delta v=\pm 1,\;\Delta J=0\) (Q-branch) is forbidden.
+\item
+  The energy change of rotation can be either subtracted from or added to the energy change of vibration, giving the P- and R- branches of the spectrum, respectively.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_wiki6} 
+
+}
+
+\caption{Simulated vibration-rotation line spectrum of carbon monoxide. The P-branch is to the left of the gap at 2140 1/cm, the R-branch on the right.}\label{fig:Fig2c13}
+\end{figure}
+
+A typical rovibrational spectrum is reported in figure \ref{fig:Fig2c13} for the \(\mathrm{CO}\) molecule.\footnote{This picture is taken from \href{https://en.wikipedia.org/wiki/Rotational–vibrational_spectroscopy\#/media/File:Vib_rot_CO.png}{Wikipedia} of anonimous user, and distributed under CC BY 3.0 license.} The intensity of the signals is---once again---proportional to the initial population of the levels. Notice how the signals in the spectrum are divided among two sides, the P-branch to the left, and the R-branch to the right. These signals correspond to the transitions reported in figure \ref{fig:Fig3c13}.\footnote{This picture is taken from \href{https://en.wikipedia.org/wiki/Rotational–vibrational_spectroscopy\#/media/File:Vibrationrotationenergy.svg}{Wikipedia} by user David-i98, and under public domain.} Notice how the transitions corresponding to the Q-branch are forbidden by the selection rules, and therefore not observed in the experimental spectrum. The position of the missing Q-branch, however, can be easily obtained from the experimental spectrum as the missing signal between the P- and R- branches. Since the Q-branch transitions do not involve changes in the rotational energy level, their value is directly proportional to \(\omega_e\). This fact makes rovibrational spectroscopy an important experimental tool in the determination of bond distances of diatomic molecules.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_wiki7} 
+
+}
+
+\caption{Schematic rovibrational energy level diagram for a linear molecule.}\label{fig:Fig3c13}
+\end{figure}
+
+\hypertarget{vibration-of-homonuclear-diatomic-molecules}{%
+\subsection{Vibration of homonuclear diatomic molecules}\label{vibration-of-homonuclear-diatomic-molecules}}
+
+The quantum mechanics for homonuclear diatomic molecules is qualitatively the same as for heteronuclear diatomic molecules, but the selection rules governing transitions are different. Since the electric dipole moment of the homonuclear diatomics is zero, the fundamental vibrational transition is electric-dipole-forbidden and the molecules are infrared inactive.
+
+The spectra of these molecules can be observed by a type of IR spectroscopy that is subject to different selection rules. This technique is called \textbf{Raman spectroscopy}, and allows identification of the rovibrational spectra of homonuclear diatomic molecules because their molecular vibration is Raman-allowed.
+
+\hypertarget{electronic-spectroscopy}{%
+\section{Electronic Spectroscopy}\label{electronic-spectroscopy}}
+
+Electronic spectroscopy is concerned with the measurement of the energies of transitions between quantized electronic states of molecules. Electronic transitions are always associated with simultaneous changes in vibrational levels. In the gas phase vibronic transitions are also accompanied by changes in rotational energy.
+
+Electronic transitions are typically observed in the visible and ultraviolet regions, in the wavelength range approximately \(200-700\; \text{nm }\) (\(50,000-14,000\; \text{cm}^{-1}\)). When the electronic and vibrational energy changes are drastically different, vibronic coupling (mixing of electronic and vibrational wave functions) can be neglected and the energy of a vibronic level can be taken as the sum of the electronic and vibrational (and rotational) energies; that is, the Born--Oppenheimer approximation applies. The overall molecular energy depends not only on the electronic state but also on the vibrational and rotational quantum numbers, \(v\) and \(J\). In this context, it is conventional to add a double prime \(\left(v^{\prime\prime},J^{\prime\prime}\right)\) for levels of the electronic ground state and a single prime \(\left(v^{\prime},J^{\prime}\right)\) for electronically excited states.
+
+Each electronic transition may show vibrational coarse structure, and for molecules in the gas phase, rotational fine structure. This is true even when the molecule has a zero dipole moment and therefore has no vibration-rotation infrared spectrum or pure rotational microwave spectrum.
+
+It is necessary to distinguish between absorption and emission spectra. With absorption the molecule starts in the ground electronic state, and usually also in the vibrational ground state \(v^{\prime\prime}=0\) because at ordinary temperatures the energy necessary for vibrational excitation is large compared to the average thermal energy. The molecule is excited to another electronic state and to many possible vibrational states \(v^{\prime}=0,1,2,3,ldots\). With emission, the molecule can start in various populated vibrational states, and finishes in the electronic ground state in one of many populated vibrational levels. The emission spectrum is more complicated than the absorption spectrum of the same molecule because there are more changes in vibrational energy level.
+
+As we did for the previous two cases, we will concentrate below on the electronic absorption spectroscopy of diatomic molecules.
+
+\hypertarget{electronic-spectroscopy-of-diatomic-molecules}{%
+\subsection{Electronic spectroscopy of diatomic molecules}\label{electronic-spectroscopy-of-diatomic-molecules}}
+
+The vibronic spectra of diatomic molecules in the gas phase also show rotational fine structure. Each line in a vibrational progression will show P- and R- branches. For some electronic transitions there will also be a Q-branch. The transition energies of the lines for a particular vibronic transition are given (in wavenumbers) by:
+
+\begin{equation}
+G(J^{\prime },J^{{\prime \prime }})={\bar  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+B^{\prime }J^{\prime }(J^{\prime }+1)-B^{{\prime \prime }}J^{{\prime \prime }}(J^{{\prime \prime }}+1).
+\label{eq:elec1}
+\end{equation}
+
+The values of the rotational constants, \(B^{\prime}\) and \(B^{\prime\prime}\) may differ appreciably because the bond length in the electronic excited state may be quite different from the bond length in the ground state. The rotational constant is inversely proportional to the square of the bond length. Usually \(B^{\prime}<B^{\prime\prime}\), as is true when an electron is promoted from a bonding orbital to an antibonding orbital, causing bond lengthening.
+
+The treatment of rotational fine structure of vibronic transitions is similar to the treatment of rotation-vibration transitions and differs principally in the fact that the ground and excited states correspond to two different electronic states as well as to two different vibrational levels. For the P-branch \(J^{\prime }=J^{{\prime \prime}}-1\), so that:
+
+\begin{equation}
+\begin{aligned}
+{\bar  \nu }_{P}&={\bar  \nu}_{{v^{\prime}-v^{\prime\prime}}}+B^{\prime}(J^{\prime\prime}-1)J^{\prime\prime}-B^{\prime\prime}J^{\prime\prime}(J^{\prime\prime}+1) \\
+&={\bar  \nu }_{{v^{\prime}-v^{\prime\prime}}}-(B^{\prime}+B^{\prime\prime})J^{\prime\prime}+(B^{\prime}-B^{\prime\prime}){J^{\prime\prime}}^{2}.
+\end{aligned}
+\label{eq:elec2}
+\end{equation}
+
+Similarly, for the R-branch \(J^{\prime\prime }=J^{{\prime }}-1\), and:
+
+\begin{equation}
+\begin{aligned}
+{\bar  \nu }_{R} &={\bar  \nu}_{{v^{\prime}-v^{\prime\prime}}}+B^{\prime}J^{\prime}(J^{\prime}+1)-B^{\prime\prime}J^{\prime}(J^{\prime}-1) \\
+&={\bar  \nu }_{{v^{\prime}-v^{\prime\prime}}}+(B^{\prime}+B^{\prime\prime})J^{\prime}+(B^{\prime}-B^{\prime\prime}){J^{\prime}}^{2}.
+\end{aligned}
+\label{eq:elec3}
+\end{equation}
+
+Thus, the wavenumbers of transitions in both P- and R- branches are given, to a first approximation, by the single formula:
+
+\begin{equation}
+{\bar  \nu }_{{P,R}}={\bar  \nu }_{{v^{\prime },v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots.
+\label{eq:elec4}
+\end{equation}
+
+Here positive \(m\) values refer to the R-branch (with \(m=+J^{\prime}=J^{\prime\prime}+1\)) and negative values refer to the P-branch (with \(m=-J^{\prime\prime}\)).
+
+The intensity of allowed vibronic transitions is governed by the Franck-Condon principle, which states that during an electronic transition, a change from one vibrational energy level to another will be more likely to happen if the two vibrational wave functions overlap more significantly. A diagrammatic representation of electronic spectroscopy and the Frack-Condon principle for a diatomic molecule is presented in figure \ref{fig:Fig4c13}.\footnote{This picture is taken from \href{https://en.wikipedia.org/wiki/Franck–Condon_principle\#/media/File:Franck_Condon_Diagram.svg}{Wikipedia} by user Samoza, and distributed under CC BY-SA 3.0 license.}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\linewidth]{./img/OEP_wiki8} 
+
+}
+
+\caption{Energy level diagram illustrating the Franck–Condon principle.}\label{fig:Fig4c13}
+\end{figure}
 
 \end{document}
