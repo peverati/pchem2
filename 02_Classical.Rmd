@@ -112,12 +112,12 @@ K &={\frac {p^{2}}{2m}},\quad V=V(q),
 \end{equation}
 
 where $q$ is the space coordinate and $p=m\dot{q}$ is the momentum. Then
-$k$ is a function of $p$ alone, while $V$ is a function of $q$ alone.
+$K$ is a function of $p$ alone, while $V$ is a function of $q$ alone.
 
 In this example, the time derivative of the momentum $p$ equals the Newtonian force, and so the first Hamilton equation means that the force equals the negative gradient of potential energy:
 
 \begin{equation}
-\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial V(q)}{\partial q},
+\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial H}{\partial q}= -\frac{\partial V(q)}{\partial q},
 (\#eq:ham5)
 \end{equation}
 

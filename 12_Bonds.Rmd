@@ -2,7 +2,7 @@
 
 In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the $\mathrm{H}_2^+$ molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and  use a set tailored for molecules, called *atomic units (a.u.)*. This set of units is built by setting $\hbar=e=m_e=a_0=1$. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \@ref(eq:HA7), simply becomes $E_n=-\frac{1}{2n^2}$ in the a.u. of energy, which are called Hartrees.
 
-## The chemical bond in $\mathrm{H}_2^+$
+## The Chemical Bnd in the Hydrogen Molecular Cation
 
 This system has only one electron, but since its geometry is not spherical (figure \@ref(fig:Fig1c12)), the TISEq cannot be solved analytically as for the hydrogen atom. 
 
@@ -104,7 +104,7 @@ Calculating the values for the integrals and repeating these calculations for di
 knitr::include_graphics('./img/OEP_figure3.jpeg')
 ```
 
-## The chemical bond in $\mathrm{H}_2$
+## The Chemical Bond in the Hydrogen Molecule
 
 ```{r Fig4c12, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Geometry of the hydrogen molecule.'}
 knitr::include_graphics('./img/OEP_figure4.jpeg')

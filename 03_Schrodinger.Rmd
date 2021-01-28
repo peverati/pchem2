@@ -23,7 +23,7 @@ where $x$ is the position, $t$ is time, $k=\frac{2\pi}{\lambda}$ is the wave vec
 
 where we have used the fact that $i^2=-1$. 
 
-Assuming that particles behaves as wave—as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}/{\hbar}$ to obtain:
+Assuming that particles behaves as wave—as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}{\hbar}$ to obtain:
 
 \begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},

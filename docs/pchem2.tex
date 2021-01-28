@@ -113,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{18 January 2021}
+\date{27 January 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -399,12 +399,12 @@ K &={\frac {p^{2}}{2m}},\quad V=V(q),
 \end{equation}
 
 where \(q\) is the space coordinate and \(p=m\dot{q}\) is the momentum. Then
-\(k\) is a function of \(p\) alone, while \(V\) is a function of \(q\) alone.
+\(K\) is a function of \(p\) alone, while \(V\) is a function of \(q\) alone.
 
 In this example, the time derivative of the momentum \(p\) equals the Newtonian force, and so the first Hamilton equation means that the force equals the negative gradient of potential energy:
 
 \begin{equation}
-\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial V(q)}{\partial q},
+\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial H}{\partial q}= -\frac{\partial V(q)}{\partial q},
 \label{eq:ham5}
 \end{equation}
 
@@ -447,7 +447,7 @@ where \(x\) is the position, \(t\) is time, \(k=\frac{2\pi}{\lambda}\) is the wa
 
 where we have used the fact that \(i^2=-1\).
 
-Assuming that particles behaves as wave---as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}/{\hbar}\) to obtain:
+Assuming that particles behaves as wave---as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \eqref{eq:wp1b}, we can replace \(k=\frac{p}{\hbar}\) to obtain:
 
 \begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
@@ -661,7 +661,7 @@ which is trivially solved by \(A=0\), or by the more interesting condition of \(
 \label{eq:PIB6}
 \end{equation}
 
-which represents an infinite set of functions, \(\psi_n(x)\), determined by a positive integer number \(n\), called \emph{qunatum number}. Since these functions solve the TISEq, they are also called \emph{eigenfunctions}, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \eqref{eq:PIB6} into eq. \eqref{eq:PIB1}, to obtain:
+which represents an infinite set of functions, \(\psi_n(x)\), determined by a positive integer number \(n\), called \emph{quantum number}. Since these functions solve the TISEq, they are also called \emph{eigenfunctions}, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \eqref{eq:PIB6} into eq. \eqref{eq:PIB1}, to obtain:
 
 \begin{equation}
 E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
@@ -757,7 +757,7 @@ K = - \frac{\hbar^2}{2 \mu} \nabla^2,
 \label{eq:HA2}
 \end{equation}
 
-where \(\nabla^2\) is the Laplace operator (\emph{Laplacian}) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the first derivative along all three dimension of space is called gradient, which is written in cartesian coordinates \(\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)\). The Laplacian is the divergence \(\nabla \cdot\) of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as \(\nabla^2=\nabla\cdot\nabla=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2},\frac{\partial^2}{\partial z^2}\). The TISEq for the Hydrogen atom is therefore:
+where \(\nabla^2\) is the Laplace operator (\emph{Laplacian}) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the first derivative along all three dimension of space is called gradient, which is written in cartesian coordinates \(\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)\). The Laplacian is the divergence \(\nabla \cdot\) of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as \(\nabla^2=\nabla\cdot\nabla=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\). The TISEq for the Hydrogen atom is therefore:
 
 \begin{equation}
 {\displaystyle \left(-{\frac {\hbar ^{2}}{2\mu }}\nabla ^{2}-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\right)\psi (r,\theta ,\phi )=E\psi (r,\theta ,\phi )},
@@ -1413,7 +1413,7 @@ The wave function must satisfy certain mathematical conditions because of this p
 \label{eq:post1}  
 \end{equation}
 
-It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter \ref{Models}, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which tipically involve derivation) to be applied without mathematical issues.
+It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter \ref{Models}, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which typically involve derivation) to be applied without mathematical issues.
 
 \hypertarget{postulate-2-experimental-observables}{%
 \section{Postulate 2: Experimental Observables}\label{postulate-2-experimental-observables}}
@@ -1977,8 +1977,8 @@ where \(m\) is the number of basis functions used to expand the atomic orbitals.
 
 In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the \(\mathrm{H}_2^+\) molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and use a set tailored for molecules, called \emph{atomic units (a.u.)}. This set of units is built by setting \(\hbar=e=m_e=a_0=1\). As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \eqref{eq:HA7}, simply becomes \(E_n=-\frac{1}{2n^2}\) in the a.u. of energy, which are called Hartrees.
 
-\hypertarget{the-chemical-bond-in-mathrmh_2}{%
-\section{\texorpdfstring{The chemical bond in \(\mathrm{H}_2^+\)}{The chemical bond in \textbackslash mathrm\{H\}\_2\^{}+}}\label{the-chemical-bond-in-mathrmh_2}}
+\hypertarget{the-chemical-bnd-in-the-hydrogen-molecular-cation}{%
+\section{The Chemical Bnd in the Hydrogen Molecular Cation}\label{the-chemical-bnd-in-the-hydrogen-molecular-cation}}
 
 This system has only one electron, but since its geometry is not spherical (figure \ref{fig:Fig1c12}), the TISEq cannot be solved analytically as for the hydrogen atom.
 
@@ -2095,8 +2095,8 @@ Calculating the values for the integrals and repeating these calculations for di
 \caption{Born-Oppenheimer energy landscape for the hydrogen molecular cation.}\label{fig:Fig3c12}
 \end{figure}
 
-\hypertarget{the-chemical-bond-in-mathrmh_2-1}{%
-\section{\texorpdfstring{The chemical bond in \(\mathrm{H}_2\)}{The chemical bond in \textbackslash mathrm\{H\}\_2}}\label{the-chemical-bond-in-mathrmh_2-1}}
+\hypertarget{the-chemical-bond-in-the-hydrogen-molecule}{%
+\section{The Chemical Bond in the Hydrogen Molecule}\label{the-chemical-bond-in-the-hydrogen-molecule}}
 
 \begin{figure}
 

@@ -96,7 +96,7 @@ which is trivially solved by $A=0$, or by the more interesting condition of $ka=
 (\#eq:PIB6)
 \end{equation}
 
-which represents an infinite set of functions, $\psi_n(x)$, determined by a positive integer number $n$, called *qunatum number*. Since these functions solve the TISEq, they are also called *eigenfunctions*, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \@ref(eq:PIB6) into eq. \@ref(eq:PIB1), to obtain:
+which represents an infinite set of functions, $\psi_n(x)$, determined by a positive integer number $n$, called *quantum number*. Since these functions solve the TISEq, they are also called *eigenfunctions*, but they are not a continuous set, unlike in the previous case. To calculate the energy eigenvalues, we can replace \@ref(eq:PIB6) into eq. \@ref(eq:PIB1), to obtain:
 
 \begin{equation}
 E_n = \frac{h^2 n^2}{8 m a^2} \quad n=1,2,\ldots,\infty.
