@@ -19,7 +19,7 @@ When we have more than one electron, the sixth postulate that we discussed in ch
 (\#eq:atom2)  
 \end{equation}
 
-A very important step in simplifying  $\Psi({\bf x})$ is to expand it in terms of a set of one-electron functions. Since we need to take into account the spin coordinate as well, we can defina a new function, called **spin-orbital**, by multiplying a spatial orbital by one of the two spin functions:
+A very important step in simplifying  $\Psi({\bf x})$ is to expand it in terms of a set of one-electron functions. Since we need to take into account the spin coordinate as well, we can define a new function, called **spin-orbital**, by multiplying a spatial orbital by one of the two spin functions:
 
 \begin{equation}
 \begin{aligned}

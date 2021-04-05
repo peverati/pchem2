@@ -32,14 +32,14 @@ F\left(J\right)=BJ\left(J+1\right)\qquad J=0,1,2,\ldots
 where $B$ is the rotational constant of the molecule and is related to its moment of inertia. In a diatomic molecule the moment of inertia about an axis perpendicular to the molecular axis is unique, so:
 
 \begin{equation}
-B={\frac{h}{8\pi ^{2}cI_{B}}}={\frac{h}{8\pi ^{2}cI_{C}}},
+B={\frac{h}{8\pi ^{2}cI}},
 (\#eq:rot2)
 \end{equation}
 
 with:
 
 \begin{equation}
- I=\frac{m_1m_2}{m_1 +m_2}d^2 
+ I=\frac{m_1m_2}{m_1 +m_2}d^2,
  (\#eq:rot3)
 \end{equation}
 
@@ -59,7 +59,7 @@ where $J^{{\prime }}$ denotes the lower level and $J^{{\prime \prime }}$ denotes
 (\#eq:rot5)
 \end{equation}
 
-The diagram illustrates rotational transitions that obey the $\Delta J=1$ selection rule is in figure .^[This diagram is taken from [Wikipedia](https://en.wikipedia.org/wiki/Rotational_spectroscopy#/media/File:Rotational_spectrum_example.png) by user Nnrw, and distributed under CC BY_SA 3.0 license.] The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent $J^{{\prime \prime}}{\leftarrow}J^{{\prime }}$ transitions are separated by $2B$ in the observed spectrum. Frequency or wavenumber units can also be used for the $x$ axis of this plot.
+The diagram illustrates rotational transitions that obey the $\Delta J=1$ selection rule is in figure \@ref(fig:Fig1c13).^[This diagram is taken from [Wikipedia](https://en.wikipedia.org/wiki/Rotational_spectroscopy#/media/File:Rotational_spectrum_example.png) by user Nnrw, and distributed under CC BY_SA 3.0 license.] The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent $J^{{\prime \prime}}{\leftarrow}J^{{\prime }}$ transitions are separated by $2B$ in the observed spectrum. Frequency or wavenumber units can also be used for the $x$ axis of this plot.
 
 ```{r Fig1c13, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Rotational energy levels and line positions calculated in the rigid rotor approximation.'}
 knitr::include_graphics('./img/OEP_wiki5.png')
@@ -68,14 +68,14 @@ knitr::include_graphics('./img/OEP_wiki5.png')
 The probability of a transition taking place is the most important factor influencing the intensity of an observed rotational line. This probability is proportional to the population of the initial state involved in the transition. The population of a rotational state depends on two factors. The number of molecules in an excited state with quantum number $J$, relative to the number of molecules in the ground state, $N_J/N_0$ is given by the Boltzmann distribution:
 
 \begin{equation}
-\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =e^{-\frac {BhcJ(J+1)}{kT}},
+\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =\exp\left[-\frac {BhcJ(J+1)}{kT}\right],
 (\#eq:rot6)
 \end{equation}
 
 where $k$ is the Boltzmann constant and $T$ is the absolute temperature. This factor decreases as $J$ increases. The second factor is the degeneracy of the rotational state, which is equal to $2J+1$. This factor increases as $J$ increases. Combining the two factors we obtain:
 
 \begin{equation}
-\mathrm{population} \propto (2J+1)e^{-\frac{E_J}{kT}},
+\mathrm{population} \propto (2J+1)\exp\left[\frac{E_J}{kT}\right],
 (\#eq:rot7)
 \end{equation}
 

@@ -113,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{15 March 2021}
+\date{05 April 2021}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1658,7 +1658,7 @@ When we have more than one electron, the sixth postulate that we discussed in ch
 \label{eq:atom2}  
 \end{equation}
 
-A very important step in simplifying \(\Psi({\bf x})\) is to expand it in terms of a set of one-electron functions. Since we need to take into account the spin coordinate as well, we can defina a new function, called \textbf{spin-orbital}, by multiplying a spatial orbital by one of the two spin functions:
+A very important step in simplifying \(\Psi({\bf x})\) is to expand it in terms of a set of one-electron functions. Since we need to take into account the spin coordinate as well, we can define a new function, called \textbf{spin-orbital}, by multiplying a spatial orbital by one of the two spin functions:
 
 \begin{equation}
 \begin{aligned}
@@ -1937,7 +1937,7 @@ Once we have invoked the Born-Oppenheimer approximation, we can attempt to solve
 \hypertarget{the-hartree-fock-method}{%
 \subsection{The Hartree-Fock Method}\label{the-hartree-fock-method}}
 
-The main difference when we apply the variational principle to a molecular Slater determinant is that we need to build orbitals (one-electron wave functions) that encompass the entire molecule. This can be done by assuming that the atomic contributions to the molecular orbitals will closely resemble the orbitals that we obtained for the hydrogen atom. The total molecular orbital can then be built by linearly combine these atomic contribution. This method is called \textbf{linear combination of atomic orbitals (LCAO)}. A consequence of the LCAO method is that the atomic orbitals on two different atomic centers are not necessarily orthogonal, and eq. \eqref{eq:var4} cannot be simplified easily. If we replace each atomic orbital \(\psi(\mathbf{r})\) with a linear combination of suitable basis functions \(f_i(\mathbf{r})\):
+The main difference when we apply the variational principle to a molecular Slater determinant is that we need to build orbitals (one-electron wave functions) that encompass the entire molecule. This can be done by assuming that the atomic contributions to the molecular orbitals will closely resemble the orbitals that we obtained for the hydrogen atom. The total molecular orbital can then be built by linearly combine these atomic contributions. This method is called \textbf{linear combination of atomic orbitals (LCAO)}. A consequence of the LCAO method is that the atomic orbitals on two different atomic centers are not necessarily orthogonal, and eq. \eqref{eq:var4} cannot be simplified easily. If we replace each atomic orbital \(\psi(\mathbf{r})\) with a linear combination of suitable basis functions \(f_i(\mathbf{r})\):
 
 \begin{equation}
 \psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}),
@@ -1970,15 +1970,15 @@ H_{m1}-ES_{m1}   & H_{m2}-ES_{m2}   & \cdots & H_{mm}-ES_{mm}
 \label{eq:molham12}
 \end{equation}
 
-where \(m\) is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients \(c_i\) in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the \textbf{self-consistent-field (SCF) procedure}. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. \eqref{eq:molham12}. This solution gives updated values of the coefficients, which can then be used to created an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.
+where \(m\) is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients \(c_i\) in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the \textbf{self-consistent-field (SCF) procedure}. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. \eqref{eq:molham12}. This solution gives updated values of the coefficients, which can then be used to create an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.
 
 \hypertarget{Bonds}{%
 \chapter{The Chemical Bond}\label{Bonds}}
 
 In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the \(\mathrm{H}_2^+\) molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and use a set tailored for molecules, called \emph{atomic units (a.u.)}. This set of units is built by setting \(\hbar=e=m_e=a_0=1\). As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \eqref{eq:HA7}, simply becomes \(E_n=-\frac{1}{2n^2}\) in the a.u. of energy, which are called Hartrees.
 
-\hypertarget{the-chemical-bnd-in-the-hydrogen-molecular-cation}{%
-\section{The Chemical Bnd in the Hydrogen Molecular Cation}\label{the-chemical-bnd-in-the-hydrogen-molecular-cation}}
+\hypertarget{the-chemical-bond-in-the-hydrogen-molecular-cation}{%
+\section{The Chemical Bond in the Hydrogen Molecular Cation}\label{the-chemical-bond-in-the-hydrogen-molecular-cation}}
 
 This system has only one electron, but since its geometry is not spherical (figure \ref{fig:Fig1c12}), the TISEq cannot be solved analytically as for the hydrogen atom.
 
@@ -2201,14 +2201,14 @@ F\left(J\right)=BJ\left(J+1\right)\qquad J=0,1,2,\ldots
 where \(B\) is the rotational constant of the molecule and is related to its moment of inertia. In a diatomic molecule the moment of inertia about an axis perpendicular to the molecular axis is unique, so:
 
 \begin{equation}
-B={\frac{h}{8\pi ^{2}cI_{B}}}={\frac{h}{8\pi ^{2}cI_{C}}},
+B={\frac{h}{8\pi ^{2}cI}},
 \label{eq:rot2}
 \end{equation}
 
 with:
 
 \begin{equation}
- I=\frac{m_1m_2}{m_1 +m_2}d^2 
+ I=\frac{m_1m_2}{m_1 +m_2}d^2,
  \label{eq:rot3}
 \end{equation}
 
@@ -2228,7 +2228,7 @@ where \(J^{{\prime }}\) denotes the lower level and \(J^{{\prime \prime }}\) den
 \label{eq:rot5}
 \end{equation}
 
-The diagram illustrates rotational transitions that obey the \(\Delta J=1\) selection rule is in figure .\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Rotational_spectroscopy\#/media/File:Rotational_spectrum_example.png}{Wikipedia} by user Nnrw, and distributed under CC BY\_SA 3.0 license.} The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent \(J^{{\prime \prime}}{\leftarrow}J^{{\prime }}\) transitions are separated by \(2B\) in the observed spectrum. Frequency or wavenumber units can also be used for the \(x\) axis of this plot.
+The diagram illustrates rotational transitions that obey the \(\Delta J=1\) selection rule is in figure \ref{fig:Fig1c13}.\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Rotational_spectroscopy\#/media/File:Rotational_spectrum_example.png}{Wikipedia} by user Nnrw, and distributed under CC BY\_SA 3.0 license.} The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent \(J^{{\prime \prime}}{\leftarrow}J^{{\prime }}\) transitions are separated by \(2B\) in the observed spectrum. Frequency or wavenumber units can also be used for the \(x\) axis of this plot.
 
 \begin{figure}
 
@@ -2242,14 +2242,14 @@ The diagram illustrates rotational transitions that obey the \(\Delta J=1\) sele
 The probability of a transition taking place is the most important factor influencing the intensity of an observed rotational line. This probability is proportional to the population of the initial state involved in the transition. The population of a rotational state depends on two factors. The number of molecules in an excited state with quantum number \(J\), relative to the number of molecules in the ground state, \(N_J/N_0\) is given by the Boltzmann distribution:
 
 \begin{equation}
-\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =e^{-\frac {BhcJ(J+1)}{kT}},
+\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =\exp\left[-\frac {BhcJ(J+1)}{kT}\right],
 \label{eq:rot6}
 \end{equation}
 
 where \(k\) is the Boltzmann constant and \(T\) is the absolute temperature. This factor decreases as \(J\) increases. The second factor is the degeneracy of the rotational state, which is equal to \(2J+1\). This factor increases as \(J\) increases. Combining the two factors we obtain:
 
 \begin{equation}
-\mathrm{population} \propto (2J+1)e^{-\frac{E_J}{kT}},
+\mathrm{population} \propto (2J+1)\exp\left[\frac{E_J}{kT}\right],
 \label{eq:rot7}
 \end{equation}
 

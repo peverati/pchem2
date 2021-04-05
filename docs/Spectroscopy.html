@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2021-03-15" />
+<meta name="date" content="2021-04-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -175,7 +175,7 @@ MathJax.Hub.Config({
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bnd-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bnd in the Hydrogen Molecular Cation</a></li>
+<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a>
@@ -239,12 +239,12 @@ F\left(J\right)=BJ\left(J+1\right)\qquad J=0,1,2,\ldots
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(B\)</span> is the rotational constant of the molecule and is related to its moment of inertia. In a diatomic molecule the moment of inertia about an axis perpendicular to the molecular axis is unique, so:</p>
 <p><span class="math display" id="eq:rot2">\[\begin{equation}
-B={\frac{h}{8\pi ^{2}cI_{B}}}={\frac{h}{8\pi ^{2}cI_{C}}},
+B={\frac{h}{8\pi ^{2}cI}},
 \tag{13.2}
 \end{equation}\]</span></p>
 <p>with:</p>
 <p><span class="math display" id="eq:rot3">\[\begin{equation}
- I=\frac{m_1m_2}{m_1 +m_2}d^2 
+ I=\frac{m_1m_2}{m_1 +m_2}d^2,
  \tag{13.3}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> are the masses of the atoms and <span class="math inline">\(d\)</span> is the distance between them.</p>
@@ -258,7 +258,7 @@ B={\frac{h}{8\pi ^{2}cI_{B}}}={\frac{h}{8\pi ^{2}cI_{C}}},
 {\tilde  \nu }_{{J^{{\prime }}\leftrightarrow J^{{\prime \prime }}}}=F\left(J^{{\prime }}\right)-F\left(J^{{\prime \prime }}\right)=2B\left(J^{{\prime \prime }}+1\right)\qquad J^{{\prime \prime }}=0,1,2,\ldots
 \tag{13.5}
 \end{equation}\]</span></p>
-<p>The diagram illustrates rotational transitions that obey the <span class="math inline">\(\Delta J=1\)</span> selection rule is in figure .<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent <span class="math inline">\(J^{{\prime \prime}}{\leftarrow}J^{{\prime }}\)</span> transitions are separated by <span class="math inline">\(2B\)</span> in the observed spectrum. Frequency or wavenumber units can also be used for the <span class="math inline">\(x\)</span> axis of this plot.</p>
+<p>The diagram illustrates rotational transitions that obey the <span class="math inline">\(\Delta J=1\)</span> selection rule is in figure <a href="Spectroscopy.html#fig:Fig1c13">13.1</a>.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> The dashed lines show how these transitions map onto features that can be observed experimentally. Adjacent <span class="math inline">\(J^{{\prime \prime}}{\leftarrow}J^{{\prime }}\)</span> transitions are separated by <span class="math inline">\(2B\)</span> in the observed spectrum. Frequency or wavenumber units can also be used for the <span class="math inline">\(x\)</span> axis of this plot.</p>
 <div class="figure" style="text-align: center"><span id="fig:Fig1c13"></span>
 <img src="img/OEP_wiki5.png" alt="Rotational energy levels and line positions calculated in the rigid rotor approximation." width="50%" />
 <p class="caption">
@@ -267,12 +267,12 @@ Figure 13.1: Rotational energy levels and line positions calculated in the rigid
 </div>
 <p>The probability of a transition taking place is the most important factor influencing the intensity of an observed rotational line. This probability is proportional to the population of the initial state involved in the transition. The population of a rotational state depends on two factors. The number of molecules in an excited state with quantum number <span class="math inline">\(J\)</span>, relative to the number of molecules in the ground state, <span class="math inline">\(N_J/N_0\)</span> is given by the Boltzmann distribution:</p>
 <p><span class="math display" id="eq:rot6">\[\begin{equation}
-\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =e^{-\frac {BhcJ(J+1)}{kT}},
+\frac{N_J}{N_0}=e^{-\frac{E_J}{kT}} =\exp\left[-\frac {BhcJ(J+1)}{kT}\right],
 \tag{13.6}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(k\)</span> is the Boltzmann constant and <span class="math inline">\(T\)</span> is the absolute temperature. This factor decreases as <span class="math inline">\(J\)</span> increases. The second factor is the degeneracy of the rotational state, which is equal to <span class="math inline">\(2J+1\)</span>. This factor increases as <span class="math inline">\(J\)</span> increases. Combining the two factors we obtain:</p>
 <p><span class="math display" id="eq:rot7">\[\begin{equation}
-\mathrm{population} \propto (2J+1)e^{-\frac{E_J}{kT}},
+\mathrm{population} \propto (2J+1)\exp\left[\frac{E_J}{kT}\right],
 \tag{13.7}
 \end{equation}\]</span></p>
 <p>in agreement with the experimental shape of rotational spectra of diatomic molecules.</p>
