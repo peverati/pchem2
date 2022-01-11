@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2</title>
+  <title>13 The Chemical Bond in Polyatomic Molecules | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="13 The Chemical Bond in Polyatomic Molecules | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="13 The Chemical Bond in Polyatomic Molecules | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="Spin.html"/>
-<link rel="next" href="Weirdness.html"/>
+<link rel="prev" href="Bonds.html"/>
+<link rel="next" href="Spectroscopy.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -217,68 +217,47 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Postulates" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Postulates of Quantum Mechanics</h1>
-<p>In order to understand deeper quantum mechanics, scientists have derived a series of axioms that result in what are called <em>postulates of quantum mechanics</em>. These are, in fact, assumptions that we need to make to understand how the measured reality relates with the mathematics of quantum mechanics. It is important to notice that the postulates are necessary for the interpretation of the theory, but not for the mathematics behind it. Regarding of whether we interpret it or not, the mathematics is complete and consistent. In fact, as we will see in the next chapter, several controversies regarding the interpretation of the mathematics are still open, and different philosophies have been developed to rationalize the results. Recall also that there are different ways of writing the equation of quantum mechanics, all equivalent to each other (i.e., Schrödinger’s differential formulation and Heisenberg’s algebraic formulation that we saw in chapter <a href="Schrodinger.html#Schrodinger">3</a>). For these reasons, there is not an agreement on the number of postulates that are necessary to interpret the theory, and some philosophy and/or formulation might require more postulates than others. In this chapter, we will discuss the six postulates, as they are usually presented in chemistry and introductory physics textbooks and as they relate with a basic statistical interpretation of quantum mechanics. Regardless of the philosophical consideration on the meanings and numbers of the postulate, as well as their physical origin, these statements will make the interpretation of the theory a little easier, as we will see in the next chapter.</p>
-<div id="postulate-1-the-wave-function-postulate" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Postulate 1: The Wave Function Postulate</h2>
-<p>The state of a quantum mechanical system is completely specified by a function <span class="math inline">\(\Psi({\bf r}, t)\)</span> that depends on the coordinates of the particle(s) and on time. This function, called the wave function or state function, has the important property that <span class="math inline">\(\Psi^{*}({\bf r}, t)\Psi({\bf r}, t) d\tau\)</span> is the probability that the particle lies in the volume element <span class="math inline">\(d\tau\)</span> located at <span class="math inline">\({\bf r}\)</span> at time <span class="math inline">\(t\)</span>.</p>
-<p>The wave function must satisfy certain mathematical conditions because of this probabilistic interpretation. For the case of a single particle, the probability of finding it somewhere is 1, so that we have the normalization condition</p>
-<p><span class="math display" id="eq:post1">\[\begin{equation}
-\int_{-\infty}^{\infty} \Psi^{*}({\bf r}, t) \Psi({\bf r}, t) d\tau = 1
-\tag{8.1}  
-\end{equation}\]</span></p>
-<p>It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter <a href="Models.html#Models">4</a>, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which typically involve derivation) to be applied without mathematical issues.</p>
-</div>
-<div id="postulate-2-experimental-observables" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Postulate 2: Experimental Observables</h2>
-<p>To every observable in classical mechanics there corresponds a linear, Hermitian operator in quantum mechanics. We have in part already discussed this postulate in chapter <a href="Operators.html#Operators">6</a>, albeit we didn’t call it as such. This postulate is necessary if we require the expectation value of an operator <span class="math inline">\(\hat{A}\)</span> to be real, as it should be.</p>
-</div>
-<div id="postulate-3-individual-measurements" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Postulate 3: Individual Measurements</h2>
-<p>In any measurement of the observable associated with operator <span class="math inline">\(\hat{A}\)</span>, the only values that will ever be observed are the eigenvalues <span class="math inline">\(a\)</span> that satisfy the eigenvalue equation:</p>
-<p><span class="math display" id="eq:post2">\[\begin{equation}
-\hat{A} \Psi = a \Psi.
-\tag{8.2}  
-\end{equation}\]</span></p>
-<p>This postulate captures the central point of quantum mechanics: the values of dynamical variables can be quantized (although it is still possible to have a continuum of eigenvalues in the case of unbound states). If the system is in an eigenstate of <span class="math inline">\(\hat{A}\)</span> with eigenvalue <span class="math inline">\(a\)</span>, then any measurement of the quantity <span class="math inline">\(A\)</span> will yield <span class="math inline">\(a\)</span>.
-Although measurements must always yield an eigenvalue, the state does not have to be an eigenstate of <span class="math inline">\(\hat{A}\)</span> initially.</p>
-<p>An arbitrary state can be expanded in the complete set of eigenvectors of <span class="math inline">\(\hat{A}\)</span> <span class="math inline">\(\left(\hat{A}\Psi_i = a_i \Psi_i\right)\)</span> as:</p>
-<p><span class="math display" id="eq:post3">\[\begin{equation}
-\Psi = \sum_i^{n} c_i \Psi_i,
-\tag{8.3}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(n\)</span> may go to infinity. In this case, we only know that the measurement of <span class="math inline">\(A\)</span> will yield one of the values <span class="math inline">\(a_i\)</span>, but we don’t know which one. However, we do know the probability that eigenvalue <span class="math inline">\(a_i\)</span> will occur (it is the absolute value squared of the coefficient, <span class="math inline">\(\vert c_i\vert^2\)</span>, as we obtained already in chapter <a href="Operators.html#Operators">6</a>), leading to the fourth postulate below.</p>
-</div>
-<div id="postulate-4-expectation-values-and-collapse-of-the-wavefunction" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Postulate 4: Expectation Values and Collapse of the Wavefunction</h2>
-<p>If a system is in a state described by a normalized wave function <span class="math inline">\(\Psi\)</span>, then the average value of the observable corresponding to <span class="math inline">\(\hat{A}\)</span> is given by:</p>
-<p><span class="math display" id="eq:post4">\[\begin{equation}
-&lt;A&gt; = \int_{-\infty}^{\infty} \Psi^{*} \hat{A} \Psi d\tau.
-\tag{8.4}  
-\end{equation}\]</span></p>
-<p>An important consequence of the fourth postulate is that, after measurement of <span class="math inline">\(\Psi\)</span> yields some eigenvalue <span class="math inline">\(a_i\)</span>, the wave function immediately “collapses” into the corresponding eigenstate <span class="math inline">\(\Psi_i\)</span>. In other words, measurement affects the state of the system. This fact is used in many experimental tests of quantum mechanics, such as the Stern-Gerlach experiment. Think again at the sequential experiment that we discussed in chapter <a href="Spin.html#Spin">7</a>. The act of measuring the spin along one coordinate is not simply a “filtration” of some pre-existing feature of the wave function, but rather an act that changes the nature of the wave function itself, affecting the outcome of future experiments. To this act corresponds the collapse of the wave function, a process that remains unexplained to date. Notice how the controversy is not in the mathematics of the experiment, which we already discussed in the previous chapter without issues. The issues rather arise because we don’t know how to define the measurement act in itself (other than the fact that it is some form of quantum mechanical procedure with clear and well-defined macroscopic outcomes). This is the reason why the collapse of the wave function is also sometimes called the <em>measurement problem</em> of quantum mechanics, and it is still a source of research and debate among modern scientists.</p>
-</div>
-<div id="postulate-5-time-evolution" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Postulate 5: Time Evolution</h2>
-<p>The wave function of a system evolves in time according to the time-dependent Schrödinger equation:</p>
-<p><span class="math display" id="eq:post5">\[\begin{equation}
-\hat{H} \Psi({\bf r}, t) = i \hbar \frac{\partial \Psi}{\partial t}.
-\tag{8.5}  
-\end{equation}\]</span></p>
-<p>The central equation of quantum mechanics must be accepted as a postulate.</p>
-</div>
-<div id="postulate-6-pauli-exclusion-principle" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Postulate 6: Pauli Exclusion Principle</h2>
-<p>The total wave function of a system with <span class="math inline">\(N\)</span> spin-<span class="math inline">\(\frac{1}{2}\)</span> particles (also called <strong>fermions</strong>) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called <strong>bosons</strong>), the wave function is symmetric:</p>
-<p><span class="math display" id="eq:post6">\[\begin{equation}
+<div id="Poly" class="section level1" number="13">
+<h1><span class="header-section-number">13</span> The Chemical Bond in Polyatomic Molecules</h1>
+<p>The structure in space of polyatomic molecules depends on the stereochemistry of their chemical bonds through the principle of maximum overlap.</p>
+<div id="the-chemical-bond-in-the-water-molecule" class="section level2" number="13.1">
+<h2><span class="header-section-number">13.1</span> The Chemical Bond in the Water Molecule</h2>
+<p>Considering the <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> molecule in the yz-plane (Figure XXX), if the O-H bond would be formed only by the 2p atomic orbitals (<span class="math inline">\(2p_y = y\)</span> and <span class="math inline">\(2p_z = z\)</span>, for short) of oxygen and the 1s atomic orbitals (<span class="math inline">\(1s_1 = h_1\)</span> and <span class="math inline">\(1s_2 = h_2\)</span> ) of hydrogens, the principle of maximum overlap (straight bonds between O and H) would yield a bond angle of <span class="math inline">\(2\theta = 90^{\circ}\)</span> . The fact that the experimentally observed angle is larger than this (<span class="math inline">\(2\theta = 105^{\circ}\)</span>), would suggest the formation of sensibly bent O-H bonds, with very poor overlap between the <span class="math inline">\(2p\)</span> orbitals of oxygen and the <span class="math inline">\(1s\)</span> orbitals of <span class="math inline">\(\mathrm{H}_1\)</span> and <span class="math inline">\(\mathrm{H}_2\)</span>. On the other hand, <span class="math inline">\(2p\)</span> orbitals directed towards the H atoms and making an interbond angle equal to the experimentally observed value of <span class="math inline">\(2\theta = 105^{\circ}\)</span>, would be non-orthogonal. We can restore orthogonality between the atomic orbitals on the oxygen atom by mixing in a certain quantity of <span class="math inline">\(2s (= s)\)</span> with the two <span class="math inline">\(2p\)</span> atomic orbitals of oxygen, obtaining in this way three <span class="math inline">\(sp^2\)</span> hybrids of <span class="math inline">\(C_{2v}\)</span> symmetry (the symmetry of the <span class="math inline">\(\mathrm{H}_2\mathrm{O}\)</span> molecule), directed along two equivalent O-H bonds and on the rear of the molecule in a direction bisecting the valence angle.</p>
+<p>The three hybrids <span class="math inline">\(hy_i\)</span> (<span class="math inline">\(i = 1,2,3\)</span>) of Figure XXX allow (i) for an interbond angle greater than <span class="math inline">\(90^{\circ} (\cos2\theta &lt; 0)\)</span>, preserving orthogonality between valence atomic orbitals onto the same atom, and (ii) for orbitals directed along the bonds, satisfying in this way the principle of maximum overlap and giving stronger straight bonds.</p>
+<p>The three <span class="math inline">\(sp^2\)</span> (<span class="math inline">\(C_{2v}\)</span>) hybrids are:</p>
+<p><span class="math display" id="eq:poly1">\[\begin{equation}
 \begin{aligned}
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{fermions}, \\
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= + \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{bosons}.
+hy_1 &amp;= 0.4534s + 0.5426z + 0.7071y \\
+hy_2 &amp;= 0.4534s + 0.5426z - 0.7071y \\
+hy_3 &amp;= 0.7673s - 0.6412z \\
 \end{aligned}
-\tag{8.6}  
+\tag{13.1}
 \end{equation}\]</span></p>
-<p>Electronic spin must be included in this set of coordinates. As we will see in chapter <a href="Atoms.html#Atoms">10</a>, the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).</p>
+<p>giving 20.6% <span class="math inline">\(s\)</span> and 79.4% <span class="math inline">\(p\)</span> for hybrids engaged in the O-H bonds, 58.9%s and 41.1%p for the hybrid directed along <span class="math inline">\(z\)</span> and forming the <span class="math inline">\(\sigma\)</span> lone pair. The hybrids are easily constructed by taking into account equivalence and orthonormality requirements XXX.</p>
+</div>
+<div id="properties-of-hybridization" class="section level2" number="13.2">
+<h2><span class="header-section-number">13.2</span> 10.6.3 Properties of Hybridization</h2>
+<p>We now summarize brieﬂy the main properties of hybridization.</p>
+<ol style="list-style-type: lower-roman">
+<li><p>Physically, hybridization describes to a certain extent the distortion of the orbitals involved in the bond, a second-order effect which can be fully accounted for by enlarging the basis set to include polarization functions.</p></li>
+<li><p>Hybridization increases overlap between the atomic orbitals forming the bond, yielding a strong bond (more correctly, it increases the exchange-overlap component of the bond energy).</p></li>
+<li><p>Hybridization restores orthogonality of the AOs onto the same atom, allowing for interhybrid angles greater than <span class="math inline">\(90^{\circ}\)</span>. The hybrid atomic orbitals can in this way reorient themselves in an optimum way, maximizing the overlap in the formation of the bonds and avoiding the formation of weaker bent bonds. The proof of this statement was ﬁrst given by Coulson (1961), and will be fully given in Problem XXX with reference to Figure XXX.</p></li>
+<li><p>Hybridization can give in this way the AOs the appropriate directional character for forming covalent bonds, and is therefore of fundamental importance in bond stereochemistry.</p></li>
+<li><p>According to Mulliken (1951), “a little hybridization goes a long way”. Even without changes in valency (isovalent hybridization), hybridization allows for a better disposition in space of electron lone pairs, projecting them in regions of space external to the bond region, what has a considerable effect on the electric dipole moment of the molecule (see Coulson’s atomic dipoles).</p></li>
+<li><p>For the carbon atom, promotion of an electron from 2s to 2p increases covalency from 2 to 4, so that it is possible to obtain four sp 3 hybrid orbitals, each singly occupied, symmetrically disposed in space and making interhybrid angles greater than 90 ◦ :</p></li>
+</ol>
+<p>s 2 p 2 -&gt; sp 3 -&gt; four hybrids of different symmetries.
+The analytical form of the different equivalent hybrids pointing in the i-th direction is:</p>
+<p>s + pi bi = sqrt 2</p>
+<p>1 digonal %s = ( 2</p>
+<p>)</p>
+<p>s 2pi 1 + sqrt b i = trigonal %s = 3 ( 3 ) sqrt</p>
+<p>s + sqrt 3p i 1 b i = tetrahedral %s = . 2 4 ) (</p>
+<ol start="295" style="list-style-type: decimal">
+<li></li>
+</ol>
+<p>Possible equivalent sp n hybrids are given in Table 10.13 and Figure 10.36.</p>
+<p>These equivalent hybrids are those describing the bonds in BeH 2 and CO 2 (D inftyh ), BH3 (D 3h ) and CH 4 (T d ). As already seen for H 2 O, sp n hybrids of lower symmetry are possible as well. They are only partly equivalent, such as sp 3 or sp 2 pi (C 2v ) in H 2 O, sp 3 (C 3v ) in NH 3 or CH 3 X molecules. In the case of ammonia, three equivalent hybrids form the three N H bonds with the three H atoms, while a fourth, non equivalent, hybrid will describe the electron lone pair directed along the symmetry z-axis. Torkington (1951) gave formulae for sp 3 hybrids equivalent under C 2v and C 3v symmetry, whereas Musso et al. (1973) gave formulae for sp 3 hybrids of C 1 (no symmetry) and C s (one symmetry plane) symmetry. From the latter formulae, Torkington results for C 2v (two symmetry planes) and C 3v (three symmetry planes) are easily recovered under the appropriate symmetry restrictions.</p>
 
 </div>
 </div>
@@ -287,8 +266,8 @@ Although measurements must always yield an eigenvalue, the state does not have t
           </div>
         </div>
       </div>
-<a href="Spin.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Weirdness.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Bonds.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Spectroscopy.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -319,7 +298,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/08_Postulates.Rmd",
+"link": "https://github.com/peverati/pchem2/edit/master/12b_Polyatomic.Rmd",
 "text": "Edit"
 },
 "history": {

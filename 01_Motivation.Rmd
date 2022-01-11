@@ -20,15 +20,38 @@ The development of quantum mechanics was initially motivated by two observations
 
 ## The Ultraviolet Catastrophe
 
-A blackbody is an idealized object which absorbs and emits all frequencies. Classical physics can be used to derive an equation which describes the intensity of blackbody radiation as a function of frequency for a fixed temperature--the result is known as the Rayleigh-Jeans law. Although the Rayleigh-Jeans law works for low frequencies, it diverges as $\nu^2$; this divergence for high frequencies is called the ultraviolet catastrophe.
-Max Planck explained the blackbody radiation in 1900 by assuming that the energies of the oscillations of electrons which gave rise to the radiation must be proportional to integral multiples of the frequency, i.e., 
+The ultraviolet (UV) catastrophe, also called the Rayleigh–Jeans catastrophe, is the prediction of classical electromagnetism that the intensity of the radiation emitted by an ideal black body at thermal equilibrium goes to infinity as wavelength decreases (see figure \@ref(fig:Fig1c1)^[This picture is taken from [Wikipedia](https://en.wikipedia.org) by user Darth Kule, and in in the Public Domain]). 
+
+```{r Fig1c1, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The ultraviolet catastrophe is the error at short wavelengths in the Rayleigh–Jeans law for the energy emitted by an ideal black body. The error, much more pronounced for short wavelengths, is the difference between the Rayleigh–Jeans law—black—and Planck\'s law—blue.'}
+knitr::include_graphics('./img/OEP_wiki0.svg')
+```
+
+
+A black body is an idealized object that absorbs and emits all frequencies. Classical physics can be used to derive an approximated equation describing the intensity of a black body radiation as a function of frequency for a fixed temperature. The result is known as the Rayleigh-Jeans law, which for wavelength $\lambda$, is:
 
 \begin{equation}
-E = n h \nu
+B_{\lambda }(T)={\frac {2ck_{\mathrm {B} }T}{\lambda ^{4}}}
+(\#eq:rjlaw)
+\end{equation}
+
+where $B_{\lambda }$ is the intensity of the radiation —expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)—
+$c$ is the speed of light, $k_{\mathrm{B}}$ is the Boltzmann constant, and $T$ is the temperature in kelvins.
+The paradox —or rather the breakdown of the Rayleigh–Jeans formula— happens at small wavelength $\lambda$. If we take the limit for $\lambda \rightarrow 0$ in eq. \@ref(eq:rjlaw), we obtain that $B_{\lambda } \rightarrow \infty$. In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
+
+Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency, i.e., 
+
+\begin{equation}
+E = n h \nu = n h \frac{c}{\lambda}
 (\#eq:uvcat)
 \end{equation}
 
-Using statistical mechanics, Planck derived an equation similar to the Rayleigh-Jeans equation, but with the adjustable parameter $h$. Planck found that for  $h = 6.626 \times 10^{-34} \; \text{J s}$, the experimental data could be reproduced. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicicsts did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
+Planck's assumptions led to the correct form of the spectral function for a black body:
+\begin{equation}
+B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
+(\#eq:uvcatpl)
+\end{equation}
+
+If we now take the limit for  $\lambda \rightarrow 0$ of eq. \@ref(eq:uvcatpl), it is easy to prove that $B_{\lambda }$ goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for  $h = 6.626 \times 10^{-34} \; \text{J s}$, the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
 ## The Photoelectric Effect
 

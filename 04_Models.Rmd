@@ -170,5 +170,5 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 (\#eq:RR2)
 \end{equation}
 
-where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m_{\ell}$ that appears in the spherical harmonics will assume some importance in future chapters. 
+where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m_{\ell}$ that appears in the spherical harmonics will assume some importance in future chapters. 
 

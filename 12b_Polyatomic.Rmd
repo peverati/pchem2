@@ -1,0 +1,60 @@
+# The Chemical Bond in Polyatomic Molecules {#Poly}
+
+The structure in space of polyatomic molecules depends on the stereochemistry of their chemical bonds through the principle of maximum overlap.
+
+## The Chemical Bond in the Water Molecule
+
+Considering the $\mathrm{H}_2\mathrm{O}$ molecule in the yz-plane (Figure XXX), if the O-H bond would be formed only by the 2p atomic orbitals ($2p_y = y$ and $2p_z = z$, for short) of oxygen and the 1s atomic orbitals ($1s_1 = h_1$ and $1s_2 = h_2$ ) of hydrogens, the principle of maximum overlap (straight bonds between O and H) would yield a bond angle of $2\theta = 90^{\circ}$ . The fact that the experimentally observed angle is larger than this ($2\theta = 105^{\circ}$), would suggest the formation of sensibly bent O-H bonds, with very poor overlap between the $2p$ orbitals of oxygen and the $1s$ orbitals of $\mathrm{H}_1$ and $\mathrm{H}_2$. On the other hand, $2p$ orbitals directed towards the H atoms and making an interbond angle equal to the experimentally observed value of $2\theta = 105^{\circ}$, would be non-orthogonal. We can restore orthogonality between the atomic orbitals on the oxygen atom by mixing in a certain quantity of $2s (= s)$ with the two $2p$ atomic orbitals of oxygen, obtaining in this way three $sp^2$ hybrids of $C_{2v}$ symmetry (the symmetry of the $\mathrm{H}_2\mathrm{O}$ molecule), directed along two equivalent O-H bonds and on the rear of the molecule in a direction bisecting the valence angle.
+
+The three hybrids $hy_i$ ($i = 1,2,3$) of Figure XXX allow (i) for an interbond angle greater than $90^{\circ} (\cos2\theta < 0)$, preserving orthogonality between valence atomic orbitals onto the same atom, and (ii) for orbitals directed along the bonds, satisfying in this way the principle of maximum overlap and giving stronger straight bonds.
+
+The three $sp^2$ ($C_{2v}$) hybrids are:
+
+
+\begin{equation}
+\begin{aligned}
+hy_1 &= 0.4534s + 0.5426z + 0.7071y \\
+hy_2 &= 0.4534s + 0.5426z - 0.7071y \\
+hy_3 &= 0.7673s - 0.6412z \\
+\end{aligned}
+(\#eq:poly1)
+\end{equation}
+
+
+giving 20.6% $s$ and 79.4% $p$ for hybrids engaged in the O-H bonds, 58.9%s and 41.1%p for the hybrid directed along $z$ and forming the $\sigma$ lone pair. The hybrids are easily constructed by taking into account equivalence and orthonormality requirements XXX.
+
+
+## 10.6.3 Properties of Hybridization
+
+We now summarize brieﬂy the main properties of hybridization.
+
+(i) Physically, hybridization describes to a certain extent the distortion of the orbitals involved in the bond, a second-order effect which can be fully accounted for by enlarging the basis set to include polarization functions.
+
+(ii) Hybridization increases overlap between the atomic orbitals forming the bond, yielding a strong bond (more correctly, it increases the exchange-overlap component of the bond energy).
+
+(iii) Hybridization restores orthogonality of the AOs onto the same atom, allowing for interhybrid angles greater than $90^{\circ}$. The hybrid atomic orbitals can in this way reorient themselves in an optimum way, maximizing the overlap in the formation of the bonds and avoiding the formation of weaker bent bonds. The proof of this statement was ﬁrst given by Coulson (1961), and will be fully given in Problem XXX with reference to Figure XXX.
+
+(iv) Hybridization can give in this way the AOs the appropriate directional character for forming covalent bonds, and is therefore of fundamental importance in bond stereochemistry.
+
+(v) According to Mulliken (1951), “a little hybridization goes a long way”. Even without changes in valency (isovalent hybridization), hybridization allows for a better disposition in space of electron lone pairs, projecting them in regions of space external to the bond region, what has a considerable effect on the electric dipole moment of the molecule (see Coulson’s atomic dipoles).
+
+(vi) For the carbon atom, promotion of an electron from 2s to 2p increases covalency from 2 to 4, so that it is possible to obtain four sp 3 hybrid orbitals, each singly occupied, symmetrically disposed in space and making interhybrid angles greater than 90 ◦ :
+
+s 2 p 2 -> sp 3 -> four hybrids of different symmetries.
+The analytical form of the different equivalent hybrids pointing in the i-th direction is:
+
+s + pi  bi = sqrt 2
+
+1 digonal %s = ( 2
+
+)
+
+s 2pi  1 + sqrt b i = trigonal %s = 3 ( 3 ) sqrt
+
+s + sqrt 3p i 1 b i = tetrahedral %s = . 2 4 ) (
+
+(295)
+
+Possible equivalent sp n hybrids are given in Table 10.13 and Figure 10.36.
+
+These equivalent hybrids are those describing the bonds in BeH 2 and CO 2 (D inftyh ), BH3  (D 3h ) and CH 4 (T d ). As already seen for H 2 O, sp n hybrids of lower symmetry are possible as well. They are only partly equivalent, such as sp 3 or sp 2 pi (C 2v ) in H 2 O, sp 3 (C 3v ) in NH 3 or CH 3 X molecules. In the case of ammonia, three equivalent hybrids form the three N H bonds with the three H atoms, while a fourth, non equivalent, hybrid will describe the electron lone pair directed along the symmetry z-axis. Torkington (1951) gave formulae for sp 3 hybrids equivalent under C 2v and C 3v symmetry, whereas Musso et al. (1973) gave formulae for sp 3 hybrids of C 1 (no symmetry) and C s (one symmetry plane) symmetry. From the latter formulae, Torkington results for C 2v (two symmetry planes) and C 3v (three symmetry planes) are easily recovered under the appropriate symmetry restrictions.

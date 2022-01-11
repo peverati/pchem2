@@ -1,4 +1,4 @@
-# The Chemical Bond {#Bonds}
+# The Chemical Bond in Diatomic Molecules {#Bonds}
 
 In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the $\mathrm{H}_2^+$ molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and  use a set tailored for molecules, called *atomic units (a.u.)*. This set of units is built by setting $\hbar=e=m_e=a_0=1$. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \@ref(eq:HA7), simply becomes $E_n=-\frac{1}{2n^2}$ in the a.u. of energy, which are called Hartrees.
 

@@ -1,4 +1,4 @@
-# Molecules {#Molecules}
+# Introduction to Molecules {#Molecules}
 
 ## The Molecular Hamiltonian
 
