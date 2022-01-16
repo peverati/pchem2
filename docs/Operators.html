@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-01-11" />
+<meta name="date" content="2022-01-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -222,7 +222,7 @@ MathJax.Hub.Config({
 <p>So far, we have seen a few simple examples of how to solve the TISEq. For the general case, the mathematical formulation of quantum mechanics is built upon the concept of an operator. An operator is a function over a space of physical states onto another space of physical states. Operators do not exist exclusively in quantum mechanics, but they can also be used in classical mechanics. In chapter <a href="Classical.html#Classical">2</a>, we have seen at least a couple of them, namely the Lagrangian, <span class="math inline">\(L\)</span>, and Hamiltonian, <span class="math inline">\(H\)</span>. In quantum mechanics, however, the concept of an operator is the basis of the complex mathematical treatment that is necessary for more complicated cases. In this chapter, we will discuss the mathematics of quantum mechanical operators, and we will recast the results for the analytical cases in light of the new framework. As we will see, this framework is even simpler than what we have seen in the previous chapter. This simplicity, however, will open the door to the “stranger” side of quantum mechanics.</p>
 <div id="operators-in-quantum-mechanics" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Operators in Quantum Mechanics</h2>
-<p>The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol <span class="math inline">\(\hat{}\)</span> on top of the latter. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> Operators that possess this property are called <em>Hermitian</em>.
+<p>The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol <span class="math inline">\(\hat{}\)</span> on top of the latter. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> Operators that possess this property are called <em>Hermitian</em>.
 In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time—or equivalently momentum and time—and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.</p>
 <p>The expectation value of an operator <span class="math inline">\(\hat{A}\)</span> for a system with wave function <span class="math inline">\(\psi(\mathbf{r})\)</span> living in a Hilbert space with unit vector <span class="math inline">\(\mathbf{r}\)</span> (i.e., in three-dimensional Cartesian space <span class="math inline">\(\mathbf{r} = \left\{ x,y,z \right\}\)</span>), is given by:</p>
 <p><span class="math display" id="eq:ee1b">\[\begin{equation}
@@ -364,7 +364,7 @@ b \int \psi_a^{*} \psi_b    &amp;= a^{*} \int \psi_a^{*} \psi_b \\
 \int \psi^{*}({\bf r}) \psi({\bf r}) d{\bf r} = 1.
 \tag{6.20}
 \end{equation}\]</span></p>
-<p>This property of wave functions is called normalization, and in the one-electron TISEq guarantees that the maximum probability of finding an electron over the entire space is one.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
+<p>This property of wave functions is called normalization, and in the one-electron TISEq guarantees that the maximum probability of finding an electron over the entire space is one.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
 <p>A unique property of quantum mechanics is that a wave function can be expressed not just as a simple eigenfunction, but also as a combination of several of them. We have in part already encountered such property in the previous chapter, where complex hydrogen orbitals have been combined to form corresponding linear ones. As a general example, let us consider a wave function written as a linear combination of two eigenstates of <span class="math inline">\(\hat{A}\)</span>, with eigenvalues <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>:</p>
 <p><span class="math display" id="eq:ee5">\[\begin{equation}
 \psi = c_a \psi_a + c_b \psi_b,
@@ -384,7 +384,7 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\
 \end{aligned}
 \tag{6.22}    
 \end{equation}\]</span></p>
-<p>This result shows that the average value of <span class="math inline">\(A\)</span> is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+<p>This result shows that the average value of <span class="math inline">\(A\)</span> is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
 </div>
 <div id="common-operators-in-quantum-mechanics" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Common Operators in Quantum Mechanics</h2>
@@ -474,7 +474,7 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\
 \hat{H} \psi = E\psi.
 \tag{6.24}  
 \end{equation}\]</span></p>
-<p>Comparing eq. <a href="Operators.html#eq:hamilt1">(6.23)</a> to the classical analog in eq. <a href="Classical.html#eq:ham2">(2.9)</a>, we notice how the first term in the Hamiltonian operator represents the corresponding kinetic energy operator, <span class="math inline">\(\hat{K}\)</span>, while the second term represents the potential energy operator, <span class="math inline">\(\hat{V}\)</span>. For a one-electron system—such as the ones we studied in chapter <a href="Models.html#Models">4</a>—we can write:</p>
+<p>Comparing eq. <a href="Operators.html#eq:hamilt1">(6.23)</a> to the classical analog in eq. <a href="Classical.html#eq:ham2">(2.7)</a>, we notice how the first term in the Hamiltonian operator represents the corresponding kinetic energy operator, <span class="math inline">\(\hat{K}\)</span>, while the second term represents the potential energy operator, <span class="math inline">\(\hat{V}\)</span>. For a one-electron system—such as the ones we studied in chapter <a href="Models.html#Models">4</a>—we can write:</p>
 <p><span class="math display" id="eq:hamilt2">\[\begin{equation}
 \hat{K}=- \frac{\hbar^2}{2m} \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \right) = \frac{\hbar^2}{2m} \nabla^2,
 \tag{6.25}  
@@ -526,7 +526,7 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\
 \hbar m_{\ell} Y_{\ell}^{m_{\ell}}(\theta, \varphi).
 \tag{6.31}
 \end{equation}\]</span></p>
-<p>The interpretation of these results is rather complicated, since the angular momenta are quantum operators and they cannot be drawn as vectors like in classical mechanics. Nevertheless, it is common to depict them heuristically as in figure <a href="Operators.html#fig:Fig1c6">6.1</a><a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>, where a set of states with quantum numbers <span class="math inline">\(\ell =2\)</span>, and <span class="math inline">\(m_{\ell}=-2,-1,0,1,2\)</span> are reported. Since <span class="math inline">\(|L|={\sqrt {L^{2}}}=\hbar {\sqrt {6}}\)</span>, the vectors are all shown with length <span class="math inline">\(\hbar \sqrt{6}\)</span>. The rings represent the fact that <span class="math inline">\(L_{z}\)</span> is known with certainty, but <span class="math inline">\(L_{x}\)</span> and <span class="math inline">\(L_{y}\)</span> are unknown; therefore every classical vector with the appropriate length and <span class="math inline">\(z\)</span>-component is drawn, forming a cone. The expected value of the angular momentum for a given ensemble of systems in the quantum state characterized by <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_{\ell}\)</span>, could be somewhere on this cone but it cannot be defined for a single system.</p>
+<p>The interpretation of these results is rather complicated, since the angular momenta are quantum operators and they cannot be drawn as vectors like in classical mechanics. Nevertheless, it is common to depict them heuristically as in figure <a href="Operators.html#fig:Fig1c6">6.1</a><a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a>, where a set of states with quantum numbers <span class="math inline">\(\ell =2\)</span>, and <span class="math inline">\(m_{\ell}=-2,-1,0,1,2\)</span> are reported. Since <span class="math inline">\(|L|={\sqrt {L^{2}}}=\hbar {\sqrt {6}}\)</span>, the vectors are all shown with length <span class="math inline">\(\hbar \sqrt{6}\)</span>. The rings represent the fact that <span class="math inline">\(L_{z}\)</span> is known with certainty, but <span class="math inline">\(L_{x}\)</span> and <span class="math inline">\(L_{y}\)</span> are unknown; therefore every classical vector with the appropriate length and <span class="math inline">\(z\)</span>-component is drawn, forming a cone. The expected value of the angular momentum for a given ensemble of systems in the quantum state characterized by <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_{\ell}\)</span>, could be somewhere on this cone but it cannot be defined for a single system.</p>
 <div class="figure" style="text-align: center"><span id="fig:Fig1c6"></span>
 <img src="img/OEP_wiki2.png" alt="Illustration of the vector model of orbital angular momentum." width="50%" />
 <p class="caption">
@@ -539,11 +539,11 @@ Figure 6.1: Illustration of the vector model of orbital angular momentum.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="12">
-<li id="fn12"><p>But they might not be strictly real.<a href="Operators.html#fnref12" class="footnote-back">↩︎</a></p></li>
-<li id="fn13"><p>Imposing the normalization condition is the best way to find the constant <span class="math inline">\(A\)</span> in the solution of the TISEq for the particle in a box, a topic that we delayed in chapter <a href="Models.html#Models">4</a>.<a href="Operators.html#fnref13" class="footnote-back">↩︎</a></p></li>
-<li id="fn14"><p>This section was adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">here</a>.<a href="Operators.html#fnref14" class="footnote-back">↩︎</a></p></li>
-<li id="fn15"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Angular_momentum_operator#/media/File:Vector_model_of_orbital_angular_momentum.svg">Wikipedia</a> by user Maschen, and is of public domain<a href="Operators.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<ol start="16">
+<li id="fn16"><p>But they might not be strictly real.<a href="Operators.html#fnref16" class="footnote-back">↩︎</a></p></li>
+<li id="fn17"><p>Imposing the normalization condition is the best way to find the constant <span class="math inline">\(A\)</span> in the solution of the TISEq for the particle in a box, a topic that we delayed in chapter <a href="Models.html#Models">4</a>.<a href="Operators.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>This section was adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">here</a>.<a href="Operators.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<li id="fn19"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Angular_momentum_operator#/media/File:Vector_model_of_orbital_angular_momentum.svg">Wikipedia</a> by user Maschen, and is of public domain<a href="Operators.html#fnref19" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

@@ -22,8 +22,8 @@ The development of quantum mechanics was initially motivated by two observations
 
 The ultraviolet (UV) catastrophe, also called the Rayleigh–Jeans catastrophe, is the prediction of classical electromagnetism that the intensity of the radiation emitted by an ideal black body at thermal equilibrium goes to infinity as wavelength decreases (see figure \@ref(fig:Fig1c1)^[This picture is taken from [Wikipedia](https://en.wikipedia.org) by user Darth Kule, and in in the Public Domain]). 
 
-```{r Fig1c1, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The ultraviolet catastrophe is the error at short wavelengths in the Rayleigh–Jeans law for the energy emitted by an ideal black body. The error, much more pronounced for short wavelengths, is the difference between the Rayleigh–Jeans law—black—and Planck\'s law—blue.'}
-knitr::include_graphics('./img/OEP_wiki0.svg')
+```{r Fig1c1, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The ultraviolet catastrophe is the error at short wavelengths in the Rayleigh–Jeans law for the energy emitted by an ideal black body. The error, much more pronounced for short wavelengths, is the difference between the Rayleigh–Jeans law —black—and Planck\'s law—blue.'}
+knitr::include_graphics('./img/OEP_wiki0.png')
 ```
 
 

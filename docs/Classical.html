@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-01-11" />
+<meta name="date" content="2022-01-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -222,45 +222,73 @@ MathJax.Hub.Config({
 <p>Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this environment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.</p>
 <div id="newtonian-formulation" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Newtonian Formulation</h2>
-<p>In classical mechanics, a particle moving in the presence of potential <span class="math inline">\(V(q)\)</span> will experience a force given by:</p>
-<p><span class="math display" id="eq:class1">\[\begin{equation}
-F(q) = -\frac{dV(q)}{dq},
+<p>Classical mechanics as formulated by Isaac Newton (1652-1727) is all about forces. Newtonian mechanics works well for problems where we know the forces and have a reasonable coordinate system. In these cases, the net force acting on a system at position <span class="math inline">\(q\)</span> is simply:</p>
+<p><span class="math display" id="eq:newt1">\[\begin{equation}
+F_{\mathrm{net}}(q) = m\ddot{q} = m \frac{d^2 q}{dt^2}.
 \tag{2.1}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(q\)</span> represents the coordinate or the position of the particle. Hence, the particle can be described by the equations of motion:</p>
-<p><span class="math display" id="eq:class2">\[\begin{equation}
-\frac{dp}{dt} = \dot{p} = F(q) = -\frac{dV (q)}{dq},\quad \frac{dq}{dt} =\dot{q}= \frac{p}{m}.
-\tag{2.2}
+<p>Or, in other words, if we know the net force acting on a system of mass <span class="math inline">\(m\)</span> at position <span class="math inline">\(q\)</span> at some time <span class="math inline">\(t_0\)</span>, we can use eq. <a href="Classical.html#eq:newt1">(2.1)</a> to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<blockquote>
+
+<div class="example">
+<p><span id="exm:newtonianEx" class="example"><strong>Example 2.1  </strong></span>
+A ball of mass <span class="math inline">\(m\)</span> is at ground level and tossed straight up from an initial position <span class="math inline">\(q_0\)</span> with an initial velocity <span class="math inline">\(\dot{q}_0\)</span> and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time <span class="math inline">\(t\)</span>?).<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p><em>Solution:</em> Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:</p>
+<p><span class="math display">\[\begin{equation}
+F_{\mathrm{gravity}}=-mG,
 \end{equation}\]</span></p>
-<p>For example, when a particle is attached to a spring and moves along a frictionless surface, the force the particle experiences is <span class="math inline">\(F(q) = -kq\)</span> where <span class="math inline">\(k\)</span> is the spring constant. Then the equations of motion of this particle are</p>
-<p><span class="math display" id="eq:class3">\[\begin{equation}
-\dot{p}=-kq,\quad \dot{q}=p/m
-\tag{2.3}
+<p>with <span class="math inline">\(G\)</span> the usual gravitational constant (<span class="math inline">\(G=9.8\; \mathrm{m}/\mathrm{s}^{2}\)</span>). We can then replace this expression into eq. <a href="Classical.html#eq:newt1">(2.1)</a>, to obtain:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+-mG &amp;=m \ddot{q} \\
+-G &amp;=\ddot{q} \\
+-G &amp;=\frac{d\dot{q}}{dt}, \\
+\end{aligned}
 \end{equation}\]</span></p>
-<p>Given <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> at some initial time <span class="math inline">\(t_0\)</span>, one can integrate <a href="Classical.html#eq:class2">(2.2)</a> or <a href="Classical.html#eq:class3">(2.3)</a> to obtain <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> for all later time. Notice that only two variables <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are sufficient to describe the state of a particle. These equations of motion are essentially derived using Newton’s law. However, there are at least two other methods of deriving these equations of motion, which are described below.</p>
+<p>which can then be integrated with respect to time, to obtain:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+-G\int_{t=0}^{t} dt &amp;=\int_{\dot{q}_0}^{\dot{q}} d\dot{q}\\
+\dot{q} &amp;= \dot{q}_0-Gt\\
+\frac{dq}{dt} &amp;= \dot{q}_0-Gt,\\
+\end{aligned}
+\end{equation}\]</span></p>
+<p>which can be further integrated with respect to time, to give:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+\int_{q_0}^{q} dq &amp;= \int_{t=0}^{t} \dot{q}_0 dt -G \int_{t=0}^{t}tdt\\
+q &amp;= q_0 + \dot{q}_0 t -\frac{1}{2}Gt^2.
+\end{aligned}
+\end{equation}\]</span></p>
+<p>This final equation is the equation of motion for the ball, from which we can calculate the position of the ball at any time <span class="math inline">\(t\)</span>. Notice how the equation of motion does not depend on the mass of the ball!</p>
+<p><em>Numerical problem:</em> How much time will a ball ejected from a height of <span class="math inline">\(1 \;\mathrm{m}\)</span> at an initial velocity of <span class="math inline">\(10 \;\mathrm{m/s}\)</span> take to hit the floor?</p>
+<p>We can use the equation of motion obtained above to solve this problem, and obtain for this specific case <span class="math inline">\(t\simeq2.12\;\mathrm{s}\)</span>.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+</div>
+</blockquote>
+<p>The formula of Newtonian mechanics are not the only one we can use to solve a problem in classical mechanics. We have at least two other equivalent approaches to the same problem that might end up being more useful in certain situations.</p>
 </div>
 <div id="lagrangian-formulation" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Lagrangian Formulation</h2>
 <p>Another way to derive the equations of motion for classical mechanics is via the use of the Lagrangian and the principle of least action. The Lagrangian formulation is obtained by starting from the definition of the Lagrangian of the system:</p>
 <p><span class="math display" id="eq:lag1">\[\begin{equation}
 L = K - V,
-\tag{2.4}
+\tag{2.2}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(K\)</span> is the kinetic energy, and <span class="math inline">\(V\)</span> is the potential energy. Both are expressed in terms of coordinates <span class="math inline">\((q,\dot{q}\)</span>) where <span class="math inline">\(q\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the position vector and <span class="math inline">\(\dot{q}\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the velocity vector. Notice that for a fixed time, <span class="math inline">\(t\)</span>, <span class="math inline">\(q\)</span> and <span class="math inline">\(\dot{q}\)</span> are independent variables, since <span class="math inline">\(\dot{q}\)</span> cannot be derived from <span class="math inline">\(q\)</span> alone.</p>
+<p>where <span class="math inline">\(K\)</span> is the kinetic energy, and <span class="math inline">\(V\)</span> is the potential energy. Both are expressed in terms of the coordinates <span class="math inline">\((q,\dot{q})\)</span>. Notice that for a fixed time, <span class="math inline">\(t\)</span>, <span class="math inline">\(q\)</span> and <span class="math inline">\(\dot{q}\)</span> are independent variables, since <span class="math inline">\(\dot{q}\)</span> cannot be derived from <span class="math inline">\(q\)</span> alone.</p>
 <p>The time integral of the Lagrangian is called the <strong>action</strong>, and is defined as:</p>
 <p><span class="math display" id="eq:lag2">\[\begin{equation}
 S = \int_{t_1}^{t_2} L\, dt,
-\tag{2.5}
+\tag{2.3}
 \end{equation}\]</span></p>
-<p>which is a functional: it takes in the Lagrangian function for all times between <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> and returns a scalar value. The equations of motion can be derived from the principle of least action,<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> which states that the true evolution of a system <span class="math inline">\(q(t)\)</span> described by the coordinate <span class="math inline">\(q\)</span> between two specified states <span class="math inline">\(q_1 = q(t_1)\)</span> and <span class="math inline">\(q_2 = q(t_2)\)</span> at two specified times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is a stationary point of the action functional. For a stationary point:</p>
+<p>which is a functional: it takes in the Lagrangian function for all times between <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> and returns a scalar value. The equations of motion can be derived from the principle of least action,<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> which states that the true evolution of a system <span class="math inline">\(q(t)\)</span> described by the coordinate <span class="math inline">\(q\)</span> between two specified states <span class="math inline">\(q_1 = q(t_1)\)</span> and <span class="math inline">\(q_2 = q(t_2)\)</span> at two specified times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is a minimum of the action functional. For a minimum point:</p>
 <p><span class="math display" id="eq:lag3">\[\begin{equation}
-\delta     S = \frac{dS}{dq}= 0
-\tag{2.6}
+\delta S = \frac{dS}{dq}= 0
+\tag{2.4}
 \end{equation}\]</span></p>
-<p>Requiring that the true trajectory <span class="math inline">\(q(t)\)</span> be a stationary point of the action functional <span class="math inline">\(S\)</span> we obtain the equation of motion (figure <a href="Classical.html#fig:Fig1c2">2.1</a><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>). This can be achieved applying classical variational calculus to the variation of the action integral <span class="math inline">\(S\)</span> under perturbations of the path <span class="math inline">\(q(t)\)</span>, eq. <a href="Classical.html#eq:lag3">(2.6)</a>. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+<p>Requiring that the true trajectory <span class="math inline">\(q(t)\)</span> minimizes the action functional <span class="math inline">\(S\)</span>, we obtain the equation of motion (figure <a href="Classical.html#fig:Fig1c2">2.1</a><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>). This can be achieved applying classical variational calculus to the variation of the action integral <span class="math inline">\(S\)</span> under perturbations of the path <span class="math inline">\(q(t)\)</span>, eq. <a href="Classical.html#eq:lag3">(2.4)</a>. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
 <p><span class="math display" id="eq:lag4">\[\begin{equation}
 \frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
-\tag{2.7}
+\tag{2.5}
 \end{equation}\]</span></p>
 <div class="figure" style="text-align: center"><span id="fig:Fig1c2"></span>
 <img src="img/OEP_wiki1.png" alt="Principle of least action: As the system evolves, q traces a path through configuration space (only some are shown). The path taken by the system (red) has a stationary action under small changes in the configuration of the system." width="70%" />
@@ -268,18 +296,50 @@ S = \int_{t_1}^{t_2} L\, dt,
 Figure 2.1: Principle of least action: As the system evolves, q traces a path through configuration space (only some are shown). The path taken by the system (red) has a stationary action under small changes in the configuration of the system.
 </p>
 </div>
+<blockquote>
+
+<div class="example">
+<p><span id="exm:lagrangianEx" class="example"><strong>Example 2.2  </strong></span>
+Let’s apply the Lagrangian mechanics formulas to the same problem as in the previous Example.</p>
+<p>The expression of the kinetic energy, the potential energy, and the Lagrangian for our system are:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+K &amp;= \frac{1}{2}m\dot{q}^2 \\
+V &amp;= mGq \\
+L &amp;= K-V = \frac{1}{2}m\dot{q}^2 - mGq.
+\end{aligned}
+\end{equation}\]</span></p>
+<p>To get the equation of motion using eq. <a href="Classical.html#eq:lag4">(2.5)</a>, we need to first take the partial derivative of <span class="math inline">\(L\)</span> with respect to <span class="math inline">\(q\)</span> (right hand side):</p>
+<p><span class="math display">\[\begin{equation}
+\frac{\partial L}{\partial q}=-mG,
+\end{equation}\]</span></p>
+<p>and then we need the derivative with respect to <span class="math inline">\(t\)</span> the derivative of the Lagrangian with respect to <span class="math inline">\(\dot{q}\)</span> at the hand side:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{d}{dt}\frac{\partial L}{\partial \dot{q}} = \frac{d\left(\frac{1}{2}m\dot{q}^2 - mGq\right)}{dt}= m\ddot{q}.
+\end{equation}\]</span></p>
+<p>Putting this together, we get:</p>
+<p><span class="math display">\[\begin{equation}
+\begin{aligned}
+m\ddot{q}&amp;=-mG \\
+\ddot{q} &amp;= -G \\
+\end{aligned}
+\end{equation}\]</span></p>
+<p>Which is the same result as obtained from the Newtonian method. Integrating twice, we get the exact same formulas that we can use the same way.</p>
+</div>
+</blockquote>
+<p>The advantage of Lagrangian mechanics is that it is not constrained to use a coordinate system. For example, if we have a bead moving along a wire, we can define the coordinate system as the distance along the wire, making the formulas much simpler than in Newtonian mechanics. Also, since the Lagrangian depends on kinetic and potential energy it does a much better job with constraint forces.</p>
 </div>
 <div id="hamiltonian-mechanics" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Hamiltonian mechanics</h2>
 <p>A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum is defined in terms of the Lagrangian and the coordinates <span class="math inline">\((q,\dot{q})\)</span>:</p>
 <p><span class="math display" id="eq:ham1">\[\begin{equation} 
-p = \frac{\partial L}{\partial\dot q}.
-\tag{2.8}
+p = \frac{\partial L}{\partial\dot{q}}.
+\tag{2.6}
 \end{equation}\]</span></p>
-<p>The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
 <p><span class="math display" id="eq:ham2">\[\begin{equation} 
 H(p,q) = p\dot{q} - L(q,\dot{q}),
-\tag{2.9}
+\tag{2.7}
 \end{equation}\]</span></p>
 <p>The Lagrangian equation of motion becomes a pair of equations known as the Hamiltonian system of equations:</p>
 <p><span class="math display" id="eq:ham3">\[\begin{equation} 
@@ -287,40 +347,43 @@ H(p,q) = p\dot{q} - L(q,\dot{q}),
 \dot{p}=\frac{dp}{dt} &amp;= -\frac{\partial H}{\partial q} \\
 \dot{q}=\frac{dq}{dt} &amp;= +\frac{\partial H}{\partial p},
 \end{aligned}
-\tag{2.10}
+\tag{2.8}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(H=H(q,p,t)\)</span> is the Hamiltonian of the system, which often corresponds to its total energy. For a closed system, it is the sum of the kinetic and potential energy in the system:</p>
 <p><span class="math display" id="eq:hamdef">\[\begin{equation}
 H = K + V.
-\tag{2.11}
+\tag{2.9}
 \end{equation}\]</span></p>
-<p>Notice the difference between the Hamiltonian, eq. <a href="Classical.html#eq:hamdef">(2.11)</a>, and the Lagrangian, eq. <a href="Classical.html#eq:lag1">(2.4)</a>. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton’s second law, the time evolutions of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton’s equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.</p>
+<p>Notice the difference between the Hamiltonian, eq. <a href="Classical.html#eq:hamdef">(2.9)</a>, and the Lagrangian, eq. <a href="Classical.html#eq:lag1">(2.2)</a>. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton’s second law, the time evolutions of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton’s equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.</p>
 <blockquote>
 
 <div class="example">
-<p><span id="exm:hamex1" class="example"><strong>Example 2.1  </strong></span><em>Basic Interpretation of Hamiltonian Mechanics</em></p>
-<p>A simple interpretation of Hamiltonian mechanics comes from its application on a one-dimensional system consisting of one particle of mass <span class="math inline">\(m\)</span>. The Hamiltonian can represent the total energy of the system, which is the sum of kinetic and potential energy.</p>
+<p><span id="exm:hamex1" class="example"><strong>Example 2.3  </strong></span>Let’s apply the Hamiltonian mechanics formulas to the same problem in the previous examples.</p>
+<p>Using eq. <a href="Classical.html#eq:ham2">(2.7)</a>, the Hamiltonian can be written as:</p>
 <p><span class="math display" id="eq:ham4">\[\begin{equation}
+H = m\dot{q}\dot{q} - \frac{1}{2}m\dot{q}^2+mGq = \frac{1}{2}m\dot{q}^2+mGq.
+\tag{2.10}
+\end{equation}\]</span></p>
+<p>Since the Hamiltonian really depends on position and momentum, we need to get this in terms of <span class="math inline">\(q\)</span> and <span class="math inline">\(p\)</span>, with <span class="math inline">\(p = m\dot{q}\)</span> for the momentum. This is not always the case, since it depends on the choice of coordinate system. For a trivial coordinate system for our simple 1-dimensional problem, we have:</p>
+<p><span class="math display">\[\begin{equation}
+H=\frac{p^2}{2m}+mGq,
+\end{equation}\]</span></p>
+<p>from which we can use eqs. <a href="Classical.html#eq:ham3">(2.8)</a> to get:</p>
+<p><span class="math display">\[\begin{equation}
 \begin{aligned}
-H &amp;= K+V \\
-K &amp;={\frac {p^{2}}{2m}},\quad V=V(q),
+\dot{q} &amp;= \frac{\partial H}{\partial p} = \frac{p}{m} \\
+\dot{p} &amp;=-\frac{\partial H}{\partial q} = -mG.
 \end{aligned}
-\tag{2.12}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(q\)</span> is the space coordinate and <span class="math inline">\(p=m\dot{q}\)</span> is the momentum. Then
-<span class="math inline">\(K\)</span> is a function of <span class="math inline">\(p\)</span> alone, while <span class="math inline">\(V\)</span> is a function of <span class="math inline">\(q\)</span> alone.</p>
-<p>In this example, the time derivative of the momentum <span class="math inline">\(p\)</span> equals the Newtonian force, and so the first Hamilton equation means that the force equals the negative gradient of potential energy:</p>
-<p><span class="math display" id="eq:ham5">\[\begin{equation}
-\text{Newtonian force:}\qquad \frac{dp}{dt} = -\frac{\partial H}{\partial q}= -\frac{\partial V(q)}{\partial q},
-\tag{2.13}
+<p>These equations represent a major diffference of the Hamiltonian method, since we describe the system using two first-order differential equations, rather than one second-order differential equation. In order to get the equation of motion, we need to take the derivative of <span class="math inline">\(\dot{q}\)</span>:</p>
+<p><span class="math display">\[\begin{equation}
+\ddot{q} = \frac{d}{dt} \left( \frac{p}{m} \right) = \frac{\dot{p}}{m},
 \end{equation}\]</span></p>
-<p>which is exactly the first equation of motion in eq. <a href="Classical.html#eq:class2">(2.2)</a> of Newtonian mechanics. Notice that this equaiton could have been easily obtained in the Lagrangian formulation by writing the Lagrangian <a href="Classical.html#eq:lag1">(2.4)</a>, and using the Euler-Lagrange equation, eq. <a href="Classical.html#eq:lag4">(2.7)</a>.
-The time derivative of <span class="math inline">\(q\)</span> is the velocity, and so the second Hamilton equation means that the particle’s velocity equals the derivative of its kinetic energy with respect to its momentum:</p>
-<p><span class="math display" id="eq:ham6">\[\begin{equation}
-\text{Velocity:}\qquad \frac{dq}{dt} = \frac{\partial K}{\partial p} = \frac{\partial \left(\frac{p^2}{2m}\right)}{\partial p} = \frac{p}{m},
-\tag{2.14}
+<p>and then replacing the definition of <span class="math inline">\(\dot{p}\)</span> obtained above, we get:</p>
+<p><span class="math display">\[\begin{equation}
+\ddot{q} = \frac{-mG}{m} = -G
 \end{equation}\]</span></p>
-<p>which is exactly the second equation of motion in eq. <a href="Classical.html#eq:class2">(2.2)</a> of Newtonian mechanics.</p>
+<p>which—once again—is the same result obtained for the two previous cases. Integrating this twice, we get the familiar equation of motion for our problem.</p>
 </div>
 </blockquote>
 
@@ -328,11 +391,14 @@ The time derivative of <span class="math inline">\(q\)</span> is the velocity, a
 </div>
 <div class="footnotes">
 <hr />
-<ol start="3">
-<li id="fn3"><p>Sometimes also called principle of stationary action, or variational principle, or Hamilton’s principle.<a href="Classical.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> by user Maschen, and distributed under CC0 license<a href="Classical.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found <a href="https://en.wikipedia.org/wiki/Euler–Lagrange_equation">here</a>.<a href="Classical.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>We have already encountered Legendre transform in <a href="https://peverati.github.io/pchem1/Potentials.html#thermpot">The Live Textbook of Physical Chemistry 1</a> when transforming from the thermodynamic energy to any of the other thermodynamic potentials.<a href="Classical.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<ol start="4">
+<li id="fn4"><p>Notice that, in principle, <span class="math inline">\(q\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the position vector and <span class="math inline">\(\dot{q}\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the velocity vector. As such, all the equation of classical mechanics are vector equation, and not just simple numerical equation, as we present them here! For our purposes, we can restrict ourselves to a 1-dimensional space, hence forgetting the complications of vector algebra.<a href="Classical.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>This example is based on Rhett Allain’s blog post that can be (here)[<a href="https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/" class="uri">https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/</a>] <a href="Classical.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Can you write a python program to do this calculation?<a href="Classical.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Sometimes also called principle of stationary action, or variational principle, or Hamilton’s principle.<a href="Classical.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> by user Maschen, and distributed under CC0 license<a href="Classical.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found <a href="https://en.wikipedia.org/wiki/Euler–Lagrange_equation">here</a>.<a href="Classical.html#fnref9" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>We have already encountered Legendre transform in <a href="https://peverati.github.io/pchem1/Potentials.html#thermpot">The Live Textbook of Physical Chemistry 1</a> when transforming from the thermodynamic energy to any of the other thermodynamic potentials.<a href="Classical.html#fnref10" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
