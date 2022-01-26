@@ -124,13 +124,12 @@ then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phas
 
 \begin{equation}
 \vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
-\exp\left(\frac{iEt}{\hbar}\right)\exp\left(\frac{-iEt}{\hbar}\right)=
-\psi^{*}(x) \psi(x).
+\psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
 (\#eq:TDSEq7)
 \end{equation}
 
 Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
-Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is, in general, much more complicated.^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible:^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
