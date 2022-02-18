@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2022-01-26" />
+<meta name="date" content="2022-02-17" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ The sum and difference of two operators <span class="math inline">\(\hat{A}\)</s
 <h3><span class="header-section-number">6.1.3</span> Hermitian Operators</h3>
 <p>Hermitian operators are characterized by the self-adjoint property:</p>
 <p><span class="math display" id="eq:hop1">\[\begin{equation}
-\int \psi_a^{*} (\hat{A} \psi_a) =  \int \psi_a (\hat{A} \psi_a)^{*},
+\int \psi_a^{*} (\hat{A} \psi_a)d{\bf r} =  \int \psi_a (\hat{A} \psi_a)^{*}d{\bf r},
 \tag{6.11}
 \end{equation}\]</span></p>
 <p>where the integral is performed over all space. This property guarantees that all the eigenvalues of the operators are real. Defining <span class="math inline">\(a\)</span> as the eigenvalue of operator <span class="math inline">\(\hat{A}\)</span> using:</p>
@@ -307,34 +307,33 @@ The sum and difference of two operators <span class="math inline">\(\hat{A}\)</s
 <p>we can prove that <span class="math inline">\(a\)</span> is real by replacing eq. <a href="Operators.html#eq:hop2">(6.12)</a> into eq. <a href="Operators.html#eq:hop1">(6.11)</a>:</p>
 <p><span class="math display" id="eq:hop4">\[\begin{equation}
 \begin{aligned}
-a \int \psi_a^{*} \psi_a &amp;= a^{*} \int \psi_a \psi_a^{*} \\
-(a - a^{*}) \int \vert\psi_a\vert^2 &amp;= 0,
+a \int \psi_a^{*} \psi_a d{\bf r}&amp;= a^{*} \int \psi_a \psi_a^{*} d{\bf r}\\
+(a - a^{*}) \int \vert\psi_a\vert^2 d{\bf r} &amp;= 0,
 \end{aligned}
 \tag{6.13}
 \end{equation}\]</span></p>
 <p>and since <span class="math inline">\(\vert\psi_a\vert^2\)</span> is never negative, either <span class="math inline">\(a = a^{*}\)</span> or <span class="math inline">\(\psi_a = 0\)</span>. Since <span class="math inline">\(\psi_a = 0\)</span> is not an acceptable wavefunction, <span class="math inline">\(a = a^{*}\)</span>, and <span class="math inline">\(a\)</span> is real.</p>
 <p>The following additional properties of Hermitian operators can also be proven with some work:</p>
 <p><span class="math display" id="eq:hop2b">\[\begin{equation}
-\int \psi^{*}\hat{A} \psi =
-\int (\hat{A} \psi)^{*} \psi,
+\int \psi^{*}\hat{A} \psi d{\bf r} = \int (\hat{A} \psi)^{*} \psi d{\bf r},
 \tag{6.14}
 \end{equation}\]</span></p>
 <p>and for any two states <span class="math inline">\(\psi_1\)</span> and <span class="math inline">\(\psi_2\)</span>:</p>
 <p><span class="math display" id="eq:hop3">\[\begin{equation}
-\int \psi_1^{*} \hat{A} \psi_2 =
-\int (\hat{A} \psi_1)^{*} \psi_2.
+\int \psi_1^{*} \hat{A} \psi_2 d{\bf r}=
+\int (\hat{A} \psi_1)^{*} \psi_2 d{\bf r}.
 \tag{6.15}
 \end{equation}\]</span></p>
 <p>Taking <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> as eigenfunctions of <span class="math inline">\(\hat{A}\)</span> with eigenvalues <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(a \neq b\)</span>, and using eq. <a href="Operators.html#eq:hop3">(6.15)</a>, we obtain:</p>
 <p><span class="math display" id="eq:hop5">\[\begin{equation}
 \begin{aligned}
-\int \psi_a^{*} \hat{A} \psi_b &amp;= \int (\hat{A} \psi_a)^{*} \psi_b  \\
-b \int \psi_a^{*} \psi_b    &amp;= a^{*} \int \psi_a^{*} \psi_b \\
-(b - a) \int \psi_a^{*} \psi_b &amp;= 0.
+\int \psi_a^{*} \hat{A} \psi_b d{\bf r} &amp;= \int (\hat{A} \psi_a)^{*} \psi_b d{\bf r}\\
+b \int \psi_a^{*} \psi_b d{\bf r}   &amp;= a^{*} \int \psi_a^{*} \psi_b d{\bf r}\\
+(b - a) \int \psi_a^{*} \psi_b d{\bf r} &amp;= 0.
 \end{aligned}
 \tag{6.16}
 \end{equation}\]</span></p>
-<p>Thus, since <span class="math inline">\(a = a^{*}\)</span>, and since we assumed <span class="math inline">\(b \neq a\)</span>, we must have <span class="math inline">\(\int \psi_a^{*} \psi_b = 0\)</span>, i.e. <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so).</p>
+<p>Thus, since <span class="math inline">\(a = a^{*}\)</span>, and since we assumed <span class="math inline">\(b \neq a\)</span>, we must have <span class="math inline">\(\int \psi_a^{*} \psi_b d{\bf r} = 0\)</span>, i.e. <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so).</p>
 </div>
 </div>
 <div id="eigenfunctions-and-eigenvalues" class="section level2" number="6.2">
@@ -373,13 +372,13 @@ b \int \psi_a^{*} \psi_b    &amp;= a^{*} \int \psi_a^{*} \psi_b \\
 <p>where <span class="math inline">\(\hat{A} \psi_a = a \psi_a\)</span> and <span class="math inline">\(\hat{A} \psi_b = b \psi_b\)</span>. Then, since <span class="math inline">\(\psi_a\)</span> and <span class="math inline">\(\psi_b\)</span> are orthogonal and normalized (usually abbreviated as orthonormal), the expectation value of <span class="math inline">\(A\)</span> is:</p>
 <p><span class="math display" id="eq:ee6">\[\begin{equation}
 \begin{aligned}
-&lt;A&gt; &amp;= \int \psi^{*} \hat{A} \psi \\
-    &amp;= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] \\
+&lt;A&gt; &amp;= \int \psi^{*} \hat{A} \psi d{\bf r} \\
+    &amp;= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] d{\bf r}\\
     &amp;= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
-\left[ a c_a \psi_a + b c_b \psi_b \right] \\    
-    &amp;= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a +
-b c_a^{*} c_b \int \psi_a^{*} \psi_b + a c_b^{*} c_a \int \psi_b^{*} \psi_a +
-b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\ 
+\left[ a c_a \psi_a + b c_b \psi_b \right] d{\bf r}\\    
+    &amp;= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a d{\bf r} +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b d{\bf r} + a c_b^{*} c_a \int \psi_b^{*} \psi_a d{\bf r} +
+b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d{\bf r}\\ 
     &amp;= a \vert c_a\vert^2 + b \vert c_b\vert^2.
 \end{aligned}
 \tag{6.22}    

@@ -99,7 +99,7 @@ However, $()^2$ is not a linear operator because:
 Hermitian operators are characterized by the self-adjoint property:
 
 \begin{equation}
-\int \psi_a^{*} (\hat{A} \psi_a) =  \int \psi_a (\hat{A} \psi_a)^{*},
+\int \psi_a^{*} (\hat{A} \psi_a)d{\bf r} =  \int \psi_a (\hat{A} \psi_a)^{*}d{\bf r},
 (\#eq:hop1)
 \end{equation}
 
@@ -114,8 +114,8 @@ we can prove that $a$ is real by replacing eq. \@ref(eq:hop2) into eq. \@ref(eq:
 
 \begin{equation}
 \begin{aligned}
-a \int \psi_a^{*} \psi_a &= a^{*} \int \psi_a \psi_a^{*} \\
-(a - a^{*}) \int \vert\psi_a\vert^2 &= 0,
+a \int \psi_a^{*} \psi_a d{\bf r}&= a^{*} \int \psi_a \psi_a^{*} d{\bf r}\\
+(a - a^{*}) \int \vert\psi_a\vert^2 d{\bf r} &= 0,
 \end{aligned}
 (\#eq:hop4)
 \end{equation}
@@ -125,16 +125,15 @@ and since $\vert\psi_a\vert^2$ is never negative, either $a = a^{*}$ or $\psi_a 
 The following additional properties of Hermitian operators can also be proven with some work:
 
 \begin{equation}
-\int \psi^{*}\hat{A} \psi =
-\int (\hat{A} \psi)^{*} \psi,
+\int \psi^{*}\hat{A} \psi d{\bf r} = \int (\hat{A} \psi)^{*} \psi d{\bf r},
 (\#eq:hop2b)
 \end{equation}
 
 and for any two states $\psi_1$ and $\psi_2$:
 
 \begin{equation}
-\int \psi_1^{*} \hat{A} \psi_2 =
-\int (\hat{A} \psi_1)^{*} \psi_2.
+\int \psi_1^{*} \hat{A} \psi_2 d{\bf r}=
+\int (\hat{A} \psi_1)^{*} \psi_2 d{\bf r}.
 (\#eq:hop3)
 \end{equation}
 
@@ -142,14 +141,14 @@ Taking $\psi_a$ and $\psi_b$ as eigenfunctions of $\hat{A}$ with eigenvalues $a$
 
 \begin{equation}
 \begin{aligned}
-\int \psi_a^{*} \hat{A} \psi_b &= \int (\hat{A} \psi_a)^{*} \psi_b	\\
-b \int \psi_a^{*} \psi_b	&= a^{*} \int \psi_a^{*} \psi_b \\
-(b - a) \int \psi_a^{*} \psi_b &= 0.
+\int \psi_a^{*} \hat{A} \psi_b d{\bf r} &= \int (\hat{A} \psi_a)^{*} \psi_b	d{\bf r}\\
+b \int \psi_a^{*} \psi_b d{\bf r}	&= a^{*} \int \psi_a^{*} \psi_b d{\bf r}\\
+(b - a) \int \psi_a^{*} \psi_b d{\bf r} &= 0.
 \end{aligned}
 (\#eq:hop5)
 \end{equation}
 
-Thus, since $a = a^{*}$, and since we assumed $b \neq a$, we must have $\int \psi_a^{*} \psi_b = 0$, i.e. $\psi_a$ and $\psi_b$ are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so). 
+Thus, since $a = a^{*}$, and since we assumed $b \neq a$, we must have $\int \psi_a^{*} \psi_b d{\bf r} = 0$, i.e. $\psi_a$ and $\psi_b$ are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so). 
 
 ## Eigenfunctions and Eigenvalues
 
@@ -200,13 +199,13 @@ where  $\hat{A} \psi_a = a \psi_a$ and  $\hat{A} \psi_b = b \psi_b$. Then, since
 
 \begin{equation}
 \begin{aligned}
-<A> &= \int \psi^{*} \hat{A} \psi \\
- 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] \\
+<A> &= \int \psi^{*} \hat{A} \psi d{\bf r} \\
+ 	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*} \hat{A} \left[ c_a \psi_a + c_b \psi_b \right] d{\bf r}\\
  	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
-\left[ a c_a \psi_a + b c_b \psi_b \right] \\	 
- 	&= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a +
-b c_a^{*} c_b \int \psi_a^{*} \psi_b + a c_b^{*} c_a \int \psi_b^{*} \psi_a +
-b \vert c_b\vert^2 \int \psi_b^{*} \psi_b \\ 
+\left[ a c_a \psi_a + b c_b \psi_b \right] d{\bf r}\\	 
+ 	&= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a d{\bf r} +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b d{\bf r} + a c_b^{*} c_a \int \psi_b^{*} \psi_a d{\bf r} +
+b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d{\bf r}\\ 
  	&= a \vert c_a\vert^2 + b \vert c_b\vert^2.
 \end{aligned}
 (\#eq:ee6)    
