@@ -14,7 +14,7 @@ Or, in other words, if we know the net force acting on a system of mass $m$ at p
 
 > ```{example, newtonianEx}
 
-A ball of mass $m$ is at ground level and tossed straight up from an initial position $q_0$ with an initial velocity $\dot{q}_0$ and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time $t$?).^[This example is based on Rhett Allain's blog post that can be (here)[https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/] ]
+A ball of mass $m$ is at ground level and tossed straight up from an initial position $q_0$ with an initial velocity $\dot{q}_0$ and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time $t$?).^[This example is based on Rhett Allain's blog post that can be found  (here)[https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/] ]
 
 *Solution:* Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:
 
