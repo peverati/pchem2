@@ -1,8 +1,9 @@
-# Classical Mechanics {#Classical}
+# Brief Summary of Classical Physics {#Classical}
 
 Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this environment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.
 
-## Newtonian Formulation
+## Classical Mechanics
+### Newtonian Formulation
 Classical mechanics as formulated by Isaac Newton (1652-1727) is all about forces. Newtonian mechanics works well for problems where we know the forces and have a reasonable coordinate system. In these cases, the net force acting on a system at position $q$ is simply:
 
 \begin{equation}
@@ -61,7 +62,7 @@ We can use the equation of motion obtained above to solve this problem, and obta
 
 The formula of Newtonian mechanics are not the only one we can use to solve a problem in classical mechanics. We have at least two other equivalent approaches to the same problem that might end up being more useful in certain situations. 
 
-## Lagrangian Formulation
+### Lagrangian Formulation
 Another way to derive the equations of motion for classical mechanics is via the use of the Lagrangian and the principle of least action. The Lagrangian formulation is obtained by starting from the definition of the Lagrangian of the system:
 
 \begin{equation}
@@ -140,7 +141,7 @@ Which is the same result as obtained from the Newtonian method.  Integrating twi
 The advantage of Lagrangian mechanics is that it is not constrained to use a coordinate system. For example, if we have a bead moving along a wire, we can define the coordinate system as the distance along the wire, making the formulas much simpler than in Newtonian mechanics.  Also, since the Lagrangian depends on kinetic and potential energy it does a much better job with constraint forces.
 
 
-## Hamiltonian mechanics
+### Hamiltonian mechanics
 
 A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum is defined in terms of the Lagrangian and the coordinates $(q,\dot{q})$:
  
@@ -216,4 +217,64 @@ which—once again—is the same result obtained for the two previous cases. Int
 
 ```
 
+## Coulomb's Law
+Coulomb's Law  states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them:
 
+\begin{equation}
+|\mathbf{F}| = k_e \frac{|q_1q_2|}{r^2} = \frac{1}{4\pi\varepsilon_0}\frac{|q_1q_2|}{r^{2}}.
+(\#eq:coulomb1)
+\end{equation}
+
+The constant $k_e$ is called the Coulomb constant and is equal to ${1}/{4\pi\varepsilon_0}$, where $\varepsilon_0$ is the electric constant; $k_e \simeq 8.988\times10^9\;\mathrm{Nm^2C^{-2}}$. If the product $q_1q_2$ is positive, the force between the two charges is repulsive; if the product is negative, the force between them is attractive.
+
+### Vector form of the Coulomb's Law law
+
+
+Coulomb's law in vector form states that the electrostatic force ${\textstyle \mathbf {F}_{1}}$ experienced by a charge, $q_{1}$ at position $\mathbf {r}_{1}$, in the vicinity of another charge, $q_{2}$ at position $\mathbf {r}_{2}$, in a vacuum is equal 
+\begin{equation}
+{\displaystyle \mathbf{F}_{1}={\frac {q_{1}q_{2}}{4\pi \varepsilon _{0}}}{\frac {\mathbf{r}_{1}-\mathbf{r}_{2}}{|\mathbf {r}_{1}-\mathbf{r}_{2}|^{3}}}={\frac {q_{1}q_{2}}{4\pi \varepsilon_{0}}}{\frac{\mathbf{\hat{r}} _{12}}{|\mathbf {r} _{12}|^{2}}}},
+(\#eq:coulomb2)
+\end{equation}
+
+where ${\textstyle {\boldsymbol {r}}_{12}={\boldsymbol {r}}_{1}-{\boldsymbol {r}}_{2}}$ is the vectorial distance between the charges, ${\textstyle {\widehat {\mathbf {r} }}_{12}={\frac {\mathbf {r} _{12}}{|\mathbf {r} _{12}|}}}$ a unit vector pointing from ${\textstyle q_{2}}$ to ${\textstyle q_{1}}$, and $\varepsilon_{0}$ the vacuum permittivity constant. Here, ${\textstyle \mathbf {\hat {r}} _{12}}$ is used for the vector notation.
+
+The vector form of Coulomb's law is simply the scalar definition of the law with the direction given by the unit vector, ${\textstyle {\widehat {\mathbf {r} }}_{12}}$, parallel with the line from charge $q_{2}$ to charge $q_{1}$. If both charges have the same sign (like charges) then the product $q_1q_2$ is positive and the direction of the force on $q_{1}$ is given by ${\textstyle {\widehat {\mathbf {r} }}_{12}}$; the charges repel each other. If the charges have opposite signs then the product $q_1q_2$ is negative and the direction of the force on $q_{1}$ is ${\textstyle -{\hat {\mathbf {r} }}_{12}}$; the charges attract each other.
+
+The electrostatic force ${\textstyle \mathbf {F} _{2}}$ experienced by $q_{2}$, according to Newton's third law, is ${\textstyle \mathbf {F} _{2}=-\mathbf {F} _{1}}$.
+
+### Electric field
+
+An electric field is a vector field that associates to each point in space the Coulomb force experienced by a unit test charge. The strength and direction of the Coulomb force ${\textstyle \mathbf {F} }$ on a charge 
+${\textstyle q_{t}}$ depends on the electric field ${\textstyle \mathbf {E} }$ established by other charges that it finds itself in, such that 
+${\textstyle \mathbf {F} =q_{t}\mathbf {E} }$. In the simplest case, the field is considered to be generated solely by a single source point charge. If the field is generated by a positive source point charge ${\textstyle q}$, the direction of the electric field points along lines directed radially outwards from it, i.e. in the direction that a positive point test charge ${\textstyle q_{t}}$ would move if placed in the field. For a negative point source charge, the direction is radially inwards.
+
+The magnitude of the electric field, $|\mathbf{E}|$, can be derived from Coulomb's law, eq. \@ref(eq:coulomb1), by choosing one of the point charges to be the source ($q_1=q$), and the other to be the test charge ($q_2=q_t$), and is given by:
+
+\begin{equation}
+{\displaystyle |\mathbf {E} |=|\mathbf{F}|\cdot q_t=\frac{1}{4\pi\varepsilon_0}{\frac {|q|}{r^{2}}}}
+(\#eq:coulomb3)
+\end{equation}
+
+
+### Electric Potential Energy
+
+The electric potential energy of a system of point charges is defined as the work required to assemble this system of charges by bringing them close together, as in the system from an infinite distance. 
+
+The electrostatic potential energy, $E$, of one point charge $q$ at position $\mathbf{r}$ in the presence of an electric field $\mathbf{E}$ is defined as the negative of the work $W$ done by the electrostatic force to bring it from a reference position at infinite distance $\mathbf{r}_{\infty}$ to that position $\mathbf{r}$:
+
+\begin{equation}
+{\displaystyle E=-W_{\mathbf{r}_{\infty}\rightarrow \mathbf{r}}=-\int _{{\mathbf {r}}_{\infty}}^{\mathbf {r} }q\mathbf {E} (\mathbf {r'} )\cdot d \mathbf {r'} },
+(\#eq:coulomb4)
+\end{equation}
+
+where $\mathbf{E}$ is the electrostatic field and $d\mathbf{r'}$ is the displacement vector in a curve from the reference position $\mathbf{r}_{\infty}$ to the final position $\mathbf{r}$.
+
+In the simplest case of two point charges $q_1$ and $q_2$, the electrostatic potential energy at position $r$, can be derived from Coulomb's Law, eq. \@ref(eq:coulomb1), as:
+
+
+\begin{equation}
+{\displaystyle E=|\mathbf{F}|\cdot r = {\frac{1}{4\pi\varepsilon_0}}{\frac{q_1q_2}{r}}}.
+(\#eq:coulomb5)
+\end{equation}
+
+Notice the difference between this last equation for the *energy*, $E$, eq.  \@ref(eq:coulomb5) and the previous eq.  \@ref(eq:coulomb3) for the *magnitude of the electric field*, $|\mathbf{E}|$. 

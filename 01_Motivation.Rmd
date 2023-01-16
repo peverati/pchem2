@@ -76,7 +76,7 @@ E = \frac{h c}{\lambda}
 (\#eq:wp2)
 \end{equation}
 
-Now we use Einstein's relativity result, $E = m c^2$, and the definition of mementum $p=mc$, to find:
+Now we use Einstein's relativity result, $E = m c^2$, and the definition of momentum $p=mc$, to find:
 \begin{equation}
 \lambda = \frac{h}{p},
 (\#eq:wp3)
