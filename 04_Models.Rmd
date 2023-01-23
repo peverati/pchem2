@@ -68,10 +68,10 @@ In other words, inside the box $\psi(x)$ describes a free particle, but outside 
 (\#eq:PIB2)
 \end{equation}
 
-Inside the box we can use Euler's formula to write the wave function as a linear combination of the positive and negative solutions:
+Inside the box the most general solution will be of the kind:
 
 \begin{equation}
-\psi(x)=A \exp(\pm ix)=A \sin kx + B \cos kx,
+\psi(x)=A \sin kx + B \cos kx,
 (\#eq:PIB3)
 \end{equation}
 
