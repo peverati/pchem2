@@ -277,4 +277,4 @@ In the simplest case of two point charges $q_1$ and $q_2$, the electrostatic pot
 (\#eq:coulomb5)
 \end{equation}
 
-This last equation will become very important in future chapoters. Notice the difference between eq.  \@ref(eq:coulomb5) for the *energy*, $E$, and eq.  \@ref(eq:coulomb3) for the *magnitude of the electric field*, $|\mathbf{E}|$. 
+This last equation will become very important in future chapters. Notice the difference between eq.  \@ref(eq:coulomb5) for the *energy*, $E$, and eq.  \@ref(eq:coulomb3) for the *magnitude of the electric field*, $|\mathbf{E}|$. 

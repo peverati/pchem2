@@ -1,59 +1,10 @@
 # Analytically Soluble Models {#Models}
 
-The TISEq can be solved analytically only in a few special cases. In this section, we will analyze the main four. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
+The TISEq can be solved analytically only in a few special cases. We saw one of those special cases, the free particle, at the end of the previous chapter. In this section, we will analyze three others. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
 
-## The Free Particle
+## The Particle in a Box
 
-By definition, the particle does not feel any external force, therefore $V(x)=0$, and the TISEq is written simply:
-
-\begin{equation}
-- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
-(\#eq:FP1)
-\end{equation}
-
-This equation can be rearranged to:
-
-\begin{equation}
-\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
-(\#eq:FP2)
-\end{equation}
-
-which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. Such a problem is easily solved by the function:
-
-\begin{equation}
-\psi(x) = A \exp(\pm ikx).
-(\#eq:FP3)
-\end{equation}
-
-The first and second derivatives of this function are:
-
-\begin{equation}
-\begin{aligned}
-\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
-\end{aligned}
-(\#eq:FP4)
-\end{equation}
-
-Comparing the second derivative in eq. \@ref(eq:FP4) with eq. \@ref(eq:FP2), we immediately see that if we set:
-
-\begin{equation}
-k^2 = \frac{2mE}{\hbar^2},
-(\#eq:FP5)
-\end{equation}
-
-we solve the original differential equation. Considering de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}{\hbar}$, to obtain:
-
-\begin{equation}
-E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
-(\#eq:FP6)
-\end{equation}
-
-which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).
-
-## The Particle in a Box {#rigidrotor}
-
-Now we can consider a particle constrained to move in a single dimension, under the influence of a potential $V(x)$ which is zero for  $0 \leq x \leq a$ and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where $V(x)$ is infinite, so $\psi(x)$ is nonzero only within $[0,a]$. The Schrödinger equation is thus:
+We can start by considering a particle constrained to move in a single dimension, under the influence of a potential $V(x)$ which is zero for  $0 \leq x \leq a$ and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where $V(x)$ is infinite, so $\psi(x)$ is nonzero only within $[0,a]$. The Schrödinger equation is thus:
 
 \begin{equation}
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)

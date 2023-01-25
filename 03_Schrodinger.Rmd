@@ -129,8 +129,57 @@ then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phas
 \end{equation}
 
 Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
-Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible:^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible. The total wave function, however, can in general be written as a linear combination (superposition) of simpler terms, such as:^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
 
 \begin{equation}
-\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}
+
+## Solution for the Free Particle
+
+We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore $V(x)=0$, and the TISEq is written simply:
+
+\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+(\#eq:FP1)
+\end{equation}
+
+This equation can be rearranged to:
+
+\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+(\#eq:FP2)
+\end{equation}
+
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. Such a problem is easily solved by the function:
+
+\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+(\#eq:FP3)
+\end{equation}
+
+The first and second derivatives of this function are:
+
+\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+(\#eq:FP4)
+\end{equation}
+
+Comparing the second derivative in eq. \@ref(eq:FP4) with eq. \@ref(eq:FP2), we immediately see that if we set:
+
+\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+(\#eq:FP5)
+\end{equation}
+
+we solve the original differential equation. Considering de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}{\hbar}$, to obtain:
+
+\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+(\#eq:FP6)
+\end{equation}
+
+which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).

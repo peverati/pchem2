@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-01-23" />
+<meta name="date" content="2023-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -110,13 +110,13 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-free-particle"><i class="fa fa-check"></i><b>4.1</b> The Free Particle</a></li>
-<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#rigidrotor"><i class="fa fa-check"></i><b>4.2</b> The Particle in a Box</a></li>
-<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.3</b> The Harmonic Oscillator</a></li>
-<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.4</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
+<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
+<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
@@ -324,10 +324,47 @@ f(t) = e^{-iEt / \hbar}
 \tag{3.16}
 \end{equation}\]</span></p>
 <p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.15)</a> are called stationary states. The state <span class="math inline">\(\psi(x, t)\)</span> is “stationary,” but the particle it describes is not!
-Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible:<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible. The total wave function, however, can in general be written as a linear combination (superposition) of simpler terms, such as:<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
 <p><span class="math display">\[\begin{equation}
-\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}\]</span></p>
+</div>
+<div id="solution-for-the-free-particle" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Solution for the Free Particle</h2>
+<p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
+<p><span class="math display" id="eq:FP1">\[\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+\tag{3.17}
+\end{equation}\]</span></p>
+<p>This equation can be rearranged to:</p>
+<p><span class="math display" id="eq:FP2">\[\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+\tag{3.18}
+\end{equation}\]</span></p>
+<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
+<p><span class="math display" id="eq:FP3">\[\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+\tag{3.19}
+\end{equation}\]</span></p>
+<p>The first and second derivatives of this function are:</p>
+<p><span class="math display" id="eq:FP4">\[\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+\tag{3.20}
+\end{equation}\]</span></p>
+<p>Comparing the second derivative in eq. <a href="Schrodinger.html#eq:FP4">(3.20)</a> with eq. <a href="Schrodinger.html#eq:FP2">(3.18)</a>, we immediately see that if we set:</p>
+<p><span class="math display" id="eq:FP5">\[\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+\tag{3.21}
+\end{equation}\]</span></p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.7)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p><span class="math display" id="eq:FP6">\[\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\tag{3.22}
+\end{equation}\]</span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Schrodinger.html#eq:FP3">(3.19)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Schrodinger.html#eq:FP6">(3.22)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
 
 </div>
 </div>
