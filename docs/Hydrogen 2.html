@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2</title>
+  <title>5 The Hydrogen Atom | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="5 The Hydrogen Atom | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Postulates of Quantum Mechanics | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="5 The Hydrogen Atom | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -24,15 +24,15 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-02-08" />
+<meta name="date" content="2023-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="Spin.html"/>
-<link rel="next" href="Weirdness.html"/>
+<link rel="prev" href="Models.html"/>
+<link rel="next" href="Operators.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -227,78 +227,87 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Postulates" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Postulates of Quantum Mechanics</h1>
-<p>In order to understand deeper quantum mechanics, scientists have derived a series of axioms that result in what are called <em>postulates of quantum mechanics</em>. These are, in fact, assumptions that we need to make to understand how the measured reality relates with the mathematics of quantum mechanics. It is important to notice that the postulates are necessary for the interpretation of the theory, but not for the mathematics behind it. Regarding of whether we interpret it or not, the mathematics is complete and consistent. In fact, as we will see in the next chapter, several controversies regarding the interpretation of the mathematics are still open, and different philosophies have been developed to rationalize the results. Recall also that there are different ways of writing the equation of quantum mechanics, all equivalent to each other (i.e., Schrödinger’s differential formulation and Heisenberg’s algebraic formulation that we saw in chapter <a href="Schrodinger.html#Schrodinger">3</a>). For these reasons, there is not an agreement on the number of postulates that are necessary to interpret the theory, and some philosophy and/or formulation might require more postulates than others. In this chapter, we will discuss the six postulates, as they are usually presented in chemistry and introductory physics textbooks and as they relate with a basic statistical interpretation of quantum mechanics. Regardless of the philosophical consideration on the meanings and numbers of the postulate, as well as their physical origin, these statements will make the interpretation of the theory a little easier, as we will see in the next chapter.</p>
-<div id="postulate-1-the-wave-function-postulate" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Postulate 1: The Wave Function Postulate</h2>
-<p>The state of a quantum mechanical system is completely specified by a function <span class="math inline">\(\Psi({\bf r}, t)\)</span> that depends on the coordinates of the particle(s) and on time. This function, called the wave function or state function, has the important property that <span class="math inline">\(\Psi^{*}({\bf r}, t)\Psi({\bf r}, t) d\tau\)</span> is the probability that the particle lies in the volume element <span class="math inline">\(d\tau\)</span> located at <span class="math inline">\({\bf r}\)</span> at time <span class="math inline">\(t\)</span>.</p>
-<p>The wave function must satisfy certain mathematical conditions because of this probabilistic interpretation. For the case of a single particle, the probability of finding it somewhere is 1, so that we have the normalization condition</p>
-<p><span class="math display" id="eq:post1">\[\begin{equation}
-\int_{-\infty}^{\infty} \Psi^{*}({\bf r}, t) \Psi({\bf r}, t) d\tau = 1
-\tag{8.1}  
+<div id="Hydrogen" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> The Hydrogen Atom</h1>
+<p>In this chapter we will consider the hydrogen atom as a proton fixed at the origin, orbited by an electron of reduced mass <span class="math inline">\(\mu\)</span>. The potential due to electrostatic attraction is:</p>
+<p><span class="math display" id="eq:HA1">\[\begin{equation}
+V(r) = - \frac{e^2}{4 \pi \varepsilon_0 r},
+\tag{5.1}
 \end{equation}\]</span></p>
-<p>It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter <a href="Models.html#Models">4</a>, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which typically involve derivation) to be applied without mathematical issues.</p>
-</div>
-<div id="postulate-2-experimental-observables" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Postulate 2: Experimental Observables</h2>
-<p>To every observable in classical mechanics there corresponds a linear, Hermitian operator in quantum mechanics. We have in part already discussed this postulate in chapter <a href="Operators.html#Operators">6</a>, albeit we didn’t call it as such. This postulate is necessary if we require the expectation value of an operator <span class="math inline">\(\hat{A}\)</span> to be real, as it should be.</p>
-</div>
-<div id="postulate-3-individual-measurements" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Postulate 3: Individual Measurements</h2>
-<p>In any measurement of the observable associated with operator <span class="math inline">\(\hat{A}\)</span>, the only values that will ever be observed are the eigenvalues <span class="math inline">\(a\)</span> that satisfy the eigenvalue equation:</p>
-<p><span class="math display" id="eq:post2">\[\begin{equation}
-\hat{A} \Psi = a \Psi.
-\tag{8.2}  
+<p>where <span class="math inline">\(\varepsilon_0\)</span> is the constant permittivity of vacuum.
+The kinetic energy term in the Hamiltonian is</p>
+<p><span class="math display" id="eq:HA2">\[\begin{equation}
+K = - \frac{\hbar^2}{2 \mu} \nabla^2,
+\tag{5.2}
 \end{equation}\]</span></p>
-<p>This postulate captures the central point of quantum mechanics: the values of dynamical variables can be quantized (although it is still possible to have a continuum of eigenvalues in the case of unbound states). If the system is in an eigenstate of <span class="math inline">\(\hat{A}\)</span> with eigenvalue <span class="math inline">\(a\)</span>, then any measurement of the quantity <span class="math inline">\(A\)</span> will yield <span class="math inline">\(a\)</span>.
-Although measurements must always yield an eigenvalue, the state does not have to be an eigenstate of <span class="math inline">\(\hat{A}\)</span> initially.</p>
-<p>An arbitrary state can be expanded in the complete set of eigenvectors of <span class="math inline">\(\hat{A}\)</span> <span class="math inline">\(\left(\hat{A}\Psi_i = a_i \Psi_i\right)\)</span> as:</p>
-<p><span class="math display" id="eq:post3">\[\begin{equation}
-\Psi = \sum_i^{n} c_i \Psi_i,
-\tag{8.3}  
+<p>where <span class="math inline">\(\nabla^2\)</span> is the Laplace operator (<em>Laplacian</em>) representing the divergence of the gradient of a function. Recall that in 1-dimension the kinetic energy is proportional to the second derivative of the wave function with respect to the position. In 3-dimension, the first derivative along all three dimension of space is called gradient, which is written in cartesian coordinates <span class="math inline">\(\nabla = \left(\frac{\partial}{\partial x},\frac{\partial}{\partial y},\frac{\partial}{\partial z} \right)\)</span>. The Laplacian is the divergence <span class="math inline">\(\nabla \cdot\)</span> of the gradient (effectively, it replaces the second derivatives in the 1-D case), and can be written in cartesian coordinates as <span class="math inline">\(\nabla^2=\nabla\cdot\nabla=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\)</span>. The TISEq for the Hydrogen atom is therefore:</p>
+<p><span class="math display" id="eq:HA2b">\[\begin{equation}
+{\displaystyle \left(-{\frac {\hbar ^{2}}{2\mu }}\nabla ^{2}-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\right)\psi (r,\theta ,\phi )=E\psi (r,\theta ,\phi )},
+\tag{5.3}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(n\)</span> may go to infinity. In this case, we only know that the measurement of <span class="math inline">\(A\)</span> will yield one of the values <span class="math inline">\(a_i\)</span>, but we don’t know which one. However, we do know the probability that eigenvalue <span class="math inline">\(a_i\)</span> will occur (it is the absolute value squared of the coefficient, <span class="math inline">\(\vert c_i\vert^2\)</span>, as we obtained already in chapter <a href="Operators.html#Operators">6</a>), leading to the fourth postulate below.</p>
-</div>
-<div id="postulate-4-expectation-values-and-collapse-of-the-wavefunction" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Postulate 4: Expectation Values and Collapse of the Wavefunction</h2>
-<p>If a system is in a state described by a normalized wave function <span class="math inline">\(\Psi\)</span>, then the average value of the observable corresponding to <span class="math inline">\(\hat{A}\)</span> is given by:</p>
-<p><span class="math display" id="eq:post4">\[\begin{equation}
-&lt;A&gt; = \int_{-\infty}^{\infty} \Psi^{*} \hat{A} \Psi d\tau.
-\tag{8.4}  
+<p>which, replacing the Laplacian in spherical coordinates, becomes:</p>
+<p><span class="math display" id="eq:HA3">\[\begin{equation}
+-{\frac {\hbar ^{2}}{2\mu }}\left[{\frac {1}{r^{2}}}{\frac {\partial }{\partial r}}\left(r^{2}{\frac {\partial \psi }{\partial r}}\right)+{\frac {1}{r^{2}\sin \theta }}{\frac {\partial }{\partial \theta }}\left(\sin \theta {\frac {\partial \psi }{\partial \theta }}\right)+{\frac {1}{r^{2}\sin ^{2}\theta }}{\frac {\partial ^{2}\psi }{\partial \phi ^{2}}}\right]-{\frac {e^{2}}{4\pi \varepsilon _{0}r}}\psi =E\psi.
+\tag{5.4}
 \end{equation}\]</span></p>
-<p>An important consequence of the fourth postulate is that, after measurement of <span class="math inline">\(\Psi\)</span> yields some eigenvalue <span class="math inline">\(a_i\)</span>, the wave function immediately “collapses” into the corresponding eigenstate <span class="math inline">\(\Psi_i\)</span>. In other words, measurement affects the state of the system. This fact is used in many experimental tests of quantum mechanics, such as the Stern-Gerlach experiment. Think again at the sequential experiment that we discussed in chapter <a href="Spin.html#Spin">7</a>. The act of measuring the spin along one coordinate is not simply a “filtration” of some pre-existing feature of the wave function, but rather an act that changes the nature of the wave function itself, affecting the outcome of future experiments. To this act corresponds the collapse of the wave function, a process that remains unexplained to date. Notice how the controversy is not in the mathematics of the experiment, which we already discussed in the previous chapter without issues. The issues rather arise because we don’t know how to define the measurement act in itself (other than the fact that it is some form of quantum mechanical procedure with clear and well-defined macroscopic outcomes). This is the reason why the collapse of the wave function is also sometimes called the <em>measurement problem</em> of quantum mechanics, and it is still a source of research and debate among modern scientists.</p>
-</div>
-<div id="postulate-5-time-evolution" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Postulate 5: Time Evolution</h2>
-<p>The wave function of a system evolves in time according to the time-dependent Schrödinger equation:</p>
-<p><span class="math display" id="eq:post5">\[\begin{equation}
-\hat{H} \Psi({\bf r}, t) = i \hbar \frac{\partial \Psi}{\partial t}.
-\tag{8.5}  
+<p>This equation seems very complicated, but comparing the term in between square brackets with the TISEq of the rigid rotor, we immediately see some connections. Eq. <a href="Hydrogen.html#eq:HA3">(5.4)</a> is a separable, partial differential equation that can be solved by factorizing the wave function <span class="math inline">\(\psi(r, \theta, \phi)\)</span> into <span class="math inline">\(R_{nl}(r)Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>, where <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span> are again the spherical harmonics that solved the TISEq for the rigid rotor. The radial part <span class="math inline">\(R(r)\)</span> obeys the equation:</p>
+<p><span class="math display" id="eq:HA4">\[\begin{equation}
+- \frac{\hbar^2}{2 \mu r^2} \frac{d}{dr} \left( r^2 \frac{dR}{dr}
+\right) \left[\frac{\hbar^2 \ell(\ell+1)}{2 \mu r^2} + V(r) - E \right] R(r) = 0,
+\tag{5.5}
 \end{equation}\]</span></p>
-<p>The central equation of quantum mechanics must be accepted as a postulate.</p>
-</div>
-<div id="postulate-6-pauli-exclusion-principle" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Postulate 6: Pauli Exclusion Principle</h2>
-<p>The total wave function of a system with <span class="math inline">\(N\)</span> spin-<span class="math inline">\(\frac{1}{2}\)</span> particles (also called <strong>fermions</strong>) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called <strong>bosons</strong>), the wave function is symmetric:</p>
-<p><span class="math display" id="eq:post6">\[\begin{equation}
+<p>which is called the radial equation for the hydrogen atom. The solutions of the radial part are:</p>
+<p><span class="math display" id="eq:HA5">\[\begin{equation}
+R_{n\ell}(r) = - \left[ \frac{(n - \ell - 1)!}{2n[(n+\ell)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{\ell+3/2}r^{\ell} e^{-r/na_0} L_{n+\ell}^{2\ell+1}
+\left( \frac{2r}{n a_0} \right)
+\tag{5.6}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(0 \leq \ell \leq n - 1\)</span>, and <span class="math inline">\(a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2}\)</span> is the Bohr radius. The functions <span class="math inline">\(L_{n+\ell}^{2\ell+1}\left(\frac{2r}{na_0}\right)\)</span> are the associated Laguerre functions.</p>
+<p>The hydrogen atom eigenfunctions are:</p>
+<p><span class="math display" id="eq:HA6">\[\begin{equation}
 \begin{aligned}
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{fermions}, \\
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= + \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{bosons}.
+\psi_{n\ell m_{\ell}}(r,\theta,\phi) &amp;= R_{n\ell}(r)Y_{\ell}^{m_{\ell}}(\theta,\phi) = \\
+&amp;= - \left[ \frac{(n - \ell - 1)!}{2n[(n+\ell)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{\ell+3/2}r^{\ell} e^{-r/na_0} L_{n+\ell}^{2\ell+1}
+\left( \frac{2r}{n a_0} \right) Y_{\ell}^{m_{\ell}}(\theta,\phi)
 \end{aligned}
-\tag{8.6}  
+\tag{5.7}
 \end{equation}\]</span></p>
-<p>Electronic spin must be included in this set of coordinates. As we will see in chapter <a href="Atoms.html#Atoms">10</a>, the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).</p>
+<p>The quantum numbers <span class="math inline">\(n,\ell,m_{\ell}\)</span> can take the following values:</p>
+<p><span class="math inline">\(n=1,2,3,\ldots,\infty\)</span> (principal quantum number),</p>
+<p><span class="math inline">\(\ell =0,1,2,\ldots ,n-1\)</span> (azimuthal quantum number),</p>
+<p><span class="math inline">\(m_{\ell}=-\ell ,\ldots ,\ell\)</span> (magnetic quantum number).</p>
+<p>These functions are called the <em>hydrogen atom orbitals</em>, and are usually first encountered in introductory chemistry textbooks. Notice that—by definition—an orbital is a complex function (i.e., it has both a real and an imaginary component) that describes <em>exclusively</em> one electron. Spherical harmonics are orthogonal to each other and they can be linearly combined them to form new solution to the TISEq where the imaginary part is removed. (Because of the orthogonality of spherical harmonics, the energy spectrum will not be affected by this operation.) These corresponding real orbitals are three-dimensional function that are not easily visualized in a three-dimensional space, since they require a four-dimensional one.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> Since there is no real consensus on what a wave function represent, the interpretation of orbitals is not straightforward.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> We will return on the interpretation problem in future chapters, but for now it is important to keep in mind these following facts:</p>
+<ul>
+<li>The shape of every hydrogen atom orbital—complex or real—is that of a function on the surface of a sphere (yes, this is true for every single one of them, since they all come from spherical harmonics, which are special functions defined on the surface of a sphere. Hydrogen <span class="math inline">\(2p\)</span> orbitals in real space <em>do not</em> have the shape of a dumbbell, as often is said in general chemistry textbooks. Same goes for <span class="math inline">\(d, f, \ldots\)</span> orbitals.)</li>
+<li>Each orbital is the mathematical description of one—and only one—electron (in other words, orbitals do not “contain” electrons, they “are” the functions that describe each electron.)</li>
+<li>Hydrogen orbitals are defined only for stystems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. <a href="Hydrogen.html#eq:HA2b">(5.3)</a> does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter <a href="Atoms.html#Atoms">10</a> how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)</li>
+</ul>
+<p>The hydrogen atom eigenvalues are:</p>
+<p><span class="math display" id="eq:HA7">\[\begin{equation}
+E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
+\tag{5.8}
+\end{equation}\]</span></p>
+<p>Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azimuthal and magnetic quantum numbers, <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m\)</span>. Energy levels with the same <span class="math inline">\(n\)</span>, but different <span class="math inline">\(\ell\)</span> and/or <span class="math inline">\(m\)</span> are called <em>degenerate states</em>, since they all have the same energy. This is, once again, source of misinterpretation in most general chemistry textbook:</p>
+<ul>
+<li>According to the TISEq, the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals of the hydrogen atom have the same energy.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></li>
+</ul>
 
 </div>
+<div class="footnotes">
+<hr />
+<ol start="13">
+<li id="fn13"><p>If it is not clear why you need a 4-D space to visualize a 3-D function, think at the fact that we use a 2-D space (the Cartesian plane) to visualize a 1-D function (<span class="math inline">\(f(x)\)</span>).<a href="Hydrogen.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<li id="fn14"><p>At least not as straightforward as it is given in introductory chemistry textbooks.<a href="Hydrogen.html#fnref14" class="footnote-back">↩︎</a></p></li>
+<li id="fn15"><p>In practice, this is not true, because of a tiny effect called the <a href="https://en.wikipedia.org/wiki/Lamb_shift">Lamb shift</a>. The description of this effect requires to go beyond the Schrödinger equation—and essentially beyond quantum mechanics—into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the <span class="math inline">\(2s-2p\)</span> energy difference. The difference that is usually discussed in the context of the aufbau principle is a many-electron effect, as we will discuss in chapter <a href="Atoms.html#Atoms">10</a>, and does not apply to hydrogen.<a href="Hydrogen.html#fnref15" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="Spin.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="Weirdness.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="Models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Operators.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -329,7 +338,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/08_Postulates.Rmd",
+"link": "https://github.com/peverati/pchem2/edit/master/05_Hydrogen.Rmd",
 "text": "Edit"
 },
 "history": {

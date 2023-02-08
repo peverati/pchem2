@@ -121,5 +121,10 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 (\#eq:RR2)
 \end{equation}
 
-where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number $\ell$, similarly to the previous two cases. The index $m_{\ell}$ that appears in the spherical harmonics will assume some importance in future chapters. 
+where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.
 
+Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,^[You can think of this as either the "speed" at which the rotor is rotating, or even better, as its "angular frequency".] and also the orientation in space at which the rotor is allowed to rotate changes discontinuously (see figure \@ref(fig:Fig1c4)). 
+
+```{r Fig1c4, out.width='50%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Illustration of the quantization of the angular momentum.'}
+knitr::include_graphics('./img/OEP_wiki10.png')
+```

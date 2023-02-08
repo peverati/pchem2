@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{08 February 2023}
+\date{25 January 2023}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -733,13 +733,13 @@ Wave functions of the form of eq. \eqref{eq:TDSEq6b} are called stationary state
 Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible. The total wave function, however, can in general be written as a linear combination (superposition) of simpler terms, such as:\footnote{This sections was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{here}.}
 
 \begin{equation}
-\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r})
 \end{equation}
 
 \hypertarget{solution-for-the-free-particle}{%
 \section{Solution for the Free Particle}\label{solution-for-the-free-particle}}
 
-We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore \(V(x)=0\), and the TISEq is written simply:
+We will see here how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore \(V(x)=0\), and the TISEq is written simply:
 
 \begin{equation}
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
@@ -913,18 +913,7 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 \label{eq:RR2}
 \end{equation}
 
-where \(\ell=0,1,2,\ldots\) is the \emph{azimuthal quantum number}, and \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\) is the \emph{magnetic quantum number}. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Notice that the energy does not depend on the second index \(m_{\ell}\), and the functions with fixed \(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\) have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.
-
-Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,\footnote{You can think this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} and also the orientation in space at which the rotor is allowed to rotate changes discontinuously (see figure \ref{fig:Fig1c4}).
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_wiki10} 
-
-}
-
-\caption{Illustration of the quantization of the angular momentum.}\label{fig:Fig1c4}
-\end{figure}
+where \(\ell=0,1,2,\ldots\) is the \emph{azimuthal quantum number}, and \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\) is the \emph{magnetic quantum number}. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Notice that the energy does not depend on the second index \(m_{\ell}\), and the functions with fixed \(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\) have the same energy. Since this problem was, in fact, a one-dimensional problem, it results in just one quantum number \(\ell\), similarly to the previous two cases. The index \(m_{\ell}\) that appears in the spherical harmonics will assume some importance in future chapters.
 
 \hypertarget{Hydrogen}{%
 \chapter{The Hydrogen Atom}\label{Hydrogen}}
