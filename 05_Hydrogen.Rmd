@@ -70,7 +70,7 @@ These functions are called the *hydrogen atom orbitals*, and are usually first e
 
 - The shape of every hydrogen atom orbital—complex or real—is that of a function on the surface of a sphere (yes, this is true for every single one of them, since they all come from spherical harmonics, which are special functions defined on the surface of a sphere. Hydrogen $2p$ orbitals in real space *do not* have the shape of a dumbbell, as often is said in general chemistry textbooks. Same goes for $d, f, \ldots$ orbitals.)
 - Each orbital is the mathematical description of one—and only one—electron (in other words, orbitals do not "contain" electrons, they "are" the functions that describe each electron.)
-- Hydrogen orbitals are defined only for stystems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. \@ref(eq:HA2b) does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter \@ref(Atoms) how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)
+- Hydrogen orbitals are defined only for systems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. \@ref(eq:HA2b) does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter \@ref(Atoms) how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)
 
 The hydrogen atom eigenvalues are:
 

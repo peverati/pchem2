@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-02-08" />
+<meta name="date" content="2023-02-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -304,9 +304,9 @@ As we showed in the previous section, all particles leaving the first Stern-Gerl
 <p>where <span class="math inline">\(i\)</span> is the imaginary unit (<span class="math inline">\(i^2=-1\)</span>). In other words, for <span class="math inline">\(\hat{S}_z\)</span> we have eigenvalue equations, while the remaining components have the effect of permuting state <span class="math inline">\(\phi_{\uparrow}\)</span> with state <span class="math inline">\(\phi_{\downarrow}\)</span> after multiplication by suitable constants. We can use these equations, together with eq. <a href="Operators.html#eq:bp5">(6.7)</a>, to calculate the commutator for each couple of spin projector operators:</p>
 <p><span class="math display" id="eq:spop3">\[\begin{equation}
 \begin{aligned}
-\left[\hat{S}_x, \hat{S}_y\right] &amp;= i\hat{S}_z \\
-\left[\hat{S}_y, \hat{S}_z\right] &amp;= i\hat{S}_x \\
-\left[\hat{S}_z, \hat{S}_x\right] &amp;= i\hat{S}_y,
+\left[\hat{S}_x, \hat{S}_y\right] &amp;= i\hbar\hat{S}_z \\
+\left[\hat{S}_y, \hat{S}_z\right] &amp;= i\hbar\hat{S}_x \\
+\left[\hat{S}_z, \hat{S}_x\right] &amp;= i\hbar\hat{S}_y,
 \end{aligned}
 \tag{7.10}  
 \end{equation}\]</span></p>
@@ -320,8 +320,8 @@ As we showed in the previous section, all particles leaving the first Stern-Gerl
 \begin{aligned}
 \left[\hat{S}_x, \hat{S}_y\right] \phi_{\uparrow} &amp;= \hat{S}_x\hat{S}_y\phi_{\uparrow}-\hat{S}_y\hat{S}_x\phi_{\uparrow} \\
 &amp;= \hat{S}_x \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
-&amp;= \frac{\hbar}{2}i \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \frac{\hbar}{2} \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
-&amp;= \left(\frac{\hbar}{4}+\frac{\hbar}{4}\right)i\phi_{\uparrow} \\
+&amp;= \frac{\hbar}{2} \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \left(-\frac{\hbar}{2}i\right) \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
+&amp;= \left(\frac{\hbar^2}{4}+\frac{\hbar^2}{4}\right)i\phi_{\uparrow} \\
 &amp;= \frac{\hbar}{2}i \phi_{\uparrow} \\
 &amp;= i\hat{S}_z  \phi_{\uparrow} 
 \end{aligned}

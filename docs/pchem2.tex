@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{08 February 2023}
+\date{24 February 2023}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -915,16 +915,7 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 
 where \(\ell=0,1,2,\ldots\) is the \emph{azimuthal quantum number}, and \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\) is the \emph{magnetic quantum number}. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Notice that the energy does not depend on the second index \(m_{\ell}\), and the functions with fixed \(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\) have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.
 
-Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,\footnote{You can think this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} and also the orientation in space at which the rotor is allowed to rotate changes discontinuously (see figure \ref{fig:Fig1c4}).
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\linewidth]{./img/OEP_wiki10} 
-
-}
-
-\caption{Illustration of the quantization of the angular momentum.}\label{fig:Fig1c4}
-\end{figure}
+Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} and also the orientation in space at which the rotor is allowed to rotate changes discontinuously.
 
 \hypertarget{Hydrogen}{%
 \chapter{The Hydrogen Atom}\label{Hydrogen}}
@@ -1004,7 +995,7 @@ These functions are called the \emph{hydrogen atom orbitals}, and are usually fi
 \item
   Each orbital is the mathematical description of one---and only one---electron (in other words, orbitals do not ``contain'' electrons, they ``are'' the functions that describe each electron.)
 \item
-  Hydrogen orbitals are defined only for stystems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. \eqref{eq:HA2b} does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter \ref{Atoms} how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)
+  Hydrogen orbitals are defined only for systems that contain one electron. When more than one electron is present in an atom, the TISEq in eq. \eqref{eq:HA2b} does not describe the system anymore. In these more complicated situations the TISEq cannot be solved analytically, and orbitals cannot be easily defined (we will see in chapter \ref{Atoms} how we can circumvent this issue in an approximate manner, and why general chemistry textbook talk of orbitals for every atom and molecule.)
 \end{itemize}
 
 The hydrogen atom eigenvalues are:
@@ -1485,9 +1476,9 @@ where \(i\) is the imaginary unit (\(i^2=-1\)). In other words, for \(\hat{S}_z\
 
 \begin{equation}
 \begin{aligned}
-\left[\hat{S}_x, \hat{S}_y\right] &= i\hat{S}_z \\
-\left[\hat{S}_y, \hat{S}_z\right] &= i\hat{S}_x \\
-\left[\hat{S}_z, \hat{S}_x\right] &= i\hat{S}_y,
+\left[\hat{S}_x, \hat{S}_y\right] &= i\hbar\hat{S}_z \\
+\left[\hat{S}_y, \hat{S}_z\right] &= i\hbar\hat{S}_x \\
+\left[\hat{S}_z, \hat{S}_x\right] &= i\hbar\hat{S}_y,
 \end{aligned}
 \label{eq:spop3}  
 \end{equation}
@@ -1504,8 +1495,8 @@ The equations in \eqref{eq:spop3} can be proved by writing the full eigenvalue e
 \begin{aligned}
 \left[\hat{S}_x, \hat{S}_y\right] \phi_{\uparrow} &= \hat{S}_x\hat{S}_y\phi_{\uparrow}-\hat{S}_y\hat{S}_x\phi_{\uparrow} \\
 &= \hat{S}_x \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
-&= \frac{\hbar}{2}i \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \frac{\hbar}{2} \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
-&= \left(\frac{\hbar}{4}+\frac{\hbar}{4}\right)i\phi_{\uparrow} \\
+&= \frac{\hbar}{2} \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \left(-\frac{\hbar}{2}i\right) \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
+&= \left(\frac{\hbar^2}{4}+\frac{\hbar^2}{4}\right)i\phi_{\uparrow} \\
 &= \frac{\hbar}{2}i \phi_{\uparrow} \\
 &= i\hat{S}_z  \phi_{\uparrow} 
 \end{aligned}
