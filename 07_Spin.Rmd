@@ -123,8 +123,8 @@ The equations in \@ref(eq:spop3) can be proved by writing the full eigenvalue eq
 &= \hat{S}_x \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)-\hat{S}_y \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
 &= \frac{\hbar}{2} \left(\frac{\hbar}{2}i \phi_{\downarrow} \right)- \left(-\frac{\hbar}{2}i\right) \left(\frac{\hbar}{2} \phi_{\downarrow} \right) \\
 &= \left(\frac{\hbar^2}{4}+\frac{\hbar^2}{4}\right)i\phi_{\uparrow} \\
-&= \frac{\hbar}{2}i \phi_{\uparrow} \\
-&= i\hat{S}_z  \phi_{\uparrow} 
+&= \frac{\hbar^2}{2}i \phi_{\uparrow} \\
+&= i\hbar\hat{S}_z  \phi_{\uparrow} 
 \end{aligned}
 (\#eq:spop4) 
 \end{equation}
