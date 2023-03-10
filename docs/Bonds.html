@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-02-24" />
+<meta name="date" content="2023-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -83,13 +83,12 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> The Motivation for Quantum Mechanics</a>
+<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> Introduction to Quantum Mechanics</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
-<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#quantum-mechanics-is-bizarre"><i class="fa fa-check"></i><b>1.2</b> Quantum Mechanics is Bizarre</a></li>
-<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
-<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
-<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.5</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>1.1</b> Historical Context</a></li>
+<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -157,7 +156,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="9.1.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>9.1.2</b> “Which way” experiment</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>9.2</b> Heisenberg’s Uncertainty Principle</a></li>
-<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a></li>
+<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -333,7 +335,7 @@ Figure 12.4: Geometry of the hydrogen molecule.
 \end{aligned}
 \tag{12.11}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function by considering two <span class="math inline">\(1s\)</span> atomic orbitals <span class="math inline">\(a(\mathbf{r}_1)\)</span> and <span class="math inline">\(b(\mathbf{r}_2)\)</span> centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, having an overlap <span class="math inline">\(S\)</span>. If we Neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the resulting Hartree-Fock equations are exactly the same as in the previous case. The most important difference, though, is that in this case we need to consider the spin of the two electrons. Proceeding similarly to what we have done for the many-electron atom in chapter <a href="Atoms.html#Atoms">10</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant of doubly occupied MOs. For the ground state, we can use the lowest energy orbital obtained from the solution of the Hartree-Fock equations, which we already obtained in eq. <a href="Bonds.html#eq:bond8">(12.8)</a>. Using a notation that is based on the symmetry of the molecule, this bonding orbital in <span class="math inline">\(\text{H}_2\)</span> is usually called <span class="math inline">\(\sigma_g\)</span>, where <span class="math inline">\(\sigma\)</span> refers to the <span class="math inline">\(\sigma\)</span> bond that forms between the two atoms. The Slater determinant for the ground state is therefore:<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a></p>
+<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function by considering two <span class="math inline">\(1s\)</span> atomic orbitals <span class="math inline">\(a(\mathbf{r}_1)\)</span> and <span class="math inline">\(b(\mathbf{r}_2)\)</span> centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, having an overlap <span class="math inline">\(S\)</span>. If we Neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the resulting Hartree-Fock equations are exactly the same as in the previous case. The most important difference, though, is that in this case we need to consider the spin of the two electrons. Proceeding similarly to what we have done for the many-electron atom in chapter <a href="Atoms.html#Atoms">10</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant of doubly occupied MOs. For the ground state, we can use the lowest energy orbital obtained from the solution of the Hartree-Fock equations, which we already obtained in eq. <a href="Bonds.html#eq:bond8">(12.8)</a>. Using a notation that is based on the symmetry of the molecule, this bonding orbital in <span class="math inline">\(\text{H}_2\)</span> is usually called <span class="math inline">\(\sigma_g\)</span>, where <span class="math inline">\(\sigma\)</span> refers to the <span class="math inline">\(\sigma\)</span> bond that forms between the two atoms. The Slater determinant for the ground state is therefore:<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
 <p><span class="math display" id="eq:bond12">\[\begin{equation}
 \Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\phi_{\uparrow},\sigma_{g}\phi_{\downarrow}\rangle,=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right],
 \tag{12.12}
@@ -364,8 +366,8 @@ Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
 </div>
 <div class="footnotes">
 <hr />
-<ol start="27">
-<li id="fn27"><p>Compare this equation to <a href="Atoms.html#eq:atom6">(10.6)</a> for the helium atom.<a href="Bonds.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<ol start="26">
+<li id="fn26"><p>Compare this equation to <a href="Atoms.html#eq:atom6">(10.6)</a> for the helium atom.<a href="Bonds.html#fnref26" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

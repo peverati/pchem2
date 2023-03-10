@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-02-24" />
+<meta name="date" content="2023-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -83,13 +83,12 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> The Motivation for Quantum Mechanics</a>
+<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> Introduction to Quantum Mechanics</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
-<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#quantum-mechanics-is-bizarre"><i class="fa fa-check"></i><b>1.2</b> Quantum Mechanics is Bizarre</a></li>
-<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
-<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
-<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.5</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>1.1</b> Historical Context</a></li>
+<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -157,7 +156,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="9.1.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>9.1.2</b> “Which way” experiment</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>9.2</b> Heisenberg’s Uncertainty Principle</a></li>
-<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a></li>
+<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -314,21 +316,21 @@ E_n = \hbar \omega \left(n + \frac{1}{2} \right),
 \frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E_{\ell} \psi(r),
 \tag{4.14}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> The eigenvalues are simply:</p>
+<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a> The eigenvalues are simply:</p>
 <p><span class="math display" id="eq:RR2">\[\begin{equation}
 E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 \tag{4.15}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(\ell=0,1,2,\ldots\)</span> is the <em>azimuthal quantum number</em>, and <span class="math inline">\(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> is the <em>magnetic quantum number</em>. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Notice that the energy does not depend on the second index <span class="math inline">\(m_{\ell}\)</span>, and the functions with fixed <span class="math inline">\(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\)</span> have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.</p>
-<p>Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> and also the orientation in space at which the rotor is allowed to rotate changes discontinuously.</p>
+<p>Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> and also the orientation in space at which the rotor is allowed to rotate changes discontinuously.</p>
 
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="12">
-<li id="fn12"><p>For a description of the spherical harmonics see <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">here</a><a href="Models.html#fnref12" class="footnote-back">↩︎</a></p></li>
-<li id="fn13"><p>You can think of this as either the “speed” at which the rotor is rotating, or even better, as its “angular frequency”.<a href="Models.html#fnref13" class="footnote-back">↩︎</a></p></li>
+<ol start="11">
+<li id="fn11"><p>For a description of the spherical harmonics see <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">here</a><a href="Models.html#fnref11" class="footnote-back">↩︎</a></p></li>
+<li id="fn12"><p>You can think of this as either the “speed” at which the rotor is rotating, or even better, as its “angular frequency”.<a href="Models.html#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

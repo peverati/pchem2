@@ -126,3 +126,20 @@ Comparing the wave function on the left of the barrier with the one on its right
 \end{equation}
 
 As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that $k$ is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter \@ref(Models).
+
+
+### Tunneling in chemical reactions
+The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, more rapid than the classical prediction would predict. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine ($\text{PH}_3$) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).
+
+One of the primary effects of tunneling can be seen on the KIE. This is because tunneling allows some of the isotopes to bypass the activation barrier, making it easier for them to react. As a result, the reaction rate for the heavier isotope is increased relative to what it would be in the absence of tunneling, leading to a reduction in the KIE. In the case of the umbrella inversion reaction, replacing ammonia with its deuterated counterpart, $\text{ND}_3$, leads to a higher activation barrier, resulting in a slower reaction rate.
+
+The impact of tunneling on the KIE can be quantified using transition state theory (TST), which accounts for the probability of tunneling through the activation barrier. The KIE is given by:
+
+\begin{equation}
+\text{KIE} = \frac{k(\text{H})}{k(\text{D})} = \left[\frac{m(\text{H})}{m(\text{D})}\right]^{\frac{1}{2}} \frac{k_{\text{tunneling}}}{k_{\text{classical}}},
+(\#eq:kie)  
+\end{equation}
+
+where $k(\text{H})$ and $k(\text{D})$ are the rate constants for the reaction involving hydrogen and deuterium, respectively; $m(\text{H})$ and $m(\text{D})$ are the masses of hydrogen and deuterium; $k_{\text{tunneling}}$ is the rate constant for tunneling; and $k_{\text{classical}}$ is the rate constant in the absence of tunneling.
+
+Using experimental data for the umbrella inversion reaction, the KIE can be calculated to be approximately 1.3 in the absence of tunneling. However, when tunneling is allowed, the KIE is reduced to around 1.1. This reduction in the KIE due to tunneling is a significant effect and must be considered when studying chemical reactions involving light atoms.

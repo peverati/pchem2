@@ -1,22 +1,21 @@
 \cleardoublepage
 \pagenumbering{arabic}
-# The Motivation for Quantum Mechanics {#Motivation}
+# Introduction to Quantum Mechanics {#Motivation}
 
-## Introduction
-Quantum mechanics is an important intellectual achievement of the 20th century. It is one of the more sophisticated field in physics that has affected our understanding of nano-meter length scale systems important for chemistry, materials, optics, and electronics. The existence of orbitals and energy levels in atoms can only be explained by quantum mechanics. Quantum mechanics can explain the behaviors of insulators, conductors, semi-conductors, and giant magneto-resistance. It can explain the quantization of light and its particle nature in addition to its wave nature. Quantum mechanics can also explain the radiation of hot body, and its change of color with respect to temperature. It explains the presence of holes and the transport of holes and electrons in electronic devices.
-Quantum mechanics has played an important role in photonics, quantum electronics, and micro-electronics. But many more emerging technologies require the understanding of quantum mechanics; and hence, it is important that scientists and engineers understand quantum mechanics better. One area is nano-technologies due to the recent advent of nano-fabrication techniques. Consequently, nano-meter size systems are more common place. In electronics, as transistor devices become smaller, how the electrons move through the device is quite different from when the devices are bigger: nano-electronic transport is quite different from micro-electronic transport.
-The quantization of electromagnetic field is important in the area of nano-optics and quantum optics. It explains how photons interact with atomic systems or materials. It also allows the use of electromagnetic or optical field to carry quantum information. Moreover, quantum mechanics is also needed to understand the interaction of photons with materials in solar cells, as well as many topics in material science.
-When two objects are placed close together, they experience a force called the Casimir force that can only be explained by quantum mechanics. This is important for the understanding of micro/nano-electromechanical sensor systems (M/NEMS). Moreover, the understanding of spins is important in spintronics, another emerging technology where giant magneto-resistance, tunneling magneto-resistance, and spin transfer torque are being used.
-Quantum mechanics is also giving rise to the areas of quantum information, quantum communication, quantum cryptography, and quantum computing. It is seen that the richness
-of quantum physics will greatly affect the future generation technologies in many aspects.
+## Historical Context
+Quantum mechanics is a branch of physics that deals with the behavior of matter and energy at the atomic and subatomic level. It is a fundamental theory that has revolutionized our understanding of the physical world, and it is a cornerstone of modern chemistry. But the road to the development of quantum mechanics was a long and winding one that spanned several decades and involved many of the greatest minds in physics.
 
-## Quantum Mechanics is Bizarre
-The development of quantum mechanics is a great intellectual achievement, but at the same time, it is bizarre. The reason is that quantum mechanics is quite different from classical physics. The development of quantum mechanics is likened to watching two players having a game of chess, but the watchers have not a clue as to what the rules of the game are. By observations, and conjectures, finally the rules of the game are outlined. Often, equations are conjectured like conjurors pulling tricks out of a hat to match experimental observations. It is the interpretations of these equations that can be quite bizarre.
-Quantum mechanics equations were postulated to explain experimental observations, but the deeper meanings of the equations often confused even the most gifted. Even though Einstein received the Nobel prize for his work on the photo-electric effect that confirmed that light energy is quantized, he himself was not totally at ease with the development of quantum mechanics as charted by the younger physicists. He was never comfortable with the probabilistic interpretation of quantum mechanics by Born and the Heisenberg uncertainty principle: “God doesn’t play dice,” was his statement assailing the probabilistic interpretation. He proposed “hidden variables” to explain the random nature of many experimental observations. He was thought of as the “old fool” by the younger physicists during his time.
-Schrödinger came up with the bizarre “Schrödinger cat paradox” that showed the struggle that physicists had with quantum mechanics’s interpretation. But with today’s understanding of quantum mechanics, the paradox is a thing of yesteryear.
-The latest twist to the interpretation in quantum mechanics is the parallel universe view that explains the multitude of outcomes of the prediction of quantum mechanics. All outcomes are possible, but with each outcome occurring in different universes that exist in parallel with respect to each other.^[This section was adapted in part from Prof. Weng Cho CHEW's Quantum Mechanics Made Simple Lecture Notes available [here](http://wcchew.ece.illinois.edu/chew/course/qmall20121005.pdf).]
+The story of quantum mechanics begins in the late 19th century, with the discovery of the electron by J.J. Thomson in 1897. This discovery, along with the discovery of radioactivity by Marie and Pierre Curie in the same year, sparked a flurry of activity in the field of atomic physics. Scientists were eager to understand the structure and behavior of atoms, and they soon discovered that classical physics was inadequate for this task.
 
-The development of quantum mechanics was initially motivated by two observations which demonstrated the inadeqacy of classical physics. These are the "ultraviolet catastrophe" and the photoelectric effect.
+In 1900, the German physicist Max Planck made a breakthrough that would lay the groundwork for quantum mechanics. Planck was studying the spectrum of light emitted by a heated object, and he found that the energy of the emitted radiation was not continuous, as classical physics would have predicted, but instead came in discrete packets or "quanta". This discovery was revolutionary and opened up a new era in physics.
+
+The next major milestone in the development of quantum mechanics came in 1913, with the Bohr model of the atom. Danish physicist Niels Bohr proposed a new model of the atom that incorporated the idea of quantized energy levels. According to Bohr's model, electrons could only occupy certain discrete energy levels, and when they moved from one level to another, they emitted or absorbed energy in the form of light. Bohr's model was a significant step forward, but it had limitations. It could only accurately predict the behavior of simple atoms with one or two electrons, and it did not account for the complex spectra of more complex atoms.
+
+It was not until the mid-1920s that a truly comprehensive theory of quantum mechanics began to emerge. In 1925, Austrian physicist Erwin Schrödinger published his famous equation, which described the wave-like behavior of particles at the atomic level. Schrödinger's equation was a mathematical triumph, but it was also highly abstract and difficult to interpret. At the same time, Werner Heisenberg, a German physicist, was developing a different approach to quantum mechanics, known as matrix mechanics. Heisenberg's theory was based on matrices, which are arrays of numbers that can be used to describe the properties of quantum particles. Heisenberg's approach was highly mathematical, but it provided a more intuitive interpretation of the behavior of particles at the atomic level. The two approaches, matrix mechanics and wave mechanics, were eventually shown to be mathematically equivalent, and together they formed the basis of modern quantum mechanics.
+
+In the decades that followed, quantum mechanics continued to evolve, with new discoveries and theories expanding our understanding of the behavior of matter and energy at the atomic and subatomic level. Today, quantum mechanics is a thriving field of research, with applications in chemistry, physics, and many other areas of science.
+
+The development of quantum mechanics was driven by a series of discoveries and experiments that challenged classical physics and its inability to explain the behavior of atoms. These are the "ultraviolet catastrophe", the photoelectric effect, and the wave-particle duality. We will discuss each of these cases below.
 
 ## The Ultraviolet Catastrophe
 
@@ -38,14 +37,14 @@ where $B_{\lambda }$ is the intensity of the radiation —expressed as the power
 $c$ is the speed of light, $k_{\mathrm{B}}$ is the Boltzmann constant, and $T$ is the temperature in kelvins.
 The paradox —or rather the breakdown of the Rayleigh–Jeans formula— happens at small wavelength $\lambda$. If we take the limit for $\lambda \rightarrow 0$ in eq. \@ref(eq:rjlaw), we obtain that $B_{\lambda } \rightarrow \infty$. In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
 
-Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency, i.e., 
+Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency:
 
 \begin{equation}
-E = n h \nu = n h \frac{c}{\lambda}
+E = n h \nu = n h \frac{c}{\lambda},
 (\#eq:uvcat)
 \end{equation}
 
-Planck's assumptions led to the correct form of the spectral function for a black body:
+with $n$ being an integer number bigger than zero. Planck's assumptions led to the correct form of the spectral function for a black body:
 \begin{equation}
 B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
 (\#eq:uvcatpl)
@@ -55,10 +54,47 @@ If we now take the limit for  $\lambda \rightarrow 0$ of eq. \@ref(eq:uvcatpl), 
 
 ## The Photoelectric Effect
 
-In 1886 and 1887, Heinrich Hertz discovered that ultraviolet light can cause electrons to be ejected from a metal surface. According to the classical wave theory of light, the intensity of the light determines the amplitude of the wave, and so a greater light intensity should cause the electrons on the metal to oscillate more violently and to be ejected with a greater kinetic energy. In contrast, the experiment showed that the kinetic energy of the ejected electrons depends on the frequency of the light. The light intensity affects only the number of ejected electrons and not their kinetic energies.
-Einstein tackled the problem of the photoelectric effect in 1905. Instead of assuming that the electronic oscillators had energies given by Planck's formula, eq. \@ref(eq:uvcat), Einstein assumed that the radiation itself consisted of packets of energy $E = h \nu$, which are now called photons. Einstein successfully explained the photoelectric effect using this assumption, and he calculated a value of $h$ close to that obtained by Planck.
+The photoelectric effect refers to the phenomenon where electrons are emitted from a metal surface when it is illuminated with light of a certain frequency. This effect was first observed by Heinrich Hertz in 1887 and later explained by Albert Einstein in 1905, who proposed that light energy was quantized into discrete particles, or photons, each with an energy proportional to its frequency.
 
-Two years later, Einstein showed that not only is light quantized, but so are atomic vibrations. Classical physics predicts that the molar heat capacity at constant volume ($C_V$) of a crystal is $3 R$, where $R$ is the molar gas constant. This works well for high temperatures, but for low temperatures $C_V$ actually falls to zero. Einstein was able to explain this result by assuming that the oscillations of atoms about their equilibrium positions are quantized according to $E = n h \nu$, Planck's quantization condition for electronic oscillators. This demonstrated that the energy quantization concept was important even for a system of atoms in a crystal, which should be well-modeled by a system of masses and springs (i.e., by classical mechanics).
+Before Einstein's explanation, the classical prediction for the photoelectric effect was based on the wave theory of light, which assumed that light was a continuous wave.
+According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, $I$, is defined as the power per unit area of the wave front, and is given by:
+
+\begin{equation}
+I = \frac{P}{A},
+(\#eq:pe1)
+\end{equation}
+
+where $I$ is the intensity of the light, $P$ is the power of the light, and $A$ is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:
+
+\begin{equation}
+P = \frac{dE}{dt},
+(\#eq:pe2)
+\end{equation}
+
+where $P$ is the power of the light, $E$ is the energy of the electromagnetic waves, and $t$ is time. Therefore, the intensity of light is related to the energy of the electromagnetic waves that make up the light, and can be increased by increasing the energy of the waves or by increasing the number of waves per unit area (i.e., increasing the wave's amplitude or its frequency). 
+
+Applying this classical wave theory of light to explain the photoelectric effect, we deduce that when light shines on a metal surface, the energy of the light is transferred to the electrons in the metal continuously. The electrons would then be emitted when they accumulate enough energy to escape the surface. Since the energy of the light increases with its intensity, the kinetic energy of the emitted electron, $K$, should be proportional to the intensity of the incident light, $I_{\text{in}}$:
+
+\begin{equation}
+K= c_{\text{PE}} \; I_{\text{in}},
+(\#eq:pe3)
+\end{equation}
+
+with $c_{\text{PE}}$ being a constant that depends on the metal and the characteristics of the incident light. In other words, if we change the intensity of the incident light, the kinetic energy of the emitted electrons would change accordingly. This explanation predicts also that a sufficiently dim light should result in a delayed emission. This prediction, however, was contradicted by Hertz's experimental observations, which showed no dependence on the light's intensity and no delayed emission (results were clearly independent on the duration of the exposure). In all of his experiments, electrons were dislodged from the surface of the metal only when the light exceeded a certain frequency, regardless of the intensity of the light.
+
+Einstein used the lack of dependency on the intensity of the light in Hertz's experiment to propose that a beam of light is not a wave propagating through space, but a swarm of discrete energy packets, known as photons. Each of this photons will have an energy that is given by the smallest possible frequency in Planck's theory of the black body (corresponding to $n=1$ in eq. \@ref(eq:uvcat)):
+
+\begin{equation}
+E = h \nu.
+(\#eq:pe0)
+\end{equation}
+
+The energy of the incident photons is therefore quantized, and only photons with a frequency greater than the threshold frequency (corresponding to the work function of the metal) can eject electrons from the metal surface. A low-frequency beam at a high intensity will not build up the energy required to produce electrons, because there is no process for accumulation. The maximum kinetic energy that the electron can gain, $K_{\text{max}}$, is equal to the energy of the incident photon, $E_{\text{in}}=h\nu_{\text{in}}$, minus the work function of the metal $\phi$, which is the minimum amount of energy required to remove an electron from the metal surface. Mathematically, this can be expressed as:
+
+\begin{equation}
+K_{\text{max}} = E_{\text{in}} - \phi = h\nu_{\text{in}} - \phi.
+(\#eq:pe4)
+\end{equation}
 
 ## Wave-Particle Duality
 
@@ -82,7 +118,7 @@ Now we use Einstein's relativity result, $E = m c^2$, and the definition of mome
 (\#eq:wp3)
 \end{equation}
 
-which is equivalent to eq. \@ref(eq:wp1). Note that $m$ refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy $h \nu$), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \@ref(eq:wp3) as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.^[The previous 3 sections were adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+which is equivalent to eq. \@ref(eq:wp1). Note that $m$ refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy $h \nu$), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. \@ref(eq:wp3) as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie's proposition.
 
 Rewriting the previous equations in terms of the wave vector, $k=\frac{2\pi}{\lambda}$, and the angular frequency, $\omega=2\pi\nu$, we obtain the following two equations
 
@@ -94,6 +130,6 @@ E &= \hbar \omega,
 (\#eq:wp1b)
 \end{equation}
 
-which are known as **de Broglie's equations**. We will use those equation to develop wave mechanics in the next chapters.
+which are known as **de Broglie's equations**. We will use those equation to develop wave mechanics in the next chapters.^[This chapter has been written with help from ChatGPT]
 
 

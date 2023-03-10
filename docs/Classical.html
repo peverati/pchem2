@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-02-24" />
+<meta name="date" content="2023-03-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -83,13 +83,12 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> The Motivation for Quantum Mechanics</a>
+<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> Introduction to Quantum Mechanics</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
-<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#quantum-mechanics-is-bizarre"><i class="fa fa-check"></i><b>1.2</b> Quantum Mechanics is Bizarre</a></li>
-<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.3</b> The Ultraviolet Catastrophe</a></li>
-<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.4</b> The Photoelectric Effect</a></li>
-<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.5</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>1.1</b> Historical Context</a></li>
+<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -157,7 +156,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="9.1.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>9.1.2</b> “Which way” experiment</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>9.2</b> Heisenberg’s Uncertainty Principle</a></li>
-<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a></li>
+<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -239,12 +241,12 @@ MathJax.Hub.Config({
 F_{\mathrm{net}}(q) = m\ddot{q} = m \frac{d^2 q}{dt^2}.
 \tag{2.1}
 \end{equation}\]</span></p>
-<p>Or, in other words, if we know the net force acting on a system of mass <span class="math inline">\(m\)</span> at position <span class="math inline">\(q\)</span> at some time <span class="math inline">\(t_0\)</span>, we can use eq. <a href="Classical.html#eq:newt1">(2.1)</a> to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>Or, in other words, if we know the net force acting on a system of mass <span class="math inline">\(m\)</span> at position <span class="math inline">\(q\)</span> at some time <span class="math inline">\(t_0\)</span>, we can use eq. <a href="Classical.html#eq:newt1">(2.1)</a> to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
 <blockquote>
 
 <div class="example">
 <p><span id="exm:newtonianEx" class="example"><strong>Example 2.1  </strong></span>
-A ball of mass <span class="math inline">\(m\)</span> is at ground level and tossed straight up from an initial position <span class="math inline">\(q_0\)</span> with an initial velocity <span class="math inline">\(\dot{q}_0\)</span> and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time <span class="math inline">\(t\)</span>?).<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
+A ball of mass <span class="math inline">\(m\)</span> is at ground level and tossed straight up from an initial position <span class="math inline">\(q_0\)</span> with an initial velocity <span class="math inline">\(\dot{q}_0\)</span> and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time <span class="math inline">\(t\)</span>?).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
 <p><em>Solution:</em> Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:</p>
 <p><span class="math display">\[\begin{equation}
 F_{\mathrm{gravity}}=-mG,
@@ -274,7 +276,7 @@ q &amp;= q_0 + \dot{q}_0 t -\frac{1}{2}Gt^2.
 \end{equation}\]</span></p>
 <p>This final equation is the equation of motion for the ball, from which we can calculate the position of the ball at any time <span class="math inline">\(t\)</span>. Notice how the equation of motion does not depend on the mass of the ball!</p>
 <p><em>Numerical problem:</em> How much time will a ball ejected from a height of <span class="math inline">\(1 \;\mathrm{m}\)</span> at an initial velocity of <span class="math inline">\(10 \;\mathrm{m/s}\)</span> take to hit the floor?</p>
-<p>We can use the equation of motion obtained above to solve this problem, and obtain for this specific case <span class="math inline">\(t\simeq2.12\;\mathrm{s}\)</span>.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a></p>
+<p>We can use the equation of motion obtained above to solve this problem, and obtain for this specific case <span class="math inline">\(t\simeq2.12\;\mathrm{s}\)</span>.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a></p>
 </div>
 </blockquote>
 <p>The formula of Newtonian mechanics are not the only one we can use to solve a problem in classical mechanics. We have at least two other equivalent approaches to the same problem that might end up being more useful in certain situations.</p>
@@ -292,12 +294,12 @@ L = K - V,
 S = \int_{t_1}^{t_2} L\, dt,
 \tag{2.3}
 \end{equation}\]</span></p>
-<p>which is a functional: it takes in the Lagrangian function for all times between <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> and returns a scalar value. The equations of motion can be derived from the principle of least action,<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> which states that the true evolution of a system <span class="math inline">\(q(t)\)</span> described by the coordinate <span class="math inline">\(q\)</span> between two specified states <span class="math inline">\(q_1 = q(t_1)\)</span> and <span class="math inline">\(q_2 = q(t_2)\)</span> at two specified times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is a minimum of the action functional. For a minimum point:</p>
+<p>which is a functional: it takes in the Lagrangian function for all times between <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> and returns a scalar value. The equations of motion can be derived from the principle of least action,<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> which states that the true evolution of a system <span class="math inline">\(q(t)\)</span> described by the coordinate <span class="math inline">\(q\)</span> between two specified states <span class="math inline">\(q_1 = q(t_1)\)</span> and <span class="math inline">\(q_2 = q(t_2)\)</span> at two specified times <span class="math inline">\(t_1\)</span> and <span class="math inline">\(t_2\)</span> is a minimum of the action functional. For a minimum point:</p>
 <p><span class="math display" id="eq:lag3">\[\begin{equation}
 \delta S = \frac{dS}{dq}= 0
 \tag{2.4}
 \end{equation}\]</span></p>
-<p>Requiring that the true trajectory <span class="math inline">\(q(t)\)</span> minimizes the action functional <span class="math inline">\(S\)</span>, we obtain the equation of motion (figure <a href="Classical.html#fig:Fig1c2">2.1</a><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>). This can be achieved applying classical variational calculus to the variation of the action integral <span class="math inline">\(S\)</span> under perturbations of the path <span class="math inline">\(q(t)\)</span>, eq. <a href="Classical.html#eq:lag3">(2.4)</a>. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
+<p>Requiring that the true trajectory <span class="math inline">\(q(t)\)</span> minimizes the action functional <span class="math inline">\(S\)</span>, we obtain the equation of motion (figure <a href="Classical.html#fig:Fig1c2">2.1</a><a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>). This can be achieved applying classical variational calculus to the variation of the action integral <span class="math inline">\(S\)</span> under perturbations of the path <span class="math inline">\(q(t)\)</span>, eq. <a href="Classical.html#eq:lag3">(2.4)</a>. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler—Lagrange equation:<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
 <p><span class="math display" id="eq:lag4">\[\begin{equation}
 \frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
 \tag{2.5}
@@ -348,7 +350,7 @@ m\ddot{q}&amp;=-mG \\
 p = \frac{\partial L}{\partial\dot{q}}.
 \tag{2.6}
 \end{equation}\]</span></p>
-<p>The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
+<p>The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
 <p><span class="math display" id="eq:ham2">\[\begin{equation} 
 H(p,q) = p\dot{q} - L(q,\dot{q}),
 \tag{2.7}
@@ -451,14 +453,14 @@ H=\frac{p^2}{2m}+mGq,
 </div>
 <div class="footnotes">
 <hr />
-<ol start="4">
-<li id="fn4"><p>Notice that, in principle, <span class="math inline">\(q\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the position vector and <span class="math inline">\(\dot{q}\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the velocity vector. As such, all the equation of classical mechanics are vector equation, and not just simple numerical equation, as we present them here! For our purposes, we can restrict ourselves to a 1-dimensional space, hence forgetting the complications of vector algebra.<a href="Classical.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p>This example is based on Rhett Allain’s blog post that can be found (here)[<a href="https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/" class="uri">https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/</a>] <a href="Classical.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Can you write a python program to do this calculation?<a href="Classical.html#fnref6" class="footnote-back">↩︎</a></p></li>
-<li id="fn7"><p>Sometimes also called principle of stationary action, or variational principle, or Hamilton’s principle.<a href="Classical.html#fnref7" class="footnote-back">↩︎</a></p></li>
-<li id="fn8"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> by user Maschen, and distributed under CC0 license<a href="Classical.html#fnref8" class="footnote-back">↩︎</a></p></li>
-<li id="fn9"><p>The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found <a href="https://en.wikipedia.org/wiki/Euler–Lagrange_equation">here</a>.<a href="Classical.html#fnref9" class="footnote-back">↩︎</a></p></li>
-<li id="fn10"><p>We have already encountered Legendre transform in <a href="https://peverati.github.io/pchem1/Potentials.html#thermpot">The Live Textbook of Physical Chemistry 1</a> when transforming from the thermodynamic energy to any of the other thermodynamic potentials.<a href="Classical.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<ol start="3">
+<li id="fn3"><p>Notice that, in principle, <span class="math inline">\(q\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the position vector and <span class="math inline">\(\dot{q}\)</span> <span class="math inline">\(\in\)</span> <span class="math inline">\(\mathbb{R}^{n}\)</span> is the velocity vector. As such, all the equation of classical mechanics are vector equation, and not just simple numerical equation, as we present them here! For our purposes, we can restrict ourselves to a 1-dimensional space, hence forgetting the complications of vector algebra.<a href="Classical.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>This example is based on Rhett Allain’s blog post that can be found (here)[<a href="https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/" class="uri">https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/</a>] <a href="Classical.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn5"><p>Can you write a python program to do this calculation?<a href="Classical.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>Sometimes also called principle of stationary action, or variational principle, or Hamilton’s principle.<a href="Classical.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>This diagram is taken from <a href="https://en.wikipedia.org">Wikipedia</a> by user Maschen, and distributed under CC0 license<a href="Classical.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<li id="fn8"><p>The mathematical derivation of the Euler—Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found <a href="https://en.wikipedia.org/wiki/Euler–Lagrange_equation">here</a>.<a href="Classical.html#fnref8" class="footnote-back">↩︎</a></p></li>
+<li id="fn9"><p>We have already encountered Legendre transform in <a href="https://peverati.github.io/pchem1/Potentials.html#thermpot">The Live Textbook of Physical Chemistry 1</a> when transforming from the thermodynamic energy to any of the other thermodynamic potentials.<a href="Classical.html#fnref9" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
