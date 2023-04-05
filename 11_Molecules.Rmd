@@ -5,7 +5,7 @@
 For a molecule, we can decompose the Hamiltonian operator as:
 
 \begin{equation}
-\hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{K}_{ee}
+\hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{V}_{ee}
 (\#eq:molham1)
 \end{equation}
 
