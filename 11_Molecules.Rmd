@@ -67,14 +67,14 @@ where $\psi_1(q_1)$ and $\psi_2(q_2)$ are eigenfunctions of $\hat{H}_1$ and $\ha
 
 Thus the eigenfunctions of $\hat{H}$ are products of the eigenfunctions of $\hat{H}_1$ and $\hat{H}_2$, and the eigenvalues are the sums of eigenvalues of $\hat{H}_1$ and $\hat{H}_2$.
 
-If we examine the nonrelativistic Hamiltonian in eq. \@ref(eq:molham1), we see that the $\hat{V}_{en}$ terms prevents us from cleanly separating the electronic and nuclear coordinates and writing the total wave function. If we neglect these terms, we can write the total wave function as:
+If we examine the nonrelativistic Hamiltonian in eq. \@ref(eq:molham1), we see that the $\hat{V}_{eN}$ terms prevents us from cleanly separating the electronic and nuclear coordinates and writing the total wave function. If we neglect these terms, we can write the total wave function as:
 
 \begin{equation}
 \psi({\bf r}, {\bf R}) = \psi_e({\bf r}) \psi_N({\bf R}),
 (\#eq:molham7)
 \end{equation}
 
-This approximation is called the **Born-Oppenheimer approximation**, and allows us to treat the nuclei as nearly fixed with respect to electron motion. The Born-Oppenheimer approximation is almost always quantitatively correct, since the nuclei are much heavier than the electrons and the (fast) motion of the latter does not affect the (slow) motion of the former. Using this approximation, we can fix the nuclear configuration at some value, ${\bf R_a}$, and solve for the electronic portion of the the wave function, which is dependent only parametrically on ${\bf R}$ (we write this wave function as $\psi_e \left({\bf r}; {\bf R_a} \right)$, where the semicolon indicate the parametric dependence on the nuclear configuration).  To solve the TISEq we can then write the electronic Hamiltonian as:
+This approximation is called the **Born-Oppenheimer approximation**, and allows us to treat the nuclei as nearly fixed with respect to electron motion. The Born-Oppenheimer approximation is almost always quantitatively correct, since the nuclei are much heavier than the electrons and the (fast) motion of the latter does not affect the (slow) motion of the former. Using this approximation, we can fix the nuclear configuration at some value, ${\bf R_a}$, and solve for the electronic portion of the wave function, which is dependent only parametrically on ${\bf R}$ (we write this wave function as $\psi_e \left({\bf r}; {\bf R_a} \right)$, where the semicolon indicate the parametric dependence on the nuclear configuration).  To solve the TISEq we can then write the electronic Hamiltonian as:
 
 \begin{equation}
 \hat{H}_{\text{e}} = \hat{K}_e({\bf r}) +

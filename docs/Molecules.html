@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-04-05" />
+<meta name="date" content="2023-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -111,7 +111,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Soluble Models</a>
+<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
@@ -285,12 +285,12 @@ MathJax.Hub.Config({
 \tag{11.6}
 \end{equation}\]</span></p>
 <p>Thus the eigenfunctions of <span class="math inline">\(\hat{H}\)</span> are products of the eigenfunctions of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span>, and the eigenvalues are the sums of eigenvalues of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span>.</p>
-<p>If we examine the nonrelativistic Hamiltonian in eq. <a href="Molecules.html#eq:molham1">(11.1)</a>, we see that the <span class="math inline">\(\hat{V}_{en}\)</span> terms prevents us from cleanly separating the electronic and nuclear coordinates and writing the total wave function. If we neglect these terms, we can write the total wave function as:</p>
+<p>If we examine the nonrelativistic Hamiltonian in eq. <a href="Molecules.html#eq:molham1">(11.1)</a>, we see that the <span class="math inline">\(\hat{V}_{eN}\)</span> terms prevents us from cleanly separating the electronic and nuclear coordinates and writing the total wave function. If we neglect these terms, we can write the total wave function as:</p>
 <p><span class="math display" id="eq:molham7">\[\begin{equation}
 \psi({\bf r}, {\bf R}) = \psi_e({\bf r}) \psi_N({\bf R}),
 \tag{11.7}
 \end{equation}\]</span></p>
-<p>This approximation is called the <strong>Born-Oppenheimer approximation</strong>, and allows us to treat the nuclei as nearly fixed with respect to electron motion. The Born-Oppenheimer approximation is almost always quantitatively correct, since the nuclei are much heavier than the electrons and the (fast) motion of the latter does not affect the (slow) motion of the former. Using this approximation, we can fix the nuclear configuration at some value, <span class="math inline">\({\bf R_a}\)</span>, and solve for the electronic portion of the the wave function, which is dependent only parametrically on <span class="math inline">\({\bf R}\)</span> (we write this wave function as <span class="math inline">\(\psi_e \left({\bf r}; {\bf R_a} \right)\)</span>, where the semicolon indicate the parametric dependence on the nuclear configuration). To solve the TISEq we can then write the electronic Hamiltonian as:</p>
+<p>This approximation is called the <strong>Born-Oppenheimer approximation</strong>, and allows us to treat the nuclei as nearly fixed with respect to electron motion. The Born-Oppenheimer approximation is almost always quantitatively correct, since the nuclei are much heavier than the electrons and the (fast) motion of the latter does not affect the (slow) motion of the former. Using this approximation, we can fix the nuclear configuration at some value, <span class="math inline">\({\bf R_a}\)</span>, and solve for the electronic portion of the wave function, which is dependent only parametrically on <span class="math inline">\({\bf R}\)</span> (we write this wave function as <span class="math inline">\(\psi_e \left({\bf r}; {\bf R_a} \right)\)</span>, where the semicolon indicate the parametric dependence on the nuclear configuration). To solve the TISEq we can then write the electronic Hamiltonian as:</p>
 <p><span class="math display" id="eq:molham8">\[\begin{equation}
 \hat{H}_{\text{e}} = \hat{K}_e({\bf r}) +
 \hat{V}_{eN}\left({\bf r}; {\bf R_a} \right) +

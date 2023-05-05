@@ -1,4 +1,4 @@
-# Analytically Soluble Models {#Models}
+# Analytically Solvable Models {#Models}
 
 The TISEq can be solved analytically only in a few special cases. We saw one of those special cases, the free particle, at the end of the previous chapter. In this section, we will analyze three others. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
 
