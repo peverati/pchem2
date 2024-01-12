@@ -29,13 +29,13 @@ knitr::include_graphics('./img/OEP_wiki0.png')
 A black body is an idealized object that absorbs and emits all frequencies. Classical physics can be used to derive an approximated equation describing the intensity of a black body radiation as a function of frequency for a fixed temperature. The result is known as the Rayleigh-Jeans law, which for wavelength $\lambda$, is:
 
 \begin{equation}
-B_{\lambda }(T)={\frac {2ck_{\mathrm {B} }T}{\lambda ^{4}}}
+I(T)={\frac {2ck_{\mathrm{B}}T}{\lambda^{4}}}
 (\#eq:rjlaw)
 \end{equation}
 
-where $B_{\lambda }$ is the intensity of the radiation —expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)—
+where $I$ is the intensity of the radiation —expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)—
 $c$ is the speed of light, $k_{\mathrm{B}}$ is the Boltzmann constant, and $T$ is the temperature in kelvins.
-The paradox —or rather the breakdown of the Rayleigh–Jeans formula— happens at small wavelength $\lambda$. If we take the limit for $\lambda \rightarrow 0$ in eq. \@ref(eq:rjlaw), we obtain that $B_{\lambda } \rightarrow \infty$. In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
+The paradox —or rather the breakdown of the Rayleigh–Jeans formula— happens at small wavelength $\lambda$. If we take the limit for $\lambda \rightarrow 0$ in eq. \@ref(eq:rjlaw), we obtain that $I \rightarrow \infty$. In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
 
 Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency:
 
@@ -46,25 +46,25 @@ E = n h \nu = n h \frac{c}{\lambda},
 
 with $n$ being an integer number bigger than zero. Planck's assumptions led to the correct form of the spectral function for a black body:
 \begin{equation}
-B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
+I(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
 (\#eq:uvcatpl)
 \end{equation}
 
-If we now take the limit for  $\lambda \rightarrow 0$ of eq. \@ref(eq:uvcatpl), it is easy to prove that $B_{\lambda }$ goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for  $h = 6.626 \times 10^{-34} \; \text{J s}$, the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
+If we now take the limit for  $\lambda \rightarrow 0$ of eq. \@ref(eq:uvcatpl), it is easy to prove that $I$ goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for  $h = 6.626 \times 10^{-34} \; \text{J s}$, the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
 ## The Photoelectric Effect
 
 The photoelectric effect refers to the phenomenon where electrons are emitted from a metal surface when it is illuminated with light of a certain frequency. This effect was first observed by Heinrich Hertz in 1887 and later explained by Albert Einstein in 1905, who proposed that light energy was quantized into discrete particles, or photons, each with an energy proportional to its frequency.
 
 Before Einstein's explanation, the classical prediction for the photoelectric effect was based on the wave theory of light, which assumed that light was a continuous wave.
-According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, $I$, is defined as the power per unit area of the wave front, and is given by:
+According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, $I$, is defined, as in the previous case, using the spectral radiance, which is the power emitted per unit emitting area, per steradian, per unit wavelength:
 
 \begin{equation}
 I = \frac{P}{A},
 (\#eq:pe1)
 \end{equation}
 
-where $I$ is the intensity of the light, $P$ is the power of the light, and $A$ is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:
+where $P$ is the power of the light, and $A$ is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:
 
 \begin{equation}
 P = \frac{dE}{dt},

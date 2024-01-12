@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-05-05" />
+<meta name="date" content="2024-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,133 +231,26 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Weirdness" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Quantum Weirdness</h1>
-<p>In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don’t have a classical counterpart, starting from perhaps the most simple but also one of the most revealing: the double-slit experiment.</p>
+<p>Placeholder</p>
 <div id="the-double-slit-experiment" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> The double-slit experiment</h2>
-<p>The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.</p>
-<p>The premises of the experiment are very simple: cut two slits in a solid material (such as a sheet of metal), send light or electrons through them, and observe what happens on a screen position at some distance on the other side. The result of this experiment though are far from straightforward.</p>
-<p>Let’s first consider the single-slit case. If light consisted of classical particles, and these particles were sent in a straight line through a single-slit and allowed to strike a screen on the other side, we would expect to see a pattern corresponding to the size and shape of the slit. However, when this “single-slit experiment” is actually performed, the pattern on the screen is a diffraction pattern in which the light is spread out. The smaller the slit, the greater the angle of spread. This behavior is typical of waves, where diffraction explains the pattern as being the result of the interference of the waves with the slit.</p>
-<p>If one illuminates two parallel slits, the light from the two slits again interferes. Here the interference is a more pronounced pattern with a series of alternating light and dark bands. The width of the bands is a property of the frequency of the illuminating light. The pattern observed on the screen is the result of this interference, as shown in figure <a href="Weirdness.html#fig:Fig1c9">9.1</a>.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:Fig1c9"></span>
-<img src="img/OEP_wiki3.jpg" alt="Outcomes of single-slit and double-slit experiments." width="70%" />
-<p class="caption">
-Figure 9.1: Outcomes of single-slit and double-slit experiments.
-</p>
-</div>
-<p>The interference pattern resulting from the double-slit experiment are observed not only with light, but also with a beam of electrons, and other small particles.</p>
 <div id="the-individual-particles-experiment" class="section level3" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> The individual particles experiment</h3>
-<p>The first twist in the plot is if we perform the experiment by sending individual particles (e.g, either individual photons, or individual electrons). Sending particles through a double-slit apparatus one at a time results in single particles appearing on the screen, as expected. Remarkably, however, an interference pattern emerges when these particles are allowed to build up one by one (figure <a href="Weirdness.html#fig:Fig2c9">9.2</a><a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a>). The resulting pattern on the screen is the same as if each individual particle had passed through both slits.</p>
-<div class="figure" style="text-align: center"><span id="fig:Fig2c9"></span>
-<img src="img/OEP_wiki4.png" alt="Numerical simulation of the double-slit experiment with electrons." width="70%" />
-<p class="caption">
-Figure 9.2: Numerical simulation of the double-slit experiment with electrons.
-</p>
-</div>
-<p>This variation of the double-slit experiment demonstrates the wave–particle duality: the particle is measured as a single pulse at a single position, while the wave describes the probability of absorbing the particle at a specific place on the screen.</p>
 </div>
 <div id="which-way-experiment" class="section level3" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> “Which way” experiment</h3>
-<p>A second twist happens if we place particle detectors at the slits with the intent of showing through which slit a particle goes. The interference pattern in this case will disappear.</p>
-<p>This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. The simplest interpretation of this experiment is that the wave function of the photon collapses into a deterministic position due to the interaction with the detector on the slit, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.</p>
-<p>The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arise not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of redeeming this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).</p>
 </div>
 </div>
 <div id="heisenbergs-uncertainty-principle" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Heisenberg’s Uncertainty Principle</h2>
-<p>Let’s now revisit the simple case of a free particle. As we saw in chapter <a href="Models.html#Models">4</a>, the wave function that solved the TISEq:</p>
-<p><span class="math display" id="eq:heis0">\[\begin{equation}
-\psi(x) = A \exp(\pm ikx),
-\tag{9.1}  
-\end{equation}\]</span></p>
-<p>is the equation of a plane wave along the <span class="math inline">\(x\)</span> direction. This result is in agreement with the de Broglie hypothesis, which says that every object in the universe is a wave. If this wave function describes a particle with mass (such as an electron), freely moving along one spatial direction <span class="math inline">\(x\)</span>, it would be reasonable to ask the question: where is the particle located? Analyzing eq. <a href="Weirdness.html#eq:heis0">(9.1)</a>, however, it is not possible to answer this question since <span class="math inline">\(\psi(x)\)</span> is delocalized in space from <span class="math inline">\(x=-\infty\)</span> to <span class="math inline">\(x=+\infty\)</span>.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> In other words, the particle position is extremely uncertain because it could be essentially anywhere along the wave.</p>
-<p>Thus for a free particle, the particle side of the wave-particle duality seems completely lost. We can, however, bring it back into the picture by writing the wave function as a sum of many plane waves, called a <em>wave packet</em>:</p>
-<p><span class="math display" id="eq:heis1">\[\begin{equation} 
-\psi (x)\propto \sum _{n}A_{n}\exp\left(\frac{ip_n x}{\hbar} \right),
-\tag{9.2}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(A_n\)</span> represents the relative contribution of the mode <span class="math inline">\(p_n\)</span> to the overall total. We are allowed to write the wave function this way because each individual plane wave is a solution of the TISEq, and as we already saw in chapter <a href="Operators.html#Operators">6</a> and several other places, the sum of each individual solution is also a solution. An interesting consequence of writing the wave function as a wave packet is that when we sum different waves, they interfere with each other, and they might localize in some region of space. Thus for a wave function written as in eq. <a href="Weirdness.html#eq:heis1">(9.2)</a>, the wave packet can become more localized. We may also make this procedure a step further to the continuum limit, where the wave function goes from a sum to an integral over all possible modes:</p>
-<p><span class="math display" id="eq:heis2">\[\begin{equation}
-\psi (x)=\frac {1}{\sqrt{2\pi\hbar}}\int_{-\infty }^{\infty }\varphi (p)\cdot \exp
-\left(\frac{ip x}{\hbar} \right)\,dp,
-\tag{9.3}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(\varphi(p)\)</span> represents the amplitude of these modes and is called the wave function in momentum space. In mathematical terms, we say that <span class="math inline">\(\varphi (p)\)</span> is the Fourier transform of <span class="math inline">\(\psi (x)\)</span> and that <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> are conjugate variables. Adding together all of these plane waves comes at a cost; namely, the momentum has become less precise since it becomes a mixture of waves of many different momenta.</p>
-<p>One way to quantify the precision of the position and momentum is the standard deviation, <span class="math inline">\(\sigma\)</span>. Since <span class="math inline">\(|\psi (x)|^{2}\)</span> is a probability density function for position, we calculate its standard deviation. The precision of the position is improved—i.e., reduced <span class="math inline">\(\sigma_x\)</span>—by using many plane waves, thereby weakening the precision of the momentum—i.e., increased <span class="math inline">\(\sigma_p\)</span>. Another way of stating this is that <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_p\)</span> have an inverse relationship (once we know one with absolute precision, the other becomes completely unknown). This fact was discovered by Werner Heisenberg and is now called the <strong>Heisenberg’s uncertainty principle</strong>. The mathematical treatment of this procedure results in the simple formula:</p>
-<p><span class="math display" id="eq:heis3">\[\begin{equation}
-\sigma_{x}\sigma_{p} \geq \frac{\hbar }{2}.
-\tag{9.4}  
-\end{equation}\]</span></p>
-<p>The uncertainty principle can be extended to any couple of conjugated variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
 </div>
 <div id="tunneling" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Tunneling</h2>
-<p>Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to “tunnel through” the barrier following a purely quantum mechanical phenomenon (figure <a href="Weirdness.html#fig:Fig3c9">9.3</a>).<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a></p>
-<div class="figure" style="text-align: center"><span id="fig:Fig3c9"></span>
-<img src="img/OEP_wiki9.png" alt="Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased." width="70%" />
-<p class="caption">
-Figure 9.3: Quantum tunneling through a barrier. The energy of the tunnelled particle is the same but the probability amplitude is decreased.
-</p>
-</div>
-<p>To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier (<span class="math inline">\(V_0\)</span>) decays in the potential as a function of <span class="math inline">\(A_0\exp[-\alpha x]\)</span>, where <span class="math inline">\(A_0\)</span> is the amplitude at the boundary, <span class="math inline">\(\alpha\)</span> is proportional to the potential, and <span class="math inline">\(x\)</span> is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is “leaking” through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.</p>
-<p>Tunneling can be described using the TISEq, eq. <a href="Operators.html#eq:hamilt1">(6.23)</a>. For the tunneling problem we can take the potential <span class="math inline">\(V\)</span> to be zero for all space, except for the region inside the barrier (between <span class="math inline">\(0\)</span> and <span class="math inline">\(a\)</span>):</p>
-<p><span class="math display" id="eq:tunn1">\[\begin{equation}
-V=\begin{cases} 0\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ V_0\quad&amp;\text{if}\; 0&lt;x&lt;a \\ 0\quad&amp;\text{if}\; a\leq x&lt; \infty \end{cases}.
-\tag{9.5}  
-\end{equation}\]</span></p>
-<p>To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:</p>
-<p><span class="math display" id="eq:tunn2">\[\begin{equation}
-\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&amp;\text{if}\; 0&lt;x&lt;a \\ E\sin (kx)+F\cos (kx) \quad&amp;\text{if}\; a\leq x&lt; \infty \end{cases}
-\tag{9.6}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(k=\frac{\sqrt{2mE}}{\hbar}\)</span>, and <span class="math inline">\(\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}\)</span>. To enforce continuity, we must have at the first boundary:</p>
-<p><span class="math display" id="eq:tunn3">\[\begin{equation}
-A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
-\tag{9.7}  
-\end{equation}\]</span></p>
-<p>which implies that <span class="math inline">\(A=0\)</span>, and <span class="math inline">\(B=C+D\)</span>. At the opposite boundary:</p>
-<p><span class="math display" id="eq:tunn4">\[\begin{equation}
-A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
-\tag{9.8}  
-\end{equation}\]</span></p>
-<p>We notice that, as <span class="math inline">\(a\)</span> goes to infinity, the right hand side of eq. <a href="Weirdness.html#eq:tunn4">(9.8)</a> goes to infinity, which does not make physical sense. To reconcile this, we must set <span class="math inline">\(D=0\)</span>.</p>
-<p>For the final region, <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, present a potentially intractable problem. However, if one realizes that the value at the boundary <span class="math inline">\(a\)</span> is driving the wave in the region <span class="math inline">\(a\)</span> to infinity, it may also be realized that the wave function could be rewritten as <span class="math inline">\(C\exp[-\alpha a]\cos[k(x-a)]\)</span>, phase shifting the wave function by the value of <span class="math inline">\(a\)</span>,
-and setting the amplitude to the boundary value. Summarizing, the wave function is:</p>
-<p><span class="math display" id="eq:tunn5">\[\begin{equation}
-\psi=\begin{cases} B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ B \exp(-\alpha x)  \quad&amp;\text{if}\; 0&lt;x&lt;a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&amp;\text{if}\; a\leq x&lt; \infty. \end{cases}
-\tag{9.9}  
-\end{equation}\]</span></p>
-<p>Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as <span class="math inline">\(\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\)</span>, where <span class="math inline">\(a\)</span> is the width of the barrier, and <span class="math inline">\((V_0-E)\)</span> is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:</p>
-<p><span class="math display" id="eq:tunn6">\[\begin{equation}
-\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
-\tag{9.10}  
-\end{equation}\]</span></p>
-<p>As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that <span class="math inline">\(k\)</span> is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter <a href="Models.html#Models">4</a>.</p>
 <div id="tunneling-in-chemical-reactions" class="section level3" number="9.3.1">
 <h3><span class="header-section-number">9.3.1</span> Tunneling in chemical reactions</h3>
-<p>The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, more rapid than the classical prediction would predict. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine (<span class="math inline">\(\text{PH}_3\)</span>) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).</p>
-<p>One of the primary effects of tunneling can be seen on the KIE. This is because tunneling allows some of the isotopes to bypass the activation barrier, making it easier for them to react. As a result, the reaction rate for the heavier isotope is increased relative to what it would be in the absence of tunneling, leading to a reduction in the KIE. In the case of the umbrella inversion reaction, replacing ammonia with its deuterated counterpart, <span class="math inline">\(\text{ND}_3\)</span>, leads to a higher activation barrier, resulting in a slower reaction rate.</p>
-<p>The impact of tunneling on the KIE can be quantified using transition state theory (TST), which accounts for the probability of tunneling through the activation barrier. The KIE is given by:</p>
-<p><span class="math display" id="eq:kie">\[\begin{equation}
-\text{KIE} = \frac{k(\text{H})}{k(\text{D})} = \left[\frac{m(\text{H})}{m(\text{D})}\right]^{\frac{1}{2}} \frac{k_{\text{tunneling}}}{k_{\text{classical}}},
-\tag{9.11}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(k(\text{H})\)</span> and <span class="math inline">\(k(\text{D})\)</span> are the rate constants for the reaction involving hydrogen and deuterium, respectively; <span class="math inline">\(m(\text{H})\)</span> and <span class="math inline">\(m(\text{D})\)</span> are the masses of hydrogen and deuterium; <span class="math inline">\(k_{\text{tunneling}}\)</span> is the rate constant for tunneling; and <span class="math inline">\(k_{\text{classical}}\)</span> is the rate constant in the absence of tunneling.</p>
-<p>Using experimental data for the umbrella inversion reaction, the KIE can be calculated to be approximately 1.3 in the absence of tunneling. However, when tunneling is allowed, the KIE is reduced to around 1.1. This reduction in the KIE due to tunneling is a significant effect and must be considered when studying chemical reactions involving light atoms.</p>
 
 </div>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="20">
-<li id="fn20"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Single_slit_and_double_slit2.jpg">Wikipedia</a> by user Jordgette, and distributed under CC BY-SA 3.0 license.<a href="Weirdness.html#fnref20" class="footnote-back">↩︎</a></p></li>
-<li id="fn21"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Interference_electrons_double-slit_at_10cm.png">Wikipedia</a> by user Alexandre Gondran, and distributed under CC BY-SA 4.0 license<a href="Weirdness.html#fnref21" class="footnote-back">↩︎</a></p></li>
-<li id="fn22"><p>The interested student can read more about different interpretations <a href="https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics">HERE</a>.<a href="Weirdness.html#fnref22" class="footnote-back">↩︎</a></p></li>
-<li id="fn23"><p>The time-dependent picture does not help us either, but since it is a little more complicated to work with the TDSEq, we are not showing it here.<a href="Weirdness.html#fnref23" class="footnote-back">↩︎</a></p></li>
-<li id="fn24"><p>Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.<a href="Weirdness.html#fnref24" class="footnote-back">↩︎</a></p></li>
-<li id="fn25"><p>This diagram is taken from <a href="https://en.wikipedia.org/wiki/Quantum_tunnelling#/media/File:TunnelEffektKling1.png">Wikipedia</a> by user Felix Kling, and distributed under CC BY-SA 3.0 license.<a href="Weirdness.html#fnref25" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 

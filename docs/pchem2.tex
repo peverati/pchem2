@@ -7,7 +7,7 @@
 ]{extbook}
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{05 May 2023}
+\date{12 January 2024}
 
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -230,13 +230,13 @@ The ultraviolet (UV) catastrophe, also called the Rayleigh--Jeans catastrophe, i
 A black body is an idealized object that absorbs and emits all frequencies. Classical physics can be used to derive an approximated equation describing the intensity of a black body radiation as a function of frequency for a fixed temperature. The result is known as the Rayleigh-Jeans law, which for wavelength \(\lambda\), is:
 
 \begin{equation}
-B_{\lambda }(T)={\frac {2ck_{\mathrm {B} }T}{\lambda ^{4}}}
+I(T)={\frac {2ck_{\mathrm{B}}T}{\lambda^{4}}}
 \label{eq:rjlaw}
 \end{equation}
 
-where \(B_{\lambda }\) is the intensity of the radiation ---expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)---
+where \(I\) is the intensity of the radiation ---expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)---
 \(c\) is the speed of light, \(k_{\mathrm{B}}\) is the Boltzmann constant, and \(T\) is the temperature in kelvins.
-The paradox ---or rather the breakdown of the Rayleigh--Jeans formula--- happens at small wavelength \(\lambda\). If we take the limit for \(\lambda \rightarrow 0\) in eq. \eqref{eq:rjlaw}, we obtain that \(B_{\lambda } \rightarrow \infty\). In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
+The paradox ---or rather the breakdown of the Rayleigh--Jeans formula--- happens at small wavelength \(\lambda\). If we take the limit for \(\lambda \rightarrow 0\) in eq. \eqref{eq:rjlaw}, we obtain that \(I \rightarrow \infty\). In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.
 
 Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency:
 
@@ -247,11 +247,11 @@ E = n h \nu = n h \frac{c}{\lambda},
 
 with \(n\) being an integer number bigger than zero. Planck's assumptions led to the correct form of the spectral function for a black body:
 \begin{equation}
-B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
+I(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
 \label{eq:uvcatpl}
 \end{equation}
 
-If we now take the limit for \(\lambda \rightarrow 0\) of eq. \eqref{eq:uvcatpl}, it is easy to prove that \(B_{\lambda }\) goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for \(h = 6.626 \times 10^{-34} \; \text{J s}\), the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
+If we now take the limit for \(\lambda \rightarrow 0\) of eq. \eqref{eq:uvcatpl}, it is easy to prove that \(I\) goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for \(h = 6.626 \times 10^{-34} \; \text{J s}\), the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
 \hypertarget{the-photoelectric-effect}{%
 \section{The Photoelectric Effect}\label{the-photoelectric-effect}}
@@ -259,14 +259,14 @@ If we now take the limit for \(\lambda \rightarrow 0\) of eq. \eqref{eq:uvcatpl}
 The photoelectric effect refers to the phenomenon where electrons are emitted from a metal surface when it is illuminated with light of a certain frequency. This effect was first observed by Heinrich Hertz in 1887 and later explained by Albert Einstein in 1905, who proposed that light energy was quantized into discrete particles, or photons, each with an energy proportional to its frequency.
 
 Before Einstein's explanation, the classical prediction for the photoelectric effect was based on the wave theory of light, which assumed that light was a continuous wave.
-According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, \(I\), is defined as the power per unit area of the wave front, and is given by:
+According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, \(I\), is defined, as in the previous case, using the spectral radiance, which is the power emitted per unit emitting area, per steradian, per unit wavelength:
 
 \begin{equation}
 I = \frac{P}{A},
 \label{eq:pe1}
 \end{equation}
 
-where \(I\) is the intensity of the light, \(P\) is the power of the light, and \(A\) is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:
+where \(P\) is the power of the light, and \(A\) is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:
 
 \begin{equation}
 P = \frac{dE}{dt},
@@ -346,19 +346,19 @@ Quantum mechanics cannot be derived from classical mechanics, but classical mech
 \hypertarget{newtonian-formulation}{%
 \subsection{Newtonian Formulation}\label{newtonian-formulation}}
 
-Classical mechanics as formulated by Isaac Newton (1652-1727) is all about forces. Newtonian mechanics works well for problems where we know the forces and have a reasonable coordinate system. In these cases, the net force acting on a system at position \(q\) is simply:
+Classical mechanics as formulated by Isaac Newton (1652-1727) is all about forces. Newtonian mechanics works well for problems where we know the forces and have a reasonable coordinate system. In these cases, the net force acting on a system at position \(\mathbf{r}\) in Cartesian 3-dimensional space \(\left\{ x,y,z \right\}\) is simply:
 
 \begin{equation}
-F_{\mathrm{net}}(q) = m\ddot{q} = m \frac{d^2 q}{dt^2}.
+F_{\mathrm{net}}(\mathbf{r}) = m\ddot{\mathbf{r}} = m \frac{d^2 \mathbf{r}}{dt^2}.
 \label{eq:newt1}
 \end{equation}
 
-Or, in other words, if we know the net force acting on a system of mass \(m\) at position \(q\) at some time \(t_0\), we can use eq. \eqref{eq:newt1} to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.\footnote{Notice that, in principle, \(q\) \(\in\) \(\mathbb{R}^{n}\) is the position vector and \(\dot{q}\) \(\in\) \(\mathbb{R}^{n}\) is the velocity vector. As such, all the equation of classical mechanics are vector equation, and not just simple numerical equation, as we present them here! For our purposes, we can restrict ourselves to a 1-dimensional space, hence forgetting the complications of vector algebra.}
+Or, in other words, if we know the net force acting on a system of mass \(m\) at position \(\mathbf{r}\) at some time \(t_0\), we can use eq. \eqref{eq:newt1} to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.\footnote{Notice that \(\mathbf{r}\) \(\in\) \(\mathbb{R}^{3}\) is the position vector and \(\dot{\mathbf{r}}\) \(\in\) \(\mathbb{R}^{3}\) is the velocity vector. As such, all the equation of classical mechanics are vector equation in 3-dimensional space, and not just simple numerical equation. To simplify the picture, we can restrict ourselves to a 1-dimensional space, replace \(\mathbf{r}\) with \(x\), and forget the complications of vector algebra, as we do in the examples.}
 
 \begin{quote}
 \begin{example}
 \protect\hypertarget{exm:newtonianEx}{}{\label{exm:newtonianEx} }
-A ball of mass \(m\) is at ground level and tossed straight up from an initial position \(q_0\) with an initial velocity \(\dot{q}_0\) and subject to gravity alone. Calculate the equation of motion for the ball (i.e.~where is the ball going to be after some time \(t\)?).\footnote{This example is based on Rhett Allain's blog post that can be found (here){[}\url{https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/}{]}}
+A ball of mass \(m\) is at ground level and tossed straight up from an initial position \(x_0\) with an initial velocity \(\dot{x}_0\) and subject to gravity alone. Calculate the equation of motion for the ball (i.e.~where is the ball going to be after some time \(t\)?).\footnote{This example is based on Rhett Allain's blog post that can be found (here){[}\url{https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/}{]}}
 
 \emph{Solution:} Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:
 
@@ -370,9 +370,19 @@ with \(G\) the usual gravitational constant (\(G=9.8\; \mathrm{m}/\mathrm{s}^{2}
 
 \begin{equation}
 \begin{aligned}
--mG &=m \ddot{q} \\
--G &=\ddot{q} \\
--G &=\frac{d\dot{q}}{dt}, \\
+-mG &=m \ddot{\mathbf{r}} \\
+-G &=\ddot{\mathbf{r}} \\
+-G &=\frac{d\dot{\mathbf{r}}}{dt}. \\
+\end{aligned}
+\end{equation}
+
+Working in a 1-dimensional case, we can replace \(\mathbf{r}\) with position \(x\) to obtain:
+
+\begin{equation}
+\begin{aligned}
+-mG &=m \ddot{x} \\
+-G &=\ddot{x} \\
+-G &=\frac{d\dot{x}}{dt}. \\
 \end{aligned}
 \end{equation}
 
@@ -380,9 +390,9 @@ which can then be integrated with respect to time, to obtain:
 
 \begin{equation}
 \begin{aligned}
--G\int_{t=0}^{t} dt &=\int_{\dot{q}_0}^{\dot{q}} d\dot{q}\\
-\dot{q} &= \dot{q}_0-Gt\\
-\frac{dq}{dt} &= \dot{q}_0-Gt,\\
+-G\int_{t=0}^{t} dt &=\int_{\dot{x}_0}^{\dot{x}} d\dot{x}\\
+\dot{x} &= \dot{x}_0-Gt\\
+\frac{dx}{dt} &= \dot{x}_0-Gt,\\
 \end{aligned}
 \end{equation}
 
@@ -390,8 +400,8 @@ which can be further integrated with respect to time, to give:
 
 \begin{equation}
 \begin{aligned}
-\int_{q_0}^{q} dq &= \int_{t=0}^{t} \dot{q}_0 dt -G \int_{t=0}^{t}tdt\\
-q &= q_0 + \dot{q}_0 t -\frac{1}{2}Gt^2.
+\int_{x_0}^{x} dx &= \int_{t=0}^{t} \dot{x}_0 dt -G \int_{t=0}^{t}tdt\\
+x &= x_0 + \dot{x}_0 t -\frac{1}{2}Gt^2.
 \end{aligned}
 \end{equation}
 
@@ -415,7 +425,7 @@ L = K - V,
 \label{eq:lag1}
 \end{equation}
 
-where \(K\) is the kinetic energy, and \(V\) is the potential energy. Both are expressed in terms of the coordinates \((q,\dot{q})\). Notice that for a fixed time, \(t\), \(q\) and \(\dot{q}\) are independent variables, since \(\dot{q}\) cannot be derived from \(q\) alone.
+where \(K\) is the kinetic energy, and \(V\) is the potential energy. Both are expressed in terms of the coordinates \((\mathbf{r},\dot{\mathbf{r}})\). Notice that for a fixed time, \(t\), \(\mathbf{r}\) and \(\dot{\mathbf{r}}\) are independent variables, since \(\dot{\mathbf{r}}\) cannot be derived from \(\mathbf{r}\) alone.
 
 The time integral of the Lagrangian is called the \textbf{action}, and is defined as:
 
@@ -424,17 +434,17 @@ S = \int_{t_1}^{t_2} L\, dt,
 \label{eq:lag2}
 \end{equation}
 
-which is a functional: it takes in the Lagrangian function for all times between \(t_1\) and \(t_2\) and returns a scalar value. The equations of motion can be derived from the principle of least action,\footnote{Sometimes also called principle of stationary action, or variational principle, or Hamilton's principle.} which states that the true evolution of a system \(q(t)\) described by the coordinate \(q\) between two specified states \(q_1 = q(t_1)\) and \(q_2 = q(t_2)\) at two specified times \(t_1\) and \(t_2\) is a minimum of the action functional. For a minimum point:
+which is a functional: it takes in the Lagrangian function for all times between \(t_1\) and \(t_2\) and returns a scalar value. The equations of motion can be derived from the principle of least action,\footnote{Sometimes also called principle of stationary action, or variational principle, or Hamilton's principle.} which states that the true evolution of a system \(q(t)\) described by the coordinate \(q\) between two specified states \(\mathbf{r}_1 = \mathbf{r}(t_1)\) and \(\mathbf{r}_2 = \mathbf{r}(t_2)\) at two specified times \(t_1\) and \(t_2\) is a minimum of the action functional. For a minimum point:
 
 \begin{equation}
-\delta S = \frac{dS}{dq}= 0
+\delta S = \frac{dS}{d\mathbf{r}}= 0
 \label{eq:lag3}
 \end{equation}
 
-Requiring that the true trajectory \(q(t)\) minimizes the action functional \(S\), we obtain the equation of motion (figure \ref{fig:Fig1c2}\footnote{This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} by user Maschen, and distributed under CC0 license}). This can be achieved applying classical variational calculus to the variation of the action integral \(S\) under perturbations of the path \(q(t)\), eq. \eqref{eq:lag3}. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler---Lagrange equation:\footnote{The mathematical derivation of the Euler---Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found \href{https://en.wikipedia.org/wiki/Euler–Lagrange_equation}{here}.}
+Requiring that the true trajectory \(\mathbf{r}(t)\) minimizes the action functional \(S\), we obtain the equation of motion (figure \ref{fig:Fig1c2}\footnote{This diagram is taken from \href{https://en.wikipedia.org}{Wikipedia} by user Maschen, and distributed under CC0 license}). This can be achieved applying classical variational calculus to the variation of the action integral \(S\) under perturbations of the path \(q(t)\), eq. \eqref{eq:lag3}. The resulting equation of motion (or set of equations in the case of many dimensions) is sometimes also called the Euler---Lagrange equation:\footnote{The mathematical derivation of the Euler---Lagrange equaiton is rather long and unimportant at this stage. For the curious, it can be found \href{https://en.wikipedia.org/wiki/Euler–Lagrange_equation}{here}.}
 
 \begin{equation}
-\frac{d}{dt}\left(\frac{\partial L}{\partial\dot q}\right)=\frac{\partial L}{\partial q}.
+\frac{d}{dt}\left(\frac{\partial L}{\partial\dot{\mathbf{r}}}\right)=\frac{\partial L}{\partial \mathbf{r}}.
 \label{eq:lag4}
 \end{equation}
 
@@ -456,30 +466,30 @@ The expression of the kinetic energy, the potential energy, and the Lagrangian f
 
 \begin{equation}
 \begin{aligned}
-K &= \frac{1}{2}m\dot{q}^2 \\
-V &= mGq \\
-L &= K-V = \frac{1}{2}m\dot{q}^2 - mGq.
+K &= \frac{1}{2}m\dot{x}^2 \\
+V &= mGx \\
+L &= K-V = \frac{1}{2}m\dot{x}^2 - mGx.
 \end{aligned}
 \end{equation}
 
-To get the equation of motion using eq. \eqref{eq:lag4}, we need to first take the partial derivative of \(L\) with respect to \(q\) (right hand side):
+To get the equation of motion using eq. \eqref{eq:lag4}, we need to first take the partial derivative of \(L\) with respect to \(x\) (right hand side):
 
 \begin{equation}
-\frac{\partial L}{\partial q}=-mG,
+\frac{\partial L}{\partial x}=-mG,
 \end{equation}
 
-and then we need the derivative with respect to \(t\) the derivative of the Lagrangian with respect to \(\dot{q}\) at the hand side:
+and then we need the derivative with respect to \(t\) of the derivative of the Lagrangian with respect to \(\dot{x}\) at the left hand side:
 
 \begin{equation}
-\frac{d}{dt}\frac{\partial L}{\partial \dot{q}} = \frac{d\left(\frac{1}{2}m\dot{q}^2 - mGq\right)}{dt}= m\ddot{q}.
+\frac{d}{dt}\frac{\partial L}{\partial \dot{x}} = \frac{d\left(\frac{1}{2}m\dot{x}^2 - mGx\right)}{dt}= m\ddot{x}.
 \end{equation}
 
 Putting this together, we get:
 
 \begin{equation}
 \begin{aligned}
-m\ddot{q}&=-mG \\
-\ddot{q} &= -G \\
+m\ddot{x}&=-mG \\
+\ddot{x} &= -G \\
 \end{aligned}
 \end{equation}
 
@@ -492,17 +502,17 @@ The advantage of Lagrangian mechanics is that it is not constrained to use a coo
 \hypertarget{hamiltonian-mechanics}{%
 \subsection{Hamiltonian mechanics}\label{hamiltonian-mechanics}}
 
-A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum is defined in terms of the Lagrangian and the coordinates \((q,\dot{q})\):
+A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum, \(\mathbf{p}\), is defined in terms of the Lagrangian and the coordinates \((\mathbf{r},\dot{\mathbf{r}})\):
 
 \begin{equation} 
-p = \frac{\partial L}{\partial\dot{q}}.
+\mathbf{p} = \frac{\partial L}{\partial\dot{\mathbf{r}}}.
 \label{eq:ham1}
 \end{equation}
 
 The Hamiltonian is defined from the Lagrangian by applying a Legendre transformation as:\footnote{We have already encountered Legendre transform in \href{https://peverati.github.io/pchem1/Potentials.html\#thermpot}{The Live Textbook of Physical Chemistry 1} when transforming from the thermodynamic energy to any of the other thermodynamic potentials.}
 
 \begin{equation} 
-H(p,q) = p\dot{q} - L(q,\dot{q}),
+H(\mathbf{p},\mathbf{r}) = \mathbf{p}\dot{\mathbf{r}} - L(\mathbf{r},\dot{\mathbf{r}}),
 \label{eq:ham2}
 \end{equation}
 
@@ -510,20 +520,20 @@ The Lagrangian equation of motion becomes a pair of equations known as the Hamil
 
 \begin{equation} 
 \begin{aligned}
-\dot{p}=\frac{dp}{dt} &= -\frac{\partial H}{\partial q} \\
-\dot{q}=\frac{dq}{dt} &= +\frac{\partial H}{\partial p},
+\dot{\mathbf{p}}=\frac{d\mathbf{p}}{dt} &= -\frac{\partial H}{\partial \mathbf{r}} \\
+\dot{\mathbf{r}}=\frac{d\mathbf{r}}{dt} &= +\frac{\partial H}{\partial \mathbf{p}},
 \end{aligned}
 \label{eq:ham3}
 \end{equation}
 
-where \(H=H(q,p,t)\) is the Hamiltonian of the system, which often corresponds to its total energy. For a closed system, it is the sum of the kinetic and potential energy in the system:
+where \(H=H(\mathbf{p},\mathbf{r},t)\) is the Hamiltonian of the system, which often corresponds to its total energy. For a closed system, it is the sum of the kinetic and potential energy in the system:
 
 \begin{equation}
 H = K + V.
 \label{eq:hamdef}
 \end{equation}
 
-Notice the difference between the Hamiltonian, eq. \eqref{eq:hamdef}, and the Lagrangian, eq. \eqref{eq:lag1}. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton's second law, the time evolutions of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton's equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.
+Notice the difference between the Hamiltonian, eq. \eqref{eq:hamdef}, and the Lagrangian, eq. \eqref{eq:lag1}. In Newtonian mechanics, the time evolution is obtained by computing the total force being exerted on each particle of the system, and from Newton's second law, the time evolution of both position and velocity are computed. In contrast, in Hamiltonian mechanics, the time evolution is obtained by computing the Hamiltonian of the system in the generalized momenta and inserting it into Hamilton's equations. This approach is equivalent to the one used in Lagrangian mechanics, since the Hamiltonian is the Legendre transform of the Lagrangian. The main motivation to use Hamiltonian mechanics instead of Lagrangian mechanics comes from the more simple description of complex dynamic systems.
 
 \begin{quote}
 \begin{example}
@@ -532,35 +542,35 @@ Notice the difference between the Hamiltonian, eq. \eqref{eq:hamdef}, and the La
 Using eq. \eqref{eq:ham2}, the Hamiltonian can be written as:
 
 \begin{equation}
-H = m\dot{q}\dot{q} - \frac{1}{2}m\dot{q}^2+mGq = \frac{1}{2}m\dot{q}^2+mGq.
+H = m\dot{\mathbf{r}}\dot{\mathbf{r}} - \frac{1}{2}m\dot{\mathbf{r}}^2+mG\mathbf{r} = \frac{1}{2}m\dot{\mathbf{r}}^2+mG\mathbf{r}.
 \label{eq:ham4}
 \end{equation}
 
-Since the Hamiltonian really depends on position and momentum, we need to get this in terms of \(q\) and \(p\), with \(p = m\dot{q}\) for the momentum. This is not always the case, since it depends on the choice of coordinate system. For a trivial coordinate system for our simple 1-dimensional problem, we have:
+Since the Hamiltonian really depends on position and momentum, we need to get this in terms of \(\mathbf{r}\) and \(\mathbf{p}\), with \(\mathbf{r}=x\) and \(\mathbf{p} = p = m\dot{x}\) for our 1-dimensional system.\footnote{These equations are not universally valid, since they depend on the choice of coordinate system.} Hence we have:
 
 \begin{equation}
-H=\frac{p^2}{2m}+mGq,
+H=\frac{p^2}{2m}+mGx,
 \end{equation}
 
 from which we can use eqs. \eqref{eq:ham3} to get:
 
 \begin{equation}
 \begin{aligned}
-\dot{q} &= \frac{\partial H}{\partial p} = \frac{p}{m} \\
-\dot{p} &=-\frac{\partial H}{\partial q} = -mG.
+\dot{x} &= \frac{\partial H}{\partial p} = \frac{p}{m} \\
+\dot{p} &=-\frac{\partial H}{\partial x} = -mG.
 \end{aligned}
 \end{equation}
 
-These equations represent a major diffference of the Hamiltonian method, since we describe the system using two first-order differential equations, rather than one second-order differential equation. In order to get the equation of motion, we need to take the derivative of \(\dot{q}\):
+These equations represent a major difference of the Hamiltonian method, since we describe the system using two first-order differential equations, rather than one second-order differential equation. In order to get the equation of motion, we need to take the derivative of \(\dot{x}\):
 
 \begin{equation}
-\ddot{q} = \frac{d}{dt} \left( \frac{p}{m} \right) = \frac{\dot{p}}{m},
+\ddot{x} = \frac{d}{dt} \left( \frac{p}{m} \right) = \frac{\dot{p}}{m},
 \end{equation}
 
 and then replacing the definition of \(\dot{p}\) obtained above, we get:
 
 \begin{equation}
-\ddot{q} = \frac{-mG}{m} = -G
+\ddot{x} = \frac{-mG}{m} = -G
 \end{equation}
 
 which---once again---is the same result obtained for the two previous cases. Integrating this twice, we get the familiar equation of motion for our problem.

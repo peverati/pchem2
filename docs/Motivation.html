@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-05-05" />
+<meta name="date" content="2024-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,113 +231,20 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Motivation" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Introduction to Quantum Mechanics</h1>
+<p>Placeholder</p>
 <div id="historical-context" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Historical Context</h2>
-<p>Quantum mechanics is a branch of physics that deals with the behavior of matter and energy at the atomic and subatomic level. It is a fundamental theory that has revolutionized our understanding of the physical world, and it is a cornerstone of modern chemistry. But the road to the development of quantum mechanics was a long and winding one that spanned several decades and involved many of the greatest minds in physics.</p>
-<p>The story of quantum mechanics begins in the late 19th century, with the discovery of the electron by J.J. Thomson in 1897. This discovery, along with the discovery of radioactivity by Marie and Pierre Curie in the same year, sparked a flurry of activity in the field of atomic physics. Scientists were eager to understand the structure and behavior of atoms, and they soon discovered that classical physics was inadequate for this task.</p>
-<p>In 1900, the German physicist Max Planck made a breakthrough that would lay the groundwork for quantum mechanics. Planck was studying the spectrum of light emitted by a heated object, and he found that the energy of the emitted radiation was not continuous, as classical physics would have predicted, but instead came in discrete packets or “quanta”. This discovery was revolutionary and opened up a new era in physics.</p>
-<p>The next major milestone in the development of quantum mechanics came in 1913, with the Bohr model of the atom. Danish physicist Niels Bohr proposed a new model of the atom that incorporated the idea of quantized energy levels. According to Bohr’s model, electrons could only occupy certain discrete energy levels, and when they moved from one level to another, they emitted or absorbed energy in the form of light. Bohr’s model was a significant step forward, but it had limitations. It could only accurately predict the behavior of simple atoms with one or two electrons, and it did not account for the complex spectra of more complex atoms.</p>
-<p>It was not until the mid-1920s that a truly comprehensive theory of quantum mechanics began to emerge. In 1925, Austrian physicist Erwin Schrödinger published his famous equation, which described the wave-like behavior of particles at the atomic level. Schrödinger’s equation was a mathematical triumph, but it was also highly abstract and difficult to interpret. At the same time, Werner Heisenberg, a German physicist, was developing a different approach to quantum mechanics, known as matrix mechanics. Heisenberg’s theory was based on matrices, which are arrays of numbers that can be used to describe the properties of quantum particles. Heisenberg’s approach was highly mathematical, but it provided a more intuitive interpretation of the behavior of particles at the atomic level. The two approaches, matrix mechanics and wave mechanics, were eventually shown to be mathematically equivalent, and together they formed the basis of modern quantum mechanics.</p>
-<p>In the decades that followed, quantum mechanics continued to evolve, with new discoveries and theories expanding our understanding of the behavior of matter and energy at the atomic and subatomic level. Today, quantum mechanics is a thriving field of research, with applications in chemistry, physics, and many other areas of science.</p>
-<p>The development of quantum mechanics was driven by a series of discoveries and experiments that challenged classical physics and its inability to explain the behavior of atoms. These are the “ultraviolet catastrophe”, the photoelectric effect, and the wave-particle duality. We will discuss each of these cases below.</p>
 </div>
 <div id="the-ultraviolet-catastrophe" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> The Ultraviolet Catastrophe</h2>
-<p>The ultraviolet (UV) catastrophe, also called the Rayleigh–Jeans catastrophe, is the prediction of classical electromagnetism that the intensity of the radiation emitted by an ideal black body at thermal equilibrium goes to infinity as wavelength decreases (see figure <a href="Motivation.html#fig:Fig1c1">1.1</a><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>).</p>
-<div class="figure" style="text-align: center"><span id="fig:Fig1c1"></span>
-<img src="img/OEP_wiki0.png" alt="The ultraviolet catastrophe is the error at short wavelengths in the Rayleigh–Jeans law for the energy emitted by an ideal black body. The error, much more pronounced for short wavelengths, is the difference between the Rayleigh–Jeans law —black—and Planck's law—blue." width="70%" />
-<p class="caption">
-Figure 1.1: The ultraviolet catastrophe is the error at short wavelengths in the Rayleigh–Jeans law for the energy emitted by an ideal black body. The error, much more pronounced for short wavelengths, is the difference between the Rayleigh–Jeans law —black—and Planck’s law—blue.
-</p>
-</div>
-<p>A black body is an idealized object that absorbs and emits all frequencies. Classical physics can be used to derive an approximated equation describing the intensity of a black body radiation as a function of frequency for a fixed temperature. The result is known as the Rayleigh-Jeans law, which for wavelength <span class="math inline">\(\lambda\)</span>, is:</p>
-<p><span class="math display" id="eq:rjlaw">\[\begin{equation}
-B_{\lambda }(T)={\frac {2ck_{\mathrm {B} }T}{\lambda ^{4}}}
-\tag{1.1}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(B_{\lambda }\)</span> is the intensity of the radiation —expressed as the power emitted per unit emitting area, per steradian, per unit wavelength (spectral radiance)—
-<span class="math inline">\(c\)</span> is the speed of light, <span class="math inline">\(k_{\mathrm{B}}\)</span> is the Boltzmann constant, and <span class="math inline">\(T\)</span> is the temperature in kelvins.
-The paradox —or rather the breakdown of the Rayleigh–Jeans formula— happens at small wavelength <span class="math inline">\(\lambda\)</span>. If we take the limit for <span class="math inline">\(\lambda \rightarrow 0\)</span> in eq. <a href="Motivation.html#eq:rjlaw">(1.1)</a>, we obtain that <span class="math inline">\(B_{\lambda } \rightarrow \infty\)</span>. In other words, as the wavelength of the emitted light gets smaller (approaching the UV range), the intensity of the radiation approaches infinity, and the black body emits an infinite amount of energy. This divergence for low wavelength (high frequencies) is called the ultraviolet catastrophe, and it is clearly unphysical.</p>
-<p>Max Planck explained the black body radiation in 1900 by assuming that the energies of the oscillations of the electrons responsible for the radiation must be proportional to integral multiples of the frequency:</p>
-<p><span class="math display" id="eq:uvcat">\[\begin{equation}
-E = n h \nu = n h \frac{c}{\lambda},
-\tag{1.2}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(n\)</span> being an integer number bigger than zero. Planck’s assumptions led to the correct form of the spectral function for a black body:
-<span class="math display" id="eq:uvcatpl">\[\begin{equation}
-B_{\lambda }(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
-\tag{1.3}
-\end{equation}\]</span></p>
-<p>If we now take the limit for <span class="math inline">\(\lambda \rightarrow 0\)</span> of eq. <a href="Motivation.html#eq:uvcatpl">(1.3)</a>, it is easy to prove that <span class="math inline">\(B_{\lambda }\)</span> goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for <span class="math inline">\(h = 6.626 \times 10^{-34} \; \text{J s}\)</span>, the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.</p>
 </div>
 <div id="the-photoelectric-effect" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> The Photoelectric Effect</h2>
-<p>The photoelectric effect refers to the phenomenon where electrons are emitted from a metal surface when it is illuminated with light of a certain frequency. This effect was first observed by Heinrich Hertz in 1887 and later explained by Albert Einstein in 1905, who proposed that light energy was quantized into discrete particles, or photons, each with an energy proportional to its frequency.</p>
-<p>Before Einstein’s explanation, the classical prediction for the photoelectric effect was based on the wave theory of light, which assumed that light was a continuous wave.
-According to this assumption, the intensity of light is associated with the energy of the electromagnetic waves that make up the light. The intensity of light, <span class="math inline">\(I\)</span>, is defined as the power per unit area of the wave front, and is given by:</p>
-<p><span class="math display" id="eq:pe1">\[\begin{equation}
-I = \frac{P}{A},
-\tag{1.4}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(I\)</span> is the intensity of the light, <span class="math inline">\(P\)</span> is the power of the light, and <span class="math inline">\(A\)</span> is the area of the wave front. The power of the light is related to the energy of the electromagnetic waves that make up the light, and is given by:</p>
-<p><span class="math display" id="eq:pe2">\[\begin{equation}
-P = \frac{dE}{dt},
-\tag{1.5}
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(P\)</span> is the power of the light, <span class="math inline">\(E\)</span> is the energy of the electromagnetic waves, and <span class="math inline">\(t\)</span> is time. Therefore, the intensity of light is related to the energy of the electromagnetic waves that make up the light, and can be increased by increasing the energy of the waves or by increasing the number of waves per unit area (i.e., increasing the wave’s amplitude or its frequency).</p>
-<p>Applying this classical wave theory of light to explain the photoelectric effect, we deduce that when light shines on a metal surface, the energy of the light is transferred to the electrons in the metal continuously. The electrons would then be emitted when they accumulate enough energy to escape the surface. Since the energy of the light increases with its intensity, the kinetic energy of the emitted electron, <span class="math inline">\(K\)</span>, should be proportional to the intensity of the incident light, <span class="math inline">\(I_{\text{in}}\)</span>:</p>
-<p><span class="math display" id="eq:pe3">\[\begin{equation}
-K= c_{\text{PE}} \; I_{\text{in}},
-\tag{1.6}
-\end{equation}\]</span></p>
-<p>with <span class="math inline">\(c_{\text{PE}}\)</span> being a constant that depends on the metal and the characteristics of the incident light. In other words, if we change the intensity of the incident light, the kinetic energy of the emitted electrons would change accordingly. This explanation predicts also that a sufficiently dim light should result in a delayed emission. This prediction, however, was contradicted by Hertz’s experimental observations, which showed no dependence on the light’s intensity and no delayed emission (results were clearly independent on the duration of the exposure). In all of his experiments, electrons were dislodged from the surface of the metal only when the light exceeded a certain frequency, regardless of the intensity of the light.</p>
-<p>Einstein used the lack of dependency on the intensity of the light in Hertz’s experiment to propose that a beam of light is not a wave propagating through space, but a swarm of discrete energy packets, known as photons. Each of this photons will have an energy that is given by the smallest possible frequency in Planck’s theory of the black body (corresponding to <span class="math inline">\(n=1\)</span> in eq. <a href="Motivation.html#eq:uvcat">(1.2)</a>):</p>
-<p><span class="math display" id="eq:pe0">\[\begin{equation}
-E = h \nu.
-\tag{1.7}
-\end{equation}\]</span></p>
-<p>The energy of the incident photons is therefore quantized, and only photons with a frequency greater than the threshold frequency (corresponding to the work function of the metal) can eject electrons from the metal surface. A low-frequency beam at a high intensity will not build up the energy required to produce electrons, because there is no process for accumulation. The maximum kinetic energy that the electron can gain, <span class="math inline">\(K_{\text{max}}\)</span>, is equal to the energy of the incident photon, <span class="math inline">\(E_{\text{in}}=h\nu_{\text{in}}\)</span>, minus the work function of the metal <span class="math inline">\(\phi\)</span>, which is the minimum amount of energy required to remove an electron from the metal surface. Mathematically, this can be expressed as:</p>
-<p><span class="math display" id="eq:pe4">\[\begin{equation}
-K_{\text{max}} = E_{\text{in}} - \phi = h\nu_{\text{in}} - \phi.
-\tag{1.8}
-\end{equation}\]</span></p>
 </div>
 <div id="wave-particle-duality" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Wave-Particle Duality</h2>
-<p>Einstein had shown that the momentum of a photon is</p>
-<p><span class="math display" id="eq:wp1">\[\begin{equation}
-p = \frac{h}{\lambda}.
-\tag{1.9}
-\end{equation}\]</span></p>
-<p>This can be easily shown as follows. Assuming <span class="math inline">\(E = h \nu\)</span> for a photon and <span class="math inline">\(\lambda \nu = c\)</span> for an electromagnetic wave, we obtain</p>
-<p><span class="math display" id="eq:wp2">\[\begin{equation}
-E = \frac{h c}{\lambda}
-\tag{1.10}
-\end{equation}\]</span></p>
-<p>Now we use Einstein’s relativity result, <span class="math inline">\(E = m c^2\)</span>, and the definition of momentum <span class="math inline">\(p=mc\)</span>, to find:
-<span class="math display" id="eq:wp3">\[\begin{equation}
-\lambda = \frac{h}{p},
-\tag{1.11}
-\end{equation}\]</span></p>
-<p>which is equivalent to eq. <a href="Motivation.html#eq:wp1">(1.9)</a>. Note that <span class="math inline">\(m\)</span> refers to the relativistic mass, not the rest mass, since the rest mass of a photon is zero. Since light can behave both as a wave (it can be diffracted, and it has a wavelength), and as a particle (it contains packets of energy <span class="math inline">\(h \nu\)</span>), de Broglie reasoned in 1924 that matter also can exhibit this wave-particle duality. He further reasoned that matter would obey the same eq. <a href="Motivation.html#eq:wp3">(1.11)</a> as light. In 1927, Davisson and Germer observed diffraction patterns by bombarding metals with electrons, confirming de Broglie’s proposition.</p>
-<p>Rewriting the previous equations in terms of the wave vector, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, and the angular frequency, <span class="math inline">\(\omega=2\pi\nu\)</span>, we obtain the following two equations</p>
-<p><span class="math display" id="eq:wp1b">\[\begin{equation}
-\begin{aligned}
-p &amp;= \hbar k \\
-E &amp;= \hbar \omega,
-\end{aligned}
-\tag{1.12}
-\end{equation}\]</span></p>
-<p>which are known as <strong>de Broglie’s equations</strong>. We will use those equation to develop wave mechanics in the next chapters.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="1">
-<li id="fn1"><p>This picture is taken from <a href="https://en.wikipedia.org">Wikipedia</a> by user Darth Kule, and in in the Public Domain<a href="Motivation.html#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p>This chapter has been written with help from ChatGPT<a href="Motivation.html#fnref2" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 

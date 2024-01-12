@@ -24,7 +24,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2023-05-05" />
+<meta name="date" content="2024-01-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,66 +231,24 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Postulates" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Postulates of Quantum Mechanics</h1>
-<p>In order to understand deeper quantum mechanics, scientists have derived a series of axioms that result in what are called <em>postulates of quantum mechanics</em>. These are, in fact, assumptions that we need to make to understand how the measured reality relates with the mathematics of quantum mechanics. It is important to notice that the postulates are necessary for the interpretation of the theory, but not for the mathematics behind it. Regarding of whether we interpret it or not, the mathematics is complete and consistent. In fact, as we will see in the next chapter, several controversies regarding the interpretation of the mathematics are still open, and different philosophies have been developed to rationalize the results. Recall also that there are different ways of writing the equation of quantum mechanics, all equivalent to each other (i.e., Schrödinger’s differential formulation and Heisenberg’s algebraic formulation that we saw in chapter <a href="Schrodinger.html#Schrodinger">3</a>). For these reasons, there is not an agreement on the number of postulates that are necessary to interpret the theory, and some philosophy and/or formulation might require more postulates than others. In this chapter, we will discuss the six postulates, as they are usually presented in chemistry and introductory physics textbooks and as they relate with a basic statistical interpretation of quantum mechanics. Regardless of the philosophical consideration on the meanings and numbers of the postulate, as well as their physical origin, these statements will make the interpretation of the theory a little easier, as we will see in the next chapter.</p>
+<p>Placeholder</p>
 <div id="postulate-1-the-wave-function-postulate" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Postulate 1: The Wave Function Postulate</h2>
-<p>The state of a quantum mechanical system is completely specified by a function <span class="math inline">\(\Psi({\bf r}, t)\)</span> that depends on the coordinates of the particle(s) and on time. This function, called the wave function or state function, has the important property that <span class="math inline">\(\Psi^{*}({\bf r}, t)\Psi({\bf r}, t) d\tau\)</span> is the probability that the particle lies in the volume element <span class="math inline">\(d\tau\)</span> located at <span class="math inline">\({\bf r}\)</span> at time <span class="math inline">\(t\)</span>.</p>
-<p>The wave function must satisfy certain mathematical conditions because of this probabilistic interpretation. For the case of a single particle, the probability of finding it somewhere is 1, so that we have the normalization condition</p>
-<p><span class="math display" id="eq:post1">\[\begin{equation}
-\int_{-\infty}^{\infty} \Psi^{*}({\bf r}, t) \Psi({\bf r}, t) d\tau = 1
-\tag{8.1}  
-\end{equation}\]</span></p>
-<p>It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter <a href="Models.html#Models">4</a>, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which typically involve derivation) to be applied without mathematical issues.</p>
 </div>
 <div id="postulate-2-experimental-observables" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Postulate 2: Experimental Observables</h2>
-<p>To every observable in classical mechanics there corresponds a linear, Hermitian operator in quantum mechanics. We have in part already discussed this postulate in chapter <a href="Operators.html#Operators">6</a>, albeit we didn’t call it as such. This postulate is necessary if we require the expectation value of an operator <span class="math inline">\(\hat{A}\)</span> to be real, as it should be.</p>
 </div>
 <div id="postulate-3-individual-measurements" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Postulate 3: Individual Measurements</h2>
-<p>In any measurement of the observable associated with operator <span class="math inline">\(\hat{A}\)</span>, the only values that will ever be observed are the eigenvalues <span class="math inline">\(a\)</span> that satisfy the eigenvalue equation:</p>
-<p><span class="math display" id="eq:post2">\[\begin{equation}
-\hat{A} \Psi = a \Psi.
-\tag{8.2}  
-\end{equation}\]</span></p>
-<p>This postulate captures the central point of quantum mechanics: the values of dynamical variables can be quantized (although it is still possible to have a continuum of eigenvalues in the case of unbound states). If the system is in an eigenstate of <span class="math inline">\(\hat{A}\)</span> with eigenvalue <span class="math inline">\(a\)</span>, then any measurement of the quantity <span class="math inline">\(A\)</span> will yield <span class="math inline">\(a\)</span>.
-Although measurements must always yield an eigenvalue, the state does not have to be an eigenstate of <span class="math inline">\(\hat{A}\)</span> initially.</p>
-<p>An arbitrary state can be expanded in the complete set of eigenvectors of <span class="math inline">\(\hat{A}\)</span> <span class="math inline">\(\left(\hat{A}\Psi_i = a_i \Psi_i\right)\)</span> as:</p>
-<p><span class="math display" id="eq:post3">\[\begin{equation}
-\Psi = \sum_i^{n} c_i \Psi_i,
-\tag{8.3}  
-\end{equation}\]</span></p>
-<p>where <span class="math inline">\(n\)</span> may go to infinity. In this case, we only know that the measurement of <span class="math inline">\(A\)</span> will yield one of the values <span class="math inline">\(a_i\)</span>, but we don’t know which one. However, we do know the probability that eigenvalue <span class="math inline">\(a_i\)</span> will occur (it is the absolute value squared of the coefficient, <span class="math inline">\(\vert c_i\vert^2\)</span>, as we obtained already in chapter <a href="Operators.html#Operators">6</a>), leading to the fourth postulate below.</p>
 </div>
 <div id="postulate-4-expectation-values-and-collapse-of-the-wavefunction" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Postulate 4: Expectation Values and Collapse of the Wavefunction</h2>
-<p>If a system is in a state described by a normalized wave function <span class="math inline">\(\Psi\)</span>, then the average value of the observable corresponding to <span class="math inline">\(\hat{A}\)</span> is given by:</p>
-<p><span class="math display" id="eq:post4">\[\begin{equation}
-&lt;A&gt; = \int_{-\infty}^{\infty} \Psi^{*} \hat{A} \Psi d\tau.
-\tag{8.4}  
-\end{equation}\]</span></p>
-<p>An important consequence of the fourth postulate is that, after measurement of <span class="math inline">\(\Psi\)</span> yields some eigenvalue <span class="math inline">\(a_i\)</span>, the wave function immediately “collapses” into the corresponding eigenstate <span class="math inline">\(\Psi_i\)</span>. In other words, measurement affects the state of the system. This fact is used in many experimental tests of quantum mechanics, such as the Stern-Gerlach experiment. Think again at the sequential experiment that we discussed in chapter <a href="Spin.html#Spin">7</a>. The act of measuring the spin along one coordinate is not simply a “filtration” of some pre-existing feature of the wave function, but rather an act that changes the nature of the wave function itself, affecting the outcome of future experiments. To this act corresponds the collapse of the wave function, a process that remains unexplained to date. Notice how the controversy is not in the mathematics of the experiment, which we already discussed in the previous chapter without issues. The issues rather arise because we don’t know how to define the measurement act in itself (other than the fact that it is some form of quantum mechanical procedure with clear and well-defined macroscopic outcomes). This is the reason why the collapse of the wave function is also sometimes called the <em>measurement problem</em> of quantum mechanics, and it is still a source of research and debate among modern scientists.</p>
 </div>
 <div id="postulate-5-time-evolution" class="section level2" number="8.5">
 <h2><span class="header-section-number">8.5</span> Postulate 5: Time Evolution</h2>
-<p>The wave function of a system evolves in time according to the time-dependent Schrödinger equation:</p>
-<p><span class="math display" id="eq:post5">\[\begin{equation}
-\hat{H} \Psi({\bf r}, t) = i \hbar \frac{\partial \Psi}{\partial t}.
-\tag{8.5}  
-\end{equation}\]</span></p>
-<p>The central equation of quantum mechanics must be accepted as a postulate.</p>
 </div>
 <div id="postulate-6-pauli-exclusion-principle" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> Postulate 6: Pauli Exclusion Principle</h2>
-<p>The total wave function of a system with <span class="math inline">\(N\)</span> spin-<span class="math inline">\(\frac{1}{2}\)</span> particles (also called <strong>fermions</strong>) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called <strong>bosons</strong>), the wave function is symmetric:</p>
-<p><span class="math display" id="eq:post6">\[\begin{equation}
-\begin{aligned}
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{fermions}, \\
-\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= + \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{bosons}.
-\end{aligned}
-\tag{8.6}  
-\end{equation}\]</span></p>
-<p>Electronic spin must be included in this set of coordinates. As we will see in chapter <a href="Atoms.html#Atoms">10</a>, the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).</p>
 
 </div>
 </div>
