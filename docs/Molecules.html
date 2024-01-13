@@ -231,20 +231,111 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Molecules" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Introduction to Molecules</h1>
-<p>Placeholder</p>
 <div id="the-molecular-hamiltonian" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> The Molecular Hamiltonian</h2>
+<p>For a molecule, we can decompose the Hamiltonian operator as:</p>
+<p><span class="math display" id="eq:molham1">\[\begin{equation}
+\hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{V}_{ee}
+\tag{11.1}
+\end{equation}\]</span></p>
+<p>where we have decomposed the kinetic energy operator into nuclear and electronic terms, <span class="math inline">\(\hat{K}_N\)</span> and <span class="math inline">\(\hat{K}_e\)</span>, as well as the potential energy operator into terms representing the interactions between nuclei, <span class="math inline">\(\hat{V}_{NN}\)</span>, between electrons, <span class="math inline">\(\hat{V}_{ee}\)</span>, and between electrons and nuclei, <span class="math inline">\(\hat{V}_{eN}\)</span>. Each term can then be calculated using:</p>
+<p><span class="math display" id="eq:molham2">\[\begin{equation}
+\begin{aligned}
+\hat{K}_{N} &amp;=-\sum_{i}^{\text{nuclei}}{\frac  {\hbar ^{2}}{2M_{i}}}\nabla_{{{\mathbf  {R}}_{i}}}^{2} \\
+\hat  {K}_{e} &amp;=-\sum_{i}^{\text{electrons}}{\frac  {\hbar ^{2}}{2m_{e}}}\nabla _{{{\mathbf{r}}_{i}}}^{2} \\
+\hat{V}_{{NN}} &amp;= \sum _{i}\sum _{{j&gt;i}}{\frac  {Z_{i}Z_{j}e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {R}}_{j}\right|}} \\
+\hat  {V}_{{eN}} &amp;=-\sum _{i}\sum _{j}{\frac  {Z_{i}e^{2}}{4\pi \varepsilon_{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {r}}_{j}\right|}} \\
+\hat{V}_{{ee}} &amp;= \sum _{i}\sum _{{i&lt;j}}{\frac  {e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {r}}_{i}-{\mathbf  {r}}_{j}\right|}},
+\end{aligned}
+\tag{11.2}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(M_i\)</span>, <span class="math inline">\(Z_i\)</span>, and <span class="math inline">\(\mathbf{R}_i\)</span> are the mass, atomic number, and coordinates of nucleus <span class="math inline">\(i\)</span>, respectively, and all other symbols are the same as those used in eq. <a href="Atoms.html#eq:atom1">(10.1)</a> for the many-electron atom Hamiltonian.</p>
 <div id="small-terms-in-the-molecular-hamiltonian" class="section level3" number="11.1.1">
 <h3><span class="header-section-number">11.1.1</span> Small terms in the molecular Hamiltonian</h3>
+<p>The operator in eq. <a href="Molecules.html#eq:molham1">(11.1)</a> is known as the “exact” nonrelativistic Hamiltonian in field-free space. However, it is important to remember that it neglects at least two effects. Firstly, although the speed of an electron in a hydrogen atom is less than 1% of the speed of light, relativistic mass corrections can become appreciable for the inner electrons of heavier atoms. Secondly, we have neglected the spin-orbit effects, which is explained as follows. From the point of view of an electron, it is being orbited by a nucleus which produces a magnetic field (proportional to <span class="math inline">\({\bf L}\)</span>); this field interacts with the electron’s magnetic moment (proportional to <span class="math inline">\({\bf S}\)</span>), giving rise to a spin-orbit interaction (proportional to <span class="math inline">\({\bf L} \cdot {\bf S}\)</span> for a diatomic.) Although spin-orbit effects can be important, they are generally neglected in quantum chemical calculations, and we will neglect them in the remainder of this textbook as well.</p>
 </div>
 </div>
 <div id="the-born-oppenheimer-approximation" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> The Born-Oppenheimer Approximation</h2>
+<p>As we already saw in the previous chapter, if a Hamiltonian is separable into two or more terms, then the total eigenfunctions are products of the individual eigenfunctions of the separated Hamiltonian terms. The total eigenvalues are then sums of individual eigenvalues of the separated Hamiltonian terms.</p>
+<p>For example. let’s consider a Hamiltonian that is separable into two terms, one involving coordinate <span class="math inline">\(q_1\)</span> and the other involving coordinate <span class="math inline">\(q_2\)</span>:</p>
+<p><span class="math display" id="eq:molham3">\[\begin{equation}
+\hat{H} = \hat{H}_1(q_1) + \hat{H}_2(q_2)
+\tag{11.3}
+\end{equation}\]</span></p>
+<p>with the overall Schrödinger equation being:</p>
+<p><span class="math display" id="eq:molham4">\[\begin{equation}
+\hat{H} \psi(q_1, q_2) = E \psi(q_1, q_2).
+\tag{11.4}
+\end{equation}\]</span></p>
+<p>If we assume that the total wave function can be written in the form:</p>
+<p><span class="math display" id="eq:molham5">\[\begin{equation}
+\psi(q_1, q_2) = \psi_1(q_1) \psi_2(q_2),
+\tag{11.5}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\psi_1(q_1)\)</span> and <span class="math inline">\(\psi_2(q_2)\)</span> are eigenfunctions of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span> with eigenvalues <span class="math inline">\(E_1\)</span> and <span class="math inline">\(E_2\)</span>, then:</p>
+<p><span class="math display" id="eq:molham6">\[\begin{equation}
+\begin{aligned}
+\displaystyle \hat{H} \psi(q_1, q_2) &amp;= ( \hat{H}_1 + \hat{H}_2 ) \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= \hat{H}_1 \psi_1(q_1) \psi_2(q_2) + \hat{H}_2 \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= E_1 \psi_1(q_1) \psi_2(q_2) + E_2 \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= (E_1 + E_2) \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= E \psi(q_1, q_2)
+\end{aligned}
+\tag{11.6}
+\end{equation}\]</span></p>
+<p>Thus the eigenfunctions of <span class="math inline">\(\hat{H}\)</span> are products of the eigenfunctions of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span>, and the eigenvalues are the sums of eigenvalues of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span>.</p>
+<p>If we examine the nonrelativistic Hamiltonian in eq. <a href="Molecules.html#eq:molham1">(11.1)</a>, we see that the <span class="math inline">\(\hat{V}_{eN}\)</span> terms prevents us from cleanly separating the electronic and nuclear coordinates and writing the total wave function. If we neglect these terms, we can write the total wave function as:</p>
+<p><span class="math display" id="eq:molham7">\[\begin{equation}
+\psi({\bf r}, {\bf R}) = \psi_e({\bf r}) \psi_N({\bf R}),
+\tag{11.7}
+\end{equation}\]</span></p>
+<p>This approximation is called the <strong>Born-Oppenheimer approximation</strong>, and allows us to treat the nuclei as nearly fixed with respect to electron motion. The Born-Oppenheimer approximation is almost always quantitatively correct, since the nuclei are much heavier than the electrons and the (fast) motion of the latter does not affect the (slow) motion of the former. Using this approximation, we can fix the nuclear configuration at some value, <span class="math inline">\({\bf R_a}\)</span>, and solve for the electronic portion of the wave function, which is dependent only parametrically on <span class="math inline">\({\bf R}\)</span> (we write this wave function as <span class="math inline">\(\psi_e \left({\bf r}; {\bf R_a} \right)\)</span>, where the semicolon indicate the parametric dependence on the nuclear configuration). To solve the TISEq we can then write the electronic Hamiltonian as:</p>
+<p><span class="math display" id="eq:molham8">\[\begin{equation}
+\hat{H}_{\text{e}} = \hat{K}_e({\bf r}) +
+\hat{V}_{eN}\left({\bf r}; {\bf R_a} \right) +
+\hat{V}_{ee}({\bf r})
+\tag{11.8}
+\end{equation}\]</span></p>
+<p>where we have also factored out the nuclear kinetic energy, <span class="math inline">\(\hat{K}_N\)</span> (since it is smaller than <span class="math inline">\(\hat{K}_e\)</span> by a factor of <span class="math inline">\(\frac{M_i}{m_e}\)</span>), as well as <span class="math inline">\(\hat{V}_{NN}({\bf R})\)</span>. This latter approximation is justified, since in the Born-Oppenheimer approximation <span class="math inline">\({\bf R}\)</span> is just a parameter, and <span class="math inline">\(\hat{V}_{NN}({\bf R_a})\)</span> is a constant that shifts the eigenvalues only by some fixed amount. This electronic Hamiltonian results in the following TISEq:</p>
+<p><span class="math display" id="eq:molham9">\[\begin{equation}
+\hat{H}_{e} \psi_e \left({\bf r}; {\bf R_a} \right) = E_{e} \psi_e \left({\bf r}; {\bf R_a} \right),
+\tag{11.9}
+\end{equation}\]</span></p>
+<p>which is the equation that is used to explain the chemical bond in the next section. Notice that eq. <a href="Molecules.html#eq:molham9">(11.9)</a> is not the total TISEq of the system, since the nuclear eigenfunction and its eigenvalues (which can be obtained solving the Schrödinger equation with the nuclear Hamiltonian) are neglected.
+As a final note, in the remainder of this textbook we will confuse the term “total energy” with “total energy at fixed geometry”, as is customary in many other quantum chemistry textbooks (i.e., we are neglecting the nuclear kinetic energy). This is just <span class="math inline">\(E_{e}\)</span> of eq. <a href="Molecules.html#eq:molham9">(11.9)</a>, plus the constant shift,<span class="math inline">\(\hat{V}_{NN}({\bf R_a})\)</span>, given by the nuclear-nuclear repulsion.</p>
 </div>
 <div id="solving-the-electronic-eigenvalue-problem" class="section level2" number="11.3">
 <h2><span class="header-section-number">11.3</span> Solving the Electronic Eigenvalue Problem</h2>
+<p>Once we have invoked the Born-Oppenheimer approximation, we can attempt to solve the electronic TISEq in eq. <a href="Molecules.html#eq:molham9">(11.9)</a>. However, for molecules with more than one electron, we need to—once again—keep in mind the antisymmetry of the wave function. This obviously means that we need to write the electronic wave function as a Slater determinant (i.e., all molecules but <span class="math inline">\(\mathrm{H}_2^+\)</span> and a few related highly exotic ions). Once this is done, we can work on approximating the Hamiltonian, a task that is necessary because the presence of the electron-electron repulsion term forbids its analytic treatment. Similarly to the many-electron atom case, the simplest approximation to solve the molecular electronic TISEq is to use the variational method and to neglect the electron-electron repulsion. As we noticed in the previous chapter, this approximation is called the Hartree-Fock method.</p>
 <div id="the-hartree-fock-method" class="section level3" number="11.3.1">
 <h3><span class="header-section-number">11.3.1</span> The Hartree-Fock Method</h3>
+<p>The main difference when we apply the variational principle to a molecular Slater determinant is that we need to build orbitals (one-electron wave functions) that encompass the entire molecule. This can be done by assuming that the atomic contributions to the molecular orbitals will closely resemble the orbitals that we obtained for the hydrogen atom. The total molecular orbital can then be built by linearly combine these atomic contributions. This method is called <strong>linear combination of atomic orbitals (LCAO)</strong>. A consequence of the LCAO method is that the atomic orbitals on two different atomic centers are not necessarily orthogonal, and eq. <a href="Atoms.html#eq:var4">(10.12)</a> cannot be simplified easily. If we replace each atomic orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> with a linear combination of suitable basis functions <span class="math inline">\(f_i(\mathbf{r})\)</span>:</p>
+<p><span class="math display" id="eq:molham10">\[\begin{equation}
+\psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}),
+\tag{11.10}
+\end{equation}\]</span></p>
+<p>we can then use the following notation:</p>
+<p><span class="math display" id="eq:molham11">\[\begin{equation}
+\displaystyle H_{ij} = \int \phi_i^* {\hat H} \phi_j d\mathbf{\tau}\;, \qquad \displaystyle S_{ij} = \int \phi_i^* \phi_jd\mathbf{\tau},
+\tag{11.11}
+\end{equation}\]</span></p>
+<p>to simplify eq. <a href="Atoms.html#eq:var4">(10.12)</a> to:</p>
+<p><span class="math display" id="eq:molham11b">\[\begin{equation}
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
+\tag{11.12}
+\end{equation}\]</span></p>
+<p>Differentiating this energy with respect to the expansion coefficients <span class="math inline">\(c_i\)</span> yields a non-trivial solution only if the following “secular determinant” equals zero:</p>
+<p><span class="math display" id="eq:molham12">\[\begin{equation}
+\begin{vmatrix}
+H_{11}-ES_{11}   &amp; H_{12}-ES_{12}   &amp; \cdots &amp; H_{1m}-ES_{1m}\\\
+H_{21}-ES_{21}   &amp; H_{22}-ES_{22}   &amp; \cdots &amp; H_{2m}-ES_{2m}\\\
+\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\\
+H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
+\end{vmatrix}=0
+\tag{11.13}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(m\)</span> is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients <span class="math inline">\(c_i\)</span> in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the <strong>self-consistent-field (SCF) procedure</strong>. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. <a href="Molecules.html#eq:molham12">(11.13)</a>. This solution gives updated values of the coefficients, which can then be used to create an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.</p>
 
 </div>
 </div>

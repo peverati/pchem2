@@ -231,17 +231,150 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Schrodinger" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> The Schrödinger Equation</h1>
-<p>Placeholder</p>
+<p>In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger’s method involves partial differential equations, whereas Heisenberg’s method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger’s equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.</p>
 <div id="the-time-independent-schrödinger-equation" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</h2>
+<p>We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:</p>
+<p><span class="math display" id="eq:sch1">\[\begin{equation}
+\psi(x,t)=\exp[i(kx-\omega t)],
+\tag{3.1}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(x\)</span> is the position, <span class="math inline">\(t\)</span> is time, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span> is the wave vector, and <span class="math inline">\(\omega=2\pi\nu\)</span> is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of eq. <a href="Schrodinger.html#eq:sch1">(3.1)</a> with respect to the location, which are:</p>
+<p><span class="math display" id="eq:sch2">\[\begin{equation}
+\begin{aligned}
+\frac{\partial \psi}{\partial x} &amp;=ik\exp[i(kx-\omega t)] = ik\psi, \\
+\frac{\partial^2 \psi}{\partial x^2} &amp;=i^2k^2\exp[i(kx-\omega t)] = -k^2\psi,
+\end{aligned}
+\tag{3.2}
+\end{equation}\]</span></p>
+<p>where we have used the fact that <span class="math inline">\(i^2=-1\)</span>.</p>
+<p>Assuming that particles behaves as wave—as proven by de Broglie’s we can now use the first of de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.12)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> to obtain:</p>
+<p><span class="math display" id="eq:sch3">\[\begin{equation}
+\frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
+\tag{3.3}
+\end{equation}\]</span></p>
+<p>which can be rearranged to:</p>
+<p><span class="math display" id="eq:sch4">\[\begin{equation}
+p^2 \psi = -\hbar^2 \frac{\partial^2 \psi}{\partial x^2}.
+\tag{3.4}
+\end{equation}\]</span></p>
+<p>The total energy associated with a wave moving in space is simply the sum of its kinetic and potential energies:</p>
+<p><span class="math display" id="eq:sch5">\[\begin{equation}
+E = \frac {p^{2}}{2m} + V(x),
+\tag{3.5}
+\end{equation}\]</span></p>
+<p>from which we can obtain:</p>
+<p><span class="math display" id="eq:sch6">\[\begin{equation}
+p^2 = 2m[E - V(x)],
+\tag{3.6}
+\end{equation}\]</span></p>
+<p>which we can then replace into eq. <a href="Schrodinger.html#eq:sch4">(3.4)</a> to obtain:</p>
+<p><span class="math display" id="eq:sch7">\[\begin{equation}
+2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
+\tag{3.7}
+\end{equation}\]</span></p>
+<p>which can then be rearranged to the famous <strong>time-independent Schrödinger equation (TISEq)</strong>:</p>
+<p><span class="math display" id="eq:TISEq">\[\begin{equation}
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E\psi,
+\tag{3.8}
+\end{equation}\]</span></p>
+<p>A two-body problem can also be treated by this equation if the mass <span class="math inline">\(m\)</span> is replaced with a reduced mass <span class="math inline">\(\mu = \frac{m_1 m_2}{m_1+m_2}\)</span>.</p>
 </div>
 <div id="the-time-dependent-schrödinger-equation" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> The Time-Dependent Schrödinger Equation</h2>
+<p>Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:</p>
+<p><span class="math display" id="eq:TDSEq">\[\begin{equation}
+i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
+\tag{3.9}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(V \in \mathbb{R}^{n}\)</span> represents the potential energy of the system.
+Obviously, the time-dependent equation can be used to derive the time-independent equation. If we write the wavefunction as a product of spatial and temporal terms, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>, then equation <a href="Schrodinger.html#eq:TDSEq">(3.9)</a> becomes:</p>
+<p><span class="math display" id="eq:TDSEq2">\[\begin{equation}
+\psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
+\tag{3.10}
+\end{equation}\]</span></p>
+<p>which can be rearranged to:</p>
+<p><span class="math display" id="eq:TDSEq3">\[\begin{equation}
+\frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
+\tag{3.11}
+\end{equation}\]</span></p>
+<p>Since the left-hand side of eq. <a href="Schrodinger.html#eq:TDSEq3">(3.11)</a> is a function of <span class="math inline">\(t\)</span> only and the right hand side is a function of <span class="math inline">\(x\)</span> only, the two sides must equal a constant. If we tentatively designate this constant <span class="math inline">\(E\)</span> (since the right-hand side clearly must have the dimensions of energy), then we extract two ordinary differential equations, namely:</p>
+<p><span class="math display" id="eq:TDSEq4">\[\begin{equation}
+\frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
+\tag{3.12}
+\end{equation}\]</span></p>
+<p>and:
+<span class="math display" id="eq:TDSEq5">\[\begin{equation}
+-\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x) \psi(x) =
+E \psi(x).
+\tag{3.13}
+\end{equation}\]</span></p>
+<p>The latter equation is the TISEq. The former equation is easily solved to yield</p>
+<p><span class="math display" id="eq:TDSEq6">\[\begin{equation}
+f(t) = e^{-iEt / \hbar}
+\tag{3.14}
+\end{equation}\]</span></p>
+<p>The solutions of eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a>, <span class="math inline">\(f(t)\)</span>, are purely oscillatory, since <span class="math inline">\(f(t)\)</span> never changes in magnitude. Thus if:</p>
+<p><span class="math display" id="eq:TDSEq6b">\[\begin{equation}
+\psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
+\tag{3.15}
+\end{equation}\]</span></p>
+<p>then the total wave function <span class="math inline">\(\psi(x, t)\)</span> differs from <span class="math inline">\(\psi(x)\)</span> only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is time independent, as we can easily show:</p>
+<p><span class="math display" id="eq:TDSEq7">\[\begin{equation}
+\vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
+\psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
+\tag{3.16}
+\end{equation}\]</span></p>
+<p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.15)</a> are called stationary states. The state <span class="math inline">\(\psi(x, t)\)</span> is “stationary,” but the particle it describes is not!
+Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible. The total wave function, however, can in general be written as a linear combination (superposition) of simpler terms, such as:<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+<p><span class="math display">\[\begin{equation}
+\psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
+\end{equation}\]</span></p>
 </div>
 <div id="solution-for-the-free-particle" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Solution for the Free Particle</h2>
+<p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
+<p><span class="math display" id="eq:FP1">\[\begin{equation}
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+\tag{3.17}
+\end{equation}\]</span></p>
+<p>This equation can be rearranged to:</p>
+<p><span class="math display" id="eq:FP2">\[\begin{equation}
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+\tag{3.18}
+\end{equation}\]</span></p>
+<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
+<p><span class="math display" id="eq:FP3">\[\begin{equation}
+\psi(x) = A \exp(\pm ikx).
+\tag{3.19}
+\end{equation}\]</span></p>
+<p>The first and second derivatives of this function are:</p>
+<p><span class="math display" id="eq:FP4">\[\begin{equation}
+\begin{aligned}
+\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
+\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\end{aligned}
+\tag{3.20}
+\end{equation}\]</span></p>
+<p>Comparing the second derivative in eq. <a href="Schrodinger.html#eq:FP4">(3.20)</a> with eq. <a href="Schrodinger.html#eq:FP2">(3.18)</a>, we immediately see that if we set:</p>
+<p><span class="math display" id="eq:FP5">\[\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
+\tag{3.21}
+\end{equation}\]</span></p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(1.12)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p><span class="math display" id="eq:FP6">\[\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\tag{3.22}
+\end{equation}\]</span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Schrodinger.html#eq:FP3">(3.19)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Schrodinger.html#eq:FP6">(3.22)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="11">
+<li id="fn11"><p>This sections was adapted in part from Prof. C. David Sherrill’s A Brief Review of Elementary Quantum Chemistry Notes available <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">here</a>.<a href="Schrodinger.html#fnref11" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

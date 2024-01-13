@@ -231,17 +231,181 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Poly" class="section level1" number="13">
 <h1><span class="header-section-number">13</span> The Chemical Bond in Polyatomic Molecules</h1>
-<p>Placeholder</p>
+<p>The structure in space of polyatomic molecules depends on the stereochemistry of their chemical bonds and can be determined by solving the (approximated) TISEq using the Born—Oppenheimer approximation using a method that uses a linear combination of atomic orbitals to form molecular orbitals (LCAO-MO).</p>
 <div id="the-chemical-bond-in-the-water-molecule-using-a-minimal-basis" class="section level2" number="13.1">
 <h2><span class="header-section-number">13.1</span> The Chemical Bond in the Water Molecule Using a Minimal Basis</h2>
+<p>For a minimal representation of the two hydrogen atoms, we need two <span class="math inline">\(1s\)</span> functions, one centered on each atom. Oxygen has electrons in the second principal quantum level, so we will need one <span class="math inline">\(1s\)</span>, one <span class="math inline">\(2s\)</span>, and three <span class="math inline">\(2p\)</span> functions (one each of <span class="math inline">\(p_x\)</span>, <span class="math inline">\(p_y\)</span>, and <span class="math inline">\(p_z\)</span>). Summarizing, for a minimal representation of the water wave function we need five orbitals on oxygen, plus one each on the hydrogen atoms, for a total of 7 functions. From these atomic functions, we can build a total wave function using the LCAO method of chapter <a href="Molecules.html#Molecules">11</a>, and then we can use the variational principle, in conjunction with the Hartree—Fock (HF) method, to build and solve a secular determinant that looks is similar to that in eq. <a href="Molecules.html#eq:molham12">(11.13)</a>, with <span class="math inline">\(m=7\)</span> being the total number of basis functions. The approximated Hamiltonian operator in the HF method is called the Fock operator, and it can be divided into one-electron integrals, comprising the kinetic and potential energy contributions:</p>
+<p><span class="math display" id="eq:oneelint">\[\begin{equation}
+\begin{aligned}
+\displaystyle K_{ij} &amp;= \int \phi_i^* {\hat K} \phi_j\; d\mathbf{\tau}=\int \phi_i^* {\left(-\frac{1}{2}\nabla^2\right)} \phi_j\; d\mathbf{\tau} \\
+\displaystyle V_{ij} &amp;= \int \phi_i^* {\hat V} \phi_j\;d\mathbf{\tau} = \int \phi_i^* {\left(-\sum_k^{\mathrm{nuclei}}\frac{Z_k}{r_k}\right)} \phi_j\; d\mathbf{\tau} ,
+\end{aligned}
+\tag{13.1}
+\end{equation}\]</span></p>
+<p>as well as two-electron integrals describing the coulomb repulsion between electrons:</p>
+<p><span class="math display" id="eq:twoelint">\[\begin{equation}
+V_{ijkl} = \iint \phi_i^* \phi_j^* {\hat r}_{12} \phi_k \phi_l\; d\mathbf{\tau_1}d\mathbf{\tau_2}=\iint \phi_i^* \phi_j^* \left(\frac{1}{r_{12}}\right) \phi_k \phi_l\; d\mathbf{\tau_1}d\mathbf{\tau_2}.
+\tag{13.2}
+\end{equation}\]</span></p>
+<p>Despite the minimal basis set, the total number of integrals that need to be calculated for water is large, since <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span>, and <span class="math inline">\(l\)</span> can be any one of the 7 basis functions. Hence there are <span class="math inline">\(7\times7=49\)</span> kinetic energy integrals, and the same number of potential energy integrals for each nucleus, resulting in <span class="math inline">\(7\times 7 \times 3 = 147\)</span>. The grand total of one-electron integrals is thus 196. For the two-electron integrals, we have <span class="math inline">\(7 \times 7 \times 7 \times 7 = 2{,}401\)</span> integrals to calculate. Overall for this simple calculation on water, we need almost <span class="math inline">\(2{,}600\)</span> integrals.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
+<p>All this to find <span class="math inline">\(5\)</span> occupied molecular orbitals from which to form a final Slater determinant (<span class="math inline">\(10\)</span> electrons, two to an orbital, so <span class="math inline">\(5\)</span> orbitals). The situation sounds horrible, but it should be recognized that the solutions to all of the integrals are known to be analytic formulae involving only interatomic distances, cartesian exponents, and the values of a single exponent in the atomic functions. If we use slightly simpler gaussian functions instead of the more complicated hydrogenic solutions, the total number of floating-point operations to solve the integrals is roughly <span class="math inline">\(1{,}000{,}000\)</span>. In computer speak that’s one megaflop (megaflop = million FLoating-point OPerations). A modern digital computer processor can achieve gigaflop per second performance, so the computer can accomplish all these calculations in under one second. An additional way in which things can be improved is to recognize that the molecule has symmetries that can be exploited to reduce the number of total integrals that needs to be calculated.</p>
 </div>
 <div id="hartree-fock-calculation-for-water" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Hartree-Fock Calculation for Water</h2>
+<p>To find the Hartree-Fock (HF) molecular orbitals (MOs) we need to solve the following secular determinant:</p>
+<p><span class="math display" id="eq:hfequationh2o">\[\begin{equation}
+\begin{vmatrix}
+F_{11}-ES_{11}   &amp; F_{12}-ES_{12}   &amp; \cdots &amp; F_{17}-ES_{17}\\\
+F_{21}-ES_{21}   &amp; F_{22}-ES_{22}   &amp; \cdots &amp; F_{27}-ES_{27}\\\
+\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\\
+F_{71}-ES_{71}   &amp; F_{72}-ES_{72}   &amp; \cdots &amp; F_{77}-ES_{77}
+\end{vmatrix}=0
+\tag{13.3}
+\end{equation}\]</span></p>
+<p>with <span class="math inline">\(S_{ij}\)</span> being the overlap integrals of eq. <a href="Molecules.html#eq:molham11">(11.11)</a>, and <span class="math inline">\(F_{ij}\)</span> the matrix elements of the Fock operator, defined using the one- and two-electron integrals in eq. <a href="Poly.html#eq:oneelint">(13.1)</a> and eq. <a href="Poly.html#eq:twoelint">(13.2)</a> as:</p>
+<p><span class="math display" id="eq:HFmatrixelement">\[\begin{equation}
+F_{ij} = K_{ij} + V_{ij} + \sum_{kl} P_{kl} \left[ V_{ijkl} -\frac{1}{2}V_{ikjl} \right],
+\tag{13.4}
+\end{equation}\]</span></p>
+<p>with the density matrix elements <span class="math inline">\(P_{kl}\)</span> defined as:</p>
+<p><span class="math display" id="eq:densitymatrixelement">\[\begin{equation}
+P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
+\tag{13.5}
+\end{equation}\]</span></p>
+<p>where the <span class="math inline">\(a\)</span> values are the coefficients of the basis functions in the occupied molecular orbitals. These values will be determined using the SCF procedure, which proceeds as follows: At the first step we simply guess what these are, then we iterate through solution of the secular determinant to derive new coefficients and we continue to do so until self-consistency is reached (i.e. the <span class="math inline">\(N+1\)</span> step provides coefficients and energies that are equal to those in the <span class="math inline">\(N\)</span> step).</p>
+<p>We can try to solve the SCF procedure for water using a fixed geometry of the nuclei close to the experimental structure: O-H bond lengths of <span class="math inline">\(0.95\,\dot{A}\)</span> and a valence bond angle at oxygen of <span class="math inline">\(104.5^\circ\)</span>. To do so, we can use a minimal basis functions composed of the following seven orbitals: basis function #1 is an oxygen <span class="math inline">\(1s\)</span> orbital, #2 is an oxygen <span class="math inline">\(2s\)</span> orbital, #3 is an oxygen <span class="math inline">\(2p_x\)</span> orbital, #4 is an oxygen <span class="math inline">\(2p_y\)</span> orbital, #5 is an oxygen <span class="math inline">\(2p_z\)</span> orbital, #6 is one hydrogen <span class="math inline">\(1s\)</span> orbital, and #7 is the other hydrogen <span class="math inline">\(1s\)</span> orbital. The corresponding integrals introduced in the previous section can be calculated using a quantum chemistry code. The calculated overlap matrix elements are:</p>
+<p><span class="math display" id="eq:smatrix">\[\begin{equation}
+\mathbf{S}=
+\begin{bmatrix}
+\mathrm{O}\;1s &amp; \mathrm{O}\;2s &amp; \mathrm{O}\;2p_x &amp; \mathrm{O}\;2p_y &amp; \mathrm{O}\;2p_z &amp; \mathrm{H}_a\;1s &amp; \mathrm{H}_b\;1s &amp; \\\
+1.000 &amp; &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;1s \\\ 
+0.237 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;2s \\\
+0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;\mathrm{O}\;2p_x \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp;\mathrm{O}\;2p_y \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp;\mathrm{O}\;2p_z \\\
+0.055 &amp; 0.479 &amp; 0.000 &amp; 0.313 &amp; -0.242 &amp; 1.000 &amp;  &amp;\mathrm{H}_a\;1s \\\
+0.055 &amp; 0.479 &amp; 0.000 &amp; -0.313 &amp; -0.242 &amp; 0.256 &amp; 1.000&amp;\mathrm{H}_b\;1s 
+\end{bmatrix}
+\tag{13.6}
+\end{equation}\]</span></p>
+<p>There are many noteworthy features in <span class="math inline">\(\mathbf{S}\)</span>. First, it is shown in a lower packed triangular form because every element <span class="math inline">\(j,i\)</span> is the same as the element <span class="math inline">\(i,j\)</span> by symmetry, and every diagonal element is <span class="math inline">\(1\)</span> because the basis functions are normalized. Note that, again by symmetry, every <span class="math inline">\(p\)</span> orbital on oxygen is orthogonal (overlap = zero) with every <span class="math inline">\(s\)</span> orbital and with each other, but the two <span class="math inline">\(s\)</span> orbitals do overlap (this is due to the fact that they are not pure hydrogenic orbitals—which would indeed be orthogonal—but they have been optimized, so <span class="math inline">\(S_{12} = 0.237\)</span>). Note also that the oxygen <span class="math inline">\(1s\)</span> orbital overlaps about an order of magnitude less with any hydrogen <span class="math inline">\(1s\)</span> orbital than does the oxygen <span class="math inline">\(2s\)</span> orbital, reflecting how much more rapidly the first quantum-level orbital decays compared to the second. Note that by symmetry the oxygen <span class="math inline">\(p_x\)</span> cannot overlap with the hydrogen <span class="math inline">\(1s\)</span> functions (positive overlap below the plane exactly cancels negative overlap above the plane) and that the oxygen <span class="math inline">\(p_y\)</span> overlaps with the two hydrogen <span class="math inline">\(1s\)</span> orbitals equally in magnitude but with different sign because the <span class="math inline">\(p\)</span> orbital has different phase at its different ends. Finally, the overlap of the <span class="math inline">\(p_z\)</span> is identical with each H <span class="math inline">\(1s\)</span> because it is not changing which lobe it uses to interact. The kinetic energy matrix (in a.u.) is:</p>
+<p><span class="math display" id="eq:kmatrix">\[\begin{equation}
+\mathbf{K}=
+\begin{bmatrix}
+29.003 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
+-0.168 &amp; 0.808 &amp; &amp; &amp; &amp; &amp;  \\\
+0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; \\\
+-0.002 &amp; 0.132 &amp; 0.000 &amp; 0.229 &amp; -0.177 &amp; 0.760 &amp; \\\
+-0.002 &amp; 0.132 &amp; 0.000 &amp; -0.229 &amp; -0.177 &amp; 0.009 &amp; 0.760
+\end{bmatrix}
+\tag{13.7}
+\end{equation}\]</span></p>
+<p>Notice that every diagonal term is much larger than any off-diagonal term. Recall that each kinetic energy integral, eq. <a href="Poly.html#eq:oneelint">(13.1)</a>, involves the Laplacian operator, <span class="math inline">\(\nabla^2\)</span>. The Laplacian reports back the sum of second derivatives in all coordinate directions. That is, it is a measure of how fast the slope of the function is changing in various directions. If we take two atomic orbitals <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\nu\)</span> far apart from each other, then since gaussians go to zero at least exponentially fast with distance, <span class="math inline">\(\nu\)</span> is likely to be very flat where <span class="math inline">\(\mu\)</span> is large. The second derivative of a flat function is zero. So, every point in the integration will be roughly the amplitude of <span class="math inline">\(\mu\)</span> times zero, and not much will accumulate. For the diagonal element, on the other hand, the interesting second derivatives will occur where the function has maximum amplitude (amongst other places) so the accumulation should be much larger. Notice also that off-diagonal terms can be negative. That is because there is no real physical meaning to a kinetic energy expectation value involving two different orbitals. It is just an integral that appears in the complete secular determinant. Symmetry again keeps <span class="math inline">\(p\)</span> orbitals from mixing with <span class="math inline">\(s\)</span> orbitals or with each other. The nuclear attraction matrix is:</p>
+<p><span class="math display" id="eq:vmatrix">\[\begin{equation}
+\mathbf{V}=
+\begin{bmatrix}
+-61.733 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
+-7.447 &amp; -10.151 &amp; &amp; &amp; &amp; &amp;  \\\
+0.000 &amp; 0.000 &amp; -9.926 &amp; &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; -10.152 &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; -10.088 &amp; &amp; \\\
+-1.778 &amp; -3.920 &amp; 0.000 &amp; -0.228 &amp; -0.184 &amp; -5.867 &amp; \\\
+-1.778 &amp; -3.920 &amp; 0.000 &amp; 0.228 &amp; 0.184 &amp; -1.652 &amp; -5.867
+\end{bmatrix}
+\tag{13.8}
+\end{equation}\]</span></p>
+<p>Again, diagonal elements are bigger than off-diagonal elements because the <span class="math inline">\(1/r\)</span> operator acting on a basis function <span class="math inline">\(\nu\)</span> will ensure that the largest contribution to the overall integral will come from the nucleus <span class="math inline">\(k\)</span> on which basis function <span class="math inline">\(\nu\)</span> resides. Unless <span class="math inline">\(\mu\)</span> also has significant amplitude around that nucleus, it will multiply the result by roughly zero and the whole integral will be small. Again, positive values can arise when two different functions are involved even though electrons in a single orbital must always be attracted to nuclei and thus diagonal elements must always be negative. Note that the <span class="math inline">\(p\)</span> orbitals all have different nuclear attractions. That is because, although they all have the same attraction to the O nucleus, they have different amplitudes at the H nuclei. The <span class="math inline">\(p_x\)</span> orbital has the smallest amplitude at the H nuclei (zero, since they are in its nodal plane), so it has the smallest nuclear attraction integral. The <span class="math inline">\(p_z\)</span> orbital has somewhat smaller amplitude at the H nuclei than the <span class="math inline">\(p_y\)</span> orbital because the bond angle is greater than <span class="math inline">\(90^\circ\)</span> (it is <span class="math inline">\(104.5^\circ\)</span>; if it were <span class="math inline">\(90^\circ\)</span> the O-H bonds would bisect the <span class="math inline">\(p_y\)</span> and <span class="math inline">\(p_z\)</span> orbitals and their amplitudes at the H nuclei would necessarily be the same). Thus, the nuclear attraction integral for the latter orbital is slightly smaller than for the former.</p>
+<p>The sum of the kinetic and nuclear attraction integrals is usually called the one- electron or core part of the Fock matrix and abbreviated <span class="math inline">\(\mathbf{h}\)</span> (i.e., <span class="math inline">\(\mathbf{h} = \mathbf{K} + \mathbf{V}\)</span>). One then writes <span class="math inline">\(\mathbf{F} = \mathbf{h} + \mathbf{G}\)</span> where <span class="math inline">\(\mathbf{F}\)</span> is the Fock matrix, <span class="math inline">\(\mathbf{h}\)</span> is the one-electron matrix, and <span class="math inline">\(\mathbf{G}\)</span> is the remaining part of the Fock matrix coming from the two-electron four-index integrals (cf eq. <a href="Poly.html#eq:HFmatrixelement">(13.4)</a>). To compute those two-electron integrals, however, we need the density matrix, which itself comes from the occupied MO coefficients. So, we need an initial guess at those coefficients. We can get such a guess many ways, but ultimately any guess is as good as any other. With these coefficients we can compute the density matrix using eq. <a href="Poly.html#eq:densitymatrixelement">(13.5)</a>:</p>
+<p><span class="math display" id="eq:pmatrix">\[\begin{equation}
+\mathbf{P}=
+\begin{bmatrix}
+2.108 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
+-0.456 &amp; 2.010 &amp; &amp; &amp; &amp; &amp;  \\\
+0.000 &amp; 0.000 &amp; 2.000 &amp; &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.737 &amp; &amp; &amp; \\\
+-0.104 &amp; 0.618 &amp; 0.000 &amp; 0.000 &amp; 1.215 &amp; &amp; \\\
+-0.022 &amp; -0.059 &amp; 0.000 &amp; 0.539 &amp; -0.482 &amp; 0.606 &amp; \\\
+-0.022 &amp; -0.059 &amp; 0.000 &amp; -0.539 &amp; -0.482 &amp; -0.183 &amp; 0.606
+\end{bmatrix}
+\tag{13.9}
+\end{equation}\]</span></p>
+<p>With <span class="math inline">\(\mathbf{P}\)</span>, we can compute the remaining contribution of <span class="math inline">\(\mathbf{G}\)</span> to the Fock matrix. We will not list all 406 two-electron integrals here. Instead, we will simply write the total Fock matrix:</p>
+<p><span class="math display" id="eq:fmatrix">\[\begin{equation}
+\mathbf{F}=
+\begin{bmatrix}
+-20.236 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
+-5.163 &amp; -2.453 &amp; &amp; &amp; &amp; &amp;  \\\
+0.000 &amp; 0.000 &amp; -0.395 &amp; &amp; &amp; &amp; \\\
+0.000 &amp; 0.000 &amp; 0.000 &amp; -0.327 &amp; &amp; &amp; \\\
+0.029 &amp; 0.130 &amp; 0.000 &amp; 0.000 &amp; -0.353 &amp; &amp; \\\
+-1.216 &amp; -1.037 &amp; 0.000 &amp; -0.398 &amp; 0.372 &amp; -0.588 &amp; \\\
+-1.216 &amp; -1.037 &amp; 0.000 &amp; 0.398 &amp; 0.372 &amp; -0.403 &amp; -0.588
+\end{bmatrix}
+\tag{13.10}
+\end{equation}\]</span></p>
+<p>So, we’re finally ready to solve the secular determinant, since we have <span class="math inline">\(\mathbf{F}\)</span> and <span class="math inline">\(\mathbf{S}\)</span> fully formed. When we do that, and then solve for the MO coefficients for each root <span class="math inline">\(E\)</span>, we get new occupied MOs. Then, we iterate again, and again, and again, until we are satisfied that further iterations will not change either our (i) energy, (ii) density matrix, or (iii) MO coefficients (it’s up to the quantum chemist to decide what is considered satisfactory).</p>
+<p>In our water calculation, if we monitor the energy at each step we find:</p>
+<p><span class="math display" id="eq:h2oenergies">\[\begin{equation}
+\begin{aligned}
+E(RHF) &amp;= \; -74.893\,002\,803\qquad\text{a.u. after 1 cycles} \\
+E(RHF) &amp;= \; -74.961\,289\,145\qquad\text{a.u. after 2 cycles} \\
+E(RHF) &amp;= \; -74.961\,707\,247\qquad\text{a.u. after 3 cycles} \\
+E(RHF) &amp;= \; -74.961\,751\,946\qquad\text{a.u. after 4 cycles} \\
+E(RHF) &amp;= \; -74.961\,753\,962\qquad\text{a.u. after 5 cycles} \\
+E(RHF) &amp;= \; -74.961\,754\,063\qquad\text{a.u. after 6 cycles} \\
+E(RHF) &amp;= \; -74.961\,754\,063\qquad\text{a.u. after 7 cycles} \\
+\end{aligned}
+\tag{13.11}
+\end{equation}\]</span></p>
+<p>Which means that our original guess was really not too bad—off by a bit less than <span class="math inline">\(0.1\text{ a.u.}\)</span> or roughly <span class="math inline">\(60\text{ kcal mol}^{-1}\)</span>. Our guess energy is too high, as the variational principle guarantees that it must be. Our first iteration through the secular determinant picks up nearly <span class="math inline">\(0.07\text{ a.u.}\)</span>, our next iteration an additional <span class="math inline">\(0.000\,42\)</span> or so, and by the end we are converged to within 1 nanohartree (<span class="math inline">\(0.000\,000 6\text{ kcal mol}^{-1}\)</span>).</p>
+<p>The final optimized MOs for water are:</p>
+<p><span class="math display" id="eq:eigenvalMO">\[\begin{equation}
+\begin{matrix}                  
+&amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\\
+E  &amp; -20.24094 &amp;  -1.27218   &amp;   -.62173    &amp;  -.45392     &amp;    -.39176    &amp;   .61293    &amp; .75095 \\\
+\\\
+1                &amp; .99411    &amp;   -.23251   &amp;   .00000     &amp;  -.10356     &amp;    .00000     &amp;   -.13340   &amp; .00000   \\\
+2                &amp; .02672    &amp;   .83085    &amp;  .00000      &amp; .53920       &amp;  .00000      &amp;  .89746     &amp; .00000  \\\
+3                &amp; .00000    &amp;   .00000    &amp;  .00000      &amp; .00000       &amp;  1.0000       &amp; .00000      &amp; .00000  \\\
+4                &amp; .00000    &amp;   .00000    &amp; .60677       &amp;  .00000      &amp;   .00000      &amp;  .00000     &amp; .99474  \\\
+5                &amp; -.00442   &amp;    -.13216  &amp;    .00000    &amp;   .77828     &amp;    .00000     &amp;  -.74288    &amp;  .00000  \\\
+6                &amp; -.00605   &amp;    .15919   &amp;   .44453     &amp;  -.27494     &amp;    .00000     &amp;  -.80246    &amp;  -.84542  \\\
+7                &amp;  -.00605  &amp;     .15919  &amp;     -.44453  &amp;     -.27494  &amp;       .00000  &amp;     -.80246 &amp;     .84542 \\\
+\end{matrix}
+\tag{13.12}
+\end{equation}\]</span></p>
+<p>where the first row reports the eigenvalues of each MO, in <span class="math inline">\(E_h\)</span> (i.e., the energy of one electron in the MO). The sum of all of the occupied MO energies should be an underestimation of the total electronic energy because electron-electron repulsion will have been double counted. So, if we sum the occupied orbital energies (times two, since there are two electrons in each orbital), we get <span class="math inline">\(2(-20.24094{-}1.27218{-}0.62173{-}0.45392{-}0.39176)=-45.961\,060\)</span>. If we now subtract the electron-electron repulsion energy <span class="math inline">\(38.265\,406\)</span> we get <span class="math inline">\(-84.226\,466\)</span>. If we add the nuclear repulsion energy <span class="math inline">\(9.264\,701\)</span> to this we get a total energy <span class="math inline">\(-74.961\,765\)</span>. The difference between this and the converged result above (<span class="math inline">\(-74.961\,754\)</span>) can be attributed to rounding in the MO energies, which are truncated after 5 places. Notice that the five occupied MOs all have negative energies. So, their electrons are bound within the molecule. The unoccupied MOs (called “virtual” MOs) all have positive energies, meaning that the molecule will not spontaneously accept an electron from another source.</p>
 </div>
 <div id="shapes-and-energies-of-molecular-orbitals" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> Shapes and Energies of Molecular Orbitals</h2>
+<p>If we analyze the optimized coefficients of the occupied MOs reported in eq. <a href="Poly.html#eq:eigenvalMO">(13.12)</a>, we observe that the lowest energy orbital (by a lot!) is a nearly pure oxygen <span class="math inline">\(1s\)</span> orbital since the coefficient of the oxygen <span class="math inline">\(1s\)</span> basis function is very nearly 1 and all other coefficients are rather close to 0. Note, however, that the coefficient is not really a percentage measure. That’s because the basis functions are not necessarily orthogonal to one another. Let’s consider the next molecular orbital up, number 2. It has a dominant contribution from the oxygen <span class="math inline">\(2s\)</span> basis function, but non-trivial contributions from many other basis functions as well. In order to understand which kind of orbital it is, it is useful to try to visualize some of its properties. For example, recall that the square of the orbital at a particular point in space represents a probability density. As such, we can map values of the square of each orbital on a grid in 3-dimensional space, and then pick a value of probability density, say <span class="math inline">\(0.04\; a_0^{-3}\)</span>, and plot that as a contour surface (remember that a probability density is a 4-dimensional quantity, so we need to take a slice at some constant density to be able to plot it in 3-D). That surface is called an “isodensity” surface. In addition to the square of the function, we can also color regions where the wave function is positive blue and regions where it’s negative red. The five occupied and two unoccupied MOs mapped from their one-electron wave functions are plotted in figure <a href="Poly.html#fig:Fig1c12b">13.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:Fig1c12b"></span>
+<img src="img/Fig13.jpg" alt="Isodensity maps of the Molecular Orbitals (MOs) of water." width="90%" />
+<p class="caption">
+Figure 13.1: Isodensity maps of the Molecular Orbitals (MOs) of water.
+</p>
+</div>
+<p>Going back to the Lewis structure of water as taught in general chemistry courses, it says that there is one pair of electrons in one O–H <span class="math inline">\(\sigma\)</span> bond, one pair in another identical such <span class="math inline">\(\sigma\)</span> bond, and two equivalent pairs that constitute the lone pairs on oxygen. The two lone pairs and the O–H bonds should by pointing towards the apices of a tetrahedron because they are all considered to be <span class="math inline">\(sp^3\)</span> hybridized.</p>
+<p>As you can see, the MOs look nothing like the Lewis picture. Instead, amongst other details, there is one lone pair that is pure <span class="math inline">\(p\)</span> (not <span class="math inline">\(sp^3\)</span>), another that is, if anything, <span class="math inline">\(sp^2\)</span>-like, but also enjoys contribution from hydrogen <span class="math inline">\(1s\)</span> components. There is one orbital that looks like both O–H <span class="math inline">\(\sigma\)</span> bonds are present, but another that has an odd “bonding-all-over” character to it.</p>
+<p>Is it really possible that for something as simple as water all the things you’ve ever been told about the Lewis structure are wrong? Water must have two equivalent lone pairs, right?</p>
+<p>It turns out that the molecular orbital results can be tested with spectroscopic experiments, and suffice to say, they agree perfectly.</p>
+<p>But the <span class="math inline">\(sp^3\)</span>-hybridized picture of water works well, for example, to explain its hydrogen-bonding behavior: In liquid water each water molecule makes two hydrogen bonds to other water molecules and accepts two more from different water molecules and the final structure has a net lattice-like form that is tetrahedral at each oxygen atom. How can the above MOs explain that? The key point to remember is that another molecule does not see the individual orbitals of water, it just sees the final effect of all of those electrons and nuclei <strong>together</strong>. To explain the tetrahedral H-bond lattice we can plot some constant level of electron density (i.e. <span class="math inline">\(0.02\text{ a.u.}\)</span>) and map onto this isodensity surface the values of the electrostatic potential. We can find these values by bringing a positive test charge onto that surface and recording how much would it find itself attracted (because of a net negative electrostatic potential) or repelled (because of a net positive electrostatic potential). This is done in figure <a href="Poly.html#fig:Fig2c12b">13.2</a>. Notice how the negative potential is entirely on the oxygen side and the positive potential entirely on the hydrogens side. Moreover, the negative potential splays out to the tetrahedral points and the positive potential does too (those points for the purple region being roughly where the H atoms are).</p>
+<div class="figure" style="text-align: center"><span id="fig:Fig2c12b"></span>
+<img src="img/Fig13_map.jpg" alt="Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface." width="60%" />
+<p class="caption">
+Figure 13.2: Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface.
+</p>
+</div>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="28">
+<li id="fn28"><p>The numbers computed here involve the minimum amount of uncontracted “hydrogenic” functions that can be used for calculation on water. In real-life calculations a linear combination of simpler primitive functions (gaussians) is used to describe a single uncontracted function. For example in the simplest case, the STO-3G basis set, each uncontracted function is composed of 3 primitive gaussian functions. Thus, for any individual one-electron integral, there will be <span class="math inline">\(3 \times 3 = 9\)</span> separate integrals involving the primitives. There are thus <span class="math inline">\(9 \times 196 = 1{,}764\)</span> individual primitive one-electron integrals. As for the two-electron integrals, again, every individual integral will require considering every possible combination of constituent primitives which is <span class="math inline">\(3 \times 3 \times 3 \times 3 = 81\)</span>. Thus, the total number of primitive two-electron integrals is <span class="math inline">\(81 \times 2{,}401 = 194{,}481\)</span> (gulp!) Notice that even for this small molecule the number of two-electron integrals totally dominates the number of one-electron integrals. The disparity only increases with molecular size. Notice: Portions of this section are based on Prof. C.J. Cramer’s lecture notes available (here)[<a href="http://pollux.chem.umn.edu/4502/3502_lecture_29.pdf" class="uri">http://pollux.chem.umn.edu/4502/3502_lecture_29.pdf</a>]<a href="Poly.html#fnref28" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
