@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10 Many-Electron Atoms | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10 Many-Electron Atoms | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Weirdness.html"/>
 <link rel="next" href="Molecules.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,8 +293,8 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Atoms" class="section level1" number="10">
-<h1><span class="header-section-number">10</span> Many-Electron Atoms</h1>
+<div id="Atoms" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">10</span> Many-Electron Atoms<a href="Atoms.html#Atoms" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>When two or more electrons are present in a system, the TISEq equation cannot be solved analytically. Thus for the vast majority of chemical applications, we must rely on approximate methods. We will explore some of these approximations in this and further chapter, starting from the many-electron atoms (all atoms other than hydrogen). It is important to stress that because of the nature of approximations, this is still a very active field of scientific research, and improved methods are developed every year.</p>
 <p>The electronic Hamiltonian for a many-electron atom can be written as:</p>
 <p><span class="math display" id="eq:atom1">\[\begin{equation}
@@ -238,8 +302,8 @@ MathJax.Hub.Config({
 \tag{10.1}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m_e\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\({\bf r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|{\bf r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|{\bf r}_i-{\bf r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. <a href="Operators.html#eq:scheqsimple">(6.24)</a>.</p>
-<div id="many-electron-wave-functions" class="section level2" number="10.1">
-<h2><span class="header-section-number">10.1</span> Many-Electron Wave Functions</h2>
+<div id="many-electron-wave-functions" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Many-Electron Wave Functions<a href="Atoms.html#many-electron-wave-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When we have more than one electron, the sixth postulate that we discussed in chapter <a href="Postulates.html#Postulates">8</a> comes into place. In other words, we need to account for the spin of the electrons and we need the wave function to be antisymmetric with respect to exchange of the coordinates of any two electrons. In order to do so, we can define a new variable <span class="math inline">\({\bf x}\)</span> which represents the set of all four coordinates associated with an electron: three spatial coordinates <span class="math inline">\({\bf r}\)</span>, and one spin coordinate <span class="math inline">\(\mathbf{s}\)</span>, i.e., <span class="math inline">\({\bf x} = \{ {\bf r}, {\bf s} \}\)</span>. We can then write the electronic wave function as <span class="math inline">\(\Psi({\bf x}_1, {\bf x}_2, \ldots, {\bf x}_N)\)</span>, and we require the sixth postulate to hold by writing:</p>
 <p><span class="math display" id="eq:atom2">\[\begin{equation}
 \Psi\left({\bf x}_1,{\bf x}_2,\ldots, {\bf x}_N\right) = - \Psi\left({\bf x}_2,{\bf x}_1,\ldots, {\bf x}_N\right)
@@ -289,11 +353,11 @@ MathJax.Hub.Config({
 \end{equation}\]</span></p>
 <p>where the notation <span class="math inline">\(|\cdots\rangle\)</span> is a shorthand to indicate the Slater determinant where only the diagonal elements are reported.</p>
 </div>
-<div id="approximated-hamiltonians" class="section level2" number="10.2">
-<h2><span class="header-section-number">10.2</span> Approximated Hamiltonians</h2>
+<div id="approximated-hamiltonians" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Approximated Hamiltonians<a href="Atoms.html#approximated-hamiltonians" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In order to solve the TISEq for a many-electron atom we also need to approximate the Hamiltonian, since analytic solution using the full Hamiltonian as in eq. <a href="Atoms.html#eq:atom1">(10.1)</a> are impossible to find. The most significant approximation used in chemistry is called the <em>variational method</em>.</p>
-<div id="variational-method" class="section level3" number="10.2.1">
-<h3><span class="header-section-number">10.2.1</span> Variational method</h3>
+<div id="variational-method" class="section level3 hasAnchor" number="10.2.1">
+<h3><span class="header-section-number">10.2.1</span> Variational method<a href="Atoms.html#variational-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The basic idea of the variational method is to guess a “trial” wave function for the problem consisting of some adjustable parameters called “variational parameters”. These parameters are adjusted until the energy of the trial wave function is minimized. The resulting trial wave function and its corresponding energy are variational method approximations to the exact wave function and energy.</p>
 <p>Why would it make sense that the best approximate trial wave function is the one with the lowest energy? This results from the Variational Theorem, which states that the energy of any trial wave function <span class="math inline">\(E\)</span> is always an upper bound to the exact ground state energy <span class="math inline">\({\cal E}_0\)</span>. This can be proven easily. Let the trial wave function be denoted <span class="math inline">\(\Phi\)</span>. Any trial function can formally be expanded as a linear combination of the exact eigenfunctions <span class="math inline">\(\Psi_i\)</span>. Of course, in practice, we don’t know the <span class="math inline">\(\Psi_i\)</span>, since we are applying the variational method to a problem we can’t solve analytically. Nevertheless, that doesn’t prevent us from using the exact eigenfunctions in our proof, since they certainly exist and form a complete set, even if we don’t happen to know them. So, the trial wave function can be written:</p>
 <p><span class="math display" id="eq:var1">\[\begin{equation}
@@ -336,8 +400,8 @@ E[\Phi] \geq {\cal E}_0.
 <p>In other words, the energy of any approximate wave function is always greater than or equal to the exact ground state energy <span class="math inline">\({\cal E}_0\)</span>.</p>
 <p>This explains the strategy of the variational method: since the energy of any approximate trial function is always above the true energy, then any variations in the trial function which lower its energy are necessarily making the approximate energy closer to the exact answer. (The trial wave function is also a better approximation to the true ground state wave function as the energy is lowered, although not necessarily in every possible sense unless the limit <span class="math inline">\(\Phi = \Psi_0\)</span> is reached).</p>
 </div>
-<div id="approximated-solution-for-the-helium-atom" class="section level3" number="10.2.2">
-<h3><span class="header-section-number">10.2.2</span> Approximated solution for the helium atom</h3>
+<div id="approximated-solution-for-the-helium-atom" class="section level3 hasAnchor" number="10.2.2">
+<h3><span class="header-section-number">10.2.2</span> Approximated solution for the helium atom<a href="Atoms.html#approximated-solution-for-the-helium-atom" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We now have all the ingredients to attempt the simplest approximated solution to the TISEq of a many-electron atom. We can start by writing the total wave function using the Slater determinant of eq. <a href="Atoms.html#eq:atom8">(10.8)</a> in terms of spin-orbitals:</p>
 <p><span class="math display" id="eq:hf1">\[\begin{equation}
 \Psi (\mathbf{x}_{1},\mathbf{x}_{2},\ldots ,\mathbf{x}_{N})= |\chi_{1},\chi_{2},\cdots ,\chi_{N}\rangle = |\psi_{1}\phi_{\uparrow},\psi_{1}\phi_{\downarrow},\cdots ,\psi_{\frac{N}{2}}\phi_{\uparrow},\psi_{\frac{N}{2}}\phi_{\downarrow}\rangle,
@@ -369,6 +433,146 @@ E = E_1+E_2.
 <p>In other words, the resulting energy eigenvalue for the ground state of the helium atom in this approximation is equal to twice the energy of a <span class="math inline">\(\psi_{100}\)</span>, <span class="math inline">\(1s\)</span>, orbital. The resulting approximated value for the energy of the helium atom is <span class="math inline">\(7,217 \text{ kJ/mol}\)</span>, compared with the exact value of <span class="math inline">\(7,620 \text{ kJ/mol}\)</span>.</p>
 <p>The nuclear charge <span class="math inline">\(Z\)</span> in the <span class="math inline">\(\psi_{100}\)</span> orbital can be used as a variational parameter in the variational method to obtain a more accurate value of the energy. This method provides a result for the ground-state energy of the helium atom of <span class="math inline">\(7,478 \text{ kJ/mol}\)</span> (only <span class="math inline">\(142 \text{ kJ/mol}\)</span> lower than the exact value), with the nuclear charge parameter minimized at <span class="math inline">\(Z_{\text{min}}=1.6875\)</span>. This new value of the nuclear charge can be interpreted as the effective nuclear charge that is felt by one electron when a second electron is present in the atom. This value is lower than the real nuclear charge (<span class="math inline">\(Z=2\)</span>) because the interaction between the electron and the nuclei is shielded by presence of the second electron.</p>
 <p>This procedure can be extended to atoms with more than two electrons, resulting in the so-called Hartree-Fock method. The procedure, however, is not straightforward. We will explain it in more details in the next chapter, since it is the simplest approximation that also describes the chemical bond.</p>
+</div>
+</div>
+<div id="rev10" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Chapter Review<a href="Atoms.html#rev10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest10" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> Study Questions<a href="Atoms.html#quest10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. When going from hydrogen to many‑electron atoms, which new term in the electronic hamiltonian prevents an analytic solution of the tise?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>electron–nuclear attraction<br />
+</li>
+<li>kinetic energy<br />
+</li>
+<li>electron–electron repulsion<br />
+</li>
+<li>nuclear–nuclear repulsion<br />
+</li>
+<li>spin–orbit coupling</li>
+</ol>
+<hr />
+<p><strong>2. For an n‑electron atom in non‑relativistic approximation, how does the dimensionality of the electronic configuration space scale with n?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>it remains 3 (independent of n)<br />
+</li>
+<li>it is 3n (three spatial coordinates for each electron)<br />
+</li>
+<li>it is n<br />
+</li>
+<li>it is 2n (one radial and one angular coordinate per electron)<br />
+</li>
+<li>it is n²</li>
+</ol>
+<hr />
+<p><strong>3. Which symmetry requirement must the total electronic wave function for identical electrons satisfy?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>symmetry under any electron exchange<br />
+</li>
+<li>normalization to 1</li>
+<li>invariance under global phase changes only<br />
+</li>
+<li>periodicity in each coordinate<br />
+</li>
+<li>antisymmetry under exchange of any two electrons (Pauli principle)</li>
+</ol>
+<hr />
+<p><strong>4. How is antisymmetry enforced in practice in approximate many‑electron wave functions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>by multiplying one‑electron functions<br />
+</li>
+<li>by adding a constant term to the hamiltonian<br />
+</li>
+<li>by constructing Slater determinants of spin‑orbitals<br />
+</li>
+<li>by ignoring spin altogether<br />
+</li>
+<li>by symmetrizing products of orbitals</li>
+</ol>
+<hr />
+<p><strong>5. The variational principle for an approximate normalized trial function <span class="math inline">\(\Phi\)</span> states that the energy functional <span class="math inline">\(E[\Phi]\)</span> is?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>always less than the exact ground‑state energy<br />
+</li>
+<li>equal to the exact ground‑state energy for any trial function<br />
+</li>
+<li>always greater than or equal to the exact ground‑state energy<br />
+</li>
+<li>independent of the choice of trial function<br />
+</li>
+<li>meaningful only for excited states</li>
+</ol>
+<hr />
+<p><strong>6. In the independent‑electron approximation used as a starting point for many‑electron atoms, each electron is assumed to move in?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>in the field of the nucleus only, ignoring other electrons<br />
+</li>
+<li>in a mean or effective field generated by the nucleus and the average distribution of all other electrons<br />
+</li>
+<li>in a uniform external electric field<br />
+</li>
+<li>in a purely harmonic potential<br />
+</li>
+<li>in free space without any potential</li>
+</ol>
+<hr />
+<p><strong>7. Why are hydrogen‑like orbitals still useful to build approximate many‑electron wave functions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>they are exact solutions for all many‑electron atoms<br />
+</li>
+<li>they form a convenient basis set to expand more realistic orbitals<br />
+</li>
+<li>they automatically include electron correlation<br />
+</li>
+<li>they depend only on spin variables<br />
+</li>
+<li>they enforce the pauli principle without determinants</li>
+</ol>
+<hr />
+<p><strong>8. Which qualitative effect of electron–electron repulsion on the radial distribution of inner versus outer electrons is discussed in many‑electron treatments?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>outer electrons become more tightly bound than inner ones<br />
+</li>
+<li>inner electrons shield outer ones, so outer electrons feel a smaller effective nuclear charge and are more diffuse<br />
+</li>
+<li>shielding causes inner electrons to move further from the nucleus<br />
+</li>
+<li>outer electrons experience the full nuclear charge without screening<br />
+</li>
+<li>both inner and outer electrons collapse into the nucleus</li>
+</ol>
+<hr />
+<p><strong>9. Which of the following is <em>not</em> an effect explicitly included when one uses a simple central‑field approximation for many‑electron atoms?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>average electron–electron repulsion<br />
+</li>
+<li>screening of nuclear charge<br />
+</li>
+<li>detailed instantaneous electron–electron correlation (dynamic correlation)<br />
+</li>
+<li>effective one‑electron orbital picture<br />
+</li>
+<li>approximate shell structure</li>
+</ol>
+<hr />
+<p><strong>10. In the context of many‑electron wave functions, what is meant by “electron correlation” beyond the independent‑particle picture?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>changes in nuclear positions<br />
+</li>
+<li>spin conservation<br />
+</li>
+<li>the normalization condition<br />
+</li>
+<li>the fact that exact electronic motion is correlated because electrons avoid each other more than in a mean‑field description</li>
+<li>inclusion of relativistic mass corrections</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.c, 2.b, 3.e, 4.c, 5.c, 6.b, 7.b, 8.b, 9.c, 10.d
+</span></p>
 
 </div>
 </div>
@@ -383,7 +587,6 @@ E = E_1+E_2.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -394,37 +597,42 @@ E = E_1+E_2.
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/10_Atoms.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/10_Atoms.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -435,7 +643,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

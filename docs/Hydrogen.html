@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 The Hydrogen Atom | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 The Hydrogen Atom | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Models.html"/>
 <link rel="next" href="Operators.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,8 +293,8 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Hydrogen" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> The Hydrogen Atom</h1>
+<div id="Hydrogen" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> The Hydrogen Atom<a href="Hydrogen.html#Hydrogen" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter we will consider the hydrogen atom as a proton fixed at the origin, orbited by an electron of reduced mass <span class="math inline">\(\mu\)</span>. The potential due to electrostatic attraction is:</p>
 <p><span class="math display" id="eq:HA1">\[\begin{equation}
 V(r) = - \frac{e^2}{4 \pi \varepsilon_0 r},
@@ -293,7 +357,148 @@ E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
 <ul>
 <li>According to the TISEq, the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals of the hydrogen atom have the same energy.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></li>
 </ul>
+<div id="rev5" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Chapter Review<a href="Hydrogen.html#rev5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest5" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Study Questions<a href="Hydrogen.html#quest5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. Which of the following is the electrostatic potential energy, <span class="math inline">\(V(r)\)</span>, in the hydrogen atom?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(V(r) = -\dfrac{e^2}{4\pi \varepsilon_0 r}\)</span><br />
+</li>
+<li><span class="math inline">\(V(r) = +\dfrac{e^2}{4\pi \varepsilon_0 r}\)</span><br />
+</li>
+<li><span class="math inline">\(V(r) = \dfrac{1}{2} k r^2\)</span><br />
+</li>
+<li><span class="math inline">\(V(r) = -G \dfrac{m_p m_e}{r}\)</span><br />
+</li>
+<li><span class="math inline">\(V(r) = 0\)</span></li>
+</ol>
+<hr />
+<p><strong>2. Which of the following is the kinetic-energy operator used in the hydrogen Hamiltonian?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(K = -\dfrac{\hbar^2}{2\mu}\nabla^2\)</span><br />
+</li>
+<li><span class="math inline">\(K = -\dfrac{\hbar^2}{2m_e}\dfrac{d^2}{dr^2}\)</span><br />
+</li>
+<li><span class="math inline">\(K = \dfrac{p^2}{2\mu}\)</span><br />
+</li>
+<li><span class="math inline">\(K = -\dfrac{\hbar^2}{2}\nabla\)</span><br />
+</li>
+<li><span class="math inline">\(K = -\dfrac{\hbar^2}{2M}\nabla^2\)</span></li>
+</ol>
+<hr />
+<p><strong>3. How do you separate the hydrogen-atom wave function in spherical coordinates?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi(r,\theta,\phi) = f(r) g(\theta)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(r,\theta,\phi) = R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)\)</span></li>
+<li><span class="math inline">\(\psi(r,\theta,\phi) = R(r) \cos\theta\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(r,\theta,\phi) = Y_\ell^{m_\ell}(\theta,\phi)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(r,\theta,\phi) = R_{n\ell}(r) e^{i k r}\)</span></li>
+</ol>
+<hr />
+<p><strong>4. Which special functions give the angular part of the hydrogen-atom wave functions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Hermite polynomials<br />
+</li>
+<li>Associated Laguerre polynomials<br />
+</li>
+<li>Bessel functions<br />
+</li>
+<li>Plane waves<br />
+</li>
+<li>Spherical harmonics</li>
+</ol>
+<hr />
+<p><strong>5. How do you calculate the Bohr’s radius?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a_0 = \dfrac{\varepsilon_0 h^2}{\pi \mu e^2}\)</span><br />
+</li>
+<li><span class="math inline">\(a_0 = \dfrac{4\pi \varepsilon_0 \hbar^2}{\mu e^2}\)</span><br />
+</li>
+<li><span class="math inline">\(a_0 = \dfrac{\hbar^2}{\mu e^2}\)</span><br />
+</li>
+<li><span class="math inline">\(a_0 = \dfrac{\varepsilon_0 h}{\mu e}\)</span><br />
+</li>
+<li><span class="math inline">\(a_0 = \dfrac{e^2}{4\pi \varepsilon_0 \hbar^2}\)</span></li>
+</ol>
+<hr />
+<p><strong>6. Which special functions give the radial part of the hydrogen-atom wave functions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Hermite polynomials<br />
+</li>
+<li>Legendre polynomials<br />
+</li>
+<li>Associated Laguerre functions<br />
+</li>
+<li>Spherical harmonics<br />
+</li>
+<li>Bessel functions</li>
+</ol>
+<hr />
+<p><strong>7. What are the allowed values of the principal quantum number <span class="math inline">\(n\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(n = 0, 1, 2, \dots\)</span><br />
+</li>
+<li><span class="math inline">\(n = -\infty \dots \infty\)</span><br />
+</li>
+<li><span class="math inline">\(n = 1, 2, 3, \dots\)</span><br />
+</li>
+<li><span class="math inline">\(n = \tfrac{1}{2}, \tfrac{3}{2}, \dots\)</span><br />
+</li>
+<li><span class="math inline">\(n = 2, 4, 6, \dots\)</span></li>
+</ol>
+<hr />
+<p><strong>8. For a given <span class="math inline">\(n\)</span>, what are the allowed values of the azimuthal quantum number <span class="math inline">\(\ell\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\ell = 0,1,2,\dots,n-1\)</span><br />
+</li>
+<li><span class="math inline">\(\ell = 1,2,\dots,n\)</span><br />
+</li>
+<li><span class="math inline">\(\ell = -n,\dots,n\)</span><br />
+</li>
+<li><span class="math inline">\(\ell = 0,\pm1,\pm2,\dots\)</span><br />
+</li>
+<li><span class="math inline">\(\ell = n\)</span> only</li>
+</ol>
+<hr />
+<p><strong>9. For or a given <span class="math inline">\(\ell\)</span>, what are the allowed values of the magnetic quantum number <span class="math inline">\(m_\ell\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(m_\ell = 0,1,\dots,\ell\)</span><br />
+</li>
+<li><span class="math inline">\(m_\ell = 1,2,\dots,\ell\)</span><br />
+</li>
+<li><span class="math inline">\(m_\ell = -n,\dots,n\)</span><br />
+</li>
+<li><span class="math inline">\(m_\ell = \pm \tfrac{1}{2}\)</span><br />
+</li>
+<li><span class="math inline">\(m_\ell = -\ell, -\ell+1, \dots, \ell\)</span></li>
+</ol>
+<hr />
+<p><strong>10. Which statement about orbitals does the chapter explicitly emphasize?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Orbitals physically contain up to two electrons<br />
+</li>
+<li>Each orbital is the mathematical description of one and only one electron<br />
+</li>
+<li>Orbitals are purely classical trajectories<br />
+</li>
+<li>Orbitals only exist for many-electron atoms<br />
+</li>
+<li>Orbitals always have dumbbell shapes in real space</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.a, 2.a, 3.b, 4.e, 5.a, 6.c, 7.c, 8.a, 9.e, 10.b
+</span></p>
 
+</div>
+</div>
 </div>
 <div class="footnotes">
 <hr />
@@ -313,7 +518,6 @@ E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -324,37 +528,42 @@ E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/05_Hydrogen.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/05_Hydrogen.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -365,7 +574,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -321,3 +321,127 @@ The interpretation of these results is rather complicated, since the angular mom
 knitr::include_graphics('./img/OEP_wiki2.png')
 ```
 
+
+## Chapter Review {#rev6}
+### Study Questions {#quest6}
+
+**1. Which expression gives the expectation value of an observable represented by operator $\hat{a}$ in state $\psi(\mathbf{r})$?**
+
+a. $\langle a \rangle = \int \psi^*(\mathbf{r})\,\hat{a}\,\psi(\mathbf{r})\,d\mathbf{r}$  
+b. $\langle a \rangle = \int \hat{a}\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}$  
+c. $\langle a \rangle = \int |\psi(\mathbf{r})|^2\,d\mathbf{r}$  
+d. $\langle a \rangle = \int a\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}$  
+e. $\langle a \rangle = \int \psi(\mathbf{r})\,\hat{a}\,\psi^*(\mathbf{r})\,d\mathbf{r}$  
+
+
+---
+
+**2. An eigenfunction $f$ of an operator $\hat{a}$ with eigenvalue $k$ satisfies which equation?**
+
+a. $\hat{a} f = k$  
+b. $\hat{a} f = k f$  
+c. $\hat{a} f = f + k$  
+d. $\hat{a}^2 f = k f$  
+e. $\hat{a} f = k^2 f$  
+
+
+---
+
+**3. If $f$ is an eigenfunction of $\hat{a}$ with eigenvalue $k$, which statement is true for any nonzero scalar $c$?**
+
+a. $c f$ has eigenvalue $k/c$  
+b. $c f$ is an eigenfunction with eigenvalue $ck$  
+c. $c f$ is no longer an eigenfunction  
+d. $c f$ is an eigenfunction only if $|c|=1$  
+e. $c f$ is also an eigenfunction with the same eigenvalue $k$  
+
+
+---
+
+**4. What is the commutator of two operators $\hat{a}$ and $\hat{b}$?**
+
+a. $[\hat{a},\hat{b}] = \hat{a} + \hat{b}$  
+b. $[\hat{a},\hat{b}] = \hat{a}\hat{b} + \hat{b}\hat{a}$  
+c. $[\hat{a},\hat{b}] = \hat{a}\hat{b} - \hat{b}\hat{a}$  
+d. $[\hat{a},\hat{b}] = \hat{a} - \hat{b}$  
+e. $[\hat{a},\hat{b}] = 0$ by definition  
+
+---
+
+**5. Which important consequence follows for the eigenvalues of a hermitian operator $\hat{a}$?**
+
+a. all eigenvalues are real  
+b. all eigenvalues are purely imaginary  
+c. eigenvalues occur only in complex-conjugate pairs  
+d. eigenvalues must be integers  
+e. eigenvalues must be positive  
+
+---
+
+**6. For a Hermitian operator, eigenfunctions corresponding to different eigenvalues have what property?**
+
+a. they are always identical up to a phase
+b. they are orthogonal (or can be chosen orthogonal)    
+c. they are linearly dependent  
+d. they have the same expectation value of all observables  
+e. they must be degenerate  
+
+---
+
+**7. In one dimension, the standard momentum operator $\hat{p}_x$ acting on $\psi(x)$ is:**
+
+a. $\hat{p}_x = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2}$  
+b. $\hat{p}_x = i\hbar \dfrac{d}{dx}$  
+c. $\hat{p}_x = -i\hbar \dfrac{d}{dx}$
+d. $\hat{p}_x = x$  
+e. $\hat{p}_x = \dfrac{d}{dx}$  
+
+
+---
+
+**8. If a wavefunction $\psi$ is written as a linear combination of eigenfunctions $\{\psi_i\}$ of $\hat{a}$, $\psi = \sum_i c_i \psi_i$, what are the possible outcomes of a measurement of $a$?**
+
+a. any complex number
+b. any real number in the spectrum of $\hat{h}$  
+c. only the expectation value $\langle a \rangle$  
+d. only the eigenvalues $a_i$ corresponding to the eigenfunctions present in the expansion  
+e. only the largest eigenvalue  
+
+---
+
+**9. In the same expansion $\psi = \sum_i c_i \psi_i$, what is the probability of obtaining eigenvalue $a_k$ upon measuring $a$ (assuming normalized eigenfunctions)?**
+
+a. $|c_k|^2$
+b. $c_k$  
+c. $|a_k|^2$  
+d. $1/|c_k|^2$  
+e. $\operatorname{Re}(c_k)$  
+
+---
+
+**10. What is the general role of the Hamiltonian operator $\hat{H}$ in quantum mechanics?**
+
+a. it has no observable meaning  
+b. it represents only the kinetic energy  
+c. it represents only the potential energy  
+d. it measures the position of particles  
+e. it represents the total energy and generates time evolution  
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e'
+}`
+
+
+
+

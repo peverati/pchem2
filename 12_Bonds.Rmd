@@ -151,3 +151,123 @@ knitr::include_graphics('./img/OEP_figure6.jpeg')
 
 
 As we can see, the Hartree-Fock results for $\mathrm{H}_2$ describes the formation of the bond qualitatively around the bond distance (minimum of the curve), but they fail to describe the molecule at dissociation. This happens because in eq. \@ref(eq:bond12) both electrons are in the same orbital with opposite spin (electrons are coupled), and the orbital is shared among both centers. At dissociation, this corresponds to an erroneous ionic dissociation state where both electron are localized on either one of the two centers (this center is therefore negatively charged), with the other proton left without electrons. This is in contrast with the correct dissociation, where each electron should be localized around each center (and therefore, it should be uncoupled from the other electron). This error is once again the result of the approximations that are necessary to treat the TISEq of a many-electron system. It is obviously not a failure of quantum mechanics, and it can be easily corrected using more accurate approximations on modern computers. 
+
+
+
+## Chapter Review {#rev12}
+### Study Questions {#quest12}
+
+**1. In the H$_2^+$ treatment, which one‑electron molecular Hamiltonian (in atomic units, and using the Born–Oppenheimer approximation) is used?**
+
+a. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a}$  
+b. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_b}$  
+c. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a} - \dfrac{1}{r_b}$  
+d. $\hat{H} = -\tfrac{1}{2}\nabla^2 + \dfrac{1}{r_a} + \dfrac{1}{r_b}$  
+e. $\hat{H} = -\nabla^2 + \dfrac{1}{r_a r_b}$  
+
+---
+
+**2. Which of the following is used as the first variational ansatz for the one‑electron molecular orbital in H$_2^+$?**
+
+a. $\varphi = a$  
+b. $\varphi = b$  
+c. $\varphi = a b$  
+d. $\varphi = c_1 a + c_2 b$
+e. $\varphi = a^2 + b^2$  
+
+---
+
+**3. In the secular problem for H$_2^+$, what is the physical meaning of the overlap integral $S = S_{ab}$?**
+
+a. integral $\int a(\mathbf{r}) b(\mathbf{r}) d\mathbf{r}$ measuring non‑orthogonality of the two 1s orbitals 
+b. nuclear repulsion between the two protons  
+c. kinetic energy between $a$ and $b$  
+d. electron–electron repulsion  
+e. spin overlap between alpha and beta functions  
+
+---
+
+**4. The diagonalization of the 2×2 secular problem for H$_2^+$ gives which types of molecular orbitals?**
+
+a. a nonbonding and an antinonbonding orbital  
+b. a bonding $\varphi_+$ and an antibonding $\varphi_-$ combination  
+c. two identical orbitals with the same energy  
+d. two core orbitals localized on each nucleus  
+e. two purely antibonding orbitals
+
+---
+
+**5. What is the physical meaning of the negative total energy of the ground state for a range of $r$ in H$_2^+$?**
+
+a. the molecular ion is unstable relative to separated H + H$^+$  
+b. the molecular orbital stabilizes the system relative to the separated fragments  
+c. electron–nuclear attraction is negligible  
+d. only nuclear–nuclear repulsion matters  
+e. there is no chemical bond  
+
+---
+
+**6. Which of the following is the correct molecular Hamiltonian, in a.u. and under the Born–Oppenheimer approximation, for H$_2$?**
+
+a. $\hat{h}_1 + \hat{h}_2$ only  
+b. $\hat{h}_1 + \hat{h}_2 - 1/r_{12}$  
+c. $\hat{k}_n + \hat{k}_e$ only  
+d. $1/r_{12} + 1/r$ only  
+e. $\hat{h}_1 + \hat{h}_2 + 1/r_{12} + 1/r$  
+
+---
+
+**7. For the ground state of H$_2$ in the minimal MO picture used in this chapter, which orbital and occupancy pattern are used?**
+
+a. two electrons singly occupying $\varphi_+$ and $\varphi_-$ with parallel spins  
+b. both electrons in the antibonding MO $\varphi_-$ with opposite spin  
+c. one electron in $\sigma_g$, one in a core orbital  
+d. both electrons in the bonding MO $\sigma_g = \varphi_+$ with opposite spin  
+e. both electrons in a localized atomic orbital on a single nucleus   
+
+---
+
+**8. why does the RHF‑type description of H$_2$ fail at large H–H separations (dissociation limit)?**
+
+a. it breaks spin symmetry  
+b. it forces both electrons to remain in the same delocalized orbital shared between centers, rather than localizing one electron on each atom  
+c. it neglects nuclear repulsion  
+d. it neglects electron kinetic energy  
+e. it overestimates overlap as $S=1$
+
+---
+
+**9. What is the main qualitative effect of including electron–electron repulsion and better correlation methods beyond the simple Hartree–Fock picture in H$_2$?**
+
+a. they destroy the bond minimum  
+b. they force both electrons into antibonding orbitals  
+c. they improve the description of the potential‑energy curve, particularly the dissociation region  
+d. they eliminate spin considerations  
+e. they make the electrons behave classically  
+
+---
+
+**10. Comparing H$_2^+$ and H$_2$, which statement about their bonding descriptions is true?**
+
+a. both are one‑electron systems with identical Hamiltonians  
+b. H$_2^+$ is exactly solvable analytically while H$_2$ is not  
+c. H$_2^+$ has one‑electron bonding described by a single MO; H$_2$ requires a two‑electron antisymmetric wave function including spin  
+d. H$_2^+$ has no bound state  
+e. H$_2$ can be described without consideration of spin  
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c'
+}`
+

@@ -1,25 +1,25 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[
   9pt,
 ]{extbook}
-\title{The Live Textbook of Physical Chemistry 2}
-\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{29 January 2024}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -37,15 +37,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={The Live Textbook of Physical Chemistry 2},
-  pdfauthor={Dr.~Roberto Peverati},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -58,21 +49,24 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
 \usepackage{booktabs}
 \usepackage{pdfpages}
 \usepackage{amsthm}
@@ -108,11 +102,18 @@
 \makeatother
 \let\oldmaketitle\maketitle
 \AtBeginDocument{\let\maketitle\relax}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\usepackage[]{natbib}
-\bibliographystyle{apalike}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={The Live Textbook of Physical Chemistry 2},
+  pdfauthor={Dr.~Roberto Peverati},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{The Live Textbook of Physical Chemistry 2}
+\author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
+\date{09 January 2026}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -126,6 +127,8 @@
 \newtheorem{example}{Example}[chapter]
 \theoremstyle{definition}
 \newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{definition}
+\newtheorem{hypothesis}{Hypothesis}[chapter]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
@@ -152,8 +155,7 @@
 }
 \renewcommand{\arraystretch}{1.8}
 
-\hypertarget{preface}{%
-\chapter*{Preface}\label{preface}}
+\chapter*{Preface}\label{preface}
 \addcontentsline{toc}{chapter}{Preface}
 
 \begin{center}\includegraphics[width=0.8\linewidth]{./img/OEP_Figures.000} \end{center}
@@ -171,8 +173,7 @@ Florida Institute of Technology, Melbourne, FL.
 This live open textbook is distributed under the \href{https://creativecommons.org/licenses/by-sa/4.0/}{CC-BY-SA 4.0 License} and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.
 \end{quote}
 
-\hypertarget{how-to-use-this-book}{%
-\section*{How to use this book}\label{how-to-use-this-book}}
+\section*{How to use this book}\label{how-to-use-this-book}
 \addcontentsline{toc}{section}{How to use this book}
 
 If you have taken P-Chem 1 at Florida Tech in the Fall Semester 2020, you should already be familiar with this format. Everything we did with the Live Textbook of P-Chem 1 in FS2020 will be happening this semester with P-Chem 2. Please read this book carefully, since everything that will be in your exams is explained here.
@@ -193,11 +194,9 @@ If you spot a mistake or a typo, contact Dr.~Peverati via \href{mailto:rpeverati
 \cleardoublepage
 \pagenumbering{arabic}
 
-\hypertarget{Motivation}{%
-\chapter{Introduction to Quantum Mechanics}\label{Motivation}}
+\chapter{Introduction to Quantum Mechanics}\label{Motivation}
 
-\hypertarget{historical-context}{%
-\section{Historical Context}\label{historical-context}}
+\section{Historical Context}\label{historical-context}
 
 Quantum mechanics is a branch of physics that deals with the behavior of matter and energy at the atomic and subatomic level. It is a fundamental theory that has revolutionized our understanding of the physical world, and it is a cornerstone of modern chemistry. But the road to the development of quantum mechanics was a long and winding one that spanned several decades and involved many of the greatest minds in physics.
 
@@ -213,8 +212,7 @@ In the decades that followed, quantum mechanics continued to evolve, with new di
 
 The development of quantum mechanics was driven by a series of discoveries and experiments that challenged classical physics and its inability to explain the behavior of atoms. These are the ``ultraviolet catastrophe'', the photoelectric effect, and the wave-particle duality. We will discuss each of these cases below.
 
-\hypertarget{the-ultraviolet-catastrophe}{%
-\section{The Ultraviolet Catastrophe}\label{the-ultraviolet-catastrophe}}
+\section{The Ultraviolet Catastrophe}\label{the-ultraviolet-catastrophe}
 
 The ultraviolet (UV) catastrophe, also called the Rayleigh--Jeans catastrophe, is the prediction of classical electromagnetism that the intensity of the radiation emitted by an ideal black body at thermal equilibrium goes to infinity as wavelength decreases (see figure \ref{fig:Fig1c1}\footnote{This picture is taken from \href{https://en.wikipedia.org}{Wikipedia} by user Darth Kule, and in in the Public Domain}).
 
@@ -253,8 +251,7 @@ I(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathr
 
 If we now take the limit for \(\lambda \rightarrow 0\) of eq. \eqref{eq:uvcatpl}, it is easy to prove that \(I\) goes to zero, in agreement with the experimental results, and our intuition. Planck also found that for \(h = 6.626 \times 10^{-34} \; \text{J s}\), the experimental data could be reproduced exactly. Nevertheless, Planck could not offer a good justification for his assumption of energy quantization. Physicists did not take this energy quantization idea seriously until Einstein invoked a similar assumption to explain the photoelectric effect.
 
-\hypertarget{the-photoelectric-effect}{%
-\section{The Photoelectric Effect}\label{the-photoelectric-effect}}
+\section{The Photoelectric Effect}\label{the-photoelectric-effect}
 
 The photoelectric effect refers to the phenomenon where electrons are emitted from a metal surface when it is illuminated with light of a certain frequency. This effect was first observed by Heinrich Hertz in 1887 and later explained by Albert Einstein in 1905, who proposed that light energy was quantized into discrete particles, or photons, each with an energy proportional to its frequency.
 
@@ -298,8 +295,7 @@ K_{\text{max}} = E_{\text{in}} - \phi = h\nu_{\text{in}} - \phi.
 \label{eq:pe4}
 \end{equation}
 
-\hypertarget{wave-particle-duality}{%
-\section{Wave-Particle Duality}\label{wave-particle-duality}}
+\section{Wave-Particle Duality}\label{wave-particle-duality}
 
 Einstein had shown that the momentum of a photon is
 
@@ -335,16 +331,209 @@ E &= \hbar \omega,
 
 which are known as \textbf{de Broglie's equations}. We will use those equation to develop wave mechanics in the next chapters.\footnote{This chapter has been written with help from ChatGPT}
 
-\hypertarget{Classical}{%
-\chapter{Brief Summary of Classical Physics}\label{Classical}}
+\section{Chapter Review}\label{rev1}
+
+\subsection{Study Questions}\label{quest1}
+
+\textbf{1. The ``ultraviolet catastrophe'' refers to which failure of classical physics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Inability to explain discrete atomic emission spectra\\
+\item
+  Prediction that black-body intensity vanishes at long wavelengths\\
+\item
+  Prediction that black-body intensity diverges at short wavelengths\\
+\item
+  Failure to explain the existence of photons\\
+\item
+  Prediction that all objects emit only in the ultraviolet region
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What key assumption did Planck introduce to resolve the ultraviolet catastrophe?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Charge is quantized in units of the electron charge\\
+\item
+  Energy of oscillators is quantized in multiples of \(h\nu\)
+\item
+  Momentum is continuous but position is quantized\\
+\item
+  Light speed depends on wavelength in vacuum\\
+\item
+  Temperature of a black body is quantized
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the main qualitative difference between the Rayleigh--Jeans law and Planck's law at short wavelengths?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Rayleigh--Jeans diverges, Planck's law goes to zero\\
+\item
+  Both diverge to infinity but at different rates\\
+\item
+  Rayleigh--Jeans is constant, Planck's law oscillates\\
+\item
+  Rayleigh--Jeans is valid only in the ultraviolet, Planck only in infrared\\
+\item
+  Planck's law diverges while Rayleigh--Jeans goes to zero
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. In the classical wave picture of the photoelectric effect, how is the kinetic energy \(K\) of emitted electrons predicted to depend on the incident light?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Proportional to the square of the wavelength\\
+\item
+  Independent of intensity, depends only on work function\\
+\item
+  Proportional to the inverse of exposure time\\
+\item
+  Proportional to the intensity of the light\\
+\item
+  Independent of both intensity and frequency
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which experimental observation about the photoelectric effect contradicts the classical wave prediction?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Increase of emission with higher temperature of the metal\\
+\item
+  Emission of electrons only for polarized light\\
+\item
+  Existence of negative ions at the surface\\
+\item
+  Disappearance of current at very high intensities\\
+\item
+  Existence of a threshold frequency independent of intensity
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Using \(E = h\nu\) and \(\lambda \nu = c\), which expression correctly relates photon energy to wavelength?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E = h c / \lambda\)
+\item
+  \(E = h \lambda / c\)
+\item
+  \(E = c / (h \lambda)\)
+\item
+  \(E = h c \lambda\)
+\item
+  \(E = \lambda^2 / h c\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which de Broglie relation connects particle momentum \(p\) with wave vector \(k\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(p = k / \hbar\)
+\item
+  \(p = \hbar / k\)
+\item
+  \(p = \hbar k^2\)
+\item
+  \(p = k^2 / \hbar\)
+\item
+  \(p = \hbar k\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What is the main conceptual implication of wave--particle duality for matter?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Matter is purely a continuous wave\\
+\item
+  Matter has only discrete allowed velocities\\
+\item
+  Matter exhibits both wave-like and particle-like properties depending on the experiment\\
+\item
+  Matter exists only as photons at small scales\\
+\item
+  Matter cannot be localized in space
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. In the historical development described in this chapter, which of the following came first chronologically?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Planck's black-body quantization\\
+\item
+  Schrödinger's wave equation\\
+\item
+  De Broglie's matter waves\\
+\item
+  Heisenberg's matrix mechanics\\
+\item
+  Bohr's model of the atom
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which of the following best summarizes the crisis that led from classical to quantum physics as outlined in this Chapter?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Classical theories failed to conserve energy in chemical reactions
+\item
+  Classical theories could not explain black-body spectra, photoelectric thresholds, and matter diffraction
+\item
+  Classical mechanics could not describe planetary motion
+\item
+  Classical thermodynamics predicted negative absolute temperatures
+\item
+  Classical optics could not describe refraction at dielectric interfaces
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.b, 3.a, 4.d, 5.e, 6.a, 7.e, 8.c, 9.a, 10.b
+
+\chapter{Brief Summary of Classical Physics}\label{Classical}
 
 Quantum mechanics cannot be derived from classical mechanics, but classical mechanics can inspire quantum mechanics. Quantum mechanics is richer and more sophisticated than classical mechanics. Quantum mechanics was developed during the period when physicists had rich knowledge of classical mechanics. In order to better understand how quantum mechanics was developed in this environment, it is better to understand some fundamental concepts in classical mechanics. Classical mechanics can be considered as a special case of quantum mechanics. We will review some classical mechanics concepts here.
 
-\hypertarget{classical-mechanics}{%
-\section{Classical Mechanics}\label{classical-mechanics}}
+\section{Classical Mechanics}\label{classical-mechanics}
 
-\hypertarget{newtonian-formulation}{%
-\subsection{Newtonian Formulation}\label{newtonian-formulation}}
+\subsection{Newtonian Formulation}\label{newtonian-formulation}
 
 Classical mechanics as formulated by Isaac Newton (1652-1727) is all about forces. Newtonian mechanics works well for problems where we know the forces and have a reasonable coordinate system. In these cases, the net force acting on a system at position \(\mathbf{r}\) in Cartesian 3-dimensional space \(\left\{ x,y,z \right\}\) is simply:
 
@@ -357,8 +546,7 @@ Or, in other words, if we know the net force acting on a system of mass \(m\) at
 
 \begin{quote}
 \begin{example}
-\protect\hypertarget{exm:newtonianEx}{}{\label{exm:newtonianEx} }
-A ball of mass \(m\) is at ground level and tossed straight up from an initial position \(x_0\) with an initial velocity \(\dot{x}_0\) and subject to gravity alone. Calculate the equation of motion for the ball (i.e.~where is the ball going to be after some time \(t\)?).\footnote{This example is based on Rhett Allain's blog post that can be found (here){[}\url{https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/}{]}}
+\protect\hypertarget{exm:newtonianEx}{}\label{exm:newtonianEx}A ball of mass \(m\) is at ground level and tossed straight up from an initial position \(x_0\) with an initial velocity \(\dot{x}_0\) and subject to gravity alone. Calculate the equation of motion for the ball (i.e.~where is the ball going to be after some time \(t\)?).\footnote{This example is based on Rhett Allain's blog post that can be found (here){[}\url{https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/}{]}}
 
 \emph{Solution:} Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:
 
@@ -415,8 +603,7 @@ We can use the equation of motion obtained above to solve this problem, and obta
 
 The formula of Newtonian mechanics are not the only one we can use to solve a problem in classical mechanics. We have at least two other equivalent approaches to the same problem that might end up being more useful in certain situations.
 
-\hypertarget{lagrangian-formulation}{%
-\subsection{Lagrangian Formulation}\label{lagrangian-formulation}}
+\subsection{Lagrangian Formulation}\label{lagrangian-formulation}
 
 Another way to derive the equations of motion for classical mechanics is via the use of the Lagrangian and the principle of least action. The Lagrangian formulation is obtained by starting from the definition of the Lagrangian of the system:
 
@@ -459,8 +646,7 @@ Requiring that the true trajectory \(\mathbf{r}(t)\) minimizes the action functi
 
 \begin{quote}
 \begin{example}
-\protect\hypertarget{exm:lagrangianEx}{}{\label{exm:lagrangianEx} }
-Let's apply the Lagrangian mechanics formulas to the same problem as in the previous Example.
+\protect\hypertarget{exm:lagrangianEx}{}\label{exm:lagrangianEx}Let's apply the Lagrangian mechanics formulas to the same problem as in the previous Example.
 
 The expression of the kinetic energy, the potential energy, and the Lagrangian for our system are:
 
@@ -499,8 +685,7 @@ Which is the same result as obtained from the Newtonian method. Integrating twic
 
 The advantage of Lagrangian mechanics is that it is not constrained to use a coordinate system. For example, if we have a bead moving along a wire, we can define the coordinate system as the distance along the wire, making the formulas much simpler than in Newtonian mechanics. Also, since the Lagrangian depends on kinetic and potential energy it does a much better job with constraint forces.
 
-\hypertarget{hamiltonian-mechanics}{%
-\subsection{Hamiltonian mechanics}\label{hamiltonian-mechanics}}
+\subsection{Hamiltonian mechanics}\label{hamiltonian-mechanics}
 
 A third way of obtaining the equation of motion is Hamiltonian mechanics, which uses the generalized momentum in place of velocity as a coordinate. The generalized momentum, \(\mathbf{p}\), is defined in terms of the Lagrangian and the coordinates \((\mathbf{r},\dot{\mathbf{r}})\):
 
@@ -537,7 +722,7 @@ Notice the difference between the Hamiltonian, eq. \eqref{eq:hamdef}, and the La
 
 \begin{quote}
 \begin{example}
-\protect\hypertarget{exm:hamex1}{}{\label{exm:hamex1} }Let's apply the Hamiltonian mechanics formulas to the same problem in the previous examples.
+\protect\hypertarget{exm:hamex1}{}\label{exm:hamex1}Let's apply the Hamiltonian mechanics formulas to the same problem in the previous examples.
 
 Using eq. \eqref{eq:ham2}, the Hamiltonian can be written as:
 
@@ -577,8 +762,7 @@ which---once again---is the same result obtained for the two previous cases. Int
 \end{example}
 \end{quote}
 
-\hypertarget{coulombs-law}{%
-\section{Coulomb's Law}\label{coulombs-law}}
+\section{Coulomb's Law}\label{coulombs-law}
 
 Coulomb's Law states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them:
 
@@ -589,8 +773,7 @@ Coulomb's Law states that the magnitude of the electrostatic force of attraction
 
 The constant \(k_e\) is called the Coulomb constant and is equal to \({1}/{4\pi\varepsilon_0}\), where \(\varepsilon_0\) is the the vacuum permittivity constant; \(k_e \simeq 8.988\times10^9\;\mathrm{Nm^2C^{-2}}\). If the product \(q_1q_2\) is positive, the force between the two charges is repulsive; if the product is negative, the force between them is attractive.
 
-\hypertarget{vector-form-of-the-coulombs-law-law}{%
-\subsection{Vector form of the Coulomb's Law law}\label{vector-form-of-the-coulombs-law-law}}
+\subsection{Vector form of the Coulomb's Law law}\label{vector-form-of-the-coulombs-law-law}
 
 Coulomb's law in vector form states that the electrostatic force \({\textstyle \mathbf {F}_{1}}\) experienced by a charge, \(q_{1}\) at position \(\mathbf {r}_{1}\), in the vicinity of another charge, \(q_{2}\) at position \(\mathbf {r}_{2}\), in a vacuum is equal
 \begin{equation}
@@ -604,8 +787,7 @@ The vector form of Coulomb's law is simply the scalar definition of the law with
 
 The electrostatic force \({\textstyle \mathbf {F} _{2}}\) experienced by \(q_{2}\), according to Newton's third law, is \({\textstyle \mathbf {F} _{2}=-\mathbf {F} _{1}}\).
 
-\hypertarget{electric-field}{%
-\subsection{Electric field}\label{electric-field}}
+\subsection{Electric field}\label{electric-field}
 
 An electric field is a vector field that associates to each point in space the Coulomb force experienced by a unit test charge. The strength and direction of the Coulomb force \({\textstyle \mathbf {F} }\) on a charge
 \({\textstyle q_{t}}\) depends on the electric field \({\textstyle \mathbf {E} }\) established by other charges that it finds itself in, such that
@@ -618,8 +800,7 @@ The magnitude of the electric field, \(|\mathbf{E}|\), can be derived from Coulo
 \label{eq:coulomb3}
 \end{equation}
 
-\hypertarget{electric-potential-energy}{%
-\subsection{Electric Potential Energy}\label{electric-potential-energy}}
+\subsection{Electric Potential Energy}\label{electric-potential-energy}
 
 The electric potential energy of a system of point charges is defined as the work required to assemble this system of charges by bringing them close together, as in the system from an infinite distance.
 
@@ -641,13 +822,207 @@ In the simplest case of two point charges \(q_1\) and \(q_2\), the electrostatic
 
 This last equation will become very important in future chapters. Notice the difference between eq. \eqref{eq:coulomb5} for the \emph{energy}, \(E\), and eq. \eqref{eq:coulomb3} for the \emph{magnitude of the electric field}, \(|\mathbf{E}|\).
 
-\hypertarget{Schrodinger}{%
-\chapter{The Schrödinger Equation}\label{Schrodinger}}
+\section{Chapter Review}\label{rev2}
+
+\subsection{Study Questions}\label{quest2}
+
+\textbf{1. What is the central quantity in Newtonian mechanics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Force\\
+\item
+  Action\\
+\item
+  Wavefunction\\
+\item
+  Electric field\\
+\item
+  Partition function
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. In the ball-under-gravity example, which force is used to set up the equation of motion?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(F_{\text{gravity}} = +mG\)
+\item
+  \(F_{\text{gravity}} = -mG\)
+\item
+  \(F_{\text{gravity}} = -k x\)
+\item
+  \(F_{\text{gravity}} = qE\)
+\item
+  \(F_{\text{gravity}} = 0\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which statement is true about the equation of motion for the 1D motion of a ball tossed vertically?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is valid only for very small masses\\
+\item
+  It is valid only in two dimensions\\
+\item
+  It assumes variable gravitational acceleration
+\item
+  It requires relativistic corrections\\
+\item
+  It does not depend on the mass of the ball
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. How is the Lagrangian \(L\) of a system defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(L = K + V\)
+\item
+  \(L = p \dot{r} - H\)
+\item
+  \(L = K - V\)
+\item
+  \(L = F \cdot r\)
+\item
+  \(L = \partial K / \partial t\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. In the Lagrangian formulation, what is the action \(S\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The time integral of \(L\) between \(t_1\) and \(t_2\)
+\item
+  The instantaneous kinetic energy\\
+\item
+  The work done by conservative forces\\
+\item
+  The momentum times position\\
+\item
+  The time derivative of the Hamiltonian
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. In Hamiltonian mechanics, how is the generalized momentum \(p\) defined?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(p = m \ddot{r}\)
+\item
+  \(p = \dfrac{\partial H}{\partial r}\)
+\item
+  \(p = \dfrac{\partial V}{\partial r}\)
+\item
+  \(p = \dfrac{\partial L}{\partial \dot{r}}\)
+\item
+  \(p = \dfrac{\partial K}{\partial r}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. The Hamiltonian \(H(p,r)\) is obtained from the Lagrangian via which transformation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Fourier transformation\\
+\item
+  Legendre transformation\\
+\item
+  Laplace transformation\\
+\item
+  Gauge transformation\\
+\item
+  Lorentz transformation
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. What is an advantage of Lagrangian mechanics over Newtonian mechanics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It eliminates the need for forces entirely\\
+\item
+  It is valid only for relativistic systems\\
+\item
+  It does not require energy conservation\\
+\item
+  It works only in one dimension\\
+\item
+  It naturally handles constraints and non-Cartesian coordinates
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. The magnitude of the electric field \(|E|\) created by a point charge \(q\) at distance \(r\) is given by which of the following formula?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r^2}\)
+\item
+  \(|E| = \dfrac{1}{4\pi \varepsilon_0} |q| r^2\)
+\item
+  \(|E| = \dfrac{|q|}{r}\)
+\item
+  \(|E| = k_B T / r^2\)
+\item
+  \(|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. The electrostatic potential energy \(E\) of two point charges \(q_1\) and \(q_2\) separated by distance \(r\) is given by which of the following formula?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}\)
+\item
+  \(E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}\)
+\item
+  \(E = q_1 q_2 r\)
+\item
+  \(E = k_B T r\)
+\item
+  \(E = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.d, 7.b, 8.e, 9.a, 10.b
+
+\chapter{The Schrödinger Equation}\label{Schrodinger}
 
 In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger's method involves partial differential equations, whereas Heisenberg's method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger's equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.
 
-\hypertarget{the-time-independent-schruxf6dinger-equation}{%
-\section{The Time-Independent Schrödinger Equation}\label{the-time-independent-schruxf6dinger-equation}}
+\section{The Time-Independent Schrödinger Equation}\label{the-time-independent-schruxf6dinger-equation}
 
 We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:
 
@@ -712,8 +1087,7 @@ which can then be rearranged to the famous \textbf{time-independent Schrödinger
 
 A two-body problem can also be treated by this equation if the mass \(m\) is replaced with a reduced mass \(\mu = \frac{m_1 m_2}{m_1+m_2}\).
 
-\hypertarget{the-time-dependent-schruxf6dinger-equation}{%
-\section{The Time-Dependent Schrödinger Equation}\label{the-time-dependent-schruxf6dinger-equation}}
+\section{The Time-Dependent Schrödinger Equation}\label{the-time-dependent-schruxf6dinger-equation}
 
 Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:
 
@@ -780,8 +1154,7 @@ Of course eq. \eqref{eq:TDSEq6} represents only a particular solution to the tim
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}
 
-\hypertarget{solution-for-the-free-particle}{%
-\section{Solution for the Free Particle}\label{solution-for-the-free-particle}}
+\section{Solution for the Free Particle}\label{solution-for-the-free-particle}
 
 We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore \(V(x)=0\), and the TISEq is written simply:
 
@@ -830,13 +1203,207 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 
 which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \eqref{eq:FP3} solves the Schrödinger equation for the free particle, it is called an \emph{eigenfunction} (or \emph{eigenstate}) of the TISEq. The energy result of eq. \eqref{eq:FP6} is called \emph{eigenvalue} of the TISEq. Notice that, since \(k\) is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of \(E\) are acceptable).
 
-\hypertarget{Models}{%
-\chapter{Analytically Solvable Models}\label{Models}}
+\section{Chapter Review}\label{rev3}
+
+\subsection{Study Questions}\label{quest3}
+
+\textbf{1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi(x,t) = \exp[-kx + \omega t]\)
+\item
+  \(\psi(x,t) = \cos(kx - \omega t)\)\\
+\item
+  \(\psi(x,t) = \sin(kx + \omega t)\)\\
+\item
+  \(\psi(x,t) = \exp[i(kx - \omega t)]\)
+\item
+  \(\psi(x,t) = kx + \omega t\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. For a two-body problem, the single-particle time independent Schrödinger equation can be used if the mass \(m\) is replaced by what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The total mass \(m_1 + m_2\)
+\item
+  The reduced mass \(\mu = \dfrac{m_1 m_2}{m_1 + m_2}\)
+\item
+  The mass difference \(|m_1 - m_2|\)
+\item
+  The geometric mean \(\sqrt{m_1 m_2}\)
+\item
+  Twice the lighter mass
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which of the following equation is the correct time-dependent Schrödinger equation for one particle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)\\
+\item
+  \(\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)\\
+\item
+  \(i \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)\\
+\item
+  \(i\hbar \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = V(x)\psi(x,t)\)\\
+\item
+  \(\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. For which of the following wave functions we can separate the variables in the Schrödinger equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi(x,t) = \psi(x) + f(t)\)\\
+\item
+  \(\psi(x,t) = \psi(x) f(t)\)\\
+\item
+  \(\psi(x,t) = \psi(x)^2/f(t)\)\\
+\item
+  \(\psi(x,t) = x f(t)\)\\
+\item
+  \(\psi(x,t) = \psi(x) f(t)^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. After separation of variables, the time-dependent Schrödinger equation yields two ordinary differential equations with a common constant. Which one?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  The mass \(m\)\\
+\item
+  The momentum \(p\)\\
+\item
+  The angular frequency \(\omega\)\\
+\item
+  The energy \(E\)\\
+\item
+  The wave number \(k\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. What is the time dependence of the probability density \(|\psi(x,t)|^2\) of a stationary state?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It increases linearly with time\\
+\item
+  It decreases exponentially with time\\
+\item
+  It oscillates sinusoidally with time\\
+\item
+  It is time independent\\
+\item
+  It diverges for large times
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. For the free particle in 1D, which of the following properties does the potential \(V(x)\) have?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  It is a constant nonzero value
+\item
+  It is infinite at the origin\\
+\item
+  It is zero everywhere\\
+\item
+  It is linear in \(x\)\\
+\item
+  It is harmonic in \(x^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following is a suitable solution for the free-particle time independent Schrödinger equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi(x) = A e^{\pm i k x}\)\\
+\item
+  \(\psi(x) = A x\)\\
+\item
+  \(\psi(x) = A e^{k x}\)\\
+\item
+  \(\psi(x) = A \cosh(kx)\)\\
+\item
+  \(\psi(x) = A \delta(x)\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the energy eigenvalue for the free particle?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E = p^2\)\\
+\item
+  \(E = \dfrac{1}{2} m p^2\)\\
+\item
+  \(E = \hbar p\)\\
+\item
+  \(E = \dfrac{\hbar^2}{2m p^2}\)\\
+\item
+  \(E = \dfrac{p^2}{2m}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is a key difference between the free particle and bound systems regarding energy eigenvalues?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Free-particle energies are always zero\\
+\item
+  Free-particle energies are always negative\\
+\item
+  Free-particle energies are always degenerate\\
+\item
+  Free-particle energies form a continuous spectrum, while bound systems have discrete levels
+\item
+  Free-particle energies do not depend on mass
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d
+
+\chapter{Analytically Solvable Models}\label{Models}
 
 The TISEq can be solved analytically only in a few special cases. We saw one of those special cases, the free particle, at the end of the previous chapter. In this section, we will analyze three others. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.
 
-\hypertarget{the-particle-in-a-box}{%
-\section{The Particle in a Box}\label{the-particle-in-a-box}}
+\section{The Particle in a Box}\label{the-particle-in-a-box}
 
 We can start by considering a particle constrained to move in a single dimension, under the influence of a potential \(V(x)\) which is zero for \(0 \leq x \leq a\) and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where \(V(x)\) is infinite, so \(\psi(x)\) is nonzero only within \([0,a]\). The Schrödinger equation is thus:
 
@@ -897,8 +1464,7 @@ E_1 = \frac{h^2 }{8 m a^2} \neq 0.
 
 This value is called \emph{zero-point energy (ZPE)}, and is a purely quantum mechanical effect. Notice that we did not solve for the constant \(A\). This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate \(n_x,n_y,n_z\)).
 
-\hypertarget{the-harmonic-oscillator}{%
-\section{The Harmonic Oscillator}\label{the-harmonic-oscillator}}
+\section{The Harmonic Oscillator}\label{the-harmonic-oscillator}
 
 We now consider a particle subject to a restoring force \(F = -kx\), as might arise for a mass-spring system obeying Hooke's Law. The potential is then:
 
@@ -918,29 +1484,33 @@ E \psi(x)
 After some effort, the eigenfunctions are:
 
 \begin{equation}
-\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+\psi_n(x) = N_{n-1} H_{n-1}(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=1,2,\ldots,\infty,
 \label{eq:HO3}
 \end{equation}
 
-where \(H_n\) is the Hermite polynomial of degree \(n\), and \(\alpha\) and \(N_n\) are defined by
+where \(H_{n-1}\) is the Hermite polynomial of degree \(n-1\), and \(\alpha\) and \(N_{n-1}\) are defined by
 
 \begin{equation}
 \alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+N_{n-1} = \frac{1}{\sqrt{2^{n-1} (n-1)!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
 \label{eq:HO4}
 \end{equation}
 
 The eigenvalues are:
 
 \begin{equation}
-E_n = \hbar \omega \left(n + \frac{1}{2} \right),
+E_n = \hbar \omega \left(n - \frac{1}{2} \right),
 \label{eq:HO5}
 \end{equation}
 
-with \(\omega = \sqrt{k/ \mu}\). Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to \(n=0\), but because of the \(\frac{1}{2}\) factor in eq. \eqref{eq:HO5}, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \eqref{eq:HO5}. The lowest possible energy (the ZPE) will be \(E_0 = \frac{1}{2} \hbar \omega\).
+with \(\omega = \sqrt{k/ \mu}\). Notice how, once again, the eigenfunctions and eigenvalues are not continuous, and the lowest energy state is not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \eqref{eq:HO5}. The lowest possible energy (the ZPE) will be:
 
-\hypertarget{the-rigid-rotor}{%
-\section{The Rigid Rotor}\label{the-rigid-rotor}}
+\begin{equation}
+E_1 = \frac{1}{2} \hbar \omega \neq 0
+\label{eq:zpeH}
+\end{equation}
+
+\section{The Rigid Rotor}\label{the-rigid-rotor}
 
 The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass \(\mu\), at a distance \(r\). The cartesian coordinates, \(x,y,z\), are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle \(\theta\), the longitudinal (azimuth) angle \(\phi\), and the distance \(r\). The TISEq of the system in spherical coordinates is:
 
@@ -961,8 +1531,203 @@ where \(\ell=0,1,2,\ldots\) is the \emph{azimuthal quantum number}, and \(m_{\el
 
 Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} and also the orientation in space at which the rotor is allowed to rotate changes discontinuously.
 
-\hypertarget{Hydrogen}{%
-\chapter{The Hydrogen Atom}\label{Hydrogen}}
+\section{Chapter Review}\label{rev4}
+
+\subsection{Study Questions}\label{quest4}
+
+\textbf{1. Which three model systems are treated in this chapter as analytically solvable?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Hydrogen atom, particle in a box, rigid rotor\\
+\item
+  Hydrogen atom, harmonic oscillator, Morse oscillator\\
+\item
+  Particle in a box, harmonic oscillator, rigid rotor\\
+\item
+  Free particle, hydrogen atom, rigid rotor\\
+\item
+  Particle in a box, Coulomb potential, rigid rotor
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. For the 1D infinite potential well (``particle in a box''), the potential \(V(x)\) is what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Constant for all \(x\)\\
+\item
+  Zero for \(0 \le x \le a\), infinite elsewhere\\
+\item
+  Linear in \(x\) between 0 and \(a\)\\
+\item
+  Harmonic in \(x^2\) between 0 and \(a\)\\
+\item
+  Zero everywhere
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What boundary conditions are imposed on the wavefunction for the particle in a box?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi(0) = \psi(a) = 1\)\\
+\item
+  \(\psi(0) = 0,\ \psi(a) = 1\)\\
+\item
+  \(\psi(0) = \psi'(a) = 0\)\\
+\item
+  \(\psi'(0) = \psi'(a) = 0\)\\
+\item
+  \(\psi(0) = \psi(a) = 0\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Applying the \(\psi(0)=0\) boundary condition to the particle in a box leads to which condition on the constants??}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(A = 0\)\\
+\item
+  \(k = 0\)\\
+\item
+  \(A = B\)\\
+\item
+  \(B = 0\)\\
+\item
+  \(A = -B\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which of the following is the correct spatial dependence of the normalized eigenfunctions for the particle in a box?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi_n(x) \propto \sin\left(\dfrac{n\pi x}{a}\right)\)\\
+\item
+  \(\psi_n(x) \propto \cos\left(\dfrac{n\pi x}{a}\right)\)\\
+\item
+  \(\psi_n(x) \propto e^{ikx}\)\\
+\item
+  \(\psi_n(x) \propto x^n\)\\
+\item
+  \(\psi_n(x) \propto \delta(x-n)\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following are the energy eigenvalues \(E_n\) for the particle in a box?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E_n = \dfrac{\hbar^2 n^2}{2 m a^2}\)
+\item
+  \(E_n = \dfrac{h^2 n^2}{8 m a^2}\)\\
+\item
+  \(E_n = \dfrac{1}{2} m n^2 a^2\)\\
+\item
+  \(E_n = \dfrac{n h c}{a}\)\\
+\item
+  \(E_n = n \hbar \omega\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. The harmonic oscillator eigenfunctions are expressed in terms of which special functions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Legendre polynomials \(P_n\)\\
+\item
+  Laguerre polynomials \(L_n\)\\
+\item
+  Hermite polynomials \(H_n\)\\
+\item
+  Bessel functions \(J_n\)\\
+\item
+  Spherical harmonics \(Y_{\ell}^m\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following are the energy levels of the harmonic oscillator?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E_n = \hbar \omega \left(n + \tfrac{1}{2}\right)\)\\
+\item
+  \(E_n = \hbar \omega n\)\\
+\item
+  \(E_n = \dfrac{h^2 n^2}{8 m a^2}\)\\
+\item
+  \(E_n = \dfrac{\hbar^2 n^2}{2m}\)\\
+\item
+  \(E_n = \dfrac{1}{2} k x^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What does the rigid rotor model represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  A particle moving in a 1D infinite well\\
+\item
+  Two point masses at fixed distance rotating in 3D\\
+\item
+  A mass on a spring moving in 1D\\
+\item
+  A free particle in 3D\\
+\item
+  A charged particle in a uniform electric field
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which of the following are the energy levels of the rigid rotor?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(E_\ell = \dfrac{\hbar^2}{2I}\,\ell(\ell+1)\)\\
+\item
+  \(E_\ell = \hbar \omega (\ell + \tfrac{1}{2})\)\\
+\item
+  \(E_\ell = \dfrac{h^2 \ell^2}{8 I}\)\\
+\item
+  \(E_\ell = \dfrac{\hbar^2}{2I}\,m^2\)\\
+\item
+  \(E_\ell = \dfrac{1}{2} I \omega^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.b, 3.e, 4.d, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a
+
+\chapter{The Hydrogen Atom}\label{Hydrogen}
 
 In this chapter we will consider the hydrogen atom as a proton fixed at the origin, orbited by an electron of reduced mass \(\mu\). The potential due to electrostatic attraction is:
 
@@ -1057,13 +1822,207 @@ Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azim
   According to the TISEq, the \(2s\) and \(2p\) orbitals of the hydrogen atom have the same energy.\footnote{In practice, this is not true, because of a tiny effect called the \href{https://en.wikipedia.org/wiki/Lamb_shift}{Lamb shift}. The description of this effect requires to go beyond the Schrödinger equation---and essentially beyond quantum mechanics---into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the \(2s-2p\) energy difference. The difference that is usually discussed in the context of the aufbau principle is a many-electron effect, as we will discuss in chapter \ref{Atoms}, and does not apply to hydrogen.}
 \end{itemize}
 
-\hypertarget{Operators}{%
-\chapter{Operators and Mathematical Background}\label{Operators}}
+\section{Chapter Review}\label{rev5}
+
+\subsection{Study Questions}\label{quest5}
+
+\textbf{1. Which of the following is the electrostatic potential energy, \(V(r)\), in the hydrogen atom?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(V(r) = -\dfrac{e^2}{4\pi \varepsilon_0 r}\)\\
+\item
+  \(V(r) = +\dfrac{e^2}{4\pi \varepsilon_0 r}\)\\
+\item
+  \(V(r) = \dfrac{1}{2} k r^2\)\\
+\item
+  \(V(r) = -G \dfrac{m_p m_e}{r}\)\\
+\item
+  \(V(r) = 0\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which of the following is the kinetic-energy operator used in the hydrogen Hamiltonian?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(K = -\dfrac{\hbar^2}{2\mu}\nabla^2\)\\
+\item
+  \(K = -\dfrac{\hbar^2}{2m_e}\dfrac{d^2}{dr^2}\)\\
+\item
+  \(K = \dfrac{p^2}{2\mu}\)\\
+\item
+  \(K = -\dfrac{\hbar^2}{2}\nabla\)\\
+\item
+  \(K = -\dfrac{\hbar^2}{2M}\nabla^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. How do you separate the hydrogen-atom wave function in spherical coordinates?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\psi(r,\theta,\phi) = f(r) g(\theta)\)\\
+\item
+  \(\psi(r,\theta,\phi) = R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)\)
+\item
+  \(\psi(r,\theta,\phi) = R(r) \cos\theta\)\\
+\item
+  \(\psi(r,\theta,\phi) = Y_\ell^{m_\ell}(\theta,\phi)\)\\
+\item
+  \(\psi(r,\theta,\phi) = R_{n\ell}(r) e^{i k r}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Which special functions give the angular part of the hydrogen-atom wave functions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Hermite polynomials\\
+\item
+  Associated Laguerre polynomials\\
+\item
+  Bessel functions\\
+\item
+  Plane waves\\
+\item
+  Spherical harmonics
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. How do you calculate the Bohr's radius?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(a_0 = \dfrac{\varepsilon_0 h^2}{\pi \mu e^2}\)\\
+\item
+  \(a_0 = \dfrac{4\pi \varepsilon_0 \hbar^2}{\mu e^2}\)\\
+\item
+  \(a_0 = \dfrac{\hbar^2}{\mu e^2}\)\\
+\item
+  \(a_0 = \dfrac{\varepsilon_0 h}{\mu e}\)\\
+\item
+  \(a_0 = \dfrac{e^2}{4\pi \varepsilon_0 \hbar^2}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which special functions give the radial part of the hydrogen-atom wave functions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Hermite polynomials\\
+\item
+  Legendre polynomials\\
+\item
+  Associated Laguerre functions\\
+\item
+  Spherical harmonics\\
+\item
+  Bessel functions
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What are the allowed values of the principal quantum number \(n\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(n = 0, 1, 2, \dots\)\\
+\item
+  \(n = -\infty \dots \infty\)\\
+\item
+  \(n = 1, 2, 3, \dots\)\\
+\item
+  \(n = \tfrac{1}{2}, \tfrac{3}{2}, \dots\)\\
+\item
+  \(n = 2, 4, 6, \dots\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. For a given \(n\), what are the allowed values of the azimuthal quantum number \(\ell\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\ell = 0,1,2,\dots,n-1\)\\
+\item
+  \(\ell = 1,2,\dots,n\)\\
+\item
+  \(\ell = -n,\dots,n\)\\
+\item
+  \(\ell = 0,\pm1,\pm2,\dots\)\\
+\item
+  \(\ell = n\) only
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. For or a given \(\ell\), what are the allowed values of the magnetic quantum number \(m_\ell\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(m_\ell = 0,1,\dots,\ell\)\\
+\item
+  \(m_\ell = 1,2,\dots,\ell\)\\
+\item
+  \(m_\ell = -n,\dots,n\)\\
+\item
+  \(m_\ell = \pm \tfrac{1}{2}\)\\
+\item
+  \(m_\ell = -\ell, -\ell+1, \dots, \ell\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which statement about orbitals does the chapter explicitly emphasize?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  Orbitals physically contain up to two electrons\\
+\item
+  Each orbital is the mathematical description of one and only one electron\\
+\item
+  Orbitals are purely classical trajectories\\
+\item
+  Orbitals only exist for many-electron atoms\\
+\item
+  Orbitals always have dumbbell shapes in real space
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.a, 3.b, 4.e, 5.a, 6.c, 7.c, 8.a, 9.e, 10.b
+
+\chapter{Operators and Mathematical Background}\label{Operators}
 
 So far, we have seen a few simple examples of how to solve the TISEq. For the general case, the mathematical formulation of quantum mechanics is built upon the concept of an operator. An operator is a function over a space of physical states onto another space of physical states. Operators do not exist exclusively in quantum mechanics, but they can also be used in classical mechanics. In chapter \ref{Classical}, we have seen at least a couple of them, namely the Lagrangian, \(L\), and Hamiltonian, \(H\). In quantum mechanics, however, the concept of an operator is the basis of the complex mathematical treatment that is necessary for more complicated cases. In this chapter, we will discuss the mathematics of quantum mechanical operators, and we will recast the results for the analytical cases in light of the new framework. As we will see, this framework is even simpler than what we have seen in the previous chapter. This simplicity, however, will open the door to the ``stranger'' side of quantum mechanics.
 
-\hypertarget{operators-in-quantum-mechanics}{%
-\section{Operators in Quantum Mechanics}\label{operators-in-quantum-mechanics}}
+\section{Operators in Quantum Mechanics}\label{operators-in-quantum-mechanics}
 
 The central concept in this new framework of quantum mechanics is that every observable (i.e., any quantity that can be measured in a physical experiment) is associated with an operator. To distinguish between classical mechanics operators and quantum mechanical ones, we use a hat symbol \(\hat{}\) on top of the latter. Physical pure states in quantum mechanics are represented as unit-norm (probabilities are normalized to one) vectors in a special complex Hilbert space. Following the definition, an operator is a function that projects a vector in the Hilbert space onto the space of physical observables. Since observables are values that come up as the result of the experiment, quantum mechanical operators must yield real eigenvalues.\footnote{But they might not be strictly real.} Operators that possess this property are called \emph{Hermitian}.
 In the wave mechanics formulation of quantum mechanics that we have seen so far, the wave function varies with space and time---or equivalently momentum and time---and observables are differential operators. A completely analogous formulation is possible in terms of matrices. In the matrix formulation of quantum mechanics, the norm of the physical state should stay fixed, so the evolution operator should be unitary, and the operators can be represented as matrices.
@@ -1077,8 +2036,7 @@ The expectation value of an operator \(\hat{A}\) for a system with wave function
 
 and if \(\hat{A}\) is a Hermitian operator, all physical observables are represented by such expectation values. It is easy to show that if \(\hat{A}\) is a linear operator with an eigenfunction \(g\), then any multiple of \(g\) is also an eigenfunction of \(\hat{A}\).
 
-\hypertarget{basic-properties-of-operators}{%
-\subsection{Basic Properties of Operators}\label{basic-properties-of-operators}}
+\subsection{Basic Properties of Operators}\label{basic-properties-of-operators}
 
 Most of the properties of operators are obvious, but they are summarized below for completeness.
 The sum and difference of two operators \(\hat{A}\) and \(\hat{B}\) are given by:
@@ -1127,8 +2085,7 @@ The commutative law does not generally hold for operators. In general, \(\hat{A}
 
 which is called the \textbf{commutator} of \(\hat{A}\) and \(\hat{B}\). Note that the order matters, so that \([ \hat{A}, \hat{B}] = - [ \hat{B}, \hat{A}]\). If \(\hat{A}\) and \(\hat{B}\) happen to commute, then \([\hat{A}, \hat{B}] = 0\).
 
-\hypertarget{linear-operators}{%
-\subsection{Linear Operators}\label{linear-operators}}
+\subsection{Linear Operators}\label{linear-operators}
 
 Almost all operators encountered in quantum mechanics are linear. A linear operator is any operator \(\hat{A}\) satisfying the following two conditions:
 
@@ -1157,8 +2114,7 @@ However, \(()^2\) is not a linear operator because:
 \label{eq:linop3}
 \end{equation}
 
-\hypertarget{hermitian-operators}{%
-\subsection{Hermitian Operators}\label{hermitian-operators}}
+\subsection{Hermitian Operators}\label{hermitian-operators}
 
 Hermitian operators are characterized by the self-adjoint property:
 
@@ -1214,8 +2170,7 @@ b \int \psi_a^{*} \psi_b d{\bf r}   &= a^{*} \int \psi_a^{*} \psi_b d{\bf r}\\
 
 Thus, since \(a = a^{*}\), and since we assumed \(b \neq a\), we must have \(\int \psi_a^{*} \psi_b d{\bf r} = 0\), i.e.~\(\psi_a\) and \(\psi_b\) are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so).
 
-\hypertarget{eigenfunctions-and-eigenvalues}{%
-\section{Eigenfunctions and Eigenvalues}\label{eigenfunctions-and-eigenvalues}}
+\section{Eigenfunctions and Eigenvalues}\label{eigenfunctions-and-eigenvalues}
 
 As we have already seen, an eigenfunction of an operator \(\hat{A}\) is a function \(f\) such that the application of \(\hat{A}\) on \(f\) gives \(f\) again, times a constant:
 
@@ -1278,19 +2233,18 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d{\bf r}\\
 
 This result shows that the average value of \(A\) is a weighted average of eigenvalues, with the weights being the squares of the coefficients of the eigenvectors in the overall wavefunction.\footnote{This section was adapted in part from Prof.~C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{here}.}
 
-\hypertarget{common-operators-in-quantum-mechanics}{%
-\section{Common Operators in Quantum Mechanics}\label{common-operators-in-quantum-mechanics}}
+\section{Common Operators in Quantum Mechanics}\label{common-operators-in-quantum-mechanics}
 
 Some common operators occurring in quantum mechanics are collected in the table below:
 
 \tiny
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.18}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.33}}@{}}
-\toprule
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1781}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3288}}@{}}
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Observable Name
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
@@ -1300,8 +2254,10 @@ Operator
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Operation
 \end{minipage} \\
-\midrule
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Position & \({\bf r}\) & \(\hat{\bf r}\) & Multiply by \({\bf r}\) \\
 Momentum & \({\bf p}\) & \(\hat{\bf p}\) & \(-i \hbar \left(\hat{i}\frac{\partial}{\partial x} +\hat{j} \frac{\partial}{\partial y}+\hat{k} \frac{\partial}{\partial z} \right)\) \\
 Kinetic energy & \(K\) & \(\hat{K}\) & \(- \frac{\hbar^2}{2m} \left(\frac{\partial^2}{\partial x^2} +\frac{\partial^2}{\partial y^2} +\frac{\partial^2}{\partial z^2} \right)\) \\
@@ -1311,15 +2267,13 @@ Angular momentum & \(L\) & \(\hat{L}^2\) & \(\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2
 & \(L_x\) & \(\hat{L}_x\) & \(-i\hbar\left(y\frac{\partial}{\partial z} - z \frac{\partial}{\partial y} \right)\) \\
 & \(L_y\) & \(\hat{L}_y\) & \(-i \hbar \left(z\frac{\partial}{\partial x} - x \frac{\partial}{\partial z} \right)\) \\
 & \(L_z\) & \(\hat{L}_z\) & \(-i \hbar \left(x\frac{\partial}{\partial y} - y \frac{\partial}{\partial x} \right)\) \\
-\bottomrule
 \end{longtable}
 
 \normalsize
 
 In the sections below we analyze in details two main operators for the energy and the angular momentum.
 
-\hypertarget{hamiltonian-operator}{%
-\subsection{Hamiltonian Operator}\label{hamiltonian-operator}}
+\subsection{Hamiltonian Operator}\label{hamiltonian-operator}
 
 The main quantity that quantum mechanics is interested in is the total energy of the system, \(E\). The operator corresponding to this quantity is called \emph{Hamiltonian}:
 
@@ -1355,8 +2309,7 @@ which is universal and applies to all systems. The potential energy operator \(\
 
 While these three cases are trivial to solve, the case of the rigid rotor is more complicated to solve, since the kinetic energy operator needs to be solved in spherical polar coordinates, as we will show in the next section.
 
-\hypertarget{angular-momentum-operator}{%
-\subsection{Angular Momentum Operator}\label{angular-momentum-operator}}
+\subsection{Angular Momentum Operator}\label{angular-momentum-operator}
 
 To write the kinetic energy operator \(\hat{K}\) for the rigid rotor, we need to express the Laplacian, \(\nabla^2\), in spherical polar coordinates:
 
@@ -1413,13 +2366,207 @@ The interpretation of these results is rather complicated, since the angular mom
 \caption{Illustration of the vector model of orbital angular momentum.}\label{fig:Fig1c6}
 \end{figure}
 
-\hypertarget{Spin}{%
-\chapter{Spin}\label{Spin}}
+\section{Chapter Review}\label{rev6}
+
+\subsection{Study Questions}\label{quest6}
+
+\textbf{1. Which expression gives the expectation value of an observable represented by operator \(\hat{a}\) in state \(\psi(\mathbf{r})\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\langle a \rangle = \int \psi^*(\mathbf{r})\,\hat{a}\,\psi(\mathbf{r})\,d\mathbf{r}\)\\
+\item
+  \(\langle a \rangle = \int \hat{a}\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}\)\\
+\item
+  \(\langle a \rangle = \int |\psi(\mathbf{r})|^2\,d\mathbf{r}\)\\
+\item
+  \(\langle a \rangle = \int a\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}\)\\
+\item
+  \(\langle a \rangle = \int \psi(\mathbf{r})\,\hat{a}\,\psi^*(\mathbf{r})\,d\mathbf{r}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. An eigenfunction \(f\) of an operator \(\hat{a}\) with eigenvalue \(k\) satisfies which equation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\hat{a} f = k\)\\
+\item
+  \(\hat{a} f = k f\)\\
+\item
+  \(\hat{a} f = f + k\)\\
+\item
+  \(\hat{a}^2 f = k f\)\\
+\item
+  \(\hat{a} f = k^2 f\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. If \(f\) is an eigenfunction of \(\hat{a}\) with eigenvalue \(k\), which statement is true for any nonzero scalar \(c\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(c f\) has eigenvalue \(k/c\)\\
+\item
+  \(c f\) is an eigenfunction with eigenvalue \(ck\)\\
+\item
+  \(c f\) is no longer an eigenfunction\\
+\item
+  \(c f\) is an eigenfunction only if \(|c|=1\)\\
+\item
+  \(c f\) is also an eigenfunction with the same eigenvalue \(k\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. What is the commutator of two operators \(\hat{a}\) and \(\hat{b}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \([\hat{a},\hat{b}] = \hat{a} + \hat{b}\)\\
+\item
+  \([\hat{a},\hat{b}] = \hat{a}\hat{b} + \hat{b}\hat{a}\)\\
+\item
+  \([\hat{a},\hat{b}] = \hat{a}\hat{b} - \hat{b}\hat{a}\)\\
+\item
+  \([\hat{a},\hat{b}] = \hat{a} - \hat{b}\)\\
+\item
+  \([\hat{a},\hat{b}] = 0\) by definition
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Which important consequence follows for the eigenvalues of a hermitian operator \(\hat{a}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  all eigenvalues are real\\
+\item
+  all eigenvalues are purely imaginary\\
+\item
+  eigenvalues occur only in complex-conjugate pairs\\
+\item
+  eigenvalues must be integers\\
+\item
+  eigenvalues must be positive
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. For a Hermitian operator, eigenfunctions corresponding to different eigenvalues have what property?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  they are always identical up to a phase
+\item
+  they are orthogonal (or can be chosen orthogonal)\\
+\item
+  they are linearly dependent\\
+\item
+  they have the same expectation value of all observables\\
+\item
+  they must be degenerate
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. In one dimension, the standard momentum operator \(\hat{p}_x\) acting on \(\psi(x)\) is:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\hat{p}_x = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2}\)\\
+\item
+  \(\hat{p}_x = i\hbar \dfrac{d}{dx}\)\\
+\item
+  \(\hat{p}_x = -i\hbar \dfrac{d}{dx}\)
+\item
+  \(\hat{p}_x = x\)\\
+\item
+  \(\hat{p}_x = \dfrac{d}{dx}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. If a wavefunction \(\psi\) is written as a linear combination of eigenfunctions \(\{\psi_i\}\) of \(\hat{a}\), \(\psi = \sum_i c_i \psi_i\), what are the possible outcomes of a measurement of \(a\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  any complex number
+\item
+  any real number in the spectrum of \(\hat{h}\)\\
+\item
+  only the expectation value \(\langle a \rangle\)\\
+\item
+  only the eigenvalues \(a_i\) corresponding to the eigenfunctions present in the expansion\\
+\item
+  only the largest eigenvalue
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. In the same expansion \(\psi = \sum_i c_i \psi_i\), what is the probability of obtaining eigenvalue \(a_k\) upon measuring \(a\) (assuming normalized eigenfunctions)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(|c_k|^2\)
+\item
+  \(c_k\)\\
+\item
+  \(|a_k|^2\)\\
+\item
+  \(1/|c_k|^2\)\\
+\item
+  \(\operatorname{Re}(c_k)\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What is the general role of the Hamiltonian operator \(\hat{H}\) in quantum mechanics?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it has no observable meaning\\
+\item
+  it represents only the kinetic energy\\
+\item
+  it represents only the potential energy\\
+\item
+  it measures the position of particles\\
+\item
+  it represents the total energy and generates time evolution
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e
+
+\chapter{Spin}\label{Spin}
 
 Spin is a special property of particles that has no classical analogue. Spin is an intrinsic form of angular momentum carried by elementary particles, such as the electron.
 
-\hypertarget{stern-gerlach-experiment}{%
-\section{Stern-Gerlach Experiment}\label{stern-gerlach-experiment}}
+\section{Stern-Gerlach Experiment}\label{stern-gerlach-experiment}
 
 In 1920, Otto Stern and Walter Gerlach designed an experiment that unintentionally led to the discovery that electrons have their own individual, continuous spin even as they move along their orbital of an atom. The experiment was done by putting a silver foil in an oven to vaporize its atoms. The silver atoms were collected into a beam that passed through an inhomogeneous magnetic field. The result was that the magnetic beam split the beam into two (and only two) separate ones. The Stern--Gerlach experiment demonstrated that the spatial orientation of angular momentum is quantized into two components (up and down). Thus an atomic-scale system was shown to have intrinsically quantum properties. The experiment is normally conducted using electrically neutral particles such as silver atoms. This avoids the large deflection in the path of a charged particle moving through a magnetic field and allows spin-dependent effects to dominate.
 
@@ -1472,8 +2619,7 @@ where the integration is performed along a special coordinate \(\mathbf{s}\) com
 
 This equation is not sufficient to determine the values of the coefficients since they are complex numbers. Eq. \eqref{eq:spin3}, however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, \(\phi_{\uparrow}\) and \(\phi_{\downarrow}\), will be observed with equal probability of \(\frac{1}{2}\).
 
-\hypertarget{sequential-stern-gerlach-experiments}{%
-\section{Sequential Stern-Gerlach Experiments}\label{sequential-stern-gerlach-experiments}}
+\section{Sequential Stern-Gerlach Experiments}\label{sequential-stern-gerlach-experiments}
 
 An interesting result can be obtain if we link multiple Stern--Gerlach apparatuses into one experiment and we perform the measurement along two orthogonal directions in space.
 As we showed in the previous section, all particles leaving the first Stern-Gerlach apparatus are in an eigenstate of the \(\hat{S}_z\) operator (i.e., their spin is either ``up or''down'' with respect to the \(z\)-direction). We can then take either one of the two resulting beams (for simplicity let's take the ``spin up'' output), and perform another spin measurement on it. If the second measurement is also aligned along the \(z\)-direction then only one outcome will be measured, since all particles are already in the ``spin up'' eigenstate of \(\hat{S}_z\). In other words, the measurement of a particle being in an eigenstate of the corresponding operator leaves the state unchanged.
@@ -1489,8 +2635,7 @@ We can finally repeat the measurement a third time, with the magnet aligned alon
 
 This experiment shows that spin is not a classical property. The Stern-Gerlach apparatus does not behave as a simple filter, selecting beams with one specific pre-determined characteristic. The second measurement along the \(x\) axis destroys the previous determination of the angular momentum in the \(z\) direction. This means that this property cannot be measured on two perpendicular directions at the same time.
 
-\hypertarget{spin-operators}{%
-\section{Spin Operators}\label{spin-operators}}
+\section{Spin Operators}\label{spin-operators}
 
 The mathematics of quantum mechanics tell us that \(\hat{S}_z\) and \(\hat{S}_x\) do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time.
 
@@ -1531,7 +2676,7 @@ which prove that the three projection operators do not commute with each other.
 
 \begin{quote}
 \begin{example}
-\protect\hypertarget{exm:spinex1}{}{\label{exm:spinex1} }\emph{Proof of Commutator Between Spin Projection Operators.}
+\protect\hypertarget{exm:spinex1}{}\label{exm:spinex1}\emph{Proof of Commutator Between Spin Projection Operators.}
 
 The equations in \eqref{eq:spop3} can be proved by writing the full eigenvalue equation and solving it using the definition of commutator, eq.\eqref{eq:bp5}, in conjunction with Pauli's relation, eqs. \eqref{eq:spop2}. For example, for the first couple:
 
@@ -1549,13 +2694,207 @@ The equations in \eqref{eq:spop3} can be proved by writing the full eigenvalue e
 \end{example}
 \end{quote}
 
-\hypertarget{Postulates}{%
-\chapter{Postulates of Quantum Mechanics}\label{Postulates}}
+\section{Chapter Review}\label{rev7}
+
+\subsection{Study Questions}\label{quest7}
+
+\textbf{1. The Stern--Gerlach experiment with silver atoms showed that the beam splits into what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a continuous smear of intensities\\
+\item
+  three discrete spots (m = -1, 0, +1)\\
+\item
+  a single undivided spot\\
+\item
+  two and only two discrete spots on the detector\\
+\item
+  four discrete spots
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What key quantum property is demonstrated by the observed splitting in the Stern--Gerlach experiment?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  continuous distribution of angular momentum orientations\\
+\item
+  quantization of spin angular momentum along the field direction\\
+\item
+  conservation of classical orbits\\
+\item
+  absence of magnetic moments in atoms\\
+\item
+  violation of energy conservation
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. For an electron (a spin‑½ particle), what are the possible measured values of the spin component \(s_z\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(0, \pm \hbar\)\\
+\item
+  \(\pm \hbar\)\\
+\item
+  only \(+\hbar/2\)\\
+\item
+  any real multiple of \(\hbar\)\\
+\item
+  \(+\hbar/2\) or \(-\hbar/2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. In a Stern--Gerlach experiment measuring \(s_z\), a general spin state can be written as:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a classical vector of length \(\hbar/2\)\\
+\item
+  a single eigenstate of \(\hat{s}_z\) only\\
+\item
+  \(c_1\,|\uparrow\rangle + c_2\,|\downarrow\rangle\) with complex \(c_1, c_2\)\\
+\item
+  a mixture of infinitely many \(s_z\) eigenvalues\\
+\item
+  a real linear combination of position eigenstates
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. After a beam passes through a Stern--Gerlach apparatus aligned along \(z\) and only the ``spin up'' channel is allowed through, what is the spin state of the particles that pass through?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  an equal superposition of up and down\\
+\item
+  eigenstate \(|\downarrow_z\rangle\) of \(\hat{s}_z\)\\
+\item
+  eigenstate \(|\uparrow_z\rangle\) of \(\hat{s}_z\)\\
+\item
+  a classical mixture of all directions\\
+\item
+  an eigenstate of \(\hat{s}_x\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. If a second Stern--Gerlach apparatus is placed after the first and is also aligned along the same \(z\) direction, what happens to a beam that is already in \(|\uparrow_z\rangle\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it is entirely transmitted as \(|\uparrow_z\rangle\) with no further splitting\\
+\item
+  it becomes completely unpolarized\\
+\item
+  it splits again into up and down beams\\
+\item
+  it is entirely absorbed\\
+\item
+  it flips to \(|\downarrow_z\rangle\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. In a sequential Stern--Gerlach experiment, a \(z\)-up beam is sent into a second apparatus aligned along \(x\). what is observed at the second apparatus?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only one output beam (``spin left'')\\
+\item
+  two beams with equal intensities: ``spin left'' and ``spin right'' along \(x\)\\
+\item
+  only one output beam (``spin right'')\\
+\item
+  a continuous spread in deflection angles\\
+\item
+  no beam at all
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Mathematically, the non‑classical nature of sequential Stern--Gerlach experiments is expressed by which property of spin operators such as \(\hat{s}_z\) and \(\hat{s}_x\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  they commute: \([\hat{s}_z,\hat{s}_x] = 0\)\\
+\item
+  they have identical eigenvalues\\
+\item
+  they are proportional to the identity\\
+\item
+  they do not commute: \([\hat{s}_z,\hat{s}_x] \neq 0\)\\
+\item
+  they vanish when squared
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. In three dimensions, the spin components are generally associated with which three operators?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\hat{s}_r, \hat{s}_y, \hat{s}_z\)\\
+\item
+  \(\hat{s}_x, \hat{s}_y, \hat{s}_z\)\\
+\item
+  \(\hat{s}_+, \hat{s}_-, \hat{s}_z\)\\
+\item
+  \(\hat{s}_1, \hat{s}_2, \hat{s}_3\) with all commuting\\
+\item
+  \(\hat{s}_x, \hat{s}_z, \hat{s}_t\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What key lesson about spin is emphasized by the Stern--Gerlach experiments?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  spin is a small classical correction to orbital motion\\
+\item
+  spin has a direct classical analogue in rotating spheres\\
+\item
+  spin is a purely quantum property with no classical analogue\\
+\item
+  spin is irrelevant for chemistry\\
+\item
+  spin is always conserved and cannot change under measurement
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.d, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.d, 9.b, 10.c
+
+\chapter{Postulates of Quantum Mechanics}\label{Postulates}
 
 In order to understand deeper quantum mechanics, scientists have derived a series of axioms that result in what are called \emph{postulates of quantum mechanics}. These are, in fact, assumptions that we need to make to understand how the measured reality relates with the mathematics of quantum mechanics. It is important to notice that the postulates are necessary for the interpretation of the theory, but not for the mathematics behind it. Regarding of whether we interpret it or not, the mathematics is complete and consistent. In fact, as we will see in the next chapter, several controversies regarding the interpretation of the mathematics are still open, and different philosophies have been developed to rationalize the results. Recall also that there are different ways of writing the equation of quantum mechanics, all equivalent to each other (i.e., Schrödinger's differential formulation and Heisenberg's algebraic formulation that we saw in chapter \ref{Schrodinger}). For these reasons, there is not an agreement on the number of postulates that are necessary to interpret the theory, and some philosophy and/or formulation might require more postulates than others. In this chapter, we will discuss the six postulates, as they are usually presented in chemistry and introductory physics textbooks and as they relate with a basic statistical interpretation of quantum mechanics. Regardless of the philosophical consideration on the meanings and numbers of the postulate, as well as their physical origin, these statements will make the interpretation of the theory a little easier, as we will see in the next chapter.
 
-\hypertarget{postulate-1-the-wave-function-postulate}{%
-\section{Postulate 1: The Wave Function Postulate}\label{postulate-1-the-wave-function-postulate}}
+\section{Postulate 1: The Wave Function Postulate}\label{postulate-1-the-wave-function-postulate}
 
 The state of a quantum mechanical system is completely specified by a function \(\Psi({\bf r}, t)\) that depends on the coordinates of the particle(s) and on time. This function, called the wave function or state function, has the important property that \(\Psi^{*}({\bf r}, t)\Psi({\bf r}, t) d\tau\) is the probability that the particle lies in the volume element \(d\tau\) located at \({\bf r}\) at time \(t\).
 
@@ -1568,13 +2907,11 @@ The wave function must satisfy certain mathematical conditions because of this p
 
 It is customary to also normalize many-particle wave functions to 1. As we already saw for the particle in a box in chapter \ref{Models}, a consequence of the first postulate is that the wave function must also be single-valued, continuous, and finite, so that derivatives can be defined and calculated at each point in space. This consequence allows for operators (which typically involve derivation) to be applied without mathematical issues.
 
-\hypertarget{postulate-2-experimental-observables}{%
-\section{Postulate 2: Experimental Observables}\label{postulate-2-experimental-observables}}
+\section{Postulate 2: Experimental Observables}\label{postulate-2-experimental-observables}
 
 To every observable in classical mechanics there corresponds a linear, Hermitian operator in quantum mechanics. We have in part already discussed this postulate in chapter \ref{Operators}, albeit we didn't call it as such. This postulate is necessary if we require the expectation value of an operator \(\hat{A}\) to be real, as it should be.
 
-\hypertarget{postulate-3-individual-measurements}{%
-\section{Postulate 3: Individual Measurements}\label{postulate-3-individual-measurements}}
+\section{Postulate 3: Individual Measurements}\label{postulate-3-individual-measurements}
 
 In any measurement of the observable associated with operator \(\hat{A}\), the only values that will ever be observed are the eigenvalues \(a\) that satisfy the eigenvalue equation:
 
@@ -1595,8 +2932,7 @@ An arbitrary state can be expanded in the complete set of eigenvectors of \(\hat
 
 where \(n\) may go to infinity. In this case, we only know that the measurement of \(A\) will yield one of the values \(a_i\), but we don't know which one. However, we do know the probability that eigenvalue \(a_i\) will occur (it is the absolute value squared of the coefficient, \(\vert c_i\vert^2\), as we obtained already in chapter \ref{Operators}), leading to the fourth postulate below.
 
-\hypertarget{postulate-4-expectation-values-and-collapse-of-the-wavefunction}{%
-\section{Postulate 4: Expectation Values and Collapse of the Wavefunction}\label{postulate-4-expectation-values-and-collapse-of-the-wavefunction}}
+\section{Postulate 4: Expectation Values and Collapse of the Wavefunction}\label{postulate-4-expectation-values-and-collapse-of-the-wavefunction}
 
 If a system is in a state described by a normalized wave function \(\Psi\), then the average value of the observable corresponding to \(\hat{A}\) is given by:
 
@@ -1607,8 +2943,7 @@ If a system is in a state described by a normalized wave function \(\Psi\), then
 
 An important consequence of the fourth postulate is that, after measurement of \(\Psi\) yields some eigenvalue \(a_i\), the wave function immediately ``collapses'' into the corresponding eigenstate \(\Psi_i\). In other words, measurement affects the state of the system. This fact is used in many experimental tests of quantum mechanics, such as the Stern-Gerlach experiment. Think again at the sequential experiment that we discussed in chapter \ref{Spin}. The act of measuring the spin along one coordinate is not simply a ``filtration'' of some pre-existing feature of the wave function, but rather an act that changes the nature of the wave function itself, affecting the outcome of future experiments. To this act corresponds the collapse of the wave function, a process that remains unexplained to date. Notice how the controversy is not in the mathematics of the experiment, which we already discussed in the previous chapter without issues. The issues rather arise because we don't know how to define the measurement act in itself (other than the fact that it is some form of quantum mechanical procedure with clear and well-defined macroscopic outcomes). This is the reason why the collapse of the wave function is also sometimes called the \emph{measurement problem} of quantum mechanics, and it is still a source of research and debate among modern scientists.
 
-\hypertarget{postulate-5-time-evolution}{%
-\section{Postulate 5: Time Evolution}\label{postulate-5-time-evolution}}
+\section{Postulate 5: Time Evolution}\label{postulate-5-time-evolution}
 
 The wave function of a system evolves in time according to the time-dependent Schrödinger equation:
 
@@ -1619,8 +2954,7 @@ The wave function of a system evolves in time according to the time-dependent Sc
 
 The central equation of quantum mechanics must be accepted as a postulate.
 
-\hypertarget{postulate-6-pauli-exclusion-principle}{%
-\section{Postulate 6: Pauli Exclusion Principle}\label{postulate-6-pauli-exclusion-principle}}
+\section{Postulate 6: Pauli Exclusion Principle}\label{postulate-6-pauli-exclusion-principle}
 
 The total wave function of a system with \(N\) spin-\(\frac{1}{2}\) particles (also called \textbf{fermions}) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called \textbf{bosons}), the wave function is symmetric:
 
@@ -1634,13 +2968,207 @@ The total wave function of a system with \(N\) spin-\(\frac{1}{2}\) particles (a
 
 Electronic spin must be included in this set of coordinates. As we will see in chapter \ref{Atoms}, the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).
 
-\hypertarget{Weirdness}{%
-\chapter{Quantum Weirdness}\label{Weirdness}}
+\section{Chapter Review}\label{rev8}
+
+\subsection{Study Questions}\label{quest8}
+
+\textbf{1. According to postulate 1 in this chapter, what completely specifies the state of a quantum system?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a set of classical coordinates and momenta\\
+\item
+  a normalized wave function \(\psi(\mathbf{r},t)\) over configuration space\\
+\item
+  the list of all possible measurement outcomes\\
+\item
+  the expectation values of all observables\\
+\item
+  the energy and total angular momentum
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. In the wave function postulate, \(|\psi(\mathbf{r},t)|^2 d\tau\) is interpreted as:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the probability that the particle is found in volume element \(d\tau\) around \(\mathbf{r}\) at time \(t\)
+\item
+  the charge density of the particle\\
+\item
+  the kinetic energy density\\
+\item
+  the number of particles per unit volume\\
+\item
+  the potential energy at \(\mathbf{r}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Postulate 2 (experimental observables) states that to every classical observable there corresponds what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a real‑valued function of time only\\
+\item
+  a complex number\\
+\item
+  a linear Hermitian operator acting on wave functions\\
+\item
+  a non‑linear operator that may not be hermitian\\
+\item
+  a classical random variable
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Why must operators representing physical observables be Hermitian?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  to guarantee that eigenvalues are integers\\
+\item
+  to ensure that eigenfunctions are always real\\
+\item
+  to guarantee real measurement outcomes (real eigenvalues)\\
+\item
+  to make the Hamiltonian time independent\\
+\item
+  to enforce energy conservation in all processes
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. If the system is in an eigenstate of \(\hat{a}\) with eigenvalue \(a_k\), what does postulate 3 say about the outcome of a measurement of \(a\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the outcome is random among all eigenvalues\\
+\item
+  the outcome is always \(a_k\)\\
+\item
+  the outcome is always \(\langle a\rangle\)\\
+\item
+  the outcome is one of two possible eigenvalues with equal probability\\
+\item
+  the outcome is complex
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. In postulate 4, once a measurement yields a particular eigenvalue \(a_k\), what happens to the wave function (in the idealized description)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it remains unchanged\\
+\item
+  it collapses to the corresponding eigenstate of \(\hat{a}\)\\
+\item
+  it becomes identically zero\\
+\item
+  it becomes a uniform superposition of all eigenstates\\
+\item
+  it collapses to the ground state of the hamiltonian
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. For a system in a superposition \(\psi = \sum_k c_k \psi_k\) of \(\hat{a}\)-eigenfunctions \(\psi_k\), what is the probability of obtaining eigenvalue \(a_j\) upon measuring \(a\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(|c_j|^2\) (assuming normalized eigenfunctions)\\
+\item
+  \(|a_j|^2\)\\
+\item
+  \(1/|c_j|^2\)\\
+\item
+  always \(1/n\), where \(n\) is the number of eigenvalues\\
+\item
+  \(\text{Re}(c_j)\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Postulate 5 implies that the time‑evolution operator must have which property?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it is unitary, preserving normalization of \(\psi\)\\
+\item
+  it is Hermitian\\
+\item
+  it is real and symmetric\\
+\item
+  it is diagonal in the position representation\\
+\item
+  it always commutes with position
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Postulate 6 in this chapter (Pauli exclusion principle) applies to which type of particles?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  all particles, regardless of spin\\
+\item
+  bosons only\\
+\item
+  fermions with half‑integer spin (e.g., electrons)\\
+\item
+  photons only\\
+\item
+  classical point particles
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. What does the Pauli exclusion principle state about the many‑electron wave function for identical fermions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it must be symmetric under exchange of any two identical fermions\\
+\item
+  it must vanish everywhere\\
+\item
+  it must be antisymmetric under exchange of any two identical fermions\\
+\item
+  it must be purely real\\
+\item
+  it must be constant in space
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.b, 2.a, 3.c, 4.c, 5.b, 6.b, 7.a, 8.a, 9.c, 10.c
+
+\chapter{Quantum Weirdness}\label{Weirdness}
 
 In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don't have a classical counterpart, starting from perhaps the most simple but also one of the most revealing: the double-slit experiment.
 
-\hypertarget{the-double-slit-experiment}{%
-\section{The double-slit experiment}\label{the-double-slit-experiment}}
+\section{The double-slit experiment}\label{the-double-slit-experiment}
 
 The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.
 
@@ -1661,8 +3189,7 @@ If one illuminates two parallel slits, the light from the two slits again interf
 
 The interference pattern resulting from the double-slit experiment are observed not only with light, but also with a beam of electrons, and other small particles.
 
-\hypertarget{the-individual-particles-experiment}{%
-\subsection{The individual particles experiment}\label{the-individual-particles-experiment}}
+\subsection{The individual particles experiment}\label{the-individual-particles-experiment}
 
 The first twist in the plot is if we perform the experiment by sending individual particles (e.g, either individual photons, or individual electrons). Sending particles through a double-slit apparatus one at a time results in single particles appearing on the screen, as expected. Remarkably, however, an interference pattern emerges when these particles are allowed to build up one by one (figure \ref{fig:Fig2c9}\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Double-slit_experiment\#/media/File:Interference_electrons_double-slit_at_10cm.png}{Wikipedia} by user Alexandre Gondran, and distributed under CC BY-SA 4.0 license}). The resulting pattern on the screen is the same as if each individual particle had passed through both slits.
 
@@ -1677,8 +3204,7 @@ The first twist in the plot is if we perform the experiment by sending individua
 
 This variation of the double-slit experiment demonstrates the wave--particle duality: the particle is measured as a single pulse at a single position, while the wave describes the probability of absorbing the particle at a specific place on the screen.
 
-\hypertarget{which-way-experiment}{%
-\subsection{``Which way'' experiment}\label{which-way-experiment}}
+\subsection{``Which way'' experiment}\label{which-way-experiment}
 
 A second twist happens if we place particle detectors at the slits with the intent of showing through which slit a particle goes. The interference pattern in this case will disappear.
 
@@ -1686,8 +3212,7 @@ This experiment illustrates that photons (and electrons) can behave as either pa
 
 The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arise not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of redeeming this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).\footnote{The interested student can read more about different interpretations \href{https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics}{HERE}.} The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).
 
-\hypertarget{heisenbergs-uncertainty-principle}{%
-\section{Heisenberg's Uncertainty Principle}\label{heisenbergs-uncertainty-principle}}
+\section{Heisenberg's Uncertainty Principle}\label{heisenbergs-uncertainty-principle}
 
 Let's now revisit the simple case of a free particle. As we saw in chapter \ref{Models}, the wave function that solved the TISEq:
 
@@ -1724,8 +3249,7 @@ One way to quantify the precision of the position and momentum is the standard d
 
 The uncertainty principle can be extended to any couple of conjugated variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.\footnote{Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.}
 
-\hypertarget{tunneling}{%
-\section{Tunneling}\label{tunneling}}
+\section{Tunneling}\label{tunneling}
 
 Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to ``tunnel through'' the barrier following a purely quantum mechanical phenomenon (figure \ref{fig:Fig3c9}).\footnote{This diagram is taken from \href{https://en.wikipedia.org/wiki/Quantum_tunnelling\#/media/File:TunnelEffektKling1.png}{Wikipedia} by user Felix Kling, and distributed under CC BY-SA 3.0 license.}
 
@@ -1740,17 +3264,17 @@ Tunneling is a phenomenon where a particle may cross a barrier even if it does n
 
 To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier (\(V_0\)) decays in the potential as a function of \(A_0\exp[-\alpha x]\), where \(A_0\) is the amplitude at the boundary, \(\alpha\) is proportional to the potential, and \(x\) is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is ``leaking'' through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.
 
-Tunneling can be described using the TISEq, eq. \eqref{eq:hamilt1}. For the tunneling problem we can take the potential \(V\) to be zero for all space, except for the region inside the barrier (between \(0\) and \(a\)):
+Tunneling can be described using the TISEq, eq. \eqref{eq:hamilt1}. For the tunneling problem we can take the potential \(V\) to be zero for all space, except for the region inside the barrier (between \(0\) and \(l\)):
 
 \begin{equation}
-V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<a \\ 0\quad&\text{if}\; a\leq x< \infty \end{cases}.
+V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<l \\ 0\quad&\text{if}\; l\leq x< \infty \end{cases}.
 \label{eq:tunn1}  
 \end{equation}
 
 To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:
 
 \begin{equation}
-\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<a \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; a\leq x< \infty \end{cases}
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<l \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; l\leq x< \infty \end{cases}
 \label{eq:tunn2}  
 \end{equation}
 
@@ -1764,31 +3288,30 @@ A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
 which implies that \(A=0\), and \(B=C+D\). At the opposite boundary:
 
 \begin{equation}
-A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
+A\sin(kl) +B \cos(kl)=C\exp(-\alpha l)+D\exp(\alpha l).
 \label{eq:tunn4}  
 \end{equation}
 
-We notice that, as \(a\) goes to infinity, the right hand side of eq. \eqref{eq:tunn4} goes to infinity, which does not make physical sense. To reconcile this, we must set \(D=0\).
+We notice that, as \(l\) goes to infinity, the right hand side of eq. \eqref{eq:tunn4} goes to infinity, which does not make physical sense. To reconcile this, we must set \(D=0\).
 
-For the final region, \(E\) and \(F\), present a potentially intractable problem. However, if one realizes that the value at the boundary \(a\) is driving the wave in the region \(a\) to infinity, it may also be realized that the wave function could be rewritten as \(C\exp[-\alpha a]\cos[k(x-a)]\), phase shifting the wave function by the value of \(a\),
+For the final region, \(E\) and \(F\), present a potentially intractable problem. However, if one realizes that the value at the boundary \(l\) is driving the wave in the region \(l\) to infinity, it may also be realized that the wave function could be rewritten as \(C\exp[-\alpha l]\cos[k(x-l)]\), phase shifting the wave function by the value of \(l\),
 and setting the amplitude to the boundary value. Summarizing, the wave function is:
 
 \begin{equation}
-\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&\text{if}\; a\leq x< \infty. \end{cases}
+\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<l \\ B\exp(-\alpha l)\cos[k(x-l)] \quad&\text{if}\; l\leq x< \infty. \end{cases}
 \label{eq:tunn5}  
 \end{equation}
 
-Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as \(\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\), where \(a\) is the width of the barrier, and \((V_0-E)\) is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
+Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as \(\exp\left(-l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\), where \(l\) is the width of the barrier, and \((V_0-E)\) is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
 
 \begin{equation}
-\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+\exp\left(-2l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
 \label{eq:tunn6}  
 \end{equation}
 
 As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that \(k\) is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and go back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter \ref{Models}.
 
-\hypertarget{tunneling-in-chemical-reactions}{%
-\subsection{Tunneling in chemical reactions}\label{tunneling-in-chemical-reactions}}
+\subsection{Tunneling in chemical reactions}\label{tunneling-in-chemical-reactions}
 
 The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, more rapid than the classical prediction would predict. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine (\(\text{PH}_3\)) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).
 
@@ -1805,8 +3328,203 @@ where \(k(\text{H})\) and \(k(\text{D})\) are the rate constants for the reactio
 
 Using experimental data for the umbrella inversion reaction, the KIE can be calculated to be approximately 1.3 in the absence of tunneling. However, when tunneling is allowed, the KIE is reduced to around 1.1. This reduction in the KIE due to tunneling is a significant effect and must be considered when studying chemical reactions involving light atoms.
 
-\hypertarget{Atoms}{%
-\chapter{Many-Electron Atoms}\label{Atoms}}
+\section{Chapter Review}\label{rev9}
+
+\subsection{Study Questions}\label{quest9}
+
+\textbf{1. In the double‑slit experiment with single particles (e.g., electrons), what is observed on the screen after many particles have passed?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a single sharp peak at the center\\
+\item
+  two non‑overlapping bands corresponding to the two slits\\
+\item
+  a classical shadow pattern with uniform intensity between slits\\
+\item
+  an interference pattern with alternating bright and dark fringes\\
+\item
+  a completely uniform distribution over the screen
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. When detectors are placed at the slits to determine ``which slit'' each particle goes through, what typically happens to the interference pattern?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it becomes sharper and more pronounced\\
+\item
+  it disappears, leaving two classical‑like bands\\
+\item
+  it reverses (bright and dark fringes swap)\\
+\item
+  it doubles in fringe number\\
+\item
+  it becomes independent of slit separation
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. In the Heisenberg uncertainty principle for position and momentum along \(x\), eq. \eqref{eq:heis3}, what do \(\sigma_x\) and \(\sigma_p\) represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  exact measurement errors of the apparatus\\
+\item
+  spreads (standard deviations) in the probability distributions of \(x\) and \(p_x\)\\
+\item
+  mean values of position and momentum\\
+\item
+  classical trajectory deviations\\
+\item
+  arbitrary experimental tolerances chosen by the user
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. which pair of observables is \emph{not} a standard example of canonically conjugate variables in the context of uncertainty relations?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  position and momentum\\
+\item
+  energy and time (in a suitable sense)\\
+\item
+  different components of spin\\
+\item
+  particle number and phase (in some systems)\\
+\item
+  mass and electric charge
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. Quantum tunneling refers to the phenomenon where a particle does what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  moves faster than light through a barrier\\
+\item
+  passes through a region where its classical kinetic energy would be negative\\
+\item
+  reflects perfectly from any finite barrier\\
+\item
+  ceases to exist inside a barrier\\
+\item
+  behaves as a classical wave inside a barrier but as a particle outside
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. In a 1d potential‑barrier problem, what happens to the wave function in a classically forbidden region where \(E < V(x)\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it vanishes identically\\
+\item
+  it oscillates with constant amplitude\\
+\item
+  it decays (or grows) exponentially with distance into the barrier\\
+\item
+  it becomes a delta function at the barrier edge\\
+\item
+  it becomes purely imaginary and non‑normalizable
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. For a finite barrier of width \(l\), which statement about transmission probability in the tunneling example is qualitatively correct?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it is exactly zero if \(E < V_0\)\\
+\item
+  it is 1/2 regardless of barrier parameters\\
+\item
+  it decreases rapidly as barrier width and/or height increase\\
+\item
+  it is independent of the particle's mass\\
+\item
+  it is always 1 for normalized wave functions
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which of the following best explains \emph{why} tunneling can occur even when \(E < V_0\) for a barrier?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  energy is not conserved in quantum mechanics\\
+\item
+  the wave function penetrates the classically forbidden region and has nonzero amplitude beyond it\\
+\item
+  the particle temporarily borrows energy from the vacuum\\
+\item
+  relativistic corrections allow the particle to accelerate\\
+\item
+  the barrier momentarily disappears due to fluctuations
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. In a chemical reaction coordinate picture, what does tunneling correspond to?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the reactant climbing \emph{over} the transition-state barrier\\
+\item
+  the reactant remaining in a metastable well forever\\
+\item
+  the system passing \emph{through} the barrier region where classical energy would be insufficient\\
+\item
+  the system skipping the transition state entirely with zero probability\\
+\item
+  the system following a purely classical minimum‑energy path
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which experimental signature is commonly taken as evidence for significant hydrogen tunneling in reactions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  linear arrhenius plots with classical slopes\\
+\item
+  very small kinetic isotope effects (k\(_h\)/k\(_d\) \(\approx\) 1 at all temperatures)\\
+\item
+  large kinetic isotope effects and curved (non‑linear) arrhenius plots\\
+\item
+  complete absence of isotope effects\\
+\item
+  rate constants independent of temperature and isotope
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.d, 2.b, 3.b, 4.e, 5.b, 6.c, 7.c, 8.b, 9.c, 10.c
+
+\chapter{Many-Electron Atoms}\label{Atoms}
 
 When two or more electrons are present in a system, the TISEq equation cannot be solved analytically. Thus for the vast majority of chemical applications, we must rely on approximate methods. We will explore some of these approximations in this and further chapter, starting from the many-electron atoms (all atoms other than hydrogen). It is important to stress that because of the nature of approximations, this is still a very active field of scientific research, and improved methods are developed every year.
 
@@ -1819,8 +3537,7 @@ The electronic Hamiltonian for a many-electron atom can be written as:
 
 where \(Z\) is the nuclear charge, \(m_e\) and \(e\) are respectively the mass and charge of an electron, \({\bf r}_i\) and \(\nabla_i^2\) are the spatial coordinates and the Laplacian of each electron, \(r_{i}=|{\bf r}_i|\), and \(r_{{ij}}=|{\bf r}_i-{\bf r}_j|\) is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using eq. \eqref{eq:scheqsimple}.
 
-\hypertarget{many-electron-wave-functions}{%
-\section{Many-Electron Wave Functions}\label{many-electron-wave-functions}}
+\section{Many-Electron Wave Functions}\label{many-electron-wave-functions}
 
 When we have more than one electron, the sixth postulate that we discussed in chapter \ref{Postulates} comes into place. In other words, we need to account for the spin of the electrons and we need the wave function to be antisymmetric with respect to exchange of the coordinates of any two electrons. In order to do so, we can define a new variable \({\bf x}\) which represents the set of all four coordinates associated with an electron: three spatial coordinates \({\bf r}\), and one spin coordinate \(\mathbf{s}\), i.e., \({\bf x} = \{ {\bf r}, {\bf s} \}\). We can then write the electronic wave function as \(\Psi({\bf x}_1, {\bf x}_2, \ldots, {\bf x}_N)\), and we require the sixth postulate to hold by writing:
 
@@ -1887,13 +3604,11 @@ where each column contains one spin-orbital, each row contains the coordinates o
 
 where the notation \(|\cdots\rangle\) is a shorthand to indicate the Slater determinant where only the diagonal elements are reported.
 
-\hypertarget{approximated-hamiltonians}{%
-\section{Approximated Hamiltonians}\label{approximated-hamiltonians}}
+\section{Approximated Hamiltonians}\label{approximated-hamiltonians}
 
 In order to solve the TISEq for a many-electron atom we also need to approximate the Hamiltonian, since analytic solution using the full Hamiltonian as in eq. \eqref{eq:atom1} are impossible to find. The most significant approximation used in chemistry is called the \emph{variational method}.
 
-\hypertarget{variational-method}{%
-\subsection{Variational method}\label{variational-method}}
+\subsection{Variational method}\label{variational-method}
 
 The basic idea of the variational method is to guess a ``trial'' wave function for the problem consisting of some adjustable parameters called ``variational parameters''. These parameters are adjusted until the energy of the trial wave function is minimized. The resulting trial wave function and its corresponding energy are variational method approximations to the exact wave function and energy.
 
@@ -1953,8 +3668,7 @@ In other words, the energy of any approximate wave function is always greater th
 
 This explains the strategy of the variational method: since the energy of any approximate trial function is always above the true energy, then any variations in the trial function which lower its energy are necessarily making the approximate energy closer to the exact answer. (The trial wave function is also a better approximation to the true ground state wave function as the energy is lowered, although not necessarily in every possible sense unless the limit \(\Phi = \Psi_0\) is reached).
 
-\hypertarget{approximated-solution-for-the-helium-atom}{%
-\subsection{Approximated solution for the helium atom}\label{approximated-solution-for-the-helium-atom}}
+\subsection{Approximated solution for the helium atom}\label{approximated-solution-for-the-helium-atom}
 
 We now have all the ingredients to attempt the simplest approximated solution to the TISEq of a many-electron atom. We can start by writing the total wave function using the Slater determinant of eq. \eqref{eq:atom8} in terms of spin-orbitals:
 
@@ -2000,11 +3714,205 @@ The nuclear charge \(Z\) in the \(\psi_{100}\) orbital can be used as a variatio
 
 This procedure can be extended to atoms with more than two electrons, resulting in the so-called Hartree-Fock method. The procedure, however, is not straightforward. We will explain it in more details in the next chapter, since it is the simplest approximation that also describes the chemical bond.
 
-\hypertarget{Molecules}{%
-\chapter{Introduction to Molecules}\label{Molecules}}
+\section{Chapter Review}\label{rev10}
 
-\hypertarget{the-molecular-hamiltonian}{%
-\section{The Molecular Hamiltonian}\label{the-molecular-hamiltonian}}
+\subsection{Study Questions}\label{quest10}
+
+\textbf{1. When going from hydrogen to many‑electron atoms, which new term in the electronic hamiltonian prevents an analytic solution of the tise?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electron--nuclear attraction\\
+\item
+  kinetic energy\\
+\item
+  electron--electron repulsion\\
+\item
+  nuclear--nuclear repulsion\\
+\item
+  spin--orbit coupling
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. For an n‑electron atom in non‑relativistic approximation, how does the dimensionality of the electronic configuration space scale with n?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it remains 3 (independent of n)\\
+\item
+  it is 3n (three spatial coordinates for each electron)\\
+\item
+  it is n\\
+\item
+  it is 2n (one radial and one angular coordinate per electron)\\
+\item
+  it is n²
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which symmetry requirement must the total electronic wave function for identical electrons satisfy?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  symmetry under any electron exchange\\
+\item
+  normalization to 1
+\item
+  invariance under global phase changes only\\
+\item
+  periodicity in each coordinate\\
+\item
+  antisymmetry under exchange of any two electrons (Pauli principle)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. How is antisymmetry enforced in practice in approximate many‑electron wave functions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  by multiplying one‑electron functions\\
+\item
+  by adding a constant term to the hamiltonian\\
+\item
+  by constructing Slater determinants of spin‑orbitals\\
+\item
+  by ignoring spin altogether\\
+\item
+  by symmetrizing products of orbitals
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. The variational principle for an approximate normalized trial function \(\Phi\) states that the energy functional \(E[\Phi]\) is?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  always less than the exact ground‑state energy\\
+\item
+  equal to the exact ground‑state energy for any trial function\\
+\item
+  always greater than or equal to the exact ground‑state energy\\
+\item
+  independent of the choice of trial function\\
+\item
+  meaningful only for excited states
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. In the independent‑electron approximation used as a starting point for many‑electron atoms, each electron is assumed to move in?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  in the field of the nucleus only, ignoring other electrons\\
+\item
+  in a mean or effective field generated by the nucleus and the average distribution of all other electrons\\
+\item
+  in a uniform external electric field\\
+\item
+  in a purely harmonic potential\\
+\item
+  in free space without any potential
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Why are hydrogen‑like orbitals still useful to build approximate many‑electron wave functions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  they are exact solutions for all many‑electron atoms\\
+\item
+  they form a convenient basis set to expand more realistic orbitals\\
+\item
+  they automatically include electron correlation\\
+\item
+  they depend only on spin variables\\
+\item
+  they enforce the pauli principle without determinants
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. Which qualitative effect of electron--electron repulsion on the radial distribution of inner versus outer electrons is discussed in many‑electron treatments?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  outer electrons become more tightly bound than inner ones\\
+\item
+  inner electrons shield outer ones, so outer electrons feel a smaller effective nuclear charge and are more diffuse\\
+\item
+  shielding causes inner electrons to move further from the nucleus\\
+\item
+  outer electrons experience the full nuclear charge without screening\\
+\item
+  both inner and outer electrons collapse into the nucleus
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following is \emph{not} an effect explicitly included when one uses a simple central‑field approximation for many‑electron atoms?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  average electron--electron repulsion\\
+\item
+  screening of nuclear charge\\
+\item
+  detailed instantaneous electron--electron correlation (dynamic correlation)\\
+\item
+  effective one‑electron orbital picture\\
+\item
+  approximate shell structure
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. In the context of many‑electron wave functions, what is meant by ``electron correlation'' beyond the independent‑particle picture?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  changes in nuclear positions\\
+\item
+  spin conservation\\
+\item
+  the normalization condition\\
+\item
+  the fact that exact electronic motion is correlated because electrons avoid each other more than in a mean‑field description
+\item
+  inclusion of relativistic mass corrections
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.b, 3.e, 4.c, 5.c, 6.b, 7.b, 8.b, 9.c, 10.d
+
+\chapter{Introduction to Molecules}\label{Molecules}
+
+\section{The Molecular Hamiltonian}\label{the-molecular-hamiltonian}
 
 For a molecule, we can decompose the Hamiltonian operator as:
 
@@ -2028,13 +3936,11 @@ where we have decomposed the kinetic energy operator into nuclear and electronic
 
 where \(M_i\), \(Z_i\), and \(\mathbf{R}_i\) are the mass, atomic number, and coordinates of nucleus \(i\), respectively, and all other symbols are the same as those used in eq. \eqref{eq:atom1} for the many-electron atom Hamiltonian.
 
-\hypertarget{small-terms-in-the-molecular-hamiltonian}{%
-\subsection{Small terms in the molecular Hamiltonian}\label{small-terms-in-the-molecular-hamiltonian}}
+\subsection{Small terms in the molecular Hamiltonian}\label{small-terms-in-the-molecular-hamiltonian}
 
 The operator in eq. \eqref{eq:molham1} is known as the ``exact'' nonrelativistic Hamiltonian in field-free space. However, it is important to remember that it neglects at least two effects. Firstly, although the speed of an electron in a hydrogen atom is less than 1\% of the speed of light, relativistic mass corrections can become appreciable for the inner electrons of heavier atoms. Secondly, we have neglected the spin-orbit effects, which is explained as follows. From the point of view of an electron, it is being orbited by a nucleus which produces a magnetic field (proportional to \({\bf L}\)); this field interacts with the electron's magnetic moment (proportional to \({\bf S}\)), giving rise to a spin-orbit interaction (proportional to \({\bf L} \cdot {\bf S}\) for a diatomic.) Although spin-orbit effects can be important, they are generally neglected in quantum chemical calculations, and we will neglect them in the remainder of this textbook as well.
 
-\hypertarget{the-born-oppenheimer-approximation}{%
-\section{The Born-Oppenheimer Approximation}\label{the-born-oppenheimer-approximation}}
+\section{The Born-Oppenheimer Approximation}\label{the-born-oppenheimer-approximation}
 
 As we already saw in the previous chapter, if a Hamiltonian is separable into two or more terms, then the total eigenfunctions are products of the individual eigenfunctions of the separated Hamiltonian terms. The total eigenvalues are then sums of individual eigenvalues of the separated Hamiltonian terms.
 
@@ -2100,13 +4006,11 @@ where we have also factored out the nuclear kinetic energy, \(\hat{K}_N\) (since
 which is the equation that is used to explain the chemical bond in the next section. Notice that eq. \eqref{eq:molham9} is not the total TISEq of the system, since the nuclear eigenfunction and its eigenvalues (which can be obtained solving the Schrödinger equation with the nuclear Hamiltonian) are neglected.
 As a final note, in the remainder of this textbook we will confuse the term ``total energy'' with ``total energy at fixed geometry'', as is customary in many other quantum chemistry textbooks (i.e., we are neglecting the nuclear kinetic energy). This is just \(E_{e}\) of eq. \eqref{eq:molham9}, plus the constant shift,\(\hat{V}_{NN}({\bf R_a})\), given by the nuclear-nuclear repulsion.
 
-\hypertarget{solving-the-electronic-eigenvalue-problem}{%
-\section{Solving the Electronic Eigenvalue Problem}\label{solving-the-electronic-eigenvalue-problem}}
+\section{Solving the Electronic Eigenvalue Problem}\label{solving-the-electronic-eigenvalue-problem}
 
 Once we have invoked the Born-Oppenheimer approximation, we can attempt to solve the electronic TISEq in eq. \eqref{eq:molham9}. However, for molecules with more than one electron, we need to---once again---keep in mind the antisymmetry of the wave function. This obviously means that we need to write the electronic wave function as a Slater determinant (i.e., all molecules but \(\mathrm{H}_2^+\) and a few related highly exotic ions). Once this is done, we can work on approximating the Hamiltonian, a task that is necessary because the presence of the electron-electron repulsion term forbids its analytic treatment. Similarly to the many-electron atom case, the simplest approximation to solve the molecular electronic TISEq is to use the variational method and to neglect the electron-electron repulsion. As we noticed in the previous chapter, this approximation is called the Hartree-Fock method.
 
-\hypertarget{the-hartree-fock-method}{%
-\subsection{The Hartree-Fock Method}\label{the-hartree-fock-method}}
+\subsection{The Hartree-Fock Method}\label{the-hartree-fock-method}
 
 The main difference when we apply the variational principle to a molecular Slater determinant is that we need to build orbitals (one-electron wave functions) that encompass the entire molecule. This can be done by assuming that the atomic contributions to the molecular orbitals will closely resemble the orbitals that we obtained for the hydrogen atom. The total molecular orbital can then be built by linearly combine these atomic contributions. This method is called \textbf{linear combination of atomic orbitals (LCAO)}. A consequence of the LCAO method is that the atomic orbitals on two different atomic centers are not necessarily orthogonal, and eq. \eqref{eq:var4} cannot be simplified easily. If we replace each atomic orbital \(\psi(\mathbf{r})\) with a linear combination of suitable basis functions \(f_i(\mathbf{r})\):
 
@@ -2133,9 +4037,9 @@ Differentiating this energy with respect to the expansion coefficients \(c_i\) y
 
 \begin{equation}
 \begin{vmatrix}
-H_{11}-ES_{11}   & H_{12}-ES_{12}   & \cdots & H_{1m}-ES_{1m}\\\
-H_{21}-ES_{21}   & H_{22}-ES_{22}   & \cdots & H_{2m}-ES_{2m}\\\
-\vdots           &   \vdots         & \ddots & \vdots\\\
+H_{11}-ES_{11}   & H_{12}-ES_{12}   & \cdots & H_{1m}-ES_{1m}\\
+H_{21}-ES_{21}   & H_{22}-ES_{22}   & \cdots & H_{2m}-ES_{2m}\\
+\vdots           &   \vdots         & \ddots & \vdots\\
 H_{m1}-ES_{m1}   & H_{m2}-ES_{m2}   & \cdots & H_{mm}-ES_{mm}
 \end{vmatrix}=0
 \label{eq:molham12}
@@ -2143,13 +4047,207 @@ H_{m1}-ES_{m1}   & H_{m2}-ES_{m2}   & \cdots & H_{mm}-ES_{mm}
 
 where \(m\) is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients \(c_i\) in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the \textbf{self-consistent-field (SCF) procedure}. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. \eqref{eq:molham12}. This solution gives updated values of the coefficients, which can then be used to create an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.
 
-\hypertarget{Bonds}{%
-\chapter{The Chemical Bond in Diatomic Molecules}\label{Bonds}}
+\section{Chapter Review}\label{rev11}
+
+\subsection{Study Questions}\label{quest11}
+
+\textbf{1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only electronic kinetic energy and electron--nuclear attraction\\
+\item
+  only nuclear kinetic energy and nuclear--nuclear repulsion\\
+\item
+  spin--orbit and relativistic corrections only\\
+\item
+  only electron--electron repulsion and nuclear--nuclear repulsion\\
+\item
+  electronic and nuclear kinetic energies, electron--nuclear, electron--electron, and nuclear--nuclear interactions
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What makes the exact molecular Schrödinger equation harder than the atomic case?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electrons disappear in molecules\\
+\item
+  nuclei can be treated classically in atoms but not in molecules\\
+\item
+  the presence of multiple moving nuclei in addition to many electrons\\
+\item
+  there is no coulomb interaction in molecules\\
+\item
+  the electron mass changes in molecules
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. What is the central physical idea behind the Born--Oppenheimer approximation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electrons are much heavier than nuclei\\
+\item
+  nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion\\
+\item
+  electrons and nuclei move with the same characteristic time scale\\
+\item
+  both electrons and nuclei can be treated as classical particles\\
+\item
+  nuclei do not contribute to the energy at all
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. Mathematically, the Born--Oppenheimer approximation relies on what property of the Hamiltonian?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  exact commutation with the position operator\\
+\item
+  separability into electronic and nuclear parts (plus interactions)\\
+\item
+  absence of kinetic energy terms\\
+\item
+  Hermiticity of the potential energy operator\\
+\item
+  linearity of the time derivative
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by ``total energy'' of a molecule at fixed geometry?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electronic energy \(E_e\) at that geometry plus the constant nuclear--nuclear repulsion term\\
+\item
+  nuclear kinetic energy only\\
+\item
+  electronic energy without nuclear--nuclear repulsion\\
+\item
+  purely classical potential energy\\
+\item
+  nuclear vibrational zero‑point energy
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a PES is the graph of electronic energy as a function of nuclear geometry\\
+\item
+  a PES is the graph of nuclear kinetic energy versus time\\
+\item
+  a PES is independent of nuclear positions\\
+\item
+  a PES depends only on electron spin\\
+\item
+  PESs are defined only for diatomic molecules
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following is \emph{not} a direct consequence or assumption of the Born--Oppenheimer approximation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electronic and nuclear motions can be approximately separated\\
+\item
+  electrons move in the field of fixed nuclei\\
+\item
+  nuclear motion can be described on a pes obtained from electronic energies\\
+\item
+  electron--nuclear coupling can never be important for any property\\
+\item
+  total wavefunctions are approximated as products of electronic and nuclear parts
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbital coefficients leads to what?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the time‑dependent Schrödinger equation\\
+\item
+  an over‑determined system with no nontrivial solutions\\
+\item
+  a single algebraic equation for the total energy\\
+\item
+  purely classical equations of motion for nuclei\\
+\item
+  a set of coupled one‑electron equations involving the fock operator (Hartree--Fock equations)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Which of the following sentences describes the Fock operator \(\hat{F}\) in Hartree--Fock theory?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a two‑electron operator containing only electron--electron repulsion\\
+\item
+  a purely nuclear operator\\
+\item
+  a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron--electron (Coulomb and exchange) terms
+\item
+  an operator that depends only on spin and not on spatial coordinates\\
+\item
+  the exact electronic Hamiltonian
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. In the Hartree--Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  by forcing all electrons into different nuclei\\
+\item
+  by requiring all spatial orbitals to be orthogonal but ignoring spin\\
+\item
+  by constructing an antisymmetric Slater determinant of spin‑orbitals\\
+\item
+  by adding a large repulsive potential at short inter‑electronic distances\\
+\item
+  by using only hydrogen‑like orbitals
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
+
+\chapter{The Chemical Bond in Diatomic Molecules}\label{Bonds}
 
 In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the \(\mathrm{H}_2^+\) molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and use a set tailored for molecules, called \emph{atomic units (a.u.)}. This set of units is built by setting \(\hbar=e=m_e=a_0=1\). As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \eqref{eq:HA7}, simply becomes \(E_n=-\frac{1}{2n^2}\) in the a.u. of energy, which are called Hartrees.
 
-\hypertarget{the-chemical-bond-in-the-hydrogen-molecular-cation}{%
-\section{The Chemical Bond in the Hydrogen Molecular Cation}\label{the-chemical-bond-in-the-hydrogen-molecular-cation}}
+\section{The Chemical Bond in the Hydrogen Molecular Cation}\label{the-chemical-bond-in-the-hydrogen-molecular-cation}
 
 This system has only one electron, but since its geometry is not spherical (figure \ref{fig:Fig1c12}), the TISEq cannot be solved analytically as for the hydrogen atom.
 
@@ -2194,7 +4292,7 @@ H_{aa}-E   & H_{ab}-ES \\\
 H_{ab}-ES  & H_{aa}-E
 \end{vmatrix}=0
 \label{eq:bond4}
-\end{equation}
+\end{equation}\textbackslash end\{equation\}
 
 The expansion of the determinant results into:
 
@@ -2266,8 +4364,7 @@ Calculating the values for the integrals and repeating these calculations for di
 \caption{Born-Oppenheimer energy landscape for the hydrogen molecular cation.}\label{fig:Fig3c12}
 \end{figure}
 
-\hypertarget{the-chemical-bond-in-the-hydrogen-molecule}{%
-\section{The Chemical Bond in the Hydrogen Molecule}\label{the-chemical-bond-in-the-hydrogen-molecule}}
+\section{The Chemical Bond in the Hydrogen Molecule}\label{the-chemical-bond-in-the-hydrogen-molecule}
 
 \begin{figure}
 
@@ -2329,13 +4426,207 @@ If we scan the Born-Oppenheimer energy landscape using the wave function in eq. 
 
 As we can see, the Hartree-Fock results for \(\mathrm{H}_2\) describes the formation of the bond qualitatively around the bond distance (minimum of the curve), but they fail to describe the molecule at dissociation. This happens because in eq. \eqref{eq:bond12} both electrons are in the same orbital with opposite spin (electrons are coupled), and the orbital is shared among both centers. At dissociation, this corresponds to an erroneous ionic dissociation state where both electron are localized on either one of the two centers (this center is therefore negatively charged), with the other proton left without electrons. This is in contrast with the correct dissociation, where each electron should be localized around each center (and therefore, it should be uncoupled from the other electron). This error is once again the result of the approximations that are necessary to treat the TISEq of a many-electron system. It is obviously not a failure of quantum mechanics, and it can be easily corrected using more accurate approximations on modern computers.
 
-\hypertarget{Poly}{%
-\chapter{The Chemical Bond in Polyatomic Molecules}\label{Poly}}
+\section{Chapter Review}\label{rev12}
+
+\subsection{Study Questions}\label{quest12}
+
+\textbf{1. In the H\(_2^+\) treatment, which one‑electron molecular Hamiltonian (in atomic units, and using the Born--Oppenheimer approximation) is used?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a}\)\\
+\item
+  \(\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_b}\)\\
+\item
+  \(\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a} - \dfrac{1}{r_b}\)\\
+\item
+  \(\hat{H} = -\tfrac{1}{2}\nabla^2 + \dfrac{1}{r_a} + \dfrac{1}{r_b}\)\\
+\item
+  \(\hat{H} = -\nabla^2 + \dfrac{1}{r_a r_b}\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. Which of the following is used as the first variational ansatz for the one‑electron molecular orbital in H\(_2^+\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\varphi = a\)\\
+\item
+  \(\varphi = b\)\\
+\item
+  \(\varphi = a b\)\\
+\item
+  \(\varphi = c_1 a + c_2 b\)
+\item
+  \(\varphi = a^2 + b^2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. In the secular problem for H\(_2^+\), what is the physical meaning of the overlap integral \(S = S_{ab}\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  integral \(\int a(\mathbf{r}) b(\mathbf{r}) d\mathbf{r}\) measuring non‑orthogonality of the two 1s orbitals
+\item
+  nuclear repulsion between the two protons\\
+\item
+  kinetic energy between \(a\) and \(b\)\\
+\item
+  electron--electron repulsion\\
+\item
+  spin overlap between alpha and beta functions
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. The diagonalization of the 2×2 secular problem for H\(_2^+\) gives which types of molecular orbitals?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a nonbonding and an antinonbonding orbital\\
+\item
+  a bonding \(\varphi_+\) and an antibonding \(\varphi_-\) combination\\
+\item
+  two identical orbitals with the same energy\\
+\item
+  two core orbitals localized on each nucleus\\
+\item
+  two purely antibonding orbitals
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What is the physical meaning of the negative total energy of the ground state for a range of \(r\) in H\(_2^+\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the molecular ion is unstable relative to separated H + H\(^+\)\\
+\item
+  the molecular orbital stabilizes the system relative to the separated fragments\\
+\item
+  electron--nuclear attraction is negligible\\
+\item
+  only nuclear--nuclear repulsion matters\\
+\item
+  there is no chemical bond
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. Which of the following is the correct molecular Hamiltonian, in a.u. and under the Born--Oppenheimer approximation, for H\(_2\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\hat{h}_1 + \hat{h}_2\) only\\
+\item
+  \(\hat{h}_1 + \hat{h}_2 - 1/r_{12}\)\\
+\item
+  \(\hat{k}_n + \hat{k}_e\) only\\
+\item
+  \(1/r_{12} + 1/r\) only\\
+\item
+  \(\hat{h}_1 + \hat{h}_2 + 1/r_{12} + 1/r\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. For the ground state of H\(_2\) in the minimal MO picture used in this chapter, which orbital and occupancy pattern are used?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  two electrons singly occupying \(\varphi_+\) and \(\varphi_-\) with parallel spins\\
+\item
+  both electrons in the antibonding MO \(\varphi_-\) with opposite spin\\
+\item
+  one electron in \(\sigma_g\), one in a core orbital\\
+\item
+  both electrons in the bonding MO \(\sigma_g = \varphi_+\) with opposite spin\\
+\item
+  both electrons in a localized atomic orbital on a single nucleus
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. why does the RHF‑type description of H\(_2\) fail at large H--H separations (dissociation limit)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  it breaks spin symmetry\\
+\item
+  it forces both electrons to remain in the same delocalized orbital shared between centers, rather than localizing one electron on each atom\\
+\item
+  it neglects nuclear repulsion\\
+\item
+  it neglects electron kinetic energy\\
+\item
+  it overestimates overlap as \(S=1\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the main qualitative effect of including electron--electron repulsion and better correlation methods beyond the simple Hartree--Fock picture in H\(_2\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  they destroy the bond minimum\\
+\item
+  they force both electrons into antibonding orbitals\\
+\item
+  they improve the description of the potential‑energy curve, particularly the dissociation region\\
+\item
+  they eliminate spin considerations\\
+\item
+  they make the electrons behave classically
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Comparing H\(_2^+\) and H\(_2\), which statement about their bonding descriptions is true?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  both are one‑electron systems with identical Hamiltonians\\
+\item
+  H\(_2^+\) is exactly solvable analytically while H\(_2\) is not\\
+\item
+  H\(_2^+\) has one‑electron bonding described by a single MO; H\(_2\) requires a two‑electron antisymmetric wave function including spin\\
+\item
+  H\(_2^+\) has no bound state\\
+\item
+  H\(_2\) can be described without consideration of spin
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c
+
+\chapter{The Chemical Bond in Polyatomic Molecules}\label{Poly}
 
 The structure in space of polyatomic molecules depends on the stereochemistry of their chemical bonds and can be determined by solving the (approximated) TISEq using the Born---Oppenheimer approximation using a method that uses a linear combination of atomic orbitals to form molecular orbitals (LCAO-MO).
 
-\hypertarget{the-chemical-bond-in-the-water-molecule-using-a-minimal-basis}{%
-\section{The Chemical Bond in the Water Molecule Using a Minimal Basis}\label{the-chemical-bond-in-the-water-molecule-using-a-minimal-basis}}
+\section{The Chemical Bond in the Water Molecule Using a Minimal Basis}\label{the-chemical-bond-in-the-water-molecule-using-a-minimal-basis}
 
 For a minimal representation of the two hydrogen atoms, we need two \(1s\) functions, one centered on each atom. Oxygen has electrons in the second principal quantum level, so we will need one \(1s\), one \(2s\), and three \(2p\) functions (one each of \(p_x\), \(p_y\), and \(p_z\)). Summarizing, for a minimal representation of the water wave function we need five orbitals on oxygen, plus one each on the hydrogen atoms, for a total of 7 functions. From these atomic functions, we can build a total wave function using the LCAO method of chapter \ref{Molecules}, and then we can use the variational principle, in conjunction with the Hartree---Fock (HF) method, to build and solve a secular determinant that looks is similar to that in eq. \eqref{eq:molham12}, with \(m=7\) being the total number of basis functions. The approximated Hamiltonian operator in the HF method is called the Fock operator, and it can be divided into one-electron integrals, comprising the kinetic and potential energy contributions:
 
@@ -2358,16 +4649,15 @@ Despite the minimal basis set, the total number of integrals that need to be cal
 
 All this to find \(5\) occupied molecular orbitals from which to form a final Slater determinant (\(10\) electrons, two to an orbital, so \(5\) orbitals). The situation sounds horrible, but it should be recognized that the solutions to all of the integrals are known to be analytic formulae involving only interatomic distances, cartesian exponents, and the values of a single exponent in the atomic functions. If we use slightly simpler gaussian functions instead of the more complicated hydrogenic solutions, the total number of floating-point operations to solve the integrals is roughly \(1{,}000{,}000\). In computer speak that's one megaflop (megaflop = million FLoating-point OPerations). A modern digital computer processor can achieve gigaflop per second performance, so the computer can accomplish all these calculations in under one second. An additional way in which things can be improved is to recognize that the molecule has symmetries that can be exploited to reduce the number of total integrals that needs to be calculated.
 
-\hypertarget{hartree-fock-calculation-for-water}{%
-\section{Hartree-Fock Calculation for Water}\label{hartree-fock-calculation-for-water}}
+\section{Hartree-Fock Calculation for Water}\label{hartree-fock-calculation-for-water}
 
 To find the Hartree-Fock (HF) molecular orbitals (MOs) we need to solve the following secular determinant:
 
 \begin{equation}
 \begin{vmatrix}
-F_{11}-ES_{11}   & F_{12}-ES_{12}   & \cdots & F_{17}-ES_{17}\\\
-F_{21}-ES_{21}   & F_{22}-ES_{22}   & \cdots & F_{27}-ES_{27}\\\
-\vdots           &   \vdots         & \ddots & \vdots\\\
+F_{11}-ES_{11}   & F_{12}-ES_{12}   & \cdots & F_{17}-ES_{17}\\
+F_{21}-ES_{21}   & F_{22}-ES_{22}   & \cdots & F_{27}-ES_{27}\\
+\vdots           &   \vdots         & \ddots & \vdots\\
 F_{71}-ES_{71}   & F_{72}-ES_{72}   & \cdots & F_{77}-ES_{77}
 \end{vmatrix}=0
 \label{eq:hfequationh2o}
@@ -2394,13 +4684,13 @@ We can try to solve the SCF procedure for water using a fixed geometry of the nu
 \begin{equation}
 \mathbf{S}=
 \begin{bmatrix}
-\mathrm{O}\;1s & \mathrm{O}\;2s & \mathrm{O}\;2p_x & \mathrm{O}\;2p_y & \mathrm{O}\;2p_z & \mathrm{H}_a\;1s & \mathrm{H}_b\;1s & \\\
-1.000 & & & & & &  &\mathrm{O}\;1s \\\ 
-0.237 & 1.000 & & & & &  &\mathrm{O}\;2s \\\
-0.000 & 0.000 & 1.000 & & & & &\mathrm{O}\;2p_x \\\
-0.000 & 0.000 & 0.000 & 1.000 & & & &\mathrm{O}\;2p_y \\\
-0.000 & 0.000 & 0.000 & 0.000 & 1.000 & & &\mathrm{O}\;2p_z \\\
-0.055 & 0.479 & 0.000 & 0.313 & -0.242 & 1.000 &  &\mathrm{H}_a\;1s \\\
+\mathrm{O}\;1s & \mathrm{O}\;2s & \mathrm{O}\;2p_x & \mathrm{O}\;2p_y & \mathrm{O}\;2p_z & \mathrm{H}_a\;1s & \mathrm{H}_b\;1s & \\
+1.000 & & & & & &  &\mathrm{O}\;1s \\
+0.237 & 1.000 & & & & &  &\mathrm{O}\;2s \\
+0.000 & 0.000 & 1.000 & & & & &\mathrm{O}\;2p_x \\
+0.000 & 0.000 & 0.000 & 1.000 & & & &\mathrm{O}\;2p_y \\
+0.000 & 0.000 & 0.000 & 0.000 & 1.000 & & &\mathrm{O}\;2p_z \\
+0.055 & 0.479 & 0.000 & 0.313 & -0.242 & 1.000 &  &\mathrm{H}_a\;1s \\
 0.055 & 0.479 & 0.000 & -0.313 & -0.242 & 0.256 & 1.000&\mathrm{H}_b\;1s 
 \end{bmatrix}
 \label{eq:smatrix}
@@ -2411,12 +4701,12 @@ There are many noteworthy features in \(\mathbf{S}\). First, it is shown in a lo
 \begin{equation}
 \mathbf{K}=
 \begin{bmatrix}
-29.003 & & & & & & \\\ 
--0.168 & 0.808 & & & & &  \\\
-0.000 & 0.000 & 2.529 & & & & \\\
-0.000 & 0.000 & 0.000 & 2.529 & & & \\\
-0.000 & 0.000 & 0.000 & 0.000 & 2.529 & & \\\
--0.002 & 0.132 & 0.000 & 0.229 & -0.177 & 0.760 & \\\
+29.003 & & & & & & \\
+-0.168 & 0.808 & & & & &  \\
+0.000 & 0.000 & 2.529 & & & & \\
+0.000 & 0.000 & 0.000 & 2.529 & & & \\
+0.000 & 0.000 & 0.000 & 0.000 & 2.529 & & \\
+-0.002 & 0.132 & 0.000 & 0.229 & -0.177 & 0.760 & \\
 -0.002 & 0.132 & 0.000 & -0.229 & -0.177 & 0.009 & 0.760
 \end{bmatrix}
 \label{eq:kmatrix}
@@ -2427,12 +4717,12 @@ Notice that every diagonal term is much larger than any off-diagonal term. Recal
 \begin{equation}
 \mathbf{V}=
 \begin{bmatrix}
--61.733 & & & & & & \\\ 
--7.447 & -10.151 & & & & &  \\\
-0.000 & 0.000 & -9.926 & & & & \\\
-0.000 & 0.000 & 0.000 & -10.152 & & & \\\
-0.000 & 0.000 & 0.000 & 0.000 & -10.088 & & \\\
--1.778 & -3.920 & 0.000 & -0.228 & -0.184 & -5.867 & \\\
+-61.733 & & & & & & \\
+-7.447 & -10.151 & & & & &  \\
+0.000 & 0.000 & -9.926 & & & & \\
+0.000 & 0.000 & 0.000 & -10.152 & & & \\
+0.000 & 0.000 & 0.000 & 0.000 & -10.088 & & \\
+-1.778 & -3.920 & 0.000 & -0.228 & -0.184 & -5.867 & \\
 -1.778 & -3.920 & 0.000 & 0.228 & 0.184 & -1.652 & -5.867
 \end{bmatrix}
 \label{eq:vmatrix}
@@ -2445,12 +4735,12 @@ The sum of the kinetic and nuclear attraction integrals is usually called the on
 \begin{equation}
 \mathbf{P}=
 \begin{bmatrix}
-2.108 & & & & & & \\\ 
--0.456 & 2.010 & & & & &  \\\
-0.000 & 0.000 & 2.000 & & & & \\\
-0.000 & 0.000 & 0.000 & 0.737 & & & \\\
--0.104 & 0.618 & 0.000 & 0.000 & 1.215 & & \\\
--0.022 & -0.059 & 0.000 & 0.539 & -0.482 & 0.606 & \\\
+2.108 & & & & & & \\
+-0.456 & 2.010 & & & & &  \\
+0.000 & 0.000 & 2.000 & & & & \\
+0.000 & 0.000 & 0.000 & 0.737 & & & \\
+-0.104 & 0.618 & 0.000 & 0.000 & 1.215 & & \\
+-0.022 & -0.059 & 0.000 & 0.539 & -0.482 & 0.606 & \\
 -0.022 & -0.059 & 0.000 & -0.539 & -0.482 & -0.183 & 0.606
 \end{bmatrix}
 \label{eq:pmatrix}
@@ -2461,12 +4751,12 @@ With \(\mathbf{P}\), we can compute the remaining contribution of \(\mathbf{G}\)
 \begin{equation}
 \mathbf{F}=
 \begin{bmatrix}
--20.236 & & & & & & \\\ 
--5.163 & -2.453 & & & & &  \\\
-0.000 & 0.000 & -0.395 & & & & \\\
-0.000 & 0.000 & 0.000 & -0.327 & & & \\\
-0.029 & 0.130 & 0.000 & 0.000 & -0.353 & & \\\
--1.216 & -1.037 & 0.000 & -0.398 & 0.372 & -0.588 & \\\
+-20.236 & & & & & & \\ 
+-5.163 & -2.453 & & & & &  \\
+0.000 & 0.000 & -0.395 & & & & \\
+0.000 & 0.000 & 0.000 & -0.327 & & & \\
+0.029 & 0.130 & 0.000 & 0.000 & -0.353 & & \\
+-1.216 & -1.037 & 0.000 & -0.398 & 0.372 & -0.588 & \\
 -1.216 & -1.037 & 0.000 & 0.398 & 0.372 & -0.403 & -0.588
 \end{bmatrix}
 \label{eq:fmatrix}
@@ -2495,24 +4785,23 @@ The final optimized MOs for water are:
 
 \begin{equation}
 \begin{matrix}                  
-& 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\
-E  & -20.24094 &  -1.27218   &   -.62173    &  -.45392     &    -.39176    &   .61293    & .75095 \\\
-\\\
-1                & .99411    &   -.23251   &   .00000     &  -.10356     &    .00000     &   -.13340   & .00000   \\\
-2                & .02672    &   .83085    &  .00000      & .53920       &  .00000      &  .89746     & .00000  \\\
-3                & .00000    &   .00000    &  .00000      & .00000       &  1.0000       & .00000      & .00000  \\\
-4                & .00000    &   .00000    & .60677       &  .00000      &   .00000      &  .00000     & .99474  \\\
-5                & -.00442   &    -.13216  &    .00000    &   .77828     &    .00000     &  -.74288    &  .00000  \\\
-6                & -.00605   &    .15919   &   .44453     &  -.27494     &    .00000     &  -.80246    &  -.84542  \\\
-7                &  -.00605  &     .15919  &     -.44453  &     -.27494  &       .00000  &     -.80246 &     .84542 \\\
+& 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+E  & -20.24094 &  -1.27218   &   -.62173    &  -.45392     &    -.39176    &   .61293    & .75095 \\
+\\
+1                & .99411    &   -.23251   &   .00000     &  -.10356     &    .00000     &   -.13340   & .00000   \\
+2                & .02672    &   .83085    &  .00000      & .53920       &  .00000      &  .89746     & .00000  \\
+3                & .00000    &   .00000    &  .00000      & .00000       &  1.0000       & .00000      & .00000  \\
+4                & .00000    &   .00000    & .60677       &  .00000      &   .00000      &  .00000     & .99474  \\
+5                & -.00442   &    -.13216  &    .00000    &   .77828     &    .00000     &  -.74288    &  .00000  \\
+6                & -.00605   &    .15919   &   .44453     &  -.27494     &    .00000     &  -.80246    &  -.84542  \\
+7                &  -.00605  &     .15919  &     -.44453  &     -.27494  &       .00000  &     -.80246 &     .84542 \\
 \end{matrix}
 \label{eq:eigenvalMO}
 \end{equation}
 
 where the first row reports the eigenvalues of each MO, in \(E_h\) (i.e., the energy of one electron in the MO). The sum of all of the occupied MO energies should be an underestimation of the total electronic energy because electron-electron repulsion will have been double counted. So, if we sum the occupied orbital energies (times two, since there are two electrons in each orbital), we get \(2(-20.24094{-}1.27218{-}0.62173{-}0.45392{-}0.39176)=-45.961\,060\). If we now subtract the electron-electron repulsion energy \(38.265\,406\) we get \(-84.226\,466\). If we add the nuclear repulsion energy \(9.264\,701\) to this we get a total energy \(-74.961\,765\). The difference between this and the converged result above (\(-74.961\,754\)) can be attributed to rounding in the MO energies, which are truncated after 5 places. Notice that the five occupied MOs all have negative energies. So, their electrons are bound within the molecule. The unoccupied MOs (called ``virtual'' MOs) all have positive energies, meaning that the molecule will not spontaneously accept an electron from another source.
 
-\hypertarget{shapes-and-energies-of-molecular-orbitals}{%
-\section{Shapes and Energies of Molecular Orbitals}\label{shapes-and-energies-of-molecular-orbitals}}
+\section{Shapes and Energies of Molecular Orbitals}\label{shapes-and-energies-of-molecular-orbitals}
 
 If we analyze the optimized coefficients of the occupied MOs reported in eq. \eqref{eq:eigenvalMO}, we observe that the lowest energy orbital (by a lot!) is a nearly pure oxygen \(1s\) orbital since the coefficient of the oxygen \(1s\) basis function is very nearly 1 and all other coefficients are rather close to 0. Note, however, that the coefficient is not really a percentage measure. That's because the basis functions are not necessarily orthogonal to one another. Let's consider the next molecular orbital up, number 2. It has a dominant contribution from the oxygen \(2s\) basis function, but non-trivial contributions from many other basis functions as well. In order to understand which kind of orbital it is, it is useful to try to visualize some of its properties. For example, recall that the square of the orbital at a particular point in space represents a probability density. As such, we can map values of the square of each orbital on a grid in 3-dimensional space, and then pick a value of probability density, say \(0.04\; a_0^{-3}\), and plot that as a contour surface (remember that a probability density is a 4-dimensional quantity, so we need to take a slice at some constant density to be able to plot it in 3-D). That surface is called an ``isodensity'' surface. In addition to the square of the function, we can also color regions where the wave function is positive blue and regions where it's negative red. The five occupied and two unoccupied MOs mapped from their one-electron wave functions are plotted in figure \ref{fig:Fig1c12b}.
 
@@ -2544,8 +4833,203 @@ But the \(sp^3\)-hybridized picture of water works well, for example, to explain
 \caption{Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface.}\label{fig:Fig2c12b}
 \end{figure}
 
-\hypertarget{Spectroscopy}{%
-\chapter{Spectroscopy}\label{Spectroscopy}}
+\section{Chapter Review}\label{rev13}
+
+\subsection{Study Questions}\label{quest13}
+
+\textbf{1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  only 1s\\
+\item
+  1s and 2s\\
+\item
+  2s and 2p\(_z\) only\\
+\item
+  1s, 2s, and three 2p (2p\(_x\), 2p\(_y\), 2p\(_z\))\\
+\item
+  only three 2p orbitals
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. How many atomic basis functions are used in the minimal representation of H\(_2\)O?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  3\\
+\item
+  5\\
+\item
+  7\\
+\item
+  9\\
+\item
+  12
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. Which general method is used to build molecular orbitals for water from the chosen atomic basis in chapter 13?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  ure valence‑bond resonance structures\\
+\item
+  LCAO-MO (linear combination of atomic orbitals to form molecular orbitals)\\
+\item
+  perturbation theory on hydrogenic orbitals only\\
+\item
+  classical hybridization rules only\\
+\item
+  direct diagonalization of the nuclear hamiltonian
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. In the minimal‑basis HF treatment of water, the number of \emph{one‑electron} basis functions \(m\) determines the size of which matrix?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the overlap and fock matrices, each of size \(m \times m\)\\
+\item
+  the nuclear--nuclear repulsion matrix of size \(m^2 \times m^2\)\\
+\item
+  a scalar energy value\\
+\item
+  the \(3m\times 3m\) kinetic matrix\\
+\item
+  only the density matrix of size \(2\times 2\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. In the minimal‑basis water example, how many distinct one‑electron integrals (kinetic or nuclear attraction) over contracted basis functions are there before considering primitive gaussians?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  7\\
+\item
+  49\\
+\item
+  147\\
+\item
+  196\\
+\item
+  2,401
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. For the \emph{two‑electron} integrals over the 7 contracted basis functions on water, how many distinct contracted two‑electron integrals are there (before primitives)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  7\\
+\item
+  49\\
+\item
+  147\\
+\item
+  196\\
+\item
+  2,401
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. What main point does the water/minimal‑basis example illustrate about \emph{ab initio} calculations, even for small molecules?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  the number of two‑electron integrals quickly becomes very large and dominates computational cost\\
+\item
+  only one‑electron integrals matter for molecular properties\\
+\item
+  integrals scale linearly with system size\\
+\item
+  integral evaluation is trivial and negligible\\
+\item
+  minimal bases always give chemically exact results
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. In the minimal‑basis H\(_2\)O example, which qualitative feature of the resulting MO diagram is reproduced correctly?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  exact experimental orbital energies\\
+\item
+  ordering of core, bonding, lone‑pair, and antibonding orbitals\\
+\item
+  no distinction between bonding and nonbonding orbitals\\
+\item
+  completely delocalized electrons with no identifiable lone pairs\\
+\item
+  degenerate \(\sigma\) and \(\pi\) orbitals
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. What is the main physical interpretation of the two highest‑occupied MOs in the water HF/minimal‑basis picture?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\sigma\) bonds along the H-O-H bisector\\
+\item
+  core orbitals on oxygen\\
+\item
+  primarily oxygen lone‑pair orbitals oriented roughly toward the non‑bonding directions\\
+\item
+  purely hydrogen \(1s\) orbitals\\
+\item
+  totally delocalized over all three atoms with no directional character
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Despite its simplicity, what important qualitative property of water does the minimal‑basis HF treatment reproduce?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  linear geometry\\
+\item
+  no permanent dipole moment\\
+\item
+  equal O-H and H-H bond lengths\\
+\item
+  three‑fold symmetry\\
+\item
+  bent geometry with approximate correct orientation of lone pairs and bonds
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.c, 10.e
+
+\chapter{Spectroscopy}\label{Spectroscopy}
 
 The primary method of measuring the energy levels of a material is through the use of electromagnetic radiation. Experiments involving electromagnetic radiation---matter interaction are called spectroscopies. Since the energy levels of atoms and molecules are discontinuous, they absorb or emit light only at specific energies. These specific values correspond to the energy level difference between the initial and final states and they can be measured as signals in spectroscopic experiments. The intensity of the experimental signals depends on the population of the initial state involved in the transition.
 
@@ -2565,8 +5049,7 @@ To summarize, spectroscopy is mainly the result of the following three effects:
 
 Spectroscopy is the most important experimental verification of quantum mechanics, since we can use it to validate its theoretical results on the energy levels of atoms and molecules.
 
-\hypertarget{rotational-spectroscopy}{%
-\section{Rotational Spectroscopy}\label{rotational-spectroscopy}}
+\section{Rotational Spectroscopy}\label{rotational-spectroscopy}
 
 Rotational spectroscopy is concerned with the measurement of the energies of transitions between quantized rotational states of molecules in the gas phase. Rotational transitions of molecules are usually measured in the range \(1-10\; \text{cm}^{-1}\) (microwave radiation) and rotational spectroscopy is therefore usually referred to as \emph{microwave spectroscopy}.
 
@@ -2574,8 +5057,7 @@ Rotational spectroscopy is actively used by astrophysicists to explore the chemi
 
 The rotational energies are derived theoretically by considering the molecules to be rigid rotors and applying the same treatment that we saw in chapter \ref{Models}. Correction terms might be applied to account for deviation from the ideal rigid rotor case. As we saw in chapter \ref{Models}, the quantized rotational energy levels of a rigid rotor depend on the angular moment of inertia, which in turn depends on the masses of the nuclei and the internuclear distance. Reversing the theoretical procedure of obtaining the energy levels from the distances, we can use the experimental energy levels to derive very precise values of molecular bond lengths (and in some complex case, also of angles). We will discuss below the simplest case of a diatomic molecule. For non-linear molecules, the moments of inertia are multiple, and only a few analytical method of solving the TISEq are available. For the most complicated cases, numerical methods can be used.
 
-\hypertarget{rotation-of-diatomic-molecules}{%
-\subsection{Rotation of diatomic molecules}\label{rotation-of-diatomic-molecules}}
+\subsection{Rotation of diatomic molecules}\label{rotation-of-diatomic-molecules}
 
 Transitions between rotational states can be observed in molecules with a permanent electric dipole moment. The rigid rotor is a good starting point from which to construct a model of a rotating molecule. It is assumed that component atoms are point masses connected by rigid bonds. A linear molecule lies on a single axis and each atom moves on the surface of a sphere around the center of mass. The two degrees of rotational freedom correspond to the spherical coordinates, \(\theta\) and \(\varphi\), which describe the direction of the molecular axis. The quantum state is determined by two quantum numbers \(J\) and \(M\). \(J\) defines the magnitude of the rotational angular momentum, and \(M\) its component about an axis fixed in space, such as an external electric or magnetic field. In the absence of external fields, the energy depends only on \(J\). Under the rigid rotor model, the rotational energy levels, \(F(J)\), of the molecule can be expressed as:
 
@@ -2641,15 +5123,13 @@ where \(k\) is the Boltzmann constant and \(T\) is the absolute temperature. Thi
 
 in agreement with the experimental shape of rotational spectra of diatomic molecules.
 
-\hypertarget{vibrational-spectroscopy}{%
-\section{Vibrational Spectroscopy}\label{vibrational-spectroscopy}}
+\section{Vibrational Spectroscopy}\label{vibrational-spectroscopy}
 
 Vibrational spectroscopy is concerned with the measurement of the energies of transitions between quantized vibrational states of molecules in the gas phase. These transitions usually occur in the middle infrared (IR) region of the electromagnetic wave at approximately \(4,000-400\;\text{cm}^{-1}\) (\(2.5-25\;\mu \text{m}\)). In the gas phase, vibrational transitions are almost always accompanied by changes in rotational energy. Transitions involving changes in both vibrational and rotational states are usually abbreviated as rovibrational transitions. Since changes in rotational energy levels are typically much smaller than changes in vibrational energy levels, changes in rotational state are said to give fine structure to the vibrational spectrum. For a given vibrational transition, the same theoretical treatment that we saw in the previous section for pure rotational spectroscopy gives the rotational quantum numbers, energy levels, and selection rules.
 
 As we have done in the previous section, we will discuss below the simplest case of a diatomic molecule. For non-linear molecules the spectra becomes complicated to calculate, but their interpretation remains an important tool for the analysis of chemical structures.
 
-\hypertarget{vibration-of-heteronuclear-diatomic-molecules}{%
-\subsection{Vibration of heteronuclear diatomic molecules}\label{vibration-of-heteronuclear-diatomic-molecules}}
+\subsection{Vibration of heteronuclear diatomic molecules}\label{vibration-of-heteronuclear-diatomic-molecules}
 
 Diatomic molecules with the general formula \(\mathrm{AB}\) have one normal mode of vibration involving stretching of the \(\mathrm{A}-\mathrm{B}\) bond. The vibrational term values, \(G(v)\) can be calculated with the harmonic approximation that we discussed in chapter \ref{Models}. The resulting equidistant energy levels depend on one vibrational quantum number \(v\):
 
@@ -2705,15 +5185,13 @@ A typical rovibrational spectrum is reported in figure \ref{fig:Fig2c13} for the
 \caption{Schematic rovibrational energy level diagram for a linear molecule.}\label{fig:Fig3c13}
 \end{figure}
 
-\hypertarget{vibration-of-homonuclear-diatomic-molecules}{%
-\subsection{Vibration of homonuclear diatomic molecules}\label{vibration-of-homonuclear-diatomic-molecules}}
+\subsection{Vibration of homonuclear diatomic molecules}\label{vibration-of-homonuclear-diatomic-molecules}
 
 The quantum mechanics for homonuclear diatomic molecules is qualitatively the same as for heteronuclear diatomic molecules, but the selection rules governing transitions are different. Since the electric dipole moment of the homonuclear diatomics is zero, the fundamental vibrational transition is electric-dipole-forbidden and the molecules are infrared inactive.
 
 The spectra of these molecules can be observed by a type of IR spectroscopy that is subject to different selection rules. This technique is called \textbf{Raman spectroscopy}, and allows identification of the rovibrational spectra of homonuclear diatomic molecules because their molecular vibration is Raman-allowed.
 
-\hypertarget{electronic-spectroscopy}{%
-\section{Electronic Spectroscopy}\label{electronic-spectroscopy}}
+\section{Electronic Spectroscopy}\label{electronic-spectroscopy}
 
 Electronic spectroscopy is concerned with the measurement of the energies of transitions between quantized electronic states of molecules. Electronic transitions are always associated with simultaneous changes in vibrational levels. In the gas phase vibronic transitions are also accompanied by changes in rotational energy.
 
@@ -2725,8 +5203,7 @@ It is necessary to distinguish between absorption and emission spectra. With abs
 
 As we did for the previous two cases, we will concentrate below on the electronic absorption spectroscopy of diatomic molecules.
 
-\hypertarget{electronic-spectroscopy-of-diatomic-molecules}{%
-\subsection{Electronic spectroscopy of diatomic molecules}\label{electronic-spectroscopy-of-diatomic-molecules}}
+\subsection{Electronic spectroscopy of diatomic molecules}\label{electronic-spectroscopy-of-diatomic-molecules}
 
 The vibronic spectra of diatomic molecules in the gas phase also show rotational fine structure. Each line in a vibrational progression will show P- and R- branches. For some electronic transitions there will also be a Q-branch. The transition energies of the lines for a particular vibronic transition are given (in wavenumbers) by:
 
@@ -2776,5 +5253,201 @@ The intensity of allowed vibronic transitions is governed by the Franck-Condon p
 
 \caption{Energy level diagram illustrating the Franck–Condon principle.}\label{fig:Fig4c13}
 \end{figure}
+
+\section{Chapter Review}\label{rev14}
+
+\subsection{Study Questions}\label{quest14}
+
+\textbf{1. In the rigid‑rotor model for a diatomic molecule, the rotational energy levels are given by \(F(J) = B J(J+1)\). what does \(B\) represent?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  rotational constant related to the moment of inertia\\
+\item
+  bond length\\
+\item
+  rotational quantum number\\
+\item
+  vibrational frequency\\
+\item
+  electronic excitation energy
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{2. What are the allowed rotational quantum numbers \(J\) for a linear rigid rotor?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(J = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots\)\\
+\item
+  \(J = 1, 2, 3, \dots\)\\
+\item
+  \(J = 0, 1, 2, 3, \dots\)\\
+\item
+  \(J = -\infty, \dots, \infty\)\\
+\item
+  \(J = 2, 4, 6, \dots\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{3. In pure rotational spectroscopy of a heteronuclear diatomic in the rigid‑rotor approximation, which of the following is the selection rule for rotational transitions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta J = 0\)\\
+\item
+  \(\Delta J = \pm 1\)\\
+\item
+  \(\Delta J = \pm 2\)\\
+\item
+  \(\Delta J = \pm 3\)\\
+\item
+  no selection rule applies
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{4. For a harmonic oscillator model of a diatomic vibration, the vibrational energy levels are \(G(v) = \omega_e \left( v + \frac{1}{2} \right)\). what are the allowed values of \(v\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(v = 0, 1, 2, \dots\)\\
+\item
+  \(v = 1, 2, 3, \dots\)\\
+\item
+  \(v = -\infty, \dots, \infty\)\\
+\item
+  \(v = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots\)\\
+\item
+  \(v = 2, 4, 6, \dots\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{5. What is the main vibrational selection rule for an infrared‑active diatomic in the harmonic approximation?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta v = 0\)\\
+\item
+  \(\Delta v = \pm 1\)\\
+\item
+  \(\Delta v = \pm 2\) only\\
+\item
+  \(\Delta v = \pm 3\)\\
+\item
+  no selection rule
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{6. In rovibrational spectroscopy of a diatomic molecule, transitions are often labeled as p‑ and r‑branches. these correspond, respectively, to which of the following?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(\Delta J = 0\) (p) and \(\Delta J = \pm 2\) (r)\\
+\item
+  \(\Delta J = -1\) (p) and \(\Delta J = +1\) (r)\\
+\item
+  \(\Delta J = +1\) (p) and \(\Delta J = -1\) (r)\\
+\item
+  \(\Delta J = 0\) for both p and r\\
+\item
+  \(\Delta J = \pm 3\)
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{7. Which of the following approximates the rovibrational transition wavenumbers in a simple harmonic‑oscillator plus rigid‑rotor model?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  a single line independent of \(j\)\\
+\item
+  \(\nu \approx \nu_0^2\)\\
+\item
+  \(\nu \approx 2BJ(J+1)\) only\\
+\item
+  \(\nu \approx \nu_0 \pm 2B(J+1)\) for p and r branches\\
+\item
+  a random distribution
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{8. In electronic spectroscopy of diatomic molecules, which combination of changes typically occurs in an electronic transition?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electronic state changes, but vibrational and rotational states remain fixed\\
+\item
+  only rotational quantum number changes\\
+\item
+  primarily vibrational changes with no electronic change\\
+\item
+  electronic, vibrational, and rotational quantum numbers can all change, giving vibronic‑rotational structure\\
+\item
+  only spin quantum numbers change
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{9. Why are electronic transitions typically found at much higher energies (shorter wavelengths) than vibrational or rotational transitions?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  electronic masses are larger than nuclear masses\\
+\item
+  changes in electronic energy levels are usually much larger than nuclear vibrational or rotational spacings\\
+\item
+  vibrational transitions require relativistic corrections\\
+\item
+  rotational transitions do not conserve energy\\
+\item
+  electronic transitions have zero frequency
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{10. Which region is most commonly associated with \emph{electronic} transitions in small molecules?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  microwave region\\
+\item
+  infrared region\\
+\item
+  visible and ultraviolet regions\\
+\item
+  radio‑frequency region\\
+\item
+  far‑infrared only
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.c, 3.b, 4.a, 5.b, 6.b, 7.d, 8.d, 9.b, 10.c
 
 \end{document}

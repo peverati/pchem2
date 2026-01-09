@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 The Schrödinger Equation | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 The Schrödinger Equation | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Classical.html"/>
 <link rel="next" href="Models.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,11 +293,11 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Schrodinger" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> The Schrödinger Equation</h1>
+<div id="Schrodinger" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> The Schrödinger Equation<a href="Schrodinger.html#Schrodinger" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger’s method involves partial differential equations, whereas Heisenberg’s method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger’s equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.</p>
-<div id="the-time-independent-schrödinger-equation" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</h2>
+<div id="the-time-independent-schrödinger-equation" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation<a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:</p>
 <p><span class="math display" id="eq:sch1">\[\begin{equation}
 \psi(x,t)=\exp[i(kx-\omega t)],
@@ -280,8 +344,8 @@ p^2 = 2m[E - V(x)],
 \end{equation}\]</span></p>
 <p>A two-body problem can also be treated by this equation if the mass <span class="math inline">\(m\)</span> is replaced with a reduced mass <span class="math inline">\(\mu = \frac{m_1 m_2}{m_1+m_2}\)</span>.</p>
 </div>
-<div id="the-time-dependent-schrödinger-equation" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> The Time-Dependent Schrödinger Equation</h2>
+<div id="the-time-dependent-schrödinger-equation" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> The Time-Dependent Schrödinger Equation<a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:</p>
 <p><span class="math display" id="eq:TDSEq">\[\begin{equation}
 i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
@@ -331,8 +395,8 @@ Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a 
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}\]</span></p>
 </div>
-<div id="solution-for-the-free-particle" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Solution for the Free Particle</h2>
+<div id="solution-for-the-free-particle" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Solution for the Free Particle<a href="Schrodinger.html#solution-for-the-free-particle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
 <p><span class="math display" id="eq:FP1">\[\begin{equation}
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
@@ -352,7 +416,7 @@ Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a 
 <p><span class="math display" id="eq:FP4">\[\begin{equation}
 \begin{aligned}
 \frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x).
 \end{aligned}
 \tag{3.20}
 \end{equation}\]</span></p>
@@ -367,7 +431,141 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 \tag{3.22}
 \end{equation}\]</span></p>
 <p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Schrodinger.html#eq:FP3">(3.19)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Schrodinger.html#eq:FP6">(3.22)</a> is called <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+</div>
+<div id="rev3" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Chapter Review<a href="Schrodinger.html#rev3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest3" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Study Questions<a href="Schrodinger.html#quest3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi(x,t) = \exp[-kx + \omega t]\)</span></li>
+<li><span class="math inline">\(\psi(x,t) = \cos(kx - \omega t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = \sin(kx + \omega t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = \exp[i(kx - \omega t)]\)</span></li>
+<li><span class="math inline">\(\psi(x,t) = kx + \omega t\)</span></li>
+</ol>
+<hr />
+<p><strong>2. For a two-body problem, the single-particle time independent Schrödinger equation can be used if the mass <span class="math inline">\(m\)</span> is replaced by what?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The total mass <span class="math inline">\(m_1 + m_2\)</span></li>
+<li>The reduced mass <span class="math inline">\(\mu = \dfrac{m_1 m_2}{m_1 + m_2}\)</span></li>
+<li>The mass difference <span class="math inline">\(|m_1 - m_2|\)</span></li>
+<li>The geometric mean <span class="math inline">\(\sqrt{m_1 m_2}\)</span></li>
+<li>Twice the lighter mass</li>
+</ol>
+<hr />
+<p><strong>3. Which of the following equation is the correct time-dependent Schrödinger equation for one particle?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)</span><br />
+</li>
+<li><span class="math inline">\(\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)</span><br />
+</li>
+<li><span class="math inline">\(i \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)</span><br />
+</li>
+<li><span class="math inline">\(i\hbar \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = V(x)\psi(x,t)\)</span><br />
+</li>
+<li><span class="math inline">\(\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)</span></li>
+</ol>
+<hr />
+<p><strong>4. For which of the following wave functions we can separate the variables in the Schrödinger equation?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi(x,t) = \psi(x) + f(t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x) f(t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x)^2/f(t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = x f(t)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x) f(t)^2\)</span></li>
+</ol>
+<hr />
+<p><strong>5. After separation of variables, the time-dependent Schrödinger equation yields two ordinary differential equations with a common constant. Which one?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The mass <span class="math inline">\(m\)</span><br />
+</li>
+<li>The momentum <span class="math inline">\(p\)</span><br />
+</li>
+<li>The angular frequency <span class="math inline">\(\omega\)</span><br />
+</li>
+<li>The energy <span class="math inline">\(E\)</span><br />
+</li>
+<li>The wave number <span class="math inline">\(k\)</span></li>
+</ol>
+<hr />
+<p><strong>6. What is the time dependence of the probability density <span class="math inline">\(|\psi(x,t)|^2\)</span> of a stationary state?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>It increases linearly with time<br />
+</li>
+<li>It decreases exponentially with time<br />
+</li>
+<li>It oscillates sinusoidally with time<br />
+</li>
+<li>It is time independent<br />
+</li>
+<li>It diverges for large times</li>
+</ol>
+<hr />
+<p><strong>7. For the free particle in 1D, which of the following properties does the potential <span class="math inline">\(V(x)\)</span> have?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>It is a constant nonzero value</li>
+<li>It is infinite at the origin<br />
+</li>
+<li>It is zero everywhere<br />
+</li>
+<li>It is linear in <span class="math inline">\(x\)</span><br />
+</li>
+<li>It is harmonic in <span class="math inline">\(x^2\)</span></li>
+</ol>
+<hr />
+<p><strong>8. Which of the following is a suitable solution for the free-particle time independent Schrödinger equation?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi(x) = A e^{\pm i k x}\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x) = A x\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x) = A e^{k x}\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x) = A \cosh(kx)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(x) = A \delta(x)\)</span></li>
+</ol>
+<hr />
+<p><strong>9. What is the energy eigenvalue for the free particle?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E = p^2\)</span><br />
+</li>
+<li><span class="math inline">\(E = \dfrac{1}{2} m p^2\)</span><br />
+</li>
+<li><span class="math inline">\(E = \hbar p\)</span><br />
+</li>
+<li><span class="math inline">\(E = \dfrac{\hbar^2}{2m p^2}\)</span><br />
+</li>
+<li><span class="math inline">\(E = \dfrac{p^2}{2m}\)</span></li>
+</ol>
+<hr />
+<p><strong>10. What is a key difference between the free particle and bound systems regarding energy eigenvalues?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Free-particle energies are always zero<br />
+</li>
+<li>Free-particle energies are always negative<br />
+</li>
+<li>Free-particle energies are always degenerate<br />
+</li>
+<li>Free-particle energies form a continuous spectrum, while bound systems have discrete levels</li>
+<li>Free-particle energies do not depend on mass</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d
+</span></p>
 
+</div>
 </div>
 </div>
 <div class="footnotes">
@@ -386,7 +584,6 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -397,37 +594,42 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/03_Schrodinger.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/03_Schrodinger.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -438,7 +640,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

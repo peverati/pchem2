@@ -80,17 +80,17 @@ knitr::include_graphics('./img/OEP_wiki9.png')
 
 To explain tunneling we must resort once again to the TISeq. A traveling or standing wave function incident on a non-infinite potential barrier ($V_0$) decays in the potential as a function of $A_0\exp[-\alpha x]$, where $A_0$ is the amplitude at the boundary, $\alpha$ is proportional to the potential, and $x$ is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is "leaking" through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.
 
-Tunneling can be described using the TISEq, eq. \@ref(eq:hamilt1). For the tunneling problem we can take the potential $V$ to be zero for all space, except for the region inside the barrier (between $0$ and $a$):
+Tunneling can be described using the TISEq, eq. \@ref(eq:hamilt1). For the tunneling problem we can take the potential $V$ to be zero for all space, except for the region inside the barrier (between $0$ and $l$):
 
 \begin{equation}
-V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<a \\ 0\quad&\text{if}\; a\leq x< \infty \end{cases}.
+V=\begin{cases} 0\quad&\text{if}\; -\infty<x\leq 0 \\ V_0\quad&\text{if}\; 0<x<l \\ 0\quad&\text{if}\; l\leq x< \infty \end{cases}.
 (\#eq:tunn1)  
 \end{equation}
  
 To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:
 
 \begin{equation}
-\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<a \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; a\leq x< \infty \end{cases}
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ C \exp(-\alpha x)+D\exp(\alpha x) \quad&\text{if}\; 0<x<l \\ E\sin (kx)+F\cos (kx) \quad&\text{if}\; l\leq x< \infty \end{cases}
 (\#eq:tunn2)  
 \end{equation}
 
@@ -104,24 +104,24 @@ A\sin(0) +B \cos(0)=C\exp(0)+D\exp(0),
 which implies that  $A=0$, and $B=C+D$. At the opposite boundary:
 
 \begin{equation}
-A\sin(ka) +B \cos(ka)=C\exp(-\alpha a)+D\exp(\alpha a).
+A\sin(kl) +B \cos(kl)=C\exp(-\alpha l)+D\exp(\alpha l).
 (\#eq:tunn4)  
 \end{equation}
 
-We notice that, as $a$ goes to infinity, the right hand side of eq. \@ref(eq:tunn4) goes to infinity, which does not make physical sense. To reconcile this,  we must set $D=0$. 
+We notice that, as $l$ goes to infinity, the right hand side of eq. \@ref(eq:tunn4) goes to infinity, which does not make physical sense. To reconcile this,  we must set $D=0$. 
 
-For the final region, $E$ and $F$, present a potentially intractable problem. However, if one realizes that the value at the boundary $a$ is driving the wave in the region $a$ to infinity, it may also be realized that the wave function could be rewritten as $C\exp[-\alpha a]\cos[k(x-a)]$, phase shifting the wave function by the value of $a$,
+For the final region, $E$ and $F$, present a potentially intractable problem. However, if one realizes that the value at the boundary $l$ is driving the wave in the region $l$ to infinity, it may also be realized that the wave function could be rewritten as $C\exp[-\alpha l]\cos[k(x-l)]$, phase shifting the wave function by the value of $l$,
  and setting the amplitude to the boundary value. Summarizing, the wave function is:
 
 \begin{equation}
-\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<a \\ B\exp(-\alpha a)\cos[k(x-a)] \quad&\text{if}\; a\leq x< \infty. \end{cases}
+\psi=\begin{cases} B\cos (kx)\quad&\text{if}\; -\infty<x\leq 0 \\ B \exp(-\alpha x)  \quad&\text{if}\; 0<x<l \\ B\exp(-\alpha l)\cos[k(x-l)] \quad&\text{if}\; l\leq x< \infty. \end{cases}
 (\#eq:tunn5)  
 \end{equation}
 
-Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as  $\exp\left(-a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)$, where $a$ is the width of the barrier, and  $(V_0-E)$ is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
+Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as  $\exp\left(-l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)$, where $l$ is the width of the barrier, and  $(V_0-E)$ is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:
 
 \begin{equation}
-\exp\left(-2a\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+\exp\left(-2l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
 (\#eq:tunn6)  
 \end{equation}
 
@@ -143,3 +143,122 @@ The impact of tunneling on the KIE can be quantified using transition state theo
 where $k(\text{H})$ and $k(\text{D})$ are the rate constants for the reaction involving hydrogen and deuterium, respectively; $m(\text{H})$ and $m(\text{D})$ are the masses of hydrogen and deuterium; $k_{\text{tunneling}}$ is the rate constant for tunneling; and $k_{\text{classical}}$ is the rate constant in the absence of tunneling.
 
 Using experimental data for the umbrella inversion reaction, the KIE can be calculated to be approximately 1.3 in the absence of tunneling. However, when tunneling is allowed, the KIE is reduced to around 1.1. This reduction in the KIE due to tunneling is a significant effect and must be considered when studying chemical reactions involving light atoms.
+
+## Chapter Review {#rev9}
+### Study Questions {#quest9}
+
+**1. In the double‑slit experiment with single particles (e.g., electrons), what is observed on the screen after many particles have passed?**
+
+a. a single sharp peak at the center  
+b. two non‑overlapping bands corresponding to the two slits  
+c. a classical shadow pattern with uniform intensity between slits  
+d. an interference pattern with alternating bright and dark fringes  
+e. a completely uniform distribution over the screen  
+
+---
+
+**2. When detectors are placed at the slits to determine “which slit” each particle goes through, what typically happens to the interference pattern?**
+
+a. it becomes sharper and more pronounced  
+b. it disappears, leaving two classical‑like bands  
+c. it reverses (bright and dark fringes swap)  
+d. it doubles in fringe number  
+e. it becomes independent of slit separation  
+
+---
+
+**3. In the Heisenberg uncertainty principle for position and momentum along $x$, eq. \@ref(eq:heis3), what do $\sigma_x$ and $\sigma_p$ represent?**
+
+a. exact measurement errors of the apparatus  
+b. spreads (standard deviations) in the probability distributions of $x$ and $p_x$  
+c. mean values of position and momentum  
+d. classical trajectory deviations  
+e. arbitrary experimental tolerances chosen by the user   
+
+---
+
+**4. which pair of observables is *not* a standard example of canonically conjugate variables in the context of uncertainty relations?**
+
+a. position and momentum  
+b. energy and time (in a suitable sense)  
+c. different components of spin  
+d. particle number and phase (in some systems)  
+e. mass and electric charge  
+
+---
+
+**5. Quantum tunneling refers to the phenomenon where a particle does what?**
+
+a. moves faster than light through a barrier  
+b. passes through a region where its classical kinetic energy would be negative  
+c. reflects perfectly from any finite barrier  
+d. ceases to exist inside a barrier  
+e. behaves as a classical wave inside a barrier but as a particle outside  
+
+---
+
+**6. In a 1d potential‑barrier problem, what happens to the wave function in a classically forbidden region where $E < V(x)$?**
+
+a. it vanishes identically  
+b. it oscillates with constant amplitude  
+c. it decays (or grows) exponentially with distance into the barrier  
+d. it becomes a delta function at the barrier edge  
+e. it becomes purely imaginary and non‑normalizable  
+
+---
+
+**7. For a finite barrier of width $l$, which statement about transmission probability in the tunneling example is qualitatively correct?**
+
+a. it is exactly zero if $E < V_0$  
+b. it is 1/2 regardless of barrier parameters  
+c. it decreases rapidly as barrier width and/or height increase  
+d. it is independent of the particle’s mass  
+e. it is always 1 for normalized wave functions  
+
+---
+
+**8. Which of the following best explains *why* tunneling can occur even when $E < V_0$ for a barrier?**
+
+a. energy is not conserved in quantum mechanics  
+b. the wave function penetrates the classically forbidden region and has nonzero amplitude beyond it  
+c. the particle temporarily borrows energy from the vacuum  
+d. relativistic corrections allow the particle to accelerate  
+e. the barrier momentarily disappears due to fluctuations  
+
+---
+
+**9. In a chemical reaction coordinate picture, what does tunneling correspond to?**
+
+a. the reactant climbing *over* the transition-state barrier  
+b. the reactant remaining in a metastable well forever  
+c. the system passing *through* the barrier region where classical energy would be insufficient  
+d. the system skipping the transition state entirely with zero probability  
+e. the system following a purely classical minimum‑energy path  
+
+---
+
+**10. Which experimental signature is commonly taken as evidence for significant hydrogen tunneling in reactions?**
+
+a. linear arrhenius plots with classical slopes  
+b. very small kinetic isotope effects (k$_h$/k$_d$ $\approx$ 1 at all temperatures)  
+c. large kinetic isotope effects and curved (non‑linear) arrhenius plots  
+d. complete absence of isotope effects  
+e. rate constants independent of temperature and isotope  
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.d, 2.b, 3.b, 4.e, 5.b, 6.c, 7.c, 8.b, 9.c, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.d, 2.b, 3.b, 4.e, 5.b, 6.c, 7.c, 8.b, 9.c, 10.c'
+}`
+
+

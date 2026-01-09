@@ -183,3 +183,122 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 \end{equation}
 
 which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).
+
+## Chapter Review {#rev3}
+### Study Questions {#quest3}
+
+**1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?**
+
+a. $\psi(x,t) = \exp[-kx + \omega t]$
+b. $\psi(x,t) = \cos(kx - \omega t)$  
+c. $\psi(x,t) = \sin(kx + \omega t)$  
+d. $\psi(x,t) = \exp[i(kx - \omega t)]$
+e. $\psi(x,t) = kx + \omega t$
+
+---
+
+**2. For a two-body problem, the single-particle time independent Schrödinger equation can be used if the mass $m$ is replaced by what?**
+
+a. The total mass $m_1 + m_2$
+b. The reduced mass $\mu = \dfrac{m_1 m_2}{m_1 + m_2}$
+c. The mass difference $|m_1 - m_2|$
+d. The geometric mean $\sqrt{m_1 m_2}$
+e. Twice the lighter mass  
+
+---
+
+**3. Which of the following equation is the correct time-dependent Schrödinger equation for one particle?**
+
+a. $i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
+b. $\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
+c. $i \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}$  
+d. $i\hbar \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = V(x)\psi(x,t)$  
+e. $\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}$  
+
+
+---
+
+**4. For which of the following wave functions we can separate the variables in the Schrödinger equation?**
+
+a. $\psi(x,t) = \psi(x) + f(t)$  
+b. $\psi(x,t) = \psi(x) f(t)$  
+c. $\psi(x,t) = \psi(x)^2/f(t)$  
+d. $\psi(x,t) = x f(t)$  
+e. $\psi(x,t) = \psi(x) f(t)^2$  
+
+---
+
+**5. After separation of variables, the time-dependent Schrödinger equation yields two ordinary differential equations with a common constant. Which one?**
+
+a. The mass $m$  
+b. The momentum $p$  
+c. The angular frequency $\omega$  
+d. The energy $E$  
+e. The wave number $k$  
+
+---
+
+**6. What is the time dependence of the probability density $|\psi(x,t)|^2$ of a stationary state?**
+
+a. It increases linearly with time  
+b. It decreases exponentially with time  
+c. It oscillates sinusoidally with time  
+d. It is time independent  
+e. It diverges for large times  
+
+---
+
+**7. For the free particle in 1D, which of the following properties does the potential $V(x)$ have?**
+
+a. It is a constant nonzero value 
+b. It is infinite at the origin  
+c. It is zero everywhere  
+d. It is linear in $x$  
+d. It is harmonic in $x^2$  
+
+---
+
+**8. Which of the following is a suitable solution for the free-particle time independent Schrödinger equation?**
+
+a. $\psi(x) = A e^{\pm i k x}$  
+b. $\psi(x) = A x$  
+c. $\psi(x) = A e^{k x}$  
+d. $\psi(x) = A \cosh(kx)$  
+e. $\psi(x) = A \delta(x)$  
+
+---
+
+**9. What is the energy eigenvalue for the free particle?**
+
+a. $E = p^2$  
+b. $E = \dfrac{1}{2} m p^2$  
+c. $E = \hbar p$  
+d. $E = \dfrac{\hbar^2}{2m p^2}$  
+e. $E = \dfrac{p^2}{2m}$  
+
+---
+
+**10. What is a key difference between the free particle and bound systems regarding energy eigenvalues?**
+
+a. Free-particle energies are always zero  
+b. Free-particle energies are always negative  
+c. Free-particle energies are always degenerate  
+d. Free-particle energies form a continuous spectrum, while bound systems have discrete levels
+e. Free-particle energies do not depend on mass  
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d'
+}`
+
+

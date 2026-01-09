@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>11 Introduction to Molecules | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="11 Introduction to Molecules | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Atoms.html"/>
 <link rel="next" href="Bonds.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,10 +293,10 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Molecules" class="section level1" number="11">
-<h1><span class="header-section-number">11</span> Introduction to Molecules</h1>
-<div id="the-molecular-hamiltonian" class="section level2" number="11.1">
-<h2><span class="header-section-number">11.1</span> The Molecular Hamiltonian</h2>
+<div id="Molecules" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> Introduction to Molecules<a href="Molecules.html#Molecules" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="the-molecular-hamiltonian" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> The Molecular Hamiltonian<a href="Molecules.html#the-molecular-hamiltonian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For a molecule, we can decompose the Hamiltonian operator as:</p>
 <p><span class="math display" id="eq:molham1">\[\begin{equation}
 \hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{V}_{ee}
@@ -250,13 +314,13 @@ MathJax.Hub.Config({
 \tag{11.2}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(M_i\)</span>, <span class="math inline">\(Z_i\)</span>, and <span class="math inline">\(\mathbf{R}_i\)</span> are the mass, atomic number, and coordinates of nucleus <span class="math inline">\(i\)</span>, respectively, and all other symbols are the same as those used in eq. <a href="Atoms.html#eq:atom1">(10.1)</a> for the many-electron atom Hamiltonian.</p>
-<div id="small-terms-in-the-molecular-hamiltonian" class="section level3" number="11.1.1">
-<h3><span class="header-section-number">11.1.1</span> Small terms in the molecular Hamiltonian</h3>
+<div id="small-terms-in-the-molecular-hamiltonian" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Small terms in the molecular Hamiltonian<a href="Molecules.html#small-terms-in-the-molecular-hamiltonian" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The operator in eq. <a href="Molecules.html#eq:molham1">(11.1)</a> is known as the “exact” nonrelativistic Hamiltonian in field-free space. However, it is important to remember that it neglects at least two effects. Firstly, although the speed of an electron in a hydrogen atom is less than 1% of the speed of light, relativistic mass corrections can become appreciable for the inner electrons of heavier atoms. Secondly, we have neglected the spin-orbit effects, which is explained as follows. From the point of view of an electron, it is being orbited by a nucleus which produces a magnetic field (proportional to <span class="math inline">\({\bf L}\)</span>); this field interacts with the electron’s magnetic moment (proportional to <span class="math inline">\({\bf S}\)</span>), giving rise to a spin-orbit interaction (proportional to <span class="math inline">\({\bf L} \cdot {\bf S}\)</span> for a diatomic.) Although spin-orbit effects can be important, they are generally neglected in quantum chemical calculations, and we will neglect them in the remainder of this textbook as well.</p>
 </div>
 </div>
-<div id="the-born-oppenheimer-approximation" class="section level2" number="11.2">
-<h2><span class="header-section-number">11.2</span> The Born-Oppenheimer Approximation</h2>
+<div id="the-born-oppenheimer-approximation" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> The Born-Oppenheimer Approximation<a href="Molecules.html#the-born-oppenheimer-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As we already saw in the previous chapter, if a Hamiltonian is separable into two or more terms, then the total eigenfunctions are products of the individual eigenfunctions of the separated Hamiltonian terms. The total eigenvalues are then sums of individual eigenvalues of the separated Hamiltonian terms.</p>
 <p>For example. let’s consider a Hamiltonian that is separable into two terms, one involving coordinate <span class="math inline">\(q_1\)</span> and the other involving coordinate <span class="math inline">\(q_2\)</span>:</p>
 <p><span class="math display" id="eq:molham3">\[\begin{equation}
@@ -305,11 +369,11 @@ MathJax.Hub.Config({
 <p>which is the equation that is used to explain the chemical bond in the next section. Notice that eq. <a href="Molecules.html#eq:molham9">(11.9)</a> is not the total TISEq of the system, since the nuclear eigenfunction and its eigenvalues (which can be obtained solving the Schrödinger equation with the nuclear Hamiltonian) are neglected.
 As a final note, in the remainder of this textbook we will confuse the term “total energy” with “total energy at fixed geometry”, as is customary in many other quantum chemistry textbooks (i.e., we are neglecting the nuclear kinetic energy). This is just <span class="math inline">\(E_{e}\)</span> of eq. <a href="Molecules.html#eq:molham9">(11.9)</a>, plus the constant shift,<span class="math inline">\(\hat{V}_{NN}({\bf R_a})\)</span>, given by the nuclear-nuclear repulsion.</p>
 </div>
-<div id="solving-the-electronic-eigenvalue-problem" class="section level2" number="11.3">
-<h2><span class="header-section-number">11.3</span> Solving the Electronic Eigenvalue Problem</h2>
+<div id="solving-the-electronic-eigenvalue-problem" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Solving the Electronic Eigenvalue Problem<a href="Molecules.html#solving-the-electronic-eigenvalue-problem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Once we have invoked the Born-Oppenheimer approximation, we can attempt to solve the electronic TISEq in eq. <a href="Molecules.html#eq:molham9">(11.9)</a>. However, for molecules with more than one electron, we need to—once again—keep in mind the antisymmetry of the wave function. This obviously means that we need to write the electronic wave function as a Slater determinant (i.e., all molecules but <span class="math inline">\(\mathrm{H}_2^+\)</span> and a few related highly exotic ions). Once this is done, we can work on approximating the Hamiltonian, a task that is necessary because the presence of the electron-electron repulsion term forbids its analytic treatment. Similarly to the many-electron atom case, the simplest approximation to solve the molecular electronic TISEq is to use the variational method and to neglect the electron-electron repulsion. As we noticed in the previous chapter, this approximation is called the Hartree-Fock method.</p>
-<div id="the-hartree-fock-method" class="section level3" number="11.3.1">
-<h3><span class="header-section-number">11.3.1</span> The Hartree-Fock Method</h3>
+<div id="the-hartree-fock-method" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> The Hartree-Fock Method<a href="Molecules.html#the-hartree-fock-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The main difference when we apply the variational principle to a molecular Slater determinant is that we need to build orbitals (one-electron wave functions) that encompass the entire molecule. This can be done by assuming that the atomic contributions to the molecular orbitals will closely resemble the orbitals that we obtained for the hydrogen atom. The total molecular orbital can then be built by linearly combine these atomic contributions. This method is called <strong>linear combination of atomic orbitals (LCAO)</strong>. A consequence of the LCAO method is that the atomic orbitals on two different atomic centers are not necessarily orthogonal, and eq. <a href="Atoms.html#eq:var4">(10.12)</a> cannot be simplified easily. If we replace each atomic orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> with a linear combination of suitable basis functions <span class="math inline">\(f_i(\mathbf{r})\)</span>:</p>
 <p><span class="math display" id="eq:molham10">\[\begin{equation}
 \psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}),
@@ -328,14 +392,155 @@ E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
 <p>Differentiating this energy with respect to the expansion coefficients <span class="math inline">\(c_i\)</span> yields a non-trivial solution only if the following “secular determinant” equals zero:</p>
 <p><span class="math display" id="eq:molham12">\[\begin{equation}
 \begin{vmatrix}
-H_{11}-ES_{11}   &amp; H_{12}-ES_{12}   &amp; \cdots &amp; H_{1m}-ES_{1m}\\\
-H_{21}-ES_{21}   &amp; H_{22}-ES_{22}   &amp; \cdots &amp; H_{2m}-ES_{2m}\\\
-\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\\
+H_{11}-ES_{11}   &amp; H_{12}-ES_{12}   &amp; \cdots &amp; H_{1m}-ES_{1m}\\
+H_{21}-ES_{21}   &amp; H_{22}-ES_{22}   &amp; \cdots &amp; H_{2m}-ES_{2m}\\
+\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\
 H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
 \end{vmatrix}=0
 \tag{11.13}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(m\)</span> is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients <span class="math inline">\(c_i\)</span> in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the <strong>self-consistent-field (SCF) procedure</strong>. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. <a href="Molecules.html#eq:molham12">(11.13)</a>. This solution gives updated values of the coefficients, which can then be used to create an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.</p>
+</div>
+</div>
+<div id="rev11" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Chapter Review<a href="Molecules.html#rev11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest11" class="section level3 hasAnchor" number="11.4.1">
+<h3><span class="header-section-number">11.4.1</span> Study Questions<a href="Molecules.html#quest11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>only electronic kinetic energy and electron–nuclear attraction<br />
+</li>
+<li>only nuclear kinetic energy and nuclear–nuclear repulsion<br />
+</li>
+<li>spin–orbit and relativistic corrections only<br />
+</li>
+<li>only electron–electron repulsion and nuclear–nuclear repulsion<br />
+</li>
+<li>electronic and nuclear kinetic energies, electron–nuclear, electron–electron, and nuclear–nuclear interactions</li>
+</ol>
+<hr />
+<p><strong>2. What makes the exact molecular Schrödinger equation harder than the atomic case?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>electrons disappear in molecules<br />
+</li>
+<li>nuclei can be treated classically in atoms but not in molecules<br />
+</li>
+<li>the presence of multiple moving nuclei in addition to many electrons<br />
+</li>
+<li>there is no coulomb interaction in molecules<br />
+</li>
+<li>the electron mass changes in molecules</li>
+</ol>
+<hr />
+<p><strong>3. What is the central physical idea behind the Born–Oppenheimer approximation?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>electrons are much heavier than nuclei<br />
+</li>
+<li>nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion<br />
+</li>
+<li>electrons and nuclei move with the same characteristic time scale<br />
+</li>
+<li>both electrons and nuclei can be treated as classical particles<br />
+</li>
+<li>nuclei do not contribute to the energy at all</li>
+</ol>
+<hr />
+<p><strong>4. Mathematically, the Born–Oppenheimer approximation relies on what property of the Hamiltonian?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>exact commutation with the position operator<br />
+</li>
+<li>separability into electronic and nuclear parts (plus interactions)<br />
+</li>
+<li>absence of kinetic energy terms<br />
+</li>
+<li>Hermiticity of the potential energy operator<br />
+</li>
+<li>linearity of the time derivative</li>
+</ol>
+<hr />
+<p><strong>5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by “total energy” of a molecule at fixed geometry?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>electronic energy <span class="math inline">\(E_e\)</span> at that geometry plus the constant nuclear–nuclear repulsion term<br />
+</li>
+<li>nuclear kinetic energy only<br />
+</li>
+<li>electronic energy without nuclear–nuclear repulsion<br />
+</li>
+<li>purely classical potential energy<br />
+</li>
+<li>nuclear vibrational zero‑point energy</li>
+</ol>
+<hr />
+<p><strong>6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>a PES is the graph of electronic energy as a function of nuclear geometry<br />
+</li>
+<li>a PES is the graph of nuclear kinetic energy versus time<br />
+</li>
+<li>a PES is independent of nuclear positions<br />
+</li>
+<li>a PES depends only on electron spin<br />
+</li>
+<li>PESs are defined only for diatomic molecules</li>
+</ol>
+<hr />
+<p><strong>7. Which of the following is <em>not</em> a direct consequence or assumption of the Born–Oppenheimer approximation?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>electronic and nuclear motions can be approximately separated<br />
+</li>
+<li>electrons move in the field of fixed nuclei<br />
+</li>
+<li>nuclear motion can be described on a pes obtained from electronic energies<br />
+</li>
+<li>electron–nuclear coupling can never be important for any property<br />
+</li>
+<li>total wavefunctions are approximated as products of electronic and nuclear parts</li>
+</ol>
+<hr />
+<p><strong>8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbital coefficients leads to what?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>the time‑dependent Schrödinger equation<br />
+</li>
+<li>an over‑determined system with no nontrivial solutions<br />
+</li>
+<li>a single algebraic equation for the total energy<br />
+</li>
+<li>purely classical equations of motion for nuclei<br />
+</li>
+<li>a set of coupled one‑electron equations involving the fock operator (Hartree–Fock equations)</li>
+</ol>
+<hr />
+<p><strong>9. Which of the following sentences describes the Fock operator <span class="math inline">\(\hat{F}\)</span> in Hartree–Fock theory?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>a two‑electron operator containing only electron–electron repulsion<br />
+</li>
+<li>a purely nuclear operator<br />
+</li>
+<li>a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron–electron (Coulomb and exchange) terms</li>
+<li>an operator that depends only on spin and not on spatial coordinates<br />
+</li>
+<li>the exact electronic Hamiltonian</li>
+</ol>
+<hr />
+<p><strong>10. In the Hartree–Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>by forcing all electrons into different nuclei<br />
+</li>
+<li>by requiring all spatial orbitals to be orthogonal but ignoring spin<br />
+</li>
+<li>by constructing an antisymmetric Slater determinant of spin‑orbitals<br />
+</li>
+<li>by adding a large repulsive potential at short inter‑electronic distances<br />
+</li>
+<li>by using only hydrogen‑like orbitals</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
+</span></p>
 
 </div>
 </div>
@@ -350,7 +555,6 @@ H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -361,37 +565,42 @@ H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/11_Molecules.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/11_Molecules.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -402,7 +611,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

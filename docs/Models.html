@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4 Analytically Solvable Models | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4 Analytically Solvable Models | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Schrodinger.html"/>
 <link rel="next" href="Hydrogen.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,11 +293,11 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Models" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Analytically Solvable Models</h1>
+<div id="Models" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Analytically Solvable Models<a href="Models.html#Models" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The TISEq can be solved analytically only in a few special cases. We saw one of those special cases, the free particle, at the end of the previous chapter. In this section, we will analyze three others. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.</p>
-<div id="the-particle-in-a-box" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> The Particle in a Box</h2>
+<div id="the-particle-in-a-box" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> The Particle in a Box<a href="Models.html#the-particle-in-a-box" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can start by considering a particle constrained to move in a single dimension, under the influence of a potential <span class="math inline">\(V(x)\)</span> which is zero for <span class="math inline">\(0 \leq x \leq a\)</span> and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where <span class="math inline">\(V(x)\)</span> is infinite, so <span class="math inline">\(\psi(x)\)</span> is nonzero only within <span class="math inline">\([0,a]\)</span>. The Schrödinger equation is thus:</p>
 <p><span class="math display" id="eq:PIB1">\[\begin{equation}
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
@@ -277,8 +341,8 @@ E_1 = \frac{h^2 }{8 m a^2} \neq 0.
 \end{equation}\]</span></p>
 <p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we did not solve for the constant <span class="math inline">\(A\)</span>. This task is not straightforward, and it can be achieved by requiring the wave function to describe one particle exclusively (we will come back to this task after chapter 7). Extending the problem to three dimensions is relatively straightforward, resulting in a set of three separate quantum numbers (one for each of the 3-dimensional coordinate <span class="math inline">\(n_x,n_y,n_z\)</span>).</p>
 </div>
-<div id="the-harmonic-oscillator" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> The Harmonic Oscillator</h2>
+<div id="the-harmonic-oscillator" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> The Harmonic Oscillator<a href="Models.html#the-harmonic-oscillator" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
 <p><span class="math display" id="eq:HO1">\[\begin{equation}
 V(x) = - \int_{-\infty}^{\infty} (-kx) dx = V_0 + \frac{1}{2} kx^2.
@@ -292,38 +356,183 @@ E \psi(x)
 \end{equation}\]</span></p>
 <p>After some effort, the eigenfunctions are:</p>
 <p><span class="math display" id="eq:HO3">\[\begin{equation}
-\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+\psi_n(x) = N_{n-1} H_{n-1}(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=1,2,\ldots,\infty,
 \tag{4.11}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(H_n\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_n\)</span> are defined by</p>
+<p>where <span class="math inline">\(H_{n-1}\)</span> is the Hermite polynomial of degree <span class="math inline">\(n-1\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_{n-1}\)</span> are defined by</p>
 <p><span class="math display" id="eq:HO4">\[\begin{equation}
 \alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+N_{n-1} = \frac{1}{\sqrt{2^{n-1} (n-1)!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
 \tag{4.12}
 \end{equation}\]</span></p>
 <p>The eigenvalues are:</p>
 <p><span class="math display" id="eq:HO5">\[\begin{equation}
-E_n = \hbar \omega \left(n + \frac{1}{2} \right),
+E_n = \hbar \omega \left(n - \frac{1}{2} \right),
 \tag{4.13}
 \end{equation}\]</span></p>
-<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to <span class="math inline">\(n=0\)</span>, but because of the <span class="math inline">\(\frac{1}{2}\)</span> factor in eq. <a href="Models.html#eq:HO5">(4.13)</a>, the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. <a href="Models.html#eq:HO5">(4.13)</a>. The lowest possible energy (the ZPE) will be <span class="math inline">\(E_0 = \frac{1}{2} \hbar \omega\)</span>.</p>
+<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous, and the lowest energy state is not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. <a href="Models.html#eq:HO5">(4.13)</a>. The lowest possible energy (the ZPE) will be:</p>
+<p><span class="math display" id="eq:zpeH">\[\begin{equation}
+E_1 = \frac{1}{2} \hbar \omega \neq 0
+\tag{4.14}
+\end{equation}\]</span></p>
 </div>
-<div id="the-rigid-rotor" class="section level2" number="4.3">
-<h2><span class="header-section-number">4.3</span> The Rigid Rotor</h2>
+<div id="the-rigid-rotor" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> The Rigid Rotor<a href="Models.html#the-rigid-rotor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The rigid rotor is a simple model of a rotating stick in three dimensions (or, if you prefer, of a molecule). We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a one-dimensional system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>. The cartesian coordinates, <span class="math inline">\(x,y,z\)</span>, are then replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. The TISEq of the system in spherical coordinates is:</p>
 <p><span class="math display" id="eq:RR1">\[\begin{equation}
 - \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
 \frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(r) = E_{\ell} \psi(r),
-\tag{4.14}
+\tag{4.15}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia. After a little effort, the eigenfunctions can be shown to be the spherical harmonics <span class="math inline">\(Y_{\ell}^{m_{\ell}}(\theta, \phi)\)</span>.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> The eigenvalues are simply:</p>
 <p><span class="math display" id="eq:RR2">\[\begin{equation}
 E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
-\tag{4.15}
+\tag{4.16}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(\ell=0,1,2,\ldots\)</span> is the <em>azimuthal quantum number</em>, and <span class="math inline">\(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> is the <em>magnetic quantum number</em>. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Notice that the energy does not depend on the second index <span class="math inline">\(m_{\ell}\)</span>, and the functions with fixed <span class="math inline">\(m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell\)</span> have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.</p>
 <p>Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> and also the orientation in space at which the rotor is allowed to rotate changes discontinuously.</p>
+</div>
+<div id="rev4" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Chapter Review<a href="Models.html#rev4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest4" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Study Questions<a href="Models.html#quest4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. Which three model systems are treated in this chapter as analytically solvable?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Hydrogen atom, particle in a box, rigid rotor<br />
+</li>
+<li>Hydrogen atom, harmonic oscillator, Morse oscillator<br />
+</li>
+<li>Particle in a box, harmonic oscillator, rigid rotor<br />
+</li>
+<li>Free particle, hydrogen atom, rigid rotor<br />
+</li>
+<li>Particle in a box, Coulomb potential, rigid rotor</li>
+</ol>
+<hr />
+<p><strong>2. For the 1D infinite potential well (“particle in a box”), the potential <span class="math inline">\(V(x)\)</span> is what?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Constant for all <span class="math inline">\(x\)</span><br />
+</li>
+<li>Zero for <span class="math inline">\(0 \le x \le a\)</span>, infinite elsewhere<br />
+</li>
+<li>Linear in <span class="math inline">\(x\)</span> between 0 and <span class="math inline">\(a\)</span><br />
+</li>
+<li>Harmonic in <span class="math inline">\(x^2\)</span> between 0 and <span class="math inline">\(a\)</span><br />
+</li>
+<li>Zero everywhere</li>
+</ol>
+<hr />
+<p><strong>3. What boundary conditions are imposed on the wavefunction for the particle in a box?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi(0) = \psi(a) = 1\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(0) = 0,\ \psi(a) = 1\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(0) = \psi&#39;(a) = 0\)</span><br />
+</li>
+<li><span class="math inline">\(\psi&#39;(0) = \psi&#39;(a) = 0\)</span><br />
+</li>
+<li><span class="math inline">\(\psi(0) = \psi(a) = 0\)</span></li>
+</ol>
+<hr />
+<p><strong>4. Applying the <span class="math inline">\(\psi(0)=0\)</span> boundary condition to the particle in a box leads to which condition on the constants??</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A = 0\)</span><br />
+</li>
+<li><span class="math inline">\(k = 0\)</span><br />
+</li>
+<li><span class="math inline">\(A = B\)</span><br />
+</li>
+<li><span class="math inline">\(B = 0\)</span><br />
+</li>
+<li><span class="math inline">\(A = -B\)</span></li>
+</ol>
+<hr />
+<p><strong>5. Which of the following is the correct spatial dependence of the normalized eigenfunctions for the particle in a box?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\psi_n(x) \propto \sin\left(\dfrac{n\pi x}{a}\right)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto \cos\left(\dfrac{n\pi x}{a}\right)\)</span><br />
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto e^{ikx}\)</span><br />
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto x^n\)</span><br />
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto \delta(x-n)\)</span></li>
+</ol>
+<hr />
+<p><strong>6. Which of the following are the energy eigenvalues <span class="math inline">\(E_n\)</span> for the particle in a box?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E_n = \dfrac{\hbar^2 n^2}{2 m a^2}\)</span></li>
+<li><span class="math inline">\(E_n = \dfrac{h^2 n^2}{8 m a^2}\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \dfrac{1}{2} m n^2 a^2\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \dfrac{n h c}{a}\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = n \hbar \omega\)</span></li>
+</ol>
+<hr />
+<p><strong>7. The harmonic oscillator eigenfunctions are expressed in terms of which special functions?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Legendre polynomials <span class="math inline">\(P_n\)</span><br />
+</li>
+<li>Laguerre polynomials <span class="math inline">\(L_n\)</span><br />
+</li>
+<li>Hermite polynomials <span class="math inline">\(H_n\)</span><br />
+</li>
+<li>Bessel functions <span class="math inline">\(J_n\)</span><br />
+</li>
+<li>Spherical harmonics <span class="math inline">\(Y_{\ell}^m\)</span></li>
+</ol>
+<hr />
+<p><strong>8. Which of the following are the energy levels of the harmonic oscillator?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E_n = \hbar \omega \left(n + \tfrac{1}{2}\right)\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \hbar \omega n\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \dfrac{h^2 n^2}{8 m a^2}\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \dfrac{\hbar^2 n^2}{2m}\)</span><br />
+</li>
+<li><span class="math inline">\(E_n = \dfrac{1}{2} k x^2\)</span></li>
+</ol>
+<hr />
+<p><strong>9. What does the rigid rotor model represent?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>A particle moving in a 1D infinite well<br />
+</li>
+<li>Two point masses at fixed distance rotating in 3D<br />
+</li>
+<li>A mass on a spring moving in 1D<br />
+</li>
+<li>A free particle in 3D<br />
+</li>
+<li>A charged particle in a uniform electric field</li>
+</ol>
+<hr />
+<p><strong>10. Which of the following are the energy levels of the rigid rotor?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E_\ell = \dfrac{\hbar^2}{2I}\,\ell(\ell+1)\)</span><br />
+</li>
+<li><span class="math inline">\(E_\ell = \hbar \omega (\ell + \tfrac{1}{2})\)</span><br />
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{h^2 \ell^2}{8 I}\)</span><br />
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{\hbar^2}{2I}\,m^2\)</span><br />
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{1}{2} I \omega^2\)</span></li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.c, 2.b, 3.e, 4.d, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a
+</span></p>
 
+</div>
 </div>
 </div>
 <div class="footnotes">
@@ -343,7 +552,6 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -354,37 +562,42 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/04_Models.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/04_Models.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -395,7 +608,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

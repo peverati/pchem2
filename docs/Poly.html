@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>13 The Chemical Bond in Polyatomic Molecules | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
   <meta property="og:title" content="13 The Chemical Bond in Polyatomic Molecules | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2024-01-29" />
+<meta name="date" content="2026-01-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="Bonds.html"/>
 <link rel="next" href="Spectroscopy.html"/>
-<script src="libs/header-attrs-2.11/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,7 +49,9 @@
 
 
 
-
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <script type="text/x-mathjax-config">
 MathJax.Ajax.config.path["mhchem"] =
   "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
@@ -62,6 +63,11 @@ MathJax.Hub.Config({
 </script>
 
 
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -89,6 +95,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
 <li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
 <li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
 <ul>
@@ -104,20 +114,38 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
 <li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
 </ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schrödinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schrödinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a></li>
 <li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.2</b> The Harmonic Oscillator</a></li>
 <li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-rigid-rotor"><i class="fa fa-check"></i><b>4.3</b> The Rigid Rotor</a></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.4.1</b> Study Questions</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.1</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.1.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
@@ -132,12 +160,20 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
 <ul>
@@ -147,6 +183,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
 <li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
 <li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
 <ul>
@@ -160,6 +200,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
 </ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
 <ul>
@@ -168,6 +212,10 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
 <li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
@@ -181,17 +229,29 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
 </ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
 <li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
 <li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
 <li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
 <ul>
@@ -207,6 +267,10 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
 <ul>
 <li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -229,11 +293,11 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Poly" class="section level1" number="13">
-<h1><span class="header-section-number">13</span> The Chemical Bond in Polyatomic Molecules</h1>
+<div id="Poly" class="section level1 hasAnchor" number="13">
+<h1><span class="header-section-number">13</span> The Chemical Bond in Polyatomic Molecules<a href="Poly.html#Poly" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The structure in space of polyatomic molecules depends on the stereochemistry of their chemical bonds and can be determined by solving the (approximated) TISEq using the Born—Oppenheimer approximation using a method that uses a linear combination of atomic orbitals to form molecular orbitals (LCAO-MO).</p>
-<div id="the-chemical-bond-in-the-water-molecule-using-a-minimal-basis" class="section level2" number="13.1">
-<h2><span class="header-section-number">13.1</span> The Chemical Bond in the Water Molecule Using a Minimal Basis</h2>
+<div id="the-chemical-bond-in-the-water-molecule-using-a-minimal-basis" class="section level2 hasAnchor" number="13.1">
+<h2><span class="header-section-number">13.1</span> The Chemical Bond in the Water Molecule Using a Minimal Basis<a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>For a minimal representation of the two hydrogen atoms, we need two <span class="math inline">\(1s\)</span> functions, one centered on each atom. Oxygen has electrons in the second principal quantum level, so we will need one <span class="math inline">\(1s\)</span>, one <span class="math inline">\(2s\)</span>, and three <span class="math inline">\(2p\)</span> functions (one each of <span class="math inline">\(p_x\)</span>, <span class="math inline">\(p_y\)</span>, and <span class="math inline">\(p_z\)</span>). Summarizing, for a minimal representation of the water wave function we need five orbitals on oxygen, plus one each on the hydrogen atoms, for a total of 7 functions. From these atomic functions, we can build a total wave function using the LCAO method of chapter <a href="Molecules.html#Molecules">11</a>, and then we can use the variational principle, in conjunction with the Hartree—Fock (HF) method, to build and solve a secular determinant that looks is similar to that in eq. <a href="Molecules.html#eq:molham12">(11.13)</a>, with <span class="math inline">\(m=7\)</span> being the total number of basis functions. The approximated Hamiltonian operator in the HF method is called the Fock operator, and it can be divided into one-electron integrals, comprising the kinetic and potential energy contributions:</p>
 <p><span class="math display" id="eq:oneelint">\[\begin{equation}
 \begin{aligned}
@@ -250,14 +314,14 @@ V_{ijkl} = \iint \phi_i^* \phi_j^* {\hat r}_{12} \phi_k \phi_l\; d\mathbf{\tau_1
 <p>Despite the minimal basis set, the total number of integrals that need to be calculated for water is large, since <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span>, and <span class="math inline">\(l\)</span> can be any one of the 7 basis functions. Hence there are <span class="math inline">\(7\times7=49\)</span> kinetic energy integrals, and the same number of potential energy integrals for each nucleus, resulting in <span class="math inline">\(7\times 7 \times 3 = 147\)</span>. The grand total of one-electron integrals is thus 196. For the two-electron integrals, we have <span class="math inline">\(7 \times 7 \times 7 \times 7 = 2{,}401\)</span> integrals to calculate. Overall for this simple calculation on water, we need almost <span class="math inline">\(2{,}600\)</span> integrals.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
 <p>All this to find <span class="math inline">\(5\)</span> occupied molecular orbitals from which to form a final Slater determinant (<span class="math inline">\(10\)</span> electrons, two to an orbital, so <span class="math inline">\(5\)</span> orbitals). The situation sounds horrible, but it should be recognized that the solutions to all of the integrals are known to be analytic formulae involving only interatomic distances, cartesian exponents, and the values of a single exponent in the atomic functions. If we use slightly simpler gaussian functions instead of the more complicated hydrogenic solutions, the total number of floating-point operations to solve the integrals is roughly <span class="math inline">\(1{,}000{,}000\)</span>. In computer speak that’s one megaflop (megaflop = million FLoating-point OPerations). A modern digital computer processor can achieve gigaflop per second performance, so the computer can accomplish all these calculations in under one second. An additional way in which things can be improved is to recognize that the molecule has symmetries that can be exploited to reduce the number of total integrals that needs to be calculated.</p>
 </div>
-<div id="hartree-fock-calculation-for-water" class="section level2" number="13.2">
-<h2><span class="header-section-number">13.2</span> Hartree-Fock Calculation for Water</h2>
+<div id="hartree-fock-calculation-for-water" class="section level2 hasAnchor" number="13.2">
+<h2><span class="header-section-number">13.2</span> Hartree-Fock Calculation for Water<a href="Poly.html#hartree-fock-calculation-for-water" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To find the Hartree-Fock (HF) molecular orbitals (MOs) we need to solve the following secular determinant:</p>
 <p><span class="math display" id="eq:hfequationh2o">\[\begin{equation}
 \begin{vmatrix}
-F_{11}-ES_{11}   &amp; F_{12}-ES_{12}   &amp; \cdots &amp; F_{17}-ES_{17}\\\
-F_{21}-ES_{21}   &amp; F_{22}-ES_{22}   &amp; \cdots &amp; F_{27}-ES_{27}\\\
-\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\\
+F_{11}-ES_{11}   &amp; F_{12}-ES_{12}   &amp; \cdots &amp; F_{17}-ES_{17}\\
+F_{21}-ES_{21}   &amp; F_{22}-ES_{22}   &amp; \cdots &amp; F_{27}-ES_{27}\\
+\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\
 F_{71}-ES_{71}   &amp; F_{72}-ES_{72}   &amp; \cdots &amp; F_{77}-ES_{77}
 \end{vmatrix}=0
 \tag{13.3}
@@ -277,14 +341,14 @@ P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
 <p><span class="math display" id="eq:smatrix">\[\begin{equation}
 \mathbf{S}=
 \begin{bmatrix}
-\mathrm{O}\;1s &amp; \mathrm{O}\;2s &amp; \mathrm{O}\;2p_x &amp; \mathrm{O}\;2p_y &amp; \mathrm{O}\;2p_z &amp; \mathrm{H}_a\;1s &amp; \mathrm{H}_b\;1s &amp; \\\
-1.000 &amp; &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;1s \\\ 
-0.237 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;2s \\\
-0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;\mathrm{O}\;2p_x \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp;\mathrm{O}\;2p_y \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp;\mathrm{O}\;2p_z \\\
-0.055 &amp; 0.479 &amp; 0.000 &amp; 0.313 &amp; -0.242 &amp; 1.000 &amp;  &amp;\mathrm{H}_a\;1s \\\
-0.055 &amp; 0.479 &amp; 0.000 &amp; -0.313 &amp; -0.242 &amp; 0.256 &amp; 1.000&amp;\mathrm{H}_b\;1s 
+\mathrm{O}\;1s &amp; \mathrm{O}\;2s &amp; \mathrm{O}\;2p_x &amp; \mathrm{O}\;2p_y &amp; \mathrm{O}\;2p_z &amp; \mathrm{H}_a\;1s &amp; \mathrm{H}_b\;1s &amp; \\
+1.000 &amp; &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;1s \\
+0.237 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;  &amp;\mathrm{O}\;2s \\
+0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp; &amp;\mathrm{O}\;2p_x \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp; &amp;\mathrm{O}\;2p_y \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000 &amp; &amp; &amp;\mathrm{O}\;2p_z \\
+0.055 &amp; 0.479 &amp; 0.000 &amp; 0.313 &amp; -0.242 &amp; 1.000 &amp;  &amp;\mathrm{H}_a\;1s \\
+0.055 &amp; 0.479 &amp; 0.000 &amp; -0.313 &amp; -0.242 &amp; 0.256 &amp; 1.000&amp;\mathrm{H}_b\;1s
 \end{bmatrix}
 \tag{13.6}
 \end{equation}\]</span></p>
@@ -292,12 +356,12 @@ P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
 <p><span class="math display" id="eq:kmatrix">\[\begin{equation}
 \mathbf{K}=
 \begin{bmatrix}
-29.003 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
--0.168 &amp; 0.808 &amp; &amp; &amp; &amp; &amp;  \\\
-0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; \\\
--0.002 &amp; 0.132 &amp; 0.000 &amp; 0.229 &amp; -0.177 &amp; 0.760 &amp; \\\
+29.003 &amp; &amp; &amp; &amp; &amp; &amp; \\
+-0.168 &amp; 0.808 &amp; &amp; &amp; &amp; &amp;  \\
+0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; 2.529 &amp; &amp; \\
+-0.002 &amp; 0.132 &amp; 0.000 &amp; 0.229 &amp; -0.177 &amp; 0.760 &amp; \\
 -0.002 &amp; 0.132 &amp; 0.000 &amp; -0.229 &amp; -0.177 &amp; 0.009 &amp; 0.760
 \end{bmatrix}
 \tag{13.7}
@@ -306,12 +370,12 @@ P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
 <p><span class="math display" id="eq:vmatrix">\[\begin{equation}
 \mathbf{V}=
 \begin{bmatrix}
--61.733 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
--7.447 &amp; -10.151 &amp; &amp; &amp; &amp; &amp;  \\\
-0.000 &amp; 0.000 &amp; -9.926 &amp; &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; -10.152 &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; -10.088 &amp; &amp; \\\
--1.778 &amp; -3.920 &amp; 0.000 &amp; -0.228 &amp; -0.184 &amp; -5.867 &amp; \\\
+-61.733 &amp; &amp; &amp; &amp; &amp; &amp; \\
+-7.447 &amp; -10.151 &amp; &amp; &amp; &amp; &amp;  \\
+0.000 &amp; 0.000 &amp; -9.926 &amp; &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; -10.152 &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 &amp; -10.088 &amp; &amp; \\
+-1.778 &amp; -3.920 &amp; 0.000 &amp; -0.228 &amp; -0.184 &amp; -5.867 &amp; \\
 -1.778 &amp; -3.920 &amp; 0.000 &amp; 0.228 &amp; 0.184 &amp; -1.652 &amp; -5.867
 \end{bmatrix}
 \tag{13.8}
@@ -321,12 +385,12 @@ P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
 <p><span class="math display" id="eq:pmatrix">\[\begin{equation}
 \mathbf{P}=
 \begin{bmatrix}
-2.108 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
--0.456 &amp; 2.010 &amp; &amp; &amp; &amp; &amp;  \\\
-0.000 &amp; 0.000 &amp; 2.000 &amp; &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; 0.737 &amp; &amp; &amp; \\\
--0.104 &amp; 0.618 &amp; 0.000 &amp; 0.000 &amp; 1.215 &amp; &amp; \\\
--0.022 &amp; -0.059 &amp; 0.000 &amp; 0.539 &amp; -0.482 &amp; 0.606 &amp; \\\
+2.108 &amp; &amp; &amp; &amp; &amp; &amp; \\
+-0.456 &amp; 2.010 &amp; &amp; &amp; &amp; &amp;  \\
+0.000 &amp; 0.000 &amp; 2.000 &amp; &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; 0.737 &amp; &amp; &amp; \\
+-0.104 &amp; 0.618 &amp; 0.000 &amp; 0.000 &amp; 1.215 &amp; &amp; \\
+-0.022 &amp; -0.059 &amp; 0.000 &amp; 0.539 &amp; -0.482 &amp; 0.606 &amp; \\
 -0.022 &amp; -0.059 &amp; 0.000 &amp; -0.539 &amp; -0.482 &amp; -0.183 &amp; 0.606
 \end{bmatrix}
 \tag{13.9}
@@ -335,12 +399,12 @@ P_{kl} = 2 \sum_{i}^{\mathrm{occupied}} a_{ki}a_{li},
 <p><span class="math display" id="eq:fmatrix">\[\begin{equation}
 \mathbf{F}=
 \begin{bmatrix}
--20.236 &amp; &amp; &amp; &amp; &amp; &amp; \\\ 
--5.163 &amp; -2.453 &amp; &amp; &amp; &amp; &amp;  \\\
-0.000 &amp; 0.000 &amp; -0.395 &amp; &amp; &amp; &amp; \\\
-0.000 &amp; 0.000 &amp; 0.000 &amp; -0.327 &amp; &amp; &amp; \\\
-0.029 &amp; 0.130 &amp; 0.000 &amp; 0.000 &amp; -0.353 &amp; &amp; \\\
--1.216 &amp; -1.037 &amp; 0.000 &amp; -0.398 &amp; 0.372 &amp; -0.588 &amp; \\\
+-20.236 &amp; &amp; &amp; &amp; &amp; &amp; \\
+-5.163 &amp; -2.453 &amp; &amp; &amp; &amp; &amp;  \\
+0.000 &amp; 0.000 &amp; -0.395 &amp; &amp; &amp; &amp; \\
+0.000 &amp; 0.000 &amp; 0.000 &amp; -0.327 &amp; &amp; &amp; \\
+0.029 &amp; 0.130 &amp; 0.000 &amp; 0.000 &amp; -0.353 &amp; &amp; \\
+-1.216 &amp; -1.037 &amp; 0.000 &amp; -0.398 &amp; 0.372 &amp; -0.588 &amp; \\
 -1.216 &amp; -1.037 &amp; 0.000 &amp; 0.398 &amp; 0.372 &amp; -0.403 &amp; -0.588
 \end{bmatrix}
 \tag{13.10}
@@ -363,25 +427,25 @@ E(RHF) &amp;= \; -74.961\,754\,063\qquad\text{a.u. after 7 cycles} \\
 <p>The final optimized MOs for water are:</p>
 <p><span class="math display" id="eq:eigenvalMO">\[\begin{equation}
 \begin{matrix}                  
-&amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\\
-E  &amp; -20.24094 &amp;  -1.27218   &amp;   -.62173    &amp;  -.45392     &amp;    -.39176    &amp;   .61293    &amp; .75095 \\\
-\\\
-1                &amp; .99411    &amp;   -.23251   &amp;   .00000     &amp;  -.10356     &amp;    .00000     &amp;   -.13340   &amp; .00000   \\\
-2                &amp; .02672    &amp;   .83085    &amp;  .00000      &amp; .53920       &amp;  .00000      &amp;  .89746     &amp; .00000  \\\
-3                &amp; .00000    &amp;   .00000    &amp;  .00000      &amp; .00000       &amp;  1.0000       &amp; .00000      &amp; .00000  \\\
-4                &amp; .00000    &amp;   .00000    &amp; .60677       &amp;  .00000      &amp;   .00000      &amp;  .00000     &amp; .99474  \\\
-5                &amp; -.00442   &amp;    -.13216  &amp;    .00000    &amp;   .77828     &amp;    .00000     &amp;  -.74288    &amp;  .00000  \\\
-6                &amp; -.00605   &amp;    .15919   &amp;   .44453     &amp;  -.27494     &amp;    .00000     &amp;  -.80246    &amp;  -.84542  \\\
-7                &amp;  -.00605  &amp;     .15919  &amp;     -.44453  &amp;     -.27494  &amp;       .00000  &amp;     -.80246 &amp;     .84542 \\\
+&amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+E  &amp; -20.24094 &amp;  -1.27218   &amp;   -.62173    &amp;  -.45392     &amp;    -.39176    &amp;   .61293    &amp; .75095 \\
+\\
+1                &amp; .99411    &amp;   -.23251   &amp;   .00000     &amp;  -.10356     &amp;    .00000     &amp;   -.13340   &amp; .00000   \\
+2                &amp; .02672    &amp;   .83085    &amp;  .00000      &amp; .53920       &amp;  .00000      &amp;  .89746     &amp; .00000  \\
+3                &amp; .00000    &amp;   .00000    &amp;  .00000      &amp; .00000       &amp;  1.0000       &amp; .00000      &amp; .00000  \\
+4                &amp; .00000    &amp;   .00000    &amp; .60677       &amp;  .00000      &amp;   .00000      &amp;  .00000     &amp; .99474  \\
+5                &amp; -.00442   &amp;    -.13216  &amp;    .00000    &amp;   .77828     &amp;    .00000     &amp;  -.74288    &amp;  .00000  \\
+6                &amp; -.00605   &amp;    .15919   &amp;   .44453     &amp;  -.27494     &amp;    .00000     &amp;  -.80246    &amp;  -.84542  \\
+7                &amp;  -.00605  &amp;     .15919  &amp;     -.44453  &amp;     -.27494  &amp;       .00000  &amp;     -.80246 &amp;     .84542 \\
 \end{matrix}
 \tag{13.12}
 \end{equation}\]</span></p>
 <p>where the first row reports the eigenvalues of each MO, in <span class="math inline">\(E_h\)</span> (i.e., the energy of one electron in the MO). The sum of all of the occupied MO energies should be an underestimation of the total electronic energy because electron-electron repulsion will have been double counted. So, if we sum the occupied orbital energies (times two, since there are two electrons in each orbital), we get <span class="math inline">\(2(-20.24094{-}1.27218{-}0.62173{-}0.45392{-}0.39176)=-45.961\,060\)</span>. If we now subtract the electron-electron repulsion energy <span class="math inline">\(38.265\,406\)</span> we get <span class="math inline">\(-84.226\,466\)</span>. If we add the nuclear repulsion energy <span class="math inline">\(9.264\,701\)</span> to this we get a total energy <span class="math inline">\(-74.961\,765\)</span>. The difference between this and the converged result above (<span class="math inline">\(-74.961\,754\)</span>) can be attributed to rounding in the MO energies, which are truncated after 5 places. Notice that the five occupied MOs all have negative energies. So, their electrons are bound within the molecule. The unoccupied MOs (called “virtual” MOs) all have positive energies, meaning that the molecule will not spontaneously accept an electron from another source.</p>
 </div>
-<div id="shapes-and-energies-of-molecular-orbitals" class="section level2" number="13.3">
-<h2><span class="header-section-number">13.3</span> Shapes and Energies of Molecular Orbitals</h2>
+<div id="shapes-and-energies-of-molecular-orbitals" class="section level2 hasAnchor" number="13.3">
+<h2><span class="header-section-number">13.3</span> Shapes and Energies of Molecular Orbitals<a href="Poly.html#shapes-and-energies-of-molecular-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If we analyze the optimized coefficients of the occupied MOs reported in eq. <a href="Poly.html#eq:eigenvalMO">(13.12)</a>, we observe that the lowest energy orbital (by a lot!) is a nearly pure oxygen <span class="math inline">\(1s\)</span> orbital since the coefficient of the oxygen <span class="math inline">\(1s\)</span> basis function is very nearly 1 and all other coefficients are rather close to 0. Note, however, that the coefficient is not really a percentage measure. That’s because the basis functions are not necessarily orthogonal to one another. Let’s consider the next molecular orbital up, number 2. It has a dominant contribution from the oxygen <span class="math inline">\(2s\)</span> basis function, but non-trivial contributions from many other basis functions as well. In order to understand which kind of orbital it is, it is useful to try to visualize some of its properties. For example, recall that the square of the orbital at a particular point in space represents a probability density. As such, we can map values of the square of each orbital on a grid in 3-dimensional space, and then pick a value of probability density, say <span class="math inline">\(0.04\; a_0^{-3}\)</span>, and plot that as a contour surface (remember that a probability density is a 4-dimensional quantity, so we need to take a slice at some constant density to be able to plot it in 3-D). That surface is called an “isodensity” surface. In addition to the square of the function, we can also color regions where the wave function is positive blue and regions where it’s negative red. The five occupied and two unoccupied MOs mapped from their one-electron wave functions are plotted in figure <a href="Poly.html#fig:Fig1c12b">13.1</a>.</p>
-<div class="figure" style="text-align: center"><span id="fig:Fig1c12b"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig1c12b"></span>
 <img src="img/Fig13.jpg" alt="Isodensity maps of the Molecular Orbitals (MOs) of water." width="90%" />
 <p class="caption">
 Figure 13.1: Isodensity maps of the Molecular Orbitals (MOs) of water.
@@ -392,13 +456,155 @@ Figure 13.1: Isodensity maps of the Molecular Orbitals (MOs) of water.
 <p>Is it really possible that for something as simple as water all the things you’ve ever been told about the Lewis structure are wrong? Water must have two equivalent lone pairs, right?</p>
 <p>It turns out that the molecular orbital results can be tested with spectroscopic experiments, and suffice to say, they agree perfectly.</p>
 <p>But the <span class="math inline">\(sp^3\)</span>-hybridized picture of water works well, for example, to explain its hydrogen-bonding behavior: In liquid water each water molecule makes two hydrogen bonds to other water molecules and accepts two more from different water molecules and the final structure has a net lattice-like form that is tetrahedral at each oxygen atom. How can the above MOs explain that? The key point to remember is that another molecule does not see the individual orbitals of water, it just sees the final effect of all of those electrons and nuclei <strong>together</strong>. To explain the tetrahedral H-bond lattice we can plot some constant level of electron density (i.e. <span class="math inline">\(0.02\text{ a.u.}\)</span>) and map onto this isodensity surface the values of the electrostatic potential. We can find these values by bringing a positive test charge onto that surface and recording how much would it find itself attracted (because of a net negative electrostatic potential) or repelled (because of a net positive electrostatic potential). This is done in figure <a href="Poly.html#fig:Fig2c12b">13.2</a>. Notice how the negative potential is entirely on the oxygen side and the positive potential entirely on the hydrogens side. Moreover, the negative potential splays out to the tetrahedral points and the positive potential does too (those points for the purple region being roughly where the H atoms are).</p>
-<div class="figure" style="text-align: center"><span id="fig:Fig2c12b"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c12b"></span>
 <img src="img/Fig13_map.jpg" alt="Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface." width="60%" />
 <p class="caption">
 Figure 13.2: Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface.
 </p>
 </div>
+</div>
+<div id="rev13" class="section level2 hasAnchor" number="13.4">
+<h2><span class="header-section-number">13.4</span> Chapter Review<a href="Poly.html#rev13" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest13" class="section level3 hasAnchor" number="13.4.1">
+<h3><span class="header-section-number">13.4.1</span> Study Questions<a href="Poly.html#quest13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>only 1s<br />
+</li>
+<li>1s and 2s<br />
+</li>
+<li>2s and 2p<span class="math inline">\(_z\)</span> only<br />
+</li>
+<li>1s, 2s, and three 2p (2p<span class="math inline">\(_x\)</span>, 2p<span class="math inline">\(_y\)</span>, 2p<span class="math inline">\(_z\)</span>)<br />
+</li>
+<li>only three 2p orbitals</li>
+</ol>
+<hr />
+<p><strong>2. How many atomic basis functions are used in the minimal representation of H<span class="math inline">\(_2\)</span>O?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>3<br />
+</li>
+<li>5<br />
+</li>
+<li>7<br />
+</li>
+<li>9<br />
+</li>
+<li>12</li>
+</ol>
+<hr />
+<p><strong>3. Which general method is used to build molecular orbitals for water from the chosen atomic basis in chapter 13?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>ure valence‑bond resonance structures<br />
+</li>
+<li>LCAO-MO (linear combination of atomic orbitals to form molecular orbitals)<br />
+</li>
+<li>perturbation theory on hydrogenic orbitals only<br />
+</li>
+<li>classical hybridization rules only<br />
+</li>
+<li>direct diagonalization of the nuclear hamiltonian</li>
+</ol>
+<hr />
+<p><strong>4. In the minimal‑basis HF treatment of water, the number of <em>one‑electron</em> basis functions <span class="math inline">\(m\)</span> determines the size of which matrix?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>the overlap and fock matrices, each of size <span class="math inline">\(m \times m\)</span><br />
+</li>
+<li>the nuclear–nuclear repulsion matrix of size <span class="math inline">\(m^2 \times m^2\)</span><br />
+</li>
+<li>a scalar energy value<br />
+</li>
+<li>the <span class="math inline">\(3m\times 3m\)</span> kinetic matrix<br />
+</li>
+<li>only the density matrix of size <span class="math inline">\(2\times 2\)</span></li>
+</ol>
+<hr />
+<p><strong>5. In the minimal‑basis water example, how many distinct one‑electron integrals (kinetic or nuclear attraction) over contracted basis functions are there before considering primitive gaussians?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>7<br />
+</li>
+<li>49<br />
+</li>
+<li>147<br />
+</li>
+<li>196<br />
+</li>
+<li>2,401</li>
+</ol>
+<hr />
+<p><strong>6. For the <em>two‑electron</em> integrals over the 7 contracted basis functions on water, how many distinct contracted two‑electron integrals are there (before primitives)?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>7<br />
+</li>
+<li>49<br />
+</li>
+<li>147<br />
+</li>
+<li>196<br />
+</li>
+<li>2,401</li>
+</ol>
+<hr />
+<p><strong>7. What main point does the water/minimal‑basis example illustrate about <em>ab initio</em> calculations, even for small molecules?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>the number of two‑electron integrals quickly becomes very large and dominates computational cost<br />
+</li>
+<li>only one‑electron integrals matter for molecular properties<br />
+</li>
+<li>integrals scale linearly with system size<br />
+</li>
+<li>integral evaluation is trivial and negligible<br />
+</li>
+<li>minimal bases always give chemically exact results</li>
+</ol>
+<hr />
+<p><strong>8. In the minimal‑basis H<span class="math inline">\(_2\)</span>O example, which qualitative feature of the resulting MO diagram is reproduced correctly?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>exact experimental orbital energies<br />
+</li>
+<li>ordering of core, bonding, lone‑pair, and antibonding orbitals<br />
+</li>
+<li>no distinction between bonding and nonbonding orbitals<br />
+</li>
+<li>completely delocalized electrons with no identifiable lone pairs<br />
+</li>
+<li>degenerate <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\pi\)</span> orbitals</li>
+</ol>
+<hr />
+<p><strong>9. What is the main physical interpretation of the two highest‑occupied MOs in the water HF/minimal‑basis picture?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\sigma\)</span> bonds along the H-O-H bisector<br />
+</li>
+<li>core orbitals on oxygen<br />
+</li>
+<li>primarily oxygen lone‑pair orbitals oriented roughly toward the non‑bonding directions<br />
+</li>
+<li>purely hydrogen <span class="math inline">\(1s\)</span> orbitals<br />
+</li>
+<li>totally delocalized over all three atoms with no directional character</li>
+</ol>
+<hr />
+<p><strong>10. Despite its simplicity, what important qualitative property of water does the minimal‑basis HF treatment reproduce?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>linear geometry<br />
+</li>
+<li>no permanent dipole moment<br />
+</li>
+<li>equal O-H and H-H bond lengths<br />
+</li>
+<li>three‑fold symmetry<br />
+</li>
+<li>bent geometry with approximate correct orientation of lone pairs and bonds</li>
+</ol>
+<hr />
+<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
+Click to reveal
+</span>
+<span id="reveal-inline-content" style="display: none;">
+1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.c, 10.e
+</span></p>
 
+</div>
 </div>
 </div>
 <div class="footnotes">
@@ -417,7 +623,6 @@ Figure 13.2: Molecular electrostatic potential of water plotted on a 0.02 a.u. i
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -428,37 +633,42 @@ Figure 13.2: Molecular electrostatic potential of water plotted on a 0.02 a.u. i
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/peverati/pchem2/edit/master/12b_Polyatomic.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["pchem2.pdf"],
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/12b_Polyatomic.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
@@ -469,7 +679,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

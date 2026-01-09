@@ -186,3 +186,124 @@ The intensity of allowed vibronic transitions is governed by the Franck-Condon p
 ```{r Fig4c13, out.width='70%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Energy level diagram illustrating the Franck–Condon principle.'}
 knitr::include_graphics('./img/OEP_wiki8.png')
 ```
+
+
+## Chapter Review {#rev14}
+### Study Questions {#quest14}
+
+**1. In the rigid‑rotor model for a diatomic molecule, the rotational energy levels are given by $F(J) = B J(J+1)$. what does $B$ represent?**
+
+a. rotational constant related to the moment of inertia  
+b. bond length  
+c. rotational quantum number  
+d. vibrational frequency  
+e. electronic excitation energy  
+
+---
+
+**2. What are the allowed rotational quantum numbers $J$ for a linear rigid rotor?**
+
+a. $J = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots$  
+b. $J = 1, 2, 3, \dots$  
+c. $J = 0, 1, 2, 3, \dots$  
+d. $J = -\infty, \dots, \infty$  
+e. $J = 2, 4, 6, \dots$  
+
+---
+
+**3. In pure rotational spectroscopy of a heteronuclear diatomic in the rigid‑rotor approximation, which of the following is the selection rule for rotational transitions?**
+
+a. $\Delta J = 0$  
+b. $\Delta J = \pm 1$  
+c. $\Delta J = \pm 2$  
+d. $\Delta J = \pm 3$  
+e. no selection rule applies  
+
+---
+
+**4. For a harmonic oscillator model of a diatomic vibration, the vibrational energy levels are $G(v) = \omega_e \left( v + \frac{1}{2} \right)$. what are the allowed values of $v$?**
+
+a. $v = 0, 1, 2, \dots$  
+b. $v = 1, 2, 3, \dots$  
+c. $v = -\infty, \dots, \infty$  
+d. $v = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots$  
+e. $v = 2, 4, 6, \dots$  
+
+
+---
+
+**5. What is the main vibrational selection rule for an infrared‑active diatomic in the harmonic approximation?**
+
+a. $\Delta v = 0$  
+b. $\Delta v = \pm 1$  
+c. $\Delta v = \pm 2$ only  
+d. $\Delta v = \pm 3$  
+e. no selection rule  
+
+
+---
+
+**6. In rovibrational spectroscopy of a diatomic molecule, transitions are often labeled as p‑ and r‑branches. these correspond, respectively, to which of the following?**
+
+a. $\Delta J = 0$ (p) and $\Delta J = \pm 2$ (r)  
+b. $\Delta J = -1$ (p) and $\Delta J = +1$ (r)  
+c. $\Delta J = +1$ (p) and $\Delta J = -1$ (r)  
+d. $\Delta J = 0$ for both p and r  
+e. $\Delta J = \pm 3$  
+
+---
+
+**7. Which of the following approximates the rovibrational transition wavenumbers in a simple harmonic‑oscillator plus rigid‑rotor model?**
+
+a. a single line independent of $j$  
+b. $\nu \approx \nu_0^2$  
+c. $\nu \approx 2BJ(J+1)$ only  
+d. $\nu \approx \nu_0 \pm 2B(J+1)$ for p and r branches  
+e. a random distribution  
+
+---
+
+**8. In electronic spectroscopy of diatomic molecules, which combination of changes typically occurs in an electronic transition?**
+
+a. electronic state changes, but vibrational and rotational states remain fixed  
+b. only rotational quantum number changes  
+c. primarily vibrational changes with no electronic change  
+d. electronic, vibrational, and rotational quantum numbers can all change, giving vibronic‑rotational structure  
+e. only spin quantum numbers change   
+
+---
+
+**9. Why are electronic transitions typically found at much higher energies (shorter wavelengths) than vibrational or rotational transitions?**
+
+a. electronic masses are larger than nuclear masses  
+b. changes in electronic energy levels are usually much larger than nuclear vibrational or rotational spacings  
+c. vibrational transitions require relativistic corrections  
+d. rotational transitions do not conserve energy  
+e. electronic transitions have zero frequency  
+
+---
+
+**10. Which region is most commonly associated with *electronic* transitions in small molecules?**
+
+a. microwave region  
+b. infrared region  
+c. visible and ultraviolet regions  
+d. radio‑frequency region  
+e. far‑infrared only  
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.a, 2.c, 3.b, 4.a, 5.b, 6.b, 7.d, 8.d, 9.b, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.c, 3.b, 4.a, 5.b, 6.b, 7.d, 8.d, 9.b, 10.c'
+}`
+
+

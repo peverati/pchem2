@@ -33,9 +33,9 @@ To find the Hartree-Fock (HF) molecular orbitals (MOs) we need to solve the foll
 
 \begin{equation}
 \begin{vmatrix}
-F_{11}-ES_{11}   & F_{12}-ES_{12}   & \cdots & F_{17}-ES_{17}\\\
-F_{21}-ES_{21}   & F_{22}-ES_{22}   & \cdots & F_{27}-ES_{27}\\\
-\vdots           &   \vdots         & \ddots & \vdots\\\
+F_{11}-ES_{11}   & F_{12}-ES_{12}   & \cdots & F_{17}-ES_{17}\\
+F_{21}-ES_{21}   & F_{22}-ES_{22}   & \cdots & F_{27}-ES_{27}\\
+\vdots           &   \vdots         & \ddots & \vdots\\
 F_{71}-ES_{71}   & F_{72}-ES_{72}   & \cdots & F_{77}-ES_{77}
 \end{vmatrix}=0
 (\#eq:hfequationh2o)
@@ -63,13 +63,13 @@ We can try to solve the SCF procedure for water using a fixed geometry of the nu
 \begin{equation}
 \mathbf{S}=
 \begin{bmatrix}
-\mathrm{O}\;1s & \mathrm{O}\;2s & \mathrm{O}\;2p_x & \mathrm{O}\;2p_y & \mathrm{O}\;2p_z & \mathrm{H}_a\;1s & \mathrm{H}_b\;1s & \\\
-1.000 & & & & & &  &\mathrm{O}\;1s \\\ 
-0.237 & 1.000 & & & & &  &\mathrm{O}\;2s \\\
-0.000 & 0.000 & 1.000 & & & & &\mathrm{O}\;2p_x \\\
-0.000 & 0.000 & 0.000 & 1.000 & & & &\mathrm{O}\;2p_y \\\
-0.000 & 0.000 & 0.000 & 0.000 & 1.000 & & &\mathrm{O}\;2p_z \\\
-0.055 & 0.479 & 0.000 & 0.313 & -0.242 & 1.000 &  &\mathrm{H}_a\;1s \\\
+\mathrm{O}\;1s & \mathrm{O}\;2s & \mathrm{O}\;2p_x & \mathrm{O}\;2p_y & \mathrm{O}\;2p_z & \mathrm{H}_a\;1s & \mathrm{H}_b\;1s & \\
+1.000 & & & & & &  &\mathrm{O}\;1s \\
+0.237 & 1.000 & & & & &  &\mathrm{O}\;2s \\
+0.000 & 0.000 & 1.000 & & & & &\mathrm{O}\;2p_x \\
+0.000 & 0.000 & 0.000 & 1.000 & & & &\mathrm{O}\;2p_y \\
+0.000 & 0.000 & 0.000 & 0.000 & 1.000 & & &\mathrm{O}\;2p_z \\
+0.055 & 0.479 & 0.000 & 0.313 & -0.242 & 1.000 &  &\mathrm{H}_a\;1s \\
 0.055 & 0.479 & 0.000 & -0.313 & -0.242 & 0.256 & 1.000&\mathrm{H}_b\;1s 
 \end{bmatrix}
 (\#eq:smatrix)
@@ -80,12 +80,12 @@ There are many noteworthy features in $\mathbf{S}$. First, it is shown in a lowe
 \begin{equation}
 \mathbf{K}=
 \begin{bmatrix}
-29.003 & & & & & & \\\ 
--0.168 & 0.808 & & & & &  \\\
-0.000 & 0.000 & 2.529 & & & & \\\
-0.000 & 0.000 & 0.000 & 2.529 & & & \\\
-0.000 & 0.000 & 0.000 & 0.000 & 2.529 & & \\\
--0.002 & 0.132 & 0.000 & 0.229 & -0.177 & 0.760 & \\\
+29.003 & & & & & & \\
+-0.168 & 0.808 & & & & &  \\
+0.000 & 0.000 & 2.529 & & & & \\
+0.000 & 0.000 & 0.000 & 2.529 & & & \\
+0.000 & 0.000 & 0.000 & 0.000 & 2.529 & & \\
+-0.002 & 0.132 & 0.000 & 0.229 & -0.177 & 0.760 & \\
 -0.002 & 0.132 & 0.000 & -0.229 & -0.177 & 0.009 & 0.760
 \end{bmatrix}
 (\#eq:kmatrix)
@@ -96,12 +96,12 @@ Notice that every diagonal term is much larger than any off-diagonal term. Recal
 \begin{equation}
 \mathbf{V}=
 \begin{bmatrix}
--61.733 & & & & & & \\\ 
--7.447 & -10.151 & & & & &  \\\
-0.000 & 0.000 & -9.926 & & & & \\\
-0.000 & 0.000 & 0.000 & -10.152 & & & \\\
-0.000 & 0.000 & 0.000 & 0.000 & -10.088 & & \\\
--1.778 & -3.920 & 0.000 & -0.228 & -0.184 & -5.867 & \\\
+-61.733 & & & & & & \\
+-7.447 & -10.151 & & & & &  \\
+0.000 & 0.000 & -9.926 & & & & \\
+0.000 & 0.000 & 0.000 & -10.152 & & & \\
+0.000 & 0.000 & 0.000 & 0.000 & -10.088 & & \\
+-1.778 & -3.920 & 0.000 & -0.228 & -0.184 & -5.867 & \\
 -1.778 & -3.920 & 0.000 & 0.228 & 0.184 & -1.652 & -5.867
 \end{bmatrix}
 (\#eq:vmatrix)
@@ -114,12 +114,12 @@ The sum of the kinetic and nuclear attraction integrals is usually called the on
 \begin{equation}
 \mathbf{P}=
 \begin{bmatrix}
-2.108 & & & & & & \\\ 
--0.456 & 2.010 & & & & &  \\\
-0.000 & 0.000 & 2.000 & & & & \\\
-0.000 & 0.000 & 0.000 & 0.737 & & & \\\
--0.104 & 0.618 & 0.000 & 0.000 & 1.215 & & \\\
--0.022 & -0.059 & 0.000 & 0.539 & -0.482 & 0.606 & \\\
+2.108 & & & & & & \\
+-0.456 & 2.010 & & & & &  \\
+0.000 & 0.000 & 2.000 & & & & \\
+0.000 & 0.000 & 0.000 & 0.737 & & & \\
+-0.104 & 0.618 & 0.000 & 0.000 & 1.215 & & \\
+-0.022 & -0.059 & 0.000 & 0.539 & -0.482 & 0.606 & \\
 -0.022 & -0.059 & 0.000 & -0.539 & -0.482 & -0.183 & 0.606
 \end{bmatrix}
 (\#eq:pmatrix)
@@ -130,12 +130,12 @@ With $\mathbf{P}$, we can compute the remaining contribution of $\mathbf{G}$ to 
 \begin{equation}
 \mathbf{F}=
 \begin{bmatrix}
--20.236 & & & & & & \\\ 
--5.163 & -2.453 & & & & &  \\\
-0.000 & 0.000 & -0.395 & & & & \\\
-0.000 & 0.000 & 0.000 & -0.327 & & & \\\
-0.029 & 0.130 & 0.000 & 0.000 & -0.353 & & \\\
--1.216 & -1.037 & 0.000 & -0.398 & 0.372 & -0.588 & \\\
+-20.236 & & & & & & \\ 
+-5.163 & -2.453 & & & & &  \\
+0.000 & 0.000 & -0.395 & & & & \\
+0.000 & 0.000 & 0.000 & -0.327 & & & \\
+0.029 & 0.130 & 0.000 & 0.000 & -0.353 & & \\
+-1.216 & -1.037 & 0.000 & -0.398 & 0.372 & -0.588 & \\
 -1.216 & -1.037 & 0.000 & 0.398 & 0.372 & -0.403 & -0.588
 \end{bmatrix}
 (\#eq:fmatrix)
@@ -164,16 +164,16 @@ The final optimized MOs for water are:
 
 \begin{equation}
 \begin{matrix}                  
-& 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\
-E  & -20.24094 &  -1.27218   &   -.62173    &  -.45392     &    -.39176    &   .61293    & .75095 \\\
-\\\
-1                & .99411    &   -.23251   &   .00000     &  -.10356     &    .00000     &   -.13340   & .00000   \\\
-2                & .02672    &   .83085    &  .00000      & .53920       &  .00000      &  .89746     & .00000  \\\
-3                & .00000    &   .00000    &  .00000      & .00000       &  1.0000       & .00000      & .00000  \\\
-4                & .00000    &   .00000    & .60677       &  .00000      &   .00000      &  .00000     & .99474  \\\
-5                & -.00442   &    -.13216  &    .00000    &   .77828     &    .00000     &  -.74288    &  .00000  \\\
-6                & -.00605   &    .15919   &   .44453     &  -.27494     &    .00000     &  -.80246    &  -.84542  \\\
-7                &  -.00605  &     .15919  &     -.44453  &     -.27494  &       .00000  &     -.80246 &     .84542 \\\
+& 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+E  & -20.24094 &  -1.27218   &   -.62173    &  -.45392     &    -.39176    &   .61293    & .75095 \\
+\\
+1                & .99411    &   -.23251   &   .00000     &  -.10356     &    .00000     &   -.13340   & .00000   \\
+2                & .02672    &   .83085    &  .00000      & .53920       &  .00000      &  .89746     & .00000  \\
+3                & .00000    &   .00000    &  .00000      & .00000       &  1.0000       & .00000      & .00000  \\
+4                & .00000    &   .00000    & .60677       &  .00000      &   .00000      &  .00000     & .99474  \\
+5                & -.00442   &    -.13216  &    .00000    &   .77828     &    .00000     &  -.74288    &  .00000  \\
+6                & -.00605   &    .15919   &   .44453     &  -.27494     &    .00000     &  -.80246    &  -.84542  \\
+7                &  -.00605  &     .15919  &     -.44453  &     -.27494  &       .00000  &     -.80246 &     .84542 \\
 \end{matrix}
 (\#eq:eigenvalMO)
 \end{equation}
@@ -205,5 +205,125 @@ But the $sp^3$-hybridized picture of water works well, for example, to explain i
 ```{r Fig2c12b, out.width='60%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Molecular electrostatic potential of water plotted on a 0.02 a.u. isodensity surface.'}
 knitr::include_graphics('./img/Fig13_map.jpg')
 ```
+
+
+## Chapter Review {#rev13}
+### Study Questions {#quest13}
+
+**1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?**
+
+a. only 1s  
+b. 1s and 2s  
+c. 2s and 2p$_z$ only  
+d. 1s, 2s, and three 2p (2p$_x$, 2p$_y$, 2p$_z$)  
+e. only three 2p orbitals  
+
+---
+
+**2. How many atomic basis functions are used in the minimal representation of H$_2$O?**
+
+a. 3  
+b. 5  
+c. 7  
+d. 9  
+e. 12  
+
+---
+
+**3. Which general method is used to build molecular orbitals for water from the chosen atomic basis in chapter 13?**
+
+a. ure valence‑bond resonance structures  
+b. LCAO-MO (linear combination of atomic orbitals to form molecular orbitals)  
+c. perturbation theory on hydrogenic orbitals only  
+d. classical hybridization rules only  
+e. direct diagonalization of the nuclear hamiltonian  
+
+---
+
+**4.  In the minimal‑basis HF treatment of water, the number of *one‑electron* basis functions $m$ determines the size of which matrix?**
+
+a. the overlap and fock matrices, each of size $m \times m$  
+b. the nuclear–nuclear repulsion matrix of size $m^2 \times m^2$  
+c. a scalar energy value  
+d. the $3m\times 3m$ kinetic matrix  
+e. only the density matrix of size $2\times 2$
+
+
+---
+
+**5. In the minimal‑basis water example, how many distinct one‑electron integrals (kinetic or nuclear attraction) over contracted basis functions are there before considering primitive gaussians?**
+
+a. 7  
+b. 49  
+c. 147  
+d. 196  
+e. 2,401  
+
+---
+
+**6. For the *two‑electron* integrals over the 7 contracted basis functions on water, how many distinct contracted two‑electron integrals are there (before primitives)?**
+
+a. 7  
+b. 49  
+c. 147  
+d. 196  
+e. 2,401    
+
+---
+
+**7. What main point does the water/minimal‑basis example illustrate about *ab initio* calculations, even for small molecules?**
+
+a. the number of two‑electron integrals quickly becomes very large and dominates computational cost  
+b. only one‑electron integrals matter for molecular properties  
+c. integrals scale linearly with system size  
+d. integral evaluation is trivial and negligible  
+e. minimal bases always give chemically exact results  
+
+---
+
+**8. In the minimal‑basis H$_2$O example, which qualitative feature of the resulting MO diagram is reproduced correctly?**
+
+a. exact experimental orbital energies  
+b. ordering of core, bonding, lone‑pair, and antibonding orbitals  
+c. no distinction between bonding and nonbonding orbitals  
+d. completely delocalized electrons with no identifiable lone pairs  
+e. degenerate $\sigma$ and $\pi$ orbitals  
+
+---
+
+**9. What is the main physical interpretation of the two highest‑occupied MOs in the water HF/minimal‑basis picture?**
+
+a. $\sigma$ bonds along the H-O-H bisector  
+b. core orbitals on oxygen  
+c. primarily oxygen lone‑pair orbitals oriented roughly toward the non‑bonding directions  
+d. purely hydrogen $1s$ orbitals  
+e. totally delocalized over all three atoms with no directional character  
+
+---
+
+**10. Despite its simplicity, what important qualitative property of water does the minimal‑basis HF treatment reproduce?**
+
+a. linear geometry  
+b. no permanent dipole moment  
+c. equal O-H and H-H bond lengths  
+d. three‑fold symmetry  
+e. bent geometry with approximate correct orientation of lone pairs and bonds  
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.c, 10.e
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.c, 10.e'
+}`
+
 
 

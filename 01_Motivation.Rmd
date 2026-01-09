@@ -133,3 +133,121 @@ E &= \hbar \omega,
 which are known as **de Broglie's equations**. We will use those equation to develop wave mechanics in the next chapters.^[This chapter has been written with help from ChatGPT]
 
 
+## Chapter Review {#rev1}
+### Study Questions {#quest1}
+
+**1. The “ultraviolet catastrophe” refers to which failure of classical physics?**
+
+a. Inability to explain discrete atomic emission spectra  
+b. Prediction that black-body intensity vanishes at long wavelengths  
+c. Prediction that black-body intensity diverges at short wavelengths  
+d. Failure to explain the existence of photons  
+e. Prediction that all objects emit only in the ultraviolet region  
+
+---
+
+**2. What key assumption did Planck introduce to resolve the ultraviolet catastrophe?**
+
+a. Charge is quantized in units of the electron charge  
+b. Energy of oscillators is quantized in multiples of $h\nu$
+c. Momentum is continuous but position is quantized  
+d. Light speed depends on wavelength in vacuum  
+e. Temperature of a black body is quantized  
+
+---
+
+**3. What is the main qualitative difference between the Rayleigh–Jeans law and Planck’s law at short wavelengths?**
+
+a. Rayleigh–Jeans diverges, Planck’s law goes to zero  
+b. Both diverge to infinity but at different rates  
+c. Rayleigh–Jeans is constant, Planck’s law oscillates  
+d. Rayleigh–Jeans is valid only in the ultraviolet, Planck only in infrared  
+e. Planck’s law diverges while Rayleigh–Jeans goes to zero  
+
+---
+
+**4. In the classical wave picture of the photoelectric effect, how is the kinetic energy $K$ of emitted electrons predicted to depend on the incident light?**
+
+
+a. Proportional to the square of the wavelength  
+b. Independent of intensity, depends only on work function  
+c. Proportional to the inverse of exposure time  
+d. Proportional to the intensity of the light  
+e. Independent of both intensity and frequency  
+
+---
+
+**5. Which experimental observation about the photoelectric effect contradicts the classical wave prediction?**
+
+a. Increase of emission with higher temperature of the metal  
+b. Emission of electrons only for polarized light  
+c. Existence of negative ions at the surface  
+d. Disappearance of current at very high intensities  
+e. Existence of a threshold frequency independent of intensity 
+
+---
+
+**6. Using $E = h\nu$ and $\lambda \nu = c$, which expression correctly relates photon energy to wavelength?**
+
+a. $E = h c / \lambda$
+b. $E = h \lambda / c$ 
+c. $E = c / (h \lambda)$
+d. $E = h c \lambda$
+e. $E = \lambda^2 / h c$
+
+---
+
+**7. Which de Broglie relation connects particle momentum $p$ with wave vector $k$?**
+
+a. $p = k / \hbar$
+b. $p = \hbar / k$
+c. $p = \hbar k^2$
+d. $p = k^2 / \hbar$
+e. $p = \hbar k$ 
+
+---
+
+**8. What is the main conceptual implication of wave–particle duality for matter?**
+
+a. Matter is purely a continuous wave  
+b. Matter has only discrete allowed velocities  
+c. Matter exhibits both wave-like and particle-like properties depending on the experiment  
+d. Matter exists only as photons at small scales  
+e. Matter cannot be localized in space  
+
+---
+
+**9. In the historical development described in this chapter, which of the following came first chronologically?**
+
+a. Planck’s black-body quantization  
+b. Schrödinger’s wave equation  
+c. De Broglie’s matter waves  
+d. Heisenberg’s matrix mechanics  
+e. Bohr’s model of the atom  
+
+---
+
+**10. Which of the following best summarizes the crisis that led from classical to quantum physics as outlined in this Chapter?**
+
+a. Classical theories failed to conserve energy in chemical reactions
+b. Classical theories could not explain black-body spectra, photoelectric thresholds, and matter diffraction
+c. Classical mechanics could not describe planetary motion
+d. Classical thermodynamics predicted negative absolute temperatures
+e. Classical optics could not describe refraction at dielectric interfaces
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.c, 2.b, 3.a, 4.d, 5.e, 6.a, 7.e, 8.c, 9.a, 10.b
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.c, 2.b, 3.a, 4.d, 5.e, 6.a, 7.e, 8.c, 9.a, 10.b'
+}`
+

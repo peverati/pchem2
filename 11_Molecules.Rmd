@@ -123,12 +123,135 @@ Differentiating this energy with respect to the expansion coefficients $c_i$ yie
 
 \begin{equation}
 \begin{vmatrix}
-H_{11}-ES_{11}   & H_{12}-ES_{12}   & \cdots & H_{1m}-ES_{1m}\\\
-H_{21}-ES_{21}   & H_{22}-ES_{22}   & \cdots & H_{2m}-ES_{2m}\\\
-\vdots           &   \vdots         & \ddots & \vdots\\\
+H_{11}-ES_{11}   & H_{12}-ES_{12}   & \cdots & H_{1m}-ES_{1m}\\
+H_{21}-ES_{21}   & H_{22}-ES_{22}   & \cdots & H_{2m}-ES_{2m}\\
+\vdots           &   \vdots         & \ddots & \vdots\\
 H_{m1}-ES_{m1}   & H_{m2}-ES_{m2}   & \cdots & H_{mm}-ES_{mm}
 \end{vmatrix}=0
 (\#eq:molham12)
 \end{equation}
 
 where $m$ is the number of basis functions used to expand the atomic orbitals. Solving this set of equations with a Hamiltonian where the electron-electron correlation is neglected results is non-trivial, but possible. The reason for the complications comes from the fact that even if we are neglecting the direct interaction between electrons, each of them interact with the nuclei through an interaction that is screened by the average field of all other electrons, similarly to what we saw for the helium atom. This means that the Hamiltonian itself and the value of the coefficients $c_i$ in the wave function mutually depend on each other. A solution to this problem can be achieved numerically using specialized computer programs that use a cycle called the **self-consistent-field (SCF) procedure**. Starting from an initial guess of the coefficients, an approximated Hamiltonian operator is built from them and used to solve eq. \@ref(eq:molham12). This solution gives updated values of the coefficients, which can then be used to create an improved version of the approximated Hamiltonian. This procedure is repeated until both the coefficients and the operator do not change anymore. From this final solution, the energy of the molecule is then calculated.
+
+
+## Chapter Review {#rev11}
+### Study Questions {#quest11}
+
+**1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?**
+
+a. only electronic kinetic energy and electron–nuclear attraction  
+b. only nuclear kinetic energy and nuclear–nuclear repulsion  
+c. spin–orbit and relativistic corrections only  
+d. only electron–electron repulsion and nuclear–nuclear repulsion  
+e. electronic and nuclear kinetic energies, electron–nuclear, electron–electron, and nuclear–nuclear interactions  
+
+---
+
+**2. What makes the exact molecular Schrödinger equation harder than the atomic case?**
+
+a. electrons disappear in molecules  
+b. nuclei can be treated classically in atoms but not in molecules  
+c. the presence of multiple moving nuclei in addition to many electrons  
+d. there is no coulomb interaction in molecules  
+e. the electron mass changes in molecules  
+
+---
+
+**3. What is the central physical idea behind the Born–Oppenheimer approximation?**
+
+a. electrons are much heavier than nuclei  
+b. nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion  
+c. electrons and nuclei move with the same characteristic time scale  
+d. both electrons and nuclei can be treated as classical particles  
+e. nuclei do not contribute to the energy at all  
+
+
+---
+
+**4. Mathematically, the Born–Oppenheimer approximation relies on what property of the Hamiltonian?**
+
+a. exact commutation with the position operator  
+b. separability into electronic and nuclear parts (plus interactions)  
+c. absence of kinetic energy terms  
+d. Hermiticity of the potential energy operator  
+e. linearity of the time derivative  
+
+
+---
+
+**5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by “total energy” of a molecule at fixed geometry?**
+
+a. electronic energy $E_e$ at that geometry plus the constant nuclear–nuclear repulsion term  
+b. nuclear kinetic energy only  
+c. electronic energy without nuclear–nuclear repulsion  
+d. purely classical potential energy  
+e. nuclear vibrational zero‑point energy  
+
+---
+
+**6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?**
+
+a. a PES is the graph of electronic energy as a function of nuclear geometry  
+b. a PES is the graph of nuclear kinetic energy versus time  
+c. a PES is independent of nuclear positions  
+d. a PES depends only on electron spin  
+e. PESs are defined only for diatomic molecules  
+
+
+---
+
+**7. Which of the following is *not* a direct consequence or assumption of the Born–Oppenheimer approximation?**
+
+a. electronic and nuclear motions can be approximately separated  
+b. electrons move in the field of fixed nuclei  
+c. nuclear motion can be described on a pes obtained from electronic energies  
+d. electron–nuclear coupling can never be important for any property  
+e. total wavefunctions are approximated as products of electronic and nuclear parts  
+
+---
+
+**8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbital coefficients leads to what?**
+
+a. the time‑dependent Schrödinger equation  
+b. an over‑determined system with no nontrivial solutions  
+c. a single algebraic equation for the total energy  
+d. purely classical equations of motion for nuclei  
+e. a set of coupled one‑electron equations involving the fock operator (Hartree–Fock equations)  
+
+---
+
+**9. Which of the following sentences describes the Fock operator $\hat{F}$ in Hartree–Fock theory?**
+
+a. a two‑electron operator containing only electron–electron repulsion  
+b. a purely nuclear operator  
+c. a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron–electron (Coulomb and exchange) terms
+d. an operator that depends only on spin and not on spatial coordinates  
+e. the exact electronic Hamiltonian    
+
+---
+
+**10. In the Hartree–Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?**
+
+a. by forcing all electrons into different nuclei  
+b. by requiring all spatial orbitals to be orthogonal but ignoring spin  
+c. by constructing an antisymmetric Slater determinant of spin‑orbitals  
+d. by adding a large repulsive potential at short inter‑electronic distances  
+e. by using only hydrogen‑like orbitals  
+
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c'
+}`
+
+

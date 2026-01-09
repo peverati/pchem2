@@ -68,7 +68,7 @@ This final equation is the equation of motion for the ball, from which we can ca
 
 We can use the equation of motion obtained above to solve this problem, and obtain for this specific case $t\simeq2.12\;\mathrm{s}$.^[Can you write a python program to do this calculation?]
 
-```
+> ```
 
 The formula of Newtonian mechanics are not the only one we can use to solve a problem in classical mechanics. We have at least two other equivalent approaches to the same problem that might end up being more useful in certain situations. 
 
@@ -146,7 +146,7 @@ m\ddot{x}&=-mG \\
 
 Which is the same result as obtained from the Newtonian method.  Integrating twice, we get the exact same formulas that we can use the same way.
 
-```
+> ```
 
 The advantage of Lagrangian mechanics is that it is not constrained to use a coordinate system. For example, if we have a bead moving along a wire, we can define the coordinate system as the distance along the wire, making the formulas much simpler than in Newtonian mechanics.  Also, since the Lagrangian depends on kinetic and potential energy it does a much better job with constraint forces.
 
@@ -225,7 +225,7 @@ and then replacing the definition of $\dot{p}$ obtained above, we get:
 
 which—once again—is the same result obtained for the two previous cases. Integrating this twice, we get the familiar equation of motion for our problem.
 
-```
+> ```
 
 ## Coulomb's Law
 Coulomb's Law  states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them:
@@ -288,3 +288,126 @@ In the simplest case of two point charges $q_1$ and $q_2$, the electrostatic pot
 \end{equation}
 
 This last equation will become very important in future chapters. Notice the difference between eq.  \@ref(eq:coulomb5) for the *energy*, $E$, and eq.  \@ref(eq:coulomb3) for the *magnitude of the electric field*, $|\mathbf{E}|$. 
+
+
+
+## Chapter Review {#rev2}
+### Study Questions {#quest2}
+
+**1. What is the central quantity in Newtonian mechanics?**
+
+a. Force  
+b. Action  
+c. Wavefunction  
+d. Electric field  
+e. Partition function 
+
+---
+
+**2. In the ball-under-gravity example, which force is used to set up the equation of motion?**
+
+a. $F_{\text{gravity}} = +mG$
+b. $F_{\text{gravity}} = -mG$ 
+c. $F_{\text{gravity}} = -k x$
+d. $F_{\text{gravity}} = qE$ 
+e. $F_{\text{gravity}} = 0$  
+ 
+
+---
+
+**3. Which statement is true about the equation of motion for the 1D motion of a ball tossed vertically?**
+
+a. It is valid only for very small masses  
+b. It is valid only in two dimensions  
+c. It assumes variable gravitational acceleration 
+d. It requires relativistic corrections  
+e. It does not depend on the mass of the ball  
+
+---
+
+**4. How is the Lagrangian $L$ of a system defined?**
+
+a. $L = K + V$
+b. $L = p \dot{r} - H$
+c. $L = K - V$
+d. $L = F \cdot r$
+e. $L = \partial K / \partial t$
+
+---
+
+**5. In the Lagrangian formulation, what is the action $S$?**
+
+a. The time integral of $L$ between $t_1$ and $t_2$ 
+b. The instantaneous kinetic energy  
+c. The work done by conservative forces  
+d. The momentum times position  
+e. The time derivative of the Hamiltonian  
+
+---
+
+**6. In Hamiltonian mechanics, how is the generalized momentum $p$ defined?**
+
+a. $p = m \ddot{r}$
+b. $p = \dfrac{\partial H}{\partial r}$
+c. $p = \dfrac{\partial V}{\partial r}$
+d. $p = \dfrac{\partial L}{\partial \dot{r}}$
+e. $p = \dfrac{\partial K}{\partial r}$
+
+---
+
+**7. The Hamiltonian $H(p,r)$ is obtained from the Lagrangian via which transformation?**
+
+a. Fourier transformation  
+b. Legendre transformation  
+c. Laplace transformation  
+d. Gauge transformation  
+e. Lorentz transformation  
+
+---
+
+**8. What is an advantage of Lagrangian mechanics over Newtonian mechanics?**
+
+a. It eliminates the need for forces entirely  
+b. It is valid only for relativistic systems  
+c. It does not require energy conservation  
+d. It works only in one dimension  
+e. It naturally handles constraints and non-Cartesian coordinates  
+
+---
+
+**9. The magnitude of the electric field $|E|$ created by a point charge $q$ at distance $r$ is given by which of the following formula?**
+
+a. $|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r^2}$ 
+b. $|E| = \dfrac{1}{4\pi \varepsilon_0} |q| r^2$
+c. $|E| = \dfrac{|q|}{r}$
+d. $|E| = k_B T / r^2$
+e. $|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r}$
+
+---
+
+**10. The electrostatic potential energy $E$ of two point charges $q_1$ and $q_2$ separated by distance $r$ is given by which of the following formula?**
+
+a. $E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}$
+b. $E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}$ 
+c. $E = q_1 q_2 r$
+d. $E = k_B T r$ 
+e. $E = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2$
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.a, 2.b, 3.e, 4.c, 5.a, 6.d, 7.b, 8.e, 9.a, 10.b
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.d, 7.b, 8.e, 9.a, 10.b'
+}`
+
+
+
+

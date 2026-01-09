@@ -83,26 +83,32 @@ E \psi(x)
 After some effort, the eigenfunctions are:
 
 \begin{equation}
-\psi_n(x) = N_n H_n(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=0,1,2,\ldots,\infty,
+\psi_n(x) = N_{n-1} H_{n-1}(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad n=1,2,\ldots,\infty,
 (\#eq:HO3)
 \end{equation}
 
-where $H_n$ is the Hermite polynomial of degree $n$, and $\alpha$ and $N_n$ are defined by 
+where $H_{n-1}$ is the Hermite polynomial of degree $n-1$, and $\alpha$ and $N_{n-1}$ are defined by 
 
 \begin{equation}
 \alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_n = \frac{1}{\sqrt{2^n n!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+N_{n-1} = \frac{1}{\sqrt{2^{n-1} (n-1)!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
 (\#eq:HO4)
 \end{equation}
 
 The eigenvalues are:
 
 \begin{equation}
-E_n = \hbar \omega \left(n + \frac{1}{2} \right),
+E_n = \hbar \omega \left(n - \frac{1}{2} \right),
 (\#eq:HO5)
 \end{equation}
 
-with  $\omega = \sqrt{k/ \mu}$. Notice how, once again, the eigenfunctions and eigenvalues are not continuous. In this case, however, the first eigenvalue corresponds to $n=0$, but because of the $\frac{1}{2}$ factor in eq. \@ref(eq:HO5), the lowest energy state is, once again, not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \@ref(eq:HO5). The lowest possible energy (the ZPE) will be $E_0 = \frac{1}{2} \hbar \omega$.
+with  $\omega = \sqrt{k/ \mu}$. Notice how, once again, the eigenfunctions and eigenvalues are not continuous, and the lowest energy state is not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by eq. \@ref(eq:HO5). The lowest possible energy (the ZPE) will be:
+
+\begin{equation}
+E_1 = \frac{1}{2} \hbar \omega \neq 0
+(\#eq:zpeH)
+\end{equation}
+
 
 ## The Rigid Rotor
 
@@ -124,3 +130,123 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1),
 where $\ell=0,1,2,\ldots$ is the *azimuthal quantum number*, and $m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell$ is the *magnetic quantum number*. Each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$. Notice that the energy does not depend on the second index $m_{\ell}$, and the functions with fixed $m_{\ell}=-\ell,-\ell+1,\dots,\ell-1,\ell$ have the same energy. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion.
 
 Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum jumps discontinuously from one value to the next,^[You can think of this as either the "speed" at which the rotor is rotating, or even better, as its "angular frequency".] and also the orientation in space at which the rotor is allowed to rotate changes discontinuously. 
+
+
+## Chapter Review {#rev4}
+### Study Questions {#quest4}
+
+**1. Which three model systems are treated in this chapter as analytically solvable?**
+
+a. Hydrogen atom, particle in a box, rigid rotor  
+b. Hydrogen atom, harmonic oscillator, Morse oscillator  
+c. Particle in a box, harmonic oscillator, rigid rotor  
+d. Free particle, hydrogen atom, rigid rotor  
+e. Particle in a box, Coulomb potential, rigid rotor  
+
+---
+
+**2. For the 1D infinite potential well (“particle in a box”), the potential $V(x)$ is what?**
+
+a. Constant for all $x$  
+b. Zero for $0 \le x \le a$, infinite elsewhere  
+c. Linear in $x$ between 0 and $a$  
+d. Harmonic in $x^2$ between 0 and $a$  
+e. Zero everywhere  
+
+---
+
+**3. What boundary conditions are imposed on the wavefunction for the particle in a box?**
+
+a. $\psi(0) = \psi(a) = 1$  
+b. $\psi(0) = 0,\ \psi(a) = 1$  
+c. $\psi(0) = \psi'(a) = 0$  
+d. $\psi'(0) = \psi'(a) = 0$  
+e. $\psi(0) = \psi(a) = 0$  
+  
+---
+
+**4. Applying the $\psi(0)=0$ boundary condition to the particle in a box leads to which condition on the constants??**
+
+a. $A = 0$  
+b. $k = 0$  
+c. $A = B$  
+d. $B = 0$  
+e. $A = -B$  
+
+---
+
+**5. Which of the following is the correct spatial dependence of the normalized eigenfunctions for the particle in a box?**
+
+a. $\psi_n(x) \propto \sin\left(\dfrac{n\pi x}{a}\right)$  
+b. $\psi_n(x) \propto \cos\left(\dfrac{n\pi x}{a}\right)$  
+c. $\psi_n(x) \propto e^{ikx}$  
+d. $\psi_n(x) \propto x^n$  
+e. $\psi_n(x) \propto \delta(x-n)$  
+
+---
+
+**6. Which of the following are the energy eigenvalues $E_n$ for the particle in a box?**
+
+a. $E_n = \dfrac{\hbar^2 n^2}{2 m a^2}$ 
+b. $E_n = \dfrac{h^2 n^2}{8 m a^2}$  
+c. $E_n = \dfrac{1}{2} m n^2 a^2$  
+d. $E_n = \dfrac{n h c}{a}$  
+e. $E_n = n \hbar \omega$  
+
+---
+
+**7. The harmonic oscillator eigenfunctions are expressed in terms of which special functions?**
+
+a. Legendre polynomials $P_n$  
+b. Laguerre polynomials $L_n$  
+c. Hermite polynomials $H_n$  
+d. Bessel functions $J_n$  
+e. Spherical harmonics $Y_{\ell}^m$  
+
+---
+
+**8. Which of the following are the energy levels of the harmonic oscillator?**
+
+a. $E_n = \hbar \omega \left(n + \tfrac{1}{2}\right)$  
+b. $E_n = \hbar \omega n$  
+c. $E_n = \dfrac{h^2 n^2}{8 m a^2}$  
+d. $E_n = \dfrac{\hbar^2 n^2}{2m}$  
+e. $E_n = \dfrac{1}{2} k x^2$  
+
+---
+
+**9. What does the rigid rotor model represent?**
+
+a. A particle moving in a 1D infinite well  
+b. Two point masses at fixed distance rotating in 3D  
+c. A mass on a spring moving in 1D  
+d. A free particle in 3D  
+e. A charged particle in a uniform electric field  
+
+
+---
+
+**10. Which of the following are the energy levels of the rigid rotor?**
+
+a. $E_\ell = \dfrac{\hbar^2}{2I}\,\ell(\ell+1)$  
+b. $E_\ell = \hbar \omega (\ell + \tfrac{1}{2})$  
+c. $E_\ell = \dfrac{h^2 \ell^2}{8 I}$  
+d. $E_\ell = \dfrac{\hbar^2}{2I}\,m^2$  
+e. $E_\ell = \dfrac{1}{2} I \omega^2$  
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.c, 2.b, 3.e, 4.d, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.c, 2.b, 3.e, 4.d, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a'
+}`
+
+

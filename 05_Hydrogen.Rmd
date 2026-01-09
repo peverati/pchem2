@@ -82,3 +82,121 @@ E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad n=1,2,\ldots,\infty.
 Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azimuthal and magnetic quantum numbers, $\ell$ and $m$. Energy levels with the same $n$, but different $\ell$ and/or $m$ are called *degenerate states*, since they all have the same energy. This is, once again, source of misinterpretation in most general chemistry textbook:
 
 - According to the TISEq, the $2s$ and $2p$ orbitals of the hydrogen atom have the same energy.^[In practice, this is not true, because of a tiny effect called the [Lamb shift](https://en.wikipedia.org/wiki/Lamb_shift). The description of this effect requires to go beyond the Schrödinger equation—and essentially beyond quantum mechanics—into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the $2s-2p$ energy difference. The difference that is usually discussed in the context of the aufbau principle is a many-electron effect, as we will discuss in chapter \@ref(Atoms), and does not apply to hydrogen.]
+
+## Chapter Review {#rev5}
+### Study Questions {#quest5}
+
+**1. Which of the following is the electrostatic potential energy, $V(r)$, in the hydrogen atom?**
+
+a. $V(r) = -\dfrac{e^2}{4\pi \varepsilon_0 r}$  
+b. $V(r) = +\dfrac{e^2}{4\pi \varepsilon_0 r}$  
+c. $V(r) = \dfrac{1}{2} k r^2$  
+d. $V(r) = -G \dfrac{m_p m_e}{r}$  
+e. $V(r) = 0$  
+
+---
+
+**2. Which of the following is the kinetic-energy operator used in the hydrogen Hamiltonian?**
+
+a. $K = -\dfrac{\hbar^2}{2\mu}\nabla^2$  
+b. $K = -\dfrac{\hbar^2}{2m_e}\dfrac{d^2}{dr^2}$  
+c. $K = \dfrac{p^2}{2\mu}$  
+d. $K = -\dfrac{\hbar^2}{2}\nabla$  
+e. $K = -\dfrac{\hbar^2}{2M}\nabla^2$  
+
+---
+
+**3. How do you separate the hydrogen-atom wave function in spherical coordinates?**
+
+a. $\psi(r,\theta,\phi) = f(r) g(\theta)$  
+b. $\psi(r,\theta,\phi) = R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)$
+c. $\psi(r,\theta,\phi) = R(r) \cos\theta$  
+d. $\psi(r,\theta,\phi) = Y_\ell^{m_\ell}(\theta,\phi)$  
+e. $\psi(r,\theta,\phi) = R_{n\ell}(r) e^{i k r}$  
+
+---
+
+**4. Which special functions give the angular part of the hydrogen-atom wave functions?**
+
+a. Hermite polynomials  
+b. Associated Laguerre polynomials  
+c. Bessel functions  
+d. Plane waves  
+e. Spherical harmonics
+
+---
+
+**5. How do you calculate the Bohr's radius?**
+
+a. $a_0 = \dfrac{\varepsilon_0 h^2}{\pi \mu e^2}$  
+b. $a_0 = \dfrac{4\pi \varepsilon_0 \hbar^2}{\mu e^2}$  
+c. $a_0 = \dfrac{\hbar^2}{\mu e^2}$  
+d. $a_0 = \dfrac{\varepsilon_0 h}{\mu e}$  
+e. $a_0 = \dfrac{e^2}{4\pi \varepsilon_0 \hbar^2}$  
+
+---
+
+**6. Which special functions give the radial part of the hydrogen-atom wave functions?**
+
+a. Hermite polynomials  
+b. Legendre polynomials  
+c. Associated Laguerre functions  
+d. Spherical harmonics  
+e. Bessel functions  
+
+---
+
+**7. What are the allowed values of the principal quantum number $n$?**
+
+a. $n = 0, 1, 2, \dots$  
+b. $n = -\infty \dots \infty$  
+c. $n = 1, 2, 3, \dots$  
+d. $n = \tfrac{1}{2}, \tfrac{3}{2}, \dots$  
+e. $n = 2, 4, 6, \dots$  
+
+---
+
+**8. For a given $n$, what are the allowed values of the azimuthal quantum number $\ell$?**
+
+a. $\ell = 0,1,2,\dots,n-1$  
+b. $\ell = 1,2,\dots,n$  
+c. $\ell = -n,\dots,n$  
+d. $\ell = 0,\pm1,\pm2,\dots$  
+e. $\ell = n$ only  
+
+---
+
+**9. For or a given $\ell$, what are the allowed values of the magnetic quantum number $m_\ell$?**
+
+a. $m_\ell = 0,1,\dots,\ell$  
+b. $m_\ell = 1,2,\dots,\ell$  
+c. $m_\ell = -n,\dots,n$  
+d. $m_\ell = \pm \tfrac{1}{2}$  
+e. $m_\ell = -\ell, -\ell+1, \dots, \ell$  
+
+---
+
+**10. Which statement about orbitals does the chapter explicitly emphasize?**
+
+a. Orbitals physically contain up to two electrons  
+b. Each orbital is the mathematical description of one and only one electron  
+c. Orbitals are purely classical trajectories  
+d. Orbitals only exist for many-electron atoms  
+e. Orbitals always have dumbbell shapes in real space  
+
+---
+
+`r if (knitr::is_html_output()) {
+  '
+  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
+    Click to reveal
+  </span>
+  <span id="reveal-inline-content" style="display: none;">
+            1.a, 2.a, 3.b, 4.e, 5.a, 6.c, 7.c, 8.a, 9.e, 10.b
+  </span>
+  '
+} else if (knitr::is_latex_output()) {
+  'Answers: 1.a, 2.a, 3.b, 4.e, 5.a, 6.c, 7.c, 8.a, 9.e, 10.b'
+}`
+
+
