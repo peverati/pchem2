@@ -243,12 +243,12 @@ e. no selection rule
 
 ---
 
-**6. In rovibrational spectroscopy of a diatomic molecule, transitions are often labeled as p‑ and r‑branches. these correspond, respectively, to which of the following?**
+**6. In rovibrational spectroscopy of a diatomic molecule, transitions are often labeled as P‑ and R‑branches. these correspond, respectively, to which of the following?**
 
-a. $\Delta J = 0$ (p) and $\Delta J = \pm 2$ (r)  
-b. $\Delta J = -1$ (p) and $\Delta J = +1$ (r)  
-c. $\Delta J = +1$ (p) and $\Delta J = -1$ (r)  
-d. $\Delta J = 0$ for both p and r  
+a. $\Delta J = 0$ (P) and $\Delta J = \pm 2$ (R)  
+b. $\Delta J = -1$ (P) and $\Delta J = +1$ (R)  
+c. $\Delta J = +1$ (P) and $\Delta J = -1$ (R)  
+d. $\Delta J = 0$ for both P and R
 e. $\Delta J = \pm 3$  
 
 ---

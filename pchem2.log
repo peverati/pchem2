@@ -1,0 +1,3937 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  1 FEB 2026 19:12
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**pchem2.tex
+(./pchem2.tex
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/extsizes/extbook.cls
+Document Class: extbook 1999/01/07 v1.4a NON-Standard LaTeX document class
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/extsizes/size9.clo
+File: size9.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2018/09/24 v2.1i Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 57.
+\big@size=\dimen141
+)
+\c@part=\count194
+\c@chapter=\count195
+\c@section=\count196
+\c@subsection=\count197
+\c@subsubsection=\count198
+\c@paragraph=\count199
+\c@subparagraph=\count266
+\c@figure=\count267
+\c@table=\count268
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen142
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/05/23 v2.17q AMS math features
+\@mathmargin=\skip51
+For additional information on amsmath, use the `?' option.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen143
+)) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count269
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count270
+\leftroot@=\count271
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count272
+\DOTSCASE@=\count273
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count274
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count275
+\dotsspace@=\muskip17
+\c@parentequation=\count276
+\dspbrk@lvl=\count277
+\tag@help=\toks18
+\row@=\count278
+\column@=\count279
+\maxfields@=\count280
+\andhelp@=\toks19
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-04-26 v4.20 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count281
+\LTcapwidth=\dimen152
+\LT@head=\box54
+\LT@firsthead=\box55
+\LT@foot=\box56
+\LT@lastfoot=\box57
+\LT@gbox=\box58
+\LT@cols=\count282
+\LT@rows=\count283
+\c@LT@tables=\count284
+\c@LT@chunks=\count285
+\LT@p@ftn=\toks24
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen153
+\lightrulewidth=\dimen154
+\cmidrulewidth=\dimen155
+\belowrulesep=\dimen156
+\belowbottomsep=\dimen157
+\aboverulesep=\dimen158
+\abovetopsep=\dimen159
+\cmidrulesep=\dimen160
+\cmidrulekern=\dimen161
+\defaultaddspace=\dimen162
+\@cmidla=\count286
+\@cmidlb=\count287
+\@aboverulesep=\dimen163
+\@belowrulesep=\dimen164
+\@thisruleclass=\count288
+\@lastruleclass=\count289
+\@thisrulewidth=\dimen165
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box59
+\extrarowheight=\dimen167
+\NC@list=\toks25
+\extratabsurround=\skip58
+\backup@length=\skip59
+\ar@cellbox=\box60
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count290
+\calc@Bcount=\count291
+\calc@Adimen=\dimen168
+\calc@Bdimen=\dimen169
+\calc@Askip=\skip60
+\calc@Bskip=\skip61
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count292
+\calc@Cskip=\skip62
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/mdwtools/footnote.sty
+Package: footnote 1997/01/28 1.13 Save footnotes around boxes
+\fn@notes=\box61
+\fn@width=\dimen170
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks26
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\Gin@req@height=\dimen171
+\Gin@req@width=\dimen172
+)
+\pandoc@box=\box62
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip63
+\bibsep=\skip64
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count294
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2024/08/20 v0.6b Insert pages of external PDF documents (AM)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen173
+\ESO@tempdimb=\dimen174
+)
+\AM@pagewidth=\dimen175
+\AM@pageheight=\dimen176
+\AM@fboxrule=\dimen177
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/08/20 v0.6b Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count295
+\AM@pagebox=\box63
+\AM@global@opts=\toks27
+\AM@pagecnt=\count296
+\AM@toc@title=\toks28
+\AM@lof@heading=\toks29
+\c@AM@survey=\count297
+\AM@templatesizebox=\box64
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks30
+\thm@bodyfont=\toks31
+\thm@headfont=\toks32
+\thm@notefont=\toks33
+\thm@headpunct=\toks34
+\thm@preskip=\skip65
+\thm@postskip=\skip66
+\thm@headsep=\skip67
+\dth@everypar=\toks35
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-08-30 L3 programming layer (loader) 
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count298
+\l__pdf_internal_box=\box65
+)) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-08-16 LaTeX2e option processing using LaTeX3 keys
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/chemgreek/chemgreek.sty (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+\l__chemgreek_tmpa_int=\count299
+\g__chemgreek_tmpa_int=\count300
+)
+\l__mhchem_ce_distanceFromLastComma_int=\count301
+\__mhchem_arrow_extPgfLength_skip=\skip68
+\mhchem@minispace@tmp=\skip69
+\mhchem@minibackspace@tmp=\skip70
+\mhchem@bondwidth=\skip71
+\mhchem@bondheight=\skip72
+\mhchem@smallbondwidth@tmpA=\skip73
+\mhchem@smallbondwidth@tmpB=\skip74
+\mhchem@smallbondwidth=\skip75
+\mhchem@bondtmp@minussidebearingleft=\skip76
+\mhchem@bondtmp@minussidebearingright=\skip77
+\l__mhchem_option_version_int=\count302
+\mhchem@option@minusmathsidebearingleft=\dimen178
+\mhchem@option@minusmathsidebearingright=\dimen179
+\mhchem@option@minustextsidebearingleft=\dimen180
+\mhchem@option@minustextsidebearingright=\dimen181
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/cancel/cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count303
+\Gm@cntv=\count304
+\c@Gm@tempcnt=\count305
+\Gm@bindingoffset=\dimen182
+\Gm@wd@mp=\dimen183
+\Gm@odd@mp=\dimen184
+\Gm@even@mp=\dimen185
+\Gm@layoutwidth=\dimen186
+\Gm@layoutheight=\dimen187
+\Gm@layouthoffset=\dimen188
+\Gm@layoutvoffset=\dimen189
+\Gm@dimlist=\toks36
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip78
+\f@nch@O@elh=\skip79
+\f@nch@O@erh=\skip80
+\f@nch@O@olh=\skip81
+\f@nch@O@orh=\skip82
+\f@nch@O@elf=\skip83
+\f@nch@O@erf=\skip84
+\f@nch@O@olf=\skip85
+\f@nch@O@orf=\skip86
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count306
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen190
+\Hy@linkcounter=\count307
+\Hy@pagecounter=\count308
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count309
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4040.
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count310
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen191
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count311
+\Field@Width=\dimen192
+\Fld@charsize=\dimen193
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count312
+\c@Item=\count313
+\c@Hfootnote=\count314
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-07-10 v7.01j Hyperref driver for pdfTeX
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count315
+\c@bookmark@seq@number=\count316
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip87
+) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+\BKM@id=\count317
+))
+\c@theorem=\count318
+\c@lemma=\count319
+\c@corollary=\count320
+\c@proposition=\count321
+\c@conjecture=\count322
+\c@definition=\count323
+\c@example=\count324
+\c@exercise=\count325
+\c@hypothesis=\count326
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 135.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./pchem2.aux)
+\openout1 = `pchem2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+
+Package chemgreek Info: Activating mapping `default' on line 135.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(52.03491pt, 303.53267pt, 78.05241pt)
+* v-part:(T,H,B)=(78.0524pt, 455.299pt, 117.0786pt)
+* \paperwidth=433.62pt
+* \paperheight=650.43pt
+* \textwidth=303.53267pt
+* \textheight=455.299pt
+* \oddsidemargin=-20.23508pt
+* \evensidemargin=5.78242pt
+* \topmargin=-31.21759pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=9.0pt
+* \footskip=30.0pt
+* \marginparwidth=131.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=8.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring OFF on input line 135.
+<FrontPage_6x9.pdf, id=4, 433.62pt x 650.43pt>
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf>
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf>
+Package pdftex.def Info: FrontPage_6x9.pdf  used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+<FrontPage_6x9.pdf, id=7, page=1, 433.62pt x 650.43pt>
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf, page 1>
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf, page 1>
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf, page 1>
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf, page 1>
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+
+
+File: FrontPage_6x9.pdf Graphic file (type pdf)
+<use FrontPage_6x9.pdf, page 1>
+Package pdftex.def Info: FrontPage_6x9.pdf , page1 used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 650.4284pt.
+[1
+
+
+ <./FrontPage_6x9.pdf>]
+
+[2
+
+
+] (./pchem2.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 2.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[3{/Users/peve/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+
+[4]
+
+[5])
+\tf@toc=\write3
+\openout3 = `pchem2.toc'.
+
+
+
+[6]
+<./img/OEP_Figures.000.jpeg, id=201, 1584.92125pt x 1049.9225pt>
+File: ./img/OEP_Figures.000.jpeg Graphic file (type jpg)
+<use ./img/OEP_Figures.000.jpeg>
+Package pdftex.def Info: ./img/OEP_Figures.000.jpeg  used on input line 161.
+(pdftex.def)             Requested size: 242.82706pt x 160.84589pt.
+
+
+[7
+
+
+ <./img/OEP_Figures.000.jpeg>]
+
+[8]
+
+[9]
+
+[10
+
+
+]
+Chapter 1.
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.208 
+       [1
+
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 217.
+<./img/OEP_wiki0.png, id=232, 602.25pt x 481.8pt>
+File: ./img/OEP_wiki0.png Graphic file (type png)
+<use ./img/OEP_wiki0.png>
+Package pdftex.def Info: ./img/OEP_wiki0.png  used on input line 221.
+(pdftex.def)             Requested size: 212.47194pt x 169.97787pt.
+
+
+[2]
+
+[3{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./img/OEP_wiki0.png>]
+
+[4]
+
+[5]
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 344--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 363--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--369
+
+ []
+
+
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 369--371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+
+ []
+
+
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 420--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 479--481
+
+ []
+
+
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
+
+ []
+
+
+
+[10]
+Chapter 2.
+
+
+[11
+
+
+]
+Underfull \hbox (badness 3098) in paragraph at lines 549--549
+[][][]\T1/lmr/m/n/7 This ex-am-ple is based on Rhett Al-lain's blog post that can be found
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--549
+\T1/lmr/m/n/7 (here)[[]$https : / / rhettallain . com / 2018 / 10 / 31 / classical -[] mechanics -[] newtonian -[] lagrangian -[]
+ []
+
+
+
+[12]
+
+[13{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+<./img/OEP_wiki1.png, id=403, 1927.2pt x 1406.25375pt>
+File: ./img/OEP_wiki1.png Graphic file (type png)
+<use ./img/OEP_wiki1.png>
+Package pdftex.def Info: ./img/OEP_wiki1.png  used on input line 640.
+(pdftex.def)             Requested size: 212.47194pt x 155.03171pt.
+
+
+[14]
+
+[15 <./img/OEP_wiki1.png>]
+
+[16]
+
+[17]
+
+[18]
+Underfull \hbox (badness 2503) in paragraph at lines 784--785
+[]\T1/lmr/m/n/9 where $[]$ is the vec-to-rial dis-tance be-tween the charges,
+ []
+
+
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 835--837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 837--839
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--841
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 841--843
+
+ []
+
+
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 873--875
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 875--877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 879--881
+
+ []
+
+
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 913--915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 915--917
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 917--919
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 949--951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 951--953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 953--955
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 955--957
+
+ []
+
+
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 968--970
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 970--972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--974
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 974--976
+
+ []
+
+
+
+[23]
+
+[24]
+Chapter 3.
+
+Underfull \hbox (badness 1917) in paragraph at lines 1027--1028
+\T1/lmr/m/n/9 We can start the deriva-tion of the single-particle time-independent
+ []
+
+
+
+[25
+
+
+]
+Underfull \hbox (badness 3291) in paragraph at lines 1081--1082
+[]\T1/lmr/m/n/9 which can then be re-ar-ranged to the fa-mous \T1/lmr/bx/n/9 time-independent
+ []
+
+
+
+[26]
+
+[27]
+Overfull \hbox (11.77092pt too wide) detected at line 1148
+[][][]\OMS/lmsy/m/n/9 j\OML/lmm/m/it/9  \OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x; t\OT1/lmr/m/n/9 )\OMS/lmsy/m/n/9 j[] \OT1/lmr/m/n/9 = \OML/lmm/m/it/9  []\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x; t\OT1/lmr/m/n/9 )\OML/lmm/m/it/9  \OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x; t\OT1/lmr/m/n/9 ) = \OML/lmm/m/it/9  []\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x\OT1/lmr/m/n/9 ) [] [] \OML/lmm/m/it/9  \OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x\OT1/lmr/m/n/9 ) [] [] = \OML/lmm/m/it/9  []\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x\OT1/lmr/m/n/9 )\OML/lmm/m/it/9  \OT1/lmr/m/n/9 (\OML/lmm/m/it/9 x\OT1/lmr/m/n/9 )\OML/lmm/m/it/9 :
+ []
+
+
+
+[28]
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1218--1220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1254--1256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1256--1258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1260--1262
+
+ []
+
+
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1277--1279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1294--1296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1313
+
+ []
+
+
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1313--1315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1315--1317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1317--1319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1336--1338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1349--1351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1353--1355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1355--1357
+
+ []
+
+
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1368--1370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1372--1374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1374--1376
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1387--1389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1389--1391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1391--1393
+
+ []
+
+
+
+[33]
+
+[34
+
+
+]
+Chapter 4.
+
+
+[35]
+
+[36]
+
+[37]
+<./img/PIB.png, id=725, 712.5822pt x 1063.8144pt>
+File: ./img/PIB.png Graphic file (type png)
+<use ./img/PIB.png>
+Package pdftex.def Info: ./img/PIB.png  used on input line 1524.
+(pdftex.def)             Requested size: 242.82706pt x 362.50374pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1542--1549
+
+ []
+
+
+
+[38]
+
+[39 <./img/PIB.png>]
+
+[40]
+
+[41]
+<./img/PIR_levels.png, id=760, 1455.5178pt x 1016.1162pt>
+File: ./img/PIR_levels.png Graphic file (type png)
+<use ./img/PIR_levels.png>
+Package pdftex.def Info: ./img/PIR_levels.png  used on input line 1641.
+(pdftex.def)             Requested size: 273.17754pt x 190.70737pt.
+
+
+[42]
+
+[43 <./img/PIR_levels.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1680.
+(/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<./img/PIR_3d.png, id=780, 956.1321pt x 2175.327pt>
+File: ./img/PIR_3d.png Graphic file (type png)
+<use ./img/PIR_3d.png>
+Package pdftex.def Info: ./img/PIR_3d.png  used on input line 1691.
+(pdftex.def)             Requested size: 151.76633pt x 345.27124pt.
+
+LaTeX Warning: Float too large for page by 3.03616pt on input line 1696.
+
+<./img/PIR_top.png, id=783, 1016.8389pt x 2517.8868pt>
+File: ./img/PIR_top.png Graphic file (type png)
+<use ./img/PIR_top.png>
+Package pdftex.def Info: ./img/PIR_top.png  used on input line 1716.
+(pdftex.def)             Requested size: 151.76633pt x 375.78415pt.
+
+LaTeX Warning: Float too large for page by 12.60905pt on input line 1721.
+
+
+
+[44{/Users/peve/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
+
+[45 <./img/PIR_3d.png>]
+
+[46 <./img/PIR_top.png>]
+<./img/PIR_polar.png, id=805, 925.7787pt x 2262.051pt>
+File: ./img/PIR_polar.png Graphic file (type png)
+<use ./img/PIR_polar.png>
+Package pdftex.def Info: ./img/PIR_polar.png  used on input line 1737.
+(pdftex.def)             Requested size: 151.76633pt x 370.80618pt.
+
+LaTeX Warning: Float too large for page by 19.08109pt on input line 1742.
+
+
+
+[47]
+
+[48 <./img/PIR_polar.png>]
+
+[49]
+<./img/SH_Re.png, id=832, 1459.854pt x 1163.547pt>
+File: ./img/SH_Re.png Graphic file (type png)
+<use ./img/SH_Re.png>
+Package pdftex.def Info: ./img/SH_Re.png  used on input line 1805.
+(pdftex.def)             Requested size: 273.17754pt x 217.72067pt.
+<./img/SH_Im.png, id=833, 1459.854pt x 1161.3789pt>
+File: ./img/SH_Im.png Graphic file (type png)
+<use ./img/SH_Im.png>
+Package pdftex.def Info: ./img/SH_Im.png  used on input line 1814.
+(pdftex.def)             Requested size: 273.17754pt x 217.31497pt.
+
+
+[50]
+
+[51 <./img/SH_Re.png>]
+
+[52 <./img/SH_Im.png>]
+<./img/SH_abs.png, id=853, 1321.0956pt x 880.9713pt>
+File: ./img/SH_abs.png Graphic file (type png)
+<use ./img/SH_abs.png>
+Package pdftex.def Info: ./img/SH_abs.png  used on input line 1841.
+(pdftex.def)             Requested size: 273.17754pt x 182.15962pt.
+<./img/SH_Re_def.png, id=857, 1425.1644pt x 1132.4709pt>
+File: ./img/SH_Re_def.png Graphic file (type png)
+<use ./img/SH_Re_def.png>
+Package pdftex.def Info: ./img/SH_Re_def.png  used on input line 1852.
+(pdftex.def)             Requested size: 273.17754pt x 217.07251pt.
+<./img/SH_Im_def.png, id=858, 1422.9963pt x 1165.7151pt>
+File: ./img/SH_Im_def.png Graphic file (type png)
+<use ./img/SH_Im_def.png>
+Package pdftex.def Info: ./img/SH_Im_def.png  used on input line 1861.
+(pdftex.def)             Requested size: 273.17754pt x 223.78275pt.
+
+
+[53]
+
+[54 <./img/SH_abs.png>]
+
+[55 <./img/SH_Re_def.png>]
+
+[56 <./img/SH_Im_def.png>]
+
+[57]
+<./img/HarmOsc.png, id=894, 641.7576pt x 496.4949pt>
+File: ./img/HarmOsc.png Graphic file (type png)
+<use ./img/HarmOsc.png>
+Package pdftex.def Info: ./img/HarmOsc.png  used on input line 1924.
+(pdftex.def)             Requested size: 273.17754pt x 211.34467pt.
+
+
+[58]
+
+[59 <./img/HarmOsc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1945--1947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1947--1949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1949--1951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1951--1953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1964--1966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1966--1968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1968--1970
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1970--1972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1983--1985
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1985--1987
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1987--1989
+
+ []
+
+
+
+[60]
+Underfull \hbox (badness 10000) in paragraph at lines 1989--1991
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2004
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2004--2006
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2006--2008
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2008--2010
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2021--2023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2023--2025
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2027--2029
+
+ []
+
+
+
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 2042--2044
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2044--2046
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2046--2048
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2059--2061
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2061--2063
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2063--2065
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2065--2067
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2078--2080
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2080--2082
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2082--2084
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2084--2086
+
+ []
+
+
+
+[62]
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2099
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2099--2101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2101--2103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2103--2105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2118--2120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2120--2122
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2122--2124
+
+ []
+
+
+
+[63]
+
+[64
+
+
+]
+Chapter 5.
+
+
+[65]
+Overfull \hbox (18.29568pt too wide) detected at line 2160
+[][][]\OMS/lmsy/m/n/9 ^^@[] [] ^^@ []\OML/lmm/m/it/9   \OT1/lmr/m/n/9 = \OML/lmm/m/it/9 E :
+ []
+
+
+Overfull \hbox (31.36868pt too wide) detected at line 2189
+[][][][][]
+ []
+
+
+
+[66]
+
+[67]
+
+[68]
+
+[69]
+
+[70]
+Overfull \hbox (0.12381pt too wide) in paragraph at lines 2311--2313
+[]\T1/lmr/bx/n/9 Radial prob-a-bil-ity dis-tri-bu-tion plots\T1/lmr/m/n/9 : Show $\OML/lmm/m/it/9 P\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 r\OT1/lmr/m/n/9 ) = 4\OML/lmm/m/it/9 ^^Yr[]\OMS/lmsy/m/n/9 j\OML/lmm/m/it/9 R[]\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 r\OT1/lmr/m/n/9 )\OMS/lmsy/m/n/9 j[]$
+ []
+
+
+
+[71]
+Underfull \hbox (badness 10000) in paragraph at lines 2344--2346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2346--2348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2348--2350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2350--2352
+
+ []
+
+
+
+[72]
+Underfull \hbox (badness 10000) in paragraph at lines 2363--2365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2365--2367
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2367--2369
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2369--2371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2382--2384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2388--2390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2401--2403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2403--2405
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2405--2407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2407--2409
+
+ []
+
+
+
+[73]
+Underfull \hbox (badness 10000) in paragraph at lines 2420--2422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2422--2424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2424--2426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2426--2428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2439--2441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2441--2443
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2443--2445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2445--2447
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2458--2460
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2460--2462
+
+ []
+
+
+
+[74]
+Underfull \hbox (badness 10000) in paragraph at lines 2462--2464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2464--2466
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2477--2479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2479--2481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2481--2483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2483--2485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2496--2498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2498--2500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2500--2502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2502--2504
+
+ []
+
+
+
+[75]
+Underfull \hbox (badness 10000) in paragraph at lines 2515--2517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2517--2519
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2519--2521
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2521--2523
+
+ []
+
+
+
+[76]
+Chapter 6.
+
+
+[77
+
+
+]
+
+[78]
+
+[79]
+
+[80]
+
+[81]
+Overfull \hbox (27.74992pt too wide) detected at line 2741
+[][][][][]
+ []
+
+
+Overfull \hbox (4.354pt too wide) in paragraph at lines 2774--2775
+[]|$\OMS/lmsy/m/n/5 ^^@[] [] \OT1/lmr/m/n/5 + 
+ []
+
+
+
+[82]
+
+[83]
+
+[84]
+<./img/OEP_wiki2.png, id=1197, 501.875pt x 572.1375pt>
+File: ./img/OEP_wiki2.png Graphic file (type png)
+<use ./img/OEP_wiki2.png>
+Package pdftex.def Info: ./img/OEP_wiki2.png  used on input line 2871.
+(pdftex.def)             Requested size: 151.76633pt x 173.0132pt.
+
+
+[85]
+Underfull \hbox (badness 10000) in paragraph at lines 2888--2890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2890--2892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2892--2894
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2894--2896
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2907--2909
+
+ []
+
+
+
+[86 <./img/OEP_wiki2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2909--2911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2911--2913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2913--2915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2926--2928
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2928--2930
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2930--2932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2932--2934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2947--2949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2949--2951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2951--2953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2964--2966
+
+ []
+
+
+
+[87]
+Underfull \hbox (badness 10000) in paragraph at lines 2966--2968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2968--2970
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2970--2972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2985--2987
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2987--2989
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2989--2991
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3002--3004
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3004--3006
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3008--3010
+
+ []
+
+
+
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 3023--3025
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3025--3027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3027--3029
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3042--3044
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3044--3046
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3046--3048
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3059--3061
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3061--3063
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3063--3065
+
+ []
+
+
+
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 3065--3067
+
+ []
+
+
+
+[90]
+Chapter 7.
+
+
+[91
+
+
+]
+
+[92]
+
+[93]
+
+[94]
+
+[95]
+Underfull \hbox (badness 10000) in paragraph at lines 3216--3218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3218--3220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3220--3222
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3222--3224
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3235--3237
+
+ []
+
+
+
+[96]
+Underfull \hbox (badness 10000) in paragraph at lines 3237--3239
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3239--3241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3241--3243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3254--3256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3256--3258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3258--3260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3260--3262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3273--3275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3275--3277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3277--3279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3279--3281
+
+ []
+
+
+
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 3292--3294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3294--3296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3296--3298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3298--3300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3311--3313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3313--3315
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3315--3317
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3317--3319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3330--3332
+
+ []
+
+
+
+[98]
+Underfull \hbox (badness 10000) in paragraph at lines 3332--3334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3334--3336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3336--3338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3349--3351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3351--3353
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3353--3355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3355--3357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3368--3370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3370--3372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3372--3374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3374--3376
+
+ []
+
+
+
+[99]
+Underfull \hbox (badness 10000) in paragraph at lines 3387--3389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3389--3391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3391--3393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3393--3395
+
+ []
+
+
+
+[100]
+Chapter 8.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[101
+
+
+]
+
+[102]
+
+[103]
+
+[104]
+Underfull \hbox (badness 10000) in paragraph at lines 3490--3492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3511--3513
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3513--3515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3515--3517
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3528--3530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3530--3532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3532--3534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3534--3536
+
+ []
+
+
+
+[105]
+Underfull \hbox (badness 10000) in paragraph at lines 3547--3549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3549--3551
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3551--3553
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3553--3555
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3566--3568
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3568--3570
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3570--3572
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3572--3574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3585--3587
+
+ []
+
+
+
+[106]
+Underfull \hbox (badness 10000) in paragraph at lines 3587--3589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3589--3591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3591--3593
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3604--3606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3606--3608
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3608--3610
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3610--3612
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3623--3625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3625--3627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3627--3629
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3629--3631
+
+ []
+
+
+
+[107]
+Underfull \hbox (badness 10000) in paragraph at lines 3642--3644
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3644--3646
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3646--3648
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3648--3650
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3661--3663
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3663--3665
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3665--3667
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3667--3669
+
+ []
+
+
+
+[108]
+Chapter 9.
+
+
+[109
+
+
+]
+<./img/OEP_wiki3.jpg, id=1503, 562.1pt x 423.5825pt>
+File: ./img/OEP_wiki3.jpg Graphic file (type jpg)
+<use ./img/OEP_wiki3.jpg>
+Package pdftex.def Info: ./img/OEP_wiki3.jpg  used on input line 3692.
+(pdftex.def)             Requested size: 212.47194pt x 160.10986pt.
+
+
+[110 <./img/OEP_wiki3.jpg>]
+<./img/OEP_wiki4.png, id=1514, 1092.7224pt x 731.3724pt>
+File: ./img/OEP_wiki4.png Graphic file (type png)
+<use ./img/OEP_wiki4.png>
+Package pdftex.def Info: ./img/OEP_wiki4.png  used on input line 3707.
+(pdftex.def)             Requested size: 212.47194pt x 142.2097pt.
+
+
+[111 <./img/OEP_wiki4.png>]
+
+[112]
+
+[113]
+<./img/OEP_wiki9.png, id=1549, 506.88pt x 232.65pt>
+File: ./img/OEP_wiki9.png Graphic file (type png)
+<use ./img/OEP_wiki9.png>
+Package pdftex.def Info: ./img/OEP_wiki9.png  used on input line 3767.
+(pdftex.def)             Requested size: 212.47194pt x 97.52063pt.
+
+
+[114 <./img/OEP_wiki9.png>]
+
+[115]
+
+[116]
+
+[117]
+Underfull \hbox (badness 10000) in paragraph at lines 3850--3852
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3852--3854
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3854--3856
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3856--3858
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3869--3871
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3871--3873
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3873--3875
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3875--3877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3888--3890
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3890--3892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3892--3894
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3894--3896
+
+ []
+
+
+
+[118]
+Underfull \hbox (badness 10000) in paragraph at lines 3907--3909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3909--3911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3911--3913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3913--3915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3926--3928
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3928--3930
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3930--3932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3932--3934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3945--3947
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3947--3949
+
+ []
+
+
+
+[119]
+Underfull \hbox (badness 10000) in paragraph at lines 3949--3951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3951--3953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3964--3966
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3966--3968
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3968--3970
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3970--3972
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3983--3985
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3985--3987
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3987--3989
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3989--3991
+
+ []
+
+
+
+[120]
+Underfull \hbox (badness 10000) in paragraph at lines 4002--4004
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4004--4006
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4006--4008
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4008--4010
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4021--4023
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4023--4025
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4025--4027
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4027--4029
+
+ []
+
+
+
+[121]
+
+[122
+
+
+]
+Chapter 10.
+
+
+[123]
+
+[124]
+Overfull \hbox (20.24783pt too wide) detected at line 4112
+[][][]\OT1/lmr/m/n/9 	(\OT1/lmr/bx/n/9 x[]\OML/lmm/m/it/9 ; \OT1/lmr/bx/n/9 x[]\OML/lmm/m/it/9 ; [] ; \OT1/lmr/bx/n/9 x[]\OT1/lmr/m/n/9 ) = [][] = \OMS/lmsy/m/n/9 j\OML/lmm/m/it/9 ^^_[]; ^^_[]; []  ; ^^_[]\OMS/lmsy/m/n/9 i\OML/lmm/m/it/9 ;
+ []
+
+
+
+[125]
+
+[126]
+
+[127]
+
+[128]
+
+[129]
+Underfull \hbox (badness 10000) in paragraph at lines 4236--4238
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4238--4240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4240--4242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4242--4244
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4255--4257
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4257--4259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4259--4261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4261--4263
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4274--4276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4278--4280
+
+ []
+
+
+
+[130]
+Underfull \hbox (badness 10000) in paragraph at lines 4280--4282
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4293--4295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4295--4297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4297--4299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4299--4301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4312--4314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4314--4316
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4316--4318
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4318--4320
+
+ []
+
+
+
+[131]
+Underfull \hbox (badness 10000) in paragraph at lines 4331--4333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4333--4335
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4335--4337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4337--4339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4350--4352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4352--4354
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4354--4356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4356--4358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4369--4371
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4371--4373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4373--4375
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4375--4377
+
+ []
+
+
+
+[132]
+Underfull \hbox (badness 10000) in paragraph at lines 4388--4390
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4390--4392
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4392--4394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4394--4396
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4407--4409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4409--4411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4411--4413
+
+ []
+
+
+
+[133]
+
+[134
+
+
+]
+Chapter 11.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[135]
+
+[136]
+
+[137]
+
+[138]
+
+[139]
+Underfull \hbox (badness 10000) in paragraph at lines 4569--4571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4571--4573
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4573--4575
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4575--4577
+
+ []
+
+
+
+[140]
+Underfull \hbox (badness 10000) in paragraph at lines 4588--4590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4590--4592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4592--4594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4594--4596
+
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 4601--4602
+[]\T1/lmr/bx/n/9 3. What is the cen-tral phys-i-cal idea be-hind the Born--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4607--4609
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4609--4611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4611--4613
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4613--4615
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4626--4628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4628--4630
+
+ []
+
+
+
+[141]
+Underfull \hbox (badness 10000) in paragraph at lines 4630--4632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4632--4634
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4645--4647
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4647--4649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4649--4651
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4651--4653
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4664--4666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4666--4668
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4668--4670
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4670--4672
+
+ []
+
+
+
+[142]
+Underfull \hbox (badness 10000) in paragraph at lines 4683--4685
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4685--4687
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4687--4689
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4689--4691
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4702--4704
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4704--4706
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4706--4708
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4708--4710
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4721--4723
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4723--4725
+
+ []
+
+
+
+[143]
+Underfull \hbox (badness 10000) in paragraph at lines 4727--4729
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4740--4742
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4742--4744
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4744--4746
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4746--4748
+
+ []
+
+
+
+[144]
+Chapter 12.
+<./img/OEP_figure1.jpeg, id=1912, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure1.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure1.jpeg>
+Package pdftex.def Info: ./img/OEP_figure1.jpeg  used on input line 4765.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+
+
+[145
+
+
+]
+
+[146 <./img/OEP_figure1.jpeg>]
+<./img/OEP_figure2.jpeg, id=1929, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure2.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure2.jpeg>
+Package pdftex.def Info: ./img/OEP_figure2.jpeg  used on input line 4858.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+
+
+[147]
+<./img/OEP_figure3.jpeg, id=1943, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure3.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure3.jpeg>
+Package pdftex.def Info: ./img/OEP_figure3.jpeg  used on input line 4869.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+<./img/OEP_figure4.jpeg, id=1944, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure4.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure4.jpeg>
+Package pdftex.def Info: ./img/OEP_figure4.jpeg  used on input line 4880.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+
+
+[148 <./img/OEP_figure2.jpeg>]
+
+[149 <./img/OEP_figure3.jpeg> <./img/OEP_figure4.jpeg>]
+<./img/OEP_figure5.jpeg, id=1962, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure5.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure5.jpeg>
+Package pdftex.def Info: ./img/OEP_figure5.jpeg  used on input line 4916.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+<./img/OEP_figure6.jpeg, id=1966, 1027.84pt x 770.88pt>
+File: ./img/OEP_figure6.jpeg Graphic file (type jpg)
+<use ./img/OEP_figure6.jpeg>
+Package pdftex.def Info: ./img/OEP_figure6.jpeg  used on input line 4929.
+(pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
+
+Underfull \hbox (badness 1701) in paragraph at lines 4933--4933
+[]\T1/lmr/m/n/9 Figure 12.6: []Born-Oppenheimer en-ergy land-scape for the hy-dro-gen
+ []
+
+
+
+[150]
+
+[151 <./img/OEP_figure5.jpeg> <./img/OEP_figure6.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 4948--4950
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4950--4952
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4952--4954
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4954--4956
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4967--4969
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4969--4971
+
+ []
+
+
+
+[152]
+Underfull \hbox (badness 10000) in paragraph at lines 4971--4973
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4988--4990
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4990--4992
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4992--4994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5005--5007
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5007--5009
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5009--5011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5011--5013
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5024--5026
+
+ []
+
+
+
+[153]
+Underfull \hbox (badness 10000) in paragraph at lines 5026--5028
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5028--5030
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5030--5032
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5043--5045
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5045--5047
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5047--5049
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5049--5051
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5062--5064
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5064--5066
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5066--5068
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5068--5070
+
+ []
+
+
+
+[154]
+Underfull \hbox (badness 10000) in paragraph at lines 5081--5083
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5083--5085
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5085--5087
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5087--5089
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5100--5102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5102--5104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5104--5106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5106--5108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5119--5121
+
+ []
+
+
+
+[155]
+Underfull \hbox (badness 10000) in paragraph at lines 5121--5123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5123--5125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5125--5127
+
+ []
+
+
+
+[156]
+Chapter 13.
+
+
+[157
+
+
+]
+
+[158]
+
+[159]
+
+[160]
+Overfull \hbox (6.5169pt too wide) detected at line 5238
+[][][]\OT1/lmr/bx/n/9 V \OT1/lmr/m/n/9 = []
+ []
+
+
+
+[161]
+
+[162]
+
+[163]
+Overfull \hbox (17.8836pt too wide) detected at line 5309
+[][][] [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[164]
+
+[165]
+<./img/Fig13.jpg, id=2117, 5018.75pt x 4810.97375pt>
+File: ./img/Fig13.jpg Graphic file (type jpg)
+<use ./img/Fig13.jpg>
+Package pdftex.def Info: ./img/Fig13.jpg  used on input line 5319.
+(pdftex.def)             Requested size: 273.17754pt x 261.85152pt.
+
+
+[166]
+
+[167 <./img/Fig13.jpg>]
+<./img/Fig13_map.jpg, id=2129, 1298.8525pt x 911.405pt>
+File: ./img/Fig13_map.jpg Graphic file (type jpg)
+<use ./img/Fig13_map.jpg>
+Package pdftex.def Info: ./img/Fig13_map.jpg  used on input line 5338.
+(pdftex.def)             Requested size: 182.12144pt x 127.79053pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5355--5357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5357--5359
+
+ []
+
+
+
+[168 <./img/Fig13_map.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 5359--5361
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5361--5363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5374--5376
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5376--5378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5378--5380
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5380--5382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5393--5395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5395--5397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5397--5399
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5399--5401
+
+ []
+
+
+
+[169]
+Underfull \hbox (badness 10000) in paragraph at lines 5412--5414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5414--5416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5416--5418
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5418--5420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5431--5433
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5433--5435
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5435--5437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5437--5439
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5450--5452
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5452--5454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5454--5456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5456--5458
+
+ []
+
+
+
+[170]
+Underfull \hbox (badness 10000) in paragraph at lines 5469--5471
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5471--5473
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5473--5475
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5475--5477
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5488--5490
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5490--5492
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5492--5494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5494--5496
+
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 5501--5502
+[]\T1/lmr/bx/n/9 9. What is the main phys-i-cal in-ter-pre-ta-tion of the two
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5507--5509
+
+ []
+
+
+
+[171]
+Underfull \hbox (badness 10000) in paragraph at lines 5509--5511
+
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 5511--5513
+[]\T1/lmr/m/n/9 primarily oxy-gen lone[]pair or-bitals ori-ented roughly to-ward the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5511--5513
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5513--5515
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5526--5528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5528--5530
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5530--5532
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5532--5534
+
+ []
+
+
+
+[172]
+Chapter 14.
+
+
+[173
+
+
+]
+Underfull \hbox (badness 1688) in paragraph at lines 5567--5568
+[]\T1/lmr/m/n/9 The ro-ta-tional en-er-gies are de-rived the-o-ret-i-cally by con-sid-er-ing the
+ []
+
+
+
+[174]
+<./img/OEP_wiki5.png, id=2217, 307.90031pt x 377.91188pt>
+File: ./img/OEP_wiki5.png Graphic file (type png)
+<use ./img/OEP_wiki5.png>
+Package pdftex.def Info: ./img/OEP_wiki5.png  used on input line 5612.
+(pdftex.def)             Requested size: 151.76633pt x 186.27983pt.
+
+
+[175]
+
+[176 <./img/OEP_wiki5.png>]
+
+[177]
+<./img/OEP_wiki6.png, id=2246, 461.725pt x 266.9975pt>
+File: ./img/OEP_wiki6.png Graphic file (type png)
+<use ./img/OEP_wiki6.png>
+Package pdftex.def Info: ./img/OEP_wiki6.png  used on input line 5679.
+(pdftex.def)             Requested size: 151.76633pt x 87.75906pt.
+
+
+[178 <./img/OEP_wiki6.png (PNG copy)>]
+<./img/OEP_wiki7.png, id=2264, 1027.84pt x 1339.0025pt>
+File: ./img/OEP_wiki7.png Graphic file (type png)
+<use ./img/OEP_wiki7.png>
+Package pdftex.def Info: ./img/OEP_wiki7.png  used on input line 5690.
+(pdftex.def)             Requested size: 151.76633pt x 197.69525pt.
+
+
+[179 <./img/OEP_wiki7.png>]
+
+[180]
+
+[181]
+<./img/OEP_wiki8.png, id=2288, 2687.03876pt x 3319.40125pt>
+File: ./img/OEP_wiki8.png Graphic file (type png)
+<use ./img/OEP_wiki8.png>
+Package pdftex.def Info: ./img/OEP_wiki8.png  used on input line 5759.
+(pdftex.def)             Requested size: 212.47194pt x 262.46788pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5776--5778
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5778--5780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5780--5782
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5782--5784
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5795--5797
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5797--5799
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5799--5801
+
+ []
+
+
+
+[182]
+
+[183 <./img/OEP_wiki8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 5801--5803
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5814--5816
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5816--5818
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5818--5820
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5820--5822
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5833--5835
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5835--5837
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5837--5839
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5839--5841
+
+ []
+
+
+Underfull \hbox (badness 2626) in paragraph at lines 5846--5847
+[]\T1/lmr/bx/n/9 5. What is the main vi-bra-tional se-lec-tion rule for an
+ []
+
+
+
+[184]
+Underfull \hbox (badness 10000) in paragraph at lines 5852--5854
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5854--5856
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5856--5858
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5858--5860
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5871--5873
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5873--5875
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5875--5877
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5890--5892
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5892--5894
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5894--5896
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5896--5898
+
+ []
+
+
+
+[185]
+Underfull \hbox (badness 10000) in paragraph at lines 5909--5911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5911--5913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5913--5915
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5915--5917
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5928--5930
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5930--5932
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5932--5934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5934--5936
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5947--5949
+
+ []
+
+
+
+[186]
+Underfull \hbox (badness 10000) in paragraph at lines 5949--5951
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5951--5953
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5953--5955
+
+ []
+
+
+
+[187] (./pchem2.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-08-30>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 16127 strings out of 475539
+ 253551 string characters out of 5776837
+ 679112 words of memory out of 5000000
+ 37176 multiletter control sequences out of 15000+600000
+ 640367 words of font info for 87 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 89i,18n,93p,1915b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on pchem2.pdf (197 pages, 7986026 bytes).
+PDF statistics:
+ 2997 PDF objects out of 3580 (max. 8388607)
+ 2651 compressed objects within 27 object streams
+ 1334 named destinations out of 1440 (max. 500000)
+ 747 words of extra memory for PDF output out of 10000 (max. 10000000)
+

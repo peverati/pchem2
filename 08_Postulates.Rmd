@@ -83,62 +83,62 @@ Electronic spin must be included in this set of coordinates. As we will see in c
 
 **1. According to postulate 1 in this chapter, what completely specifies the state of a quantum system?**
 
-a. a set of classical coordinates and momenta  
-b. a normalized wave function $\psi(\mathbf{r},t)$ over configuration space  
-c. the list of all possible measurement outcomes  
-d. the expectation values of all observables  
-e. the energy and total angular momentum  
+a. A set of classical coordinates and momenta  
+b. A normalized wave function $\psi(\mathbf{r},t)$ over configuration space  
+c. The list of all possible measurement outcomes  
+d. The expectation values of all observables  
+e. The energy and total angular momentum  
 
 ---
 
 **2. In the wave function postulate, $|\psi(\mathbf{r},t)|^2 d\tau$ is interpreted as:**
 
-a. the probability that the particle is found in volume element $d\tau$ around $\mathbf{r}$ at time $t$
-b. the charge density of the particle  
-c. the kinetic energy density  
-d. the number of particles per unit volume  
-e. the potential energy at $\mathbf{r}$
+a. The probability that the particle is found in volume element $d\tau$ around $\mathbf{r}$ at time $t$
+b. The charge density of the particle  
+c. The kinetic energy density  
+d. The number of particles per unit volume  
+e. The potential energy at $\mathbf{r}$
 
 
 ---
 
 **3. Postulate 2 (experimental observables) states that to every classical observable there corresponds what?**
 
-a. a real‑valued function of time only  
-b. a complex number  
-c. a linear Hermitian operator acting on wave functions  
-d. a non‑linear operator that may not be hermitian  
-e. a classical random variable  
+a. A real‑valued function of time only  
+b. A complex number  
+c. A linear Hermitian operator acting on wave functions  
+d. A non‑linear operator that may not be hermitian  
+e. A classical random variable  
 
 ---
 
 **4. Why must operators representing physical observables be Hermitian?**
 
-a. to guarantee that eigenvalues are integers  
-b. to ensure that eigenfunctions are always real  
-c. to guarantee real measurement outcomes (real eigenvalues)  
-d. to make the Hamiltonian time independent  
-e. to enforce energy conservation in all processes  
+a. To guarantee that eigenvalues are integers  
+b. To ensure that eigenfunctions are always real  
+c. To guarantee real measurement outcomes (real eigenvalues)  
+d. To make the Hamiltonian time independent  
+e. To enforce energy conservation in all processes  
 
 ---
 
 **5. If the system is in an eigenstate of $\hat{a}$ with eigenvalue $a_k$, what does postulate 3 say about the outcome of a measurement of $a$?**
 
-a. the outcome is random among all eigenvalues  
-b. the outcome is always $a_k$  
-c. the outcome is always $\langle a\rangle$  
-d. the outcome is one of two possible eigenvalues with equal probability  
-e. the outcome is complex  
+a. The outcome is random among all eigenvalues  
+b. The outcome is always $a_k$  
+c. The outcome is always $\langle a\rangle$  
+d. The outcome is one of two possible eigenvalues with equal probability  
+e. The outcome is complex  
 
 ---
 
 **6. In postulate 4, once a measurement yields a particular eigenvalue $a_k$, what happens to the wave function (in the idealized description)?**
 
-a. it remains unchanged  
-b. it collapses to the corresponding eigenstate of $\hat{a}$  
-c. it becomes identically zero  
-d. it becomes a uniform superposition of all eigenstates  
-e. it collapses to the ground state of the hamiltonian  
+a. It remains unchanged  
+b. It collapses to the corresponding eigenstate of $\hat{a}$  
+c. It becomes identically zero  
+d. It becomes a uniform superposition of all eigenstates  
+e. It collapses to the ground state of the hamiltonian  
 
 ---
 
@@ -147,38 +147,38 @@ e. it collapses to the ground state of the hamiltonian
 a. $|c_j|^2$ (assuming normalized eigenfunctions)  
 b. $|a_j|^2$  
 c. $1/|c_j|^2$  
-d. always $1/n$, where $n$ is the number of eigenvalues  
+d. Always $1/n$, where $n$ is the number of eigenvalues  
 e. $\text{Re}(c_j)$  
 
 ---
 
 **8. Postulate 5 implies that the time‑evolution operator must have which property?**
 
-a. it is unitary, preserving normalization of $\psi$  
-b. it is Hermitian  
-c. it is real and symmetric  
-d. it is diagonal in the position representation  
-e. it always commutes with position  
+a. It is unitary, preserving normalization of $\psi$  
+b. It is Hermitian  
+c. It is real and symmetric  
+d. It is diagonal in the position representation  
+e. It always commutes with position  
 
 ---
 
 **9. Postulate 6 in this chapter (Pauli exclusion principle) applies to which type of particles?**
 
-a. all particles, regardless of spin  
-b. bosons only  
-c. fermions with half‑integer spin (e.g., electrons)  
-d. photons only  
-e. classical point particles
+a. All particles, regardless of spin  
+b. Bosons only  
+c. Fermions with half‑integer spin (e.g., electrons)  
+d. Photons only  
+e. Classical point particles
 
 ---
 
 **10. What does the Pauli exclusion principle state about the many‑electron wave function for identical fermions?**
 
-a. it must be symmetric under exchange of any two identical fermions  
-b. it must vanish everywhere  
-c. it must be antisymmetric under exchange of any two identical fermions  
-d. it must be purely real  
-e. it must be constant in space  
+a. It must be symmetric under exchange of any two identical fermions  
+b. It must vanish everywhere  
+c. It must be antisymmetric under exchange of any two identical fermions  
+d. It must be purely real  
+e. It must be constant in space  
 
 ---
 

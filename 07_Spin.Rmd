@@ -159,59 +159,59 @@ e. violation of energy conservation
 
 a. $0, \pm \hbar$  
 b. $\pm \hbar$  
-c. only $+\hbar/2$  
-d. any real multiple of $\hbar$  
+c. Only $+\hbar/2$  
+d. Any real multiple of $\hbar$  
 e. $+\hbar/2$ or $-\hbar/2$  
 
 ---
 
 **4. In a Stern–Gerlach experiment measuring $s_z$, a general spin state can be written as:**
 
-a. a classical vector of length $\hbar/2$  
-b. a single eigenstate of $\hat{s}_z$ only  
+a. A classical vector of length $\hbar/2$  
+b. A single eigenstate of $\hat{s}_z$ only  
 c. $c_1\,|\uparrow\rangle + c_2\,|\downarrow\rangle$ with complex $c_1, c_2$  
-d. a mixture of infinitely many $s_z$ eigenvalues  
-e. a real linear combination of position eigenstates  
+d. A mixture of infinitely many $s_z$ eigenvalues  
+e. A real linear combination of position eigenstates  
 
 ---
 
 **5. After a beam passes through a Stern–Gerlach apparatus aligned along $z$ and only the “spin up” channel is allowed through, what is the spin state of the particles that pass through?**
 
-a. an equal superposition of up and down  
-b. eigenstate $|\downarrow_z\rangle$ of $\hat{s}_z$  
-c. eigenstate $|\uparrow_z\rangle$ of $\hat{s}_z$  
-d. a classical mixture of all directions  
-e. an eigenstate of $\hat{s}_x$  
+a. An equal superposition of up and down  
+b. Eigenstate $|\downarrow_z\rangle$ of $\hat{s}_z$  
+c. Eigenstate $|\uparrow_z\rangle$ of $\hat{s}_z$  
+d. A classical mixture of all directions  
+e. An eigenstate of $\hat{s}_x$  
 
 ---
 
 **6. If a second Stern–Gerlach apparatus is placed after the first and is also aligned along the same $z$ direction, what happens to a beam that is already in $|\uparrow_z\rangle$?** 
 
-a. it is entirely transmitted as $|\uparrow_z\rangle$ with no further splitting  
-b. it becomes completely unpolarized  
-c. it splits again into up and down beams  
-d. it is entirely absorbed  
-e. it flips to $|\downarrow_z\rangle$  
+a. It is entirely transmitted as $|\uparrow_z\rangle$ with no further splitting  
+b. It becomes completely unpolarized  
+c. It splits again into up and down beams  
+d. It is entirely absorbed  
+e. It flips to $|\downarrow_z\rangle$  
 
 ---
 
 **7. In a sequential Stern–Gerlach experiment, a $z$-up beam is sent into a second apparatus aligned along $x$. what is observed at the second apparatus?**
 
-a. only one output beam (“spin left”)  
-b. two beams with equal intensities: “spin left” and “spin right” along $x$  
-c. only one output beam (“spin right”)  
-d. a continuous spread in deflection angles  
-e. no beam at all  
+a. Only one output beam (“spin left”)  
+b. Two beams with equal intensities: “spin left” and “spin right” along $x$  
+c. Only one output beam (“spin right”)  
+d. A continuous spread in deflection angles  
+e. No beam at all  
 
 ---
 
 **8. Mathematically, the non‑classical nature of sequential Stern–Gerlach experiments is expressed by which property of spin operators such as $\hat{s}_z$ and $\hat{s}_x$?**
 
-a. they commute: $[\hat{s}_z,\hat{s}_x] = 0$  
-b. they have identical eigenvalues  
-c. they are proportional to the identity  
-d. they do not commute: $[\hat{s}_z,\hat{s}_x] \neq 0$  
-e. they vanish when squared  
+a. They commute: $[\hat{s}_z,\hat{s}_x] = 0$  
+b. They have identical eigenvalues  
+c. They are proportional to the identity  
+d. They do not commute: $[\hat{s}_z,\hat{s}_x] \neq 0$  
+e. They vanish when squared  
 
 ---
 
@@ -227,11 +227,11 @@ e. $\hat{s}_x, \hat{s}_z, \hat{s}_t$
 
 **10. What key lesson about spin is emphasized by the Stern–Gerlach experiments?**
 
-a. spin is a small classical correction to orbital motion  
-b. spin has a direct classical analogue in rotating spheres  
-c. spin is a purely quantum property with no classical analogue  
-d. spin is irrelevant for chemistry  
-e. spin is always conserved and cannot change under measurement  
+a. Spin is a small classical correction to orbital motion  
+b. Spin has a direct classical analogue in rotating spheres  
+c. Spin is a purely quantum property with no classical analogue  
+d. Spin is irrelevant for chemistry  
+e. Spin is always conserved and cannot change under measurement  
 
 ---
 

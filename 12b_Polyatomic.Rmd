@@ -212,11 +212,11 @@ knitr::include_graphics('./img/Fig13_map.jpg')
 
 **1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?**
 
-a. only 1s  
-b. 1s and 2s  
-c. 2s and 2p$_z$ only  
-d. 1s, 2s, and three 2p (2p$_x$, 2p$_y$, 2p$_z$)  
-e. only three 2p orbitals  
+a. only $1s$  
+b. $1s$ and $2s$  
+c. $2s$ and $2p_z$ only  
+d. $1s$, $2s$, and three $2p$ ($2p_x$, $2p_y$, $2p_z$)  
+e. only three $2p$ orbitals  
 
 ---
 

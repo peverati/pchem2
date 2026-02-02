@@ -370,21 +370,21 @@ e. $[\hat{a},\hat{b}] = 0$ by definition
 
 **5. Which important consequence follows for the eigenvalues of a hermitian operator $\hat{a}$?**
 
-a. all eigenvalues are real  
-b. all eigenvalues are purely imaginary  
-c. eigenvalues occur only in complex-conjugate pairs  
-d. eigenvalues must be integers  
-e. eigenvalues must be positive  
+a. All eigenvalues are real  
+b. All eigenvalues are purely imaginary  
+c. Eigenvalues occur only in complex-conjugate pairs  
+d. Eigenvalues must be integers  
+e. Eigenvalues must be positive  
 
 ---
 
 **6. For a Hermitian operator, eigenfunctions corresponding to different eigenvalues have what property?**
 
-a. they are always identical up to a phase
-b. they are orthogonal (or can be chosen orthogonal)    
-c. they are linearly dependent  
-d. they have the same expectation value of all observables  
-e. they must be degenerate  
+a. They are always identical up to a phase
+b. They are orthogonal (or can be chosen orthogonal)    
+c. They are linearly dependent  
+d. They have the same expectation value of all observables  
+e. They must be degenerate  
 
 ---
 
@@ -401,11 +401,11 @@ e. $\hat{p}_x = \dfrac{d}{dx}$
 
 **8. If a wavefunction $\psi$ is written as a linear combination of eigenfunctions $\{\psi_i\}$ of $\hat{a}$, $\psi = \sum_i c_i \psi_i$, what are the possible outcomes of a measurement of $a$?**
 
-a. any complex number
-b. any real number in the spectrum of $\hat{h}$  
-c. only the expectation value $\langle a \rangle$  
-d. only the eigenvalues $a_i$ corresponding to the eigenfunctions present in the expansion  
-e. only the largest eigenvalue  
+a. Any complex number
+b. Any real number in the spectrum of $\hat{h}$  
+c. Only the expectation value $\langle a \rangle$  
+d. Only the eigenvalues $a_i$ corresponding to the eigenfunctions present in the expansion  
+e. Only the largest eigenvalue  
 
 ---
 
@@ -421,11 +421,11 @@ e. $\operatorname{Re}(c_k)$
 
 **10. What is the general role of the Hamiltonian operator $\hat{H}$ in quantum mechanics?**
 
-a. it has no observable meaning  
-b. it represents only the kinetic energy  
-c. it represents only the potential energy  
-d. it measures the position of particles  
-e. it represents the total energy and generates time evolution  
+a. It has no observable meaning  
+b. It represents only the kinetic energy  
+c. It represents only the potential energy  
+d. It measures the position of particles  
+e. It represents the total energy and generates time evolution  
 
 ---
 
