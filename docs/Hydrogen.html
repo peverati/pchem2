@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-02-01" />
+<meta name="date" content="2026-02-04" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -159,8 +159,7 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1.1</b> The radial wave functions</a></li>
 <li class="chapter" data-level="5.1.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.1.2</b> The angular wave functions</a></li>
 <li class="chapter" data-level="5.1.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.1.3</b> Building the complete orbital</a></li>
-<li class="chapter" data-level="5.1.4" data-path="Hydrogen.html"><a href="Hydrogen.html#orbitals-visualization"><i class="fa fa-check"></i><b>5.1.4</b> Orbitals visualization</a></li>
-<li class="chapter" data-level="5.1.5" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.1.5</b> Experimental Access to Orbitals</a></li>
+<li class="chapter" data-level="5.1.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.1.4</b> Experimental Access to Orbitals</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.2</b> Chapter Review</a>
 <ul>
@@ -412,31 +411,35 @@ P(r) = 4\pi r^2 |R_{n\ell}(r)|^2.
 <li><strong><span class="math inline">\(m_\ell\)</span> (magnetic quantum number)</strong>: Ranges from <span class="math inline">\(-\ell\)</span> to <span class="math inline">\(+\ell\)</span>, specifies the orientation of the orbital in space. The quantum number <span class="math inline">\(\ell\)</span> quantizes the magnitude of the total angular momentum, but its direction is uncertain, except for one component along an arbitrary axis. By convention we take the <span class="math inline">\(z\)</span>-axis and quantize its component via the quantum number <span class="math inline">\(m_\ell\)</span>. Therefore <span class="math inline">\(m_\ell\)</span> determines the orientation along the associated <span class="math inline">\(z\)</span>-axis.</li>
 </ul>
 <p>The energy depends <em>only</em> on <span class="math inline">\(n\)</span>, making all orbitals with the same <span class="math inline">\(n\)</span> but different <span class="math inline">\(\ell\)</span> values degenerate. This is a special feature of the Coulomb potential; most other potentials would split these energy levels.</p>
+<p>Visualization of the complex spherical harmonics can happen in many different ways, as we have already shown in the particle-on-a-sphere section of Chapter 4. The difficulties associated with the visualization of the complex spherical harmonics translate directly to the visualization of the atomic orbitals, which we will discuss next.</p>
 </div>
 <div id="building-the-complete-orbital" class="section level3 hasAnchor" number="5.1.3">
 <h3><span class="header-section-number">5.1.3</span> Building the complete orbital<a href="Hydrogen.html#building-the-complete-orbital" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The complete wave function given by the multiplication of the radial components and the spherical harmonic encodes <em>all</em> the quantum information about the electron’s state. The radial part captures the probability of finding the electron at a given distance <span class="math inline">\(r\)</span> (independent of direction), while the angular part specifies how this probability is distributed among different directions.</p>
-<p>When we try to visualize the information contained in the complete wave function, we encounter a subtle but profound issue: <strong>the wave function is a complex-valued function</strong>. At each point <span class="math inline">\((r, \theta, \phi)\)</span> in real 3D space, <span class="math inline">\(\psi_{n\ell m_\ell}\)</span> is a complex number <span class="math inline">\(a + bi\)</span>. Visualizing complex numbers requires two real values (the real and imaginary parts, or the amplitude and phase), adding a <em>fourth dimension</em> beyond the three spatial coordinates.</p>
-<p>For states with <span class="math inline">\(m_\ell = 0\)</span> (such as the <span class="math inline">\(2p_z\)</span> orbital), the wave function is real (or can be made real by choosing the overall phase appropriately), so a simple 3D plot of <span class="math inline">\(\psi\)</span> or <span class="math inline">\(|\psi|^2\)</span> suffices. The plots for these orbitals are reported in figure XXX. But for <span class="math inline">\(m_\ell \neq 0\)</span> states, the exponential factor <span class="math inline">\(e^{im_\ell\phi}\)</span> ensures the wave function is genuinely complex. The eigenstates <span class="math inline">\(\psi_{21,+1}\)</span> and <span class="math inline">\(\psi_{21,-1}\)</span> (the complex <span class="math inline">\(2p\)</span> states) cannot be visualized as simple 3D density plots without losing information. In chemistry, we typically use <em>real orbitals</em> instead of the pure complex eigenstates. These are linear combinations of eigenstates with opposite <span class="math inline">\(m_\ell\)</span> values, for example:</p>
-<p><span class="math inline">\(\phi_{2p_z} = \psi_{21,0}\)</span> (already real),</p>
-<p><span class="math inline">\(\phi_{2p_x} = \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right)\)</span>,</p>
-<p><span class="math inline">\(\phi_{2p_y} = \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right)\)</span>.</p>
+<p>The complete wave function given by the multiplication of the radial components and the complex spherical harmonic encodes <em>all</em> the quantum information about the electron’s state. The radial part captures the probability of finding the electron at a given distance <span class="math inline">\(r\)</span> (independent of direction), while the angular part specifies how this probability is distributed among different directions.</p>
+<p>Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures XXX and XXX in Chapter 4. This, however, doesn’t solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure XXXprevious chapter for the spherical harmonics. Similar plots can be obtained for both the real part and the imaginary part of the hydrogen orbitals, and are reported in figure xxx (real part) and figure xxx (imaginary part).</p>
+<p>figure xxxRe</p>
+<p>figure xxxIm</p>
+<p>In chemistry, we typically use <em>real orbitals</em> instead of the pure complex eigenstates. This is convenient because they align with molecular symmetry, bonding intuition, and computational visualization. The real orbitals are obtained from linear combinations of spherical harmonics with opposite <span class="math inline">\(m_\ell\)</span> values,<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> for example:</p>
+<p><span class="math display" id="eq:HA9">\[\begin{equation}
+\begin{aligned}
+\psi_{2p_z} &amp;= \psi_{21,0}\quad\text{(already real)},\\
+\psi_{2p_x} &amp;= \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right),\\
+\psi_{2p_y} &amp;= \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right).
+\end{aligned}
+\tag{5.10}
+\end{equation}\]</span></p>
 <p>These combinations eliminate the azimuthal phase dependence, producing three real-valued orbitals with the familiar dumbbell shapes oriented along the <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> axes. Each real orbital still represents a valid quantum state—they are simply a different choice of <em>basis</em> for describing the same subspace of quantum states. The real <span class="math inline">\(p\)</span> orbitals are superpositions of definite angular momentum states, so they don’t have definite <span class="math inline">\(m_\ell\)</span> values, but they have all other properties encoded in the original states.</p>
 <p>The crucial point is: <strong>the real and complex orbital representations are mathematically equivalent descriptions of the same physical system</strong>. They provide different perspectives (real vs. complex) but encode identical measurable information.</p>
-</div>
-<div id="orbitals-visualization" class="section level3 hasAnchor" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Orbitals visualization<a href="Hydrogen.html#orbitals-visualization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Orbitals are visualized in several ways:</p>
+<p>One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures XXX and XXX carry <strong>no direct physical significance</strong>. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal “regions of space” where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. <strong>They do not!</strong> Since the probability density is the quantity that can be experimentally measured, <span class="math inline">\(|\psi_{n\ell m_\ell}|^2\)</span> is the only representation that has physical significance. These “electron density probability clouds” can be visualized in several ways:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Probability density contour surfaces</strong>: Show an isosurface enclosing (e.g.) 90% of the electron probability. This is excellent for conveying orbital shape but loses information about the probability gradient inside.</p></li>
 <li><p><strong>Volumetric density plots</strong>: Use color or opacity to represent <span class="math inline">\(|\psi|^2\)</span> throughout a region. This preserves all spatial information but can be harder to interpret visually.</p></li>
-<li><p><strong>Radial probability distribution plots</strong>: Show <span class="math inline">\(P(r) = 4\pi r^2 |R_{nl}(r)|^2\)</span> versus <span class="math inline">\(r\)</span>. Excellent for understanding size and node structure along the radial direction, but loses angular information.</p></li>
 <li><p><strong>Dot-density diagrams</strong>: Scatter dots with density proportional to <span class="math inline">\(|\psi|^2\)</span>. Very intuitive for understanding probability as a statistical distribution.</p></li>
 </ol>
 <p>Each method highlights different aspects of the orbital structure. Modern computational chemistry uses volumetric renderings and interactive 3D visualizations to convey the full spatial structure. The key is understanding that all these representations show the <em>same</em> information (the probability density) through different visual encodings.</p>
 </div>
-<div id="experimental-access-to-orbitals" class="section level3 hasAnchor" number="5.1.5">
-<h3><span class="header-section-number">5.1.5</span> Experimental Access to Orbitals<a href="Hydrogen.html#experimental-access-to-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="experimental-access-to-orbitals" class="section level3 hasAnchor" number="5.1.4">
+<h3><span class="header-section-number">5.1.4</span> Experimental Access to Orbitals<a href="Hydrogen.html#experimental-access-to-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A common question is: “Can we actually measure an orbital?” The answer is nuanced. We cannot directly observe <span class="math inline">\(\psi(\mathbf{r})\)</span> because the wave function is not an observable—quantum mechanics predicts only probabilities for measurement outcomes. However, we can:</p>
 <ul>
 <li>Measure the <em>probability density</em> through many repeated experiments (electron microscopy, photoelectron spectroscopy)</li>
@@ -588,6 +591,12 @@ Click to reveal
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="15">
+<li id="fn15"><p>The combination of complex spherical harmonics into real ones results in <a href="https://en.wikipedia.org/wiki/Cubic_harmonic">cubic (or tesseral) harmonics</a>.<a href="Hydrogen.html#fnref15" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

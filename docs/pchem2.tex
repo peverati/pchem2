@@ -113,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{01 February 2026}
+\date{04 February 2026}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1659,7 +1659,7 @@ L_z = \hbar m_\ell \quad (m_\ell = 0, \pm1, \pm2, \ldots, \pm\infty).
 \label{eq:PIR10}
 \end{equation}
 
-Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (\(m_\ell = 0\)), each energy level is doubly degenerate: the states with \(m_\ell\) and \(-m_\ell\) have the same energy. This makes physical sense because rotation in the positive and negative directions (clockwise and counter-clockwise) should have the same energy. Third, the energy does not depend on the sign of \(m_\ell\), which is a consequence of the fact that energy depends on \(L_z^2\), and \((-m_\ell)^2 = (m_\ell)^2\). This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).
+A rotating charged particle orbiting the ring generates a magnetic moment \(\boldsymbol{\mu} \propto \mathbf{L}\). Thus eq. \eqref{eq:PIR10}, which quantizes \(L_z\), explains why \(m_\ell\) is called the \textbf{magnetic quantum number}. Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (\(m_\ell = 0\)), each energy level is doubly degenerate: the states with \(m_\ell\) and \(-m_\ell\) have the same energy. This makes physical sense because rotation in the positive and negative directions (clockwise and counter-clockwise) should have the same energy. Third, the energy does not depend on the sign of \(m_\ell\), which is a consequence of the fact that energy depends on \(L_z^2\), and \((-m_\ell)^2 = (m_\ell)^2\). This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).
 
 \subsection{Wave function analysis}\label{wave-function-analysis-1}
 
@@ -1765,7 +1765,7 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots,\infty),
 \label{eq:RR2}
 \end{equation}
 
-where \(\ell\) is the \textbf{azimuthal quantum number}. The spherical harmonic functions depend on a second quantum number, \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\), which is called the \textbf{magnetic quantum number}. The energy does not depend on the magnetic quantum number, and functions with the same \(\ell\) but different \(m_\ell\) are energy-degenerate. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum along the \(z\)-axis is quantized in units of \(\hbar\) and jumps discontinuously from one value to the next, as for the particle on a ring case.\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} For this case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously.
+where \(m_\ell\) is the \textbf{magnetic quantum number}. The spherical harmonic functions depend on a second quantum number, \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\), which is the same \textbf{magnetic quantum number} that we encounter for the particle on a ring. For the spherical harmonics, however, the energy does not depend on the magnetic quantum number, and functions with the same \(\ell\) but different \(m_\ell\) are energy-degenerate. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum along the \(z\)-axis is quantized in units of \(\hbar\) and jumps discontinuously from one value to the next, as for the particle on a ring case.\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} For this case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously.
 
 \subsection{Wave function analysis}\label{wave-function-analysis-2}
 
@@ -2279,27 +2279,34 @@ As we already discussed, the angular part of the Schrödinger equation is solved
 
 The energy depends \emph{only} on \(n\), making all orbitals with the same \(n\) but different \(\ell\) values degenerate. This is a special feature of the Coulomb potential; most other potentials would split these energy levels.
 
+Visualization of the complex spherical harmonics can happen in many different ways, as we have already shown in the particle-on-a-sphere section of Chapter 4. The difficulties associated with the visualization of the complex spherical harmonics translate directly to the visualization of the atomic orbitals, which we will discuss next.
+
 \subsection{Building the complete orbital}\label{building-the-complete-orbital}
 
-The complete wave function given by the multiplication of the radial components and the spherical harmonic encodes \emph{all} the quantum information about the electron's state. The radial part captures the probability of finding the electron at a given distance \(r\) (independent of direction), while the angular part specifies how this probability is distributed among different directions.
+The complete wave function given by the multiplication of the radial components and the complex spherical harmonic encodes \emph{all} the quantum information about the electron's state. The radial part captures the probability of finding the electron at a given distance \(r\) (independent of direction), while the angular part specifies how this probability is distributed among different directions.
 
-When we try to visualize the information contained in the complete wave function, we encounter a subtle but profound issue: \textbf{the wave function is a complex-valued function}. At each point \((r, \theta, \phi)\) in real 3D space, \(\psi_{n\ell m_\ell}\) is a complex number \(a + bi\). Visualizing complex numbers requires two real values (the real and imaginary parts, or the amplitude and phase), adding a \emph{fourth dimension} beyond the three spatial coordinates.
+Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures XXX and XXX in Chapter 4. This, however, doesn't solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure XXXprevious chapter for the spherical harmonics. Similar plots can be obtained for both the real part and the imaginary part of the hydrogen orbitals, and are reported in figure xxx (real part) and figure xxx (imaginary part).
 
-For states with \(m_\ell = 0\) (such as the \(2p_z\) orbital), the wave function is real (or can be made real by choosing the overall phase appropriately), so a simple 3D plot of \(\psi\) or \(|\psi|^2\) suffices. The plots for these orbitals are reported in figure XXX. But for \(m_\ell \neq 0\) states, the exponential factor \(e^{im_\ell\phi}\) ensures the wave function is genuinely complex. The eigenstates \(\psi_{21,+1}\) and \(\psi_{21,-1}\) (the complex \(2p\) states) cannot be visualized as simple 3D density plots without losing information. In chemistry, we typically use \emph{real orbitals} instead of the pure complex eigenstates. These are linear combinations of eigenstates with opposite \(m_\ell\) values, for example:
+figure xxxRe
 
-\(\phi_{2p_z} = \psi_{21,0}\) (already real),
+figure xxxIm
 
-\(\phi_{2p_x} = \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right)\),
+In chemistry, we typically use \emph{real orbitals} instead of the pure complex eigenstates. This is convenient because they align with molecular symmetry, bonding intuition, and computational visualization. The real orbitals are obtained from linear combinations of spherical harmonics with opposite \(m_\ell\) values,\footnote{The combination of complex spherical harmonics into real ones results in \href{https://en.wikipedia.org/wiki/Cubic_harmonic}{cubic (or tesseral) harmonics}.} for example:
 
-\(\phi_{2p_y} = \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right)\).
+\begin{equation}
+\begin{aligned}
+\psi_{2p_z} &= \psi_{21,0}\quad\text{(already real)},\\
+\psi_{2p_x} &= \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right),\\
+\psi_{2p_y} &= \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right).
+\end{aligned}
+\label{eq:HA9}
+\end{equation}
 
 These combinations eliminate the azimuthal phase dependence, producing three real-valued orbitals with the familiar dumbbell shapes oriented along the \(x\), \(y\), and \(z\) axes. Each real orbital still represents a valid quantum state---they are simply a different choice of \emph{basis} for describing the same subspace of quantum states. The real \(p\) orbitals are superpositions of definite angular momentum states, so they don't have definite \(m_\ell\) values, but they have all other properties encoded in the original states.
 
 The crucial point is: \textbf{the real and complex orbital representations are mathematically equivalent descriptions of the same physical system}. They provide different perspectives (real vs.~complex) but encode identical measurable information.
 
-\subsection{Orbitals visualization}\label{orbitals-visualization}
-
-Orbitals are visualized in several ways:
+One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures XXX and XXX carry \textbf{no direct physical significance}. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal ``regions of space'' where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. \textbf{They do not!} Since the probability density is the quantity that can be experimentally measured, \(|\psi_{n\ell m_\ell}|^2\) is the only representation that has physical significance. These ``electron density probability clouds'' can be visualized in several ways:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2307,8 +2314,6 @@ Orbitals are visualized in several ways:
   \textbf{Probability density contour surfaces}: Show an isosurface enclosing (e.g.) 90\% of the electron probability. This is excellent for conveying orbital shape but loses information about the probability gradient inside.
 \item
   \textbf{Volumetric density plots}: Use color or opacity to represent \(|\psi|^2\) throughout a region. This preserves all spatial information but can be harder to interpret visually.
-\item
-  \textbf{Radial probability distribution plots}: Show \(P(r) = 4\pi r^2 |R_{nl}(r)|^2\) versus \(r\). Excellent for understanding size and node structure along the radial direction, but loses angular information.
 \item
   \textbf{Dot-density diagrams}: Scatter dots with density proportional to \(|\psi|^2\). Very intuitive for understanding probability as a statistical distribution.
 \end{enumerate}

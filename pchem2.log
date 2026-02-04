@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  1 FEB 2026 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  4 FEB 2026 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,7 +1210,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 16
 (/Users/peve/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<./img/PIR_3d.png, id=780, 956.1321pt x 2175.327pt>
+<./img/PIR_3d.png, id=781, 956.1321pt x 2175.327pt>
 File: ./img/PIR_3d.png Graphic file (type png)
 <use ./img/PIR_3d.png>
 Package pdftex.def Info: ./img/PIR_3d.png  used on input line 1691.
@@ -1218,7 +1218,7 @@ Package pdftex.def Info: ./img/PIR_3d.png  used on input line 1691.
 
 LaTeX Warning: Float too large for page by 3.03616pt on input line 1696.
 
-<./img/PIR_top.png, id=783, 1016.8389pt x 2517.8868pt>
+<./img/PIR_top.png, id=784, 1016.8389pt x 2517.8868pt>
 File: ./img/PIR_top.png Graphic file (type png)
 <use ./img/PIR_top.png>
 Package pdftex.def Info: ./img/PIR_top.png  used on input line 1716.
@@ -1233,7 +1233,7 @@ LaTeX Warning: Float too large for page by 12.60905pt on input line 1721.
 [45 <./img/PIR_3d.png>]
 
 [46 <./img/PIR_top.png>]
-<./img/PIR_polar.png, id=805, 925.7787pt x 2262.051pt>
+<./img/PIR_polar.png, id=806, 925.7787pt x 2262.051pt>
 File: ./img/PIR_polar.png Graphic file (type png)
 <use ./img/PIR_polar.png>
 Package pdftex.def Info: ./img/PIR_polar.png  used on input line 1737.
@@ -1248,12 +1248,12 @@ LaTeX Warning: Float too large for page by 19.08109pt on input line 1742.
 [48 <./img/PIR_polar.png>]
 
 [49]
-<./img/SH_Re.png, id=832, 1459.854pt x 1163.547pt>
+<./img/SH_Re.png, id=833, 1459.854pt x 1163.547pt>
 File: ./img/SH_Re.png Graphic file (type png)
 <use ./img/SH_Re.png>
 Package pdftex.def Info: ./img/SH_Re.png  used on input line 1805.
 (pdftex.def)             Requested size: 273.17754pt x 217.72067pt.
-<./img/SH_Im.png, id=833, 1459.854pt x 1161.3789pt>
+<./img/SH_Im.png, id=834, 1459.854pt x 1161.3789pt>
 File: ./img/SH_Im.png Graphic file (type png)
 <use ./img/SH_Im.png>
 Package pdftex.def Info: ./img/SH_Im.png  used on input line 1814.
@@ -1265,17 +1265,17 @@ Package pdftex.def Info: ./img/SH_Im.png  used on input line 1814.
 [51 <./img/SH_Re.png>]
 
 [52 <./img/SH_Im.png>]
-<./img/SH_abs.png, id=853, 1321.0956pt x 880.9713pt>
+<./img/SH_abs.png, id=854, 1321.0956pt x 880.9713pt>
 File: ./img/SH_abs.png Graphic file (type png)
 <use ./img/SH_abs.png>
 Package pdftex.def Info: ./img/SH_abs.png  used on input line 1841.
 (pdftex.def)             Requested size: 273.17754pt x 182.15962pt.
-<./img/SH_Re_def.png, id=857, 1425.1644pt x 1132.4709pt>
+<./img/SH_Re_def.png, id=858, 1425.1644pt x 1132.4709pt>
 File: ./img/SH_Re_def.png Graphic file (type png)
 <use ./img/SH_Re_def.png>
 Package pdftex.def Info: ./img/SH_Re_def.png  used on input line 1852.
 (pdftex.def)             Requested size: 273.17754pt x 217.07251pt.
-<./img/SH_Im_def.png, id=858, 1422.9963pt x 1165.7151pt>
+<./img/SH_Im_def.png, id=859, 1422.9963pt x 1165.7151pt>
 File: ./img/SH_Im_def.png Graphic file (type png)
 <use ./img/SH_Im_def.png>
 Package pdftex.def Info: ./img/SH_Im_def.png  used on input line 1861.
@@ -1291,7 +1291,7 @@ Package pdftex.def Info: ./img/SH_Im_def.png  used on input line 1861.
 [56 <./img/SH_Im_def.png>]
 
 [57]
-<./img/HarmOsc.png, id=894, 641.7576pt x 496.4949pt>
+<./img/HarmOsc.png, id=895, 641.7576pt x 496.4949pt>
 File: ./img/HarmOsc.png Graphic file (type png)
 <use ./img/HarmOsc.png>
 Package pdftex.def Info: ./img/HarmOsc.png  used on input line 1924.
@@ -1533,212 +1533,207 @@ Overfull \hbox (31.36868pt too wide) detected at line 2189
 [69]
 
 [70]
-Overfull \hbox (0.12381pt too wide) in paragraph at lines 2311--2313
-[]\T1/lmr/bx/n/9 Radial prob-a-bil-ity dis-tri-bu-tion plots\T1/lmr/m/n/9 : Show $\OML/lmm/m/it/9 P\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 r\OT1/lmr/m/n/9 ) = 4\OML/lmm/m/it/9 ^^Yr[]\OMS/lmsy/m/n/9 j\OML/lmm/m/it/9 R[]\OT1/lmr/m/n/9 (\OML/lmm/m/it/9 r\OT1/lmr/m/n/9 )\OMS/lmsy/m/n/9 j[]$
- []
-
-
 
 [71]
-Underfull \hbox (badness 10000) in paragraph at lines 2344--2346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2346--2348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2348--2350
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2350--2352
-
- []
-
-
 
 [72]
-Underfull \hbox (badness 10000) in paragraph at lines 2363--2365
+Underfull \hbox (badness 10000) in paragraph at lines 2349--2351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2365--2367
+Underfull \hbox (badness 10000) in paragraph at lines 2351--2353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2367--2369
+Underfull \hbox (badness 10000) in paragraph at lines 2353--2355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2369--2371
+Underfull \hbox (badness 10000) in paragraph at lines 2355--2357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2382--2384
+Underfull \hbox (badness 10000) in paragraph at lines 2368--2370
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2386--2388
+Underfull \hbox (badness 10000) in paragraph at lines 2370--2372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2388--2390
+Underfull \hbox (badness 10000) in paragraph at lines 2372--2374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2401--2403
+Underfull \hbox (badness 10000) in paragraph at lines 2374--2376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2403--2405
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2405--2407
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2407--2409
+Underfull \hbox (badness 10000) in paragraph at lines 2387--2389
 
  []
 
 
 
 [73]
-Underfull \hbox (badness 10000) in paragraph at lines 2420--2422
+Underfull \hbox (badness 10000) in paragraph at lines 2391--2393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2422--2424
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2424--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2406--2408
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2426--2428
+Underfull \hbox (badness 10000) in paragraph at lines 2408--2410
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2439--2441
+Underfull \hbox (badness 10000) in paragraph at lines 2410--2412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2441--2443
+Underfull \hbox (badness 10000) in paragraph at lines 2412--2414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2443--2445
+Underfull \hbox (badness 10000) in paragraph at lines 2425--2427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2445--2447
+Underfull \hbox (badness 10000) in paragraph at lines 2427--2429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2458--2460
+Underfull \hbox (badness 10000) in paragraph at lines 2429--2431
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2460--2462
+Underfull \hbox (badness 10000) in paragraph at lines 2431--2433
 
  []
 
 
 
 [74]
-Underfull \hbox (badness 10000) in paragraph at lines 2462--2464
+Underfull \hbox (badness 10000) in paragraph at lines 2444--2446
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2464--2466
+Underfull \hbox (badness 10000) in paragraph at lines 2446--2448
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2477--2479
+Underfull \hbox (badness 10000) in paragraph at lines 2448--2450
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2479--2481
+Underfull \hbox (badness 10000) in paragraph at lines 2450--2452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2481--2483
+Underfull \hbox (badness 10000) in paragraph at lines 2463--2465
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2483--2485
+Underfull \hbox (badness 10000) in paragraph at lines 2465--2467
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2496--2498
+Underfull \hbox (badness 10000) in paragraph at lines 2467--2469
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2498--2500
+Underfull \hbox (badness 10000) in paragraph at lines 2469--2471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2500--2502
+Underfull \hbox (badness 10000) in paragraph at lines 2482--2484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2502--2504
+Underfull \hbox (badness 10000) in paragraph at lines 2484--2486
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2486--2488
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2488--2490
 
  []
 
 
 
 [75]
-Underfull \hbox (badness 10000) in paragraph at lines 2515--2517
+Underfull \hbox (badness 10000) in paragraph at lines 2501--2503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2517--2519
+Underfull \hbox (badness 10000) in paragraph at lines 2503--2505
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2519--2521
+Underfull \hbox (badness 10000) in paragraph at lines 2505--2507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2521--2523
+Underfull \hbox (badness 10000) in paragraph at lines 2507--2509
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2520--2522
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2522--2524
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2524--2526
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2526--2528
 
  []
 
@@ -1760,12 +1755,12 @@ Chapter 6.
 [80]
 
 [81]
-Overfull \hbox (27.74992pt too wide) detected at line 2741
+Overfull \hbox (27.74992pt too wide) detected at line 2746
 [][][][][]
  []
 
 
-Overfull \hbox (4.354pt too wide) in paragraph at lines 2774--2775
+Overfull \hbox (4.354pt too wide) in paragraph at lines 2779--2780
 []|$\OMS/lmsy/m/n/5 ^^@[] [] \OT1/lmr/m/n/5 + 
  []
 
@@ -1776,198 +1771,198 @@ Overfull \hbox (4.354pt too wide) in paragraph at lines 2774--2775
 [83]
 
 [84]
-<./img/OEP_wiki2.png, id=1197, 501.875pt x 572.1375pt>
+<./img/OEP_wiki2.png, id=1201, 501.875pt x 572.1375pt>
 File: ./img/OEP_wiki2.png Graphic file (type png)
 <use ./img/OEP_wiki2.png>
-Package pdftex.def Info: ./img/OEP_wiki2.png  used on input line 2871.
+Package pdftex.def Info: ./img/OEP_wiki2.png  used on input line 2876.
 (pdftex.def)             Requested size: 151.76633pt x 173.0132pt.
 
 
 [85]
-Underfull \hbox (badness 10000) in paragraph at lines 2888--2890
+Underfull \hbox (badness 10000) in paragraph at lines 2893--2895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2890--2892
+Underfull \hbox (badness 10000) in paragraph at lines 2895--2897
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2892--2894
+Underfull \hbox (badness 10000) in paragraph at lines 2897--2899
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2894--2896
+Underfull \hbox (badness 10000) in paragraph at lines 2899--2901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2907--2909
+Underfull \hbox (badness 10000) in paragraph at lines 2912--2914
 
  []
 
 
 
 [86 <./img/OEP_wiki2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2909--2911
+Underfull \hbox (badness 10000) in paragraph at lines 2914--2916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2911--2913
+Underfull \hbox (badness 10000) in paragraph at lines 2916--2918
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2913--2915
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2926--2928
+Underfull \hbox (badness 10000) in paragraph at lines 2931--2933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2928--2930
+Underfull \hbox (badness 10000) in paragraph at lines 2933--2935
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2930--2932
+Underfull \hbox (badness 10000) in paragraph at lines 2935--2937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2932--2934
+Underfull \hbox (badness 10000) in paragraph at lines 2937--2939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2945--2947
+Underfull \hbox (badness 10000) in paragraph at lines 2950--2952
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2947--2949
+Underfull \hbox (badness 10000) in paragraph at lines 2952--2954
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2949--2951
+Underfull \hbox (badness 10000) in paragraph at lines 2954--2956
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2951--2953
+Underfull \hbox (badness 10000) in paragraph at lines 2956--2958
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2964--2966
+Underfull \hbox (badness 10000) in paragraph at lines 2969--2971
 
  []
 
 
 
 [87]
-Underfull \hbox (badness 10000) in paragraph at lines 2966--2968
+Underfull \hbox (badness 10000) in paragraph at lines 2971--2973
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2968--2970
+Underfull \hbox (badness 10000) in paragraph at lines 2973--2975
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2970--2972
+Underfull \hbox (badness 10000) in paragraph at lines 2975--2977
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2985--2987
+Underfull \hbox (badness 10000) in paragraph at lines 2990--2992
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2987--2989
+Underfull \hbox (badness 10000) in paragraph at lines 2992--2994
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2989--2991
+Underfull \hbox (badness 10000) in paragraph at lines 2994--2996
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3002--3004
+Underfull \hbox (badness 10000) in paragraph at lines 3007--3009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3004--3006
+Underfull \hbox (badness 10000) in paragraph at lines 3009--3011
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3008--3010
+Underfull \hbox (badness 10000) in paragraph at lines 3013--3015
 
  []
 
 
 
 [88]
-Underfull \hbox (badness 10000) in paragraph at lines 3023--3025
+Underfull \hbox (badness 10000) in paragraph at lines 3028--3030
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3025--3027
+Underfull \hbox (badness 10000) in paragraph at lines 3030--3032
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3027--3029
+Underfull \hbox (badness 10000) in paragraph at lines 3032--3034
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3042--3044
+Underfull \hbox (badness 10000) in paragraph at lines 3047--3049
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3044--3046
+Underfull \hbox (badness 10000) in paragraph at lines 3049--3051
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3046--3048
+Underfull \hbox (badness 10000) in paragraph at lines 3051--3053
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3059--3061
+Underfull \hbox (badness 10000) in paragraph at lines 3064--3066
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3061--3063
+Underfull \hbox (badness 10000) in paragraph at lines 3066--3068
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3063--3065
+Underfull \hbox (badness 10000) in paragraph at lines 3068--3070
 
  []
 
 
 
 [89]
-Underfull \hbox (badness 10000) in paragraph at lines 3065--3067
+Underfull \hbox (badness 10000) in paragraph at lines 3070--3072
 
  []
 
@@ -1989,210 +1984,210 @@ Chapter 7.
 [94]
 
 [95]
-Underfull \hbox (badness 10000) in paragraph at lines 3216--3218
+Underfull \hbox (badness 10000) in paragraph at lines 3221--3223
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3218--3220
+Underfull \hbox (badness 10000) in paragraph at lines 3223--3225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3220--3222
+Underfull \hbox (badness 10000) in paragraph at lines 3225--3227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3222--3224
+Underfull \hbox (badness 10000) in paragraph at lines 3227--3229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3235--3237
+Underfull \hbox (badness 10000) in paragraph at lines 3240--3242
 
  []
 
 
 
 [96]
-Underfull \hbox (badness 10000) in paragraph at lines 3237--3239
+Underfull \hbox (badness 10000) in paragraph at lines 3242--3244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3239--3241
+Underfull \hbox (badness 10000) in paragraph at lines 3244--3246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3241--3243
+Underfull \hbox (badness 10000) in paragraph at lines 3246--3248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3254--3256
+Underfull \hbox (badness 10000) in paragraph at lines 3259--3261
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3256--3258
+Underfull \hbox (badness 10000) in paragraph at lines 3261--3263
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3258--3260
+Underfull \hbox (badness 10000) in paragraph at lines 3263--3265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3260--3262
+Underfull \hbox (badness 10000) in paragraph at lines 3265--3267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3273--3275
+Underfull \hbox (badness 10000) in paragraph at lines 3278--3280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3275--3277
+Underfull \hbox (badness 10000) in paragraph at lines 3280--3282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3277--3279
+Underfull \hbox (badness 10000) in paragraph at lines 3282--3284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3279--3281
+Underfull \hbox (badness 10000) in paragraph at lines 3284--3286
 
  []
 
 
 
 [97]
-Underfull \hbox (badness 10000) in paragraph at lines 3292--3294
+Underfull \hbox (badness 10000) in paragraph at lines 3297--3299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3294--3296
+Underfull \hbox (badness 10000) in paragraph at lines 3299--3301
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3296--3298
+Underfull \hbox (badness 10000) in paragraph at lines 3301--3303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3298--3300
+Underfull \hbox (badness 10000) in paragraph at lines 3303--3305
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3311--3313
+Underfull \hbox (badness 10000) in paragraph at lines 3316--3318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3313--3315
+Underfull \hbox (badness 10000) in paragraph at lines 3318--3320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3315--3317
+Underfull \hbox (badness 10000) in paragraph at lines 3320--3322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3317--3319
+Underfull \hbox (badness 10000) in paragraph at lines 3322--3324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3330--3332
+Underfull \hbox (badness 10000) in paragraph at lines 3335--3337
 
  []
 
 
 
 [98]
-Underfull \hbox (badness 10000) in paragraph at lines 3332--3334
+Underfull \hbox (badness 10000) in paragraph at lines 3337--3339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3334--3336
+Underfull \hbox (badness 10000) in paragraph at lines 3339--3341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3336--3338
+Underfull \hbox (badness 10000) in paragraph at lines 3341--3343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3349--3351
+Underfull \hbox (badness 10000) in paragraph at lines 3354--3356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3351--3353
+Underfull \hbox (badness 10000) in paragraph at lines 3356--3358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3353--3355
+Underfull \hbox (badness 10000) in paragraph at lines 3358--3360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3355--3357
+Underfull \hbox (badness 10000) in paragraph at lines 3360--3362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3368--3370
+Underfull \hbox (badness 10000) in paragraph at lines 3373--3375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3370--3372
+Underfull \hbox (badness 10000) in paragraph at lines 3375--3377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3372--3374
+Underfull \hbox (badness 10000) in paragraph at lines 3377--3379
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3374--3376
+Underfull \hbox (badness 10000) in paragraph at lines 3379--3381
 
  []
 
 
 
 [99]
-Underfull \hbox (badness 10000) in paragraph at lines 3387--3389
+Underfull \hbox (badness 10000) in paragraph at lines 3392--3394
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3389--3391
+Underfull \hbox (badness 10000) in paragraph at lines 3394--3396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3391--3393
+Underfull \hbox (badness 10000) in paragraph at lines 3396--3398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3393--3395
+Underfull \hbox (badness 10000) in paragraph at lines 3398--3400
 
  []
 
@@ -2215,203 +2210,203 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [103]
 
 [104]
-Underfull \hbox (badness 10000) in paragraph at lines 3490--3492
+Underfull \hbox (badness 10000) in paragraph at lines 3495--3497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3492--3494
+Underfull \hbox (badness 10000) in paragraph at lines 3497--3499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
+Underfull \hbox (badness 10000) in paragraph at lines 3499--3501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3496--3498
+Underfull \hbox (badness 10000) in paragraph at lines 3501--3503
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3511--3513
+Underfull \hbox (badness 10000) in paragraph at lines 3516--3518
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3513--3515
+Underfull \hbox (badness 10000) in paragraph at lines 3518--3520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3515--3517
+Underfull \hbox (badness 10000) in paragraph at lines 3520--3522
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3528--3530
+Underfull \hbox (badness 10000) in paragraph at lines 3533--3535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3530--3532
+Underfull \hbox (badness 10000) in paragraph at lines 3535--3537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3532--3534
+Underfull \hbox (badness 10000) in paragraph at lines 3537--3539
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3534--3536
+Underfull \hbox (badness 10000) in paragraph at lines 3539--3541
 
  []
 
 
 
 [105]
-Underfull \hbox (badness 10000) in paragraph at lines 3547--3549
+Underfull \hbox (badness 10000) in paragraph at lines 3552--3554
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3549--3551
+Underfull \hbox (badness 10000) in paragraph at lines 3554--3556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3551--3553
+Underfull \hbox (badness 10000) in paragraph at lines 3556--3558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3553--3555
+Underfull \hbox (badness 10000) in paragraph at lines 3558--3560
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3566--3568
+Underfull \hbox (badness 10000) in paragraph at lines 3571--3573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3568--3570
+Underfull \hbox (badness 10000) in paragraph at lines 3573--3575
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3570--3572
+Underfull \hbox (badness 10000) in paragraph at lines 3575--3577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3572--3574
+Underfull \hbox (badness 10000) in paragraph at lines 3577--3579
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3585--3587
+Underfull \hbox (badness 10000) in paragraph at lines 3590--3592
 
  []
 
 
 
 [106]
-Underfull \hbox (badness 10000) in paragraph at lines 3587--3589
+Underfull \hbox (badness 10000) in paragraph at lines 3592--3594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3589--3591
+Underfull \hbox (badness 10000) in paragraph at lines 3594--3596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3591--3593
+Underfull \hbox (badness 10000) in paragraph at lines 3596--3598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3604--3606
+Underfull \hbox (badness 10000) in paragraph at lines 3609--3611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3606--3608
+Underfull \hbox (badness 10000) in paragraph at lines 3611--3613
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3608--3610
+Underfull \hbox (badness 10000) in paragraph at lines 3613--3615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3610--3612
+Underfull \hbox (badness 10000) in paragraph at lines 3615--3617
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3623--3625
+Underfull \hbox (badness 10000) in paragraph at lines 3628--3630
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3625--3627
+Underfull \hbox (badness 10000) in paragraph at lines 3630--3632
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3627--3629
+Underfull \hbox (badness 10000) in paragraph at lines 3632--3634
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3629--3631
+Underfull \hbox (badness 10000) in paragraph at lines 3634--3636
 
  []
 
 
 
 [107]
-Underfull \hbox (badness 10000) in paragraph at lines 3642--3644
+Underfull \hbox (badness 10000) in paragraph at lines 3647--3649
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3644--3646
+Underfull \hbox (badness 10000) in paragraph at lines 3649--3651
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3646--3648
+Underfull \hbox (badness 10000) in paragraph at lines 3651--3653
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3648--3650
+Underfull \hbox (badness 10000) in paragraph at lines 3653--3655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3661--3663
+Underfull \hbox (badness 10000) in paragraph at lines 3666--3668
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3663--3665
+Underfull \hbox (badness 10000) in paragraph at lines 3668--3670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3665--3667
+Underfull \hbox (badness 10000) in paragraph at lines 3670--3672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3667--3669
+Underfull \hbox (badness 10000) in paragraph at lines 3672--3674
 
  []
 
@@ -2425,18 +2420,18 @@ Chapter 9.
 
 
 ]
-<./img/OEP_wiki3.jpg, id=1503, 562.1pt x 423.5825pt>
+<./img/OEP_wiki3.jpg, id=1507, 562.1pt x 423.5825pt>
 File: ./img/OEP_wiki3.jpg Graphic file (type jpg)
 <use ./img/OEP_wiki3.jpg>
-Package pdftex.def Info: ./img/OEP_wiki3.jpg  used on input line 3692.
+Package pdftex.def Info: ./img/OEP_wiki3.jpg  used on input line 3697.
 (pdftex.def)             Requested size: 212.47194pt x 160.10986pt.
 
 
 [110 <./img/OEP_wiki3.jpg>]
-<./img/OEP_wiki4.png, id=1514, 1092.7224pt x 731.3724pt>
+<./img/OEP_wiki4.png, id=1518, 1092.7224pt x 731.3724pt>
 File: ./img/OEP_wiki4.png Graphic file (type png)
 <use ./img/OEP_wiki4.png>
-Package pdftex.def Info: ./img/OEP_wiki4.png  used on input line 3707.
+Package pdftex.def Info: ./img/OEP_wiki4.png  used on input line 3712.
 (pdftex.def)             Requested size: 212.47194pt x 142.2097pt.
 
 
@@ -2445,10 +2440,10 @@ Package pdftex.def Info: ./img/OEP_wiki4.png  used on input line 3707.
 [112]
 
 [113]
-<./img/OEP_wiki9.png, id=1549, 506.88pt x 232.65pt>
+<./img/OEP_wiki9.png, id=1553, 506.88pt x 232.65pt>
 File: ./img/OEP_wiki9.png Graphic file (type png)
 <use ./img/OEP_wiki9.png>
-Package pdftex.def Info: ./img/OEP_wiki9.png  used on input line 3767.
+Package pdftex.def Info: ./img/OEP_wiki9.png  used on input line 3772.
 (pdftex.def)             Requested size: 212.47194pt x 97.52063pt.
 
 
@@ -2459,208 +2454,208 @@ Package pdftex.def Info: ./img/OEP_wiki9.png  used on input line 3767.
 [116]
 
 [117]
-Underfull \hbox (badness 10000) in paragraph at lines 3850--3852
+Underfull \hbox (badness 10000) in paragraph at lines 3855--3857
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3852--3854
+Underfull \hbox (badness 10000) in paragraph at lines 3857--3859
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3854--3856
+Underfull \hbox (badness 10000) in paragraph at lines 3859--3861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3856--3858
+Underfull \hbox (badness 10000) in paragraph at lines 3861--3863
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3869--3871
+Underfull \hbox (badness 10000) in paragraph at lines 3874--3876
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3871--3873
+Underfull \hbox (badness 10000) in paragraph at lines 3876--3878
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3873--3875
+Underfull \hbox (badness 10000) in paragraph at lines 3878--3880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3875--3877
+Underfull \hbox (badness 10000) in paragraph at lines 3880--3882
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3888--3890
+Underfull \hbox (badness 10000) in paragraph at lines 3893--3895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3890--3892
+Underfull \hbox (badness 10000) in paragraph at lines 3895--3897
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3892--3894
+Underfull \hbox (badness 10000) in paragraph at lines 3897--3899
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3894--3896
+Underfull \hbox (badness 10000) in paragraph at lines 3899--3901
 
  []
 
 
 
 [118]
-Underfull \hbox (badness 10000) in paragraph at lines 3907--3909
+Underfull \hbox (badness 10000) in paragraph at lines 3912--3914
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3909--3911
+Underfull \hbox (badness 10000) in paragraph at lines 3914--3916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3911--3913
+Underfull \hbox (badness 10000) in paragraph at lines 3916--3918
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3913--3915
+Underfull \hbox (badness 10000) in paragraph at lines 3918--3920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3926--3928
+Underfull \hbox (badness 10000) in paragraph at lines 3931--3933
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3928--3930
+Underfull \hbox (badness 10000) in paragraph at lines 3933--3935
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3930--3932
+Underfull \hbox (badness 10000) in paragraph at lines 3935--3937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3932--3934
+Underfull \hbox (badness 10000) in paragraph at lines 3937--3939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3945--3947
+Underfull \hbox (badness 10000) in paragraph at lines 3950--3952
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3947--3949
+Underfull \hbox (badness 10000) in paragraph at lines 3952--3954
 
  []
 
 
 
 [119]
-Underfull \hbox (badness 10000) in paragraph at lines 3949--3951
+Underfull \hbox (badness 10000) in paragraph at lines 3954--3956
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3951--3953
+Underfull \hbox (badness 10000) in paragraph at lines 3956--3958
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3964--3966
+Underfull \hbox (badness 10000) in paragraph at lines 3969--3971
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3966--3968
+Underfull \hbox (badness 10000) in paragraph at lines 3971--3973
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3968--3970
+Underfull \hbox (badness 10000) in paragraph at lines 3973--3975
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3970--3972
+Underfull \hbox (badness 10000) in paragraph at lines 3975--3977
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3983--3985
+Underfull \hbox (badness 10000) in paragraph at lines 3988--3990
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3985--3987
+Underfull \hbox (badness 10000) in paragraph at lines 3990--3992
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3987--3989
+Underfull \hbox (badness 10000) in paragraph at lines 3992--3994
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3989--3991
+Underfull \hbox (badness 10000) in paragraph at lines 3994--3996
 
  []
 
 
 
 [120]
-Underfull \hbox (badness 10000) in paragraph at lines 4002--4004
+Underfull \hbox (badness 10000) in paragraph at lines 4007--4009
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4004--4006
+Underfull \hbox (badness 10000) in paragraph at lines 4009--4011
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4006--4008
+Underfull \hbox (badness 10000) in paragraph at lines 4011--4013
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4008--4010
+Underfull \hbox (badness 10000) in paragraph at lines 4013--4015
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4021--4023
+Underfull \hbox (badness 10000) in paragraph at lines 4026--4028
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4023--4025
+Underfull \hbox (badness 10000) in paragraph at lines 4028--4030
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4025--4027
+Underfull \hbox (badness 10000) in paragraph at lines 4030--4032
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4027--4029
+Underfull \hbox (badness 10000) in paragraph at lines 4032--4034
 
  []
 
@@ -2678,7 +2673,7 @@ Chapter 10.
 [123]
 
 [124]
-Overfull \hbox (20.24783pt too wide) detected at line 4112
+Overfull \hbox (20.24783pt too wide) detected at line 4117
 [][][]\OT1/lmr/m/n/9 	(\OT1/lmr/bx/n/9 x[]\OML/lmm/m/it/9 ; \OT1/lmr/bx/n/9 x[]\OML/lmm/m/it/9 ; [] ; \OT1/lmr/bx/n/9 x[]\OT1/lmr/m/n/9 ) = [][] = \OMS/lmsy/m/n/9 j\OML/lmm/m/it/9 ^^_[]; ^^_[]; []  ; ^^_[]\OMS/lmsy/m/n/9 i\OML/lmm/m/it/9 ;
  []
 
@@ -2693,198 +2688,198 @@ Overfull \hbox (20.24783pt too wide) detected at line 4112
 [128]
 
 [129]
-Underfull \hbox (badness 10000) in paragraph at lines 4236--4238
+Underfull \hbox (badness 10000) in paragraph at lines 4241--4243
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4238--4240
+Underfull \hbox (badness 10000) in paragraph at lines 4243--4245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4240--4242
+Underfull \hbox (badness 10000) in paragraph at lines 4245--4247
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4242--4244
+Underfull \hbox (badness 10000) in paragraph at lines 4247--4249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4255--4257
+Underfull \hbox (badness 10000) in paragraph at lines 4260--4262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4257--4259
+Underfull \hbox (badness 10000) in paragraph at lines 4262--4264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4259--4261
+Underfull \hbox (badness 10000) in paragraph at lines 4264--4266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4261--4263
+Underfull \hbox (badness 10000) in paragraph at lines 4266--4268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4274--4276
+Underfull \hbox (badness 10000) in paragraph at lines 4279--4281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4278--4280
+Underfull \hbox (badness 10000) in paragraph at lines 4283--4285
 
  []
 
 
 
 [130]
-Underfull \hbox (badness 10000) in paragraph at lines 4280--4282
+Underfull \hbox (badness 10000) in paragraph at lines 4285--4287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4293--4295
+Underfull \hbox (badness 10000) in paragraph at lines 4298--4300
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4295--4297
+Underfull \hbox (badness 10000) in paragraph at lines 4300--4302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4297--4299
+Underfull \hbox (badness 10000) in paragraph at lines 4302--4304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4299--4301
+Underfull \hbox (badness 10000) in paragraph at lines 4304--4306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4312--4314
+Underfull \hbox (badness 10000) in paragraph at lines 4317--4319
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4314--4316
+Underfull \hbox (badness 10000) in paragraph at lines 4319--4321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4316--4318
+Underfull \hbox (badness 10000) in paragraph at lines 4321--4323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4318--4320
+Underfull \hbox (badness 10000) in paragraph at lines 4323--4325
 
  []
 
 
 
 [131]
-Underfull \hbox (badness 10000) in paragraph at lines 4331--4333
+Underfull \hbox (badness 10000) in paragraph at lines 4336--4338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4333--4335
+Underfull \hbox (badness 10000) in paragraph at lines 4338--4340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4335--4337
+Underfull \hbox (badness 10000) in paragraph at lines 4340--4342
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4337--4339
+Underfull \hbox (badness 10000) in paragraph at lines 4342--4344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4350--4352
+Underfull \hbox (badness 10000) in paragraph at lines 4355--4357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4352--4354
+Underfull \hbox (badness 10000) in paragraph at lines 4357--4359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4354--4356
+Underfull \hbox (badness 10000) in paragraph at lines 4359--4361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4356--4358
+Underfull \hbox (badness 10000) in paragraph at lines 4361--4363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4369--4371
+Underfull \hbox (badness 10000) in paragraph at lines 4374--4376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4371--4373
+Underfull \hbox (badness 10000) in paragraph at lines 4376--4378
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4373--4375
+Underfull \hbox (badness 10000) in paragraph at lines 4378--4380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4375--4377
+Underfull \hbox (badness 10000) in paragraph at lines 4380--4382
 
  []
 
 
 
 [132]
-Underfull \hbox (badness 10000) in paragraph at lines 4388--4390
+Underfull \hbox (badness 10000) in paragraph at lines 4393--4395
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4390--4392
+Underfull \hbox (badness 10000) in paragraph at lines 4395--4397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4392--4394
+Underfull \hbox (badness 10000) in paragraph at lines 4397--4399
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4394--4396
+Underfull \hbox (badness 10000) in paragraph at lines 4399--4401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4407--4409
+Underfull \hbox (badness 10000) in paragraph at lines 4412--4414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4409--4411
+Underfull \hbox (badness 10000) in paragraph at lines 4414--4416
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4411--4413
+Underfull \hbox (badness 10000) in paragraph at lines 4416--4418
 
  []
 
@@ -2911,210 +2906,210 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [138]
 
 [139]
-Underfull \hbox (badness 10000) in paragraph at lines 4569--4571
+Underfull \hbox (badness 10000) in paragraph at lines 4574--4576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4571--4573
+Underfull \hbox (badness 10000) in paragraph at lines 4576--4578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4573--4575
+Underfull \hbox (badness 10000) in paragraph at lines 4578--4580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4575--4577
+Underfull \hbox (badness 10000) in paragraph at lines 4580--4582
 
  []
 
 
 
 [140]
-Underfull \hbox (badness 10000) in paragraph at lines 4588--4590
+Underfull \hbox (badness 10000) in paragraph at lines 4593--4595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4590--4592
+Underfull \hbox (badness 10000) in paragraph at lines 4595--4597
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4592--4594
+Underfull \hbox (badness 10000) in paragraph at lines 4597--4599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4594--4596
+Underfull \hbox (badness 10000) in paragraph at lines 4599--4601
 
  []
 
 
-Underfull \hbox (badness 1721) in paragraph at lines 4601--4602
+Underfull \hbox (badness 1721) in paragraph at lines 4606--4607
 []\T1/lmr/bx/n/9 3. What is the cen-tral phys-i-cal idea be-hind the Born--
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4607--4609
+Underfull \hbox (badness 10000) in paragraph at lines 4612--4614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4609--4611
+Underfull \hbox (badness 10000) in paragraph at lines 4614--4616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4611--4613
+Underfull \hbox (badness 10000) in paragraph at lines 4616--4618
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4613--4615
+Underfull \hbox (badness 10000) in paragraph at lines 4618--4620
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4626--4628
+Underfull \hbox (badness 10000) in paragraph at lines 4631--4633
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4628--4630
+Underfull \hbox (badness 10000) in paragraph at lines 4633--4635
 
  []
 
 
 
 [141]
-Underfull \hbox (badness 10000) in paragraph at lines 4630--4632
+Underfull \hbox (badness 10000) in paragraph at lines 4635--4637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4632--4634
+Underfull \hbox (badness 10000) in paragraph at lines 4637--4639
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4645--4647
+Underfull \hbox (badness 10000) in paragraph at lines 4650--4652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4647--4649
+Underfull \hbox (badness 10000) in paragraph at lines 4652--4654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4649--4651
+Underfull \hbox (badness 10000) in paragraph at lines 4654--4656
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4651--4653
+Underfull \hbox (badness 10000) in paragraph at lines 4656--4658
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4664--4666
+Underfull \hbox (badness 10000) in paragraph at lines 4669--4671
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4666--4668
+Underfull \hbox (badness 10000) in paragraph at lines 4671--4673
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4668--4670
+Underfull \hbox (badness 10000) in paragraph at lines 4673--4675
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4670--4672
+Underfull \hbox (badness 10000) in paragraph at lines 4675--4677
 
  []
 
 
 
 [142]
-Underfull \hbox (badness 10000) in paragraph at lines 4683--4685
+Underfull \hbox (badness 10000) in paragraph at lines 4688--4690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4685--4687
+Underfull \hbox (badness 10000) in paragraph at lines 4690--4692
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4687--4689
+Underfull \hbox (badness 10000) in paragraph at lines 4692--4694
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4689--4691
+Underfull \hbox (badness 10000) in paragraph at lines 4694--4696
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4702--4704
+Underfull \hbox (badness 10000) in paragraph at lines 4707--4709
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4704--4706
+Underfull \hbox (badness 10000) in paragraph at lines 4709--4711
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4706--4708
+Underfull \hbox (badness 10000) in paragraph at lines 4711--4713
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4708--4710
+Underfull \hbox (badness 10000) in paragraph at lines 4713--4715
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4721--4723
+Underfull \hbox (badness 10000) in paragraph at lines 4726--4728
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4723--4725
+Underfull \hbox (badness 10000) in paragraph at lines 4728--4730
 
  []
 
 
 
 [143]
-Underfull \hbox (badness 10000) in paragraph at lines 4727--4729
+Underfull \hbox (badness 10000) in paragraph at lines 4732--4734
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4740--4742
+Underfull \hbox (badness 10000) in paragraph at lines 4745--4747
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4742--4744
+Underfull \hbox (badness 10000) in paragraph at lines 4747--4749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4744--4746
+Underfull \hbox (badness 10000) in paragraph at lines 4749--4751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4746--4748
+Underfull \hbox (badness 10000) in paragraph at lines 4751--4753
 
  []
 
@@ -3122,10 +3117,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 4746--4748
 
 [144]
 Chapter 12.
-<./img/OEP_figure1.jpeg, id=1912, 1027.84pt x 770.88pt>
+<./img/OEP_figure1.jpeg, id=1916, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure1.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure1.jpeg>
-Package pdftex.def Info: ./img/OEP_figure1.jpeg  used on input line 4765.
+Package pdftex.def Info: ./img/OEP_figure1.jpeg  used on input line 4770.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
 
 
@@ -3135,41 +3130,41 @@ Package pdftex.def Info: ./img/OEP_figure1.jpeg  used on input line 4765.
 ]
 
 [146 <./img/OEP_figure1.jpeg>]
-<./img/OEP_figure2.jpeg, id=1929, 1027.84pt x 770.88pt>
+<./img/OEP_figure2.jpeg, id=1933, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure2.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure2.jpeg>
-Package pdftex.def Info: ./img/OEP_figure2.jpeg  used on input line 4858.
+Package pdftex.def Info: ./img/OEP_figure2.jpeg  used on input line 4863.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
 
 
 [147]
-<./img/OEP_figure3.jpeg, id=1943, 1027.84pt x 770.88pt>
+<./img/OEP_figure3.jpeg, id=1947, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure3.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure3.jpeg>
-Package pdftex.def Info: ./img/OEP_figure3.jpeg  used on input line 4869.
+Package pdftex.def Info: ./img/OEP_figure3.jpeg  used on input line 4874.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
-<./img/OEP_figure4.jpeg, id=1944, 1027.84pt x 770.88pt>
+<./img/OEP_figure4.jpeg, id=1948, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure4.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure4.jpeg>
-Package pdftex.def Info: ./img/OEP_figure4.jpeg  used on input line 4880.
+Package pdftex.def Info: ./img/OEP_figure4.jpeg  used on input line 4885.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
 
 
 [148 <./img/OEP_figure2.jpeg>]
 
 [149 <./img/OEP_figure3.jpeg> <./img/OEP_figure4.jpeg>]
-<./img/OEP_figure5.jpeg, id=1962, 1027.84pt x 770.88pt>
+<./img/OEP_figure5.jpeg, id=1966, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure5.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure5.jpeg>
-Package pdftex.def Info: ./img/OEP_figure5.jpeg  used on input line 4916.
+Package pdftex.def Info: ./img/OEP_figure5.jpeg  used on input line 4921.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
-<./img/OEP_figure6.jpeg, id=1966, 1027.84pt x 770.88pt>
+<./img/OEP_figure6.jpeg, id=1970, 1027.84pt x 770.88pt>
 File: ./img/OEP_figure6.jpeg Graphic file (type jpg)
 <use ./img/OEP_figure6.jpeg>
-Package pdftex.def Info: ./img/OEP_figure6.jpeg  used on input line 4929.
+Package pdftex.def Info: ./img/OEP_figure6.jpeg  used on input line 4934.
 (pdftex.def)             Requested size: 212.47194pt x 159.34885pt.
 
-Underfull \hbox (badness 1701) in paragraph at lines 4933--4933
+Underfull \hbox (badness 1701) in paragraph at lines 4938--4938
 []\T1/lmr/m/n/9 Figure 12.6: []Born-Oppenheimer en-ergy land-scape for the hy-dro-gen
  []
 
@@ -3178,200 +3173,200 @@ Underfull \hbox (badness 1701) in paragraph at lines 4933--4933
 [150]
 
 [151 <./img/OEP_figure5.jpeg> <./img/OEP_figure6.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 4948--4950
+Underfull \hbox (badness 10000) in paragraph at lines 4953--4955
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4950--4952
+Underfull \hbox (badness 10000) in paragraph at lines 4955--4957
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4952--4954
+Underfull \hbox (badness 10000) in paragraph at lines 4957--4959
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4954--4956
+Underfull \hbox (badness 10000) in paragraph at lines 4959--4961
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4967--4969
+Underfull \hbox (badness 10000) in paragraph at lines 4972--4974
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4969--4971
+Underfull \hbox (badness 10000) in paragraph at lines 4974--4976
 
  []
 
 
 
 [152]
-Underfull \hbox (badness 10000) in paragraph at lines 4971--4973
+Underfull \hbox (badness 10000) in paragraph at lines 4976--4978
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4988--4990
+Underfull \hbox (badness 10000) in paragraph at lines 4993--4995
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4990--4992
+Underfull \hbox (badness 10000) in paragraph at lines 4995--4997
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4994
+Underfull \hbox (badness 10000) in paragraph at lines 4997--4999
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5005--5007
+Underfull \hbox (badness 10000) in paragraph at lines 5010--5012
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5007--5009
+Underfull \hbox (badness 10000) in paragraph at lines 5012--5014
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5009--5011
+Underfull \hbox (badness 10000) in paragraph at lines 5014--5016
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5011--5013
+Underfull \hbox (badness 10000) in paragraph at lines 5016--5018
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5024--5026
+Underfull \hbox (badness 10000) in paragraph at lines 5029--5031
 
  []
 
 
 
 [153]
-Underfull \hbox (badness 10000) in paragraph at lines 5026--5028
+Underfull \hbox (badness 10000) in paragraph at lines 5031--5033
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5028--5030
+Underfull \hbox (badness 10000) in paragraph at lines 5033--5035
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5030--5032
+Underfull \hbox (badness 10000) in paragraph at lines 5035--5037
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5043--5045
+Underfull \hbox (badness 10000) in paragraph at lines 5048--5050
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5045--5047
+Underfull \hbox (badness 10000) in paragraph at lines 5050--5052
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5047--5049
+Underfull \hbox (badness 10000) in paragraph at lines 5052--5054
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5049--5051
+Underfull \hbox (badness 10000) in paragraph at lines 5054--5056
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5062--5064
+Underfull \hbox (badness 10000) in paragraph at lines 5067--5069
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5064--5066
+Underfull \hbox (badness 10000) in paragraph at lines 5069--5071
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5066--5068
+Underfull \hbox (badness 10000) in paragraph at lines 5071--5073
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5068--5070
+Underfull \hbox (badness 10000) in paragraph at lines 5073--5075
 
  []
 
 
 
 [154]
-Underfull \hbox (badness 10000) in paragraph at lines 5081--5083
+Underfull \hbox (badness 10000) in paragraph at lines 5086--5088
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5083--5085
+Underfull \hbox (badness 10000) in paragraph at lines 5088--5090
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5085--5087
+Underfull \hbox (badness 10000) in paragraph at lines 5090--5092
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5087--5089
+Underfull \hbox (badness 10000) in paragraph at lines 5092--5094
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5100--5102
+Underfull \hbox (badness 10000) in paragraph at lines 5105--5107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5102--5104
+Underfull \hbox (badness 10000) in paragraph at lines 5107--5109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5104--5106
+Underfull \hbox (badness 10000) in paragraph at lines 5109--5111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5106--5108
+Underfull \hbox (badness 10000) in paragraph at lines 5111--5113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5119--5121
+Underfull \hbox (badness 10000) in paragraph at lines 5124--5126
 
  []
 
 
 
 [155]
-Underfull \hbox (badness 10000) in paragraph at lines 5121--5123
+Underfull \hbox (badness 10000) in paragraph at lines 5126--5128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5123--5125
+Underfull \hbox (badness 10000) in paragraph at lines 5128--5130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5125--5127
+Underfull \hbox (badness 10000) in paragraph at lines 5130--5132
 
  []
 
@@ -3391,7 +3386,7 @@ Chapter 13.
 [159]
 
 [160]
-Overfull \hbox (6.5169pt too wide) detected at line 5238
+Overfull \hbox (6.5169pt too wide) detected at line 5243
 [][][]\OT1/lmr/bx/n/9 V \OT1/lmr/m/n/9 = []
  []
 
@@ -3402,7 +3397,7 @@ Overfull \hbox (6.5169pt too wide) detected at line 5238
 [162]
 
 [163]
-Overfull \hbox (17.8836pt too wide) detected at line 5309
+Overfull \hbox (17.8836pt too wide) detected at line 5314
 [][][] [] 
  []
 
@@ -3414,236 +3409,236 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [164]
 
 [165]
-<./img/Fig13.jpg, id=2117, 5018.75pt x 4810.97375pt>
+<./img/Fig13.jpg, id=2122, 5018.75pt x 4810.97375pt>
 File: ./img/Fig13.jpg Graphic file (type jpg)
 <use ./img/Fig13.jpg>
-Package pdftex.def Info: ./img/Fig13.jpg  used on input line 5319.
+Package pdftex.def Info: ./img/Fig13.jpg  used on input line 5324.
 (pdftex.def)             Requested size: 273.17754pt x 261.85152pt.
 
 
 [166]
 
 [167 <./img/Fig13.jpg>]
-<./img/Fig13_map.jpg, id=2129, 1298.8525pt x 911.405pt>
+<./img/Fig13_map.jpg, id=2133, 1298.8525pt x 911.405pt>
 File: ./img/Fig13_map.jpg Graphic file (type jpg)
 <use ./img/Fig13_map.jpg>
-Package pdftex.def Info: ./img/Fig13_map.jpg  used on input line 5338.
+Package pdftex.def Info: ./img/Fig13_map.jpg  used on input line 5343.
 (pdftex.def)             Requested size: 182.12144pt x 127.79053pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5355--5357
+Underfull \hbox (badness 10000) in paragraph at lines 5360--5362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5357--5359
+Underfull \hbox (badness 10000) in paragraph at lines 5362--5364
 
  []
 
 
 
 [168 <./img/Fig13_map.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 5359--5361
+Underfull \hbox (badness 10000) in paragraph at lines 5364--5366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5361--5363
+Underfull \hbox (badness 10000) in paragraph at lines 5366--5368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5374--5376
+Underfull \hbox (badness 10000) in paragraph at lines 5379--5381
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5376--5378
+Underfull \hbox (badness 10000) in paragraph at lines 5381--5383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5378--5380
+Underfull \hbox (badness 10000) in paragraph at lines 5383--5385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5380--5382
+Underfull \hbox (badness 10000) in paragraph at lines 5385--5387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5393--5395
+Underfull \hbox (badness 10000) in paragraph at lines 5398--5400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5395--5397
+Underfull \hbox (badness 10000) in paragraph at lines 5400--5402
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5397--5399
+Underfull \hbox (badness 10000) in paragraph at lines 5402--5404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5399--5401
+Underfull \hbox (badness 10000) in paragraph at lines 5404--5406
 
  []
 
 
 
 [169]
-Underfull \hbox (badness 10000) in paragraph at lines 5412--5414
+Underfull \hbox (badness 10000) in paragraph at lines 5417--5419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5414--5416
+Underfull \hbox (badness 10000) in paragraph at lines 5419--5421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5416--5418
+Underfull \hbox (badness 10000) in paragraph at lines 5421--5423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5418--5420
+Underfull \hbox (badness 10000) in paragraph at lines 5423--5425
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5431--5433
+Underfull \hbox (badness 10000) in paragraph at lines 5436--5438
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5433--5435
+Underfull \hbox (badness 10000) in paragraph at lines 5438--5440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5435--5437
+Underfull \hbox (badness 10000) in paragraph at lines 5440--5442
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5437--5439
+Underfull \hbox (badness 10000) in paragraph at lines 5442--5444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5450--5452
+Underfull \hbox (badness 10000) in paragraph at lines 5455--5457
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5452--5454
+Underfull \hbox (badness 10000) in paragraph at lines 5457--5459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5454--5456
+Underfull \hbox (badness 10000) in paragraph at lines 5459--5461
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5456--5458
+Underfull \hbox (badness 10000) in paragraph at lines 5461--5463
 
  []
 
 
 
 [170]
-Underfull \hbox (badness 10000) in paragraph at lines 5469--5471
+Underfull \hbox (badness 10000) in paragraph at lines 5474--5476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5471--5473
+Underfull \hbox (badness 10000) in paragraph at lines 5476--5478
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5473--5475
+Underfull \hbox (badness 10000) in paragraph at lines 5478--5480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5475--5477
+Underfull \hbox (badness 10000) in paragraph at lines 5480--5482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5488--5490
+Underfull \hbox (badness 10000) in paragraph at lines 5493--5495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5490--5492
+Underfull \hbox (badness 10000) in paragraph at lines 5495--5497
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5492--5494
+Underfull \hbox (badness 10000) in paragraph at lines 5497--5499
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5494--5496
+Underfull \hbox (badness 10000) in paragraph at lines 5499--5501
 
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 5501--5502
+Underfull \hbox (badness 1552) in paragraph at lines 5506--5507
 []\T1/lmr/bx/n/9 9. What is the main phys-i-cal in-ter-pre-ta-tion of the two
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5507--5509
+Underfull \hbox (badness 10000) in paragraph at lines 5512--5514
 
  []
 
 
 
 [171]
-Underfull \hbox (badness 10000) in paragraph at lines 5509--5511
+Underfull \hbox (badness 10000) in paragraph at lines 5514--5516
 
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 5511--5513
+Underfull \hbox (badness 1062) in paragraph at lines 5516--5518
 []\T1/lmr/m/n/9 primarily oxy-gen lone[]pair or-bitals ori-ented roughly to-ward the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5511--5513
+Underfull \hbox (badness 10000) in paragraph at lines 5516--5518
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5513--5515
+Underfull \hbox (badness 10000) in paragraph at lines 5518--5520
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5526--5528
+Underfull \hbox (badness 10000) in paragraph at lines 5531--5533
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5528--5530
+Underfull \hbox (badness 10000) in paragraph at lines 5533--5535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5530--5532
+Underfull \hbox (badness 10000) in paragraph at lines 5535--5537
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5532--5534
+Underfull \hbox (badness 10000) in paragraph at lines 5537--5539
 
  []
 
@@ -3657,17 +3652,17 @@ Chapter 14.
 
 
 ]
-Underfull \hbox (badness 1688) in paragraph at lines 5567--5568
+Underfull \hbox (badness 1688) in paragraph at lines 5572--5573
 []\T1/lmr/m/n/9 The ro-ta-tional en-er-gies are de-rived the-o-ret-i-cally by con-sid-er-ing the
  []
 
 
 
 [174]
-<./img/OEP_wiki5.png, id=2217, 307.90031pt x 377.91188pt>
+<./img/OEP_wiki5.png, id=2221, 307.90031pt x 377.91188pt>
 File: ./img/OEP_wiki5.png Graphic file (type png)
 <use ./img/OEP_wiki5.png>
-Package pdftex.def Info: ./img/OEP_wiki5.png  used on input line 5612.
+Package pdftex.def Info: ./img/OEP_wiki5.png  used on input line 5617.
 (pdftex.def)             Requested size: 151.76633pt x 186.27983pt.
 
 
@@ -3676,18 +3671,18 @@ Package pdftex.def Info: ./img/OEP_wiki5.png  used on input line 5612.
 [176 <./img/OEP_wiki5.png>]
 
 [177]
-<./img/OEP_wiki6.png, id=2246, 461.725pt x 266.9975pt>
+<./img/OEP_wiki6.png, id=2250, 461.725pt x 266.9975pt>
 File: ./img/OEP_wiki6.png Graphic file (type png)
 <use ./img/OEP_wiki6.png>
-Package pdftex.def Info: ./img/OEP_wiki6.png  used on input line 5679.
+Package pdftex.def Info: ./img/OEP_wiki6.png  used on input line 5684.
 (pdftex.def)             Requested size: 151.76633pt x 87.75906pt.
 
 
 [178 <./img/OEP_wiki6.png (PNG copy)>]
-<./img/OEP_wiki7.png, id=2264, 1027.84pt x 1339.0025pt>
+<./img/OEP_wiki7.png, id=2268, 1027.84pt x 1339.0025pt>
 File: ./img/OEP_wiki7.png Graphic file (type png)
 <use ./img/OEP_wiki7.png>
-Package pdftex.def Info: ./img/OEP_wiki7.png  used on input line 5690.
+Package pdftex.def Info: ./img/OEP_wiki7.png  used on input line 5695.
 (pdftex.def)             Requested size: 151.76633pt x 197.69525pt.
 
 
@@ -3696,43 +3691,43 @@ Package pdftex.def Info: ./img/OEP_wiki7.png  used on input line 5690.
 [180]
 
 [181]
-<./img/OEP_wiki8.png, id=2288, 2687.03876pt x 3319.40125pt>
+<./img/OEP_wiki8.png, id=2292, 2687.03876pt x 3319.40125pt>
 File: ./img/OEP_wiki8.png Graphic file (type png)
 <use ./img/OEP_wiki8.png>
-Package pdftex.def Info: ./img/OEP_wiki8.png  used on input line 5759.
+Package pdftex.def Info: ./img/OEP_wiki8.png  used on input line 5764.
 (pdftex.def)             Requested size: 212.47194pt x 262.46788pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5776--5778
+Underfull \hbox (badness 10000) in paragraph at lines 5781--5783
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5778--5780
+Underfull \hbox (badness 10000) in paragraph at lines 5783--5785
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5780--5782
+Underfull \hbox (badness 10000) in paragraph at lines 5785--5787
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5782--5784
+Underfull \hbox (badness 10000) in paragraph at lines 5787--5789
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5795--5797
+Underfull \hbox (badness 10000) in paragraph at lines 5800--5802
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5797--5799
+Underfull \hbox (badness 10000) in paragraph at lines 5802--5804
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5799--5801
+Underfull \hbox (badness 10000) in paragraph at lines 5804--5806
 
  []
 
@@ -3741,173 +3736,173 @@ Underfull \hbox (badness 10000) in paragraph at lines 5799--5801
 [182]
 
 [183 <./img/OEP_wiki8.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 5801--5803
+Underfull \hbox (badness 10000) in paragraph at lines 5806--5808
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5814--5816
+Underfull \hbox (badness 10000) in paragraph at lines 5819--5821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5816--5818
+Underfull \hbox (badness 10000) in paragraph at lines 5821--5823
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5818--5820
+Underfull \hbox (badness 10000) in paragraph at lines 5823--5825
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5820--5822
+Underfull \hbox (badness 10000) in paragraph at lines 5825--5827
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5833--5835
+Underfull \hbox (badness 10000) in paragraph at lines 5838--5840
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5835--5837
+Underfull \hbox (badness 10000) in paragraph at lines 5840--5842
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5837--5839
+Underfull \hbox (badness 10000) in paragraph at lines 5842--5844
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5839--5841
+Underfull \hbox (badness 10000) in paragraph at lines 5844--5846
 
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 5846--5847
+Underfull \hbox (badness 2626) in paragraph at lines 5851--5852
 []\T1/lmr/bx/n/9 5. What is the main vi-bra-tional se-lec-tion rule for an
  []
 
 
 
 [184]
-Underfull \hbox (badness 10000) in paragraph at lines 5852--5854
+Underfull \hbox (badness 10000) in paragraph at lines 5857--5859
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5854--5856
+Underfull \hbox (badness 10000) in paragraph at lines 5859--5861
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5856--5858
+Underfull \hbox (badness 10000) in paragraph at lines 5861--5863
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5858--5860
+Underfull \hbox (badness 10000) in paragraph at lines 5863--5865
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5871--5873
+Underfull \hbox (badness 10000) in paragraph at lines 5876--5878
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5873--5875
+Underfull \hbox (badness 10000) in paragraph at lines 5878--5880
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5875--5877
+Underfull \hbox (badness 10000) in paragraph at lines 5880--5882
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5890--5892
+Underfull \hbox (badness 10000) in paragraph at lines 5895--5897
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5892--5894
+Underfull \hbox (badness 10000) in paragraph at lines 5897--5899
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5894--5896
+Underfull \hbox (badness 10000) in paragraph at lines 5899--5901
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5896--5898
+Underfull \hbox (badness 10000) in paragraph at lines 5901--5903
 
  []
 
 
 
 [185]
-Underfull \hbox (badness 10000) in paragraph at lines 5909--5911
+Underfull \hbox (badness 10000) in paragraph at lines 5914--5916
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5911--5913
+Underfull \hbox (badness 10000) in paragraph at lines 5916--5918
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5913--5915
+Underfull \hbox (badness 10000) in paragraph at lines 5918--5920
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5915--5917
+Underfull \hbox (badness 10000) in paragraph at lines 5920--5922
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5928--5930
+Underfull \hbox (badness 10000) in paragraph at lines 5933--5935
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5930--5932
+Underfull \hbox (badness 10000) in paragraph at lines 5935--5937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5932--5934
+Underfull \hbox (badness 10000) in paragraph at lines 5937--5939
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5934--5936
+Underfull \hbox (badness 10000) in paragraph at lines 5939--5941
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5947--5949
+Underfull \hbox (badness 10000) in paragraph at lines 5952--5954
 
  []
 
 
 
 [186]
-Underfull \hbox (badness 10000) in paragraph at lines 5949--5951
+Underfull \hbox (badness 10000) in paragraph at lines 5954--5956
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5951--5953
+Underfull \hbox (badness 10000) in paragraph at lines 5956--5958
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5953--5955
+Underfull \hbox (badness 10000) in paragraph at lines 5958--5960
 
  []
 
@@ -3921,17 +3916,17 @@ L3 programming layer <2024-08-30>
  ) 
 Here is how much of TeX's memory you used:
  16127 strings out of 475539
- 253551 string characters out of 5776837
- 679112 words of memory out of 5000000
+ 253538 string characters out of 5776837
+ 679117 words of memory out of 5000000
  37176 multiletter control sequences out of 15000+600000
  640367 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,18n,93p,1915b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on pchem2.pdf (197 pages, 7986026 bytes).
+Output written on pchem2.pdf (197 pages, 7987922 bytes).
 PDF statistics:
- 2997 PDF objects out of 3580 (max. 8388607)
- 2651 compressed objects within 27 object streams
+ 3001 PDF objects out of 3580 (max. 8388607)
+ 2655 compressed objects within 27 object streams
  1334 named destinations out of 1440 (max. 500000)
  747 words of extra memory for PDF output out of 10000 (max. 10000000)
 
