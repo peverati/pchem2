@@ -151,19 +151,19 @@ This equation can be rearranged to:
 (\#eq:FP2)
 \end{equation}
 
-which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. Such a problem is easily solved by the function:
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. The most general solution to this problem is the function:
 
 \begin{equation}
-\psi(x) = A \exp(\pm ikx).
+\psi(x) = A \exp(ikx)+B \exp(-ikx),
 (\#eq:FP3)
 \end{equation}
 
-The first and second derivatives of this function are:
+with $A$ and $B$ arbitrary (complex) constants. The first and second derivatives of this function are:
 
 \begin{equation}
 \begin{aligned}
-\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\frac{d \psi(x)}{dx} &= ik A \exp(ikx) - ikB\exp(-ikx) \\
+\frac{d^2 \psi(x)}{dx^2} &= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
 (\#eq:FP4)
 \end{equation}

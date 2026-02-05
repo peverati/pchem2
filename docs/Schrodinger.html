@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-02-04" />
+<meta name="date" content="2026-02-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -427,16 +427,16 @@ Of course eq. <a href="Schrodinger.html#eq:TDSEq6">(3.14)</a> represents only a 
 \frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
 \tag{3.18}
 \end{equation}\]</span></p>
-<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. Such a problem is easily solved by the function:</p>
+<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span> multiplied by the function itself. The most general solution to this problem is the function:</p>
 <p><span class="math display" id="eq:FP3">\[\begin{equation}
-\psi(x) = A \exp(\pm ikx).
+\psi(x) = A \exp(ikx)+B \exp(-ikx),
 \tag{3.19}
 \end{equation}\]</span></p>
-<p>The first and second derivatives of this function are:</p>
+<p>with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> arbitrary (complex) constants. The first and second derivatives of this function are:</p>
 <p><span class="math display" id="eq:FP4">\[\begin{equation}
 \begin{aligned}
-\frac{d \psi(x)}{dx} &amp;= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &amp;= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x).
+\frac{d \psi(x)}{dx} &amp;= ik A \exp(ikx) - ikB\exp(-ikx) \\
+\frac{d^2 \psi(x)}{dx^2} &amp;= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
 \tag{3.20}
 \end{equation}\]</span></p>

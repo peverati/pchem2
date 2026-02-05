@@ -71,7 +71,7 @@ These functions are called the **hydrogen atom orbitals**, and are usually first
 The hydrogen atom eigenvalues are:
 
 \begin{equation}
-E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad (n=1,2,\ldots,\infty).
+E_n = - \frac{1}{n^2}\frac{e^2}{8 \pi \varepsilon_0 a_0} \quad (n=1,2,\ldots,\infty).
 (\#eq:HA7)
 \end{equation}
 
@@ -79,28 +79,32 @@ Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azim
 
 - According to the solution of the TISEq, the $2s$ and $2p$ orbitals of the hydrogen atom have the same energy.
 
-In practice, this is not exactly correct either, because of a tiny effect called the [Lamb shift](https://en.wikipedia.org/wiki/Lamb_shift). The description of this effect requires to go beyond the Schrödinger equation into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the $2s-2p$ energy difference. This tiny effect, however, is not the responsible for the shift that is usually shown in most general chemistry textbooks. Such difference is usually discussed in the context of the aufbau principle and does not apply to hydrogen. In other words, the $2s-2p$ split is purely a many-electron effect, as we will discuss in chapter \@ref(Atoms).
+In practice, this is not exactly correct either, because of a tiny effect called the [Lamb shift](https://en.wikipedia.org/wiki/Lamb_shift). The description of this effect requires to go beyond the Schrödinger equation into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the $2s-2p$ energy difference. This tiny effect, however, is not the responsible for the shift that is usually shown in most general chemistry textbooks. Such difference is usually discussed in the context of the aufbau principle and does not apply to hydrogen. In other words, the $2s-2p$ split is purely a many-electron effect, as we will discuss in chapter \@ref(Atoms). The energy levels of the hydrogen atom are plotted in figure \@ref(fig:fig0c5). 
+
+```{r fig0c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom.'}
+knitr::include_graphics('./img/H_levels.png')
+```
 
 ## Wave Function Analysis
 
 ### The radial wave functions
 
-The solutions to the radial equation, eq xxx, involve two key components: an exponential decay factor $e^{-r/na_0}$ and a polynomial factor built from the associated Laguerre polynomials, $L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right)$. The complete radial wavefunctions for the first three energy levels are:
+The solutions to the radial equation, eq xxx, involve two key components: an exponential decay factor $e^{-r/na_0}$ and a polynomial factor built from the associated Laguerre polynomials, $L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right)$. The complete radial wave functions for the first three energy levels are:
 
-$R_{10}(r) = 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}.$
+$\quad R_{10}(r) = 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}.$
 
-$R_{20}(r) = \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}.$
+$\quad R_{20}(r) = \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}.$
 
-$R_{21}(r) = \frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\left(\frac{r}{a_0}\right) e^{-r/2a_0}.$
+$\quad R_{21}(r) = \frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\left(\frac{r}{a_0}\right) e^{-r/2a_0}.$
 
-$R_{30}(r) = \frac{2}{27\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\left(\frac{r}{a_0}\right) + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0}.$
+$\quad R_{30}(r) = \frac{2}{27\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\left(\frac{r}{a_0}\right) + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0}.$
 
-$R_{31}(r) = \frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}.$
+$\quad R_{31}(r) = \frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}.$
 
-$R_{32}(r) = \frac{1}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}.$
+$\quad R_{32}(r) = \frac{1}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}.$
 
 These formulas illustrate two critical features: (1) the exponential decay avoids the function to diverge as $r\rightarrow\infty$ confining the electron with higher probability closer to the nucleus, and (2) the polynomial factors give to each state a characteristic nodal structure.
-The radial wave functions are plotted in figure xxx. Notice that $R_{10}$ for the $1s$ state is always positive and decays smoothly—this orbital has no radial nodes. By contrast, $R_{20}$ for the $2s$ state changes sign, crossing zero at $r = 2a_0$ (the radial node). This is a mathematical manifestation of increasing angular momentum confinement: higher energy states must oscillate more to fit their energy eigenvalues. The $2p$ radial wavefunction $R_{21}$ starts at zero (due to the factor of $r$ in the polynomial) and exhibits a single lobe before decaying. The total number of nodes in any orbital is $n - 1$. This count is split between radial and angular contributions:
+The radial wave functions are plotted in figure \@ref(fig:fig1c5). Notice that $R_{10}$ for the $1s$ state is always positive and decays smoothly—this orbital has no radial nodes. By contrast, $R_{20}$ for the $2s$ state changes sign, crossing zero at $r = 2a_0$ (the radial node). This is a mathematical manifestation of increasing angular momentum confinement: higher energy states must oscillate more to fit their energy eigenvalues. The $2p$ radial wave function $R_{21}$ starts at zero (due to the factor of $r$ in the polynomial) and exhibits a single lobe before decaying. The total number of nodes in any orbital is $n - 1$. This count is split between radial and angular contributions:
 
 - **Radial nodes**: $n - \ell - 1$ spherical surfaces where $R_{n\ell}(r) = 0$.
 - **Angular nodes**: $\ell$ nodal planes or cones.
@@ -108,8 +112,9 @@ The radial wave functions are plotted in figure xxx. Notice that $R_{10}$ for th
 For example, the $2s$ orbital ($n=2, \ell=0$) has one total node, which is entirely radial (the sphere at $r = 2a_0$). The $2p$ orbital with $n=2$ and $\ell=1$ has one node, which is angular (the plane perpendicular to the orbital axis). The $3d$ orbital with $n=3$ and $\ell=2$ has $3-1=2$ total nodes, both angular (two nodal cones), with no radial nodes.
 
 
-figure here
-
+```{r fig1c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The radial wave functions of the hydrogen atom orbitals in the first three energy levels. The radial nodes are highlighted with purple dots.'}
+knitr::include_graphics('./img/H_r.png')
+```
 
 While the radial wave function $R_{n\ell}(r)$ describes the amplitude of the electron probability at distance $r$, what we typically measure experimentally is the radial probability distribution:
 
@@ -119,11 +124,12 @@ P(r) = 4\pi r^2 |R_{n\ell}(r)|^2.
 \end{equation}
 
 
-This product of $r^2$ and $|R_{n\ell}|^2$ is crucial for physical interpretation and is plotted for the first six radial wave functions in figure XXX. The factor $4\pi r^2$ represents the *surface area of a spherical shell* at distance $r$. Even though the probability density $|R_{n\ell}|^2$ is largest near the nucleus (often zero right at $r=0$ for $\ell>0$), the shell volume increases with $r^2$, creating a maximum in $P(r)$ at an intermediate distance. This is why the most probable radius for the $1s$ electron is exactly the Bohr radius $a_0$.
+This product of $r^2$ and $|R_{n\ell}|^2$ is crucial for physical interpretation and is plotted for the first six radial wave functions in figure \@ref(fig:fig2c5). The factor $4\pi r^2$ represents the *surface area of a spherical shell* at distance $r$. Even though the probability density $|R_{n\ell}|^2$ is largest near the nucleus (often zero right at $r=0$ for $\ell>0$), the shell volume increases with $r^2$, creating a maximum in $P(r)$ at an intermediate distance. This is why the most probable radius for the $1s$ electron is exactly the Bohr radius $a_0$.
 
 
-figure xxx
-
+```{r fig2c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='The radial probability functions of the hydrogen atom orbitals in the first three energy levels. The radial nodes are highlighted with purple dots.'}
+knitr::include_graphics('./img/H_rpf.png')
+```
 
 The radial probability plot reveals the structure of orbitals at different energy levels. For $1s$, the single smooth peak centered at $a_0 \approx 0.53 \buildrel _\circ \over {\mathrm{A}}$  shows why the ground state is compact and stable. For $2s$, two peaks at $r/a_0 \approx 0.76 \buildrel _\circ \over {\mathrm{A}}$ and $5.24 \buildrel _\circ \over {\mathrm{A}}$ are separated by a radial node at $r = 2a_0$. The presence of multiple peaks indicates that the electron, though more energetic (and thus less tightly bound), still has a non-zero probability of being found relatively close to the nucleus. The $3s$ orbital shows three peaks—the pattern continues with each increase in principal quantum number.
 
@@ -146,19 +152,21 @@ Visualization of the complex spherical harmonics can happen in many different wa
 
 The complete wave function given by the multiplication of the radial components and the complex spherical harmonic encodes *all* the quantum information about the electron's state. The radial part captures the probability of finding the electron at a given distance $r$ (independent of direction), while the angular part specifies how this probability is distributed among different directions.
 
-Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures XXX and XXX in Chapter 4. This, however, doesn't solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure XXXprevious chapter for the spherical harmonics. Similar plots can be obtained for both the real part and the imaginary part of the hydrogen orbitals, and are reported in figure xxx (real part) and figure xxx (imaginary part).
+Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures \@ref(fig:fig6c4) and \@ref(fig:fig7c4) in Chapter 4. This, however, doesn't solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure \@ref(fig:fig3c5) for the real part of the hydrogen atom orbitals and in figure \@ref(fig:fig4c5) for the imaginary part.
 
-figure xxxRe
-
-figure xxxIm
-
+```{r fig3c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Color gradient maps of the real part $(\\Re[\\psi_{n\\ell m_\\ell}(r,\\theta,\\phi)])$ for hydrogen atom orbitals. Color scheme: Red (positive), blue (negative), white/light (nodal grat circles where $\\psi_{n\\ell m_\\ell}=0$).'}
+knitr::include_graphics('./img/H_Re.png')
+```
+```{r fig4c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Color gradient maps of the imaginary part $(\\Im[\\psi_{n\\ell m_\\ell}(r,\\theta,\\phi)])$ for hydrogen atom orbitals. Color scheme: Red (positive), blue (negative), white/light (nodal grat circles where $\\psi_{n\\ell m_\\ell}=0$).'}
+knitr::include_graphics('./img/H_Im.png')
+```
 In chemistry, we typically use *real orbitals* instead of the pure complex eigenstates. This is convenient because they align with molecular symmetry, bonding intuition, and computational visualization. The real orbitals are obtained from linear combinations of spherical harmonics with opposite $m_\ell$ values,^[The combination of complex spherical harmonics into real ones results in [cubic (or tesseral) harmonics](https://en.wikipedia.org/wiki/Cubic_harmonic).] for example:
 
 \begin{equation}
 \begin{aligned}
-\psi_{2p_z} &= \psi_{21,0}\quad\text{(already real)},\\
-\psi_{2p_x} &= \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right),\\
-\psi_{2p_y} &= \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right).
+\psi_{2p_z} &= \psi_{2,1,0}\quad\text{(already real)},\\
+\psi_{2p_x} &= \frac{1}{\sqrt{2}}\left(\psi_{2,1,+1} + \psi_{2,1,-1}\right),\\
+\psi_{2p_y} &= \frac{i}{\sqrt{2}}\left(\psi_{2,1,+1} - \psi_{2,1,-1}\right).
 \end{aligned}
 (\#eq:HA9)
 \end{equation}
@@ -167,23 +175,39 @@ These combinations eliminate the azimuthal phase dependence, producing three rea
 
 The crucial point is: **the real and complex orbital representations are mathematically equivalent descriptions of the same physical system**. They provide different perspectives (real vs. complex) but encode identical measurable information. 
 
-One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures XXX and XXX carry **no direct physical significance**. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal "regions of space" where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. **They do not!** Since the probability density is the quantity that can be experimentally measured, $|\psi_{n\ell m_\ell}|^2$ is the only representation that has physical significance. These "electron density probability clouds" can be visualized in several ways:
+One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures \@ref(fig:fig3c5) and \@ref(fig:fig4c5) carry **no direct physical significance**. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal "regions of space" where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. **They do not!** Since the probability density is the quantity that can be experimentally measured, $|\psi_{n\ell m_\ell}|^2$ is the only representation that has physical significance. These "electron density probability clouds" can be visualized in several ways:
 
-1. **Probability density contour surfaces**: Show an isosurface enclosing (e.g.) 90% of the electron probability. This is excellent for conveying orbital shape but loses information about the probability gradient inside.
+1. **Probability density contour surface plots (isodensity maps)**: Show an isosurface enclosing (e.g.) 80% of the electron probability. This is done for a few representative orbitals in figure \@ref(fig:fig5c5). These plots are excellent for conveying orbital shape but loses information about the probability gradient.
 
-2. **Volumetric density plots**: Use color or opacity to represent $|\psi|^2$ throughout a region. This preserves all spatial information but can be harder to interpret visually.
 
-4. **Dot-density diagrams**: Scatter dots with density proportional to $|\psi|^2$. Very intuitive for understanding probability as a statistical distribution.
+```{r fig5c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Probability density contour plots (isodensity maps) showing the isosurface containing 80% of the electron probability $(|\\psi_{n\\ell m_\\ell}(r,\\theta,\\phi|^2)$ for a few representative hydrogen atom orbitals. Regions are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\\psi_{n\\ell m_\\ell}$ sign only, not probability itself which remains non-negative everywhere.'}
+knitr::include_graphics('./img/H_dens1.png')
+```
 
-Each method highlights different aspects of the orbital structure. Modern computational chemistry uses volumetric renderings and interactive 3D visualizations to convey the full spatial structure. The key is understanding that all these representations show the *same* information (the probability density) through different visual encodings.
+
+2. **Volumetric density plots**: Use opacity to represent $|\psi|^2$ throughout a region. This is done for a few representative orbitals in figure \@ref(fig:fig6c5). These plots preserve all spatial information but can be harder to interpret visually.
+
+
+```{r fig6c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Volumetric cloud plots for a few representative hydrogen atom orbitals. Regions are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\\psi_{n\\ell m_\\ell}$ sign only, not probability itself which remains non-negative everywhere.'}
+knitr::include_graphics('./img/H_dens2.png')
+```
+
+4. **Dot-density plots**: Scatter dots with density proportional to $|\psi|^2$. This is done for a few representative orbitals in figure \@ref(fig:fig7c5). These plots represent a stochastic "electron cloud" model where the actual spatial density of the dots represents the probability of finding the electron and are very intuitive for understanding probability as a statistical distribution.
+
+```{r fig7c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Dot-density plots for a few representative hydrogen atom orbitals. Indiviudual dots are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\\psi_{n\\ell m_\\ell}$ sign only, not probability itself which remains non-negative everywhere.'}
+knitr::include_graphics('./img/H_dens3.png')
+```
+
+
+Each method highlights different aspects of the orbital structure. The key is understanding that all these representations show the *same* information (the probability density) through different visual encodings. Finally, it is important to note that most chemistry textbooks depict orbital symmetry on probability density diagrams, such as those in Figures \@ref(fig:fig5c5), \@ref(fig:fig6c5), and \@ref(fig:fig7c5), by overlaying the signs of the wave functions using colors or shading. This common practice is misleading, as these plots represent the probability of finding the electron, which must be non-negative everywhere. Nevertheless, because this convention is too pervasive in the literature to ignore, we retain it here to familiarize students with standard representations while urging them to recognize its limitations.
 
 ### Experimental Access to Orbitals
 
-A common question is: "Can we actually measure an orbital?" The answer is nuanced. We cannot directly observe $\psi(\mathbf{r})$ because the wave function is not an observable—quantum mechanics predicts only probabilities for measurement outcomes. However, we can:
+A common question is: "Can we actually measure an orbital?" The answer is nuanced. We cannot directly observe $\psi_{n\ell m_{\ell}}(\mathbf{r})$ because the wave function is not an observable—quantum mechanics predicts only probabilities for measurement outcomes. However, we can:
 
-- Measure the *probability density* through many repeated experiments (electron microscopy, photoelectron spectroscopy)
-- Recover both amplitude and phase information through sophisticated techniques like Angle-Resolved Photoemission Spectroscopy (ARPES) combined with iterative reconstruction algorithms
-- Verify orbital shapes indirectly through spectroscopic measurements, magnetic susceptibility, x-ray diffraction, and other bulk properties
+- Measure the *probability density* through many repeated experiments (electron microscopy, photoelectron spectroscopy).
+- Recover both amplitude and phase information through sophisticated techniques like Angle-Resolved Photoemission Spectroscopy (ARPES) combined with iterative reconstruction algorithms.
+- Verify orbital shapes indirectly through spectroscopic measurements, magnetic susceptibility, x-ray diffraction, and other bulk properties.
 
 Recent attosecond and femtosecond experiments have directly imaged the amplitude of molecular orbitals and even tracked the phase evolution during chemical reactions, confirming that quantum mechanical orbital descriptions accurately reflect physical reality.
 

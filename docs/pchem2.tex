@@ -113,7 +113,7 @@
 
 \title{The Live Textbook of Physical Chemistry 2}
 \author{\href{mailto:rpeverati@fit.edu}{Dr.~Roberto Peverati}}
-\date{04 February 2026}
+\date{05 February 2026}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -1170,19 +1170,19 @@ This equation can be rearranged to:
 \label{eq:FP2}
 \end{equation}
 
-which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, \(- \frac{2mE}{\hbar^2}\) multiplied by the function itself. Such a problem is easily solved by the function:
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, \(- \frac{2mE}{\hbar^2}\) multiplied by the function itself. The most general solution to this problem is the function:
 
 \begin{equation}
-\psi(x) = A \exp(\pm ikx).
+\psi(x) = A \exp(ikx)+B \exp(-ikx),
 \label{eq:FP3}
 \end{equation}
 
-The first and second derivatives of this function are:
+with \(A\) and \(B\) arbitrary (complex) constants. The first and second derivatives of this function are:
 
 \begin{equation}
 \begin{aligned}
-\frac{d \psi(x)}{dx} &= \pm ik A \exp(\pm ikx) = \pm ik \psi(x) \\
-\frac{d^2 \psi(x)}{dx^2} &= \mp k^2  A \exp(\pm ikx) = -(\pm k^2) \psi(x). 
+\frac{d \psi(x)}{dx} &= ik A \exp(ikx) - ikB\exp(-ikx) \\
+\frac{d^2 \psi(x)}{dx^2} &= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
 \label{eq:FP4}
 \end{equation}
@@ -1692,7 +1692,7 @@ This 3D representation preserves both the physical ring constraint and reveals t
 
 }
 
-\caption{3D visualization of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. **Left column**: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. **Right column**: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. The black circle represents the ring of fixed radius $r$. The colored surface shows wavefunction amplitude plotted as height ($z$-axis) above/below the ring as the azimuthal angle $\phi$ varies from 0 to $2\pi$. Each component has exactly $2|m_\ell|$ nodal points, with $\pm m_\ell$ pairs showing opposite phase winding directions (degenerate in energy).}\label{fig:fig2c4}
+\caption{3D visualization of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. Left column: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. Right column: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. The black circle represents the ring of fixed radius $r$. The colored surface shows wavefunction amplitude plotted as height ($z$-axis) above/below the ring as the azimuthal angle $\phi$ varies from 0 to $2\pi$. Each component has exactly $2|m_\ell|$ nodal points, with $\pm m_\ell$ pairs showing opposite phase winding directions (degenerate in energy).}\label{fig:fig2c4}
 \end{figure}
 
 Alternatively, \textbf{2D contour plots} map the real and imaginary parts of \(\psi_{m_\ell}(\phi)\) onto the ring using a color gradient, as it's done in figure \ref{fig:fig3c4}:
@@ -1709,15 +1709,13 @@ Alternatively, \textbf{2D contour plots} map the real and imaginary parts of \(\
 
 These are top-down views of the 3D plots in figure \ref{fig:fig2c4}, excellent for identifying nodal positions. In the particle-in-a-box, nodes were single points along a line. For the particle-on-a-ring, these clots show that nodes become pairs of diametrically opposite points on the circle. The diametric pairing reflects the rotational symmetry: if \(\cos(m_\ell\phi_0) = 0\), then \(\cos(m_\ell(\phi_0 + \pi)) = -\cos(m_\ell\phi_0) = 0\).
 
-Finally, the ei
-
 \begin{figure}
 
 {\centering \includegraphics[width=0.5\linewidth]{./img/PIR_top} 
 
 }
 
-\caption{Top-down 2D contour plots of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. **Left column**: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. **Right column**: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. **Color scheme**: Dark red (positive amplitude), dark blue (negative amplitude), white/light colors (nodes $\approx$ 0). Each component shows exactly $2|m_\ell|$ nodal points appearing as diametrically opposite pairs due to rotational symmetry.}\label{fig:fig3c4}
+\caption{Top-down 2D contour plots of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. Left column: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. Right column: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. Color scheme: Dark red (positive amplitude), dark blue (negative amplitude), white/light colors (nodes $\approx$ 0). Each component shows exactly $2|m_\ell|$ nodal points appearing as diametrically opposite pairs due to rotational symmetry.}\label{fig:fig3c4}
 \end{figure}
 
 genfunctions can also be visualized using \textbf{polar plots} against the azimuthal angle \(\phi\), as shown in figure \ref{fig:fig4c4}:
@@ -1738,7 +1736,7 @@ This representation clearly reveals the nodes where amplitude = 0, appearing as 
 
 }
 
-\caption{Polar plots of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. **Left column**: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. **Right column**: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. **Radial distance** from center $\propto$ wavefunction amplitude; **angular position** = $\phi$. **Nodes** appear where the curve returns to the origin ($2|m_\ell|$ per component). **Note**: Lobes represent amplitude along the ring, not 2D spatial probability (actual $|\psi|^2$ is uniform).}\label{fig:fig4c4}
+\caption{Polar plots of particle-on-a-ring eigenfunctions $\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}$. Left column: Real part $\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)$. Right column: Imaginary part $\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)$. Each row shows states with quantum numbers $m_\ell = 0, +1, -1, +2, -2$. Radial distance from center $\propto$ wavefunction amplitude; angular position = $\phi$. Nodes appear where the curve returns to the origin ($2|m_\ell|$ per component). Note: Lobes represent amplitude along the ring, not 2D spatial probability (actual $|\psi|^2$ is uniform).}\label{fig:fig4c4}
 \end{figure}
 
 \section{The Particle on a Sphere}\label{the-particle-on-a-sphere}
@@ -1765,7 +1763,16 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots,\infty),
 \label{eq:RR2}
 \end{equation}
 
-where \(m_\ell\) is the \textbf{magnetic quantum number}. The spherical harmonic functions depend on a second quantum number, \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\), which is the same \textbf{magnetic quantum number} that we encounter for the particle on a ring. For the spherical harmonics, however, the energy does not depend on the magnetic quantum number, and functions with the same \(\ell\) but different \(m_\ell\) are energy-degenerate. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum along the \(z\)-axis is quantized in units of \(\hbar\) and jumps discontinuously from one value to the next, as for the particle on a ring case.\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} For this case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously.
+where \(m_\ell\) is the \textbf{magnetic quantum number}. The spherical harmonic functions depend on a second quantum number, \(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\), which is the same \textbf{magnetic quantum number} that we encounter for the particle on a ring. For the spherical harmonics, however, the energy does not depend on the magnetic quantum number, and functions with the same \(\ell\) but different \(m_\ell\) are energy-degenerate. Each energy level \(E_{\ell}\) is \((2\ell+1)\)-fold degenerate in \(m_{\ell}\). Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables, \((\theta,phy)\), that enters the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum along the \(z\)-axis is quantized in units of \(\hbar\) and jumps discontinuously from one value to the next, as for the particle on a ring case.\footnote{You can think of this as either the ``speed'' at which the rotor is rotating, or even better, as its ``angular frequency''.} For the particle-on-a-sphere case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously. The energy levels of the particle on a sphere are plotted for the first five levels in figure \ref{fig:fig5bc4}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/SH_levels} 
+
+}
+
+\caption{Energy level diagram and degeneracy pattern for the particle-on-a-sphere.}\label{fig:fig5bc4}
+\end{figure}
 
 \subsection{Wave function analysis}\label{wave-function-analysis-2}
 
@@ -1796,9 +1803,9 @@ are:
 
 \(\quad Y_2^{2}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{15}{2\pi}} e^{2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}} \frac{(x+iy)^2}{r^2}.\)
 
-Visualizing spherical harmonics presents the same challenges as the particle on a ring, but amplified by dimensionality. The particle lives on a 2D spherical surface (requiring 3D embedding), and we need to show both position (\(\theta,\varphi\)) and amplitude \(\left(Y_\ell^{m_\ell}\right)\)---a 4D problem squeezed into 3D plots.
+Visualizing spherical harmonics presents the same challenges as the particle on a ring, but amplified by dimensionality. The particle lives on a 2D spherical surface (requiring 3D embedding), and we need to show both position (\(\theta,\phi\)) and amplitude \(\left(Y_\ell^{m_\ell}\right)\)---a 4D problem squeezed into 3D plots.
 
-The solution mirrors the ring contour plots: we map the amplitude directly to a color gradient on the unit sphere surface. Red shades represent positive values of \(\Re\left[ Y_\ell^{m_\ell}(\theta,\varphi)\right]\) or \(\Im \left[Y_\ell^{m_\ell}(\theta,\varphi)\right]\), blue shades represent negative values, and white/light colors mark the nodes where the harmonic equals zero. Figure \ref{fig:fig6c4} shows these color maps for the real parts across \(\ell=0,1,2\), while figure \ref{fig:fig7c4} shows the corresponding imaginary parts.
+The solution mirrors the ring contour plots: we map the amplitude directly to a color gradient on the unit sphere surface. Red shades represent positive values of \(\Re\left[ Y_\ell^{m_\ell}(\theta,\phi)\right]\) or \(\Im \left[Y_\ell^{m_\ell}(\theta,\phi)\right]\), blue shades represent negative values, and white/light colors mark the nodes where the harmonic equals zero. Figure \ref{fig:fig6c4} shows these color maps for the real parts across \(\ell=0,1,2\), while figure \ref{fig:fig7c4} shows the corresponding imaginary parts.
 
 \begin{figure}
 
@@ -1806,7 +1813,7 @@ The solution mirrors the ring contour plots: we map the amplitude directly to a 
 
 }
 
-\caption{Color gradient maps of the real part $(\Re[Y_\ell^{m_\ell}(\theta,\varphi)])$ for spherical harmonics of the rigid rotor. **Color scheme**: Red (positive), blue (negative), white/light (nodal grat circles where $Y_\ell^{m_\ell}=0$). Each $\ell$ manifold shows characteristic nodal structure: 0 nodal lines $(\ell=0)$, 1 nodal surface $(\ell=1)$, 2 nodal surfaces $(\ell=2)$.}\label{fig:fig6c4}
+\caption{Color gradient maps of the real part $(\Re[Y_\ell^{m_\ell}(\theta,\phi)])$ for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal grat circles where $Y_\ell^{m_\ell}=0$). Each $\ell$ manifold shows characteristic nodal structure: 0 nodal lines $(\ell=0)$, 1 nodal surface $(\ell=1)$, 2 nodal surfaces $(\ell=2)$.}\label{fig:fig6c4}
 \end{figure}
 
 \begin{figure}
@@ -1815,12 +1822,12 @@ The solution mirrors the ring contour plots: we map the amplitude directly to a 
 
 }
 
-\caption{Color gradient maps of the imaginary part $(\Im[Y_\ell^{m_\ell}(\theta,\varphi)])$ for spherical harmonics of the rigid rotor. **Color scheme**: Red (positive), blue (negative), white/light (nodal lines where $Y_\ell^{m_\ell}=0$). Each $\ell$ manifold shows characteristic nodal structure: 0 nodal lines ($\ell=0$), 1 nodal surface ($\ell=1$), 2 nodal surfaces ($\ell=2$).}\label{fig:fig7c4}
+\caption{Color gradient maps of the imaginary part $(\Im[Y_\ell^{m_\ell}(\theta,\phi)])$ for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal lines where $Y_\ell^{m_\ell}=0$). Each $\ell$ manifold shows characteristic nodal structure: 0 nodal lines ($\ell=0$), 1 nodal surface ($\ell=1$), 2 nodal surfaces ($\ell=2$).}\label{fig:fig7c4}
 \end{figure}
 
 This approach preserves the spherical geometry while clearly revealing the nodal lines as white curves separating red and blue regions, and makes the lobe structure immediately visible---directly extending the 1D ring visualization strategy to the 2D sphere.
 
-Crucially, these plots visualize the wavefunction itself, not the probability density. The actual position probability on the sphere is given by \(|Y_\ell^{m_\ell}(\theta,\varphi)|^2\). Unlike the particle on a ring case, where \(|\psi_{m_\ell}(\phi)|^2 = |A|^2\) was perfectly uniform, the spherical harmonics have non-uniform angular probability. For example:
+Crucially, these plots visualize the wavefunction itself, not the probability density. The actual position probability on the sphere is given by \(|Y_\ell^{m_\ell}(\theta,\phi)|^2\). Unlike the particle on a ring case, where \(|\psi_{m_\ell}(\phi)|^2 = |A|^2\) was perfectly uniform, the spherical harmonics have non-uniform angular probability. For example:
 
 \begin{itemize}
 \tightlist
@@ -1842,10 +1849,10 @@ To visualize the true probability distribution, we can plot \(|Y_\ell^{m_\ell}|^
 
 }
 
-\caption{Probability density plots $|Y_\ell^{m_\ell}(\theta,\varphi)|^2$ for spherical harmonics of the rigid rotor. **Color scheme**: Darker colors indicate higher probability density on the surface of the sphere. Unlike the particle on a ring (uniform $|\psi|^2$), these show non-uniform angular probability: $(\ell=0)$ uniform; $(\ell=1)$ states peak at poles/equator; $(\ell=2)$ states show complex 4-lobed or toroidal patterns. Probability integrates to 1 over sphere surface for each state.}\label{fig:fig8c4}
+\caption{Probability density plots $|Y_\ell^{m_\ell}(\theta,\phi)|^2$ for spherical harmonics of the rigid rotor. Color scheme: Darker colors indicate higher probability density on the surface of the sphere. Unlike the particle on a ring (uniform $|\psi|^2$), these show non-uniform angular probability: $(\ell=0)$ uniform; $(\ell=1)$ states peak at poles/equator; $(\ell=2)$ states show complex 4-lobed or toroidal patterns. Probability integrates to 1 over sphere surface for each state.}\label{fig:fig8c4}
 \end{figure}
 
-An alternative, and often more intuitive, representation is obtained by plotting the magnitude of the spherical harmonic as a radial deformation of the sphere. In this parametric view, each point on the unit sphere \((\theta,\varphi)\) is moved radially outward (or inward) by an amount proportional to \(|Y_\ell^{m_\ell}(\theta,\varphi)|\). The deformed surface is then colored to indicate the sign of the real part (for example, red for positive, blue for negative). This results in a parametric plot where the distance from the center at a given angle represents the magnitude of the amplitude of the spherical harmonic. These plots are reported in figure \ref{fig:fig9c4} for the real part of the wave functions, and in figure \ref{fig:fig10c4} for the imaginary part. These deformed plots correspond to the polar plots for the particle on a ring case we reported in figure \ref{fig:fig3c4}.
+An alternative, and often more intuitive, representation is obtained by plotting the magnitude of the spherical harmonic as a radial deformation of the sphere. In this parametric view, each point on the unit sphere \((\theta,\phi)\) is moved radially outward (or inward) by an amount proportional to \(|Y_\ell^{m_\ell}(\theta,\phi)|\). The deformed surface is then colored to indicate the sign of the real part (for example, red for positive, blue for negative). This results in a parametric plot where the distance from the center at a given angle represents the magnitude of the amplitude of the spherical harmonic. These plots are reported in figure \ref{fig:fig9c4} for the real part of the wave functions, and in figure \ref{fig:fig10c4} for the imaginary part. These deformed plots correspond to the polar plots for the particle on a ring case we reported in figure \ref{fig:fig3c4}.
 
 \begin{figure}
 
@@ -1853,7 +1860,7 @@ An alternative, and often more intuitive, representation is obtained by plotting
 
 }
 
-\caption{Parametric plots of the real part of the spherical harmonics $Y_\ell^{m_\ell}(\theta,\varphi)$. The radial deformation (distance from the center at a given angle) is proportional to $\Re[Y_\ell^{m_\ell}(\theta,\varphi)]$ (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal sorfaces are also reported in purple. *Note*: The particle remains confined to a constant sphere surface; the lobes visualize *angular probability structure*, not 3D spatial extent.}\label{fig:fig9c4}
+\caption{Parametric plots of the real part of the spherical harmonics $Y_\ell^{m_\ell}(\theta,\phi)$. The radial deformation (distance from the center at a given angle) is proportional to $\Re[Y_\ell^{m_\ell}(\theta,\phi)]$ (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal sorfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.}\label{fig:fig9c4}
 \end{figure}
 
 \begin{figure}
@@ -1862,7 +1869,7 @@ An alternative, and often more intuitive, representation is obtained by plotting
 
 }
 
-\caption{Parametric plots of the real part of the spherical harmonics $Y_\ell^{m_\ell}(\theta,\varphi)$. The radial deformation (distance from the center at a given angle) is proportional to $\Im[Y_\ell^{m_\ell}(\theta,\varphi)]$ (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal sorfaces are also reported in purple. *Note*: The particle remains confined to a constant sphere surface; the lobes visualize *angular probability structure*, not 3D spatial extent.}\label{fig:fig10c4}
+\caption{Parametric plots of the real part of the spherical harmonics $Y_\ell^{m_\ell}(\theta,\phi)$. The radial deformation (distance from the center at a given angle) is proportional to $\Im[Y_\ell^{m_\ell}(\theta,\phi)]$ (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal sorfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.}\label{fig:fig10c4}
 \end{figure}
 
 The parametric plots are ideal to show the \textbf{nodal structure} of the spherical harmonics. This nodal structure follows a simple rule: the \(\ell\)-th energy level has exactly \(\ell\) nodal surfaces on the sphere. These nodal surfaces---where \(Y_\ell^{m_\ell} = 0\)---appear as \emph{nodal circles} on the spherical surface, as in figures \ref{fig:fig6c4} and \ref{fig:fig7c4}. Most of these nodes are great circles on the sphere, but in some case they might not be, as they might be parallel nodes along the \(z\)-axis (see i.e.~\(Y_2^0\)). In parametric plots (deformed polar views), the nodes appear as flat planes cutting through the origin when they are great circles, while they appear as cones when they are parallel circleas along the \(z\)-axis.
@@ -2201,7 +2208,7 @@ These functions are called the \textbf{hydrogen atom orbitals}, and are usually 
 The hydrogen atom eigenvalues are:
 
 \begin{equation}
-E_n = - \frac{e^2}{8 \pi \varepsilon_0 a_0 n^2} \quad (n=1,2,\ldots,\infty).
+E_n = - \frac{1}{n^2}\frac{e^2}{8 \pi \varepsilon_0 a_0} \quad (n=1,2,\ldots,\infty).
 \label{eq:HA7}
 \end{equation}
 
@@ -2213,28 +2220,37 @@ Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azim
   According to the solution of the TISEq, the \(2s\) and \(2p\) orbitals of the hydrogen atom have the same energy.
 \end{itemize}
 
-In practice, this is not exactly correct either, because of a tiny effect called the \href{https://en.wikipedia.org/wiki/Lamb_shift}{Lamb shift}. The description of this effect requires to go beyond the Schrödinger equation into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the \(2s-2p\) energy difference. This tiny effect, however, is not the responsible for the shift that is usually shown in most general chemistry textbooks. Such difference is usually discussed in the context of the aufbau principle and does not apply to hydrogen. In other words, the \(2s-2p\) split is purely a many-electron effect, as we will discuss in chapter \ref{Atoms}.
+In practice, this is not exactly correct either, because of a tiny effect called the \href{https://en.wikipedia.org/wiki/Lamb_shift}{Lamb shift}. The description of this effect requires to go beyond the Schrödinger equation into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbook as the \(2s-2p\) energy difference. This tiny effect, however, is not the responsible for the shift that is usually shown in most general chemistry textbooks. Such difference is usually discussed in the context of the aufbau principle and does not apply to hydrogen. In other words, the \(2s-2p\) split is purely a many-electron effect, as we will discuss in chapter \ref{Atoms}. The energy levels of the hydrogen atom are plotted in figure \ref{fig:fig0c5}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_levels} 
+
+}
+
+\caption{Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom.}\label{fig:fig0c5}
+\end{figure}
 
 \section{Wave Function Analysis}\label{wave-function-analysis-4}
 
 \subsection{The radial wave functions}\label{the-radial-wave-functions}
 
-The solutions to the radial equation, eq xxx, involve two key components: an exponential decay factor \(e^{-r/na_0}\) and a polynomial factor built from the associated Laguerre polynomials, \(L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right)\). The complete radial wavefunctions for the first three energy levels are:
+The solutions to the radial equation, eq xxx, involve two key components: an exponential decay factor \(e^{-r/na_0}\) and a polynomial factor built from the associated Laguerre polynomials, \(L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right)\). The complete radial wave functions for the first three energy levels are:
 
-\(R_{10}(r) = 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}.\)
+\(\quad R_{10}(r) = 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}.\)
 
-\(R_{20}(r) = \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}.\)
+\(\quad R_{20}(r) = \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}.\)
 
-\(R_{21}(r) = \frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\left(\frac{r}{a_0}\right) e^{-r/2a_0}.\)
+\(\quad R_{21}(r) = \frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\left(\frac{r}{a_0}\right) e^{-r/2a_0}.\)
 
-\(R_{30}(r) = \frac{2}{27\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\left(\frac{r}{a_0}\right) + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0}.\)
+\(\quad R_{30}(r) = \frac{2}{27\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\left(\frac{r}{a_0}\right) + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0}.\)
 
-\(R_{31}(r) = \frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}.\)
+\(\quad R_{31}(r) = \frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}.\)
 
-\(R_{32}(r) = \frac{1}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}.\)
+\(\quad R_{32}(r) = \frac{1}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}.\)
 
 These formulas illustrate two critical features: (1) the exponential decay avoids the function to diverge as \(r\rightarrow\infty\) confining the electron with higher probability closer to the nucleus, and (2) the polynomial factors give to each state a characteristic nodal structure.
-The radial wave functions are plotted in figure xxx. Notice that \(R_{10}\) for the \(1s\) state is always positive and decays smoothly---this orbital has no radial nodes. By contrast, \(R_{20}\) for the \(2s\) state changes sign, crossing zero at \(r = 2a_0\) (the radial node). This is a mathematical manifestation of increasing angular momentum confinement: higher energy states must oscillate more to fit their energy eigenvalues. The \(2p\) radial wavefunction \(R_{21}\) starts at zero (due to the factor of \(r\) in the polynomial) and exhibits a single lobe before decaying. The total number of nodes in any orbital is \(n - 1\). This count is split between radial and angular contributions:
+The radial wave functions are plotted in figure \ref{fig:fig1c5}. Notice that \(R_{10}\) for the \(1s\) state is always positive and decays smoothly---this orbital has no radial nodes. By contrast, \(R_{20}\) for the \(2s\) state changes sign, crossing zero at \(r = 2a_0\) (the radial node). This is a mathematical manifestation of increasing angular momentum confinement: higher energy states must oscillate more to fit their energy eigenvalues. The \(2p\) radial wave function \(R_{21}\) starts at zero (due to the factor of \(r\) in the polynomial) and exhibits a single lobe before decaying. The total number of nodes in any orbital is \(n - 1\). This count is split between radial and angular contributions:
 
 \begin{itemize}
 \tightlist
@@ -2246,7 +2262,14 @@ The radial wave functions are plotted in figure xxx. Notice that \(R_{10}\) for 
 
 For example, the \(2s\) orbital (\(n=2, \ell=0\)) has one total node, which is entirely radial (the sphere at \(r = 2a_0\)). The \(2p\) orbital with \(n=2\) and \(\ell=1\) has one node, which is angular (the plane perpendicular to the orbital axis). The \(3d\) orbital with \(n=3\) and \(\ell=2\) has \(3-1=2\) total nodes, both angular (two nodal cones), with no radial nodes.
 
-figure here
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_r} 
+
+}
+
+\caption{The radial wave functions of the hydrogen atom orbitals in the first three energy levels. The radial nodes are highlighted with purple dots.}\label{fig:fig1c5}
+\end{figure}
 
 While the radial wave function \(R_{n\ell}(r)\) describes the amplitude of the electron probability at distance \(r\), what we typically measure experimentally is the radial probability distribution:
 
@@ -2255,9 +2278,16 @@ P(r) = 4\pi r^2 |R_{n\ell}(r)|^2.
 \label{eq:HA8}
 \end{equation}
 
-This product of \(r^2\) and \(|R_{n\ell}|^2\) is crucial for physical interpretation and is plotted for the first six radial wave functions in figure XXX. The factor \(4\pi r^2\) represents the \emph{surface area of a spherical shell} at distance \(r\). Even though the probability density \(|R_{n\ell}|^2\) is largest near the nucleus (often zero right at \(r=0\) for \(\ell>0\)), the shell volume increases with \(r^2\), creating a maximum in \(P(r)\) at an intermediate distance. This is why the most probable radius for the \(1s\) electron is exactly the Bohr radius \(a_0\).
+This product of \(r^2\) and \(|R_{n\ell}|^2\) is crucial for physical interpretation and is plotted for the first six radial wave functions in figure \ref{fig:fig2c5}. The factor \(4\pi r^2\) represents the \emph{surface area of a spherical shell} at distance \(r\). Even though the probability density \(|R_{n\ell}|^2\) is largest near the nucleus (often zero right at \(r=0\) for \(\ell>0\)), the shell volume increases with \(r^2\), creating a maximum in \(P(r)\) at an intermediate distance. This is why the most probable radius for the \(1s\) electron is exactly the Bohr radius \(a_0\).
 
-figure xxx
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_rpf} 
+
+}
+
+\caption{The radial probability functions of the hydrogen atom orbitals in the first three energy levels. The radial nodes are highlighted with purple dots.}\label{fig:fig2c5}
+\end{figure}
 
 The radial probability plot reveals the structure of orbitals at different energy levels. For \(1s\), the single smooth peak centered at \(a_0 \approx 0.53 \buildrel _\circ \over {\mathrm{A}}\) shows why the ground state is compact and stable. For \(2s\), two peaks at \(r/a_0 \approx 0.76 \buildrel _\circ \over {\mathrm{A}}\) and \(5.24 \buildrel _\circ \over {\mathrm{A}}\) are separated by a radial node at \(r = 2a_0\). The presence of multiple peaks indicates that the electron, though more energetic (and thus less tightly bound), still has a non-zero probability of being found relatively close to the nucleus. The \(3s\) orbital shows three peaks---the pattern continues with each increase in principal quantum number.
 
@@ -2285,19 +2315,32 @@ Visualization of the complex spherical harmonics can happen in many different wa
 
 The complete wave function given by the multiplication of the radial components and the complex spherical harmonic encodes \emph{all} the quantum information about the electron's state. The radial part captures the probability of finding the electron at a given distance \(r\) (independent of direction), while the angular part specifies how this probability is distributed among different directions.
 
-Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures XXX and XXX in Chapter 4. This, however, doesn't solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure XXXprevious chapter for the spherical harmonics. Similar plots can be obtained for both the real part and the imaginary part of the hydrogen orbitals, and are reported in figure xxx (real part) and figure xxx (imaginary part).
+Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to reduce the represent them in 3D is to map the amplitude to a color map, similarly to figures \ref{fig:fig6c4} and \ref{fig:fig7c4} in Chapter 4. This, however, doesn't solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function (the amplitude) and one for the imaginary part (the phase). These sets of complementary plots are reported in figure \ref{fig:fig3c5} for the real part of the hydrogen atom orbitals and in figure \ref{fig:fig4c5} for the imaginary part.
 
-figure xxxRe
+\begin{figure}
 
-figure xxxIm
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_Re} 
+
+}
+
+\caption{Color gradient maps of the real part $(\Re[\psi_{n\ell m_\ell}(r,\theta,\phi)])$ for hydrogen atom orbitals. Color scheme: Red (positive), blue (negative), white/light (nodal grat circles where $\psi_{n\ell m_\ell}=0$).}\label{fig:fig3c5}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_Im} 
+
+}
+
+\caption{Color gradient maps of the imaginary part $(\Im[\psi_{n\ell m_\ell}(r,\theta,\phi)])$ for hydrogen atom orbitals. Color scheme: Red (positive), blue (negative), white/light (nodal grat circles where $\psi_{n\ell m_\ell}=0$).}\label{fig:fig4c5}
+\end{figure}
 
 In chemistry, we typically use \emph{real orbitals} instead of the pure complex eigenstates. This is convenient because they align with molecular symmetry, bonding intuition, and computational visualization. The real orbitals are obtained from linear combinations of spherical harmonics with opposite \(m_\ell\) values,\footnote{The combination of complex spherical harmonics into real ones results in \href{https://en.wikipedia.org/wiki/Cubic_harmonic}{cubic (or tesseral) harmonics}.} for example:
 
 \begin{equation}
 \begin{aligned}
-\psi_{2p_z} &= \psi_{21,0}\quad\text{(already real)},\\
-\psi_{2p_x} &= \frac{1}{\sqrt{2}}\left(\psi_{21,+1} + \psi_{21,-1}\right),\\
-\psi_{2p_y} &= \frac{i}{\sqrt{2}}\left(\psi_{21,+1} - \psi_{21,-1}\right).
+\psi_{2p_z} &= \psi_{2,1,0}\quad\text{(already real)},\\
+\psi_{2p_x} &= \frac{1}{\sqrt{2}}\left(\psi_{2,1,+1} + \psi_{2,1,-1}\right),\\
+\psi_{2p_y} &= \frac{i}{\sqrt{2}}\left(\psi_{2,1,+1} - \psi_{2,1,-1}\right).
 \end{aligned}
 \label{eq:HA9}
 \end{equation}
@@ -2306,32 +2349,72 @@ These combinations eliminate the azimuthal phase dependence, producing three rea
 
 The crucial point is: \textbf{the real and complex orbital representations are mathematically equivalent descriptions of the same physical system}. They provide different perspectives (real vs.~complex) but encode identical measurable information.
 
-One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures XXX and XXX carry \textbf{no direct physical significance}. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal ``regions of space'' where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. \textbf{They do not!} Since the probability density is the quantity that can be experimentally measured, \(|\psi_{n\ell m_\ell}|^2\) is the only representation that has physical significance. These ``electron density probability clouds'' can be visualized in several ways:
+One final comment on the nature of orbital representations merits particular emphasis here. Pictures of orbitals such as those shown in figures \ref{fig:fig3c5} and \ref{fig:fig4c5} carry \textbf{no direct physical significance}. These pictures simply plot mathematical functions. While they can help infer electron probability distributions, they should never be interpreted as literal ``regions of space'' where electrons reside. Unfortunately, renderings of these figures are commonly misrepresented as actual orbital images, and students are often led to believe that these pictures represent an actual, measurable, physical reality. \textbf{They do not!} Since the probability density is the quantity that can be experimentally measured, \(|\psi_{n\ell m_\ell}|^2\) is the only representation that has physical significance. These ``electron density probability clouds'' can be visualized in several ways:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
-  \textbf{Probability density contour surfaces}: Show an isosurface enclosing (e.g.) 90\% of the electron probability. This is excellent for conveying orbital shape but loses information about the probability gradient inside.
-\item
-  \textbf{Volumetric density plots}: Use color or opacity to represent \(|\psi|^2\) throughout a region. This preserves all spatial information but can be harder to interpret visually.
-\item
-  \textbf{Dot-density diagrams}: Scatter dots with density proportional to \(|\psi|^2\). Very intuitive for understanding probability as a statistical distribution.
+  \textbf{Probability density contour surface plots (isodensity maps)}: Show an isosurface enclosing (e.g.) 80\% of the electron probability. This is done for a few representative orbitals in figure \ref{fig:fig5c5}. These plots are excellent for conveying orbital shape but loses information about the probability gradient.
 \end{enumerate}
 
-Each method highlights different aspects of the orbital structure. Modern computational chemistry uses volumetric renderings and interactive 3D visualizations to convey the full spatial structure. The key is understanding that all these representations show the \emph{same} information (the probability density) through different visual encodings.
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_dens1} 
+
+}
+
+\caption{Probability density contour plots (isodensity maps) showing the isosurface containing 80\% of the electron probability $(|\psi_{n\ell m_\ell}(r,\theta,\phi|^2)$ for a few representative hydrogen atom orbitals. Regions are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\psi_{n\ell m_\ell}$ sign only, not probability itself which remains non-negative everywhere.}\label{fig:fig5c5}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \textbf{Volumetric density plots}: Use opacity to represent \(|\psi|^2\) throughout a region. This is done for a few representative orbitals in figure \ref{fig:fig6c5}. These plots preserve all spatial information but can be harder to interpret visually.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_dens2} 
+
+}
+
+\caption{Volumetric cloud plots for a few representative hydrogen atom orbitals. Regions are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\psi_{n\ell m_\ell}$ sign only, not probability itself which remains non-negative everywhere.}\label{fig:fig6c5}
+\end{figure}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  \textbf{Dot-density plots}: Scatter dots with density proportional to \(|\psi|^2\). This is done for a few representative orbitals in figure \ref{fig:fig7c5}. These plots represent a stochastic ``electron cloud'' model where the actual spatial density of the dots represents the probability of finding the electron and are very intuitive for understanding probability as a statistical distribution.
+\end{enumerate}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\linewidth]{./img/H_dens3} 
+
+}
+
+\caption{Dot-density plots for a few representative hydrogen atom orbitals. Indiviudual dots are colored blue (positive wave function phase) and red (negative phase) following standard chemistry convention; note this shading illustrates $\psi_{n\ell m_\ell}$ sign only, not probability itself which remains non-negative everywhere.}\label{fig:fig7c5}
+\end{figure}
+
+Each method highlights different aspects of the orbital structure. The key is understanding that all these representations show the \emph{same} information (the probability density) through different visual encodings. Finally, it is important to note that most chemistry textbooks depict orbital symmetry on probability density diagrams, such as those in Figures \ref{fig:fig5c5}, \ref{fig:fig6c5}, and \ref{fig:fig7c5}, by overlaying the signs of the wave functions using colors or shading. This common practice is misleading, as these plots represent the probability of finding the electron, which must be non-negative everywhere. Nevertheless, because this convention is too pervasive in the literature to ignore, we retain it here to familiarize students with standard representations while urging them to recognize its limitations.
 
 \subsection{Experimental Access to Orbitals}\label{experimental-access-to-orbitals}
 
-A common question is: ``Can we actually measure an orbital?'' The answer is nuanced. We cannot directly observe \(\psi(\mathbf{r})\) because the wave function is not an observable---quantum mechanics predicts only probabilities for measurement outcomes. However, we can:
+A common question is: ``Can we actually measure an orbital?'' The answer is nuanced. We cannot directly observe \(\psi_{n\ell m_{\ell}}(\mathbf{r})\) because the wave function is not an observable---quantum mechanics predicts only probabilities for measurement outcomes. However, we can:
 
 \begin{itemize}
 \tightlist
 \item
-  Measure the \emph{probability density} through many repeated experiments (electron microscopy, photoelectron spectroscopy)
+  Measure the \emph{probability density} through many repeated experiments (electron microscopy, photoelectron spectroscopy).
 \item
-  Recover both amplitude and phase information through sophisticated techniques like Angle-Resolved Photoemission Spectroscopy (ARPES) combined with iterative reconstruction algorithms
+  Recover both amplitude and phase information through sophisticated techniques like Angle-Resolved Photoemission Spectroscopy (ARPES) combined with iterative reconstruction algorithms.
 \item
-  Verify orbital shapes indirectly through spectroscopic measurements, magnetic susceptibility, x-ray diffraction, and other bulk properties
+  Verify orbital shapes indirectly through spectroscopic measurements, magnetic susceptibility, x-ray diffraction, and other bulk properties.
 \end{itemize}
 
 Recent attosecond and femtosecond experiments have directly imaged the amplitude of molecular orbitals and even tracked the phase evolution during chemical reactions, confirming that quantum mechanical orbital descriptions accurately reflect physical reality.
