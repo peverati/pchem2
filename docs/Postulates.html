@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-02-05" />
+<meta name="date" content="2026-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -366,15 +366,31 @@ Although measurements must always yield an eigenvalue, the state does not have t
 </div>
 <div id="postulate-6-pauli-exclusion-principle" class="section level2 hasAnchor" number="8.6">
 <h2><span class="header-section-number">8.6</span> Postulate 6: Pauli Exclusion Principle<a href="Postulates.html#postulate-6-pauli-exclusion-principle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The total wave function of a system with <span class="math inline">\(N\)</span> spin-<span class="math inline">\(\frac{1}{2}\)</span> particles (also called <strong>fermions</strong>) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called <strong>bosons</strong>), the wave function is symmetric:</p>
+<p>If we want to describe a system with <span class="math inline">\(N\)</span> particles, we need to account not only for the position of each particle, but also for their spin. This happens because the quantity that is physically observable in quantum mechanics is not the wave function itself, but rather its square. We can start to understand why this happens by writing a multi-particle wave function using <span class="math inline">\(\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)\)</span>, with <span class="math inline">\({\bf r}_1=\{x_1,y_1,z_1,s_1\}\)</span> being the quantum state of particle <span class="math inline">\(1\)</span> composed of its position in real space <span class="math inline">\(\{x,y,z\}\)</span> plus its spin state <span class="math inline">\(s\)</span>, <span class="math inline">\({\bf r}_2=\{x_2,y_2,z_2,s_2\}\)</span> the quantum state of particle <span class="math inline">\(2\)</span>, and so on. The physically observable quantity for such a wave function will be <span class="math inline">\(\left|\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)\right|^2\)</span>. When we exchange the quantum state of two particles (let’s say <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>), this observable quantity should remain the same, since quantum particles are indistinguishable from each other:</p>
+<p><span class="math display" id="eq:postpauli1">\[\begin{equation}
+\left|\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)\right|^2=\left|\Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right)\right|^2.
+\tag{8.6}  
+\end{equation}\]</span></p>
+<p>This equality, however, can be fulfilled in two different ways:</p>
 <p><span class="math display" id="eq:post6">\[\begin{equation}
 \begin{aligned}
 \Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{fermions}, \\
 \Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) &amp;= + \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right) \quad \text{bosons}.
 \end{aligned}
-\tag{8.6}  
+\tag{8.7}  
 \end{equation}\]</span></p>
-<p>Electronic spin must be included in this set of coordinates. As we will see in chapter <a href="Atoms.html#Atoms">10</a>, the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).</p>
+<p>Each of the two options above characterize a different kind of particles. Those that have an antisymmetric wave function with respect to exchange of quantum states are called <strong>fermions</strong>, while those that have a symmetric one are called <strong>bosons</strong>. Eq. <a href="Postulates.html#eq:post6">(8.7)</a> is known in physics as <em>the spin-statistics theorem</em>.</p>
+<p>But why would the spin of a particle be important in the description of a multi-particle system? To understand this fact we can use the spin-statistics theorem to derive the much more popular<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> <em>Pauli exclusion principle</em>. Let’s start with a multi-fermionic wave function:</p>
+<p><span class="math display" id="eq:postpauli2">\[\begin{equation}
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) = - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right),
+\tag{8.8}  
+\end{equation}\]</span></p>
+<p>and then let’s force two fermions (for simplicity of notation, let’s take <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span>) into the same state, <span class="math inline">\({\bf r}_1={\bf r}_2\)</span>. So if we exchange the quantum states of these two fermions, nothing can change, because they are in the same state (we forced them to be in it), therefore we must also have:</p>
+<p><span class="math display" id="eq:postpauli3">\[\begin{equation}
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) = \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right).
+\tag{8.9}  
+\end{equation}\]</span></p>
+<p>The only way both eqs. <a href="Postulates.html#eq:postpauli2">(8.8)</a> and <a href="Postulates.html#eq:postpauli3">(8.9)</a> can be fulfilled simultaneously is if <span class="math inline">\(\Psi=0\)</span>. From this we can derive the Pauli exclusion principle, that says that if we have two fermions, they cannot share the same quantum state (the wave function for such case will need to be exactly zero everywhere). In summary, if we need to describe a system composed of many fermions, then we need to account for all of their individual spin. That is because if two fermions share the same position in space <span class="math inline">\(\{x,y,z\}\)</span>, then their spin must be different. Or alternatively, if two fermions have the same spin, they will never occupy the same position in space. Notice that using a similar argument it’s very easy to demonstrate that there is no Pauli exclusion principle for Bosons. Several bosons can all occupy the same position in space, regardless of their spin.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> Unfortunately (or perhaps fortunately), electrons are bosons…</p>
 </div>
 <div id="rev8" class="section level2 hasAnchor" number="8.7">
 <h2><span class="header-section-number">8.7</span> Chapter Review<a href="Postulates.html#rev8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -518,6 +534,13 @@ Click to reveal
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="20">
+<li id="fn20"><p>at least in chemistry<a href="Postulates.html#fnref20" class="footnote-back">↩︎</a></p></li>
+<li id="fn21"><p>See, for example, Bose-Einstein condensates <a href="https://en.wikipedia.org/wiki/Bose%E2%80%93Einstein_condensate">here.</a><a href="Postulates.html#fnref21" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

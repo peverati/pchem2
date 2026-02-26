@@ -66,7 +66,14 @@ The central equation of quantum mechanics must be accepted as a postulate.
 
 ## Postulate 6: Pauli Exclusion Principle
 
-The total wave function of a system with $N$ spin-$\frac{1}{2}$ particles (also called **fermions**) must be antisymmetric with respect to the interchange of all coordinates of one particle with those of another. For spin-1 particles (also called **bosons**), the wave function is symmetric:
+If we want to describe a system with $N$ particles, we need to account not only for the position of each particle, but also for their spin. This happens because the quantity that is physically observable in quantum mechanics is not the wave function itself, but rather its square. We can start to understand why this happens by writing a multi-particle wave function using $\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)$, with ${\bf r}_1=\{x_1,y_1,z_1,s_1\}$ being the quantum state of particle $1$ composed of its position in real space $\{x,y,z\}$ plus its spin state $s$, ${\bf r}_2=\{x_2,y_2,z_2,s_2\}$ the quantum state of particle $2$, and so on. The physically observable quantity for such a wave function will be $\left|\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)\right|^2$. When we exchange the quantum state of two particles (let's say $1$ and $2$), this observable quantity should remain the same, since quantum particles are indistinguishable from each other:
+
+\begin{equation}
+\left|\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right)\right|^2=\left|\Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right)\right|^2.
+(\#eq:postpauli1)  
+\end{equation}
+
+This equality, however, can be fulfilled in two different ways:
 
 \begin{equation}
 \begin{aligned}
@@ -76,7 +83,23 @@ The total wave function of a system with $N$ spin-$\frac{1}{2}$ particles (also 
 (\#eq:post6)  
 \end{equation}
 
-Electronic spin must be included in this set of coordinates. As we will see in chapter \@ref(Atoms), the mathematical treatment of the antisymmetry postulate gives rise to the Pauli exclusion principle, which states that two or more identical fermions cannot occupy the same quantum state simultaneously (while bosons are perfectly capable of doing so).
+Each of the two options above characterize a different kind of particles. Those that have an antisymmetric wave function with respect to exchange of quantum states are called **fermions**, while those that have a symmetric one are called **bosons**. Eq. \@ref(eq:post6) is known in physics as *the spin-statistics theorem*. 
+
+But why would the spin of a particle be important in the description of a multi-particle system? To understand this fact we can use the spin-statistics theorem to derive the much more popular^[at least in chemistry] *Pauli exclusion principle*. Let's start with a multi-fermionic wave function:
+
+\begin{equation}
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) = - \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right),
+(\#eq:postpauli2)  
+\end{equation}
+
+and then let's force two fermions (for simplicity of notation, let's take $1$ and $2$) into the same state, ${\bf r}_1={\bf r}_2$. So if we exchange the quantum states of these two fermions, nothing can change, because they are in the same state (we forced them to be in it), therefore we must also have:
+
+\begin{equation}
+\Psi\left({\bf r}_1,{\bf r}_2,\ldots, {\bf r}_N\right) = \Psi\left({\bf r}_2,{\bf r}_1,\ldots, {\bf r}_N\right).
+(\#eq:postpauli3)  
+\end{equation}
+
+The only way both eqs. \@ref(eq:postpauli2) and \@ref(eq:postpauli3) can be fulfilled simultaneously is if $\Psi=0$. From this we can derive the Pauli exclusion principle, that says that if we have two fermions, they cannot share the same quantum state (the wave function for such case will need to be exactly zero everywhere). In summary, if we need to describe a system composed of many fermions, then we need to account for all of their individual spin. That is because if two fermions share the same position in space $\{x,y,z\}$, then their spin must be different. Or alternatively, if two fermions have the same spin, they will never occupy the same position in space. Notice that using a similar argument it's very easy to demonstrate that there is no Pauli exclusion principle for Bosons. Several bosons can all occupy the same position in space, regardless of their spin.^[See, for example, Bose-Einstein condensates [here.](https://en.wikipedia.org/wiki/Bose–Einstein_condensate)] Unfortunately (or perhaps fortunately), electrons are bosons...
 
 ## Chapter Review {#rev8}
 ### Study Questions {#quest8}
