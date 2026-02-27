@@ -58,59 +58,65 @@
 \contentsline {section}{\numberline {7.1}Stern-Gerlach Experiment}{99}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Sequential Stern-Gerlach Experiments}{101}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Spin Operators}{102}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Chapter Review}{104}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Study Questions}{104}{subsection.7.4.1}%
-\contentsline {chapter}{\numberline {8}Postulates of Quantum Mechanics}{109}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Postulate 1: The Wave Function Postulate}{110}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Postulate 2: Experimental Observables}{110}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Postulate 3: Individual Measurements}{110}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Postulate 4: Expectation Values and Collapse of the Wavefunction}{111}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Postulate 5: Time Evolution}{112}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Postulate 6: Pauli Exclusion Principle}{112}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Chapter Review}{114}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}Study Questions}{114}{subsection.8.7.1}%
-\contentsline {chapter}{\numberline {9}Quantum Weirdness}{119}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The double-slit experiment}{119}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}The individual particles experiment}{120}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}``Which way'' experiment}{121}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Heisenberg's Uncertainty Principle}{122}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Tunneling}{124}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Tunneling in chemical reactions}{126}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Chapter Review}{127}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Study Questions}{127}{subsection.9.4.1}%
-\contentsline {chapter}{\numberline {10}Many-Electron Atoms}{133}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Many-Electron Wave Functions}{133}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Approximated Hamiltonians}{136}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Variational method}{136}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Approximated solution for the helium atom}{138}{subsection.10.2.2}%
-\contentsline {section}{\numberline {10.3}Chapter Review}{140}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Study Questions}{140}{subsection.10.3.1}%
-\contentsline {chapter}{\numberline {11}Introduction to Molecules}{145}{chapter.11}%
-\contentsline {section}{\numberline {11.1}The Molecular Hamiltonian}{145}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Small terms in the molecular Hamiltonian}{146}{subsection.11.1.1}%
-\contentsline {section}{\numberline {11.2}The Born-Oppenheimer Approximation}{146}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Solving the Electronic Eigenvalue Problem}{148}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}The Hartree-Fock Method}{149}{subsection.11.3.1}%
-\contentsline {section}{\numberline {11.4}Chapter Review}{150}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Study Questions}{150}{subsection.11.4.1}%
-\contentsline {chapter}{\numberline {12}The Chemical Bond in Diatomic Molecules}{155}{chapter.12}%
-\contentsline {section}{\numberline {12.1}The Chemical Bond in the Hydrogen Molecular Cation}{155}{section.12.1}%
-\contentsline {section}{\numberline {12.2}The Chemical Bond in the Hydrogen Molecule}{158}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Chapter Review}{162}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Study Questions}{162}{subsection.12.3.1}%
-\contentsline {chapter}{\numberline {13}The Chemical Bond in Polyatomic Molecules}{167}{chapter.13}%
-\contentsline {section}{\numberline {13.1}The Chemical Bond in the Water Molecule Using a Minimal Basis}{167}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Hartree-Fock Calculation for Water}{169}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Shapes and Energies of Molecular Orbitals}{175}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Chapter Review}{178}{section.13.4}%
-\contentsline {subsection}{\numberline {13.4.1}Study Questions}{178}{subsection.13.4.1}%
-\contentsline {chapter}{\numberline {14}Spectroscopy}{183}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Rotational Spectroscopy}{184}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Rotation of diatomic molecules}{184}{subsection.14.1.1}%
-\contentsline {section}{\numberline {14.2}Vibrational Spectroscopy}{187}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Vibration of heteronuclear diatomic molecules}{187}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Vibration of homonuclear diatomic molecules}{189}{subsection.14.2.2}%
-\contentsline {section}{\numberline {14.3}Electronic Spectroscopy}{190}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Electronic spectroscopy of diatomic molecules}{191}{subsection.14.3.1}%
-\contentsline {section}{\numberline {14.4}Chapter Review}{192}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}Study Questions}{192}{subsection.14.4.1}%
+\contentsline {section}{\numberline {7.4}Operators Commuting with the Hamiltonian}{104}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Free particle: translational symmetry and momentum}{104}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Particle in a box: broken translation, introduction to parity}{105}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Particle on a ring and on a sphere: rotational symmetry}{106}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Hydrogen atom: Coulomb symmetry}{107}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Spin and many‑electron atoms: why spin matters}{107}{subsection.7.4.5}%
+\contentsline {section}{\numberline {7.5}Chapter Review}{108}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Study Questions}{108}{subsection.7.5.1}%
+\contentsline {chapter}{\numberline {8}Postulates of Quantum Mechanics}{113}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Postulate 1: The Wave Function Postulate}{114}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Postulate 2: Experimental Observables}{114}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Postulate 3: Individual Measurements}{114}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Postulate 4: Expectation Values and Collapse of the Wavefunction}{115}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Postulate 5: Time Evolution}{116}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Postulate 6: Pauli Exclusion Principle}{116}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Chapter Review}{118}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Study Questions}{118}{subsection.8.7.1}%
+\contentsline {chapter}{\numberline {9}Quantum Weirdness}{123}{chapter.9}%
+\contentsline {section}{\numberline {9.1}The double-slit experiment}{123}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}The individual particles experiment}{124}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}``Which way'' experiment}{125}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Heisenberg's Uncertainty Principle}{126}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Tunneling}{128}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Tunneling in chemical reactions}{130}{subsection.9.3.1}%
+\contentsline {section}{\numberline {9.4}Chapter Review}{131}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Study Questions}{131}{subsection.9.4.1}%
+\contentsline {chapter}{\numberline {10}Many-Electron Atoms}{137}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Many-Electron Wave Functions}{137}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Approximated Hamiltonians}{140}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Variational method}{140}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Approximated solution for the helium atom}{142}{subsection.10.2.2}%
+\contentsline {section}{\numberline {10.3}Chapter Review}{144}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Study Questions}{144}{subsection.10.3.1}%
+\contentsline {chapter}{\numberline {11}Introduction to Molecules}{149}{chapter.11}%
+\contentsline {section}{\numberline {11.1}The Molecular Hamiltonian}{149}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Small terms in the molecular Hamiltonian}{150}{subsection.11.1.1}%
+\contentsline {section}{\numberline {11.2}The Born-Oppenheimer Approximation}{150}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Solving the Electronic Eigenvalue Problem}{152}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}The Hartree-Fock Method}{153}{subsection.11.3.1}%
+\contentsline {section}{\numberline {11.4}Chapter Review}{154}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Study Questions}{154}{subsection.11.4.1}%
+\contentsline {chapter}{\numberline {12}The Chemical Bond in Diatomic Molecules}{159}{chapter.12}%
+\contentsline {section}{\numberline {12.1}The Chemical Bond in the Hydrogen Molecular Cation}{159}{section.12.1}%
+\contentsline {section}{\numberline {12.2}The Chemical Bond in the Hydrogen Molecule}{162}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Chapter Review}{166}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Study Questions}{166}{subsection.12.3.1}%
+\contentsline {chapter}{\numberline {13}The Chemical Bond in Polyatomic Molecules}{171}{chapter.13}%
+\contentsline {section}{\numberline {13.1}The Chemical Bond in the Water Molecule Using a Minimal Basis}{171}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Hartree-Fock Calculation for Water}{173}{section.13.2}%
+\contentsline {section}{\numberline {13.3}Shapes and Energies of Molecular Orbitals}{179}{section.13.3}%
+\contentsline {section}{\numberline {13.4}Chapter Review}{182}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Study Questions}{182}{subsection.13.4.1}%
+\contentsline {chapter}{\numberline {14}Spectroscopy}{187}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Rotational Spectroscopy}{188}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Rotation of diatomic molecules}{188}{subsection.14.1.1}%
+\contentsline {section}{\numberline {14.2}Vibrational Spectroscopy}{191}{section.14.2}%
+\contentsline {subsection}{\numberline {14.2.1}Vibration of heteronuclear diatomic molecules}{191}{subsection.14.2.1}%
+\contentsline {subsection}{\numberline {14.2.2}Vibration of homonuclear diatomic molecules}{193}{subsection.14.2.2}%
+\contentsline {section}{\numberline {14.3}Electronic Spectroscopy}{194}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Electronic spectroscopy of diatomic molecules}{195}{subsection.14.3.1}%
+\contentsline {section}{\numberline {14.4}Chapter Review}{196}{section.14.4}%
+\contentsline {subsection}{\numberline {14.4.1}Study Questions}{196}{subsection.14.4.1}%

@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-02-25" />
+<meta name="date" content="2026-02-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -190,9 +190,17 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
 <li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
 <li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
-<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.4</b> Chapter Review</a>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#operators-commuting-with-the-hamiltonian"><i class="fa fa-check"></i><b>7.4</b> Operators Commuting with the Hamiltonian</a>
 <ul>
-<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#free-particle-translational-symmetry-and-momentum"><i class="fa fa-check"></i><b>7.4.1</b> Free particle: translational symmetry and momentum</a></li>
+<li class="chapter" data-level="7.4.2" data-path="Spin.html"><a href="Spin.html#particle-in-a-box-broken-translation-introduction-to-parity"><i class="fa fa-check"></i><b>7.4.2</b> Particle in a box: broken translation, introduction to parity</a></li>
+<li class="chapter" data-level="7.4.3" data-path="Spin.html"><a href="Spin.html#particle-on-a-ring-and-on-a-sphere-rotational-symmetry"><i class="fa fa-check"></i><b>7.4.3</b> Particle on a ring and on a sphere: rotational symmetry</a></li>
+<li class="chapter" data-level="7.4.4" data-path="Spin.html"><a href="Spin.html#hydrogen-atom-coulomb-symmetry"><i class="fa fa-check"></i><b>7.4.4</b> Hydrogen atom: Coulomb symmetry</a></li>
+<li class="chapter" data-level="7.4.5" data-path="Spin.html"><a href="Spin.html#spin-and-manyelectron-atoms-why-spin-matters"><i class="fa fa-check"></i><b>7.4.5</b> Spin and many‑electron atoms: why spin matters</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
@@ -415,10 +423,104 @@ As we showed in the previous section, all particles leaving the first Stern-Gerl
 </div>
 </blockquote>
 </div>
-<div id="rev7" class="section level2 hasAnchor" number="7.4">
-<h2><span class="header-section-number">7.4</span> Chapter Review<a href="Spin.html#rev7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="quest7" class="section level3 hasAnchor" number="7.4.1">
-<h3><span class="header-section-number">7.4.1</span> Study Questions<a href="Spin.html#quest7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="operators-commuting-with-the-hamiltonian" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Operators Commuting with the Hamiltonian<a href="Spin.html#operators-commuting-with-the-hamiltonian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To conclude this chapter, it is helpful to step back and see how symmetries and commuting operators give rise to the quantum numbers used to label states, and how spin becomes essential, especially in real atoms. In every system, the operators that commute with the Hamiltonian tell us which physical quantities are conserved and which labels (quantum numbers) are “good.”</p>
+<div id="free-particle-translational-symmetry-and-momentum" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Free particle: translational symmetry and momentum<a href="Spin.html#free-particle-translational-symmetry-and-momentum" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a one‑dimensional free particle, the Hamiltonian is</p>
+<p><span class="math display" id="eq:spop5">\[\begin{equation}
+\hat{H} = \frac{\hat{p}^2}{2m}.
+\tag{7.12}
+\end{equation}\]</span></p>
+<p>Space is translationally invariant: shifting the particle by any distance does not change the physics. Mathematically, this symmetry implies that the Hamiltonian commutes with the momentum operator:</p>
+<p><span class="math display" id="eq:spop6">\[\begin{equation}
+[\hat{H}, \hat{p}] = 0.
+\tag{7.13}
+\end{equation}\]</span></p>
+<p>Because of this commutation, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector <span class="math inline">\(k\)</span>) is a good quantum number that labels the states.</p>
+</div>
+<div id="particle-in-a-box-broken-translation-introduction-to-parity" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Particle in a box: broken translation, introduction to parity<a href="Spin.html#particle-in-a-box-broken-translation-introduction-to-parity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a particle‑in‑a‑box of length <span class="math inline">\(a\)</span>, with infinite potential walls at <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(x = a\)</span>, the Hamiltonian inside the box still looks like a free particle, but the boundary conditions</p>
+<p><span class="math display" id="eq:spop7">\[\begin{equation}
+\psi(0) = 0, \qquad \psi(a) = 0,
+\tag{7.14}
+\end{equation}\]</span></p>
+<p>break translational symmetry: shifting the entire system by any finite amount would move the walls and change the problem. As a result, the momentum operator no longer commutes with the Hamiltonian, and</p>
+<p><span class="math display" id="eq:spop8">\[\begin{equation}
+[\hat{H}, \hat{p}] \neq 0.
+\tag{7.15}
+\end{equation}\]</span></p>
+<p>Momentum is <strong>not</strong> conserved and is not a good quantum number.</p>
+<p>However, there is still an important discrete symmetry if we choose our coordinates carefully. Consider a symmetric box extending from <span class="math inline">\(-a/2\)</span> to <span class="math inline">\(+a/2\)</span>. In that case, the system is invariant under <strong>inversion</strong> of the coordinate, <span class="math inline">\(x \longrightarrow -x.\)</span></p>
+<p>This operation is described by the <strong>parity operator</strong> <span class="math inline">\(\hat{\Pi}\)</span>, which acts on a wavefunction as</p>
+<p><span class="math display" id="eq:spop10">\[\begin{equation}
+\hat{\Pi}\psi(x) = \psi(-x).
+\tag{7.16}
+\end{equation}\]</span></p>
+<p>If the potential is symmetric, <span class="math inline">\(V(x) = V(-x)\)</span>, then the Hamiltonian is unchanged by this inversion and commutes with the parity operator:</p>
+<p><span class="math display" id="eq:spop11">\[\begin{equation}
+[\hat{H}, \hat{\Pi}] = 0.
+\tag{7.17}
+\end{equation}\]</span></p>
+<p>This means that energy eigenfunctions can be chosen to be eigenfunctions of parity as well. Those with</p>
+<p><span class="math display" id="eq:spop12">\[\begin{equation}
+\hat{\Pi}\psi(x) = +\psi(x)
+\tag{7.18}
+\end{equation}\]</span></p>
+<p>are called <strong>even</strong> functions (symmetric, <span class="math inline">\(\psi(-x) = \psi(x)\)</span>), and those with</p>
+<p><span class="math display" id="eq:spop13">\[\begin{equation}
+\hat{\Pi}\psi(x) = -\psi(x)
+\tag{7.19}
+\end{equation}\]</span></p>
+<p>are <strong>odd</strong> functions (antisymmetric, <span class="math inline">\(\psi(-x) = -\psi(x)\)</span>). Thus, even though continuous translational symmetry (and conserved momentum) is lost, a discrete symmetry remains, and the corresponding quantity—parity—serves as a useful label for the states. This is a simple example of how a commuting operator encodes a symmetry and yields a quantum “label,” in this case even/odd parity.</p>
+</div>
+<div id="particle-on-a-ring-and-on-a-sphere-rotational-symmetry" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Particle on a ring and on a sphere: rotational symmetry<a href="Spin.html#particle-on-a-ring-and-on-a-sphere-rotational-symmetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rotational symmetry plays a similar but richer role. For a particle on a ring (motion confined to a circle of radius <span class="math inline">\(R\)</span>), the system is invariant under rotations in the plane. The relevant operator is the <span class="math inline">\(z\)</span>‑component of orbital angular momentum, <span class="math inline">\(\hat{L}_z\)</span>. Rotational invariance around the <span class="math inline">\(z\)</span>‑axis implies</p>
+<p><span class="math display" id="eq:spop14">\[\begin{equation}
+[\hat{H}, \hat{L}_z] = 0,
+\tag{7.20}
+\end{equation}\]</span></p>
+<p>so <span class="math inline">\(\hat{L}_z\)</span> and <span class="math inline">\(\hat{H}\)</span> share a set of eigenfunctions. These eigenfunctions have the form <span class="math inline">\(\mathrm{e}^{\mathrm{i} m_{\ell} \phi}\)</span>, where <span class="math inline">\(\phi\)</span> is the angular coordinate, and <span class="math inline">\(m_{\ell}\)</span> is an integer. The integer <span class="math inline">\(m_\ell = 0, \pm 1, \pm 2, \dots\)</span> is a <strong>good quantum number</strong>: it labels both the allowed angular momenta and the energy levels, which are proportional to <span class="math inline">\(m_\ell^2\)</span>.</p>
+<p>For a particle on a sphere, there is full three‑dimensional rotational symmetry. The Hamiltonian commutes with both the total orbital angular momentum operator <span class="math inline">\(\hat{L}^2\)</span> and with <span class="math inline">\(\hat{L}_z\)</span>:</p>
+<p><span class="math display" id="eq:spop15">\[\begin{equation}
+[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
+\tag{7.21}
+\end{equation}\]</span></p>
+<p>The simultaneous eigenfunctions of <span class="math inline">\(\hat{L}^2\)</span> and <span class="math inline">\(\hat{L}_z\)</span> are the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. Their quantum numbers arise directly from these commuting operators:</p>
+<ul>
+<li><span class="math inline">\(\ell = 0,1,2,\dots\quad\)</span> from <span class="math inline">\(\quad \hat{L}^2Y_\ell^{m_\ell} = \hbar^2 \ell(\ell+1)Y_\ell^{m_\ell}\)</span>,<br />
+</li>
+<li><span class="math inline">\(m_\ell = -\ell, -\ell+1, \dots, +\ell\quad\)</span> from <span class="math inline">\(\quad\hat{L}_zY_\ell^{m_\ell} = \hbar m_\ell Y_\ell^{m_\ell}\)</span>.</li>
+</ul>
+<p>For each <span class="math inline">\(\ell\)</span>, there are <span class="math inline">\(2\ell+1\)</span> states with different <span class="math inline">\(m_\ell\)</span> but the same energy, a degeneracy that is a direct consequence of rotational symmetry.</p>
+</div>
+<div id="hydrogen-atom-coulomb-symmetry" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Hydrogen atom: Coulomb symmetry<a href="Spin.html#hydrogen-atom-coulomb-symmetry" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The hydrogen atom is a central example where these ideas connect directly to the familiar quantum numbers <span class="math inline">\(n\)</span>, <span class="math inline">\(\ell\)</span>, and <span class="math inline">\(m_\ell\)</span>. In the nonrelativistic approximation, the Hamiltonian depends only on the distance <span class="math inline">\(r\)</span> from the nucleus. This spherical symmetry implies that</p>
+<p><span class="math display" id="eq:spop16">\[\begin{equation}
+[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
+\tag{7.22}
+\end{equation}\]</span></p>
+<p>Solving the Schrödinger equation in spherical coordinates leads to energy eigenfunctions that are products of a radial function (depending on <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span>) and an angular function, the spherical harmonic <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The commuting set <span class="math inline">\(\hat{H}\)</span>, <span class="math inline">\(\hat{L}^2\)</span>, and <span class="math inline">\(\hat{L}_z\)</span> gives rise to the labels <span class="math inline">\((n, \ell, m_\ell)\)</span>, and the large degeneracy of hydrogenic levels reflects both rotational symmetry and a deeper Coulomb symmetry.</p>
+</div>
+<div id="spin-and-manyelectron-atoms-why-spin-matters" class="section level3 hasAnchor" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> Spin and many‑electron atoms: why spin matters<a href="Spin.html#spin-and-manyelectron-atoms-why-spin-matters" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>So far, all these operators act on the <strong>spatial</strong> part of the electron’s wave function. However, as we introduced in this chapter, the electron also has an intrinsic angular momentum, <strong>spin</strong>, described by spin operators <span class="math inline">\(\hat{S}^2\)</span> and <span class="math inline">\(\hat{S}_z\)</span>. For the simple nonrelativistic hydrogen Hamiltonian (which does not explicitly include spin), these operators commute with <span class="math inline">\(\hat{H}\)</span>:</p>
+<p><span class="math display" id="eq:spop17">\[\begin{equation}
+[\hat{H}, \hat{S}^2] = 0, \qquad [\hat{H}, \hat{S}_z] = 0.
+\tag{7.23}
+\end{equation}\]</span></p>
+<p>This means that each spatial state labeled by <span class="math inline">\((n, \ell, m_\ell)\)</span> can be combined with two spin states, with spin quantum numbers <span class="math inline">\(s = 1/2\)</span> and <span class="math inline">\(m_s = \pm 1/2\)</span>, doubling the degeneracy. In this simplest picture, spin does not change the energy levels, but it enlarges the set of possible states and will matter whenever magnetic fields or spin‑dependent interactions are present.</p>
+<p>In many‑electron atoms, spin is even more central. The Coulomb Hamiltonian still respects overall rotational symmetry, so one can define a <strong>total orbital angular momentum</strong> <span class="math inline">\(\mathbf{L}\)</span> by adding the orbital angular momenta of all electrons, and a <strong>total spin</strong> <span class="math inline">\(\mathbf{S}\)</span> by adding all individual spins. In a good approximation (LS‑coupling regime), the Hamiltonian commutes with the corresponding operators <span class="math inline">\(\hat{L}^2\)</span> and <span class="math inline">\(\hat{S}^2\)</span>, and the quantum numbers <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span> become important labels for atomic states. At the same time, the Pauli exclusion principle demands that the total electronic wave function be antisymmetric under exchange of any two electrons, tightly linking the allowed combinations of spatial quantum numbers (generalizing <span class="math inline">\(n, \ell, m_\ell\)</span>) with the allowed spin states. In this way, the operators that commute with the Hamiltonian—momentum, parity, orbital angular momentum, and spin—not only reveal the underlying symmetries of each model system, but, in real atoms, highlight how indispensable spin is in determining the structure, degeneracies, and selection rules of atomic spectra.</p>
+</div>
+</div>
+<div id="rev7" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Chapter Review<a href="Spin.html#rev7" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest7" class="section level3 hasAnchor" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Study Questions<a href="Spin.html#quest7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. The Stern–Gerlach experiment with silver atoms showed that the beam splits into what?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>a continuous smear of intensities<br />

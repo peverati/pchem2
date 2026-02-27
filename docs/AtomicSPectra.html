@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>15 Atomic Spectroscopy | The Live Textbook of Physical Chemistry 2</title>
+  <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="15 Atomic Spectroscopy | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  <meta name="github-repo" content="peverati/PChem2" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="15 Atomic Spectroscopy | The Live Textbook of Physical Chemistry 2" />
+  
+  <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
+  
+
+<meta name="author" content="Dr. Roberto Peverati" />
+
+
+<meta name="date" content="2026-02-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="Spectroscopy.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Ajax.config.path["mhchem"] =
+  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
+MathJax.Hub.Config({
+  TeX: {
+    extensions: ["[mhchem]/mhchem.js"]
+  }
+});
+</script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Live Textbook P-Chem 2</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> Introduction to Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>1.1</b> Historical Context</a></li>
+<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
+<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="Classical.html"><a href="Classical.html#classical-mechanics"><i class="fa fa-check"></i><b>2.1</b> Classical Mechanics</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>2.1.1</b> Newtonian Formulation</a></li>
+<li class="chapter" data-level="2.1.2" data-path="Classical.html"><a href="Classical.html#lagrangian-formulation"><i class="fa fa-check"></i><b>2.1.2</b> Lagrangian Formulation</a></li>
+<li class="chapter" data-level="2.1.3" data-path="Classical.html"><a href="Classical.html#hamiltonian-mechanics"><i class="fa fa-check"></i><b>2.1.3</b> Hamiltonian mechanics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="Classical.html"><a href="Classical.html#coulombs-law"><i class="fa fa-check"></i><b>2.2</b> Coulomb’s Law</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="Classical.html"><a href="Classical.html#vector-form-of-the-coulombs-law-law"><i class="fa fa-check"></i><b>2.2.1</b> Vector form of the Coulomb’s Law law</a></li>
+<li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
+<li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="Models.html"><a href="Models.html#wave-function-analysis"><i class="fa fa-check"></i><b>4.1.1</b> Wave function analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-particle-on-a-ring"><i class="fa fa-check"></i><b>4.2</b> The Particle on a Ring</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-1"><i class="fa fa-check"></i><b>4.2.1</b> Wave function analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-particle-on-a-sphere"><i class="fa fa-check"></i><b>4.3</b> The Particle on a Sphere</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-2"><i class="fa fa-check"></i><b>4.3.1</b> Wave function analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.4</b> The Harmonic Oscillator</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-3"><i class="fa fa-check"></i><b>4.4.1</b> Wave function analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#wave-function-analysis-4"><i class="fa fa-check"></i><b>5.1</b> Wave Function Analysis</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1.1</b> The radial wave functions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.1.2</b> The angular wave functions</a></li>
+<li class="chapter" data-level="5.1.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.1.3</b> Building the complete orbital</a></li>
+<li class="chapter" data-level="5.1.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.1.4</b> Experimental Access to Orbitals</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.2</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.2.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="Operators.html"><a href="Operators.html#basic-properties-of-operators"><i class="fa fa-check"></i><b>6.1.1</b> Basic Properties of Operators</a></li>
+<li class="chapter" data-level="6.1.2" data-path="Operators.html"><a href="Operators.html#linear-operators"><i class="fa fa-check"></i><b>6.1.2</b> Linear Operators</a></li>
+<li class="chapter" data-level="6.1.3" data-path="Operators.html"><a href="Operators.html#hermitian-operators"><i class="fa fa-check"></i><b>6.1.3</b> Hermitian Operators</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="Operators.html"><a href="Operators.html#eigenfunctions-and-eigenvalues"><i class="fa fa-check"></i><b>6.2</b> Eigenfunctions and Eigenvalues</a></li>
+<li class="chapter" data-level="6.3" data-path="Operators.html"><a href="Operators.html#common-operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.3</b> Common Operators in Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
+<li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
+<li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
+<li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
+<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#operators-commuting-with-the-hamiltonian"><i class="fa fa-check"></i><b>7.4</b> Operators Commuting with the Hamiltonian</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#free-particle-translational-symmetry-and-momentum"><i class="fa fa-check"></i><b>7.4.1</b> Free particle: translational symmetry and momentum</a></li>
+<li class="chapter" data-level="7.4.2" data-path="Spin.html"><a href="Spin.html#particle-in-a-box-broken-translation-introduction-to-parity"><i class="fa fa-check"></i><b>7.4.2</b> Particle in a box: broken translation, introduction to parity</a></li>
+<li class="chapter" data-level="7.4.3" data-path="Spin.html"><a href="Spin.html#particle-on-a-ring-and-on-a-sphere-rotational-symmetry"><i class="fa fa-check"></i><b>7.4.3</b> Particle on a ring and on a sphere: rotational symmetry</a></li>
+<li class="chapter" data-level="7.4.4" data-path="Spin.html"><a href="Spin.html#hydrogen-atom-coulomb-symmetry"><i class="fa fa-check"></i><b>7.4.4</b> Hydrogen atom: Coulomb symmetry</a></li>
+<li class="chapter" data-level="7.4.5" data-path="Spin.html"><a href="Spin.html#spin-and-manyelectron-atoms-why-spin-matters"><i class="fa fa-check"></i><b>7.4.5</b> Spin and many‑electron atoms: why spin matters</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="Postulates.html"><a href="Postulates.html#postulate-1-the-wave-function-postulate"><i class="fa fa-check"></i><b>8.1</b> Postulate 1: The Wave Function Postulate</a></li>
+<li class="chapter" data-level="8.2" data-path="Postulates.html"><a href="Postulates.html#postulate-2-experimental-observables"><i class="fa fa-check"></i><b>8.2</b> Postulate 2: Experimental Observables</a></li>
+<li class="chapter" data-level="8.3" data-path="Postulates.html"><a href="Postulates.html#postulate-3-individual-measurements"><i class="fa fa-check"></i><b>8.3</b> Postulate 3: Individual Measurements</a></li>
+<li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
+<li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
+<li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
+<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="Weirdness.html"><a href="Weirdness.html#the-double-slit-experiment"><i class="fa fa-check"></i><b>9.1</b> The double-slit experiment</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="Weirdness.html"><a href="Weirdness.html#the-individual-particles-experiment"><i class="fa fa-check"></i><b>9.1.1</b> The individual particles experiment</a></li>
+<li class="chapter" data-level="9.1.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>9.1.2</b> “Which way” experiment</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>9.2</b> Heisenberg’s Uncertainty Principle</a></li>
+<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="Atoms.html"><a href="Atoms.html#many-electron-wave-functions"><i class="fa fa-check"></i><b>10.1</b> Many-Electron Wave Functions</a></li>
+<li class="chapter" data-level="10.2" data-path="Atoms.html"><a href="Atoms.html#approximated-hamiltonians"><i class="fa fa-check"></i><b>10.2</b> Approximated Hamiltonians</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
+<li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="Molecules.html"><a href="Molecules.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
+<li class="chapter" data-level="11.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
+<li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
+<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
+<li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
+<li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
+<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>14.1</b> Rotational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="14.1.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.1.1</b> Rotation of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>14.2</b> Vibrational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="14.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>14.2.1</b> Vibration of heteronuclear diatomic molecules</a></li>
+<li class="chapter" data-level="14.2.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>14.2.2</b> Vibration of homonuclear diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html"><i class="fa fa-check"></i><b>15</b> Atomic Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#line-spectra-and-the-hydrogen-atom"><i class="fa fa-check"></i><b>15.1</b> Line Spectra and the Hydrogen Atom</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#empirical-observations-line-spectra"><i class="fa fa-check"></i><b>15.1.1</b> Empirical observations: line spectra</a></li>
+<li class="chapter" data-level="15.1.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#hydrogenic-energy-levels-from-quantum-mechanics"><i class="fa fa-check"></i><b>15.1.2</b> 2.2 Hydrogenic energy levels from quantum mechanics</a></li>
+<li class="chapter" data-level="15.1.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#quantum-numbers-and-degeneracies"><i class="fa fa-check"></i><b>15.1.3</b> 2.3 Quantum numbers and degeneracies</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#manyelectron-atoms-and-term-symbols"><i class="fa fa-check"></i><b>15.2</b> 3. Many‑Electron Atoms and Term Symbols</a>
+<ul>
+<li class="chapter" data-level="15.2.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#electron-configurations"><i class="fa fa-check"></i><b>15.2.1</b> 3.1 Electron configurations</a></li>
+<li class="chapter" data-level="15.2.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#ls-russellsaunders-coupling"><i class="fa fa-check"></i><b>15.2.2</b> 3.2 LS (Russell–Saunders) coupling</a></li>
+<li class="chapter" data-level="15.2.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#term-symbols"><i class="fa fa-check"></i><b>15.2.3</b> 3.3 Term symbols</a></li>
+<li class="chapter" data-level="15.2.4" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#hunds-rules"><i class="fa fa-check"></i><b>15.2.4</b> 3.4 Hund’s rules</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#fine-structure-and-spinorbit-coupling"><i class="fa fa-check"></i><b>15.3</b> 4. Fine Structure and Spin–Orbit Coupling</a>
+<ul>
+<li class="chapter" data-level="15.3.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#origin-of-fine-structure"><i class="fa fa-check"></i><b>15.3.1</b> 4.1 Origin of fine structure</a></li>
+<li class="chapter" data-level="15.3.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#spinorbit-coupling-qualitatively"><i class="fa fa-check"></i><b>15.3.2</b> 4.2 Spin–orbit coupling qualitatively</a></li>
+<li class="chapter" data-level="15.3.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#spectroscopic-consequences"><i class="fa fa-check"></i><b>15.3.3</b> 4.3 Spectroscopic consequences</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#selection-rules-for-electricdipole-transitions"><i class="fa fa-check"></i><b>15.4</b> 5. Selection Rules for Electric‑Dipole Transitions</a>
+<ul>
+<li class="chapter" data-level="15.4.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#transition-dipole-moment"><i class="fa fa-check"></i><b>15.4.1</b> 5.1 Transition dipole moment</a></li>
+<li class="chapter" data-level="15.4.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#oneelectron-selection-rules-hydrogenic"><i class="fa fa-check"></i><b>15.4.2</b> 5.2 One‑electron selection rules (hydrogenic)</a></li>
+<li class="chapter" data-level="15.4.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#manyelectron-selection-rules-in-ls-coupling"><i class="fa fa-check"></i><b>15.4.3</b> 5.3 Many‑electron selection rules in LS coupling</a></li>
+<li class="chapter" data-level="15.4.4" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#example-the-sodium-d-lines"><i class="fa fa-check"></i><b>15.4.4</b> 5.4 Example: the sodium D lines</a></li>
+</ul></li>
+<li class="chapter" data-level="15.5" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#spectral-line-shapes-and-broadening-mechanisms"><i class="fa fa-check"></i><b>15.5</b> 6. Spectral Line Shapes and Broadening Mechanisms</a>
+<ul>
+<li class="chapter" data-level="15.5.1" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#natural-lifetime-broadening"><i class="fa fa-check"></i><b>15.5.1</b> 6.1 Natural (lifetime) broadening</a></li>
+<li class="chapter" data-level="15.5.2" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#doppler-broadening"><i class="fa fa-check"></i><b>15.5.2</b> 6.2 Doppler broadening</a></li>
+<li class="chapter" data-level="15.5.3" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#collisional-pressure-broadening"><i class="fa fa-check"></i><b>15.5.3</b> 6.3 Collisional (pressure) broadening</a></li>
+<li class="chapter" data-level="15.5.4" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#combined-effects-voigt-profile"><i class="fa fa-check"></i><b>15.5.4</b> 6.4 Combined effects: Voigt profile</a></li>
+</ul></li>
+<li class="chapter" data-level="15.6" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#summary-and-concept-integration"><i class="fa fa-check"></i><b>15.6</b> 7. Summary and Concept Integration</a></li>
+<li class="chapter" data-level="15.7" data-path="AtomicSPectra.html"><a href="AtomicSPectra.html#suggested-breakdown-into-three-class-periods"><i class="fa fa-check"></i><b>15.7</b> 8. Suggested Breakdown into Three Class Periods</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 2</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="AtomicSPectra" class="section level1 hasAnchor" number="15">
+<h1><span class="header-section-number">15</span> Atomic Spectroscopy<a href="AtomicSPectra.html#AtomicSPectra" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Atomic spectroscopy is the study of the discrete frequencies of light absorbed or emitted by atoms as their electrons move between quantized energy levels. These spectra provide some of the most direct evidence for quantization in atoms and a powerful experimental probe of atomic structure.</p>
+<div id="line-spectra-and-the-hydrogen-atom" class="section level2 hasAnchor" number="15.1">
+<h2><span class="header-section-number">15.1</span> Line Spectra and the Hydrogen Atom<a href="AtomicSPectra.html#line-spectra-and-the-hydrogen-atom" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="empirical-observations-line-spectra" class="section level3 hasAnchor" number="15.1.1">
+<h3><span class="header-section-number">15.1.1</span> Empirical observations: line spectra<a href="AtomicSPectra.html#empirical-observations-line-spectra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When a gas of atoms (e.g., hydrogen, sodium, mercury) is excited in a discharge tube and observed through a prism or diffraction grating, it produces <strong>line spectra</strong>: a set of sharp lines at well‑defined wavelengths rather than a continuous band. Each element has a characteristic pattern of lines (its “spectral fingerprint”).</p>
+<p>For hydrogen, the visible lines belong to the Balmer series and can be fit by the <strong>Rydberg formula</strong><br />
+$
+= = R_{}( - ), n_i &gt; n_f
+$
+where <span class="math inline">\(\tilde{\nu}\)</span> is the wavenumber, <span class="math inline">\(\lambda\)</span> the wavelength, <span class="math inline">\(R_{\infty}\)</span> the Rydberg constant, and <span class="math inline">\(n_i\)</span>, <span class="math inline">\(n_f\)</span> are positive integers. This simple empirical relationship was a major clue that atomic energy levels are quantized.</p>
+</div>
+<div id="hydrogenic-energy-levels-from-quantum-mechanics" class="section level3 hasAnchor" number="15.1.2">
+<h3><span class="header-section-number">15.1.2</span> 2.2 Hydrogenic energy levels from quantum mechanics<a href="AtomicSPectra.html#hydrogenic-energy-levels-from-quantum-mechanics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Quantum mechanics provides a microscopic basis for the Rydberg formula. Solving the Schrödinger equation for a hydrogenlike ion (nucleus of charge <span class="math inline">\(+Ze\)</span>, one electron) yields bound‑state energies
+$
+E_n = -
+= -, n = 1,2,3,
+$
+where <span class="math inline">\(\mu\)</span> is the electron–nucleus reduced mass. Each allowed <strong>principal quantum number</strong> <span class="math inline">\(n\)</span> corresponds to a set of degenerate states with different orbital angular momentum quantum numbers <span class="math inline">\(l\)</span> and magnetic quantum numbers <span class="math inline">\(m_l\)</span>.</p>
+<p>A photon of energy <span class="math inline">\(h\nu\)</span> can be emitted or absorbed when the electron makes a transition between levels:
+$
+h= E_{n_i} - E_{n_f}
+$
+Substituting the hydrogenic energy expression gives the Rydberg formula for <span class="math inline">\(Z = 1\)</span>, providing a direct link between the observed spectral lines and quantized electron energies.</p>
+</div>
+<div id="quantum-numbers-and-degeneracies" class="section level3 hasAnchor" number="15.1.3">
+<h3><span class="header-section-number">15.1.3</span> 2.3 Quantum numbers and degeneracies<a href="AtomicSPectra.html#quantum-numbers-and-degeneracies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The stationary states of the hydrogen atom are labeled by three quantum numbers:</p>
+<ul>
+<li><span class="math inline">\(n = 1,2,3,\dots\)</span>: principal quantum number (controls most of the energy).<br />
+</li>
+<li><span class="math inline">\(l = 0,1,\dots,n-1\)</span>: orbital angular momentum.<br />
+</li>
+<li><span class="math inline">\(m_l = -l, -l+1, \dots, +l\)</span>: projection of angular momentum along <span class="math inline">\(z\)</span>.</li>
+</ul>
+<p>For a given <span class="math inline">\(n\)</span>, there are <span class="math inline">\(n^2\)</span> spatial states (summing over all allowed <span class="math inline">\(l\)</span> and <span class="math inline">\(m_l\)</span>). Including <strong>spin</strong> (<span class="math inline">\(s = 1/2\)</span>, <span class="math inline">\(m_s = \pm 1/2\)</span>) doubles this to <span class="math inline">\(2n^2\)</span> degenerate states. In hydrogen, the energy depends only on <span class="math inline">\(n\)</span> (to a good approximation), so all these states are nearly degenerate; in real atoms, spin‑orbit and relativistic corrections lift this degeneracy, leading to the <strong>fine structure</strong> discussed later.</p>
+<hr />
+</div>
+</div>
+<div id="manyelectron-atoms-and-term-symbols" class="section level2 hasAnchor" number="15.2">
+<h2><span class="header-section-number">15.2</span> 3. Many‑Electron Atoms and Term Symbols<a href="AtomicSPectra.html#manyelectron-atoms-and-term-symbols" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hydrogen provides an exactly solvable model, but real atoms contain many electrons. Electron–electron repulsions, spin‑orbit coupling, and other interactions complicate the picture but can be organized with angular momentum coupling schemes and <strong>term symbols</strong>.[1][2]</p>
+<div id="electron-configurations" class="section level3 hasAnchor" number="15.2.1">
+<h3><span class="header-section-number">15.2.1</span> 3.1 Electron configurations<a href="AtomicSPectra.html#electron-configurations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>configuration</strong> specifies how electrons occupy one‑electron orbitals labeled by <span class="math inline">\(n\)</span> and <span class="math inline">\(l\)</span>. For example:</p>
+<ul>
+<li>He: <span class="math inline">\(1s^2\)</span><br />
+</li>
+<li>C: <span class="math inline">\(1s^2 2s^2 2p^2\)</span><br />
+</li>
+<li>Na: <span class="math inline">\(1s^2 2s^2 2p^6 3s^1\)</span></li>
+</ul>
+<p>For spectroscopy, it is usually the outer (valence) electrons that matter most, since they determine low‑lying excited states and optical transitions. Core electrons are often treated as an inert, spherically symmetric “closed shell.”</p>
+</div>
+<div id="ls-russellsaunders-coupling" class="section level3 hasAnchor" number="15.2.2">
+<h3><span class="header-section-number">15.2.2</span> 3.2 LS (Russell–Saunders) coupling<a href="AtomicSPectra.html#ls-russellsaunders-coupling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For light atoms (roughly up through the first transition series), spin–orbit coupling is relatively weak compared to electron–electron Coulomb interactions. In this case, it is a good approximation to first couple the <strong>orbital angular momenta</strong> of all electrons to form a total orbital angular momentum <span class="math inline">\(\mathbf{L}\)</span>, and separately couple all electron spins to form a total spin <span class="math inline">\(\mathbf{S}\)</span>. These then couple to give total electronic angular momentum <span class="math inline">\(\mathbf{J}\)</span>:[2][1]</p>
+<p>$
+= _i _i,
+= _i _i,
+= +
+$</p>
+<p>The corresponding quantum numbers are:</p>
+<ul>
+<li><span class="math inline">\(L = 0,1,2,\dots\)</span> (S, P, D, F, G, …)<br />
+</li>
+<li><span class="math inline">\(S = 0, 1/2, 1, 3/2, \dots\)</span> (total spin)<br />
+</li>
+<li><span class="math inline">\(J = |L - S|, |L - S| + 1, \dots, L + S\)</span></li>
+</ul>
+<p>Each distinct pair <span class="math inline">\((L,S)\)</span> defines a <strong>term</strong>, and each allowed <span class="math inline">\(J\)</span> defines a <strong>level</strong> within that term.</p>
+</div>
+<div id="term-symbols" class="section level3 hasAnchor" number="15.2.3">
+<h3><span class="header-section-number">15.2.3</span> 3.3 Term symbols<a href="AtomicSPectra.html#term-symbols" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The standard notation for an atomic term in LS coupling is the <strong>term symbol</strong><br />
+$
+^{2S+1}L_J
+$
+where:</p>
+<ul>
+<li><span class="math inline">\(2S + 1\)</span> is the <strong>multiplicity</strong> (number of spin states).<br />
+</li>
+<li><span class="math inline">\(L\)</span> is represented by a letter:
+<ul>
+<li>S for <span class="math inline">\(L = 0\)</span>, P for <span class="math inline">\(L = 1\)</span>, D for <span class="math inline">\(L = 2\)</span>, F for <span class="math inline">\(L = 3\)</span>, etc.<br />
+</li>
+</ul></li>
+<li><span class="math inline">\(J\)</span> is the total angular momentum quantum number.</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>Hydrogen ground state: configuration <span class="math inline">\(1s^1\)</span> → one electron with <span class="math inline">\(l = 0\)</span>, <span class="math inline">\(s = 1/2\)</span>
+<ul>
+<li><span class="math inline">\(L = 0\)</span> (S), <span class="math inline">\(S = 1/2\)</span>, so <span class="math inline">\(2S+1 = 2\)</span>, and <span class="math inline">\(J = 1/2\)</span>.<br />
+</li>
+<li>Term symbol: <span class="math inline">\(^{2}S_{1/2}\)</span>.</li>
+</ul></li>
+<li>Helium excited triplet state <span class="math inline">\(1s2s\)</span>: two electrons, both with <span class="math inline">\(s = 1/2\)</span>. If their spins are parallel, total <span class="math inline">\(S = 1\)</span> (triplet), and if the spatial part corresponds to <span class="math inline">\(L = 0\)</span>, possible <span class="math inline">\(J = 1\)</span>, giving <span class="math inline">\(^{3}S_1\)</span>.</li>
+</ul>
+<p>Formally, the process of finding all allowed term symbols for a configuration requires angular momentum addition rules and Pauli’s exclusion principle. In practice, spectroscopists often use tables or simple rules for common subshell occupancies.[3][2]</p>
+</div>
+<div id="hunds-rules" class="section level3 hasAnchor" number="15.2.4">
+<h3><span class="header-section-number">15.2.4</span> 3.4 Hund’s rules<a href="AtomicSPectra.html#hunds-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Hund’s rules provide a simple way to predict the <strong>ground‑state term</strong> of a configuration in LS coupling:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Maximum multiplicity</strong>: For a given configuration, the term with the largest <span class="math inline">\(S\)</span> (i.e., highest multiplicity <span class="math inline">\(2S+1\)</span>) lies lowest in energy.<br />
+</li>
+<li><strong>Maximum <span class="math inline">\(L\)</span></strong>: For terms with the same <span class="math inline">\(S\)</span>, the term with the largest <span class="math inline">\(L\)</span> lies lowest.<br />
+</li>
+<li><strong>Order of <span class="math inline">\(J\)</span></strong>:
+<ul>
+<li>For less than half‑filled shells, the level with the smallest <span class="math inline">\(J\)</span> lies lowest in energy.<br />
+</li>
+<li>For more than half‑filled shells, the level with the largest <span class="math inline">\(J\)</span> lies lowest.</li>
+</ul></li>
+</ol>
+<p>These are empirical rules derived from electron–electron and spin–orbit interactions, but they work well for many light atoms.[4][2]</p>
+<hr />
+</div>
+</div>
+<div id="fine-structure-and-spinorbit-coupling" class="section level2 hasAnchor" number="15.3">
+<h2><span class="header-section-number">15.3</span> 4. Fine Structure and Spin–Orbit Coupling<a href="AtomicSPectra.html#fine-structure-and-spinorbit-coupling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="origin-of-fine-structure" class="section level3 hasAnchor" number="15.3.1">
+<h3><span class="header-section-number">15.3.1</span> 4.1 Origin of fine structure<a href="AtomicSPectra.html#origin-of-fine-structure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The simple hydrogenic formula predicts degenerate energy levels depending only on <span class="math inline">\(n\)</span>. In real atoms, this degeneracy is broken by <strong>fine‑structure interactions</strong>:</p>
+<ul>
+<li><strong>Relativistic correction</strong> to the electron’s kinetic energy.<br />
+</li>
+<li><strong>Spin–orbit coupling</strong>: interaction between the electron’s magnetic moment (from spin) and the effective magnetic field generated by its orbital motion around the nucleus.<br />
+</li>
+<li><strong>Darwin term</strong> (for <span class="math inline">\(s\)</span>-states).</li>
+</ul>
+<p>The dominant effect for spectroscopy in many cases is spin–orbit coupling, which splits terms into levels with different <span class="math inline">\(J\)</span>.</p>
+</div>
+<div id="spinorbit-coupling-qualitatively" class="section level3 hasAnchor" number="15.3.2">
+<h3><span class="header-section-number">15.3.2</span> 4.2 Spin–orbit coupling qualitatively<a href="AtomicSPectra.html#spinorbit-coupling-qualitatively" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Classically, an electron orbiting the nucleus with angular momentum <span class="math inline">\(\mathbf{L}\)</span> experiences a magnetic field in its rest frame. The electron’s spin magnetic moment <span class="math inline">\(\boldsymbol{\mu}_s\)</span> interacts with this field, giving an energy
+$
+E_{}
+$
+Quantum mechanically, this interaction leads to slightly different energies for different <span class="math inline">\(J\)</span> values (since <span class="math inline">\(\mathbf{J} = \mathbf{L} + \mathbf{S}\)</span>), splitting what was a single term into multiple closely spaced levels (e.g., <span class="math inline">\(^{2}P_{1/2}\)</span> vs <span class="math inline">\(^{2}P_{3/2}\)</span>). The separation between these levels increases roughly with <span class="math inline">\(Z^4\)</span>, so fine structure becomes more pronounced for heavier elements.</p>
+</div>
+<div id="spectroscopic-consequences" class="section level3 hasAnchor" number="15.3.3">
+<h3><span class="header-section-number">15.3.3</span> 4.3 Spectroscopic consequences<a href="AtomicSPectra.html#spectroscopic-consequences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Fine‑structure splitting manifests in spectra as <strong>multiplets</strong>: instead of a single spectral line for a transition between two terms, multiple closely spaced lines appear, corresponding to transitions between all allowed <span class="math inline">\(J \to J&#39;\)</span> pairs consistent with selection rules. The classic example is the sodium D‑line doublet near 589 nm, arising from transitions between <span class="math inline">\(3p\,^{2}P_{3/2,1/2}\)</span> and <span class="math inline">\(3s\,^{2}S_{1/2}\)</span>.</p>
+<hr />
+</div>
+</div>
+<div id="selection-rules-for-electricdipole-transitions" class="section level2 hasAnchor" number="15.4">
+<h2><span class="header-section-number">15.4</span> 5. Selection Rules for Electric‑Dipole Transitions<a href="AtomicSPectra.html#selection-rules-for-electricdipole-transitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Not all transitions between energy levels are observed in ordinary optical spectroscopy. The strongest transitions are those that are allowed within the <strong>electric dipole (E1) approximation</strong>, which assumes that the oscillating electric field of the light interacts primarily via the electric dipole operator.[5][6]</p>
+<div id="transition-dipole-moment" class="section level3 hasAnchor" number="15.4.1">
+<h3><span class="header-section-number">15.4.1</span> 5.1 Transition dipole moment<a href="AtomicSPectra.html#transition-dipole-moment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The probability amplitude for a transition from an initial state <span class="math inline">\(|i\rangle\)</span> to a final state <span class="math inline">\(|f\rangle\)</span> is proportional to the <strong>transition dipole moment</strong>
+$
+_{fi} = f | | i
+$
+where <span class="math inline">\(\hat{\boldsymbol{\mu}} = -e \sum_j \mathbf{r}_j\)</span> is the electric dipole operator (sum over all electrons). A transition is <strong>electric‑dipole allowed</strong> if at least one component of <span class="math inline">\(\boldsymbol{\mu}_{fi}\)</span> is nonzero. If symmetry forces this matrix element to vanish, the transition is <strong>forbidden</strong> in the E1 approximation (though it may still occur weakly via higher‑order mechanisms like magnetic dipole or electric quadrupole).</p>
+</div>
+<div id="oneelectron-selection-rules-hydrogenic" class="section level3 hasAnchor" number="15.4.2">
+<h3><span class="header-section-number">15.4.2</span> 5.2 One‑electron selection rules (hydrogenic)<a href="AtomicSPectra.html#oneelectron-selection-rules-hydrogenic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a one‑electron atom (e.g., hydrogen) neglecting spin, analysis of the angular part of the integral yields the well‑known selection rules for E1 transitions:[6][5]</p>
+<ul>
+<li><span class="math inline">\(\Delta l = \pm 1\)</span><br />
+</li>
+<li><span class="math inline">\(\Delta m_l = 0, \pm 1\)</span></li>
+</ul>
+<p>These arise from the fact that the dipole operator transforms as a vector (rank‑1 tensor) and couples states whose angular momenta differ by one unit (Wigner–Eckart theorem).</p>
+<p>As a result, transitions such as <span class="math inline">\(2s \to 1s\)</span> are forbidden in the dipole approximation (since <span class="math inline">\(\Delta l = 0\)</span>), while <span class="math inline">\(2p \to 1s\)</span> is allowed (<span class="math inline">\(\Delta l = -1\)</span>).</p>
+</div>
+<div id="manyelectron-selection-rules-in-ls-coupling" class="section level3 hasAnchor" number="15.4.3">
+<h3><span class="header-section-number">15.4.3</span> 5.3 Many‑electron selection rules in LS coupling<a href="AtomicSPectra.html#manyelectron-selection-rules-in-ls-coupling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For atoms well described by LS coupling, the selection rules can be generalized in terms of term symbols.[7][4]</p>
+<p>Under the electric dipole (E1) approximation:</p>
+<ul>
+<li><strong>Parity change</strong>: initial and final states must have opposite parity. (Parity is determined by the product <span class="math inline">\((-1)^{\sum_i l_i}\)</span> for all electrons.)<br />
+</li>
+<li><strong>Spin conservation</strong>: <span class="math inline">\(\Delta S = 0\)</span><br />
+</li>
+<li><strong>Total orbital angular momentum</strong>: <span class="math inline">\(\Delta L = 0, \pm 1\)</span>, but transitions <span class="math inline">\(L = 0 \to L&#39; = 0\)</span> (S ↔︎ S) are forbidden.<br />
+</li>
+<li><strong>Total angular momentum</strong>: <span class="math inline">\(\Delta J = 0, \pm 1\)</span>, but transitions <span class="math inline">\(J = 0 \to J&#39; = 0\)</span> are forbidden.<br />
+</li>
+<li><strong>Magnetic quantum number</strong>: <span class="math inline">\(\Delta M_J = 0, \pm 1\)</span> (in a given quantization direction).</li>
+</ul>
+<p>Summarizing key E1 selection rules:
+- Allowed: <span class="math inline">\(^{2S+1}L_J \to {}^{2S+1}L&#39;_{J&#39;}\)</span> only if<br />
+- same multiplicity <span class="math inline">\(2S+1\)</span>,<br />
+- opposite parity,<br />
+- <span class="math inline">\(\Delta L = 0, \pm 1\)</span> (not 0↔︎0),<br />
+- <span class="math inline">\(\Delta J = 0, \pm 1\)</span> (not 0↔︎0).</p>
+<p>Violations of these rules correspond to “forbidden” transitions; they can still occur but with much smaller intensities (e.g., magnetic dipole (M1) or electric quadrupole (E2) transitions) and much longer lifetimes.[6][7]</p>
+</div>
+<div id="example-the-sodium-d-lines" class="section level3 hasAnchor" number="15.4.4">
+<h3><span class="header-section-number">15.4.4</span> 5.4 Example: the sodium D lines<a href="AtomicSPectra.html#example-the-sodium-d-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Neutral sodium (Na) has a valence configuration <span class="math inline">\(3s^1\)</span> outside a closed core. The relevant terms are:</p>
+<ul>
+<li>Ground state: <span class="math inline">\(3s\,^{2}S_{1/2}\)</span><br />
+</li>
+<li>Excited states: <span class="math inline">\(3p\,^{2}P_{1/2}\)</span>, <span class="math inline">\(3p\,^{2}P_{3/2}\)</span></li>
+</ul>
+<p>Allowed E1 transitions must satisfy <span class="math inline">\(\Delta L = \pm 1\)</span>, <span class="math inline">\(\Delta J = 0, \pm 1\)</span> (not 0↔︎0), same multiplicity, and opposite parity. Thus:</p>
+<ul>
+<li><span class="math inline">\(3p\,^{2}P_{1/2} \to 3s\,^{2}S_{1/2}\)</span><br />
+</li>
+<li><span class="math inline">\(3p\,^{2}P_{3/2} \to 3s\,^{2}S_{1/2}\)</span></li>
+</ul>
+<p>are both allowed, giving two lines (the D1 and D2 lines) with slightly different wavelengths due to fine‑structure splitting of the <span class="math inline">\(3p\)</span> level.</p>
+<hr />
+</div>
+</div>
+<div id="spectral-line-shapes-and-broadening-mechanisms" class="section level2 hasAnchor" number="15.5">
+<h2><span class="header-section-number">15.5</span> 6. Spectral Line Shapes and Broadening Mechanisms<a href="AtomicSPectra.html#spectral-line-shapes-and-broadening-mechanisms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Idealized energy levels are infinitely sharp, suggesting spectral lines at exact frequencies. Real spectral lines, however, always have a finite width and a characteristic <strong>line shape</strong>. Understanding broadening mechanisms is crucial for interpreting high‑resolution spectra.</p>
+<div id="natural-lifetime-broadening" class="section level3 hasAnchor" number="15.5.1">
+<h3><span class="header-section-number">15.5.1</span> 6.1 Natural (lifetime) broadening<a href="AtomicSPectra.html#natural-lifetime-broadening" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An excited state has a finite lifetime <span class="math inline">\(\tau\)</span> before decaying spontaneously (e.g., by emitting a photon). The energy–time uncertainty relation
+$
+E, t
+$
+implies an intrinsic uncertainty <span class="math inline">\(\Delta E \sim \hbar / (2\tau)\)</span>. This leads to a Lorentzian line profile in frequency space, with a <strong>natural linewidth</strong>
+$
+_{}
+$
+For typical optical transitions with lifetimes of order <span class="math inline">\(10^{-8}\,\text{s}\)</span>, natural linewidths are on the order of tens of MHz, usually small compared to other broadening mechanisms.[8][9]</p>
+</div>
+<div id="doppler-broadening" class="section level3 hasAnchor" number="15.5.2">
+<h3><span class="header-section-number">15.5.2</span> 6.2 Doppler broadening<a href="AtomicSPectra.html#doppler-broadening" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In a gas, atoms are in constant thermal motion. Due to the Doppler effect, an atom moving with velocity component <span class="math inline">\(v_z\)</span> along the direction of observation emits or absorbs light at a frequency
+$
+= _0 ( 1 + )
+$
+where <span class="math inline">\(\nu_0\)</span> is the transition frequency in the atom’s rest frame. Averaging over the Maxwell–Boltzmann distribution of velocities yields a <strong>Gaussian</strong> line profile with Doppler width (full width at half maximum)
+$
+_D = _0
+$
+where <span class="math inline">\(m\)</span> is the atomic mass. Doppler broadening increases with temperature and dominates at low pressures for many optical transitions.[10][8]</p>
+</div>
+<div id="collisional-pressure-broadening" class="section level3 hasAnchor" number="15.5.3">
+<h3><span class="header-section-number">15.5.3</span> 6.3 Collisional (pressure) broadening<a href="AtomicSPectra.html#collisional-pressure-broadening" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>At higher pressures, atoms frequently collide with each other or with buffer gas atoms. Collisions can interrupt the phase of the radiation or perturb energy levels, effectively shortening the coherence time and broadening the line. This <strong>collisional</strong> or <strong>pressure broadening</strong> also leads to a Lorentzian profile, with a width proportional to the collision rate.[9][11]</p>
+<p>Qualitatively:</p>
+<ul>
+<li>Higher gas density (pressure) → more frequent collisions → broader lines.<br />
+</li>
+<li>Collisional broadening becomes particularly important in dense gases and stellar atmospheres.</li>
+</ul>
+</div>
+<div id="combined-effects-voigt-profile" class="section level3 hasAnchor" number="15.5.4">
+<h3><span class="header-section-number">15.5.4</span> 6.4 Combined effects: Voigt profile<a href="AtomicSPectra.html#combined-effects-voigt-profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In many practical situations, multiple mechanisms act simultaneously. Natural and collisional broadening (both Lorentzian) combine with Doppler broadening (Gaussian). The convolution of a Lorentzian and a Gaussian line shape is called a <strong>Voigt profile</strong>.[8][10]</p>
+<p>The Voigt profile is widely used to fit high‑resolution spectra, allowing one to extract both temperature‑dependent Doppler broadening and environment‑dependent collisional broadening.</p>
+<hr />
+</div>
+</div>
+<div id="summary-and-concept-integration" class="section level2 hasAnchor" number="15.6">
+<h2><span class="header-section-number">15.6</span> 7. Summary and Concept Integration<a href="AtomicSPectra.html#summary-and-concept-integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Atomic line spectra</strong> arise from quantized energy levels of electrons in atoms. The hydrogen atom serves as a prototype, with energies <span class="math inline">\(E_n \propto -1/n^2\)</span> reproducing the Rydberg formula for spectral lines.<br />
+</li>
+<li>In <strong>many‑electron atoms</strong>, electron configurations, LS coupling, and <strong>term symbols</strong> <span class="math inline">\(^{2S+1}L_J\)</span> provide a compact way to label and organize energy levels, with Hund’s rules offering a guide to their relative energies.[1][2]</li>
+<li><strong>Fine structure</strong>, mainly due to spin–orbit coupling, splits terms into multiple levels with different <span class="math inline">\(J\)</span>, leading to multiplets such as the sodium D doublet.<br />
+</li>
+<li><strong>Selection rules</strong> derived from the symmetry of the electric dipole operator determine which transitions are strong in optical spectroscopy. In LS coupling, important E1 rules include <span class="math inline">\(\Delta S = 0\)</span>, <span class="math inline">\(\Delta L = 0, \pm 1\)</span> (not 0↔︎0), <span class="math inline">\(\Delta J = 0, \pm 1\)</span> (not 0↔︎0), and a change in parity.[4][5][7]</li>
+<li>Real spectral lines show finite widths and characteristic shapes due to <strong>natural</strong>, <strong>Doppler</strong>, and <strong>collisional</strong> broadening. Their combination is often modeled with a <strong>Voigt profile</strong>, central to quantitative spectroscopic analysis.[9][10][8]</li>
+</ul>
+<hr />
+</div>
+<div id="suggested-breakdown-into-three-class-periods" class="section level2 hasAnchor" number="15.7">
+<h2><span class="header-section-number">15.7</span> 8. Suggested Breakdown into Three Class Periods<a href="AtomicSPectra.html#suggested-breakdown-into-three-class-periods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To deploy this chapter over three 1‑hour lectures:</p>
+<p><strong>Class 1: Hydrogen and basic structure</strong></p>
+<ul>
+<li>Line spectra, empirical Rydberg formula.<br />
+</li>
+<li>Hydrogenic energies and quantum numbers <span class="math inline">\(n, l, m_l\)</span>, degeneracy.<br />
+</li>
+<li>Brief introduction to many‑electron atoms and electron configurations.<br />
+</li>
+<li>LS coupling, total <span class="math inline">\(L\)</span>, <span class="math inline">\(S\)</span>, <span class="math inline">\(J\)</span>, and term symbols.</li>
+</ul>
+<p><strong>Class 2: Term symbols, fine structure, and selection rules</strong></p>
+<ul>
+<li>Hund’s rules and examples of term symbol construction.<br />
+</li>
+<li>Spin–orbit coupling and fine‑structure splitting; classic examples (Na D lines).<br />
+</li>
+<li>Derivation/statement of E1 selection rules in hydrogen and in LS coupling.<br />
+</li>
+<li>Worked examples predicting allowed/forbidden transitions from term symbols.</li>
+</ul>
+<p><strong>Class 3: Line shapes and broadening</strong></p>
+<ul>
+<li>Natural (lifetime) broadening and Lorentzian lines.<br />
+</li>
+<li>Doppler broadening and Gaussian lines; dependence on <span class="math inline">\(T\)</span> and <span class="math inline">\(m\)</span>.<br />
+</li>
+<li>Collisional (pressure) broadening and qualitative description of Stark effect.<br />
+</li>
+<li>Voigt profile and practical interpretation of high‑resolution spectra.</li>
+</ul>
+<p>If desired, a short problem set can reinforce:</p>
+<ul>
+<li>Rydberg‑formula calculations of wavelengths.<br />
+</li>
+<li>Construction of term symbols and application of Hund’s rules.<br />
+</li>
+<li>Applying E1 selection rules to simple configurations.<br />
+</li>
+<li>Estimating Doppler or natural linewidths under given conditions.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="Spectroscopy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/peverati/pchem2/edit/master/13b_AtomicSpectra.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["pchem2.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

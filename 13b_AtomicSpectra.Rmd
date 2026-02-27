@@ -1,0 +1,285 @@
+# Atomic Spectroscopy {#AtomicSPectra}
+
+Atomic spectroscopy is the study of the discrete frequencies of light absorbed or emitted by atoms as their electrons move between quantized energy levels. These spectra provide some of the most direct evidence for quantization in atoms and a powerful experimental probe of atomic structure.
+
+## Line Spectra and the Hydrogen Atom
+
+### Empirical observations: line spectra
+
+When a gas of atoms (e.g., hydrogen, sodium, mercury) is excited in a discharge tube and observed through a prism or diffraction grating, it produces **line spectra**: a set of sharp lines at well‑defined wavelengths rather than a continuous band. Each element has a characteristic pattern of lines (its “spectral fingerprint”).
+
+For hydrogen, the visible lines belong to the Balmer series and can be fit by the **Rydberg formula**  
+$
+\tilde{\nu} = \frac{1}{\lambda} = R_{\infty}\left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right), \quad n_i > n_f
+$
+where $\tilde{\nu}$ is the wavenumber, $\lambda$ the wavelength, $R_{\infty}$ the Rydberg constant, and $n_i$, $n_f$ are positive integers. This simple empirical relationship was a major clue that atomic energy levels are quantized.
+
+### 2.2 Hydrogenic energy levels from quantum mechanics
+
+Quantum mechanics provides a microscopic basis for the Rydberg formula. Solving the Schrödinger equation for a hydrogenlike ion (nucleus of charge $+Ze$, one electron) yields bound‑state energies
+$
+E_n = -\frac{\mu Z^2 e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac{1}{n^2}
+  = -\frac{R_{\infty}hc\,Z^2}{n^2}, \quad n = 1,2,3,\dots
+$
+where $\mu$ is the electron–nucleus reduced mass. Each allowed **principal quantum number** $n$ corresponds to a set of degenerate states with different orbital angular momentum quantum numbers $l$ and magnetic quantum numbers $m_l$.
+
+A photon of energy $h\nu$ can be emitted or absorbed when the electron makes a transition between levels:
+$
+h\nu = E_{n_i} - E_{n_f}
+$
+Substituting the hydrogenic energy expression gives the Rydberg formula for $Z = 1$, providing a direct link between the observed spectral lines and quantized electron energies.
+
+### 2.3 Quantum numbers and degeneracies
+
+The stationary states of the hydrogen atom are labeled by three quantum numbers:
+
+- $n = 1,2,3,\dots$: principal quantum number (controls most of the energy).  
+- $l = 0,1,\dots,n-1$: orbital angular momentum.  
+- $m_l = -l, -l+1, \dots, +l$: projection of angular momentum along $z$.
+
+For a given $n$, there are $n^2$ spatial states (summing over all allowed $l$ and $m_l$). Including **spin** ($s = 1/2$, $m_s = \pm 1/2$) doubles this to $2n^2$ degenerate states. In hydrogen, the energy depends only on $n$ (to a good approximation), so all these states are nearly degenerate; in real atoms, spin‑orbit and relativistic corrections lift this degeneracy, leading to the **fine structure** discussed later.
+
+***
+
+## 3. Many‑Electron Atoms and Term Symbols
+
+Hydrogen provides an exactly solvable model, but real atoms contain many electrons. Electron–electron repulsions, spin‑orbit coupling, and other interactions complicate the picture but can be organized with angular momentum coupling schemes and **term symbols**.[1][2]
+
+### 3.1 Electron configurations
+
+A **configuration** specifies how electrons occupy one‑electron orbitals labeled by $n$ and $l$. For example:
+
+- He: $1s^2$  
+- C: $1s^2 2s^2 2p^2$  
+- Na: $1s^2 2s^2 2p^6 3s^1$
+
+For spectroscopy, it is usually the outer (valence) electrons that matter most, since they determine low‑lying excited states and optical transitions. Core electrons are often treated as an inert, spherically symmetric “closed shell.”
+
+### 3.2 LS (Russell–Saunders) coupling
+
+For light atoms (roughly up through the first transition series), spin–orbit coupling is relatively weak compared to electron–electron Coulomb interactions. In this case, it is a good approximation to first couple the **orbital angular momenta** of all electrons to form a total orbital angular momentum $\mathbf{L}$, and separately couple all electron spins to form a total spin $\mathbf{S}$. These then couple to give total electronic angular momentum $\mathbf{J}$:[2][1]
+
+$
+\mathbf{L} = \sum_i \mathbf{l}_i, \quad 
+\mathbf{S} = \sum_i \mathbf{s}_i, \quad
+\mathbf{J} = \mathbf{L} + \mathbf{S}
+$
+
+The corresponding quantum numbers are:
+
+- $L = 0,1,2,\dots$ (S, P, D, F, G, …)  
+- $S = 0, 1/2, 1, 3/2, \dots$ (total spin)  
+- $J = |L - S|, |L - S| + 1, \dots, L + S$
+
+Each distinct pair $(L,S)$ defines a **term**, and each allowed $J$ defines a **level** within that term.
+
+### 3.3 Term symbols
+
+The standard notation for an atomic term in LS coupling is the **term symbol**  
+$
+^{2S+1}L_J
+$
+where:
+
+- $2S + 1$ is the **multiplicity** (number of spin states).  
+- $L$ is represented by a letter:  
+  - S for $L = 0$, P for $L = 1$, D for $L = 2$, F for $L = 3$, etc.  
+- $J$ is the total angular momentum quantum number.
+
+Examples:
+
+- Hydrogen ground state: configuration $1s^1$ → one electron with $l = 0$, $s = 1/2$  
+  - $L = 0$ (S), $S = 1/2$, so $2S+1 = 2$, and $J = 1/2$.  
+  - Term symbol: $^{2}S_{1/2}$.  
+
+- Helium excited triplet state $1s2s$: two electrons, both with $s = 1/2$. If their spins are parallel, total $S = 1$ (triplet), and if the spatial part corresponds to $L = 0$, possible $J = 1$, giving $^{3}S_1$.
+
+Formally, the process of finding all allowed term symbols for a configuration requires angular momentum addition rules and Pauli’s exclusion principle. In practice, spectroscopists often use tables or simple rules for common subshell occupancies.[3][2]
+
+### 3.4 Hund’s rules
+
+Hund’s rules provide a simple way to predict the **ground‑state term** of a configuration in LS coupling:
+
+1. **Maximum multiplicity**: For a given configuration, the term with the largest $S$ (i.e., highest multiplicity $2S+1$) lies lowest in energy.  
+2. **Maximum $L$**: For terms with the same $S$, the term with the largest $L$ lies lowest.  
+3. **Order of $J$**:  
+   - For less than half‑filled shells, the level with the smallest $J$ lies lowest in energy.  
+   - For more than half‑filled shells, the level with the largest $J$ lies lowest.  
+
+These are empirical rules derived from electron–electron and spin–orbit interactions, but they work well for many light atoms.[4][2]
+
+***
+
+## 4. Fine Structure and Spin–Orbit Coupling
+
+### 4.1 Origin of fine structure
+
+The simple hydrogenic formula predicts degenerate energy levels depending only on $n$. In real atoms, this degeneracy is broken by **fine‑structure interactions**:
+
+- **Relativistic correction** to the electron’s kinetic energy.  
+- **Spin–orbit coupling**: interaction between the electron’s magnetic moment (from spin) and the effective magnetic field generated by its orbital motion around the nucleus.  
+- **Darwin term** (for $s$-states).
+
+The dominant effect for spectroscopy in many cases is spin–orbit coupling, which splits terms into levels with different $J$.
+
+### 4.2 Spin–orbit coupling qualitatively
+
+Classically, an electron orbiting the nucleus with angular momentum $\mathbf{L}$ experiences a magnetic field in its rest frame. The electron’s spin magnetic moment $\boldsymbol{\mu}_s$ interacts with this field, giving an energy
+$
+E_{\text{SO}} \propto \mathbf{L} \cdot \mathbf{S}
+$
+Quantum mechanically, this interaction leads to slightly different energies for different $J$ values (since $\mathbf{J} = \mathbf{L} + \mathbf{S}$), splitting what was a single term into multiple closely spaced levels (e.g., $^{2}P_{1/2}$ vs $^{2}P_{3/2}$). The separation between these levels increases roughly with $Z^4$, so fine structure becomes more pronounced for heavier elements.
+
+### 4.3 Spectroscopic consequences
+
+Fine‑structure splitting manifests in spectra as **multiplets**: instead of a single spectral line for a transition between two terms, multiple closely spaced lines appear, corresponding to transitions between all allowed $J \to J'$ pairs consistent with selection rules. The classic example is the sodium D‑line doublet near 589 nm, arising from transitions between $3p\,^{2}P_{3/2,1/2}$ and $3s\,^{2}S_{1/2}$.
+
+***
+
+## 5. Selection Rules for Electric‑Dipole Transitions
+
+Not all transitions between energy levels are observed in ordinary optical spectroscopy. The strongest transitions are those that are allowed within the **electric dipole (E1) approximation**, which assumes that the oscillating electric field of the light interacts primarily via the electric dipole operator.[5][6]
+
+### 5.1 Transition dipole moment
+
+The probability amplitude for a transition from an initial state $|i\rangle$ to a final state $|f\rangle$ is proportional to the **transition dipole moment**
+$
+\boldsymbol{\mu}_{fi} = \langle f | \hat{\boldsymbol{\mu}} | i \rangle
+$
+where $\hat{\boldsymbol{\mu}} = -e \sum_j \mathbf{r}_j$ is the electric dipole operator (sum over all electrons). A transition is **electric‑dipole allowed** if at least one component of $\boldsymbol{\mu}_{fi}$ is nonzero. If symmetry forces this matrix element to vanish, the transition is **forbidden** in the E1 approximation (though it may still occur weakly via higher‑order mechanisms like magnetic dipole or electric quadrupole).
+
+### 5.2 One‑electron selection rules (hydrogenic)
+
+For a one‑electron atom (e.g., hydrogen) neglecting spin, analysis of the angular part of the integral yields the well‑known selection rules for E1 transitions:[6][5]
+
+- $\Delta l = \pm 1$  
+- $\Delta m_l = 0, \pm 1$
+
+These arise from the fact that the dipole operator transforms as a vector (rank‑1 tensor) and couples states whose angular momenta differ by one unit (Wigner–Eckart theorem).
+
+As a result, transitions such as $2s \to 1s$ are forbidden in the dipole approximation (since $\Delta l = 0$), while $2p \to 1s$ is allowed ($\Delta l = -1$).
+
+### 5.3 Many‑electron selection rules in LS coupling
+
+For atoms well described by LS coupling, the selection rules can be generalized in terms of term symbols.[7][4]
+
+Under the electric dipole (E1) approximation:
+
+- **Parity change**: initial and final states must have opposite parity. (Parity is determined by the product $(-1)^{\sum_i l_i}$ for all electrons.)  
+- **Spin conservation**: $\Delta S = 0$  
+- **Total orbital angular momentum**: $\Delta L = 0, \pm 1$, but transitions $L = 0 \to L' = 0$ (S ↔ S) are forbidden.  
+- **Total angular momentum**: $\Delta J = 0, \pm 1$, but transitions $J = 0 \to J' = 0$ are forbidden.  
+- **Magnetic quantum number**: $\Delta M_J = 0, \pm 1$ (in a given quantization direction).
+
+Summarizing key E1 selection rules:
+- Allowed: $^{2S+1}L_J \to {}^{2S+1}L'_{J'}$ only if  
+  - same multiplicity $2S+1$,  
+  - opposite parity,  
+  - $\Delta L = 0, \pm 1$ (not 0↔0),  
+  - $\Delta J = 0, \pm 1$ (not 0↔0).  
+
+Violations of these rules correspond to “forbidden” transitions; they can still occur but with much smaller intensities (e.g., magnetic dipole (M1) or electric quadrupole (E2) transitions) and much longer lifetimes.[6][7]
+
+### 5.4 Example: the sodium D lines
+
+Neutral sodium (Na) has a valence configuration $3s^1$ outside a closed core. The relevant terms are:
+
+- Ground state: $3s\,^{2}S_{1/2}$  
+- Excited states: $3p\,^{2}P_{1/2}$, $3p\,^{2}P_{3/2}$
+
+Allowed E1 transitions must satisfy $\Delta L = \pm 1$, $\Delta J = 0, \pm 1$ (not 0↔0), same multiplicity, and opposite parity. Thus:
+
+- $3p\,^{2}P_{1/2} \to 3s\,^{2}S_{1/2}$  
+- $3p\,^{2}P_{3/2} \to 3s\,^{2}S_{1/2}$
+
+are both allowed, giving two lines (the D1 and D2 lines) with slightly different wavelengths due to fine‑structure splitting of the $3p$ level.
+
+***
+
+## 6. Spectral Line Shapes and Broadening Mechanisms
+
+Idealized energy levels are infinitely sharp, suggesting spectral lines at exact frequencies. Real spectral lines, however, always have a finite width and a characteristic **line shape**. Understanding broadening mechanisms is crucial for interpreting high‑resolution spectra.
+
+### 6.1 Natural (lifetime) broadening
+
+An excited state has a finite lifetime $\tau$ before decaying spontaneously (e.g., by emitting a photon). The energy–time uncertainty relation
+$
+\Delta E\, \Delta t \gtrsim \frac{\hbar}{2}
+$
+implies an intrinsic uncertainty $\Delta E \sim \hbar / (2\tau)$. This leads to a Lorentzian line profile in frequency space, with a **natural linewidth**
+$
+\Delta \nu_{\text{nat}} \sim \frac{1}{2\pi\tau}
+$
+For typical optical transitions with lifetimes of order $10^{-8}\,\text{s}$, natural linewidths are on the order of tens of MHz, usually small compared to other broadening mechanisms.[8][9]
+
+### 6.2 Doppler broadening
+
+In a gas, atoms are in constant thermal motion. Due to the Doppler effect, an atom moving with velocity component $v_z$ along the direction of observation emits or absorbs light at a frequency
+$
+\nu = \nu_0 \left( 1 + \frac{v_z}{c} \right)
+$
+where $\nu_0$ is the transition frequency in the atom’s rest frame. Averaging over the Maxwell–Boltzmann distribution of velocities yields a **Gaussian** line profile with Doppler width (full width at half maximum)
+$
+\Delta \nu_D = \nu_0\sqrt{\frac{8 k_B T \ln 2}{mc^2}}
+$
+where $m$ is the atomic mass. Doppler broadening increases with temperature and dominates at low pressures for many optical transitions.[10][8]
+
+### 6.3 Collisional (pressure) broadening
+
+At higher pressures, atoms frequently collide with each other or with buffer gas atoms. Collisions can interrupt the phase of the radiation or perturb energy levels, effectively shortening the coherence time and broadening the line. This **collisional** or **pressure broadening** also leads to a Lorentzian profile, with a width proportional to the collision rate.[9][11]
+
+Qualitatively:
+
+- Higher gas density (pressure) → more frequent collisions → broader lines.  
+- Collisional broadening becomes particularly important in dense gases and stellar atmospheres.
+
+### 6.4 Combined effects: Voigt profile
+
+In many practical situations, multiple mechanisms act simultaneously. Natural and collisional broadening (both Lorentzian) combine with Doppler broadening (Gaussian). The convolution of a Lorentzian and a Gaussian line shape is called a **Voigt profile**.[8][10]
+
+The Voigt profile is widely used to fit high‑resolution spectra, allowing one to extract both temperature‑dependent Doppler broadening and environment‑dependent collisional broadening.
+
+***
+
+## 7. Summary and Concept Integration
+
+- **Atomic line spectra** arise from quantized energy levels of electrons in atoms. The hydrogen atom serves as a prototype, with energies $E_n \propto -1/n^2$ reproducing the Rydberg formula for spectral lines.  
+- In **many‑electron atoms**, electron configurations, LS coupling, and **term symbols** $^{2S+1}L_J$ provide a compact way to label and organize energy levels, with Hund’s rules offering a guide to their relative energies.[1][2]
+- **Fine structure**, mainly due to spin–orbit coupling, splits terms into multiple levels with different $J$, leading to multiplets such as the sodium D doublet.  
+- **Selection rules** derived from the symmetry of the electric dipole operator determine which transitions are strong in optical spectroscopy. In LS coupling, important E1 rules include $\Delta S = 0$, $\Delta L = 0, \pm 1$ (not 0↔0), $\Delta J = 0, \pm 1$ (not 0↔0), and a change in parity.[4][5][7]
+- Real spectral lines show finite widths and characteristic shapes due to **natural**, **Doppler**, and **collisional** broadening. Their combination is often modeled with a **Voigt profile**, central to quantitative spectroscopic analysis.[9][10][8]
+
+***
+
+## 8. Suggested Breakdown into Three Class Periods
+
+To deploy this chapter over three 1‑hour lectures:
+
+**Class 1: Hydrogen and basic structure**
+
+- Line spectra, empirical Rydberg formula.  
+- Hydrogenic energies and quantum numbers $n, l, m_l$, degeneracy.  
+- Brief introduction to many‑electron atoms and electron configurations.  
+- LS coupling, total $L$, $S$, $J$, and term symbols.
+
+**Class 2: Term symbols, fine structure, and selection rules**
+
+- Hund’s rules and examples of term symbol construction.  
+- Spin–orbit coupling and fine‑structure splitting; classic examples (Na D lines).  
+- Derivation/statement of E1 selection rules in hydrogen and in LS coupling.  
+- Worked examples predicting allowed/forbidden transitions from term symbols.
+
+**Class 3: Line shapes and broadening**
+
+- Natural (lifetime) broadening and Lorentzian lines.  
+- Doppler broadening and Gaussian lines; dependence on $T$ and $m$.  
+- Collisional (pressure) broadening and qualitative description of Stark effect.  
+- Voigt profile and practical interpretation of high‑resolution spectra.
+
+If desired, a short problem set can reinforce:
+
+- Rydberg‑formula calculations of wavelengths.  
+- Construction of term symbols and application of Hund’s rules.  
+- Applying E1 selection rules to simple configurations.  
+- Estimating Doppler or natural linewidths under given conditions.
+
