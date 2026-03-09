@@ -35,10 +35,10 @@ The interpretation of the results of this experiment is not simple. As for other
 
 ## Heisenberg's Uncertainty Principle
 
-Let's now revisit the simple case of a free particle. As we saw in chapter \@ref(Models), the wave function that solved the TISEq: 
+Let's now revisit the simple case of a free particle. As we saw in chapter \@ref(Schrodinger), the wave function that solved the TISEq: 
 
 \begin{equation}
-\psi(x) = A \exp(\pm ikx),
+\psi(x) = A \exp(ikx)+B \exp(-ikx),
 (\#eq:heis0)  
 \end{equation}
 

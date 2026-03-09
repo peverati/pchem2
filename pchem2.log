@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  27 FEB 2026 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.18)  9 MAR 2026 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -4005,13 +4005,13 @@ L3 programming layer <2024-08-30>
 Here is how much of TeX's memory you used:
  16304 strings out of 475539
  256829 string characters out of 5776837
- 682953 words of memory out of 5000000
+ 682950 words of memory out of 5000000
  37307 multiletter control sequences out of 15000+600000
  640367 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  89i,18n,93p,1915b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmro9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy9.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></Users/peve/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on pchem2.pdf (211 pages, 14711580 bytes).
+Output written on pchem2.pdf (211 pages, 14711616 bytes).
 PDF statistics:
  3144 PDF objects out of 3580 (max. 8388607)
  2765 compressed objects within 28 object streams
