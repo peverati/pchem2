@@ -48,12 +48,13 @@
 \contentsline {section}{\numberline {4.6}Chapter Review}{80}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Study Questions}{80}{subsection.4.6.1}%
 \contentsline {chapter}{\numberline {5}The Hydrogen Atom}{85}{chapter.5}%
-\contentsline {section}{\numberline {5.1}The Radial Wave Functions}{87}{section.5.1}%
-\contentsline {section}{\numberline {5.2}The Angular Wave Functions}{92}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Building the Complete Orbital}{93}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Experimental Access to Orbitals}{100}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Chapter Review}{100}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Study Questions}{100}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.1}Atomic Units}{87}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The Radial Wave Functions}{89}{section.5.2}%
+\contentsline {section}{\numberline {5.3}The Angular Wave Functions}{91}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Building the Complete Orbital}{93}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Experimental Access to Orbitals}{100}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Chapter Review}{100}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Study Questions}{100}{subsection.5.6.1}%
 \contentsline {chapter}{\numberline {6}Operators and Mathematical Background}{105}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Operators in Quantum Mechanics}{105}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Basic Properties of Operators}{106}{subsection.6.1.1}%
@@ -123,15 +124,15 @@
 \contentsline {section}{\numberline {10.4}Chapter Review}{197}{section.10.4}%
 \contentsline {subsection}{\numberline {10.4.1}Study Questions}{197}{subsection.10.4.1}%
 \contentsline {chapter}{\numberline {11}The Chemical Bond in Diatomic Molecules}{201}{chapter.11}%
-\contentsline {section}{\numberline {11.1}The Chemical Bond in the Hydrogen Molecular Cation}{202}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Wave function analysis}{205}{subsection.11.1.1}%
-\contentsline {section}{\numberline {11.2}The Chemical Bond in the Hydrogen Molecule}{207}{section.11.2}%
+\contentsline {section}{\numberline {11.1}The Chemical Bond in the Hydrogen Molecular Cation}{201}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Wave function analysis}{204}{subsection.11.1.1}%
+\contentsline {section}{\numberline {11.2}The Chemical Bond in the Hydrogen Molecule}{206}{section.11.2}%
 \contentsline {subsection}{\numberline {11.2.1}Beyond Hartree--Fock}{211}{subsection.11.2.1}%
 \contentsline {section}{\numberline {11.3}Homonuclear Diatomic Molecules of the Second Row}{212}{section.11.3}%
 \contentsline {subsection}{\numberline {11.3.1}Building the molecular orbitals}{212}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Molecular orbital diagrams of N\(_2\) and O\(_2\)}{214}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.2}Molecular orbital diagrams of N\(_2\) and O\(_2\)}{215}{subsection.11.3.2}%
 \contentsline {subsection}{\numberline {11.3.3}Bond order and magnetic properties}{216}{subsection.11.3.3}%
-\contentsline {section}{\numberline {11.4}Heteronuclear Diatomic Molecules}{217}{section.11.4}%
+\contentsline {section}{\numberline {11.4}Heteronuclear Diatomic Molecules}{218}{section.11.4}%
 \contentsline {section}{\numberline {11.5}Chapter Review}{221}{section.11.5}%
 \contentsline {subsection}{\numberline {11.5.1}Study Questions}{221}{subsection.11.5.1}%
 \contentsline {chapter}{\numberline {12}The Chemical Bond in Polyatomic Molecules}{227}{chapter.12}%

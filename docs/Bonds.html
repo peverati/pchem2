@@ -197,13 +197,14 @@ MathJax.Hub.Config({
 </ul></li>
 <li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1</b> The Radial Wave Functions</a></li>
-<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Angular Wave Functions</a></li>
-<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.3</b> Building the Complete Orbital</a></li>
-<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.4</b> Experimental Access to Orbitals</a></li>
-<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.5</b> Chapter Review</a>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#AtomicUnits"><i class="fa fa-check"></i><b>5.1</b> Atomic Units</a></li>
+<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Radial Wave Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.3</b> The Angular Wave Functions</a></li>
+<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.4</b> Building the Complete Orbital</a></li>
+<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.5</b> Experimental Access to Orbitals</a></li>
+<li class="chapter" data-level="5.6" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.6</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.5.1</b> Study Questions</a></li>
+<li class="chapter" data-level="5.6.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.6.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
@@ -414,11 +415,7 @@ MathJax.Hub.Config({
             <section class="normal" id="section-">
 <div id="Bonds" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">11</span> The Chemical Bond in Diatomic Molecules<a href="Bonds.html#Bonds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the <span class="math inline">\(\mathrm{H}_2^+\)</span> molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as <span class="math inline">\(\mathrm{N}_2\)</span> and <span class="math inline">\(\mathrm{O}_2\)</span>. To simplify the notation in this chapter, we will move away from SI units and use a set tailored for molecules, called <em>atomic units (a.u.)</em>. This set of units is built by setting <span class="math inline">\(\hbar=e=m_e=4\pi\varepsilon_0=1\)</span>, which also makes the Bohr radius, <span class="math inline">\(a_0\)</span>, the unit of length. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a>, simply become <span class="math inline">\(E_n=-\frac{1}{2n^2}\)</span> in the a.u. of energy, which is called the hartree, <span class="math inline">\(E_h\)</span>. Since chemists usually prefer other energy units, we will report the most important results in kJ/mol as well, using:</p>
-<p><span class="math display" id="eq:aunits">\[\begin{equation}
-1\,E_h = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
-\tag{11.1}
-\end{equation}\]</span></p>
+<p>In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the <span class="math inline">\(\mathrm{H}_2^+\)</span> molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as <span class="math inline">\(\mathrm{N}_2\)</span> and <span class="math inline">\(\mathrm{O}_2\)</span>. To simplify the notation, in this chapter we will use the atomic units that we introduced in section <a href="Hydrogen.html#AtomicUnits">5.1</a>, in which <span class="math inline">\(\hbar=m_e=e=4\pi\varepsilon_0=1\)</span>, energies are measured in hartrees (<span class="math inline">\(1\,E_h = 2{,}625.5\text{ kJ/mol}\)</span>), and distances in bohrs (<span class="math inline">\(1\,a_0 = 0.529\,\text{Å}\)</span>).</p>
 <div id="the-chemical-bond-in-the-hydrogen-molecular-cation" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> The Chemical Bond in the Hydrogen Molecular Cation<a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This system has only one electron, but since its geometry is not spherical (figure <a href="Bonds.html#fig:Fig1c11">11.1</a>), the TISEq cannot be solved analytically as for the hydrogen atom.</p>
@@ -431,12 +428,12 @@ Figure 11.1: Geometry of the hydrogen molecular cation.
 <p>The electron is at point <span class="math inline">\(P\)</span>, while the two protons are at positions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at a fixed distance <span class="math inline">\(R\)</span>. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:</p>
 <p><span class="math display" id="eq:bond1">\[\begin{equation}
 \hat{H} = \hat{H}_e+\frac{1}{R} = \left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
-\tag{11.2}
+\tag{11.1}
 \end{equation}\]</span></p>
 <p>As a first approximation to the variational wave function, we can build the one-electron molecular orbital (MO) by linearly combining two <span class="math inline">\(1s\)</span> hydrogenic orbitals centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively:</p>
 <p><span class="math display" id="eq:bond2">\[\begin{equation}
 \varphi = c_1 a + c_2 b,
-\tag{11.3}
+\tag{11.2}
 \end{equation}\]</span></p>
 <p>with:</p>
 <p><span class="math display" id="eq:bond3">\[\begin{equation}
@@ -444,7 +441,7 @@ Figure 11.1: Geometry of the hydrogen molecular cation.
 a &amp;= 1s_A = \left( \psi_{100} \right)_A\\
 b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
-\tag{11.4}
+\tag{11.3}
 \end{equation}\]</span></p>
 <p>Using eq. <a href="Molecules.html#eq:molham11">(10.12)</a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, eq. <a href="Molecules.html#eq:molham12">(10.14)</a>, can then be written:</p>
 <p><span class="math display" id="eq:bond4">\[\begin{equation}
@@ -452,7 +449,7 @@ b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 H_{aa}-E   &amp; H_{ab}-ES \\
 H_{ab}-ES  &amp; H_{aa}-E
 \end{vmatrix}=0
-\tag{11.5}
+\tag{11.4}
 \end{equation}\]</span></p>
 <p>The expansion of the determinant results in:</p>
 <p><span class="math display" id="eq:bond5">\[\begin{equation}
@@ -460,7 +457,7 @@ H_{ab}-ES  &amp; H_{aa}-E
 (H_{aa}-E)^2 &amp;=(H_{ab}-ES)^2 \\
 H_{aa}-E &amp;= \pm (H_{ab}-ES), \\
 \end{aligned}
-\tag{11.6}
+\tag{11.5}
 \end{equation}\]</span></p>
 <p>with roots:</p>
 <p><span class="math display" id="eq:bond6">\[\begin{equation}
@@ -468,27 +465,27 @@ H_{aa}-E &amp;= \pm (H_{ab}-ES), \\
 E_{+} &amp;= \frac{H_{aa}+H_{ab}}{1+S} = H_{aa}+\frac{H_{ba}-SH_{aa}}{1+S}, \\
 E_{-} &amp;= \frac{H_{aa}-H_{ab}}{1-S} = H_{aa}-\frac{H_{ba}-SH_{aa}}{1-S},
 \end{aligned}
-\tag{11.7}
+\tag{11.6}
 \end{equation}\]</span></p>
 <p>the first corresponding to the ground state, the second to the first excited state. Solving for the best value for the coefficients of the linear combination for the ground state <span class="math inline">\(E_{+}\)</span>, we obtain:</p>
 <p><span class="math display" id="eq:bond7">\[\begin{equation}
 c_1=c_2=\frac{1}{\sqrt{2+2S}},
-\tag{11.8}
+\tag{11.7}
 \end{equation}\]</span></p>
 <p>which gives the bonding MO:</p>
 <p><span class="math display" id="eq:bond8">\[\begin{equation}
 \varphi_{+}=\frac{a+b}{\sqrt{2+2S}}.
-\tag{11.9}
+\tag{11.8}
 \end{equation}\]</span></p>
 <p>Proceeding similarly for the excited state, we obtain:</p>
 <p><span class="math display" id="eq:bond9">\[\begin{equation}
 c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
-\tag{11.10}
+\tag{11.9}
 \end{equation}\]</span></p>
 <p>which gives the antibonding MO:</p>
 <p><span class="math display" id="eq:bond10">\[\begin{equation}
 \varphi_{-}=\frac{a-b}{\sqrt{2-2S}}.
-\tag{11.11}
+\tag{11.10}
 \end{equation}\]</span></p>
 <p>These results can be summarized in the molecular orbital diagram of figure <a href="Bonds.html#fig:Fig2c11">11.2</a>. We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for <span class="math inline">\(S\neq0\)</span>, the antibonding level being pushed up more than the bonding level is pushed down, compared with the symmetric case that would occur for <span class="math inline">\(S = 0\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c11"></span>
@@ -543,17 +540,17 @@ Figure 11.6: Geometry of the hydrogen molecule.
 &amp;=\left( -\frac{1}{2}\nabla^2_1-\frac{1}{r_{A1}}-\frac{1}{r_{B1}} \right)+\left( -\frac{1}{2}\nabla^2_2-\frac{1}{r_{A2}}-\frac{1}{r_{B2}} \right)+\frac{1}{r_{12}}+\frac{1}{R}\\
 &amp;= \hat{h}_1+\hat{h}_2+\frac{1}{r_{12}}+\frac{1}{R},
 \end{aligned}
-\tag{11.12}
+\tag{11.11}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function from two <span class="math inline">\(1s\)</span> atomic orbitals, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, with overlap <span class="math inline">\(S\)</span>. If we neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the Hamiltonian is a sum of two identical one-electron Hamiltonians, and the molecular orbitals are exactly the same as those we obtained for <span class="math inline">\(\mathrm{H}_2^+\)</span>. The most important difference is that now we need to consider the spin of the two electrons. Proceeding as we did for the helium atom in chapter <a href="Atoms.html#Atoms">9</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant in which the lowest molecular orbital, the bonding <span class="math inline">\(\sigma_g\)</span> orbital of eq. <a href="Bonds.html#eq:bond8">(11.9)</a>, is used to describe two electrons with opposite spin:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function from two <span class="math inline">\(1s\)</span> atomic orbitals, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, with overlap <span class="math inline">\(S\)</span>. If we neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the Hamiltonian is a sum of two identical one-electron Hamiltonians, and the molecular orbitals are exactly the same as those we obtained for <span class="math inline">\(\mathrm{H}_2^+\)</span>. The most important difference is that now we need to consider the spin of the two electrons. Proceeding as we did for the helium atom in chapter <a href="Atoms.html#Atoms">9</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant in which the lowest molecular orbital, the bonding <span class="math inline">\(\sigma_g\)</span> orbital of eq. <a href="Bonds.html#eq:bond8">(11.8)</a>, is used to describe two electrons with opposite spin:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
 <p><span class="math display" id="eq:bond12">\[\begin{equation}
 \Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\alpha\;\sigma_{g}\beta|=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right],
-\tag{11.13}
+\tag{11.12}
 \end{equation}\]</span></p>
 <p>where:</p>
 <p><span class="math display" id="eq:bond13">\[\begin{equation}
 \sigma_{g}=\varphi_{+}=\frac{\left(\psi_{100}\right)_A+\left(\psi_{100}\right)_B}{\sqrt{2+2S}}.
-\tag{11.14}
+\tag{11.13}
 \end{equation}\]</span></p>
 <p>A Slater determinant in which each spatial orbital is used to describe two electrons with opposite spin is called a <strong>restricted Hartree–Fock (RHF)</strong> wave function, since both electrons are restricted to be described by the same spatial orbital. The energies and the resulting MO diagram are similar to those for <span class="math inline">\(\mathrm{H}_2^+\)</span>, with the only difference that two electrons are described by the same <span class="math inline">\(\sigma_g\)</span> MO (figure <a href="Bonds.html#fig:Fig5c11">11.7</a>).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig5c11"></span>
@@ -562,21 +559,21 @@ Figure 11.6: Geometry of the hydrogen molecule.
 Figure 11.7: Molecular orbitals diagram for the hydrogen molecule.
 </p>
 </div>
-<p>As for the many-electron atoms, the Hartree–Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the equilibrium distance, <span class="math inline">\(R_e=1.4\;a_0\)</span>, is <span class="math inline">\(-0.17447\;E_h\)</span> (<span class="math inline">\(-458\text{ kJ/mol}\)</span>). The variational result obtained with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.13)</a> is <span class="math inline">\(-0.12778\;E_h\)</span> (<span class="math inline">\(-335\text{ kJ/mol}\)</span>), which is about <span class="math inline">\(73 \%\)</span> of the exact value. In this calculation, the exponent of the <span class="math inline">\(1s\)</span> orbitals, <span class="math inline">\(c_0\)</span> in <span class="math inline">\(\psi_{100}=\sqrt{\frac{c_0^3}{\pi}}\exp[-c_0r]\)</span>, is used as a variational parameter, exactly as we did for helium in chapter <a href="Atoms.html#Atoms">9</a>. Its optimal value at <span class="math inline">\(R_e\)</span> is <span class="math inline">\(c_0=1.1695\)</span>, larger than <span class="math inline">\(1\)</span>: in the molecule, each electron feels the attraction of two nuclei, and the orbitals contract.</p>
-<p>If we scan the Born–Oppenheimer potential energy curve with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.13)</a>, as we did for <span class="math inline">\(\mathrm{H}_2^+\)</span>, we obtain the red curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>.</p>
+<p>As for the many-electron atoms, the Hartree–Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the equilibrium distance, <span class="math inline">\(R_e=1.4\;a_0\)</span>, is <span class="math inline">\(-0.17447\;E_h\)</span> (<span class="math inline">\(-458\text{ kJ/mol}\)</span>). The variational result obtained with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.12)</a> is <span class="math inline">\(-0.12778\;E_h\)</span> (<span class="math inline">\(-335\text{ kJ/mol}\)</span>), which is about <span class="math inline">\(73 \%\)</span> of the exact value. In this calculation, the exponent of the <span class="math inline">\(1s\)</span> orbitals, <span class="math inline">\(c_0\)</span> in <span class="math inline">\(\psi_{100}=\sqrt{\frac{c_0^3}{\pi}}\exp[-c_0r]\)</span>, is used as a variational parameter, exactly as we did for helium in chapter <a href="Atoms.html#Atoms">9</a>. Its optimal value at <span class="math inline">\(R_e\)</span> is <span class="math inline">\(c_0=1.1695\)</span>, larger than <span class="math inline">\(1\)</span>: in the molecule, each electron feels the attraction of two nuclei, and the orbitals contract.</p>
+<p>If we scan the Born–Oppenheimer potential energy curve with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.12)</a>, as we did for <span class="math inline">\(\mathrm{H}_2^+\)</span>, we obtain the red curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig6c11"></span>
 <img src="img/H2_HF_CI.png" alt="Potential energy curves of the hydrogen molecule from Hartree-Fock and from configuration interaction. Both have a minimum near 1.4 bohr, but the Hartree-Fock curve rises far above the energy of two separated atoms at large distance, while the configuration interaction curve correctly approaches it." width="80%" />
 <p class="caption">
 Figure 11.8: Born–Oppenheimer potential energy curves for the hydrogen molecule computed with the restricted Hartree–Fock wave function (red) and with configuration interaction (blue). Both calculations use a minimal basis of <span class="math inline">\(1s\)</span> functions with the exponent optimized at each distance (approximated with three gaussian functions, so the numbers differ slightly from those in the text). Energies are measured from two separated hydrogen atoms.
 </p>
 </div>
-<p>The Hartree–Fock results for <span class="math inline">\(\mathrm{H}_2\)</span> describe the formation of the bond qualitatively around the equilibrium distance (the minimum of the curve), but they fail completely at dissociation: instead of going to the energy of two hydrogen atoms, the curve keeps rising, and at large distances the molecule is predicted to be <em>less</em> stable than the separated atoms by hundreds of kJ/mol. To understand why, we can write the spatial part of eq. <a href="Bonds.html#eq:bond12">(11.13)</a> in terms of the atomic orbitals:</p>
+<p>The Hartree–Fock results for <span class="math inline">\(\mathrm{H}_2\)</span> describe the formation of the bond qualitatively around the equilibrium distance (the minimum of the curve), but they fail completely at dissociation: instead of going to the energy of two hydrogen atoms, the curve keeps rising, and at large distances the molecule is predicted to be <em>less</em> stable than the separated atoms by hundreds of kJ/mol. To understand why, we can write the spatial part of eq. <a href="Bonds.html#eq:bond12">(11.12)</a> in terms of the atomic orbitals:</p>
 <p><span class="math display" id="eq:bond14">\[\begin{equation}
 \begin{aligned}
 \sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) &amp;= \frac{1}{2+2S}\left[a(1)+b(1)\right]\left[a(2)+b(2)\right] \\
 &amp;= \frac{1}{2+2S} \Big[ \underbrace{a(1)b(2)+b(1)a(2)}_{\text{covalent: } \mathrm{H}\!-\!\mathrm{H}} + \underbrace{a(1)a(2)+b(1)b(2)}_{\text{ionic: } \mathrm{H}^-\,\mathrm{H}^+ \text{ and } \mathrm{H}^+\,\mathrm{H}^-} \Big],
 \end{aligned}
-\tag{11.15}
+\tag{11.14}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(a(1)\)</span> is short for <span class="math inline">\(a(\mathbf{r}_1)\)</span>, and so on. The first two terms describe one electron on each atom, the covalent picture of the bond. The last two terms describe both electrons on the same atom, i.e., an <span class="math inline">\(\mathrm{H}^-\)</span> ion next to a bare proton. The RHF wave function always contains the two types of terms <em>with the same weight</em>, whatever the distance between the nuclei. Close to equilibrium this is not too bad, since the ionic terms give a reasonable description of the electrons being shared between the two nuclei. At dissociation, however, the correct answer is two neutral hydrogen atoms, and the ionic terms (which describe the much less stable <span class="math inline">\(\mathrm{H}^-+\mathrm{H}^+\)</span> pair) should disappear completely. The RHF wave function cannot do that, and its energy at large distance is too high.</p>
 <div id="beyond-hartreefock" class="section level3 hasAnchor" number="11.2.1">
@@ -585,10 +582,10 @@ Figure 11.8: Born–Oppenheimer potential energy curves for the hydrogen molecul
 <p>We can fix the problem by mixing into the wave function a second Slater determinant, in which both electrons are described by the antibonding orbital, <span class="math inline">\(\sigma_u=\varphi_-\)</span>:</p>
 <p><span class="math display" id="eq:bond15">\[\begin{equation}
 \Psi_\text{CI} = c_1\, |\sigma_{g}\alpha\;\sigma_{g}\beta| + c_2\, |\sigma_{u}\alpha\;\sigma_{u}\beta|,
-\tag{11.16}
+\tag{11.15}
 \end{equation}\]</span></p>
-<p>where the coefficients <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are determined with the variational method. Expanding the spatial part of the second determinant as we did in eq. <a href="Bonds.html#eq:bond14">(11.15)</a>, we obtain <span class="math inline">\(\sigma_u(1)\sigma_u(2)\propto\left[a(1)a(2)+b(1)b(2)\right]-\left[a(1)b(2)+b(1)a(2)\right]\)</span>: the same ionic and covalent terms, but with opposite relative sign. By choosing <span class="math inline">\(c_2\)</span> negative, we can therefore reduce the weight of the ionic terms. At equilibrium the variational method gives a small <span class="math inline">\(c_2\)</span>, while at dissociation it gives <span class="math inline">\(c_2=-c_1\)</span>, which removes the ionic terms completely and leaves the correct covalent wave function. The resulting potential energy curve is the blue curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>. It goes smoothly to the energy of two hydrogen atoms at dissociation, and it is also lower than the RHF curve near the minimum, since it recovers part of the correlation energy.</p>
-<p>A wave function written as a linear combination of several Slater determinants, such as eq. <a href="Bonds.html#eq:bond15">(11.16)</a>, is called a <strong>configuration interaction (CI)</strong> wave function, and it is the simplest example of a <em>correlated method</em>. Modern quantum chemistry programs routinely use correlated methods to compute bond energies to within a few kJ/mol of the experimental values.</p>
+<p>where the coefficients <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are determined with the variational method. Expanding the spatial part of the second determinant as we did in eq. <a href="Bonds.html#eq:bond14">(11.14)</a>, we obtain <span class="math inline">\(\sigma_u(1)\sigma_u(2)\propto\left[a(1)a(2)+b(1)b(2)\right]-\left[a(1)b(2)+b(1)a(2)\right]\)</span>: the same ionic and covalent terms, but with opposite relative sign. By choosing <span class="math inline">\(c_2\)</span> negative, we can therefore reduce the weight of the ionic terms. At equilibrium the variational method gives a small <span class="math inline">\(c_2\)</span>, while at dissociation it gives <span class="math inline">\(c_2=-c_1\)</span>, which removes the ionic terms completely and leaves the correct covalent wave function. The resulting potential energy curve is the blue curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>. It goes smoothly to the energy of two hydrogen atoms at dissociation, and it is also lower than the RHF curve near the minimum, since it recovers part of the correlation energy.</p>
+<p>A wave function written as a linear combination of several Slater determinants, such as eq. <a href="Bonds.html#eq:bond15">(11.15)</a>, is called a <strong>configuration interaction (CI)</strong> wave function, and it is the simplest example of a <em>correlated method</em>. Modern quantum chemistry programs routinely use correlated methods to compute bond energies to within a few kJ/mol of the experimental values.</p>
 </div>
 </div>
 <div id="homonuclear-diatomic-molecules-of-the-second-row" class="section level2 hasAnchor" number="11.3">
@@ -631,7 +628,7 @@ Figure 11.10: Qualitative valence molecular orbital diagrams of N<span class="ma
 <p>A simple way of summarizing an MO diagram is the <strong>bond order</strong>:</p>
 <p><span class="math display" id="eq:bondorder">\[\begin{equation}
 \text{bond order} = \frac{1}{2}\left(n_\text{bonding} - n_\text{antibonding}\right),
-\tag{11.17}
+\tag{11.16}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(n_\text{bonding}\)</span> and <span class="math inline">\(n_\text{antibonding}\)</span> are the numbers of electrons described by bonding and antibonding orbitals, respectively. Since each electron described by a bonding orbital stabilizes the molecule and each electron described by an antibonding orbital destabilizes it by a similar (slightly larger) amount, the bond order measures the net number of bonds between the two atoms. For <span class="math inline">\(\mathrm{H}_2\)</span> it is <span class="math inline">\(\frac{1}{2}(2-0)=1\)</span>, a single bond. From figure <a href="Bonds.html#fig:Fig10c11">11.10</a> we obtain:</p>
 <ul>

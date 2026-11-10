@@ -2647,8 +2647,33 @@ In practice, this is not exactly correct either, because of a tiny effect called
 
 }
 
-\caption{Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom.}\label{fig:fig0c5}
+\caption{Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom, with energies in atomic units (see the next section).}\label{fig:fig0c5}
 \end{figure}
+
+\section{Atomic Units}\label{AtomicUnits}
+
+The hydrogen atom energies in eq. \eqref{eq:HA7} contain a combination of fundamental constants, \(\frac{e^2}{4\pi\varepsilon_0 a_0}\), that will appear over and over again whenever we deal with electrons in atoms and molecules. Writing \(\hbar\), \(m_e\), \(e\), and \(4\pi\varepsilon_0\) in every equation quickly becomes tedious, and the numbers that come out (energies of the order of \(10^{-18}\;\text{J}\), distances of the order of \(10^{-11}\;\text{m}\)) are inconvenient. For this reason, chemists and physicists who work with atoms and molecules use a set of units tailored to them, called \textbf{atomic units (a.u.)}. Atomic units are built by choosing the units of mass, charge, angular momentum, and permittivity so that:
+
+\begin{equation}
+\hbar = m_e = e = 4\pi\varepsilon_0 = 1.
+\label{eq:au0}
+\end{equation}
+
+With this choice, the constants simply disappear from the equations. The unit of length becomes the Bohr radius, \(a_0\), and the unit of energy, called the \textbf{hartree} (\(E_h\)), is twice the ionization energy of the hydrogen atom:
+
+\begin{equation}
+1\,E_h = \frac{e^2}{4\pi\varepsilon_0 a_0} = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
+\label{eq:aunits}
+\end{equation}
+
+In atomic units, the energy levels of the hydrogen atom, eq. \eqref{eq:HA7}, take the very simple form:
+
+\begin{equation}
+E_n = -\frac{1}{2n^2}\;E_h,
+\label{eq:HA7au}
+\end{equation}
+
+so the ground state is at \(-\frac{1}{2}\,E_h\) (\(-13.6\;\text{eV}\), the value that we found with the Bohr model in chapter \ref{Motivation}), the first excited level at \(-\frac{1}{8}\,E_h\), and so on, as shown in figure \ref{fig:fig0c5}. Similarly, the Hamiltonian of the hydrogen atom becomes \(\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}\), and the radial wave functions in the next section, which we write in terms of \(r/a_0\), are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs (\(a_0\)), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.
 
 \section{The Radial Wave Functions}\label{the-radial-wave-functions}
 
@@ -4857,7 +4882,7 @@ E = E_1+E_2.
 \label{eq:hf5}
 \end{equation}
 
-In this approximation, the energy of the helium atom is twice the energy of a \(1s\) electron in a hydrogen-like atom with \(Z=2\). The energies in eq. \eqref{eq:HA7} scale as \(Z^2\) when the nuclear charge is \(Z\) instead of \(1\), so the \(1s\) energy is \(-\frac{Z^2}{2}E_h\) and the total is \(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\), or about \(-10{,}500 \text{ kJ/mol}\),\footnote{\(E_h\) is the atomic unit of energy, the \emph{hartree}, which we will use more extensively in chapter \ref{Bonds}. \(1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}\).} compared with the exact value of \(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\). The error is enormous, about \(40\%\), because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the \emph{average} repulsion between the two electrons, which for two \(1s\) electrons is \(\frac{5}{8}Z\,E_h\). The result, \(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\), is already much better, with an error of about \(5\%\).
+In this approximation, the energy of the helium atom is twice the energy of a \(1s\) electron in a hydrogen-like atom with \(Z=2\). The energies in eq. \eqref{eq:HA7} scale as \(Z^2\) when the nuclear charge is \(Z\) instead of \(1\), so the \(1s\) energy is \(-\frac{Z^2}{2}E_h\) and the total is \(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\), or about \(-10{,}500 \text{ kJ/mol}\),\footnote{\(E_h\) is the hartree, the atomic unit of energy that we introduced in section \ref{AtomicUnits}: \(1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}\).} compared with the exact value of \(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\). The error is enormous, about \(40\%\), because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the \emph{average} repulsion between the two electrons, which for two \(1s\) electrons is \(\frac{5}{8}Z\,E_h\). The result, \(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\), is already much better, with an error of about \(5\%\).
 
 \subsubsection*{Optimizing the effective nuclear charge}\label{optimizing-the-effective-nuclear-charge}
 \addcontentsline{toc}{subsubsection}{Optimizing the effective nuclear charge}
@@ -5849,12 +5874,7 @@ Answers: 1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
 
 \chapter{The Chemical Bond in Diatomic Molecules}\label{Bonds}
 
-In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the \(\mathrm{H}_2^+\) molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as \(\mathrm{N}_2\) and \(\mathrm{O}_2\). To simplify the notation in this chapter, we will move away from SI units and use a set tailored for molecules, called \emph{atomic units (a.u.)}. This set of units is built by setting \(\hbar=e=m_e=4\pi\varepsilon_0=1\), which also makes the Bohr radius, \(a_0\), the unit of length. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \eqref{eq:HA7}, simply become \(E_n=-\frac{1}{2n^2}\) in the a.u. of energy, which is called the hartree, \(E_h\). Since chemists usually prefer other energy units, we will report the most important results in kJ/mol as well, using:
-
-\begin{equation}
-1\,E_h = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
-\label{eq:aunits}
-\end{equation}
+In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the \(\mathrm{H}_2^+\) molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as \(\mathrm{N}_2\) and \(\mathrm{O}_2\). To simplify the notation, in this chapter we will use the atomic units that we introduced in section \ref{AtomicUnits}, in which \(\hbar=m_e=e=4\pi\varepsilon_0=1\), energies are measured in hartrees (\(1\,E_h = 2{,}625.5\text{ kJ/mol}\)), and distances in bohrs (\(1\,a_0 = 0.529\,\text{Å}\)).
 
 \section{The Chemical Bond in the Hydrogen Molecular Cation}\label{the-chemical-bond-in-the-hydrogen-molecular-cation}
 

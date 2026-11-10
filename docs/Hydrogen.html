@@ -197,13 +197,14 @@ MathJax.Hub.Config({
 </ul></li>
 <li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1</b> The Radial Wave Functions</a></li>
-<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Angular Wave Functions</a></li>
-<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.3</b> Building the Complete Orbital</a></li>
-<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.4</b> Experimental Access to Orbitals</a></li>
-<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.5</b> Chapter Review</a>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#AtomicUnits"><i class="fa fa-check"></i><b>5.1</b> Atomic Units</a></li>
+<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Radial Wave Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.3</b> The Angular Wave Functions</a></li>
+<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.4</b> Building the Complete Orbital</a></li>
+<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.5</b> Experimental Access to Orbitals</a></li>
+<li class="chapter" data-level="5.6" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.6</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="5.5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.5.1</b> Study Questions</a></li>
+<li class="chapter" data-level="5.6.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.6.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
@@ -475,11 +476,30 @@ E_n = - \frac{1}{n^2}\frac{e^2}{8 \pi \varepsilon_0 a_0} \quad (n=1,2,\ldots,\in
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig0c5"></span>
 <img src="img/H_levels.png" alt="Energy level diagram of the hydrogen atom for n equals 1 to 5, with levels getting closer together as n increases towards the ionization limit at zero, and each level split into its degenerate orbitals." width="90%" />
 <p class="caption">
-Figure 5.1: Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom.
+Figure 5.1: Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom, with energies in atomic units (see the next section).
 </p>
 </div>
-<div id="the-radial-wave-functions" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> The Radial Wave Functions<a href="Hydrogen.html#the-radial-wave-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="AtomicUnits" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Atomic Units<a href="Hydrogen.html#AtomicUnits" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The hydrogen atom energies in eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a> contain a combination of fundamental constants, <span class="math inline">\(\frac{e^2}{4\pi\varepsilon_0 a_0}\)</span>, that will appear over and over again whenever we deal with electrons in atoms and molecules. Writing <span class="math inline">\(\hbar\)</span>, <span class="math inline">\(m_e\)</span>, <span class="math inline">\(e\)</span>, and <span class="math inline">\(4\pi\varepsilon_0\)</span> in every equation quickly becomes tedious, and the numbers that come out (energies of the order of <span class="math inline">\(10^{-18}\;\text{J}\)</span>, distances of the order of <span class="math inline">\(10^{-11}\;\text{m}\)</span>) are inconvenient. For this reason, chemists and physicists who work with atoms and molecules use a set of units tailored to them, called <strong>atomic units (a.u.)</strong>. Atomic units are built by choosing the units of mass, charge, angular momentum, and permittivity so that:</p>
+<p><span class="math display" id="eq:au0">\[\begin{equation}
+\hbar = m_e = e = 4\pi\varepsilon_0 = 1.
+\tag{5.9}
+\end{equation}\]</span></p>
+<p>With this choice, the constants simply disappear from the equations. The unit of length becomes the Bohr radius, <span class="math inline">\(a_0\)</span>, and the unit of energy, called the <strong>hartree</strong> (<span class="math inline">\(E_h\)</span>), is twice the ionization energy of the hydrogen atom:</p>
+<p><span class="math display" id="eq:aunits">\[\begin{equation}
+1\,E_h = \frac{e^2}{4\pi\varepsilon_0 a_0} = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
+\tag{5.10}
+\end{equation}\]</span></p>
+<p>In atomic units, the energy levels of the hydrogen atom, eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a>, take the very simple form:</p>
+<p><span class="math display" id="eq:HA7au">\[\begin{equation}
+E_n = -\frac{1}{2n^2}\;E_h,
+\tag{5.11}
+\end{equation}\]</span></p>
+<p>so the ground state is at <span class="math inline">\(-\frac{1}{2}\,E_h\)</span> (<span class="math inline">\(-13.6\;\text{eV}\)</span>, the value that we found with the Bohr model in chapter <a href="Motivation.html#Motivation">2</a>), the first excited level at <span class="math inline">\(-\frac{1}{8}\,E_h\)</span>, and so on, as shown in figure <a href="Hydrogen.html#fig:fig0c5">5.1</a>. Similarly, the Hamiltonian of the hydrogen atom becomes <span class="math inline">\(\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}\)</span>, and the radial wave functions in the next section, which we write in terms of <span class="math inline">\(r/a_0\)</span>, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs (<span class="math inline">\(a_0\)</span>), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.</p>
+</div>
+<div id="the-radial-wave-functions" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> The Radial Wave Functions<a href="Hydrogen.html#the-radial-wave-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The solutions to the radial equation, eq. <a href="Hydrogen.html#eq:HA4">(5.5)</a>, involve two key components: an exponential decay factor <span class="math inline">\(e^{-r/na_0}\)</span> and a polynomial factor built from the associated Laguerre polynomials, <span class="math inline">\(L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right)\)</span>. The complete radial wave functions for the first three energy levels are:</p>
 <p><span class="math inline">\(\quad R_{10}(r) = 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}.\)</span></p>
 <p><span class="math inline">\(\quad R_{20}(r) = \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}.\)</span></p>
@@ -503,7 +523,7 @@ Figure 5.2: The radial wave functions of the hydrogen atom orbitals in the first
 <p>While the radial wave function <span class="math inline">\(R_{n\ell}(r)\)</span> describes the amplitude of the electron probability at distance <span class="math inline">\(r\)</span>, what we typically measure experimentally is the radial probability distribution:</p>
 <p><span class="math display" id="eq:HA8">\[\begin{equation}
 P(r) = r^2 |R_{n\ell}(r)|^2.
-\tag{5.9}
+\tag{5.12}
 \end{equation}\]</span></p>
 <p>This product of <span class="math inline">\(r^2\)</span> and <span class="math inline">\(|R_{n\ell}|^2\)</span> is crucial for physical interpretation and is plotted for the first six radial wave functions in figure <a href="Hydrogen.html#fig:fig2c5">5.3</a>. The factor <span class="math inline">\(r^2\)</span> comes from the volume of a thin <em>spherical shell</em> at distance <span class="math inline">\(r\)</span>, <span class="math inline">\(4\pi r^2 dr\)</span> (the <span class="math inline">\(4\pi\)</span> factor is absorbed by the normalization of the spherical harmonics). Even though the probability density <span class="math inline">\(|R_{n\ell}|^2\)</span> is largest near the nucleus (often zero right at <span class="math inline">\(r=0\)</span> for <span class="math inline">\(\ell&gt;0\)</span>), the shell volume increases with <span class="math inline">\(r^2\)</span>, creating a maximum in <span class="math inline">\(P(r)\)</span> at an intermediate distance. This is why the most probable radius for the <span class="math inline">\(1s\)</span> electron is exactly the Bohr radius <span class="math inline">\(a_0\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2c5"></span>
@@ -515,8 +535,8 @@ Figure 5.3: The radial probability functions of the hydrogen atom orbitals in th
 <p>The radial probability plot reveals the structure of orbitals at different energy levels. For <span class="math inline">\(1s\)</span>, the single smooth peak centered at <span class="math inline">\(a_0 \approx 0.53\,\text{Å}\)</span> shows why the ground state is compact and stable. For <span class="math inline">\(2s\)</span>, two peaks at <span class="math inline">\(r \approx 0.76\, a_0\)</span> and <span class="math inline">\(5.24\, a_0\)</span> are separated by a radial node at <span class="math inline">\(r = 2a_0\)</span>. The presence of multiple peaks indicates that the electron, though more energetic (and thus less tightly bound), still has a non-zero probability of being found relatively close to the nucleus. The <span class="math inline">\(3s\)</span> orbital shows three peaks—the pattern continues with each increase in principal quantum number.</p>
 <p>This radial probability distribution is the <strong>observable quantity</strong>—it represents the answer to the experimental question: “If I measure the distance of the electron from the nucleus, what are the odds of finding it between radius <span class="math inline">\(r\)</span> and <span class="math inline">\(r + dr\)</span>?”</p>
 </div>
-<div id="the-angular-wave-functions" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> The Angular Wave Functions<a href="Hydrogen.html#the-angular-wave-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-angular-wave-functions" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> The Angular Wave Functions<a href="Hydrogen.html#the-angular-wave-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As we already discussed, the angular part of the Schrödinger equation is solved by the same spherical harmonics we discussed for the solution of the particle on a sphere in chapter <a href="Models.html#Models">4</a>. The complete complex spherical harmonics are eigenfunctions of the magnitude of the total angular momentum, <span class="math inline">\(\mathbf{L}^2\)</span>, and of one of its components along an arbitrary axis, <span class="math inline">\(L_z\)</span>. These two conditions determine the <strong>physical meaning</strong> of the quantum numbers <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_\ell\)</span>. They also establish why the spherical harmonics create the characteristic orbital shapes:</p>
 <ul>
 <li><strong><span class="math inline">\(n\)</span> (principal quantum number)</strong>: Determines the energy <span class="math inline">\(E_n = -13.6 \text{ eV}/n^2\)</span> and the size of the orbital.</li>
@@ -526,8 +546,8 @@ Figure 5.3: The radial probability functions of the hydrogen atom orbitals in th
 <p>The energy depends <em>only</em> on <span class="math inline">\(n\)</span>, making all orbitals with the same <span class="math inline">\(n\)</span> but different <span class="math inline">\(\ell\)</span> values degenerate. This is a special feature of the Coulomb potential; most other potentials would split these energy levels.</p>
 <p>Visualization of the complex spherical harmonics can happen in many different ways, as we have already shown in the particle-on-a-sphere section of chapter <a href="Models.html#Models">4</a>. The difficulties associated with the visualization of the complex spherical harmonics translate directly to the visualization of the atomic orbitals, which we will discuss next.</p>
 </div>
-<div id="building-the-complete-orbital" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Building the Complete Orbital<a href="Hydrogen.html#building-the-complete-orbital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="building-the-complete-orbital" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Building the Complete Orbital<a href="Hydrogen.html#building-the-complete-orbital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The complete wave function given by the multiplication of the radial components and the complex spherical harmonic encodes <em>all</em> the quantum information about the electron’s state. The radial part captures the probability of finding the electron at a given distance <span class="math inline">\(r\)</span> (independent of direction), while the angular part specifies how this probability is distributed among different directions.</p>
 <p>Since orbitals are functions of three spatial dimensions, visualizing their amplitude would require a four-dimensional plot. One way to represent them in 3D is to map the amplitude to a color map, similarly to figures <a href="Models.html#fig:fig6c4">4.7</a> and <a href="Models.html#fig:fig7c4">4.8</a> in chapter <a href="Models.html#Models">4</a>. This, however, doesn’t solve the issue with the visualization of complex functions, which would require two different 3D plots, one for the real part of the wave function and one for the imaginary part. These sets of complementary plots are reported in figure <a href="Hydrogen.html#fig:fig3c5">5.4</a> for the real part of the hydrogen atom orbitals and in figure <a href="Hydrogen.html#fig:fig4c5">5.5</a> for the imaginary part.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig3c5"></span>
@@ -549,7 +569,7 @@ Figure 5.5: Color gradient maps of the imaginary part <span class="math inline">
 \psi_{2p_x} &amp;= \frac{1}{\sqrt{2}}\left(\psi_{2,1,-1} - \psi_{2,1,+1}\right),\\
 \psi_{2p_y} &amp;= \frac{i}{\sqrt{2}}\left(\psi_{2,1,-1} + \psi_{2,1,+1}\right).
 \end{aligned}
-\tag{5.10}
+\tag{5.13}
 \end{equation}\]</span></p>
 <p>These combinations eliminate the azimuthal phase dependence, producing three real-valued orbitals with the familiar dumbbell shapes oriented along the <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> axes. Each real orbital still represents a valid quantum state—they are simply a different choice of <em>basis</em> for describing the same subspace of quantum states. The real <span class="math inline">\(p\)</span> orbitals are superpositions of definite angular momentum states, so they don’t have definite <span class="math inline">\(m_\ell\)</span> values, but they have all other properties encoded in the original states.</p>
 <p>The crucial point is: <strong>the real and complex orbital representations are mathematically equivalent descriptions of the same physical system</strong>. They provide different perspectives (real vs. complex) but encode identical measurable information.</p>
@@ -583,8 +603,8 @@ Figure 5.8: Dot-density plots for a few representative hydrogen atom orbitals. I
 </div>
 <p>Each method highlights different aspects of the orbital structure. The key is understanding that all these representations show the <em>same</em> information (the probability density) through different visual encodings. Finally, it is important to note that most chemistry textbooks depict orbital symmetry on probability density diagrams, such as those in Figures <a href="Hydrogen.html#fig:fig5c5">5.6</a>, <a href="Hydrogen.html#fig:fig6c5">5.7</a>, and <a href="Hydrogen.html#fig:fig7c5">5.8</a>, by overlaying the signs of the wave functions using colors or shading. This common practice is misleading, as these plots represent the probability of finding the electron, which must be non-negative everywhere. Nevertheless, because this convention is too pervasive in the literature to ignore, we retain it here to familiarize students with standard representations while urging them to recognize its limitations.</p>
 </div>
-<div id="experimental-access-to-orbitals" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Experimental Access to Orbitals<a href="Hydrogen.html#experimental-access-to-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="experimental-access-to-orbitals" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Experimental Access to Orbitals<a href="Hydrogen.html#experimental-access-to-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A common question is: “Can we actually measure an orbital?” The answer is nuanced. We cannot directly observe <span class="math inline">\(\psi_{n\ell m_{\ell}}(\mathbf{r})\)</span> because the wave function is not an observable—quantum mechanics predicts only probabilities for measurement outcomes. However, we can:</p>
 <ul>
 <li>Measure the <em>probability density</em> through many repeated experiments (electron microscopy, photoelectron spectroscopy).</li>
@@ -593,10 +613,10 @@ Figure 5.8: Dot-density plots for a few representative hydrogen atom orbitals. I
 </ul>
 <p>Recent attosecond and femtosecond experiments have directly imaged the amplitude of molecular orbitals and even tracked the phase evolution during chemical reactions, confirming that quantum mechanical orbital descriptions accurately reflect physical reality.</p>
 </div>
-<div id="rev5" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Chapter Review<a href="Hydrogen.html#rev5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="quest5" class="section level3 hasAnchor" number="5.5.1">
-<h3><span class="header-section-number">5.5.1</span> Study Questions<a href="Hydrogen.html#quest5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="rev5" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Chapter Review<a href="Hydrogen.html#rev5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest5" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Study Questions<a href="Hydrogen.html#quest5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. Which of the following is the electrostatic potential energy, <span class="math inline">\(V(r)\)</span>, in the hydrogen atom?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(V(r) = -\dfrac{e^2}{4\pi \varepsilon_0 r}\)</span><br />
