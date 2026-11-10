@@ -8,14 +8,16 @@ The central idea of this framework is that every *observable* (i.e., any quantit
 
 In the wave mechanics formulation that we have used so far, wave functions are functions of the coordinates, and operators are combinations of derivatives and multiplications. An equivalent formulation, Heisenberg's matrix mechanics, represents the state of the system as a vector of numbers and operators as matrices. The two pictures are related in the same way as a function is related to the list of its coefficients in some basis set, an idea that we will use extensively when we describe molecules in chapter \@ref(Molecules).
 
-The expectation value of an operator $\hat{A}$ for a system with wave function $\psi(\mathbf{r})$ living in a Hilbert space with unit vector $\mathbf{r}$ (i.e., in three-dimensional Cartesian space $\mathbf{r} = \left\{ x,y,z \right\}$), is given by: 
+The wave function itself is not directly observable. What we can measure in an experiment (or compute and compare with an experiment) are **expectation values**: averages of physical quantities. If we could prepare many identical hydrogen atoms, all in the ground state, and measure the distance between the electron and the proton in each one, the measurements would not all give the same result: they would scatter around some value. Their average is the expectation value of the distance, $\langle r\rangle$, and the size of the scatter is the uncertainty, $\Delta r$. For the $1s$ state of hydrogen, $\langle r\rangle=\frac{3}{2}a_0$ and $\Delta r=\frac{\sqrt{3}}{2}a_0\approx0.87\,a_0$. (Notice that the average distance is larger than the most probable distance, $a_0$, that we found from the radial probability distribution in chapter \@ref(Hydrogen), because the distribution has a long tail at large $r$.)
+
+In general, the expectation value of the observable associated with an operator $\hat{A}$, for a system described by a normalized wave function $\psi(\mathbf{r})$, where $\mathbf{r} = \left\{ x,y,z \right\}$ are the coordinates, is given by: 
 
 \begin{equation}
-<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+\langle A\rangle = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r})\, d{\bf r},
 (\#eq:ee1b)
 \end{equation}
 
-where the integral runs over all space. The expectation value is the average result that we would obtain if we measured $A$ on many identical copies of the system, all prepared with the same wave function. We will discuss its meaning in more detail later in this chapter.
+where the integral runs over all space. Notice the order of the three factors: the operator acts on the wave function first, and the result is then multiplied by the complex conjugate of the wave function and integrated. For an operator that simply multiplies by a function of the coordinates, such as the position, this reduces to the familiar formula for an average weighted by the probability density, $\langle r\rangle=\int r\,|\psi|^2\,d{\bf r}$. The uncertainty is calculated in the same way as a standard deviation in statistics, $\Delta A=\sqrt{\langle A^2\rangle-\langle A\rangle^2}$. We will discuss the meaning of expectation values in more detail later in this chapter, and the uncertainty in chapter \@ref(Weirdness).
 
 ### Basic Properties of Operators
 

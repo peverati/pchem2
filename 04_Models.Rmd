@@ -103,12 +103,12 @@ E_1 = \frac{\pi^2 \hbar^2 }{2 m a^2}\neq 0.
 (\#eq:PIB13)
 \end{equation}
 
-This value is called *zero-point energy (ZPE)*, and is a purely quantum mechanical effect. Notice that we have not determined the constant $C$ yet. We will do so in a moment, after discussing the meaning of the wave function.
+This value is called *zero-point energy (ZPE)*, and is a purely quantum mechanical effect. Notice that we have not determined the constant $C$ yet. We will do so in a moment, using the normalization condition of chapter \@ref(Schrodinger).
 
 
-The most profound physical insight from the particle in a box solution comes from Born's interpretation of the wave function. The probability of finding the particle between positions $x$ and $x+dx$ is given by $|\psi_n(x)|^2 dx$, where $|\psi_n(x)|^2$ is called the **probability density**.
+The most profound physical insight from the particle in a box solution comes from applying Born's interpretation of the wave function (section \@ref(BornInterpretation)). The probability of finding the particle in state $n$ between positions $x$ and $x+dx$ is $|\psi_n(x)|^2 dx$, so the probability densities $|\psi_n(x)|^2$ tell us where the particle is likely to be found inside the box.
 
-Since the particle must be somewhere inside the box, the probability of finding it anywhere between $x=0$ and $x=a$ must be equal to one. This requirement is called the **normalization condition**, and it is exactly what we need to determine the constant $C$:
+Since the particle must be somewhere inside the box, the probability of finding it anywhere between $x=0$ and $x=a$ must be equal to one. This is the normalization condition, eq. \@ref(eq:born2), with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant $C$:
 
 \begin{equation}
 \int_0^a |\psi_n(x)|^2\, dx = |C|^2 \int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = 1.

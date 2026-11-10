@@ -1333,6 +1333,28 @@ which can then be rearranged to the famous \textbf{time-independent Schrödinger
 
 Remember that we did not \emph{prove} this equation: we only showed that it is consistent with a plane wave and with de Broglie's relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass \(m\). If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace \(m\) with the \emph{reduced mass} of the two particles, \(\mu = \frac{m_1 m_2}{m_1+m_2}\).
 
+\section{The Meaning of the Wave Function}\label{BornInterpretation}
+
+We now have an equation for the wave function, but we have not yet said what the wave function \emph{is}. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as \textbf{Born's interpretation}: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along \(x\):
+
+\begin{equation}
+\text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
+\label{eq:born1}
+\end{equation}
+
+where \(|\psi(x)|^2=\psi^*(x)\psi(x)\) is called the \textbf{probability density}. Notice that, even if \(\psi\) is complex, \(\psi^*\psi\) is always real and never negative, as a probability must be. This is similar to what happens for classical waves (chapter \ref{Classical}), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a \emph{probability amplitude}.
+
+Since the particle must be found somewhere, the probabilities of finding it at all possible positions must add up to one:
+
+\begin{equation}
+\int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
+\label{eq:born2}
+\end{equation}
+
+This requirement is called the \textbf{normalization condition}, and a wave function that satisfies it is said to be \emph{normalized}. For a particle moving in three dimensions, the integral runs over all three coordinates, \(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\). If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in chapter \ref{Models}.
+
+The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how \emph{likely} it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in chapter \ref{Weirdness}.
+
 \section{The Time-Dependent Schrödinger Equation}\label{the-time-dependent-schruxf6dinger-equation}
 
 The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:
@@ -1392,7 +1414,7 @@ then \(\psi(x, t)\) differs from \(\psi(x)\) only by a phase factor that rotates
 \label{eq:TDSEq7}
 \end{equation}
 
-Wave functions of the form of eq. \eqref{eq:TDSEq6b} are called \textbf{stationary states}. As we will see in chapter \ref{Models}, \(\vert \psi(x, t) \vert^2\) is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a \emph{superposition}) of stationary states:\footnote{A similar presentation can be found in Prof.~C. David Sherrill's \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{A Brief Review of Elementary Quantum Chemistry} notes.}
+Wave functions of the form of eq. \eqref{eq:TDSEq6b} are called \textbf{stationary states}. As we saw in section \ref{BornInterpretation}, \(\vert \psi(x, t) \vert^2\) is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a \emph{superposition}) of stationary states:\footnote{A similar presentation can be found in Prof.~C. David Sherrill's \href{http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html}{A Brief Review of Elementary Quantum Chemistry} notes.}
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
@@ -1456,7 +1478,7 @@ Let's take a closer look at one of the solutions in eq. \eqref{eq:FP3}, for exam
 \label{eq:FP7}
 \end{equation}
 
-Its real and imaginary parts are a cosine and a sine wave with wavelength \(\lambda=2\pi/k=h/p\), exactly as de Broglie proposed. As we will see in chapter \ref{Models}, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, \(|\psi(x)|^2\), which gives the probability of finding the particle at position \(x\). For a plane wave, \(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\), a constant. The plane wave and its probability density are shown in figure \ref{fig:fig1c3}.
+Its real and imaginary parts are a cosine and a sine wave with wavelength \(\lambda=2\pi/k=h/p\), exactly as de Broglie proposed. As we saw in section \ref{BornInterpretation}, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, \(|\psi(x)|^2\), which gives the probability of finding the particle at position \(x\). For a plane wave, \(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\), a constant. The plane wave and its probability density are shown in figure \ref{fig:fig1c3}.
 
 \begin{figure}
 
@@ -1875,11 +1897,11 @@ E_1 = \frac{\pi^2 \hbar^2 }{2 m a^2}\neq 0.
 \label{eq:PIB13}
 \end{equation}
 
-This value is called \emph{zero-point energy (ZPE)}, and is a purely quantum mechanical effect. Notice that we have not determined the constant \(C\) yet. We will do so in a moment, after discussing the meaning of the wave function.
+This value is called \emph{zero-point energy (ZPE)}, and is a purely quantum mechanical effect. Notice that we have not determined the constant \(C\) yet. We will do so in a moment, using the normalization condition of chapter \ref{Schrodinger}.
 
-The most profound physical insight from the particle in a box solution comes from Born's interpretation of the wave function. The probability of finding the particle between positions \(x\) and \(x+dx\) is given by \(|\psi_n(x)|^2 dx\), where \(|\psi_n(x)|^2\) is called the \textbf{probability density}.
+The most profound physical insight from the particle in a box solution comes from applying Born's interpretation of the wave function (section \ref{BornInterpretation}). The probability of finding the particle in state \(n\) between positions \(x\) and \(x+dx\) is \(|\psi_n(x)|^2 dx\), so the probability densities \(|\psi_n(x)|^2\) tell us where the particle is likely to be found inside the box.
 
-Since the particle must be somewhere inside the box, the probability of finding it anywhere between \(x=0\) and \(x=a\) must be equal to one. This requirement is called the \textbf{normalization condition}, and it is exactly what we need to determine the constant \(C\):
+Since the particle must be somewhere inside the box, the probability of finding it anywhere between \(x=0\) and \(x=a\) must be equal to one. This is the normalization condition, eq. \eqref{eq:born2}, with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant \(C\):
 
 \begin{equation}
 \int_0^a |\psi_n(x)|^2\, dx = |C|^2 \int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = 1.
@@ -3067,14 +3089,16 @@ The central idea of this framework is that every \emph{observable} (i.e., any qu
 
 In the wave mechanics formulation that we have used so far, wave functions are functions of the coordinates, and operators are combinations of derivatives and multiplications. An equivalent formulation, Heisenberg's matrix mechanics, represents the state of the system as a vector of numbers and operators as matrices. The two pictures are related in the same way as a function is related to the list of its coefficients in some basis set, an idea that we will use extensively when we describe molecules in chapter \ref{Molecules}.
 
-The expectation value of an operator \(\hat{A}\) for a system with wave function \(\psi(\mathbf{r})\) living in a Hilbert space with unit vector \(\mathbf{r}\) (i.e., in three-dimensional Cartesian space \(\mathbf{r} = \left\{ x,y,z \right\}\)), is given by:
+The wave function itself is not directly observable. What we can measure in an experiment (or compute and compare with an experiment) are \textbf{expectation values}: averages of physical quantities. If we could prepare many identical hydrogen atoms, all in the ground state, and measure the distance between the electron and the proton in each one, the measurements would not all give the same result: they would scatter around some value. Their average is the expectation value of the distance, \(\langle r\rangle\), and the size of the scatter is the uncertainty, \(\Delta r\). For the \(1s\) state of hydrogen, \(\langle r\rangle=\frac{3}{2}a_0\) and \(\Delta r=\frac{\sqrt{3}}{2}a_0\approx0.87\,a_0\). (Notice that the average distance is larger than the most probable distance, \(a_0\), that we found from the radial probability distribution in chapter \ref{Hydrogen}, because the distribution has a long tail at large \(r\).)
+
+In general, the expectation value of the observable associated with an operator \(\hat{A}\), for a system described by a normalized wave function \(\psi(\mathbf{r})\), where \(\mathbf{r} = \left\{ x,y,z \right\}\) are the coordinates, is given by:
 
 \begin{equation}
-<A> = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r}) d{\bf r},
+\langle A\rangle = \int \psi^{*}({\bf r}) \hat{A} \psi({\bf r})\, d{\bf r},
 \label{eq:ee1b}
 \end{equation}
 
-where the integral runs over all space. The expectation value is the average result that we would obtain if we measured \(A\) on many identical copies of the system, all prepared with the same wave function. We will discuss its meaning in more detail later in this chapter.
+where the integral runs over all space. Notice the order of the three factors: the operator acts on the wave function first, and the result is then multiplied by the complex conjugate of the wave function and integrated. For an operator that simply multiplies by a function of the coordinates, such as the position, this reduces to the familiar formula for an average weighted by the probability density, \(\langle r\rangle=\int r\,|\psi|^2\,d{\bf r}\). The uncertainty is calculated in the same way as a standard deviation in statistics, \(\Delta A=\sqrt{\langle A^2\rangle-\langle A\rangle^2}\). We will discuss the meaning of expectation values in more detail later in this chapter, and the uncertainty in chapter \ref{Weirdness}.
 
 \subsection{Basic Properties of Operators}\label{basic-properties-of-operators}
 

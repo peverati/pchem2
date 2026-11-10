@@ -15,27 +15,45 @@ PURPLE = "purple"
 C = plt.rcParams["axes.prop_cycle"].by_key()["color"]
 
 # ---------------------------------------------------------------- plane wave
-x = np.linspace(0, 6 * np.pi, 1000)
-k = 2.0
-psi = np.exp(1j * k * x)
-fig, axs = plt.subplots(2, 1, figsize=(11, 6.5), sharex=True)
-axs[0].plot(x, psi.real, color=C[0], lw=2.2, label=r"real part, $\cos(kx)$")
-axs[0].plot(x, psi.imag, color=C[1], lw=2.2, ls="--", label=r"imaginary part, $\sin(kx)$")
-axs[0].axhline(0, color="k", lw=0.8)
-axs[0].set_ylabel(r"$\psi(x)$")
-axs[0].set_ylim(-1.5, 1.9)
-axs[0].legend(loc="upper right", ncol=2)
-axs[1].fill_between(x, np.abs(psi) ** 2, color="cyan", alpha=0.5)
-axs[1].plot(x, np.abs(psi) ** 2, color="teal", lw=2.2)
-axs[1].set_ylabel(r"$|\psi(x)|^2$")
-axs[1].set_ylim(0, 1.6)
-axs[1].set_xlabel(r"Position $x$ (the wave continues forever in both directions)")
-axs[1].set_xticks([])
-for ax in axs:
-    ax.grid(alpha=0.3)
-fig.tight_layout()
+# Front view: real part in the vertical plane, imaginary part on a horizontal
+# plane drawn in oblique perspective (a depiction, not an exact projection).
+from matplotlib.patches import Polygon
+x = np.linspace(0, 4 * np.pi, 800); k = 2.0
+re, im = np.cos(k * x), np.sin(k * x)
+# oblique ("cabinet") projection of the horizontal plane: depth goes up-right
+dx, dy = 0.55, 0.32
+X_im, Y_im = x + dx * im, dy * im
+fig = plt.figure(figsize=(12, 5.6))
+L = x[-1]
+PAD = 1.6
+sc = 0.82 / L  # figure fraction per unit of x, matching the bottom panel
+ax = fig.add_axes([0.1 - PAD * sc, 0.45, (L + 2 * PAD) * sc, 0.42])
+# faint planes
+ax.add_patch(Polygon([(0, -1.25), (L, -1.25), (L, 1.25), (0, 1.25)], closed=True, fc="0.97", ec="0.8", lw=1, zorder=0))
+ax.add_patch(Polygon([(-dx, -dy), (L - dx, -dy), (L + dx, dy), (dx, dy)], closed=True, fc="0.92", ec="0.75", lw=1, zorder=0.5))
+# imaginary part (horizontal plane, drawn behind)
+ax.fill(np.r_[X_im, L, 0], np.r_[Y_im, 0, 0], color=C[3], alpha=0.25, lw=0, zorder=1)
+ax.plot(X_im, Y_im, color=C[3], lw=2.5, zorder=2, label=r"imaginary part, $\sin(kx)$ (horizontal plane)")
+# real part (vertical plane, in front)
+ax.fill_between(x, re, color=C[0], alpha=0.25, lw=0, zorder=3)
+ax.plot(x, re, color=C[0], lw=2.5, zorder=4, label=r"real part, $\cos(kx)$ (vertical plane)")
+ax.plot([0, L], [0, 0], color="k", lw=1, zorder=5)
+ax.annotate("", xy=(L + 0.9, 0), xytext=(L, 0), arrowprops=dict(arrowstyle="-|>", lw=1.2))
+ax.text(L + 1.0, 0, "$x$", va="center", fontsize=18)
+ax.annotate("", xy=(-0.3, 1.35), xytext=(-0.3, 0), arrowprops=dict(arrowstyle="-|>", lw=1.2, color=C[0]))
+ax.text(-0.45, 1.25, r"Re $\psi$", ha="right", color=C[0], fontsize=16)
+ax.annotate("", xy=(-0.3 + 1.6 * dx, 1.6 * dy), xytext=(-0.3, 0), arrowprops=dict(arrowstyle="-|>", lw=1.2, color=C[3]))
+ax.text(-0.3 + 1.7 * dx, 1.7 * dy + 0.05, r"Im $\psi$", color=C[3], fontsize=16)
+ax.set_xlim(-PAD, L + PAD); ax.set_ylim(-1.4, 1.75); ax.axis("off")
+h, l = ax.get_legend_handles_labels()
+ax.legend(h[::-1], l[::-1], loc="upper center", ncol=2, fontsize=13, frameon=False, bbox_to_anchor=(0.5, 1.22))
+ax2 = fig.add_axes([0.1, 0.12, 0.82, 0.26])
+ax2.fill_between(x, np.ones_like(x), color="cyan", alpha=0.5); ax2.plot(x, np.ones_like(x), color="teal", lw=2.2)
+ax2.set_ylabel(r"$|\psi(x)|^2$"); ax2.set_ylim(0, 1.6); ax2.set_xlim(0, L); ax2.set_xticks([]); ax2.grid(alpha=0.3)
+ax2.set_xlabel(r"Position $x$ (the wave continues forever in both directions)")
 fig.savefig(f"{OUT}/FP_planewave.png", dpi=100)
 plt.close(fig)
+
 
 # ---------------------------------------------------------------- building a wave packet
 x = np.linspace(-20, 20, 3000)

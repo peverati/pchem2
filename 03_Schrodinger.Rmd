@@ -68,6 +68,28 @@ which can then be rearranged to the famous **time-independent Schrödinger equat
 Remember that we did not *prove* this equation: we only showed that it is consistent with a plane wave and with de Broglie's relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass $m$. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace $m$ with the *reduced mass* of the two particles, $\mu = \frac{m_1 m_2}{m_1+m_2}$.
 
 
+## The Meaning of the Wave Function {#BornInterpretation}
+
+We now have an equation for the wave function, but we have not yet said what the wave function *is*. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as **Born's interpretation**: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along $x$:
+
+\begin{equation}
+\text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
+(\#eq:born1)
+\end{equation}
+
+where $|\psi(x)|^2=\psi^*(x)\psi(x)$ is called the **probability density**. Notice that, even if $\psi$ is complex, $\psi^*\psi$ is always real and never negative, as a probability must be. This is similar to what happens for classical waves (chapter \@ref(Classical)), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a *probability amplitude*.
+
+Since the particle must be found somewhere, the probabilities of finding it at all possible positions must add up to one:
+
+\begin{equation}
+\int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
+(\#eq:born2)
+\end{equation}
+
+This requirement is called the **normalization condition**, and a wave function that satisfies it is said to be *normalized*. For a particle moving in three dimensions, the integral runs over all three coordinates, $\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1$. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in chapter \@ref(Models).
+
+The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how *likely* it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in chapter \@ref(Weirdness).
+
 ## The Time-Dependent Schrödinger Equation
 
 The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:
@@ -127,7 +149,7 @@ then $\psi(x, t)$ differs from $\psi(x)$ only by a phase factor that rotates in 
 (\#eq:TDSEq7)
 \end{equation}
 
-Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called **stationary states**. As we will see in chapter \@ref(Models), $\vert \psi(x, t) \vert^2$ is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a *superposition*) of stationary states:^[A similar presentation can be found in Prof. C. David Sherrill's [A Brief Review of Elementary Quantum Chemistry](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html) notes.]
+Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called **stationary states**. As we saw in section \@ref(BornInterpretation), $\vert \psi(x, t) \vert^2$ is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a *superposition*) of stationary states:^[A similar presentation can be found in Prof. C. David Sherrill's [A Brief Review of Elementary Quantum Chemistry](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html) notes.]
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
@@ -191,9 +213,9 @@ Let's take a closer look at one of the solutions in eq. \@ref(eq:FP3), for examp
 (\#eq:FP7)
 \end{equation}
 
-Its real and imaginary parts are a cosine and a sine wave with wavelength $\lambda=2\pi/k=h/p$, exactly as de Broglie proposed. As we will see in chapter \@ref(Models), however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, $|\psi(x)|^2$, which gives the probability of finding the particle at position $x$. For a plane wave, $|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2$, a constant. The plane wave and its probability density are shown in figure \@ref(fig:fig1c3).
+Its real and imaginary parts are a cosine and a sine wave with wavelength $\lambda=2\pi/k=h/p$, exactly as de Broglie proposed. As we saw in section \@ref(BornInterpretation), however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, $|\psi(x)|^2$, which gives the probability of finding the particle at position $x$. For a plane wave, $|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2$, a constant. The plane wave and its probability density are shown in figure \@ref(fig:fig1c3).
 
-```{r fig1c3, out.width='85%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Top: real (solid) and imaginary (dashed) parts of a free-particle plane wave. Bottom: its probability density, which is the same everywhere.', fig.alt='Top: a cosine wave and a sine wave of the same wavelength, shifted by a quarter wavelength, representing the real and imaginary parts of a plane wave. Bottom: the probability density is a flat horizontal band, the same at every position.'}
+```{r fig1c3, out.width='85%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Top: a free-particle plane wave, $\\psi(x)=e^{ikx}$, with its real part, $\\cos(kx)$, in the vertical plane (blue) and its imaginary part, $\\sin(kx)$, in a horizontal plane drawn in perspective (red). Bottom: its probability density, which is the same everywhere.', fig.alt='Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.'}
 knitr::include_graphics('./img/FP_planewave.png')
 ```
 

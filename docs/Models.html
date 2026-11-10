@@ -160,15 +160,16 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#BornInterpretation"><i class="fa fa-check"></i><b>3.2</b> The Meaning of the Wave Function</a></li>
+<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.3</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.4</b> Solution for the Free Particle</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.3.1</b> What does the free-particle solution look like?</a></li>
-<li class="chapter" data-level="3.3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.3.2</b> Wave packets</a></li>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.4.1</b> What does the free-particle solution look like?</a></li>
+<li class="chapter" data-level="3.4.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.4.2</b> Wave packets</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<li class="chapter" data-level="3.5" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.5</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="3.5.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
@@ -489,9 +490,9 @@ E_n = n^2 \frac{\pi^2 \hbar^2 }{2 m a^2} = \frac{n^2 h^2}{8 m a^2} \quad (n=1,2,
 E_1 = \frac{\pi^2 \hbar^2 }{2 m a^2}\neq 0.
 \tag{4.13}
 \end{equation}\]</span></p>
-<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we have not determined the constant <span class="math inline">\(C\)</span> yet. We will do so in a moment, after discussing the meaning of the wave function.</p>
-<p>The most profound physical insight from the particle in a box solution comes from Born’s interpretation of the wave function. The probability of finding the particle between positions <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span> is given by <span class="math inline">\(|\psi_n(x)|^2 dx\)</span>, where <span class="math inline">\(|\psi_n(x)|^2\)</span> is called the <strong>probability density</strong>.</p>
-<p>Since the particle must be somewhere inside the box, the probability of finding it anywhere between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> must be equal to one. This requirement is called the <strong>normalization condition</strong>, and it is exactly what we need to determine the constant <span class="math inline">\(C\)</span>:</p>
+<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we have not determined the constant <span class="math inline">\(C\)</span> yet. We will do so in a moment, using the normalization condition of chapter <a href="Schrodinger.html#Schrodinger">3</a>.</p>
+<p>The most profound physical insight from the particle in a box solution comes from applying Born’s interpretation of the wave function (section <a href="Schrodinger.html#BornInterpretation">3.2</a>). The probability of finding the particle in state <span class="math inline">\(n\)</span> between positions <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span> is <span class="math inline">\(|\psi_n(x)|^2 dx\)</span>, so the probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> tell us where the particle is likely to be found inside the box.</p>
+<p>Since the particle must be somewhere inside the box, the probability of finding it anywhere between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> must be equal to one. This is the normalization condition, eq. <a href="Schrodinger.html#eq:born2">(3.10)</a>, with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant <span class="math inline">\(C\)</span>:</p>
 <p><span class="math display" id="eq:PIBnorm1">\[\begin{equation}
 \int_0^a |\psi_n(x)|^2\, dx = |C|^2 \int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = 1.
 \tag{4.14}

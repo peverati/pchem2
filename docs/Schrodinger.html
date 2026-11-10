@@ -160,15 +160,16 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a>
+<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#BornInterpretation"><i class="fa fa-check"></i><b>3.2</b> The Meaning of the Wave Function</a></li>
+<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.3</b> The Time-Dependent Schrödinger Equation</a></li>
+<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.4</b> Solution for the Free Particle</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.3.1</b> What does the free-particle solution look like?</a></li>
-<li class="chapter" data-level="3.3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.3.2</b> Wave packets</a></li>
+<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.4.1</b> What does the free-particle solution look like?</a></li>
+<li class="chapter" data-level="3.4.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.4.2</b> Wave packets</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
+<li class="chapter" data-level="3.5" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.5</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="3.5.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
@@ -432,7 +433,7 @@ MathJax.Hub.Config({
 \tag{3.2}
 \end{equation}\]</span></p>
 <p>where we have used the fact that <span class="math inline">\(i^2=-1\)</span>.</p>
-<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, eq. <a href="Motivation.html#eq:wp1b">(2.12)</a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
+<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, eq. <a href="#eq:wp1b">(<strong>??</strong>)</a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
 <p><span class="math display" id="eq:sch3">\[\begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
 \tag{3.3}
@@ -464,71 +465,87 @@ p^2 = 2m[E - V(x)],
 \end{equation}\]</span></p>
 <p>Remember that we did not <em>prove</em> this equation: we only showed that it is consistent with a plane wave and with de Broglie’s relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass <span class="math inline">\(m\)</span>. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace <span class="math inline">\(m\)</span> with the <em>reduced mass</em> of the two particles, <span class="math inline">\(\mu = \frac{m_1 m_2}{m_1+m_2}\)</span>.</p>
 </div>
-<div id="the-time-dependent-schrödinger-equation" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> The Time-Dependent Schrödinger Equation<a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="BornInterpretation" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> The Meaning of the Wave Function<a href="Schrodinger.html#BornInterpretation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now have an equation for the wave function, but we have not yet said what the wave function <em>is</em>. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as <strong>Born’s interpretation</strong>: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display" id="eq:born1">\[\begin{equation}
+\text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
+\tag{3.9}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(|\psi(x)|^2=\psi^*(x)\psi(x)\)</span> is called the <strong>probability density</strong>. Notice that, even if <span class="math inline">\(\psi\)</span> is complex, <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative, as a probability must be. This is similar to what happens for classical waves (chapter <a href="Classical.html#Classical">1</a>), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a <em>probability amplitude</em>.</p>
+<p>Since the particle must be found somewhere, the probabilities of finding it at all possible positions must add up to one:</p>
+<p><span class="math display" id="eq:born2">\[\begin{equation}
+\int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
+\tag{3.10}
+\end{equation}\]</span></p>
+<p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in chapter <a href="Models.html#Models">4</a>.</p>
+<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in chapter <a href="Weirdness.html#Weirdness">8</a>.</p>
+</div>
+<div id="the-time-dependent-schrödinger-equation" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> The Time-Dependent Schrödinger Equation<a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:</p>
 <p><span class="math display" id="eq:TDSEq">\[\begin{equation}
 i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
-\tag{3.9}
+\tag{3.11}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(V(x)\)</span> is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>. Replacing it into eq. <a href="Schrodinger.html#eq:TDSEq">(3.9)</a>, we obtain:</p>
+<p>where <span class="math inline">\(V(x)\)</span> is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>. Replacing it into eq. <a href="Schrodinger.html#eq:TDSEq">(3.11)</a>, we obtain:</p>
 <p><span class="math display" id="eq:TDSEq2">\[\begin{equation}
 \psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
-\tag{3.10}
+\tag{3.12}
 \end{equation}\]</span></p>
 <p>which can be rearranged to:</p>
 <p><span class="math display" id="eq:TDSEq3">\[\begin{equation}
 \frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
-\tag{3.11}
+\tag{3.13}
 \end{equation}\]</span></p>
-<p>The left-hand side of eq. <a href="Schrodinger.html#eq:TDSEq3">(3.11)</a> depends only on <span class="math inline">\(t\)</span>, and the right-hand side only on <span class="math inline">\(x\)</span>. The only way for the two to be equal for every value of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant <span class="math inline">\(E\)</span>. We have now split one partial differential equation into two ordinary differential equations:</p>
+<p>The left-hand side of eq. <a href="Schrodinger.html#eq:TDSEq3">(3.13)</a> depends only on <span class="math inline">\(t\)</span>, and the right-hand side only on <span class="math inline">\(x\)</span>. The only way for the two to be equal for every value of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant <span class="math inline">\(E\)</span>. We have now split one partial differential equation into two ordinary differential equations:</p>
 <p><span class="math display" id="eq:TDSEq4">\[\begin{equation}
 \frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
-\tag{3.12}
+\tag{3.14}
 \end{equation}\]</span></p>
 <p>and:
 <span class="math display" id="eq:TDSEq5">\[\begin{equation}
 -\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x) \psi(x) =
 E \psi(x).
-\tag{3.13}
+\tag{3.15}
 \end{equation}\]</span></p>
 <p>The second equation is the TISEq that we obtained in the previous section. The first one is easy to solve, giving:</p>
 <p><span class="math display" id="eq:TDSEq6">\[\begin{equation}
 f(t) = e^{-iEt / \hbar}
-\tag{3.14}
+\tag{3.16}
 \end{equation}\]</span></p>
 <p>This function oscillates in time, but its magnitude is always equal to one. Therefore, if the wave function is:</p>
 <p><span class="math display" id="eq:TDSEq6b">\[\begin{equation}
 \psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
-\tag{3.15}
+\tag{3.17}
 \end{equation}\]</span></p>
 <p>then <span class="math inline">\(\psi(x, t)\)</span> differs from <span class="math inline">\(\psi(x)\)</span> only by a phase factor that rotates in the complex plane without changing its size. As a consequence, the quantity <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> does not depend on time:</p>
 <p><span class="math display" id="eq:TDSEq7">\[\begin{equation}
 \vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
 \psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
-\tag{3.16}
+\tag{3.18}
 \end{equation}\]</span></p>
-<p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.15)</a> are called <strong>stationary states</strong>. As we will see in chapter <a href="Models.html#Models">4</a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.17)</a> are called <strong>stationary states</strong>. As we saw in section <a href="Schrodinger.html#BornInterpretation">3.2</a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <p><span class="math display">\[\begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}\]</span></p>
 </div>
-<div id="solution-for-the-free-particle" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Solution for the Free Particle<a href="Schrodinger.html#solution-for-the-free-particle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="solution-for-the-free-particle" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Solution for the Free Particle<a href="Schrodinger.html#solution-for-the-free-particle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
 <p><span class="math display" id="eq:FP1">\[\begin{equation}
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
-\tag{3.17}
+\tag{3.19}
 \end{equation}\]</span></p>
 <p>This equation can be rearranged to:</p>
 <p><span class="math display" id="eq:FP2">\[\begin{equation}
 \frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
-\tag{3.18}
+\tag{3.20}
 \end{equation}\]</span></p>
 <p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span>, multiplied by the function itself. The most general solution to this problem is the function:</p>
 <p><span class="math display" id="eq:FP3">\[\begin{equation}
 \psi(x) = A \exp(ikx)+B \exp(-ikx),
-\tag{3.19}
+\tag{3.21}
 \end{equation}\]</span></p>
 <p>with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> arbitrary (complex) constants. The first and second derivatives of this function are:</p>
 <p><span class="math display" id="eq:FP4">\[\begin{equation}
@@ -536,37 +553,37 @@ f(t) = e^{-iEt / \hbar}
 \frac{d \psi(x)}{dx} &amp;= ik A \exp(ikx) - ikB\exp(-ikx) \\
 \frac{d^2 \psi(x)}{dx^2} &amp;= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
-\tag{3.20}
-\end{equation}\]</span></p>
-<p>Comparing the second derivative in eq. <a href="Schrodinger.html#eq:FP4">(3.20)</a> with eq. <a href="Schrodinger.html#eq:FP2">(3.18)</a>, we immediately see that if we set:</p>
-<p><span class="math display" id="eq:FP5">\[\begin{equation}
-k^2 = \frac{2mE}{\hbar^2},
-\tag{3.21}
-\end{equation}\]</span></p>
-<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(2.12)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
-<p><span class="math display" id="eq:FP6">\[\begin{equation}
-E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 \tag{3.22}
 \end{equation}\]</span></p>
-<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Schrodinger.html#eq:FP3">(3.19)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Schrodinger.html#eq:FP6">(3.22)</a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
-<div id="what-does-the-free-particle-solution-look-like" class="section level3 hasAnchor" number="3.3.1">
-<h3><span class="header-section-number">3.3.1</span> What does the free-particle solution look like?<a href="Schrodinger.html#what-does-the-free-particle-solution-look-like" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s take a closer look at one of the solutions in eq. <a href="Schrodinger.html#eq:FP3">(3.19)</a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
-<p><span class="math display" id="eq:FP7">\[\begin{equation}
-\psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
+<p>Comparing the second derivative in eq. <a href="Schrodinger.html#eq:FP4">(3.22)</a> with eq. <a href="Schrodinger.html#eq:FP2">(3.20)</a>, we immediately see that if we set:</p>
+<p><span class="math display" id="eq:FP5">\[\begin{equation}
+k^2 = \frac{2mE}{\hbar^2},
 \tag{3.23}
 \end{equation}\]</span></p>
-<p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we will see in chapter <a href="Models.html#Models">4</a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in figure <a href="Schrodinger.html#fig:fig1c3">3.1</a>.</p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="#eq:wp1b">(<strong>??</strong>)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p><span class="math display" id="eq:FP6">\[\begin{equation}
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\tag{3.24}
+\end{equation}\]</span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. <a href="Schrodinger.html#eq:FP3">(3.21)</a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of eq. <a href="Schrodinger.html#eq:FP6">(3.24)</a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+<div id="what-does-the-free-particle-solution-look-like" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> What does the free-particle solution look like?<a href="Schrodinger.html#what-does-the-free-particle-solution-look-like" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s take a closer look at one of the solutions in eq. <a href="Schrodinger.html#eq:FP3">(3.21)</a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
+<p><span class="math display" id="eq:FP7">\[\begin{equation}
+\psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
+\tag{3.25}
+\end{equation}\]</span></p>
+<p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we saw in section <a href="Schrodinger.html#BornInterpretation">3.2</a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in figure <a href="Schrodinger.html#fig:fig1c3">3.1</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig1c3"></span>
-<img src="img/FP_planewave.png" alt="Top: a cosine wave and a sine wave of the same wavelength, shifted by a quarter wavelength, representing the real and imaginary parts of a plane wave. Bottom: the probability density is a flat horizontal band, the same at every position." width="85%" />
+<img src="img/FP_planewave.png" alt="Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position." width="85%" />
 <p class="caption">
-Figure 3.1: Top: real (solid) and imaginary (dashed) parts of a free-particle plane wave. Bottom: its probability density, which is the same everywhere.
+Figure 3.1: Top: a free-particle plane wave, <span class="math inline">\(\psi(x)=e^{ikx}\)</span>, with its real part, <span class="math inline">\(\cos(kx)\)</span>, in the vertical plane (blue) and its imaginary part, <span class="math inline">\(\sin(kx)\)</span>, in a horizontal plane drawn in perspective (red). Bottom: its probability density, which is the same everywhere.
 </p>
 </div>
 <p>This result is surprising. A particle described by a plane wave has a perfectly well-defined momentum, <span class="math inline">\(p=\hbar k\)</span>, but its probability density is the same everywhere: the particle is equally likely to be found at any point in the universe. The plane wave also extends forever in both directions, so the total probability, <span class="math inline">\(\int|\psi|^2dx\)</span>, is infinite, and the wave function cannot be normalized. A real particle, such as an electron shot from an electron gun, is certainly found somewhere in a limited region of space. Plane waves, therefore, are useful mathematical solutions, but they do not describe real particles by themselves.</p>
 </div>
-<div id="WavePackets" class="section level3 hasAnchor" number="3.3.2">
-<h3><span class="header-section-number">3.3.2</span> Wave packets<a href="Schrodinger.html#WavePackets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="WavePackets" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Wave packets<a href="Schrodinger.html#WavePackets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The way out of this problem comes from the principle of superposition that we discussed for classical waves in chapter <a href="Classical.html#Classical">1</a>. Since the Schrödinger equation is linear, any sum of plane waves with different wave vectors is also a solution. When we add waves with slightly different wavelengths, they interfere constructively in some regions and destructively in others. This is illustrated in figure <a href="Schrodinger.html#fig:fig2c3">3.2</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2c3"></span>
 <img src="img/FP_buildpacket.png" alt="Three panels. Top: the sum of two plane waves shows regularly repeating beats. Middle: the sum of five waves shows sharper bunches that still repeat. Bottom: the sum of 41 waves shows a single localized bunch of oscillations, with the wave canceling to zero everywhere else." width="85%" />
@@ -577,9 +594,9 @@ Figure 3.2: Superposition of plane waves with wave vectors close to <span class=
 <p>Two waves produce a regular pattern of <em>beats</em>, the same effect that musicians use to tune two instruments to the same note. As we add more waves, with wave vectors spread over a range around a central value <span class="math inline">\(k_0\)</span>, the regions of constructive interference get narrower and farther apart. With a continuous distribution of wave vectors, only one region of constructive interference survives, and the waves cancel each other everywhere else. The result is a <strong>wave packet</strong>: a wave that oscillates with wavelength close to <span class="math inline">\(2\pi/k_0\)</span> inside a limited region of space, and is essentially zero outside of it. Mathematically, a wave packet is written as a continuous sum (an integral) of plane waves, each with its own amplitude, <span class="math inline">\(\phi(k)\)</span>:</p>
 <p><span class="math display" id="eq:FP8">\[\begin{equation}
 \Psi(x,t) = \int \phi(k)\, e^{i\left(kx - \omega(k) t\right)} dk, \qquad \omega(k) = \frac{E}{\hbar} = \frac{\hbar k^2}{2m},
-\tag{3.24}
+\tag{3.26}
 \end{equation}\]</span></p>
-<p>where each plane wave evolves in time with its own frequency, as we saw in eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.15)</a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
+<p>where each plane wave evolves in time with its own frequency, as we saw in eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.17)</a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
 <p>A few important considerations can be made by analyzing wave packets:</p>
 <ol style="list-style-type: decimal">
 <li><strong>The price of localization</strong>: to build a packet that is localized in space, we need plane waves with a <em>range</em> of wave vectors, and therefore a range of momenta, <span class="math inline">\(p=\hbar k\)</span>. The more localized we want the particle to be, the wider the range of momenta that we need, as shown in figure <a href="Schrodinger.html#fig:fig3c3">3.3</a>. A plane wave is the extreme case of a perfectly defined momentum and a completely undefined position. A very narrow packet has a well-defined position, but a very uncertain momentum. For the packets in figure <a href="Schrodinger.html#fig:fig3c3">3.3</a>, the widths in position, <span class="math inline">\(\Delta x\)</span>, and in wave vector, <span class="math inline">\(\Delta k\)</span>, are related by <span class="math inline">\(\Delta x\,\Delta k = \frac{1}{2}\)</span>, or, using <span class="math inline">\(p=\hbar k\)</span>, <span class="math inline">\(\Delta x\,\Delta p = \frac{\hbar}{2}\)</span>. This is a first glimpse of the Heisenberg uncertainty principle, which we will discuss in chapter <a href="Weirdness.html#Weirdness">8</a>.</li>
@@ -605,10 +622,10 @@ Figure 3.4: Probability density of a free-particle wave packet at four different
 <p>The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in chapter <a href="Operators.html#Operators">6</a>.</p>
 </div>
 </div>
-<div id="rev3" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Chapter Review<a href="Schrodinger.html#rev3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="quest3" class="section level3 hasAnchor" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Study Questions<a href="Schrodinger.html#quest3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="rev3" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Chapter Review<a href="Schrodinger.html#rev3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest3" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Study Questions<a href="Schrodinger.html#quest3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\psi(x,t) = \exp[-kx + \omega t]\)</span></li>
@@ -769,8 +786,8 @@ Answers (select to reveal)
 </div>
 <div class="footnotes">
 <hr />
-<ol start="7">
-<li id="fn7"><p>A similar presentation can be found in Prof. C. David Sherrill’s <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">A Brief Review of Elementary Quantum Chemistry</a> notes.<a href="Schrodinger.html#fnref7" class="footnote-back">↩︎</a></p></li>
+<ol start="1">
+<li id="fn1"><p>A similar presentation can be found in Prof. C. David Sherrill’s <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">A Brief Review of Elementary Quantum Chemistry</a> notes.<a href="Schrodinger.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
