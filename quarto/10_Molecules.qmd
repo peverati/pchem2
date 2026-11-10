@@ -1,0 +1,298 @@
+# Introduction to Molecules {#sec-Molecules}
+In the previous chapter we saw that a single extra electron is enough to make the TISEq impossible to solve exactly. Molecules add a further complication: they contain several nuclei, which can also move. In this chapter we will introduce the two approximations that make molecules tractable: the Born–Oppenheimer approximation, which separates the motion of the nuclei from that of the electrons, and the Hartree–Fock method, which extends the ideas that we used for the helium atom to molecular orbitals.
+
+## The Molecular Hamiltonian
+
+For a molecule, we can decompose the Hamiltonian operator as:
+
+$$
+\hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{V}_{ee}
+$$ {#eq-molham1}
+
+where we have decomposed the kinetic energy operator into nuclear and electronic terms, $\hat{K}_N$ and $\hat{K}_e$, as well as the potential energy operator into terms representing the interactions between nuclei, $\hat{V}_{NN}$, between electrons, $\hat{V}_{ee}$, and between electrons and nuclei, $\hat{V}_{eN}$. Each term can then be calculated using:
+
+$$
+\begin{aligned}
+\hat{K}_{N} &=-\sum_{i}^{\text{nuclei}}{\frac  {\hbar ^{2}}{2M_{i}}}\nabla_{{{\mathbf  {R}}_{i}}}^{2} \\
+\hat  {K}_{e} &=-\sum_{i}^{\text{electrons}}{\frac  {\hbar ^{2}}{2m_{e}}}\nabla _{{{\mathbf{r}}_{i}}}^{2} \\
+\hat{V}_{{NN}} &= \sum _{i}\sum _{{j>i}}{\frac  {Z_{i}Z_{j}e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {R}}_{j}\right|}} \\
+\hat  {V}_{{eN}} &=-\sum _{i}\sum _{j}{\frac  {Z_{i}e^{2}}{4\pi \varepsilon_{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {r}}_{j}\right|}} \\
+\hat{V}_{{ee}} &= \sum _{i}\sum _{{j>i}}{\frac  {e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {r}}_{i}-{\mathbf  {r}}_{j}\right|}},
+\end{aligned}
+$$ {#eq-molham2}
+
+where $M_i$, $Z_i$, and $\mathbf{R}_i$ are the mass, atomic number, and coordinates of nucleus $i$, respectively, and all other symbols are the same as those used in @eq-atom1 for the many-electron atom Hamiltonian. Notice that the two potential energy terms between like particles ($\hat{V}_{NN}$ and $\hat{V}_{ee}$) are positive (repulsive), while the term between electrons and nuclei is negative (attractive). The chemical bond is the result of a delicate balance between these three terms and the kinetic energy.
+
+### Small terms in the molecular Hamiltonian
+@Eq-molham1 is often called the "exact" non-relativistic Hamiltonian of a molecule, but it is worth remembering what it leaves out. The first missing piece is relativity. The valence electrons of light atoms move at a small fraction of the speed of light (less than 1% for the electron in the hydrogen atom), but the inner electrons of heavy atoms are pulled so strongly by the nucleus that relativistic effects become important. The second missing piece is the coupling between the spin of each electron and its orbital motion. We can picture it by sitting on the electron: from its point of view, the charged nucleus is the one that moves around it, and this moving charge creates a magnetic field proportional to the orbital angular momentum, $\mathbf{L}$. The electron carries its own magnetic moment, proportional to its spin, $\mathbf{S}$, and the interaction between the two gives an energy term proportional to $\mathbf{L} \cdot \mathbf{S}$, called *spin–orbit coupling*. Both effects grow quickly with the nuclear charge, so they are small for the molecules made of first- and second-row atoms that we discuss in this textbook, and we will neglect them from now on.
+
+## The Born–Oppenheimer Approximation
+
+Before looking at molecules, let's recall a general property that we already used for the helium atom. Suppose that a Hamiltonian can be written as the sum of two terms, each depending on a different set of coordinates, $q_1$ and $q_2$:
+
+$$
+\hat{H} = \hat{H}_1(q_1) + \hat{H}_2(q_2),
+$$ {#eq-molham3}
+
+with the TISEq:
+
+$$
+\hat{H} \psi(q_1, q_2) = E \psi(q_1, q_2).
+$$ {#eq-molham4}
+
+Let's try a wave function written as a product of two functions, one for each set of coordinates:
+
+$$
+\psi(q_1, q_2) = \psi_1(q_1) \psi_2(q_2),
+$$ {#eq-molham5}
+
+where $\psi_1(q_1)$ and $\psi_2(q_2)$ are eigenfunctions of $\hat{H}_1$ and $\hat{H}_2$ with eigenvalues $E_1$ and $E_2$. Since $\hat{H}_1$ acts only on $q_1$ and $\hat{H}_2$ only on $q_2$, we obtain:
+
+$$
+\begin{aligned}
+\displaystyle \hat{H} \psi(q_1, q_2) &= ( \hat{H}_1 + \hat{H}_2 ) \psi_1(q_1) \psi_2(q_2) \\
+ 	&= \psi_2(q_2)\hat{H}_1 \psi_1(q_1) + \psi_1(q_1)\hat{H}_2 \psi_2(q_2) \\
+ 	&= E_1 \psi_1(q_1) \psi_2(q_2) + E_2 \psi_1(q_1) \psi_2(q_2) \\
+ 	&= (E_1 + E_2) \psi_1(q_1) \psi_2(q_2) \\
+ 	&= E \psi(q_1, q_2).
+\end{aligned}
+$$ {#eq-molham6}
+
+In other words, when a Hamiltonian is a sum of independent pieces, its eigenfunctions are products of the eigenfunctions of each piece, and its eigenvalues are sums of their eigenvalues. A big problem is broken into smaller ones.
+
+Can we use this trick to separate the electrons from the nuclei in @eq-molham1? Not exactly, because the electron–nucleus attraction, $\hat{V}_{eN}$, depends on the coordinates of both electrons and nuclei at the same time. However, nuclei are much heavier than electrons (a proton is about $1{,}836$ times heavier than an electron), so they move much more slowly. From the point of view of the electrons, the nuclei are almost standing still; from the point of view of the nuclei, the electrons adjust almost instantaneously to any change in their positions. This suggests that we can write the total wave function, approximately, as:
+
+$$
+\psi(\mathbf{r}, \mathbf{R}) \approx \psi_e(\mathbf{r}; \mathbf{R}) \psi_N(\mathbf{R}),
+$$ {#eq-molham7}
+
+where $\psi_e(\mathbf{r}; \mathbf{R})$ is the electronic wave function calculated with the nuclei held fixed at positions $\mathbf{R}$. The semicolon indicates that $\psi_e$ is a function of the electronic coordinates $\mathbf{r}$ that depends only *parametrically* on $\mathbf{R}$: for each arrangement of the nuclei we get a different electronic wave function, but the nuclear positions are not variables of the electronic problem. This approximation is called the **Born–Oppenheimer approximation**, and it is accurate for the vast majority of chemical applications.
+
+In practice, we fix the nuclei at some configuration, $\mathbf{R_a}$, and solve the TISEq for the electrons only, using the **electronic Hamiltonian**:
+
+$$
+\hat{H}_{\text{e}} = \hat{K}_e(\mathbf{r}) +
+\hat{V}_{eN}\left(\mathbf{r}; \mathbf{R_a} \right) +
+\hat{V}_{ee}(\mathbf{r}),
+$$ {#eq-molham8}
+
+where we have dropped the nuclear kinetic energy, $\hat{K}_N$, since the nuclei are fixed (and, in any case, $\hat{K}_N$ is smaller than $\hat{K}_e$ by roughly the ratio $\frac{m_e}{M_i}$). We have also left out $\hat{V}_{NN}(\mathbf{R_a})$, since for fixed nuclei it is just a constant that shifts all the eigenvalues by the same amount and can be added back at the end. The electron–nucleus attraction stays in the electronic Hamiltonian, but now it depends on $\mathbf{R_a}$ only as a parameter. The electronic Hamiltonian results in the following TISEq:
+
+$$
+\hat{H}_{e} \psi_e \left(\mathbf{r}; \mathbf{R_a} \right) = E_{e}(\mathbf{R_a}) \psi_e \left(\mathbf{r}; \mathbf{R_a} \right),
+$$ {#eq-molham9}
+
+which is the equation that we will use to explain the chemical bond in the next chapter. Notice that @eq-molham9 is not the total TISEq of the system, since it says nothing about the motion of the nuclei. As is customary in quantum chemistry, in the remainder of this textbook we will use the term "total energy" for the "total energy at fixed geometry," which is $E_{e}$ of @eq-molham9 plus the constant nuclear–nuclear repulsion, $V_{NN}(\mathbf{R_a})$ (i.e., everything except the nuclear kinetic energy).
+
+### Potential energy surfaces
+
+The Born–Oppenheimer approximation has a very important consequence. If we repeat the electronic calculation for many different arrangements of the nuclei, we obtain the total energy at fixed geometry as a function of the nuclear coordinates:
+
+$$
+U(\mathbf{R}) = E_e(\mathbf{R}) + V_{NN}(\mathbf{R}).
+$$ {#eq-pes1}
+
+This function is called the **potential energy surface (PES)**, and it is the potential energy that the nuclei feel when they move. The motion of the nuclei (vibrations, rotations, and chemical reactions) can then be described by solving a second TISEq for the nuclei, with the PES playing the role of the potential: $\left[\hat{K}_N + U(\mathbf{R})\right]\psi_N(\mathbf{R}) = E\,\psi_N(\mathbf{R})$.
+
+For a diatomic molecule, the only coordinate that matters is the internuclear distance, $R$, and the PES reduces to a curve. The potential energy curve of the hydrogen molecule is plotted in @fig-fig1c10.
+
+
+![Potential energy curve of the hydrogen molecule (blue), compared with its harmonic approximation (orange, dashed). The horizontal lines are the vibrational energy levels, and the energy is measured from the separated atoms. The purple dot marks the equilibrium bond distance.](img/H2_PEC.png){#fig-fig1c10 fig-alt="Potential energy curve of the hydrogen molecule versus internuclear distance: a steep wall at short distance, a minimum at 1.4 bohr about 458 kilojoules per mole deep, and a flat approach to zero at large distance. A parabola fits only near the minimum, and horizontal lines mark vibrational levels that get closer together near the top." width="80%"}
+
+
+A few important considerations can be made by analyzing this curve:
+
+1. **Equilibrium geometry**: the minimum of the curve, at $R_e=1.40\,a_0=0.74\,\text{Å}$, is the equilibrium bond distance of the molecule. For larger molecules, minima of the PES correspond to stable structures, and finding them is called *geometry optimization*.
+
+2. **Bond energy**: the depth of the well, $D_e=458\text{ kJ/mol}$, is the energy needed to separate the two atoms starting from the bottom of the well. The molecule, however, can never sit exactly at the bottom: even in its lowest vibrational level it has a zero-point energy, as we saw for the harmonic oscillator in @sec-Models. The experimentally measurable dissociation energy, $D_0=D_e-\text{ZPE}=432\text{ kJ/mol}$, is measured from the lowest vibrational level.
+
+3. **Vibrations**: close to the minimum, the curve looks like a parabola, and the harmonic oscillator of @sec-Models is a good model, with force constant equal to the curvature of the PES at the minimum, $k=\left.\frac{d^2U}{dR^2}\right|_{R_e}$. As the energy increases, the real curve becomes wider than the parabola, and it flattens out towards the dissociation limit. As a consequence, the vibrational levels get closer to each other as they approach dissociation, unlike the equally spaced levels of the harmonic oscillator. We will see how these features show up in experiments in @sec-Spectroscopy.
+
+For a molecule with $N_{\text{at}}$ atoms, the PES depends on $3N_{\text{at}}-6$ internal coordinates ($3N_{\text{at}}-5$ for linear molecules), and it is a surface in many dimensions. We cannot draw it, but we can get a feeling for its features using a model surface in two dimensions, such as the one in @fig-fig2c10.
+
+
+![(a) Contour plot of a model two-dimensional potential energy surface (the Müller–Brown surface). White dots mark minima, red crosses mark saddle points (transition states), and the dashed line is the minimum energy path that connects them. (b) Energy along the minimum energy path, plotted as a function of the distance traveled along it: the reaction coordinate.](img/PES_2D.png){#fig-fig2c10 fig-alt="Left: a contour map of an energy surface with three valleys labeled A, B, and C, connected by a dashed path that passes over two saddle points labeled TS1 and TS2. Right: the energy along the dashed path, starting low at A, rising to a high peak at TS1, dropping to a shallow valley at B, crossing a small peak at TS2, and ending at C. An arrow marks the activation energy from A to TS1." width="100%"}
+
+
+Each minimum (A, B, and C) corresponds to a stable structure of the molecule, such as a reactant, a product, or an intermediate. To go from one minimum to another, the molecule must pass over a mountain pass, called a **saddle point**: a point that is a maximum along the path that connects the two minima, but a minimum along every other direction. In chemistry, these saddle points are the **transition states** of chemical reactions, and the energy difference between a minimum and the transition state is the activation energy of the reaction. 
+
+If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the **minimum energy path**, and it is shown as a dashed line in [@fig-fig2c10]a. The distance traveled along this path, measured from the starting minimum, is called the **reaction coordinate**. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in [@fig-fig2c10]b, the many-dimensional surface reduces to the familiar one-dimensional *reaction profile* of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates $q_1$ or $q_2$, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.
+
+## Solving the Electronic Eigenvalue Problem
+
+Once we have invoked the Born–Oppenheimer approximation, we can try to solve the electronic TISEq in @eq-molham9. For any molecule with more than one electron (i.e., all molecules except $\mathrm{H}_2^+$ and a few exotic ions), we need to keep in mind the antisymmetry of the wave function, so we write the electronic wave function as a Slater determinant, as we did for atoms in @sec-Atoms. Then we need to approximate the Hamiltonian, since the electron-electron repulsion term does not allow an analytic solution. Similarly to the many-electron atom case, the simplest approximation is to use the variational method and to treat the electron-electron repulsion only in an average way, as we did for the helium atom in the previous chapter. This approximation is called the Hartree–Fock method.
+
+### The Hartree–Fock Method
+The main difference when we apply the variational principle to a molecular Slater determinant is that we need orbitals (one-electron wave functions) that extend over the entire molecule. We can build them by assuming that, close to each nucleus, a molecular orbital looks similar to the orbitals of the corresponding atom. The molecular orbital can then be written as a linear combination of atomic contributions. This method is called **linear combination of atomic orbitals (LCAO)**. In practice, we expand each molecular orbital $\psi(\mathbf{r})$ as a linear combination of suitable basis functions $f_i(\mathbf{r})$ centered on the atoms:
+
+$$
+\psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}).
+$$ {#eq-molham10}
+
+A consequence of the LCAO method is that basis functions on two different atoms are not orthogonal to each other, so the simplification that we used to go from @eq-var4 to @eq-var5 is not possible anymore. Using the following notation for the integrals:
+
+$$
+\displaystyle H_{ij} = \int f_i^* {\hat H} f_j d\mathbf{\tau}\;, \qquad \displaystyle S_{ij} = \int f_i^* f_j d\mathbf{\tau},
+$$ {#eq-molham11}
+
+the variational energy of @eq-var2 becomes:
+
+$$
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
+$$ {#eq-molham11b}
+
+The integrals $S_{ij}$ are called **overlap integrals**, and they measure how much two basis functions share the same region of space. To find the best orbital, we minimize this energy with respect to all the coefficients $c_i$, setting each derivative to zero. This gives a set of $m$ linear equations for the coefficients, which have a non-trivial solution only if the following **secular determinant** is equal to zero:
+
+$$
+\left|\begin{matrix}
+H_{11}-ES_{11}   & H_{12}-ES_{12}   & \cdots & H_{1m}-ES_{1m}\\
+H_{21}-ES_{21}   & H_{22}-ES_{22}   & \cdots & H_{2m}-ES_{2m}\\
+\vdots           &   \vdots         & \ddots & \vdots\\
+H_{m1}-ES_{m1}   & H_{m2}-ES_{m2}   & \cdots & H_{mm}-ES_{mm}
+\end{matrix}\right|=0,
+$$ {#eq-molham12}
+
+where $m$ is the number of basis functions. Expanding the determinant gives a polynomial of degree $m$ in $E$, whose $m$ roots are the energies of the molecular orbitals. For each root, the linear equations give the corresponding coefficients. We will solve this problem explicitly for the simplest molecules in the next chapter.
+
+#### The Fock operator {.unnumbered}
+What Hamiltonian should we use in @eq-molham11? For a one-electron molecule, such as $\mathrm{H}_2^+$, it is simply the electronic Hamiltonian of @eq-molham8. For more than one electron, the Hartree–Fock method replaces the true many-electron problem with a set of one-electron problems, one for each occupied spin-orbital $\chi_i$:
+
+$$
+\hat{f}\, \chi_i = \varepsilon_i\, \chi_i,
+$$ {#eq-hfeq1}
+
+where $\varepsilon_i$ is the energy of the orbital, and $\hat{f}$ is an effective one-electron Hamiltonian called the **Fock operator**:
+
+$$
+\hat{f} = \hat{h} + \sum_{j}^{\text{occupied}} \left( \hat{J}_j - \hat{K}_j \right).
+$$ {#eq-hfeq2}
+
+Each piece of $\hat{f}$ has a clear physical meaning:
+
+1. $\hat{h}$ is the **core Hamiltonian**: the kinetic energy of one electron plus its attraction to all nuclei. This is all there is in a one-electron molecule.
+2. $\hat{J}_j$ is the **Coulomb operator**: the repulsion felt by an electron because of the *average* charge distribution, $|\chi_j|^2$, of the electron described by orbital $\chi_j$. This is the "average repulsion" that we added back for the helium atom in @sec-Atoms.
+3. $\hat{K}_j$ is the **exchange operator**. It has no classical analog, and it appears because the wave function is a Slater determinant. It acts only between electrons with the same spin, and it lowers their repulsion, since the antisymmetry of the wave function keeps same-spin electrons away from each other (two electrons with the same spin can never be found at the same point, as a consequence of the Pauli exclusion principle).
+
+@Eq-hfeq1 are called the **Hartree–Fock equations**. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through $\hat{J}_j$ and $\hat{K}_j$, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, @eq-molham10, the Hartree–Fock equations take the form of the secular determinant in @eq-molham12, with the integrals $H_{ij}$ replaced by the matrix elements of the Fock operator, $F_{ij} = \int f_i^* \hat{f} f_j\, d\mathbf{\tau}$.
+
+#### The self-consistent-field procedure {.unnumbered}
+Since the Fock operator and its solutions depend on each other, the Hartree–Fock equations cannot be solved in one step. Instead, they are solved iteratively, using a cycle called the **self-consistent-field (SCF) procedure**, which is summarized in @fig-fig3c10. Starting from an initial guess of the coefficients, we build the Fock operator, solve the secular determinant, and obtain new coefficients. These are used to build an improved Fock operator, and the cycle is repeated until neither the orbitals nor the energy change anymore (within a chosen threshold). At that point, the orbitals are "consistent" with the field that they generate, and the energy of the molecule can be calculated from them.
+
+
+![Flowchart of the self-consistent-field (SCF) procedure used to solve the Hartree–Fock equations.](img/SCF_cycle.png){#fig-fig3c10 fig-alt="Flowchart of the self-consistent-field procedure: choose basis and geometry, compute integrals, guess coefficients, build the Fock operator, solve the secular determinant, and check convergence, looping back to building the Fock operator until converged." width="55%"}
+
+
+The SCF procedure is too tedious to perform by hand, even for small molecules, but it is easily done by computer programs. Every time that you run a quantum chemistry calculation, the first thing the program does is solve this cycle.
+
+## Chapter Review {#sec-rev10}
+### Study Questions {#sec-quest10}
+**1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?**
+
+a. only electronic kinetic energy and electron–nuclear attraction
+b. only nuclear kinetic energy and nuclear–nuclear repulsion
+c. spin–orbit and relativistic corrections only
+d. only electron–electron repulsion and nuclear–nuclear repulsion
+e. electronic and nuclear kinetic energies, electron–nuclear, electron–electron, and nuclear–nuclear interactions
+
+---
+
+**2. What makes the exact molecular Schrödinger equation harder than the atomic case?**
+
+a. electrons disappear in molecules
+b. nuclei can be treated classically in atoms but not in molecules
+c. the presence of multiple moving nuclei in addition to many electrons
+d. there is no Coulomb interaction in molecules
+e. the electron mass changes in molecules
+
+---
+
+**3. What is the central physical idea behind the Born–Oppenheimer approximation?**
+
+a. electrons are much heavier than nuclei
+b. nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion
+c. electrons and nuclei move with the same characteristic time scale
+d. both electrons and nuclei can be treated as classical particles
+e. nuclei do not contribute to the energy at all
+
+
+---
+
+**4. Mathematically, the Born–Oppenheimer approximation relies on what property of the Hamiltonian?**
+
+a. exact commutation with the position operator
+b. approximate separability into electronic and nuclear parts
+c. absence of kinetic energy terms
+d. Hermiticity of the potential energy operator
+e. linearity of the time derivative
+
+
+---
+
+**5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by "total energy" of a molecule at fixed geometry?**
+
+a. electronic energy $E_e$ at that geometry plus the constant nuclear–nuclear repulsion term
+b. nuclear kinetic energy only
+c. electronic energy without nuclear–nuclear repulsion
+d. purely classical potential energy
+e. nuclear vibrational zero‑point energy
+
+---
+
+**6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?**
+
+a. a PES is the graph of electronic energy (plus nuclear repulsion) as a function of nuclear geometry
+b. a PES is the graph of nuclear kinetic energy versus time
+c. a PES is independent of nuclear positions
+d. a PES depends only on electron spin
+e. PESs are defined only for diatomic molecules
+
+
+---
+
+**7. Which of the following is *not* a direct consequence or assumption of the Born–Oppenheimer approximation?**
+
+a. electronic and nuclear motions can be approximately separated
+b. electrons move in the field of fixed nuclei
+c. nuclear motion can be described on a PES obtained from electronic energies
+d. electron–nuclear coupling can never be important for any property
+e. total wave functions are approximated as products of electronic and nuclear parts
+
+---
+
+**8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbitals leads to what?**
+
+a. the time‑dependent Schrödinger equation
+b. an over‑determined system with no nontrivial solutions
+c. a single algebraic equation for the total energy
+d. purely classical equations of motion for nuclei
+e. a set of coupled one‑electron equations involving the Fock operator (Hartree–Fock equations)
+
+---
+
+**9. Which of the following sentences describes the Fock operator $\hat{f}$ in Hartree–Fock theory?**
+
+a. a two‑electron operator containing only electron–electron repulsion
+b. a purely nuclear operator
+c. a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron–electron (Coulomb and exchange) terms
+d. an operator that depends only on spin and not on spatial coordinates
+e. the exact electronic Hamiltonian
+
+---
+
+**10. In the Hartree–Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?**
+
+a. by forcing all electrons into different nuclei
+b. by requiring all spatial orbitals to be orthogonal but ignoring spin
+c. by constructing an antisymmetric Slater determinant of spin‑orbitals
+d. by adding a large repulsive potential at short inter‑electronic distances
+e. by using only hydrogen‑like orbitals
+
+
+---
+
+::: {.callout-tip collapse="true" icon="false"}
+## Answers
+
+1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
+:::
+
