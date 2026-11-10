@@ -3,8 +3,6 @@ aliases:
   - Classical.html
 ---
 
-\cleardoublepage
-\pagenumbering{arabic}
 # Brief Summary of Classical Physics {#sec-Classical}
 Quantum mechanics cannot be derived from classical physics, but it was built by physicists who knew classical physics very well, and many of its ideas and equations are borrowed from it. Before discussing, in the next chapter, the experiments that classical physics could not explain, we will review the classical concepts that we will need the most: the description of motion through forces and through energy, the electrostatic interaction between charged particles, and the physics of waves.
 

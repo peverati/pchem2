@@ -70,6 +70,8 @@ format:
       text: |
         \usepackage{cancel}
         \usepackage{booktabs}
+        \usepackage{pdfpages}
+        \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
         \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
