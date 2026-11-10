@@ -5,6 +5,8 @@ project:
     - "*.qmd"
   resources:
     - .nojekyll   # GitHub Pages: serve site_libs/ as is
+    - img/logo-light.png
+    - img/logo-dark.png
 
 lang: en
 language:
@@ -47,10 +49,13 @@ crossref:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
     css: quarto.css
     html-math-method: mathjax
     include-in-header: punctuation.html
+    include-after-body: logo.html
     number-depth: 3
     fig-align: center
   pdf:

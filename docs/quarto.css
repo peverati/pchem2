@@ -1,4 +1,20 @@
 /* Captions with WCAG AA contrast */
 .figure-caption, figcaption, .table-caption { color: #595959; }
 /* Wide display equations scroll instead of being cut off */
-.math.display, mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+span.math.display { display: block; max-width: 100%; }
+mjx-container[display="true"] { display: block; max-width: 100%; min-width: 0 !important; overflow-x: auto; overflow-y: hidden; }
+/* Dark mode: keep captions readable */
+body.quarto-dark .figure-caption, body.quarto-dark figcaption, body.quarto-dark .table-caption { color: #b8b8b8; }
+
+/* Peverati research group logo (top right) */
+.lab-logo { display: block; flex: none; }
+.lab-logo img { height: 48px; width: auto; }
+.lab-logo.in-margin { margin: 0.5rem 0 1rem; }
+.lab-logo.in-bar { margin-left: auto; align-self: center; }
+.lab-logo.in-bar img { height: 30px; }
+/* Quarto puts .quarto-light or .quarto-dark on <body> when the theme toggles. */
+.lab-logo .logo-for-dark { display: none; }
+body.quarto-dark .lab-logo .logo-for-light { display: none; }
+body.quarto-dark .lab-logo .logo-for-dark { display: block; }
+/* let the breadcrumb shrink so the logo stays on screen in the narrow top bar */
+.quarto-secondary-nav .container-fluid > nav, .quarto-secondary-nav .container-fluid > a.flex-grow-1 { min-width: 0; overflow: hidden; }
