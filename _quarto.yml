@@ -75,4 +75,4 @@ format:
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
         \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-    fig-pos: "H"
+    fig-pos: "htbp"

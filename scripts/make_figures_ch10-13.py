@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import FancyBboxPatch
+from matplotlib.patches import FancyBboxPatch, Polygon
 from scipy.special import erf
 from scipy.optimize import minimize
 
@@ -157,30 +157,47 @@ ax.set_ylabel(r"Nuclear coordinate $q_2$")
 ax.grid(False)
 save(fig, "PES_2D.png")
 
-# SCF flowchart
-fig, ax = plt.subplots(figsize=(8, 9))
+# SCF flowchart with a decision step
+fig, ax = plt.subplots(figsize=(8, 10.5))
 ax.axis("off")
+W, H = 0.72, 0.075
 boxes = [
-    (0.5, 0.92, "Choose basis functions $f_i$ and\nnuclear geometry $\\mathbf{R}_a$"),
-    (0.5, 0.76, "Calculate integrals $S_{ij}$, $K_{ij}$, $V_{ij}$, $V_{ijkl}$"),
-    (0.5, 0.60, "Guess the coefficients $c_i$\n(i.e., the occupied orbitals)"),
-    (0.5, 0.44, "Build the Fock operator from\nthe current orbitals"),
-    (0.5, 0.28, "Solve the secular determinant\n$\\rightarrow$ new orbitals and energies"),
-    (0.5, 0.10, "Converged?  Yes $\\rightarrow$ final energy"),
+    (0.92, "Choose basis functions $f_i$ and\nnuclear geometry $\\mathbf{R}_a$"),
+    (0.80, "Calculate integrals $S_{ij}$, $K_{ij}$, $V_{ij}$, $V_{ijkl}$"),
+    (0.68, "Guess the coefficients $c_i$\n(i.e., the occupied orbitals)"),
+    (0.56, "Build the Fock operator from\nthe current orbitals"),
+    (0.44, "Solve the secular determinant\n$\\rightarrow$ new orbitals and energies"),
 ]
-for x, y, t in boxes:
-    ax.add_patch(FancyBboxPatch((x - 0.36, y - 0.055), 0.72, 0.11, boxstyle="round,pad=0.01",
-                                fc="#e8f0fa", ec=C[0], lw=2))
-    ax.text(x, y, t, ha="center", va="center", fontsize=16)
-for (x1, y1, _), (x2, y2, _) in zip(boxes[:-1], boxes[1:]):
-    ax.annotate("", xy=(x2, y2 + 0.06), xytext=(x1, y1 - 0.06), arrowprops=dict(arrowstyle="->", lw=2))
-ax.annotate("", xy=(0.88, 0.44), xytext=(0.88, 0.10),
-            arrowprops=dict(arrowstyle="->", lw=2, color=C[3], connectionstyle="arc3,rad=0"))
-ax.plot([0.86, 0.88], [0.10, 0.10], color=C[3], lw=2)
-ax.plot([0.86, 0.88], [0.44, 0.44], color=C[3], lw=2)
-ax.text(0.90, 0.27, "No: update\norbitals and\nrepeat", color=C[3], fontsize=15, va="center")
+X = 0.45
+def box(y, t, fc="#e8f0fa", ec=C[0]):
+    ax.add_patch(FancyBboxPatch((X - W / 2, y - H / 2), W, H, boxstyle="round,pad=0.01", fc=fc, ec=ec, lw=2))
+    ax.text(X, y, t, ha="center", va="center", fontsize=16)
+def arrow(x1, y1, x2, y2, color="k"):
+    ax.annotate("", xy=(x2, y2), xytext=(x1, y1), arrowprops=dict(arrowstyle="-|>", lw=2, color=color, mutation_scale=18))
+for y, t in boxes:
+    box(y, t)
+for (y1, _), (y2, _) in zip(boxes[:-1], boxes[1:]):
+    arrow(X, y1 - H / 2 - 0.01, X, y2 + H / 2 + 0.01)
+# decision diamond
+yd, dw, dh = 0.285, 0.26, 0.075
+ax.add_patch(Polygon([(X, yd + dh), (X + dw, yd), (X, yd - dh), (X - dw, yd)], closed=True, fc="#fff4e0", ec=C[1], lw=2))
+ax.text(X, yd, "Converged?", ha="center", va="center", fontsize=16)
+arrow(X, boxes[-1][0] - H / 2 - 0.01, X, yd + dh + 0.005)
+# Yes: down to the final result
+yf = 0.11
+box(yf, "Done: final energy\nand orbitals", fc="#e6f4e6", ec=C[2])
+arrow(X, yd - dh - 0.005, X, yf + H / 2 + 0.01, color=C[2])
+ax.text(X + 0.02, (yd - dh + yf + H / 2) / 2, "Yes", color=C[2], fontsize=16, va="center", fontweight="bold")
+# No: right, up, and back into the Fock box
+xr = X + W / 2 + 0.12
+yF = boxes[3][0]
+ax.plot([X + dw, xr], [yd, yd], color=C[3], lw=2)
+ax.plot([xr, xr], [yd, yF], color=C[3], lw=2)
+arrow(xr, yF, X + W / 2 + 0.012, yF, color=C[3])
+ax.text((X + dw + xr) / 2, yd + 0.012, "No", color=C[3], fontsize=16, ha="center", va="bottom", fontweight="bold")
+ax.text(xr + 0.015, (yd + yF) / 2, "update the\norbitals and\nrepeat", color=C[3], fontsize=15, va="center")
 ax.set_xlim(0, 1.15)
-ax.set_ylim(0, 1)
+ax.set_ylim(0.04, 0.98)
 save(fig, "SCF_cycle.png")
 
 # ---------------------------------------------------------------- Ch. 12
