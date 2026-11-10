@@ -81,10 +81,35 @@ Notice how the eigenvalues (i.e., the energy spectrum) do not depend on the azim
 
 In practice, this is not exactly correct either, because of a tiny effect called the [Lamb shift](https://en.wikipedia.org/wiki/Lamb_shift). The description of this effect requires going beyond the Schrödinger equation into the field of quantum electrodynamics. The Lamb shift, however, is not what is usually depicted in general chemistry textbooks as the $2s-2p$ energy difference. Such difference is usually discussed in the context of the aufbau principle and does not apply to hydrogen. In other words, the $2s-2p$ split is purely a many-electron effect, as we will discuss in chapter \@ref(Atoms). The energy levels of the hydrogen atom are plotted in figure \@ref(fig:fig0c5). 
 
-```{r fig0c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom.', fig.alt='Energy level diagram of the hydrogen atom for n equals 1 to 5, with levels getting closer together as n increases towards the ionization limit at zero, and each level split into its degenerate orbitals.'}
+```{r fig0c5, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Energy level diagram and degeneracy pattern for the first five levels of the hydrogen atom, with energies in atomic units (see the next section).', fig.alt='Energy level diagram of the hydrogen atom for n equals 1 to 5, with levels getting closer together as n increases towards the ionization limit at zero, and each level split into its degenerate orbitals.'}
 knitr::include_graphics('./img/H_levels.png')
 ```
 
+
+## Atomic Units {#AtomicUnits}
+
+The hydrogen atom energies in eq. \@ref(eq:HA7) contain a combination of fundamental constants, $\frac{e^2}{4\pi\varepsilon_0 a_0}$, that will appear over and over again whenever we deal with electrons in atoms and molecules. Writing $\hbar$, $m_e$, $e$, and $4\pi\varepsilon_0$ in every equation quickly becomes tedious, and the numbers that come out (energies of the order of $10^{-18}\;\text{J}$, distances of the order of $10^{-11}\;\text{m}$) are inconvenient. For this reason, chemists and physicists who work with atoms and molecules use a set of units tailored to them, called **atomic units (a.u.)**. Atomic units are built by choosing the units of mass, charge, angular momentum, and permittivity so that:
+
+\begin{equation}
+\hbar = m_e = e = 4\pi\varepsilon_0 = 1.
+(\#eq:au0)
+\end{equation}
+
+With this choice, the constants simply disappear from the equations. The unit of length becomes the Bohr radius, $a_0$, and the unit of energy, called the **hartree** ($E_h$), is twice the ionization energy of the hydrogen atom:
+
+\begin{equation}
+1\,E_h = \frac{e^2}{4\pi\varepsilon_0 a_0} = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
+(\#eq:aunits)
+\end{equation}
+
+In atomic units, the energy levels of the hydrogen atom, eq. \@ref(eq:HA7), take the very simple form:
+
+\begin{equation}
+E_n = -\frac{1}{2n^2}\;E_h,
+(\#eq:HA7au)
+\end{equation}
+
+so the ground state is at $-\frac{1}{2}\,E_h$ ($-13.6\;\text{eV}$, the value that we found with the Bohr model in chapter \@ref(Motivation)), the first excited level at $-\frac{1}{8}\,E_h$, and so on, as shown in figure \@ref(fig:fig0c5). Similarly, the Hamiltonian of the hydrogen atom becomes $\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}$, and the radial wave functions in the next section, which we write in terms of $r/a_0$, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs ($a_0$), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.
 
 ## The Radial Wave Functions
 

@@ -75,7 +75,7 @@ Topics a standard P-Chem 2 course covers that the book currently lacks, in sugge
   - [x] $G \rightarrow g$ for gravitational acceleration in Ch. 1.
   - [x] Bare $m$ as a quantum number replaced by $m_\ell$/$m_s$ where it appeared. Mass is kept as $m$ (the subscripted $m_\ell$ is standard and unambiguous).
   - [x] Ångström now written as `\text{Å}` everywhere (works in both MathJax and pdflatex).
-  - [x] Conversions stated once in Ch. 12 (eq. `aunits`) and in a Ch. 10 footnote; key results in Ch. 10–12 given in both $E_h$ and kJ/mol. (12b still uses kcal/mol, following the source data.)
+  - [x] Atomic units and conversions introduced once in Ch. 5 (section `AtomicUnits`, eq. `aunits`), referenced from Ch. 9 and Ch. 11; key results in Ch. 10–12 given in both $E_h$ and kJ/mol. (12b still uses kcal/mol, following the source data.)
 - [ ] **Use the bibliography** (M). `book.bib` exists but no citations are used. Add citations for borrowed material and a short "Further reading" list per chapter.
 - [ ] **Update the preface** (S). `index.Rmd` still refers to FS2020, Canvas, and Friday lectures.
 - [x] **Accessibility (HTML).** Descriptive `fig.alt` text on all 63 images; `lang: en`; keyboard-accessible answer reveals (`<details>`); descriptive link text; caption contrast raised to WCAG AA. Remaining: the PDF is not a tagged (accessible) PDF, and the gitbook theme's toolbar should be checked with an automated tool (e.g., WAVE or axe) on the live site.

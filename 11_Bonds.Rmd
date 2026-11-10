@@ -1,11 +1,6 @@
 # The Chemical Bond in Diatomic Molecules {#Bonds}
 
-In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the $\mathrm{H}_2^+$ molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as $\mathrm{N}_2$ and $\mathrm{O}_2$. To simplify the notation in this chapter, we will move away from SI units and use a set tailored for molecules, called *atomic units (a.u.)*. This set of units is built by setting $\hbar=e=m_e=4\pi\varepsilon_0=1$, which also makes the Bohr radius, $a_0$, the unit of length. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. \@ref(eq:HA7), simply become $E_n=-\frac{1}{2n^2}$ in the a.u. of energy, which is called the hartree, $E_h$. Since chemists usually prefer other energy units, we will report the most important results in kJ/mol as well, using:
-
-\begin{equation}
-1\,E_h = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
-(\#eq:aunits)
-\end{equation}
+In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the $\mathrm{H}_2^+$ molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as $\mathrm{N}_2$ and $\mathrm{O}_2$. To simplify the notation, in this chapter we will use the atomic units that we introduced in section \@ref(AtomicUnits), in which $\hbar=m_e=e=4\pi\varepsilon_0=1$, energies are measured in hartrees ($1\,E_h = 2{,}625.5\text{ kJ/mol}$), and distances in bohrs ($1\,a_0 = 0.529\,\text{Å}$).
 
 ## The Chemical Bond in the Hydrogen Molecular Cation
 
