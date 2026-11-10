@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>10&nbsp; Introduction to Molecules – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./11_Bonds.html" rel="next">
+<link href="./09_Atoms.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./10_Molecules.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-molecular-hamiltonian" id="toc-the-molecular-hamiltonian" class="nav-link active" data-scroll-target="#the-molecular-hamiltonian"><span class="header-section-number">10.1</span> The Molecular Hamiltonian</a>
+  <ul class="collapse">
+  <li><a href="#small-terms-in-the-molecular-hamiltonian" id="toc-small-terms-in-the-molecular-hamiltonian" class="nav-link" data-scroll-target="#small-terms-in-the-molecular-hamiltonian"><span class="header-section-number">10.1.1</span> Small terms in the molecular Hamiltonian</a></li>
+  </ul></li>
+  <li><a href="#the-bornoppenheimer-approximation" id="toc-the-bornoppenheimer-approximation" class="nav-link" data-scroll-target="#the-bornoppenheimer-approximation"><span class="header-section-number">10.2</span> The Born–Oppenheimer Approximation</a>
+  <ul class="collapse">
+  <li><a href="#potential-energy-surfaces" id="toc-potential-energy-surfaces" class="nav-link" data-scroll-target="#potential-energy-surfaces"><span class="header-section-number">10.2.1</span> Potential energy surfaces</a></li>
+  </ul></li>
+  <li><a href="#solving-the-electronic-eigenvalue-problem" id="toc-solving-the-electronic-eigenvalue-problem" class="nav-link" data-scroll-target="#solving-the-electronic-eigenvalue-problem"><span class="header-section-number">10.3</span> Solving the Electronic Eigenvalue Problem</a>
+  <ul class="collapse">
+  <li><a href="#the-hartreefock-method" id="toc-the-hartreefock-method" class="nav-link" data-scroll-target="#the-hartreefock-method"><span class="header-section-number">10.3.1</span> The Hartree–Fock Method</a></li>
+  </ul></li>
+  <li><a href="#sec-rev10" id="toc-sec-rev10" class="nav-link" data-scroll-target="#sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/10_Molecules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Molecules" class="quarto-section-identifier"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In the previous chapter we saw that a single extra electron is enough to make the TISEq impossible to solve exactly. Molecules add a further complication: they contain several nuclei, which can also move. In this chapter we will introduce the two approximations that make molecules tractable: the Born–Oppenheimer approximation, which separates the motion of the nuclei from that of the electrons, and the Hartree–Fock method, which extends the ideas that we used for the helium atom to molecular orbitals.</p>
+<section id="the-molecular-hamiltonian" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="the-molecular-hamiltonian"><span class="header-section-number">10.1</span> The Molecular Hamiltonian</h2>
+<p>For a molecule, we can decompose the Hamiltonian operator as:</p>
+<p><span id="eq-molham1"><span class="math display">\[
+\hat{H} = \hat{K}_N +\hat{K}_{e} + \hat{V}_{NN} + \hat{V}_{eN} + \hat{V}_{ee}
+\tag{10.1}\]</span></span></p>
+<p>where we have decomposed the kinetic energy operator into nuclear and electronic terms, <span class="math inline">\(\hat{K}_N\)</span> and <span class="math inline">\(\hat{K}_e\)</span>, as well as the potential energy operator into terms representing the interactions between nuclei, <span class="math inline">\(\hat{V}_{NN}\)</span>, between electrons, <span class="math inline">\(\hat{V}_{ee}\)</span>, and between electrons and nuclei, <span class="math inline">\(\hat{V}_{eN}\)</span>. Each term can then be calculated using:</p>
+<p><span id="eq-molham2"><span class="math display">\[
+\begin{aligned}
+\hat{K}_{N} &amp;=-\sum_{i}^{\text{nuclei}}{\frac  {\hbar ^{2}}{2M_{i}}}\nabla_{{{\mathbf  {R}}_{i}}}^{2} \\
+\hat  {K}_{e} &amp;=-\sum_{i}^{\text{electrons}}{\frac  {\hbar ^{2}}{2m_{e}}}\nabla _{{{\mathbf{r}}_{i}}}^{2} \\
+\hat{V}_{{NN}} &amp;= \sum _{i}\sum _{{j&gt;i}}{\frac  {Z_{i}Z_{j}e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {R}}_{j}\right|}} \\
+\hat  {V}_{{eN}} &amp;=-\sum _{i}\sum _{j}{\frac  {Z_{i}e^{2}}{4\pi \varepsilon_{0}\left|{\mathbf  {R}}_{i}-{\mathbf  {r}}_{j}\right|}} \\
+\hat{V}_{{ee}} &amp;= \sum _{i}\sum _{{j&gt;i}}{\frac  {e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {r}}_{i}-{\mathbf  {r}}_{j}\right|}},
+\end{aligned}
+\tag{10.2}\]</span></span></p>
+<p>where <span class="math inline">\(M_i\)</span>, <span class="math inline">\(Z_i\)</span>, and <span class="math inline">\(\mathbf{R}_i\)</span> are the mass, atomic number, and coordinates of nucleus <span class="math inline">\(i\)</span>, respectively, and all other symbols are the same as those used in <a href="09_Atoms.html#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a> for the many-electron atom Hamiltonian. Notice that the two potential energy terms between like particles (<span class="math inline">\(\hat{V}_{NN}\)</span> and <span class="math inline">\(\hat{V}_{ee}\)</span>) are positive (repulsive), while the term between electrons and nuclei is negative (attractive). The chemical bond is the result of a delicate balance between these three terms and the kinetic energy.</p>
+<section id="small-terms-in-the-molecular-hamiltonian" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="small-terms-in-the-molecular-hamiltonian"><span class="header-section-number">10.1.1</span> Small terms in the molecular Hamiltonian</h3>
+<p><a href="#eq-molham1" class="quarto-xref">Eq.&nbsp;<span>10.1</span></a> is often called the “exact” non-relativistic Hamiltonian of a molecule, but it is worth remembering what it leaves out. The first missing piece is relativity. The valence electrons of light atoms move at a small fraction of the speed of light (less than 1% for the electron in the hydrogen atom), but the inner electrons of heavy atoms are pulled so strongly by the nucleus that relativistic effects become important. The second missing piece is the coupling between the spin of each electron and its orbital motion. We can picture it by sitting on the electron: from its point of view, the charged nucleus is the one that moves around it, and this moving charge creates a magnetic field proportional to the orbital angular momentum, <span class="math inline">\(\mathbf{L}\)</span>. The electron carries its own magnetic moment, proportional to its spin, <span class="math inline">\(\mathbf{S}\)</span>, and the interaction between the two gives an energy term proportional to <span class="math inline">\(\mathbf{L} \cdot \mathbf{S}\)</span>, called <em>spin–orbit coupling</em>. Both effects grow quickly with the nuclear charge, so they are small for the molecules made of first- and second-row atoms that we discuss in this textbook, and we will neglect them from now on.</p>
+</section>
+</section>
+<section id="the-bornoppenheimer-approximation" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="the-bornoppenheimer-approximation"><span class="header-section-number">10.2</span> The Born–Oppenheimer Approximation</h2>
+<p>Before looking at molecules, let’s recall a general property that we already used for the helium atom. Suppose that a Hamiltonian can be written as the sum of two terms, each depending on a different set of coordinates, <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span>:</p>
+<p><span id="eq-molham3"><span class="math display">\[
+\hat{H} = \hat{H}_1(q_1) + \hat{H}_2(q_2),
+\tag{10.3}\]</span></span></p>
+<p>with the TISEq:</p>
+<p><span id="eq-molham4"><span class="math display">\[
+\hat{H} \psi(q_1, q_2) = E \psi(q_1, q_2).
+\tag{10.4}\]</span></span></p>
+<p>Let’s try a wave function written as a product of two functions, one for each set of coordinates:</p>
+<p><span id="eq-molham5"><span class="math display">\[
+\psi(q_1, q_2) = \psi_1(q_1) \psi_2(q_2),
+\tag{10.5}\]</span></span></p>
+<p>where <span class="math inline">\(\psi_1(q_1)\)</span> and <span class="math inline">\(\psi_2(q_2)\)</span> are eigenfunctions of <span class="math inline">\(\hat{H}_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span> with eigenvalues <span class="math inline">\(E_1\)</span> and <span class="math inline">\(E_2\)</span>. Since <span class="math inline">\(\hat{H}_1\)</span> acts only on <span class="math inline">\(q_1\)</span> and <span class="math inline">\(\hat{H}_2\)</span> only on <span class="math inline">\(q_2\)</span>, we obtain:</p>
+<p><span id="eq-molham6"><span class="math display">\[
+\begin{aligned}
+\displaystyle \hat{H} \psi(q_1, q_2) &amp;= ( \hat{H}_1 + \hat{H}_2 ) \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= \psi_2(q_2)\hat{H}_1 \psi_1(q_1) + \psi_1(q_1)\hat{H}_2 \psi_2(q_2) \\
+    &amp;= E_1 \psi_1(q_1) \psi_2(q_2) + E_2 \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= (E_1 + E_2) \psi_1(q_1) \psi_2(q_2) \\
+    &amp;= E \psi(q_1, q_2).
+\end{aligned}
+\tag{10.6}\]</span></span></p>
+<p>In other words, when a Hamiltonian is a sum of independent pieces, its eigenfunctions are products of the eigenfunctions of each piece, and its eigenvalues are sums of their eigenvalues. A big problem is broken into smaller ones.</p>
+<p>Can we use this trick to separate the electrons from the nuclei in <a href="#eq-molham1" class="quarto-xref">eq.&nbsp;<span>10.1</span></a>? Not exactly, because the electron–nucleus attraction, <span class="math inline">\(\hat{V}_{eN}\)</span>, depends on the coordinates of both electrons and nuclei at the same time. However, nuclei are much heavier than electrons (a proton is about <span class="math inline">\(1{,}836\)</span> times heavier than an electron), so they move much more slowly. From the point of view of the electrons, the nuclei are almost standing still; from the point of view of the nuclei, the electrons adjust almost instantaneously to any change in their positions. This suggests that we can write the total wave function, approximately, as:</p>
+<p><span id="eq-molham7"><span class="math display">\[
+\psi(\mathbf{r}, \mathbf{R}) \approx \psi_e(\mathbf{r}; \mathbf{R}) \psi_N(\mathbf{R}),
+\tag{10.7}\]</span></span></p>
+<p>where <span class="math inline">\(\psi_e(\mathbf{r}; \mathbf{R})\)</span> is the electronic wave function calculated with the nuclei held fixed at positions <span class="math inline">\(\mathbf{R}\)</span>. The semicolon indicates that <span class="math inline">\(\psi_e\)</span> is a function of the electronic coordinates <span class="math inline">\(\mathbf{r}\)</span> that depends only <em>parametrically</em> on <span class="math inline">\(\mathbf{R}\)</span>: for each arrangement of the nuclei we get a different electronic wave function, but the nuclear positions are not variables of the electronic problem. This approximation is called the <strong>Born–Oppenheimer approximation</strong>, and it is accurate for the vast majority of chemical applications.</p>
+<p>In practice, we fix the nuclei at some configuration, <span class="math inline">\(\mathbf{R_a}\)</span>, and solve the TISEq for the electrons only, using the <strong>electronic Hamiltonian</strong>:</p>
+<p><span id="eq-molham8"><span class="math display">\[
+\hat{H}_{\text{e}} = \hat{K}_e(\mathbf{r}) +
+\hat{V}_{eN}\left(\mathbf{r}; \mathbf{R_a} \right) +
+\hat{V}_{ee}(\mathbf{r}),
+\tag{10.8}\]</span></span></p>
+<p>where we have dropped the nuclear kinetic energy, <span class="math inline">\(\hat{K}_N\)</span>, since the nuclei are fixed (and, in any case, <span class="math inline">\(\hat{K}_N\)</span> is smaller than <span class="math inline">\(\hat{K}_e\)</span> by roughly the ratio <span class="math inline">\(\frac{m_e}{M_i}\)</span>). We have also left out <span class="math inline">\(\hat{V}_{NN}(\mathbf{R_a})\)</span>, since for fixed nuclei it is just a constant that shifts all the eigenvalues by the same amount and can be added back at the end. The electron–nucleus attraction stays in the electronic Hamiltonian, but now it depends on <span class="math inline">\(\mathbf{R_a}\)</span> only as a parameter. The electronic Hamiltonian results in the following TISEq:</p>
+<p><span id="eq-molham9"><span class="math display">\[
+\hat{H}_{e} \psi_e \left(\mathbf{r}; \mathbf{R_a} \right) = E_{e}(\mathbf{R_a}) \psi_e \left(\mathbf{r}; \mathbf{R_a} \right),
+\tag{10.9}\]</span></span></p>
+<p>which is the equation that we will use to explain the chemical bond in the next chapter. Notice that <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.9</span></a> is not the total TISEq of the system, since it says nothing about the motion of the nuclei. As is customary in quantum chemistry, in the remainder of this textbook we will use the term “total energy” for the “total energy at fixed geometry,” which is <span class="math inline">\(E_{e}\)</span> of <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.9</span></a> plus the constant nuclear–nuclear repulsion, <span class="math inline">\(V_{NN}(\mathbf{R_a})\)</span> (i.e., everything except the nuclear kinetic energy).</p>
+<section id="potential-energy-surfaces" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="potential-energy-surfaces"><span class="header-section-number">10.2.1</span> Potential energy surfaces</h3>
+<p>The Born–Oppenheimer approximation has a very important consequence. If we repeat the electronic calculation for many different arrangements of the nuclei, we obtain the total energy at fixed geometry as a function of the nuclear coordinates:</p>
+<p><span id="eq-pes1"><span class="math display">\[
+U(\mathbf{R}) = E_e(\mathbf{R}) + V_{NN}(\mathbf{R}).
+\tag{10.10}\]</span></span></p>
+<p>This function is called the <strong>potential energy surface (PES)</strong>, and it is the potential energy that the nuclei feel when they move. The motion of the nuclei (vibrations, rotations, and chemical reactions) can then be described by solving a second TISEq for the nuclei, with the PES playing the role of the potential: <span class="math inline">\(\left[\hat{K}_N + U(\mathbf{R})\right]\psi_N(\mathbf{R}) = E\,\psi_N(\mathbf{R})\)</span>.</p>
+<p>For a diatomic molecule, the only coordinate that matters is the internuclear distance, <span class="math inline">\(R\)</span>, and the PES reduces to a curve. The potential energy curve of the hydrogen molecule is plotted in <a href="#fig-fig1c10" class="quarto-xref">figure&nbsp;<span>10.1</span></a>.</p>
+<div id="fig-fig1c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Potential energy curve of the hydrogen molecule versus internuclear distance: a steep wall at short distance, a minimum at 1.4 bohr about 458 kilojoules per mole deep, and a flat approach to zero at large distance. A parabola fits only near the minimum, and horizontal lines mark vibrational levels that get closer together near the top.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/H2_PEC.png" class="img-fluid figure-img" style="width:80.0%" alt="Potential energy curve of the hydrogen molecule versus internuclear distance: a steep wall at short distance, a minimum at 1.4 bohr about 458 kilojoules per mole deep, and a flat approach to zero at large distance. A parabola fits only near the minimum, and horizontal lines mark vibrational levels that get closer together near the top.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.1: Potential energy curve of the hydrogen molecule (blue), compared with its harmonic approximation (orange, dashed). The horizontal lines are the vibrational energy levels, and the energy is measured from the separated atoms. The purple dot marks the equilibrium bond distance.
+</figcaption>
+</figure>
+</div>
+<p>A few important considerations can be made by analyzing this curve:</p>
+<ol type="1">
+<li><p><strong>Equilibrium geometry</strong>: the minimum of the curve, at <span class="math inline">\(R_e=1.40\,a_0=0.74\,\text{Å}\)</span>, is the equilibrium bond distance of the molecule. For larger molecules, minima of the PES correspond to stable structures, and finding them is called <em>geometry optimization</em>.</p></li>
+<li><p><strong>Bond energy</strong>: the depth of the well, <span class="math inline">\(D_e=458\text{ kJ/mol}\)</span>, is the energy needed to separate the two atoms starting from the bottom of the well. The molecule, however, can never sit exactly at the bottom: even in its lowest vibrational level it has a zero-point energy, as we saw for the harmonic oscillator in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>. The experimentally measurable dissociation energy, <span class="math inline">\(D_0=D_e-\text{ZPE}=432\text{ kJ/mol}\)</span>, is measured from the lowest vibrational level.</p></li>
+<li><p><strong>Vibrations</strong>: close to the minimum, the curve looks like a parabola, and the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> is a good model, with force constant equal to the curvature of the PES at the minimum, <span class="math inline">\(k=\left.\frac{d^2U}{dR^2}\right|_{R_e}\)</span>. As the energy increases, the real curve becomes wider than the parabola, and it flattens out towards the dissociation limit. As a consequence, the vibrational levels get closer to each other as they approach dissociation, unlike the equally spaced levels of the harmonic oscillator. We will see how these features show up in experiments in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>.</p></li>
+</ol>
+<p>For a molecule with <span class="math inline">\(N_{\text{at}}\)</span> atoms, the PES depends on <span class="math inline">\(3N_{\text{at}}-6\)</span> internal coordinates (<span class="math inline">\(3N_{\text{at}}-5\)</span> for linear molecules), and it is a surface in many dimensions. We cannot draw it, but we can get a feeling for its features using a model surface in two dimensions, such as the one in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>.</p>
+<div id="fig-fig2c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left: a contour map of an energy surface with three valleys labeled A, B, and C, connected by a dashed path that passes over two saddle points labeled TS1 and TS2. Right: the energy along the dashed path, starting low at A, rising to a high peak at TS1, dropping to a shallow valley at B, crossing a small peak at TS2, and ending at C. An arrow marks the activation energy from A to TS1.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PES_2D.png" class="img-fluid figure-img" style="width:100.0%" alt="Left: a contour map of an energy surface with three valleys labeled A, B, and C, connected by a dashed path that passes over two saddle points labeled TS1 and TS2. Right: the energy along the dashed path, starting low at A, rising to a high peak at TS1, dropping to a shallow valley at B, crossing a small peak at TS2, and ending at C. An arrow marks the activation energy from A to TS1.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.2: (a) Contour plot of a model two-dimensional potential energy surface (the Müller–Brown surface). White dots mark minima, red crosses mark saddle points (transition states), and the dashed line is the minimum energy path that connects them. (b) Energy along the minimum energy path, plotted as a function of the distance traveled along it: the reaction coordinate.
+</figcaption>
+</figure>
+</div>
+<p>Each minimum (A, B, and C) corresponds to a stable structure of the molecule, such as a reactant, a product, or an intermediate. To go from one minimum to another, the molecule must pass over a mountain pass, called a <strong>saddle point</strong>: a point that is a maximum along the path that connects the two minima, but a minimum along every other direction. In chemistry, these saddle points are the <strong>transition states</strong> of chemical reactions, and the energy difference between a minimum and the transition state is the activation energy of the reaction.</p>
+<p>If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the <strong>minimum energy path</strong>, and it is shown as a dashed line in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>a. The distance traveled along this path, measured from the starting minimum, is called the <strong>reaction coordinate</strong>. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>b, the many-dimensional surface reduces to the familiar one-dimensional <em>reaction profile</em> of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates <span class="math inline">\(q_1\)</span> or <span class="math inline">\(q_2\)</span>, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.</p>
+</section>
+</section>
+<section id="solving-the-electronic-eigenvalue-problem" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="solving-the-electronic-eigenvalue-problem"><span class="header-section-number">10.3</span> Solving the Electronic Eigenvalue Problem</h2>
+<p>Once we have invoked the Born–Oppenheimer approximation, we can try to solve the electronic TISEq in <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.9</span></a>. For any molecule with more than one electron (i.e., all molecules except <span class="math inline">\(\mathrm{H}_2^+\)</span> and a few exotic ions), we need to keep in mind the antisymmetry of the wave function, so we write the electronic wave function as a Slater determinant, as we did for atoms in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>. Then we need to approximate the Hamiltonian, since the electron-electron repulsion term does not allow an analytic solution. Similarly to the many-electron atom case, the simplest approximation is to use the variational method and to treat the electron-electron repulsion only in an average way, as we did for the helium atom in the previous chapter. This approximation is called the Hartree–Fock method.</p>
+<section id="the-hartreefock-method" class="level3" data-number="10.3.1">
+<h3 data-number="10.3.1" class="anchored" data-anchor-id="the-hartreefock-method"><span class="header-section-number">10.3.1</span> The Hartree–Fock Method</h3>
+<p>The main difference when we apply the variational principle to a molecular Slater determinant is that we need orbitals (one-electron wave functions) that extend over the entire molecule. We can build them by assuming that, close to each nucleus, a molecular orbital looks similar to the orbitals of the corresponding atom. The molecular orbital can then be written as a linear combination of atomic contributions. This method is called <strong>linear combination of atomic orbitals (LCAO)</strong>. In practice, we expand each molecular orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> as a linear combination of suitable basis functions <span class="math inline">\(f_i(\mathbf{r})\)</span> centered on the atoms:</p>
+<p><span id="eq-molham10"><span class="math display">\[
+\psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}).
+\tag{10.11}\]</span></span></p>
+<p>A consequence of the LCAO method is that basis functions on two different atoms are not orthogonal to each other, so the simplification that we used to go from <a href="09_Atoms.html#eq-var4" class="quarto-xref">eq.&nbsp;<span>9.13</span></a> to <a href="09_Atoms.html#eq-var5" class="quarto-xref">eq.&nbsp;<span>9.14</span></a> is not possible anymore. Using the following notation for the integrals:</p>
+<p><span id="eq-molham11"><span class="math display">\[
+\displaystyle H_{ij} = \int f_i^* {\hat H} f_j d\mathbf{\tau}\;, \qquad \displaystyle S_{ij} = \int f_i^* f_j d\mathbf{\tau},
+\tag{10.12}\]</span></span></p>
+<p>the variational energy of <a href="09_Atoms.html#eq-var2" class="quarto-xref">eq.&nbsp;<span>9.11</span></a> becomes:</p>
+<p><span id="eq-molham11b"><span class="math display">\[
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
+\tag{10.13}\]</span></span></p>
+<p>The integrals <span class="math inline">\(S_{ij}\)</span> are called <strong>overlap integrals</strong>, and they measure how much two basis functions share the same region of space. To find the best orbital, we minimize this energy with respect to all the coefficients <span class="math inline">\(c_i\)</span>, setting each derivative to zero. This gives a set of <span class="math inline">\(m\)</span> linear equations for the coefficients, which have a non-trivial solution only if the following <strong>secular determinant</strong> is equal to zero:</p>
+<p><span id="eq-molham12"><span class="math display">\[
+\left|\begin{matrix}
+H_{11}-ES_{11}   &amp; H_{12}-ES_{12}   &amp; \cdots &amp; H_{1m}-ES_{1m}\\
+H_{21}-ES_{21}   &amp; H_{22}-ES_{22}   &amp; \cdots &amp; H_{2m}-ES_{2m}\\
+\vdots           &amp;   \vdots         &amp; \ddots &amp; \vdots\\
+H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
+\end{matrix}\right|=0,
+\tag{10.14}\]</span></span></p>
+<p>where <span class="math inline">\(m\)</span> is the number of basis functions. Expanding the determinant gives a polynomial of degree <span class="math inline">\(m\)</span> in <span class="math inline">\(E\)</span>, whose <span class="math inline">\(m\)</span> roots are the energies of the molecular orbitals. For each root, the linear equations give the corresponding coefficients. We will solve this problem explicitly for the simplest molecules in the next chapter.</p>
+<section id="the-fock-operator" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="the-fock-operator">The Fock operator</h4>
+<p>What Hamiltonian should we use in <a href="#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.12</span></a>? For a one-electron molecule, such as <span class="math inline">\(\mathrm{H}_2^+\)</span>, it is simply the electronic Hamiltonian of <a href="#eq-molham8" class="quarto-xref">eq.&nbsp;<span>10.8</span></a>. For more than one electron, the Hartree–Fock method replaces the true many-electron problem with a set of one-electron problems, one for each occupied spin-orbital <span class="math inline">\(\chi_i\)</span>:</p>
+<p><span id="eq-hfeq1"><span class="math display">\[
+\hat{f}\, \chi_i = \varepsilon_i\, \chi_i,
+\tag{10.15}\]</span></span></p>
+<p>where <span class="math inline">\(\varepsilon_i\)</span> is the energy of the orbital, and <span class="math inline">\(\hat{f}\)</span> is an effective one-electron Hamiltonian called the <strong>Fock operator</strong>:</p>
+<p><span id="eq-hfeq2"><span class="math display">\[
+\hat{f} = \hat{h} + \sum_{j}^{\text{occupied}} \left( \hat{J}_j - \hat{K}_j \right).
+\tag{10.16}\]</span></span></p>
+<p>Each piece of <span class="math inline">\(\hat{f}\)</span> has a clear physical meaning:</p>
+<ol type="1">
+<li><span class="math inline">\(\hat{h}\)</span> is the <strong>core Hamiltonian</strong>: the kinetic energy of one electron plus its attraction to all nuclei. This is all there is in a one-electron molecule.</li>
+<li><span class="math inline">\(\hat{J}_j\)</span> is the <strong>Coulomb operator</strong>: the repulsion felt by an electron because of the <em>average</em> charge distribution, <span class="math inline">\(|\chi_j|^2\)</span>, of the electron described by orbital <span class="math inline">\(\chi_j\)</span>. This is the “average repulsion” that we added back for the helium atom in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>.</li>
+<li><span class="math inline">\(\hat{K}_j\)</span> is the <strong>exchange operator</strong>. It has no classical analog, and it appears because the wave function is a Slater determinant. It acts only between electrons with the same spin, and it lowers their repulsion, since the antisymmetry of the wave function keeps same-spin electrons away from each other (two electrons with the same spin can never be found at the same point, as a consequence of the Pauli exclusion principle).</li>
+</ol>
+<p><a href="#eq-hfeq1" class="quarto-xref">Eq.&nbsp;<span>10.15</span></a> are called the <strong>Hartree–Fock equations</strong>. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through <span class="math inline">\(\hat{J}_j\)</span> and <span class="math inline">\(\hat{K}_j\)</span>, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, <a href="#eq-molham10" class="quarto-xref">eq.&nbsp;<span>10.11</span></a>, the Hartree–Fock equations take the form of the secular determinant in <a href="#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.14</span></a>, with the integrals <span class="math inline">\(H_{ij}\)</span> replaced by the matrix elements of the Fock operator, <span class="math inline">\(F_{ij} = \int f_i^* \hat{f} f_j\, d\mathbf{\tau}\)</span>.</p>
+</section>
+<section id="the-self-consistent-field-procedure" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="the-self-consistent-field-procedure">The self-consistent-field procedure</h4>
+<p>Since the Fock operator and its solutions depend on each other, the Hartree–Fock equations cannot be solved in one step. Instead, they are solved iteratively, using a cycle called the <strong>self-consistent-field (SCF) procedure</strong>, which is summarized in <a href="#fig-fig3c10" class="quarto-xref">figure&nbsp;<span>10.3</span></a>. Starting from an initial guess of the coefficients, we build the Fock operator, solve the secular determinant, and obtain new coefficients. These are used to build an improved Fock operator, and the cycle is repeated until neither the orbitals nor the energy change anymore (within a chosen threshold). At that point, the orbitals are “consistent” with the field that they generate, and the energy of the molecule can be calculated from them.</p>
+<div id="fig-fig3c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Flowchart of the self-consistent-field procedure: choose basis and geometry, compute integrals, guess coefficients, build the Fock operator, solve the secular determinant, and check convergence, looping back to building the Fock operator until converged.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SCF_cycle.png" class="img-fluid figure-img" style="width:55.0%" alt="Flowchart of the self-consistent-field procedure: choose basis and geometry, compute integrals, guess coefficients, build the Fock operator, solve the secular determinant, and check convergence, looping back to building the Fock operator until converged.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10.3: Flowchart of the self-consistent-field (SCF) procedure used to solve the Hartree–Fock equations.
+</figcaption>
+</figure>
+</div>
+<p>The SCF procedure is too tedious to perform by hand, even for small molecules, but it is easily done by computer programs. Every time that you run a quantum chemistry calculation, the first thing the program does is solve this cycle.</p>
+</section>
+</section>
+</section>
+<section id="sec-rev10" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</h2>
+<section id="sec-quest10" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</h3>
+<p><strong>1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?</strong></p>
+<ol type="a">
+<li>only electronic kinetic energy and electron–nuclear attraction</li>
+<li>only nuclear kinetic energy and nuclear–nuclear repulsion</li>
+<li>spin–orbit and relativistic corrections only</li>
+<li>only electron–electron repulsion and nuclear–nuclear repulsion</li>
+<li>electronic and nuclear kinetic energies, electron–nuclear, electron–electron, and nuclear–nuclear interactions</li>
+</ol>
+<hr>
+<p><strong>2. What makes the exact molecular Schrödinger equation harder than the atomic case?</strong></p>
+<ol type="a">
+<li>electrons disappear in molecules</li>
+<li>nuclei can be treated classically in atoms but not in molecules</li>
+<li>the presence of multiple moving nuclei in addition to many electrons</li>
+<li>there is no Coulomb interaction in molecules</li>
+<li>the electron mass changes in molecules</li>
+</ol>
+<hr>
+<p><strong>3. What is the central physical idea behind the Born–Oppenheimer approximation?</strong></p>
+<ol type="a">
+<li>electrons are much heavier than nuclei</li>
+<li>nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion</li>
+<li>electrons and nuclei move with the same characteristic time scale</li>
+<li>both electrons and nuclei can be treated as classical particles</li>
+<li>nuclei do not contribute to the energy at all</li>
+</ol>
+<hr>
+<p><strong>4. Mathematically, the Born–Oppenheimer approximation relies on what property of the Hamiltonian?</strong></p>
+<ol type="a">
+<li>exact commutation with the position operator</li>
+<li>approximate separability into electronic and nuclear parts</li>
+<li>absence of kinetic energy terms</li>
+<li>Hermiticity of the potential energy operator</li>
+<li>linearity of the time derivative</li>
+</ol>
+<hr>
+<p><strong>5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by “total energy” of a molecule at fixed geometry?</strong></p>
+<ol type="a">
+<li>electronic energy <span class="math inline">\(E_e\)</span> at that geometry plus the constant nuclear–nuclear repulsion term</li>
+<li>nuclear kinetic energy only</li>
+<li>electronic energy without nuclear–nuclear repulsion</li>
+<li>purely classical potential energy</li>
+<li>nuclear vibrational zero‑point energy</li>
+</ol>
+<hr>
+<p><strong>6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?</strong></p>
+<ol type="a">
+<li>a PES is the graph of electronic energy (plus nuclear repulsion) as a function of nuclear geometry</li>
+<li>a PES is the graph of nuclear kinetic energy versus time</li>
+<li>a PES is independent of nuclear positions</li>
+<li>a PES depends only on electron spin</li>
+<li>PESs are defined only for diatomic molecules</li>
+</ol>
+<hr>
+<p><strong>7. Which of the following is <em>not</em> a direct consequence or assumption of the Born–Oppenheimer approximation?</strong></p>
+<ol type="a">
+<li>electronic and nuclear motions can be approximately separated</li>
+<li>electrons move in the field of fixed nuclei</li>
+<li>nuclear motion can be described on a PES obtained from electronic energies</li>
+<li>electron–nuclear coupling can never be important for any property</li>
+<li>total wave functions are approximated as products of electronic and nuclear parts</li>
+</ol>
+<hr>
+<p><strong>8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbitals leads to what?</strong></p>
+<ol type="a">
+<li>the time‑dependent Schrödinger equation</li>
+<li>an over‑determined system with no nontrivial solutions</li>
+<li>a single algebraic equation for the total energy</li>
+<li>purely classical equations of motion for nuclei</li>
+<li>a set of coupled one‑electron equations involving the Fock operator (Hartree–Fock equations)</li>
+</ol>
+<hr>
+<p><strong>9. Which of the following sentences describes the Fock operator <span class="math inline">\(\hat{f}\)</span> in Hartree–Fock theory?</strong></p>
+<ol type="a">
+<li>a two‑electron operator containing only electron–electron repulsion</li>
+<li>a purely nuclear operator</li>
+<li>a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron–electron (Coulomb and exchange) terms</li>
+<li>an operator that depends only on spin and not on spatial coordinates</li>
+<li>the exact electronic Hamiltonian</li>
+</ol>
+<hr>
+<p><strong>10. In the Hartree–Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?</strong></p>
+<ol type="a">
+<li>by forcing all electrons into different nuclei</li>
+<li>by requiring all spatial orbitals to be orthogonal but ignoring spin</li>
+<li>by constructing an antisymmetric Slater determinant of spin‑orbitals</li>
+<li>by adding a large repulsive potential at short inter‑electronic distances</li>
+<li>by using only hydrogen‑like orbitals</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./09_Atoms.html" class="pagination-link" aria-label="Many-Electron Atoms">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./11_Bonds.html" class="pagination-link" aria-label="The Chemical Bond in Diatomic Molecules">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/10_Molecules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

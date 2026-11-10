@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>8&nbsp; Quantum Weirdness – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./09_Atoms.html" rel="next">
+<link href="./07_Spin.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./08_Weirdness.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-measurement-problem-and-interpretations-of-quantum-mechanics" id="toc-the-measurement-problem-and-interpretations-of-quantum-mechanics" class="nav-link active" data-scroll-target="#the-measurement-problem-and-interpretations-of-quantum-mechanics"><span class="header-section-number">8.1</span> The Measurement Problem and Interpretations of Quantum Mechanics</a>
+  <ul class="collapse">
+  <li><a href="#measurement-and-the-collapse-of-the-wave-function" id="toc-measurement-and-the-collapse-of-the-wave-function" class="nav-link" data-scroll-target="#measurement-and-the-collapse-of-the-wave-function"><span class="header-section-number">8.1.1</span> Measurement and the collapse of the wave function</a></li>
+  <li><a href="#sec-Interpretations" id="toc-sec-Interpretations" class="nav-link" data-scroll-target="#sec-Interpretations"><span class="header-section-number">8.1.2</span> Interpretations of quantum mechanics</a></li>
+  </ul></li>
+  <li><a href="#the-double-slit-experiment" id="toc-the-double-slit-experiment" class="nav-link" data-scroll-target="#the-double-slit-experiment"><span class="header-section-number">8.2</span> The double-slit experiment</a>
+  <ul class="collapse">
+  <li><a href="#the-individual-particles-experiment" id="toc-the-individual-particles-experiment" class="nav-link" data-scroll-target="#the-individual-particles-experiment"><span class="header-section-number">8.2.1</span> The individual particles experiment</a></li>
+  <li><a href="#which-way-experiment" id="toc-which-way-experiment" class="nav-link" data-scroll-target="#which-way-experiment"><span class="header-section-number">8.2.2</span> “Which way” experiment</a></li>
+  </ul></li>
+  <li><a href="#heisenbergs-uncertainty-principle" id="toc-heisenbergs-uncertainty-principle" class="nav-link" data-scroll-target="#heisenbergs-uncertainty-principle"><span class="header-section-number">8.3</span> Heisenberg’s Uncertainty Principle</a></li>
+  <li><a href="#tunneling" id="toc-tunneling" class="nav-link" data-scroll-target="#tunneling"><span class="header-section-number">8.4</span> Tunneling</a>
+  <ul class="collapse">
+  <li><a href="#tunneling-in-chemical-reactions" id="toc-tunneling-in-chemical-reactions" class="nav-link" data-scroll-target="#tunneling-in-chemical-reactions"><span class="header-section-number">8.4.1</span> Tunneling in chemical reactions</a></li>
+  </ul></li>
+  <li><a href="#sec-rev8" id="toc-sec-rev8" class="nav-link" data-scroll-target="#sec-rev8"><span class="header-section-number">8.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest8" id="toc-sec-quest8" class="nav-link" data-scroll-target="#sec-quest8"><span class="header-section-number">8.5.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/08_Weirdness.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Weirdness" class="quarto-section-identifier"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don’t have a classical counterpart, starting from perhaps the simplest but also one of the most revealing: the double-slit experiment.</p>
+<section id="the-measurement-problem-and-interpretations-of-quantum-mechanics" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="the-measurement-problem-and-interpretations-of-quantum-mechanics"><span class="header-section-number">8.1</span> The Measurement Problem and Interpretations of Quantum Mechanics</h2>
+<section id="measurement-and-the-collapse-of-the-wave-function" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="measurement-and-the-collapse-of-the-wave-function"><span class="header-section-number">8.1.1</span> Measurement and the collapse of the wave function</h3>
+<p>In <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>, we saw that if a system is in a superposition of eigenfunctions of an operator <span class="math inline">\(\hat{A}\)</span>:</p>
+<p><span id="eq-collapse1"><span class="math display">\[
+\Psi = \sum_i c_i \Psi_i, \qquad \hat{A}\Psi_i = a_i\Psi_i,
+\tag{8.1}\]</span></span></p>
+<p>then a measurement of the observable <span class="math inline">\(A\)</span> can only give one of the eigenvalues <span class="math inline">\(a_i\)</span>, with probability <span class="math inline">\(|c_i|^2\)</span>. Before the measurement, we cannot predict which one we will obtain: quantum mechanics only gives us the probabilities. This raises an obvious question: what happens to the wave function <em>after</em> the measurement?</p>
+<p>The answer of quantum mechanics is that, immediately after a measurement that gives the value <span class="math inline">\(a_i\)</span>, the wave function is no longer the superposition of <a href="#eq-collapse1" class="quarto-xref">eq.&nbsp;<span>8.1</span></a>, but the corresponding eigenfunction:</p>
+<p><span id="eq-collapse2"><span class="math display">\[
+\Psi \xrightarrow{\text{measurement gives } a_i} \Psi_i.
+\tag{8.2}\]</span></span></p>
+<p>This sudden change is called the <strong>collapse of the wave function</strong>. One way of seeing that it must happen is to repeat the measurement immediately after the first one: experiments show that we always obtain the same value again, <span class="math inline">\(a_i\)</span>, with certainty. This is only possible if the system is now in the eigenstate <span class="math inline">\(\Psi_i\)</span>, whose coefficient is one.</p>
+<p>We have already seen the collapse at work in the sequential Stern–Gerlach experiments of <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a> (<a href="07_Spin.html#fig-Fig3c7" class="quarto-xref">figure&nbsp;<span>7.3</span></a>). After the first apparatus along <span class="math inline">\(z\)</span>, the atoms in the upper beam are in the state <span class="math inline">\(\alpha\)</span>, and a second measurement along <span class="math inline">\(z\)</span> gives “spin up” with certainty. A measurement along <span class="math inline">\(x\)</span>, however, makes the state collapse into one of the eigenstates of <span class="math inline">\(\hat{S}_x\)</span>, which are superpositions of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. When we measure along <span class="math inline">\(z\)</span> again, we find both “spin up” and “spin down” with equal probability: the information about the first measurement has been erased by the second one. The measurement is not a “filter” that reveals a pre-existing property of the atom, but an act that changes its wave function.</p>
+<p>The collapse is very different from the time evolution described by the TDSEq (<a href="06_Operators.html#sec-TimeEvolution" class="quarto-xref"><span>section 6.4</span></a>). Time evolution is smooth, deterministic (if we know the wave function now, we can calculate it at any later time), and reversible. The collapse is sudden, random (we can only predict probabilities), and irreversible (after the collapse, we cannot reconstruct the superposition that we had before). Quantum mechanics, in its standard form, does not explain <em>what</em> exactly counts as a measurement, nor <em>how</em> or <em>when</em> the collapse happens. It only tells us that, when an interaction with a macroscopic instrument produces a definite result, the wave function must be updated accordingly. This is known as the <strong>measurement problem</strong>, and it is still debated by physicists and philosophers today. As we will see in this chapter, the collapse is at the heart of many of the most counterintuitive results of quantum mechanics.</p>
+</section>
+<section id="sec-Interpretations" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="sec-Interpretations"><span class="header-section-number">8.1.2</span> Interpretations of quantum mechanics</h3>
+<p>The mathematics of quantum mechanics is not in question: it has been tested in countless experiments, and it has never failed. What is still debated is what the mathematics <em>means</em>. What is the wave function: a real physical object, or just a tool to compute probabilities? Does the collapse really happen, and if so, what causes it? Do particles have definite properties before we measure them? The different answers to these questions are called <em>interpretations</em> of quantum mechanics.</p>
+<p>In this textbook, as in most chemistry textbooks, we use the language of the <strong>Copenhagen interpretation</strong>, developed in the 1920s mainly by Niels Bohr and Werner Heisenberg. In this view, the wave function encodes everything that can be known about a system, it evolves according to the Schrödinger equation between measurements, and it collapses when a measurement is made, as described above. The Copenhagen interpretation is convenient for calculations, and it is the reason why we talk about “measurements” and “collapse” at all. However, it is now widely regarded as antiquated and incomplete. It divides the world into a quantum system and a classical measuring apparatus, but it never says where the boundary between the two is, nor why the apparatus, which is itself made of atoms, should not obey quantum mechanics. It adds the collapse as a separate rule, without explaining it. In other words, the Copenhagen interpretation does not solve the measurement problem; it simply declares it out of bounds.</p>
+<p>Several modern alternatives address these shortcomings. All of them reproduce the successful predictions of quantum mechanics, but they paint very different pictures of reality:</p>
+<ul>
+<li><p><strong>Hidden variables.</strong> The idea that the wave function is an incomplete description, and that additional “hidden” variables determine the outcome of each measurement, goes back to Albert Einstein, who famously disliked the randomness of quantum mechanics. In 1964, John Bell proved that any theory of this kind that is also <em>local</em> (where nothing travels faster than light) must make predictions that differ from those of quantum mechanics. Experiments, starting in the 1970s and recognized with the Nobel Prize in Physics in 2022, have confirmed the predictions of quantum mechanics and ruled out local hidden variables. Hidden variable theories are still possible, but they must be <em>nonlocal</em>.</p></li>
+<li><p><strong>Bohmian mechanics</strong> (also called the de Broglie–Bohm or <em>pilot-wave</em> theory), proposed by Louis de Broglie in 1927 and developed by David Bohm in 1952, is the best known nonlocal hidden variable theory. In this view, particles always have definite positions and follow well-defined trajectories, and the wave function is a real field that guides their motion, according to an equation derived from the Schrödinger equation. There is no collapse: a measurement simply reveals where the particles already are, and the randomness of the outcomes comes from our ignorance of their exact initial positions. Bohmian mechanics is the interpretation closest to the way chemists usually think: electrons are particles that are actually somewhere, molecules have real shapes, and nuclei and electrons move along trajectories. Its price is nonlocality: the motion of each particle depends instantaneously on the positions of all the others.</p></li>
+<li><p><strong>Many worlds</strong>, proposed by Hugh Everett in 1957, takes the opposite route: it keeps the Schrödinger equation and nothing else. There is no collapse and no special role for measurements. When a measuring device interacts with a superposition, the device, the observer, and eventually the whole universe become part of the superposition, which splits into <em>branches</em>, one for each possible outcome. Each branch contains a version of the observer who sees one definite result, and the branches cannot interact with each other because of a process called <em>decoherence</em>. Many worlds is the most mathematically and philosophically clean of all the interpretations, since it requires no additional rules beyond the equation that we already use. Its price is a reality much larger than the one we see, and the difficulty of explaining why the probabilities of the outcomes are given by <span class="math inline">\(|c_i|^2\)</span> when all of them actually happen.</p></li>
+<li><p><strong>Spontaneous collapse theories</strong>, such as the one proposed by Giancarlo Ghirardi, Alberto Rimini, and Tullio Weber in 1986, treat the collapse as a real physical process and modify the Schrödinger equation to include it. In these theories, the wave function of any particle collapses spontaneously and at random, but extremely rarely (about once every hundred million years for a single particle). A macroscopic object, however, contains so many particles that one of them collapses almost immediately, dragging the whole object with it, which explains why we never see a cat or a measuring device in a superposition. Unlike the other interpretations, these theories make predictions that differ slightly from standard quantum mechanics, and they are currently being tested in experiments.</p></li>
+</ul>
+<p>The main features of these interpretations are summarized in <a href="#tbl-tab1c8" class="quarto-xref">table&nbsp;<span>8.1</span></a>.</p>
+<div id="tbl-tab1c8" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8.1: Comparison of some interpretations of quantum mechanics.
+</figcaption>
+<div aria-describedby="tbl-tab1c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 26%">
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Interpretation</th>
+<th style="text-align: left;">What is the wave function?</th>
+<th style="text-align: left;">Collapse?</th>
+<th style="text-align: left;">Definite particle positions?</th>
+<th style="text-align: left;">Deterministic?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Copenhagen</td>
+<td style="text-align: left;">Tool to compute probabilities</td>
+<td style="text-align: left;">Yes, upon measurement (not explained)</td>
+<td style="text-align: left;">No, until measured</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bohmian mechanics</td>
+<td style="text-align: left;">Real field guiding the particles</td>
+<td style="text-align: left;">No (only apparent)</td>
+<td style="text-align: left;">Yes, always</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Many worlds</td>
+<td style="text-align: left;">Real, and the only thing that exists</td>
+<td style="text-align: left;">No (branching instead)</td>
+<td style="text-align: left;">Yes, in each branch</td>
+<td style="text-align: left;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spontaneous collapse</td>
+<td style="text-align: left;">Real</td>
+<td style="text-align: left;">Yes, as a random physical process</td>
+<td style="text-align: left;">Only after collapse</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>For the purposes of chemistry, all these interpretations give the same answers: energy levels, spectra, bond lengths, and reaction rates do not depend on which one we choose (the tiny deviations predicted by spontaneous collapse theories are far too small to affect any chemical property). This is why, in the rest of this textbook, we will keep using the convenient language of the Copenhagen interpretation. You should be aware, however, that it is a language, and not the final word on what quantum mechanics tells us about reality.</p>
+</section>
+</section>
+<section id="the-double-slit-experiment" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="the-double-slit-experiment"><span class="header-section-number">8.2</span> The double-slit experiment</h2>
+<p>The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.</p>
+<p>The premises of the experiment are very simple: cut two slits in a solid material (such as a sheet of metal), send light or electrons through them, and observe what happens on a screen positioned at some distance on the other side. The results of this experiment, though, are far from straightforward.</p>
+<p>Let’s first consider the single-slit case. If light consisted of classical particles, and these particles were sent in a straight line through a single-slit and allowed to strike a screen on the other side, we would expect to see a pattern corresponding to the size and shape of the slit. However, when this “single-slit experiment” is actually performed, the pattern on the screen is a diffraction pattern in which the light is spread out. The smaller the slit, the greater the angle of spread. This behavior is typical of waves, where diffraction explains the pattern as being the result of the interference of the waves with the slit.</p>
+<p>If one illuminates two parallel slits, the light from the two slits again interferes. Here the interference is a more pronounced pattern with a series of alternating light and dark bands. The width of the bands is a property of the frequency of the illuminating light. The pattern observed on the screen is the result of this interference, as shown in <a href="#fig-Fig1c8" class="quarto-xref">figure&nbsp;<span>8.1</span></a>.</p>
+<div id="fig-Fig1c8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two rows. Top: a wave passes through one slit and produces on the screen a single broad bright band with faint side bands. Bottom: a wave passes through two slits and produces a series of narrow bright and dark fringes under the same broad envelope.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig1c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Slits_patterns.png" class="img-fluid figure-img" style="width:95.0%" alt="Two rows. Top: a wave passes through one slit and produces on the screen a single broad bright band with faint side bands. Bottom: a wave passes through two slits and produces a series of narrow bright and dark fringes under the same broad envelope.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig1c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: Diffraction through one slit (top) and interference through two slits (bottom). Left: schematic of the experiment. Right: intensity on the screen and the corresponding pattern of light and dark regions.
+</figcaption>
+</figure>
+</div>
+<p>The interference pattern resulting from the double-slit experiment is observed not only with light, but also with a beam of electrons, and other small particles. This is the same wave behavior of electrons that Davisson and Germer first observed in 1927, when they diffracted electrons from a nickel crystal (<a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>).</p>
+<section id="the-individual-particles-experiment" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="the-individual-particles-experiment"><span class="header-section-number">8.2.1</span> The individual particles experiment</h3>
+<p>The first twist in the plot is if we perform the experiment by sending individual particles (e.g., either individual photons, or individual electrons). Sending particles through a double-slit apparatus one at a time results in single particles appearing on the screen, as expected. Remarkably, however, an interference pattern emerges when these particles are allowed to build up one by one (<a href="#fig-Fig2c8" class="quarto-xref">figure&nbsp;<span>8.2</span></a>). The resulting pattern on the screen is the same as if each individual particle had passed through both slits.</p>
+<div id="fig-Fig2c8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four dark panels with white dots. With 20 electrons the dots look randomly scattered; with 200 they begin to cluster; with 2,000 and 20,000 electrons the dots clearly form vertical bright and dark interference fringes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig2c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Slits_buildup.png" class="img-fluid figure-img" style="width:100.0%" alt="Four dark panels with white dots. With 20 electrons the dots look randomly scattered; with 200 they begin to cluster; with 2,000 and 20,000 electrons the dots clearly form vertical bright and dark interference fringes.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig2c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.2: Simulated arrival of electrons, one at a time, on the screen of a double-slit experiment. Each electron arrives at a single random point, but as more electrons accumulate, the interference fringes emerge.
+</figcaption>
+</figure>
+</div>
+<p>This variation of the double-slit experiment demonstrates the wave–particle duality: the particle is measured as a single pulse at a single position, while the wave describes the probability of absorbing the particle at a specific place on the screen.</p>
+</section>
+<section id="which-way-experiment" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="which-way-experiment"><span class="header-section-number">8.2.2</span> “Which way” experiment</h3>
+<p>A second twist happens if we place particle detectors at the slits with the intent of showing through which slit a particle goes. The interference pattern in this case will disappear. The two situations are compared in <a href="#fig-Fig4c8" class="quarto-xref">figure&nbsp;<span>8.3</span></a>. Notice that a single detector, placed on one of the two slits, is enough: if it does not click, we know that the particle went through the other slit. With the detector on, the pattern on the screen is simply the sum of the patterns produced by each slit separately, exactly what we would expect from classical particles.</p>
+<div id="fig-Fig4c8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two columns. Left: two slits without a detector produce narrow bright and dark interference fringes on the screen. Right: the same slits with a detector labeled D on the upper slit produce a single broad bright band with no fringes, equal to the sum of two single-slit patterns.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig4c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Slits_whichway.png" class="img-fluid figure-img" style="width:95.0%" alt="Two columns. Left: two slits without a detector produce narrow bright and dark interference fringes on the screen. Right: the same slits with a detector labeled D on the upper slit produce a single broad bright band with no fringes, equal to the sum of two single-slit patterns.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig4c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.3: The which-way experiment. Left: without a detector, the particles produce interference fringes. Right: with a detector (D) on one slit, which reveals which slit each particle goes through, the fringes disappear, and the pattern is the sum of the two single-slit patterns (dashed lines).
+</figcaption>
+</figure>
+</div>
+<p>This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. The simplest interpretation of this experiment is that the wave function of the photon collapses into a deterministic position due to the interaction with the detector on the slit, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.</p>
+<p>The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arises not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of resolving this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).</p>
+</section>
+</section>
+<section id="heisenbergs-uncertainty-principle" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="heisenbergs-uncertainty-principle"><span class="header-section-number">8.3</span> Heisenberg’s Uncertainty Principle</h2>
+<p>As we saw in <a href="03_Schrodinger.html#sec-WavePackets" class="quarto-xref"><span>section 3.4.2</span></a>, a free particle described by a single plane wave, <span class="math inline">\(\psi(x)=Ae^{ipx/\hbar}\)</span>, has a perfectly defined momentum, but it is spread over all of space, so we cannot say where it is. To describe a particle that is localized, we need a wave packet: a superposition of many plane waves with different momenta, which interfere constructively in a small region of space and cancel everywhere else (<a href="03_Schrodinger.html#fig-fig3c3" class="quarto-xref">figure&nbsp;<span>3.3</span></a>). Written as a continuous sum over momenta, a wave packet is:</p>
+<p><span id="eq-heis2"><span class="math display">\[
+\psi (x)=\frac {1}{\sqrt{2\pi\hbar}}\int_{-\infty }^{\infty }\varphi (p) \exp
+\left(\frac{ip x}{\hbar} \right)\,dp,
+\tag{8.3}\]</span></span></p>
+<p>where <span class="math inline">\(\varphi(p)\)</span> gives the amplitude of each plane wave in the packet. The function <span class="math inline">\(\varphi(p)\)</span> is called the <em>wave function in momentum space</em>, and <span class="math inline">\(|\varphi(p)|^2\)</span> is the probability density of finding the particle with momentum <span class="math inline">\(p\)</span>, just as <span class="math inline">\(|\psi(x)|^2\)</span> is the probability density of finding it at position <span class="math inline">\(x\)</span>. In mathematical terms, <span class="math inline">\(\varphi(p)\)</span> is the <em>Fourier transform</em> of <span class="math inline">\(\psi(x)\)</span>, and <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span> are called <em>conjugate variables</em>. The two functions contain exactly the same information, written in two different ways, and they cannot both be narrow: localizing the particle in space requires a broad mixture of momenta, and vice versa. This connection is shown in <a href="#fig-Fig5c8" class="quarto-xref">figure&nbsp;<span>8.4</span></a> for three wave packets of different width.</p>
+<div id="fig-Fig5c8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three rows of paired bell curves. Top: a wide curve in position paired with a narrow curve in momentum. Middle: medium widths in both. Bottom: a narrow curve in position paired with a wide curve in momentum. Arrows mark twice the standard deviation of each curve.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig5c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Uncertainty_xp.png" class="img-fluid figure-img" style="width:90.0%" alt="Three rows of paired bell curves. Top: a wide curve in position paired with a narrow curve in momentum. Middle: medium widths in both. Bottom: a narrow curve in position paired with a wide curve in momentum. Arrows mark twice the standard deviation of each curve.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig5c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.4: Probability densities in position space (left) and in momentum space (right) for three wave packets (in units where <span class="math inline">\(\hbar=1\)</span>). As the packet becomes narrower in position (from top to bottom), it becomes broader in momentum, and the product of the two standard deviations stays equal to <span class="math inline">\(\hbar/2\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>One way to quantify the precision of the position and momentum is the standard deviation, <span class="math inline">\(\sigma\)</span>. Since <span class="math inline">\(|\psi (x)|^{2}\)</span> is a probability density function for position, we calculate its standard deviation. The precision of the position is improved—i.e., reduced <span class="math inline">\(\sigma_x\)</span>—by using many plane waves, thereby weakening the precision of the momentum—i.e., increased <span class="math inline">\(\sigma_p\)</span>. Another way of stating this is that <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_p\)</span> have an inverse relationship (once we know one with absolute precision, the other becomes completely unknown). This fact was discovered by Werner Heisenberg and is now called <strong>Heisenberg’s uncertainty principle</strong>. The mathematical treatment of this procedure results in the simple formula:</p>
+<p><span id="eq-heis3"><span class="math display">\[
+\sigma_{x}\sigma_{p} \geq \frac{\hbar }{2}.
+\tag{8.4}\]</span></span></p>
+<p>The uncertainty principle is a direct consequence of the fact that position and momentum do not commute (<a href="06_Operators.html#sec-CommutingOperators" class="quarto-xref"><span>section 6.3.3</span></a>). In fact, it is a special case of a general result: for any two observables <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the standard deviations of their measurements, in any state, satisfy:</p>
+<p><span id="eq-heis4"><span class="math display">\[
+\sigma_A\,\sigma_B \geq \frac{1}{2}\left|\langle[\hat{A},\hat{B}]\rangle\right|.
+\tag{8.5}\]</span></span></p>
+<p>This general uncertainty relation tells us that the precision with which two quantities can be known at the same time is limited by their commutator:</p>
+<ol type="1">
+<li><p><strong>Position and momentum.</strong> Replacing the canonical commutation relation, <span class="math inline">\([\hat{x},\hat{p}]=i\hbar\)</span>, in <a href="#eq-heis4" class="quarto-xref">eq.&nbsp;<span>8.5</span></a> gives <span class="math inline">\(\sigma_x\sigma_p\geq\frac{1}{2}|i\hbar|=\frac{\hbar}{2}\)</span>, which is exactly <a href="#eq-heis3" class="quarto-xref">eq.&nbsp;<span>8.4</span></a>. Since the commutator is a constant, this limit applies to every state, without exceptions.</p></li>
+<li><p><strong>Components of spin and angular momentum.</strong> For the spin components, <span class="math inline">\([\hat{S}_x,\hat{S}_y]=i\hbar\hat{S}_z\)</span> (<a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>), so <span class="math inline">\(\sigma_{S_x}\sigma_{S_y}\geq\frac{\hbar}{2}|\langle S_z\rangle|\)</span>. For an electron in the state <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\langle S_z\rangle=+\frac{\hbar}{2}\)</span>, so the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components cannot both be known precisely. This is the reason behind the results of the sequential Stern–Gerlach experiments and behind the cone picture of <a href="07_Spin.html#fig-Fig2c7" class="quarto-xref">figure&nbsp;<span>7.2</span></a>. The same is true for the components of the orbital angular momentum.</p></li>
+<li><p><strong>Commuting observables.</strong> If <span class="math inline">\([\hat{A},\hat{B}]=0\)</span>, the right-hand side of <a href="#eq-heis4" class="quarto-xref">eq.&nbsp;<span>8.5</span></a> is zero, and nothing prevents both observables from being known exactly. For example, the magnitude of the angular momentum and its <span class="math inline">\(z\)</span> component can be known at the same time, which is why we can label the states of the hydrogen atom with both <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_\ell\)</span>.</p></li>
+</ol>
+<p>You may also find in other textbooks an <em>energy–time</em> uncertainty relation, <span class="math inline">\(\Delta E\,\Delta t\gtrsim\hbar/2\)</span>. Its meaning is different from <a href="#eq-heis4" class="quarto-xref">eq.&nbsp;<span>8.5</span></a>, because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy–time relation states that a state that lasts only for a short time, <span class="math inline">\(\Delta t\)</span> (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about <span class="math inline">\(\hbar/\Delta t\)</span>. This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.</p>
+</section>
+<section id="tunneling" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="tunneling"><span class="header-section-number">8.4</span> Tunneling</h2>
+<p>Tunneling is a phenomenon where a particle may cross a barrier even if it does not have sufficient kinetic energy to overcome the potential of the barrier itself. In this situation, the particle is said to “tunnel through” the barrier following a purely quantum mechanical phenomenon (<a href="#fig-Fig3c8" class="quarto-xref">figure&nbsp;<span>8.5</span></a>).</p>
+<div id="fig-Fig3c8" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A wave of large amplitude on the left reaches a gray rectangular barrier, decays smoothly inside it, and continues on the right as a wave with the same wavelength but much smaller amplitude.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig3c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Tunneling.png" class="img-fluid figure-img" style="width:90.0%" alt="A wave of large amplitude on the left reaches a gray rectangular barrier, decays smoothly inside it, and continues on the right as a wave with the same wavelength but much smaller amplitude.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig3c8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.5: Real part of the wave function of a particle with energy <span class="math inline">\(E\)</span> hitting a barrier of height <span class="math inline">\(V_0&gt;E\)</span> between <span class="math inline">\(0\)</span> and <span class="math inline">\(l\)</span>. The wave decays inside the barrier, and a smaller wave with the same wavelength continues on the other side: in this example, 13% of the particles are transmitted.
+</figcaption>
+</figure>
+</div>
+<p>To explain tunneling we must resort once again to the TISEq. A traveling or standing wave function incident on a non-infinite potential barrier (<span class="math inline">\(V_0\)</span>) decays in the potential as a function of <span class="math inline">\(C\exp[-\alpha x]\)</span>, where <span class="math inline">\(C\)</span> is the amplitude at the boundary, <span class="math inline">\(\alpha\)</span> depends on the difference between the height of the barrier and the energy of the particle, and <span class="math inline">\(x\)</span> is the distance into the potential. If a second well exists at infinite distance from the first well, the probability goes to zero, so the probability of a particle existing in the second well is zero. If a second well is brought closer to the first well, the amplitude of the wave function at this boundary is not zero, so the particle may tunnel into that well from the first well. It would appear that the particle is “leaking” through the barrier; it can travel through it without having to surmount it. An important point to keep in mind is that tunneling conserves energy. The final sum of the kinetic and potential energy of the system cannot exceed the initial sum. Therefore, the potential on both sides of the barrier does not need to be the same, but the sum of the ground state energy and the potential on the opposite side of the barrier may not be larger than the initial particle energy and potential.</p>
+<p>Tunneling can be described using the TISEq, <a href="06_Operators.html#eq-scheqsimple" class="quarto-xref">eq.&nbsp;<span>6.24</span></a>. For the tunneling problem we can take the potential <span class="math inline">\(V\)</span> to be zero for all space, except for the region inside the barrier (between <span class="math inline">\(0\)</span> and <span class="math inline">\(l\)</span>):</p>
+<p><span id="eq-tunn1"><span class="math display">\[
+V=\begin{cases} 0\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ V_0\quad&amp;\text{if}\; 0&lt;x&lt;l \\ 0\quad&amp;\text{if}\; l\leq x&lt; \infty \end{cases}.
+\tag{8.6}\]</span></span></p>
+<p>To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:</p>
+<p><span id="eq-tunn2"><span class="math display">\[
+\psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ C \exp(-\alpha x) \quad&amp;\text{if}\; 0&lt;x&lt;l \\ D\sin (kx)+E\cos (kx) \quad&amp;\text{if}\; l\leq x&lt; \infty \end{cases}
+\tag{8.7}\]</span></span></p>
+<p>where <span class="math inline">\(k=\frac{\sqrt{2mE}}{\hbar}\)</span>, and <span class="math inline">\(\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}\)</span>. To enforce continuity, we must have at the first boundary:</p>
+<p><span id="eq-tunn3"><span class="math display">\[
+A\sin(0) +B \cos(0)=C\exp(0),
+\tag{8.8}\]</span></span></p>
+<p>which implies that <span class="math inline">\(A=0\)</span>, and <span class="math inline">\(B=C\)</span>. In the final region, the coefficients <span class="math inline">\(D\)</span> and <span class="math inline">\(E\)</span> present a potentially intractable problem. However, if one realizes that the value at the boundary <span class="math inline">\(l\)</span> is driving the wave in the region <span class="math inline">\(l\)</span> to infinity, it may also be realized that the wave function could be rewritten as <span class="math inline">\(B\exp[-\alpha l]\cos[k(x-l)]\)</span>, phase shifting the wave function by the value of <span class="math inline">\(l\)</span>, and setting the amplitude to the boundary value. Summarizing, the wave function is:</p>
+<p><span id="eq-tunn5"><span class="math display">\[
+\psi=\begin{cases} B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ B \exp(-\alpha x)  \quad&amp;\text{if}\; 0&lt;x&lt;l \\ B\exp(-\alpha l)\cos[k(x-l)] \quad&amp;\text{if}\; l\leq x&lt; \infty. \end{cases}
+\tag{8.9}\]</span></span></p>
+<p>Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as <span class="math inline">\(\exp\left(-l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\)</span>, where <span class="math inline">\(l\)</span> is the width of the barrier, and <span class="math inline">\((V_0-E)\)</span> is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:</p>
+<p><span id="eq-tunn6"><span class="math display">\[
+\exp\left(-2l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
+\tag{8.10}\]</span></span></p>
+<p>As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that <span class="math inline">\(k\)</span> is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and goes back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>.</p>
+<section id="tunneling-in-chemical-reactions" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="tunneling-in-chemical-reactions"><span class="header-section-number">8.4.1</span> Tunneling in chemical reactions</h3>
+<p>The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, faster than classically predicted. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine (<span class="math inline">\(\text{PH}_3\)</span>) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).</p>
+<p>One of the primary effects of tunneling can be seen on the KIE. The probability of tunneling depends strongly on the mass of the particle, since the mass appears under the square root in the exponent of <a href="#eq-tunn6" class="quarto-xref">eq.&nbsp;<span>8.10</span></a>. Lighter isotopes therefore tunnel much more efficiently than heavier ones. As a result, tunneling speeds up the reaction of the lighter isotope much more than the reaction of the heavier one, leading to an increase in the KIE compared to the classical prediction. In the case of the umbrella inversion reaction, replacing ammonia with its deuterated counterpart, <span class="math inline">\(\text{ND}_3\)</span>, leaves the height of the barrier essentially unchanged (the potential energy does not depend on the mass of the nuclei), but it makes tunneling much less efficient: <span class="math inline">\(\text{ND}_3\)</span> inverts more than ten times slower than <span class="math inline">\(\text{NH}_3\)</span>.</p>
+<p>The KIE is defined as the ratio between the rate constants of the reactions involving the light and the heavy isotopes:</p>
+<p><span id="eq-kie"><span class="math display">\[
+\text{KIE} = \frac{k(\text{H})}{k(\text{D})},
+\tag{8.11}\]</span></span></p>
+<p>where <span class="math inline">\(k(\text{H})\)</span> and <span class="math inline">\(k(\text{D})\)</span> are the rate constants for the reaction involving hydrogen and deuterium, respectively. In the absence of tunneling, the KIEs of reactions that involve the transfer of a hydrogen atom are typically smaller than about 7 at room temperature, since they arise mostly from the difference in the zero-point energies of the two isotopes (see the harmonic oscillator in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>). Significantly larger values, together with curved (non-linear) Arrhenius plots, are commonly taken as experimental evidence of tunneling, an effect that must be considered when studying chemical reactions involving light atoms.</p>
+</section>
+</section>
+<section id="sec-rev8" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="sec-rev8"><span class="header-section-number">8.5</span> Chapter Review</h2>
+<section id="sec-quest8" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="sec-quest8"><span class="header-section-number">8.5.1</span> Study Questions</h3>
+<p><strong>1. In the double‑slit experiment with single particles (e.g., electrons), what is observed on the screen after many particles have passed?</strong></p>
+<ol type="a">
+<li>a single sharp peak at the center<br>
+</li>
+<li>two non‑overlapping bands corresponding to the two slits<br>
+</li>
+<li>a classical shadow pattern with uniform intensity between slits<br>
+</li>
+<li>an interference pattern with alternating bright and dark fringes<br>
+</li>
+<li>a completely uniform distribution over the screen</li>
+</ol>
+<hr>
+<p><strong>2. When detectors are placed at the slits to determine “which slit” each particle goes through, what typically happens to the interference pattern?</strong></p>
+<ol type="a">
+<li>it becomes sharper and more pronounced<br>
+</li>
+<li>it disappears, leaving two classical‑like bands<br>
+</li>
+<li>it reverses (bright and dark fringes swap)<br>
+</li>
+<li>it doubles in fringe number<br>
+</li>
+<li>it becomes independent of slit separation</li>
+</ol>
+<hr>
+<p><strong>3. In the Heisenberg uncertainty principle for position and momentum along <span class="math inline">\(x\)</span>, <a href="#eq-heis3" class="quarto-xref">eq.&nbsp;<span>8.4</span></a>, what do <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_p\)</span> represent?</strong></p>
+<ol type="a">
+<li>exact measurement errors of the apparatus<br>
+</li>
+<li>spreads (standard deviations) in the probability distributions of <span class="math inline">\(x\)</span> and <span class="math inline">\(p_x\)</span><br>
+</li>
+<li>mean values of position and momentum<br>
+</li>
+<li>classical trajectory deviations<br>
+</li>
+<li>arbitrary experimental tolerances chosen by the user</li>
+</ol>
+<hr>
+<p><strong>4. Which pair of observables obeys an uncertainty relation, so that the two cannot both be known exactly at the same time?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(L^2\)</span> and <span class="math inline">\(L_z\)</span><br>
+</li>
+<li>the mass and the charge of an electron<br>
+</li>
+<li>the energy and <span class="math inline">\(L^2\)</span> of the hydrogen atom<br>
+</li>
+<li>the position <span class="math inline">\(x\)</span> and the momentum component <span class="math inline">\(p_y\)</span><br>
+</li>
+<li>the spin components <span class="math inline">\(S_x\)</span> and <span class="math inline">\(S_y\)</span></li>
+</ol>
+<hr>
+<p><strong>5. Quantum tunneling refers to the phenomenon where a particle does what?</strong></p>
+<ol type="a">
+<li>moves faster than light through a barrier<br>
+</li>
+<li>passes through a region where its classical kinetic energy would be negative<br>
+</li>
+<li>reflects perfectly from any finite barrier<br>
+</li>
+<li>ceases to exist inside a barrier<br>
+</li>
+<li>behaves as a classical wave inside a barrier but as a particle outside</li>
+</ol>
+<hr>
+<p><strong>6. In a 1D potential‑barrier problem, what happens to the wave function in a classically forbidden region where <span class="math inline">\(E &lt; V(x)\)</span>?</strong></p>
+<ol type="a">
+<li>it vanishes identically<br>
+</li>
+<li>it oscillates with constant amplitude<br>
+</li>
+<li>it decays (or grows) exponentially with distance into the barrier<br>
+</li>
+<li>it becomes a delta function at the barrier edge<br>
+</li>
+<li>it becomes purely imaginary and non‑normalizable</li>
+</ol>
+<hr>
+<p><strong>7. For a finite barrier of width <span class="math inline">\(l\)</span>, which statement about transmission probability in the tunneling example is qualitatively correct?</strong></p>
+<ol type="a">
+<li>it is exactly zero if <span class="math inline">\(E &lt; V_0\)</span><br>
+</li>
+<li>it is 1/2 regardless of barrier parameters<br>
+</li>
+<li>it decreases rapidly as barrier width and/or height increase<br>
+</li>
+<li>it is independent of the particle’s mass<br>
+</li>
+<li>it is always 1 for normalized wave functions</li>
+</ol>
+<hr>
+<p><strong>8. Which of the following best explains <em>why</em> tunneling can occur even when <span class="math inline">\(E &lt; V_0\)</span> for a barrier?</strong></p>
+<ol type="a">
+<li>energy is not conserved in quantum mechanics<br>
+</li>
+<li>the wave function penetrates the classically forbidden region and has nonzero amplitude beyond it<br>
+</li>
+<li>the particle temporarily borrows energy from the vacuum<br>
+</li>
+<li>relativistic corrections allow the particle to accelerate<br>
+</li>
+<li>the barrier momentarily disappears due to fluctuations</li>
+</ol>
+<hr>
+<p><strong>9. In a chemical reaction coordinate picture, what does tunneling correspond to?</strong></p>
+<ol type="a">
+<li>the reactant climbing <em>over</em> the transition-state barrier<br>
+</li>
+<li>the reactant remaining in a metastable well forever<br>
+</li>
+<li>the system passing <em>through</em> the barrier region where classical energy would be insufficient<br>
+</li>
+<li>the system skipping the transition state entirely with zero probability<br>
+</li>
+<li>the system following a purely classical minimum‑energy path</li>
+</ol>
+<hr>
+<p><strong>10. Which experimental signature is commonly taken as evidence for significant hydrogen tunneling in reactions?</strong></p>
+<ol type="a">
+<li>linear Arrhenius plots with classical slopes<br>
+</li>
+<li>very small kinetic isotope effects (<span class="math inline">\(k_\text{H}/k_\text{D} \approx 1\)</span> at all temperatures)<br>
+</li>
+<li>large kinetic isotope effects and curved (non‑linear) Arrhenius plots<br>
+</li>
+<li>complete absence of isotope effects<br>
+</li>
+<li>rate constants independent of temperature and isotope</li>
+</ol>
+<hr>
+<p><strong>11. Once a measurement of <span class="math inline">\(A\)</span> yields a particular eigenvalue <span class="math inline">\(a_k\)</span>, what happens to the wave function (in the idealized description)?</strong></p>
+<ol type="a">
+<li>It remains unchanged<br>
+</li>
+<li>It collapses to the corresponding eigenstate of <span class="math inline">\(\hat{A}\)</span><br>
+</li>
+<li>It becomes identically zero<br>
+</li>
+<li>It becomes a uniform superposition of all eigenstates<br>
+</li>
+<li>It collapses to the ground state of the Hamiltonian</li>
+</ol>
+<hr>
+<p><strong>12. Which interpretation of quantum mechanics describes electrons as particles with definite positions and trajectories, guided by the wave function?</strong></p>
+<ol type="a">
+<li>Copenhagen interpretation<br>
+</li>
+<li>Many worlds<br>
+</li>
+<li>Bohmian mechanics<br>
+</li>
+<li>Spontaneous collapse<br>
+</li>
+<li>Local hidden variables</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.d, 2.b, 3.b, 4.e, 5.b, 6.c, 7.c, 8.b, 9.c, 10.c, 11.b, 12.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The interested student can read more in the <a href="https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics">Wikipedia article on interpretations of quantum mechanics</a>, and in <a href="#sec-Interpretations" class="quarto-xref"><span>section 8.1.2</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./07_Spin.html" class="pagination-link" aria-label="Spin">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./09_Atoms.html" class="pagination-link" aria-label="Many-Electron Atoms">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/08_Weirdness.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

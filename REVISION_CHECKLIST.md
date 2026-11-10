@@ -1,24 +1,24 @@
 # Revision Checklist — Live Textbook of P-Chem 2
 
-Status of the improvements identified in the November 2026 review. Effort: **S** = under an hour, **M** = a few hours, **L** = a day or more. This file is not part of the bookdown build.
+Status of the improvements identified in the November 2026 review. Effort: **S** = under an hour, **M** = a few hours, **L** = a day or more. This file is not part of the Quarto build.
 
 Chapter numbers below refer to the **current** structure of the book:
 
 | Ch. | File | Title |
 |---|---|---|
-| 1 | `01_Classical.Rmd` | Brief Summary of Classical Physics |
-| 2 | `02_Motivation.Rmd` | The Failure of Classical Physics |
-| 3 | `03_Schrodinger.Rmd` | The Schrödinger Equation |
-| 4 | `04_Models.Rmd` | Analytically Solvable Models |
-| 5 | `05_Hydrogen.Rmd` | The Hydrogen Atom |
-| 6 | `06_Operators.Rmd` | Operators and Mathematical Background |
-| 7 | `07_Spin.Rmd` | Spin |
-| 8 | `08_Weirdness.Rmd` | Quantum Weirdness |
-| 9 | `09_Atoms.Rmd` | Many-Electron Atoms |
-| 10 | `10_Molecules.Rmd` | Introduction to Molecules |
-| 11 | `11_Bonds.Rmd` | The Chemical Bond in Diatomic Molecules |
-| 12 | `12_Polyatomic.Rmd` | The Chemical Bond in Polyatomic Molecules |
-| 13 | `13_Spectroscopy.Rmd` | Spectroscopy |
+| 1 | `01_Classical.qmd` | Brief Summary of Classical Physics |
+| 2 | `02_Motivation.qmd` | The Failure of Classical Physics |
+| 3 | `03_Schrodinger.qmd` | The Schrödinger Equation |
+| 4 | `04_Models.qmd` | Analytically Solvable Models |
+| 5 | `05_Hydrogen.qmd` | The Hydrogen Atom |
+| 6 | `06_Operators.qmd` | Operators and Mathematical Background |
+| 7 | `07_Spin.qmd` | Spin |
+| 8 | `08_Weirdness.qmd` | Quantum Weirdness |
+| 9 | `09_Atoms.qmd` | Many-Electron Atoms |
+| 10 | `10_Molecules.qmd` | Introduction to Molecules |
+| 11 | `11_Bonds.qmd` | The Chemical Bond in Diatomic Molecules |
+| 12 | `12_Polyatomic.qmd` | The Chemical Bond in Polyatomic Molecules |
+| 13 | `13_Spectroscopy.qmd` | Spectroscopy |
 
 (The former Postulates chapter was removed; its content was moved to Ch. 4, 6, 8, and 9.)
 
@@ -31,7 +31,7 @@ Chapter numbers below refer to the **current** structure of the book:
 - [ ] **Anharmonicity and the Morse potential; centrifugal distortion** (M), in Ch. 13.
 - [ ] **Molecular symmetry and group theory** (L), if the course covers it.
 - [ ] **Use the bibliography** (M). `book.bib` exists but no citations are used. Add citations and a short "Further reading" list per chapter.
-- [ ] **Accessibility of the PDF** (M–L). The HTML version is done; the PDF produced by pdflatex is not tagged. Also check the gitbook toolbar with WAVE or axe on the live site.
+- [ ] **Accessibility of the PDF** (M–L). The HTML version is done; the PDF is not tagged (PDF/UA fails with the Quarto Typst book template). Also check the site with WAVE or axe on the live site.
 - [ ] **Runnable code** (L, optional). Candidates: plot particle-in-a-box and harmonic-oscillator states for any $n$; interactive hydrogen radial probability; a minimal SCF loop for water (Ch. 12); a simulated CO rovibrational spectrum (Ch. 13). The figure scripts in `scripts/` are a starting point.
 - [ ] **Practice problems** — not in the book by design: they will be on the companion website.
 

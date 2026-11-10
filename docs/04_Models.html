@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>4&nbsp; Analytically Solvable Models – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05_Hydrogen.html" rel="next">
+<link href="./03_Schrodinger.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04_Models.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-particle-in-a-box" id="toc-the-particle-in-a-box" class="nav-link active" data-scroll-target="#the-particle-in-a-box"><span class="header-section-number">4.1</span> The Particle in a Box</a>
+  <ul class="collapse">
+  <li><a href="#wave-function-analysis" id="toc-wave-function-analysis" class="nav-link" data-scroll-target="#wave-function-analysis"><span class="header-section-number">4.1.1</span> Wave function analysis</a></li>
+  </ul></li>
+  <li><a href="#the-particle-in-a-three-dimensional-box" id="toc-the-particle-in-a-three-dimensional-box" class="nav-link" data-scroll-target="#the-particle-in-a-three-dimensional-box"><span class="header-section-number">4.2</span> The Particle in a Three-Dimensional Box</a></li>
+  <li><a href="#the-particle-on-a-ring" id="toc-the-particle-on-a-ring" class="nav-link" data-scroll-target="#the-particle-on-a-ring"><span class="header-section-number">4.3</span> The Particle on a Ring</a>
+  <ul class="collapse">
+  <li><a href="#wave-function-analysis-1" id="toc-wave-function-analysis-1" class="nav-link" data-scroll-target="#wave-function-analysis-1"><span class="header-section-number">4.3.1</span> Wave function analysis</a></li>
+  </ul></li>
+  <li><a href="#the-particle-on-a-sphere" id="toc-the-particle-on-a-sphere" class="nav-link" data-scroll-target="#the-particle-on-a-sphere"><span class="header-section-number">4.4</span> The Particle on a Sphere</a>
+  <ul class="collapse">
+  <li><a href="#wave-function-analysis-2" id="toc-wave-function-analysis-2" class="nav-link" data-scroll-target="#wave-function-analysis-2"><span class="header-section-number">4.4.1</span> Wave function analysis</a></li>
+  </ul></li>
+  <li><a href="#the-harmonic-oscillator" id="toc-the-harmonic-oscillator" class="nav-link" data-scroll-target="#the-harmonic-oscillator"><span class="header-section-number">4.5</span> The Harmonic Oscillator</a>
+  <ul class="collapse">
+  <li><a href="#wave-function-analysis-3" id="toc-wave-function-analysis-3" class="nav-link" data-scroll-target="#wave-function-analysis-3"><span class="header-section-number">4.5.1</span> Wave function analysis</a></li>
+  </ul></li>
+  <li><a href="#sec-rev4" id="toc-sec-rev4" class="nav-link" data-scroll-target="#sec-rev4"><span class="header-section-number">4.6</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest4" id="toc-sec-quest4" class="nav-link" data-scroll-target="#sec-quest4"><span class="header-section-number">4.6.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/04_Models.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Models" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The TISEq can be solved analytically only in a few special cases. We saw one of those special cases, the free particle, at the end of the previous chapter. In this chapter, we will analyze four others. Luckily, we can use these solutions to explain most of the effects in chemistry since we can combine them to describe the hydrogen atom upon which we can build more complex chemical systems, as we will show in the next chapters.</p>
+<section id="the-particle-in-a-box" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="the-particle-in-a-box"><span class="header-section-number">4.1</span> The Particle in a Box</h2>
+<p>We can start by considering a particle constrained to move in a single dimension, under the influence of a potential <span class="math inline">\(V(x)\)</span> which is zero for <span class="math inline">\(0 \leq x \leq a\)</span> and infinite elsewhere. Since the wavefunction is not allowed to become infinite, it must have a value of zero where <span class="math inline">\(V(x)\)</span> is infinite, so <span class="math inline">\(\psi(x)\)</span> is nonzero only within <span class="math inline">\([0,a]\)</span>. The Schrödinger equation is thus:</p>
+<p><span id="eq-PIB1"><span class="math display">\[
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x)
+\qquad 0 \leq x \leq a.
+\tag{4.1}\]</span></span></p>
+<p>In other words, inside the box <span class="math inline">\(\psi(x)\)</span> describes a free particle, but outside the box <span class="math inline">\(\psi(x)=0\)</span>. Since the Schrödinger equation involves derivatives, the function that solves it, <span class="math inline">\(\psi(x)\)</span>, must be everywhere continuous. This fact means that the value of the wave function at the two extremes must be equal to zero:</p>
+<p><span id="eq-PIB2"><span class="math display">\[
+\psi(0)=\psi(a)=0.
+\tag{4.2}\]</span></span></p>
+<p>Inside the box the solution will be the same as for the free particle:</p>
+<p><span id="eq-PIB3"><span class="math display">\[
+\psi(x) = A e^{ikx} + B e^{-ikx},
+\tag{4.3}\]</span></span></p>
+<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants. Using the two constraints in <a href="#eq-PIB2" class="quarto-xref">eq.&nbsp;<span>4.2</span></a>, we get at <span class="math inline">\(x=0\)</span>:</p>
+<p><span id="eq-PIB4"><span class="math display">\[
+\psi(0) = A + B = 0 \implies B = -A
+\tag{4.4}\]</span></span></p>
+<p>And at <span class="math inline">\(x=a\)</span>:</p>
+<p><span id="eq-PIB5"><span class="math display">\[
+\psi(a) = A e^{ika} + B e^{-ika} = 0.
+\tag{4.5}\]</span></span></p>
+<p>Replacing <a href="#eq-PIB4" class="quarto-xref">eq.&nbsp;<span>4.4</span></a> into <a href="#eq-PIB5" class="quarto-xref">eq.&nbsp;<span>4.5</span></a> gives:</p>
+<p><span id="eq-PIB6"><span class="math display">\[
+A e^{ika} - A e^{-ika} = 0
+\tag{4.6}\]</span></span></p>
+<p>which is then easily simplified into:</p>
+<p><span id="eq-PIB7"><span class="math display">\[
+\begin{aligned}
+e^{ika} &amp;= e^{-ika}\\
+e^{i2ka} &amp;= 1.
+\end{aligned}
+\tag{4.7}\]</span></span></p>
+<p>This equation is solved when:</p>
+<p><span id="eq-PIB8"><span class="math display">\[
+2ka = 2n\pi,
+\tag{4.8}\]</span></span></p>
+<p>which is trivially solved for <span class="math inline">\(n=0\)</span>, giving either <span class="math inline">\(k=0\)</span> or <span class="math inline">\(a=0\)</span>. This trivial solution is completely uninteresting, since it describes no particles in no boxes. A more interesting set of solutions however, are those for which:</p>
+<p><span id="eq-PIB9"><span class="math display">\[
+k_n = \frac{n\pi}{a} \quad (n = 1, 2, 3,\dots,\infty),
+\tag{4.9}\]</span></span></p>
+<p>which represents an infinite set of functions, <span class="math inline">\(\psi_n(x)\)</span>, determined by a positive integer number <span class="math inline">\(n\)</span>, called <em>quantum number</em>. Since these functions solve the TISEq, they are also called <em>eigenfunctions</em>, but they are not a continuous set, unlike in the previous case.</p>
+<p>Using <a href="#eq-PIB4" class="quarto-xref">eq.&nbsp;<span>4.4</span></a>, the wave functions become:</p>
+<p><span id="eq-PIB10"><span class="math display">\[
+\psi_n(x) = A \left(e^{i\frac{n\pi x}{a}} - e^{-i\frac{n\pi x}{a}}\right),
+\tag{4.10}\]</span></span></p>
+<p>and using Euler’s formula <span class="math inline">\(\left(\sin\theta = \frac{e^{i\theta} - e^{-i\theta}}{2i}\right)\)</span>, we get:</p>
+<p><span id="eq-PIB11"><span class="math display">\[
+\psi_n(x) = 2iA \frac{e^{i\frac{n\pi x}{a}} - e^{-i\frac{n\pi x}{a}}}{2i} = C \sin\left(\frac{n\pi x}{a}\right)
+\tag{4.11}\]</span></span></p>
+<p>where <span class="math inline">\(C = 2iA\)</span> is a complex constant.</p>
+<p>To calculate the energy eigenvalues, we can replace <a href="#eq-PIB11" class="quarto-xref">eq.&nbsp;<span>4.11</span></a> into <a href="#eq-PIB1" class="quarto-xref">eq.&nbsp;<span>4.1</span></a>, to obtain:</p>
+<p><span id="eq-PIB12"><span class="math display">\[
+E_n = n^2 \frac{\pi^2 \hbar^2 }{2 m a^2} = \frac{n^2 h^2}{8 m a^2} \quad (n=1,2,\ldots,\infty).
+\tag{4.12}\]</span></span></p>
+<p>A few interesting considerations can be made from the results of <a href="#eq-PIB12" class="quarto-xref">eq.&nbsp;<span>4.12</span></a>. First, although there is an infinite number of acceptable values of the energy (eigenvalues), these values are not continuous. Second, the lowest value of the energy is not zero, and it depends on the size of the box, <span class="math inline">\(a\)</span>, since:</p>
+<p><span id="eq-PIB13"><span class="math display">\[
+E_1 = \frac{\pi^2 \hbar^2 }{2 m a^2}\neq 0.
+\tag{4.13}\]</span></span></p>
+<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we have not determined the constant <span class="math inline">\(C\)</span> yet. We will do so in a moment, using the normalization condition of <a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>.</p>
+<p>The most profound physical insight from the particle in a box solution comes from applying Born’s interpretation of the wave function (<a href="03_Schrodinger.html#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>). The probability of finding the particle in state <span class="math inline">\(n\)</span> between positions <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span> is <span class="math inline">\(|\psi_n(x)|^2 dx\)</span>, so the probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> tell us where the particle is likely to be found inside the box.</p>
+<p>Since the particle must be somewhere inside the box, the probability of finding it anywhere between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> must be equal to one. This is the normalization condition, <a href="03_Schrodinger.html#eq-born2" class="quarto-xref">eq.&nbsp;<span>3.10</span></a>, with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant <span class="math inline">\(C\)</span>:</p>
+<p><span id="eq-PIBnorm1"><span class="math display">\[
+\int_0^a |\psi_n(x)|^2\, dx = |C|^2 \int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = 1.
+\tag{4.14}\]</span></span></p>
+<p>Using the trigonometric identity <span class="math inline">\(\sin^2\theta = \frac{1 - \cos(2\theta)}{2}\)</span>, the integral becomes:</p>
+<p><span id="eq-PIBnorm2"><span class="math display">\[
+\int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = \frac{1}{2}\int_0^a dx - \frac{1}{2}\int_0^a \cos\left(\frac{2n\pi x}{a}\right) dx = \frac{a}{2} - \frac{a}{4n\pi}\Big[\sin\left(\frac{2n\pi x}{a}\right)\Big]_0^a = \frac{a}{2},
+\tag{4.15}\]</span></span></p>
+<p>since the sine vanishes at both limits. Replacing this result into <a href="#eq-PIBnorm1" class="quarto-xref">eq.&nbsp;<span>4.14</span></a> gives <span class="math inline">\(|C|^2\frac{a}{2}=1\)</span>, or <span class="math inline">\(|C|=\sqrt{\frac{2}{a}}\)</span>. Only the magnitude of <span class="math inline">\(C\)</span> is fixed by this condition, and we can choose it to be real and positive. The normalized eigenfunctions of the particle in a box are therefore:</p>
+<p><span id="eq-PIBnorm3"><span class="math display">\[
+\psi_n(x) = \sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right) \quad (n=1,2,\ldots,\infty).
+\tag{4.16}\]</span></span></p>
+<p>Notice that the normalization constant is the same for every <span class="math inline">\(n\)</span>, and that it depends only on the size of the box: the larger the box, the more the probability is spread out, and the smaller the amplitude of the wave function. The same condition applies to any system: since the probability of finding the particle somewhere in space must be one, every acceptable wave function must satisfy <span class="math inline">\(\int |\psi|^2\, d\tau = 1\)</span>, where the integral runs over all the coordinates of the system. The probabilistic interpretation also puts some restrictions on what an acceptable wave function can look like. It must be <em>single-valued</em>, since the probability of finding the particle at a given point cannot have two different values. It must be <em>continuous</em> (and, where the potential is finite, so must be its first derivative), since the TISEq contains its second derivative. And it must be <em>finite</em> everywhere, and go to zero at large distances fast enough for the normalization integral to exist. We already used these conditions when we required the wave function to vanish at the walls of the box, and we will use them again for every system in this textbook.</p>
+<p>For the particle in a box eigenfunctions in <a href="#eq-PIB11" class="quarto-xref">eq.&nbsp;<span>4.11</span></a>, the probability density is:</p>
+<p><span id="eq-PIB14"><span class="math display">\[
+|\psi_n(x)|^2 = |C|^2 \sin^2\left(\frac{n\pi x}{a}\right).
+\tag{4.17}\]</span></span></p>
+<p>This function tells us where the particle is <em>most likely</em> to be found if we measure its position.</p>
+<section id="wave-function-analysis" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="wave-function-analysis"><span class="header-section-number">4.1.1</span> Wave function analysis</h3>
+<p>The main results of the solution of the TISEq for the particle in a box are reported in <a href="#fig-fig1c4" class="quarto-xref">figure&nbsp;<span>4.1</span></a>. In this picture, the first five eigenfunctions are plotted together with their probability densities and spaced according to their energy levels. The non-trivial nodes are also reported.</p>
+<div id="fig-fig1c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first five particle-in-a-box wave functions drawn at heights equal to their energies, which get farther apart as n increases. Each wave function is a sine wave with n minus 1 nodes inside the box, shown with its probability density.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIB.png" class="img-fluid figure-img" style="width:80.0%" alt="The first five particle-in-a-box wave functions drawn at heights equal to their energies, which get farther apart as n increases. Each wave function is a sine wave with n minus 1 nodes inside the box, shown with its probability density.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.1: The first five eigenfunctions and energy levels of a particle confined inside a box by walls with infinite potential energy. The nodes of the wave functions are reported as purple dots. The probability density for each level is also plotted in cyan.
+</figcaption>
+</figure>
+</div>
+<p>A few important considerations can be made by analyzing the plots of the solutions, specifically:</p>
+<ol type="1">
+<li><p><strong>Eigenfunctions</strong>: The solutions of the TISEq for the particle in a box are mathematically identical to the <strong>standing wave</strong> modes on a vibrating string fixed at both ends, <a href="01_Classical.html#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.20</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>. In classical waves, boundary conditions quantize allowed frequencies; in quantum mechanics, the infinite walls quantize energy via de Broglie waves, yielding stationary states that don’t propagate but “stand” with fixed nodes.</p></li>
+<li><p><strong>Eigenvalues</strong>: The energy levels are not equidistant from each other, with the gap between consecutive levels, <span class="math inline">\(E_{n+1}-E_n \propto 2n+1\)</span>, increasing linearly with <span class="math inline">\(n\)</span>: low-lying levels are closer together, and higher levels get progressively farther apart.</p></li>
+<li><p><strong>Nodes</strong>: At <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = a\)</span>, and at <span class="math inline">\(x = \frac{ja}{n}\)</span> (where <span class="math inline">\(j = 1, 2, ..., n-1\)</span>), we have <span class="math inline">\(\sin\left(\frac{n\pi x}{a}\right) = 0\)</span>, so <span class="math inline">\(|\psi_n(x)|^2 = 0\)</span>. These are <strong>nodes</strong> where the probability of finding the particle is exactly zero. The boundary nodes, however, are rather trivial, as they are forced by the infinite potential walls, and not a direct consequence of the wavefunction’s oscillatory nature. The <span class="math inline">\(n\)</span>-th energy eigenstate has exactly (<span class="math inline">\(n-1\)</span>) nodes <em>inside</em> the box.</p></li>
+<li><p><strong>Peak probability</strong>: The maxima of <span class="math inline">\(|\psi_n(x)|^2\)</span> occur where <span class="math inline">\(\sin^2\left(\frac{n\pi x}{a}\right)\)</span> is maximum. These <strong>antinodes</strong> represent regions of highest probability.</p></li>
+</ol>
+<p>For the ground state (<span class="math inline">\(n=1\)</span>), <span class="math inline">\(|\psi_1(x)|^2 = |C|^2 \sin^2\left(\frac{\pi x}{a}\right)\)</span> has one maximum at <span class="math inline">\(x = a/2.\)</span> The particle is most likely to be found at the center of the box. For the first excited state (<span class="math inline">\(n=2\)</span>), <span class="math inline">\(|\psi_2(x)|^2 = |C|^2 \sin^2\left(\frac{2\pi x}{a}\right)\)</span> has a node at <span class="math inline">\(x = a/2\)</span> and two equal maxima at <span class="math inline">\(x = a/4\)</span> and <span class="math inline">\(x = 3a/4.\)</span> The particle has zero probability of being at the center.</p>
+<p>Unlike classical mechanics where a particle with definite energy bounces back and forth uniformly across the box, quantum stationary states have non-uniform position probability distributions. The particle doesn’t “spend equal time everywhere” - instead, it’s more likely to be found near the antinodes of the wave function.<br><br> Notice that we can use the trigonometric identity, <span class="math inline">\(\sin^2\theta = \frac{1 - \cos(2\theta)}{2}\)</span>, to obtain:</p>
+<p><span id="eq-PIB15"><span class="math display">\[
+|\psi_n(x)|^2 = \frac{|C|^2}{2} \left[1 - \cos\left(\frac{2n\pi x}{a}\right)\right].
+\tag{4.18}\]</span></span></p>
+<p>This shows that the probability density is the sum of a uniform background (<span class="math inline">\(|C|^2/2\)</span>) modulated by a rapidly oscillating term whose frequency increases with <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> becomes large (high energy states), <span class="math inline">\(|\psi_n(x)|^2\)</span> becomes more uniform across the box, approaching the classical limit.</p>
+<p>The connection between nodes, energy, and probability distribution is fundamental. Higher energy states oscillate more rapidly and have more nodes, reflecting their increased “kinetic energy” through faster spatial variation.</p>
+</section>
+</section>
+<section id="the-particle-in-a-three-dimensional-box" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="the-particle-in-a-three-dimensional-box"><span class="header-section-number">4.2</span> The Particle in a Three-Dimensional Box</h2>
+<p>Real particles move in three dimensions, so let’s briefly extend the particle in a box to a rectangular box with sides <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span>, with the potential equal to zero inside and infinite outside. The Hamiltonian contains the kinetic energy along the three directions:</p>
+<p><span id="eq-PIB3D1"><span class="math display">\[
+-\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\psi(x,y,z) = E\,\psi(x,y,z).
+\tag{4.19}\]</span></span></p>
+<p>Each term of the Hamiltonian acts on only one coordinate. This suggests that we try a wave function written as a product of three functions, each depending on one coordinate only, <span class="math inline">\(\psi(x,y,z)=X(x)Y(y)Z(z)\)</span>. Replacing it in <a href="#eq-PIB3D1" class="quarto-xref">eq.&nbsp;<span>4.19</span></a> and dividing by <span class="math inline">\(XYZ\)</span>, the equation splits into three independent one-dimensional equations, one for each direction, each identical to the one that we just solved. This technique is called <strong>separation of variables</strong>, and we will use it again for the particle on a sphere and for the hydrogen atom. The solutions are products of the one-dimensional solutions, and the energies are sums of the one-dimensional energies:</p>
+<p><span id="eq-PIB3D2"><span class="math display">\[
+\begin{aligned}
+\psi_{n_x n_y n_z} &amp;= \sqrt{\frac{8}{abc}}\,\sin\frac{n_x\pi x}{a}\,\sin\frac{n_y\pi y}{b}\,\sin\frac{n_z\pi z}{c}, \\
+E_{n_x n_y n_z} &amp;= \frac{h^2}{8m}\left(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\frac{n_z^2}{c^2}\right),
+\end{aligned}
+\tag{4.20}\]</span></span></p>
+<p>with <span class="math inline">\(n_x,n_y,n_z=1,2,3,\ldots\)</span> Notice that we now need <em>three</em> quantum numbers, one for each dimension of the motion.</p>
+<p>Something new happens when the box is a cube (<span class="math inline">\(a=b=c\)</span>). The energy becomes <span class="math inline">\(E=\frac{h^2}{8ma^2}\left(n_x^2+n_y^2+n_z^2\right)\)</span>, and different states can have the same energy. The ground state, <span class="math inline">\((1,1,1)\)</span>, has <span class="math inline">\(E=3\frac{h^2}{8ma^2}\)</span> and is unique, but the three states <span class="math inline">\((2,1,1)\)</span>, <span class="math inline">\((1,2,1)\)</span>, and <span class="math inline">\((1,1,2)\)</span> all have <span class="math inline">\(E=6\frac{h^2}{8ma^2}\)</span>. Levels shared by more than one state are called <strong>degenerate</strong>, and the number of states with the same energy is the <strong>degeneracy</strong> of the level (three, in this case). Degeneracy is a consequence of symmetry: the three states have the same shape, just oriented along the three different axes of the cube, and since the three directions of a cube are equivalent, they must have the same energy. If we stretch the box along one direction, the symmetry is broken and the degeneracy disappears. We will meet degenerate levels again in all the systems that follow, starting from the particle on a ring.</p>
+</section>
+<section id="the-particle-on-a-ring" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-particle-on-a-ring"><span class="header-section-number">4.3</span> The Particle on a Ring</h2>
+<p>We can extend our understanding of confined quantum systems by considering a particle constrained to move in a circle of fixed radius <span class="math inline">\(r\)</span>. This model, known as the particle on a ring (or particle in a ring), represents the rotational motion of a particle about a fixed axis.</p>
+<p>While this system seems to be a 2-dimensional problem, in reality it is closely related to the particle in a box, with the two endpoints of the box wrapping around themselves and touching each other. However, rather than working with a single linear coordinate, <span class="math inline">\(x\)</span>, we can use the set of polar coordinates, <span class="math inline">\((r,\phi)\)</span>, where only the azimuthal angle <span class="math inline">\(\phi\)</span> varies (with <span class="math inline">\(0 \leq \phi \leq 2\pi\)</span>). The radial coordinate <span class="math inline">\(r\)</span> is held constant. The wave function <span class="math inline">\(\psi(x)\)</span> can be easily written as <span class="math inline">\(\psi(\phi)\)</span> by using <span class="math inline">\(\phi=x/r\)</span>. Thus the second derivative becomes:</p>
+<p><span id="eq-PIB0"><span class="math display">\[
+\frac{d^2\psi(x)}{dx^2} = \frac{1}{r^2} \frac{d^2\psi(\phi)}{d\phi^2},
+\tag{4.21}\]</span></span></p>
+<p>and the time-independent Schrödinger equation can be obtained directly from <a href="#eq-PIB1" class="quarto-xref">eq.&nbsp;<span>4.1</span></a> as:</p>
+<p><span id="eq-PIR1"><span class="math display">\[
+-\frac{\hbar^2}{2m r^2}\frac{d^2\psi(\phi)}{d\phi^2} = E\psi(\phi).
+\tag{4.22}\]</span></span></p>
+<p>For a classical particle rotating about the origin in the <span class="math inline">\(xy\)</span>-plane, its kinetic energy is expressed as:</p>
+<p><span id="eq-PIR1b"><span class="math display">\[
+E=\frac{L_z^2}{2I},
+\tag{4.23}\]</span></span></p>
+<p>where <span class="math inline">\(I = m r^2\)</span> is the moment of inertia of the particle about the axis of rotation and <span class="math inline">\(L_z\)</span> is the component of the angular momentum along the <span class="math inline">\(z\)</span> axis, perpendicular to the rotation plane. The TISEq can then be rewritten as:</p>
+<p><span id="eq-PIR2"><span class="math display">\[
+-\frac{\hbar^2}{2I}\frac{d^2\psi(\phi)}{d\phi^2} = E\psi(\phi),
+\tag{4.24}\]</span></span></p>
+<p>where it is now evident that the energy of the quantum mechanical system is directly related to the component <span class="math inline">\(L_z\)</span> of the angular momentum, as in the classical case. Since the angular momentum <span class="math inline">\(\mathbf{L}=\mathbf{r}\times \mathbf{p}\)</span>, <span class="math inline">\(\mathbf{L}\)</span> must point in the z-direction when <span class="math inline">\(\mathbf{r}\)</span> and <span class="math inline">\(\mathbf{p}\)</span> both lie on the <span class="math inline">\(xy\)</span>-plane.</p>
+<p>The boundary condition for the particle in a ring comes from the requirement that the wavefunction must be single-valued, meaning that as we traverse the ring from angle <span class="math inline">\(\phi = 0\)</span> to <span class="math inline">\(\phi = 2\pi\)</span>, we must return to the same value:</p>
+<p><span id="eq-PIR3"><span class="math display">\[
+\psi(\phi) = \psi(\phi + 2\pi)
+\tag{4.25}\]</span></span></p>
+<p>Similarly to the previous cases, the general solution to the TISEq above is:</p>
+<p><span id="eq-PIR4"><span class="math display">\[
+\psi(\phi) = A e^{ik\phi} + B e^{-ik\phi}
+\tag{4.26}\]</span></span></p>
+<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants. Applying the single-valuedness boundary condition requires that <span class="math inline">\(e^{ik \cdot 2\pi} = 1\)</span>, which is satisfied only when <span class="math inline">\(k = m_\ell\)</span>, where <span class="math inline">\(m_\ell\)</span> is an integer (positive, negative, or zero) called <em>azimuthal quantum number</em>. The set of acceptable solutions is therefore:</p>
+<p><span id="eq-PIR5"><span class="math display">\[
+\psi_{m_\ell}(\phi) = A e^{im_\ell\phi}\quad (m_\ell = 0, \pm1, \pm2, \ldots, \pm\infty).
+\tag{4.27}\]</span></span></p>
+<p>The <span class="math inline">\(m_\ell = 0\)</span> solution is a constant function with zero energy (unlike the particle in a box, the particle on a ring has no zero-point energy), while the remaining solutions represent rotations in the counter-clockwise (positive solutions, <span class="math inline">\(L_z\)</span> pointing upwards) and clockwise (negative solutions, <span class="math inline">\(L_z\)</span> pointing downwards) directions, as seen from above the <span class="math inline">\(xy\)</span>-plane.</p>
+<p>To find the energy eigenvalues, we substitute the eigenfunction back into the Schrödinger equation. Taking the second derivative of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span>:</p>
+<p><span id="eq-PIR6"><span class="math display">\[
+\frac{d^2\psi_{m_\ell}}{d\phi^2} = -m_\ell^2 A e^{im_\ell\phi} = -m_\ell^2 \psi_{m_\ell}(\phi)
+\tag{4.28}\]</span></span></p>
+<p>Replacing this derivative in the Schrödinger equation, we obtain:</p>
+<p><span id="eq-PIR7"><span class="math display">\[
+-\frac{\hbar^2}{2mr^2}(-m_\ell^2)\psi_{m_\ell} = E\psi_{m_\ell},
+\tag{4.29}\]</span></span></p>
+<p>and the final energy levels, as:</p>
+<p><span id="eq-PIR8"><span class="math display">\[
+E_{m_\ell} = \frac{\hbar^2 m_\ell^2}{2mr^2} = \frac{\hbar^2 m_\ell^2}{2I}.
+\tag{4.30}\]</span></span></p>
+<p>The energy levels of the particle on a ring are plotted for the first five levels in <a href="#fig-fig5c4" class="quarto-xref">figure&nbsp;<span>4.2</span></a>.</p>
+<div id="fig-fig5c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram for the particle on a ring: a single level for m equals 0 and doubly degenerate levels for plus and minus m above it, each drawn with small polar plots of the real and imaginary parts of the wave function.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig5c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIR_levels.png" class="img-fluid figure-img" style="width:90.0%" alt="Energy level diagram for the particle on a ring: a single level for m equals 0 and doubly degenerate levels for plus and minus m above it, each drawn with small polar plots of the real and imaginary parts of the wave function.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig5c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.2: Energy level diagram and degeneracy pattern for the particle-on-a-ring. Both the real and imaginary parts of the wave functions of the first five energy levels are represented using polar plots (see text for explanation), with nodes reported as purple diameters of the physical ring (black circle).
+</figcaption>
+</figure>
+</div>
+<p>Using the definition of kinetic energy for a classical system in <a href="#eq-PIR1b" class="quarto-xref">eq.&nbsp;<span>4.23</span></a>, we get:</p>
+<p><span id="eq-PIR9"><span class="math display">\[
+\frac{L_z^2}{2I} = \frac{\hbar^2 m_\ell^2}{2I},
+\tag{4.31}\]</span></span></p>
+<p>which implies that the angular momentum along the <span class="math inline">\(z\)</span>-axis is quantized in units of <span class="math inline">\(\hbar\)</span> as:</p>
+<p><span id="eq-PIR10"><span class="math display">\[
+L_z = \hbar m_\ell \quad (m_\ell = 0, \pm1, \pm2, \ldots, \pm\infty).
+\tag{4.32}\]</span></span></p>
+<p>A rotating charged particle orbiting the ring generates a magnetic moment <span class="math inline">\(\boldsymbol{\mu} \propto \mathbf{L}\)</span>. Thus <a href="#eq-PIR10" class="quarto-xref">eq.&nbsp;<span>4.32</span></a>, which quantizes <span class="math inline">\(L_z\)</span>, explains why <span class="math inline">\(m_\ell\)</span> is called the <strong>magnetic quantum number</strong>. Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (<span class="math inline">\(m_\ell = 0\)</span>), each energy level is doubly degenerate: the states with <span class="math inline">\(m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span> have the same energy. This makes physical sense because rotation in the positive and negative directions (counter-clockwise and clockwise) should have the same energy. Third, the energy does not depend on the sign of <span class="math inline">\(m_\ell\)</span>, which is a consequence of the fact that energy depends on <span class="math inline">\(L_z^2\)</span>, and <span class="math inline">\((-m_\ell)^2 = (m_\ell)^2\)</span>. This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).</p>
+<section id="wave-function-analysis-1" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="wave-function-analysis-1"><span class="header-section-number">4.3.1</span> Wave function analysis</h3>
+<p>The eigenfunctions in <a href="#eq-PIR5" class="quarto-xref">eq.&nbsp;<span>4.27</span></a> are complex functions and their visualization is not as simple as for the particle in a box. For <span class="math inline">\(m_\ell \neq 0\)</span>, these represent states with definite angular momentum <span class="math inline">\(L_z = \hbar m_\ell\)</span>. The probability density is:</p>
+<p><span id="eq-PIR11"><span class="math display">\[
+|\psi_{m_\ell}(\phi)|^2 = |A|^2,
+\tag{4.33}\]</span></span></p>
+<p>which is <strong>uniform around the ring</strong>. This means that the particle is equally likely to be found at any point on the ring in these states, consistent with our expectation that a state with definite angular momentum should have no preferred position on the ring.</p>
+<p>Visualizing the particle-on-a-ring wave functions presents a challenge: the system is <strong>intrinsically 1D</strong> (motion along the circle), yet the <strong>ring geometry requires 2D projection</strong> for intuitive understanding. The clearest visualization plots the real and imaginary parts of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> as height above/below the ring in the <span class="math inline">\(xy\)</span>-plane, as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>:</p>
+<ul>
+<li><span class="math inline">\(xy\)</span>-plane: Shows the circular path (<span class="math inline">\(\phi = 0\)</span> to <span class="math inline">\(2\pi\)</span>)</li>
+<li><span class="math inline">\(z\)</span>-axis: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span> (left column)</li>
+<li><span class="math inline">\(z\)</span>-axis: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span> (right column)</li>
+</ul>
+<p>This 3D representation preserves both the physical ring constraint and reveals the oscillatory nodal structure as <span class="math inline">\(\phi\)</span> varies around the circle.</p>
+<div id="fig-fig2c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2. The real and imaginary parts are drawn as heights above and below a circle, oscillating around it with 2 times the absolute value of m nodes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIR_3d.png" class="img-fluid figure-img" style="width:50.0%" alt="Three-dimensional plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2. The real and imaginary parts are drawn as heights above and below a circle, oscillating around it with 2 times the absolute value of m nodes.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.3: 3D visualization of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. The black circle represents the ring of fixed radius <span class="math inline">\(r\)</span>. The colored surface shows wavefunction amplitude plotted as height (<span class="math inline">\(z\)</span>-axis) above/below the ring as the azimuthal angle <span class="math inline">\(\phi\)</span> varies from 0 to <span class="math inline">\(2\pi\)</span>. Each component has exactly <span class="math inline">\(2|m_\ell|\)</span> nodal points, with <span class="math inline">\(\pm m_\ell\)</span> pairs showing opposite phase winding directions (degenerate in energy).
+</figcaption>
+</figure>
+</div>
+<p>Alternatively, <strong>2D contour plots</strong> map the real and imaginary parts of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> onto the ring using a color gradient, as it’s done in <a href="#fig-fig3c4" class="quarto-xref">figure&nbsp;<span>4.4</span></a>:</p>
+<ul>
+<li>Red shades (darker = more positive amplitude).</li>
+<li>Blue shades (darker = more negative amplitude).</li>
+<li>White/light colors = near zero (nodes).</li>
+</ul>
+<p>These are top-down views of the 3D plots in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>, excellent for identifying nodal positions. In the particle-in-a-box, nodes were single points along a line. For the particle-on-a-ring, these plots show that nodes become pairs of diametrically opposite points on the circle. The diametric pairing reflects the rotational symmetry: if <span class="math inline">\(\cos(m_\ell\phi_0) = 0\)</span>, then <span class="math inline">\(\cos(m_\ell(\phi_0 + \pi)) = (-1)^{m_\ell}\cos(m_\ell\phi_0) = 0\)</span>.</p>
+<div id="fig-fig3c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIR_top.png" class="img-fluid figure-img" style="width:50.0%" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.4: Top-down 2D contour plots of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. Color scheme: Dark red (positive amplitude), dark blue (negative amplitude), white/light colors (nodes <span class="math inline">\(\approx\)</span> 0). Each component shows exactly <span class="math inline">\(2|m_\ell|\)</span> nodal points appearing as diametrically opposite pairs due to rotational symmetry.
+</figcaption>
+</figure>
+</div>
+<p>The eigenfunctions can also be visualized using <strong>polar plots</strong> against the azimuthal angle <span class="math inline">\(\phi\)</span>, as shown in <a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>:</p>
+<ul>
+<li>The <strong>radial distance</strong> from the center represents the <strong>amplitude</strong> of the real or imaginary part of the wavefunction.</li>
+<li>The <strong>angular position</strong> corresponds to <strong>azimuthal angle</strong> (<span class="math inline">\(\phi\)</span>).</li>
+</ul>
+<p>This representation clearly reveals the nodes where amplitude = 0, appearing as returns to the origin, and the lobes, that is regions of maximum amplitude. However, this visualization has a limitation, as it completely loses the physical ring geometry. The particle remains confined to a circle of fixed radius <span class="math inline">\(r\)</span>, but the polar plot makes it appear as if it explores a 2D disk. When observing the polar plots, it is important to keep in mind that <strong>the lobes are not spatial probability distributions</strong> in 2D space. They represent the <strong>magnitude of the real/imaginary parts</strong> of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> evaluated along the ring. The actual position probability <span class="math inline">\(|\psi|^2 = |A|^2\)</span> remains perfectly uniform around the circle for all states.</p>
+<div id="fig-fig4c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Polar plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, showing lobes whose number grows with the absolute value of m.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig4c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIR_polar.png" class="img-fluid figure-img" style="width:50.0%" alt="Polar plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, showing lobes whose number grows with the absolute value of m.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.5: Polar plots of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. Radial distance from center <span class="math inline">\(\propto\)</span> wavefunction amplitude; angular position = <span class="math inline">\(\phi\)</span>. Nodes appear where the curve returns to the origin (<span class="math inline">\(2|m_\ell|\)</span> per component). Note: Lobes represent amplitude along the ring, not 2D spatial probability (actual <span class="math inline">\(|\psi|^2\)</span> is uniform).
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="the-particle-on-a-sphere" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="the-particle-on-a-sphere"><span class="header-section-number">4.4</span> The Particle on a Sphere</h2>
+<p>Extending the particle on a ring to a three-dimensional case, we get a particle confined on the surface of a sphere (particle on a sphere). This system is a 2-dimensional system analogous to the motion of a rigid rotor. The rigid rotor is a simple model of a rotating stick in three dimensions. We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a single-particle system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The Cartesian coordinates, <span class="math inline">\({x,y,z}\)</span>, are not optimal to represent the system, and they are usually replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. If the orbiting mass (the electron) is held at a constant distance from the origin, the system reduces to a 2-dimensional system by simply keeping <span class="math inline">\(r\)</span> constant. The TISEq of the system in spherical coordinates is:</p>
+<p><span id="eq-RR1"><span class="math display">\[
+- \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
+\frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(\theta,\phi) = E \psi(\theta,\phi),
+\tag{4.34}\]</span></span></p>
+<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia, as for the particle in a ring case. After a little effort, the eigenfunctions can be shown to be the complex spherical harmonics:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p><span id="eq-RR1b"><span class="math display">\[
+Y_{\ell}^{m_{\ell}}(\theta, \phi) = N P_{\ell}^{|m_\ell|}(\cos\theta) e^{im_\ell\phi},
+\tag{4.35}\]</span></span></p>
+<p>where <span class="math inline">\(P_{\ell}^{|m_\ell|}(\cos\theta)\)</span> denotes the associated Legendre polynomials, <span class="math inline">\(m_\ell\)</span> is the <strong>magnetic quantum number</strong>, and <span class="math inline">\(N\)</span> is a normalization constant. As for the previous cases, the eigenvalues are quantized and are simply:</p>
+<p><span id="eq-RR2"><span class="math display">\[
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots,\infty).
+\tag{4.36}\]</span></span></p>
+<p>The spherical harmonic functions depend on a second quantum number, <span class="math inline">\(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> which is the same <strong>magnetic quantum number</strong> that we encounter for the particle on a ring. For the spherical harmonics, however, the energy does not depend on the magnetic quantum number, and functions with the same <span class="math inline">\(\ell\)</span> but different <span class="math inline">\(m_\ell\)</span> are energy-degenerate. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables, <span class="math inline">\((\theta,\phi)\)</span>, that enter the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum is quantized and jumps discontinuously from one value to the next, as for the particle on a ring case.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For the particle-on-a-sphere case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously. The energy levels of the particle on a sphere are plotted for the first five levels in <a href="#fig-fig5bc4" class="quarto-xref">figure&nbsp;<span>4.6</span></a>.</p>
+<div id="fig-fig5bc4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram for the particle on a sphere, with one level for l equals 0, three degenerate levels for l equals 1, and five for l equals 2, each level farther from the previous one.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig5bc4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_levels.png" class="img-fluid figure-img" style="width:90.0%" alt="Energy level diagram for the particle on a sphere, with one level for l equals 0, three degenerate levels for l equals 1, and five for l equals 2, each level farther from the previous one.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig5bc4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.6: Energy level diagram and degeneracy pattern for the particle-on-a-sphere.
+</figcaption>
+</figure>
+</div>
+<section id="wave-function-analysis-2" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="wave-function-analysis-2"><span class="header-section-number">4.4.1</span> Wave function analysis</h3>
+<p>The analytical expressions for the first three energy levels <span class="math inline">\((\ell=0,1,2)\)</span> of the rigid rotor are:</p>
+<p><span class="math inline">\(\boldsymbol{\ell=0}:\)</span></p>
+<p><span class="math inline">\(\quad Y_0^0(\theta,\phi) = \frac{1}{2}\sqrt{\frac{1}{\pi}}.\)</span></p>
+<p><span class="math inline">\(\boldsymbol{\ell=1}:\)</span></p>
+<p><span class="math inline">\(\quad Y_1^{-1}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{3}{2\pi}} e^{-i\phi} \sin\theta = \frac{1}{2}\sqrt{\frac{3}{2\pi}} \frac{x-iy}{r}.\)</span></p>
+<p><span class="math inline">\(\quad Y_1^{0}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{3}{\pi}} \cos\theta = \frac{1}{2}\sqrt{\frac{3}{\pi}} \frac{z}{r}.\)</span></p>
+<p><span class="math inline">\(\quad Y_1^{1}(\theta,\phi) = -\frac{1}{2}\sqrt{\frac{3}{2\pi}} e^{i\phi} \sin\theta = -\frac{1}{2}\sqrt{\frac{3}{2\pi}} \frac{x+iy}{r}.\)</span></p>
+<p><span class="math inline">\(\boldsymbol{\ell=2}:\)</span></p>
+<p><span class="math inline">\(\quad Y_2^{-2}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{15}{2\pi}} e^{-2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}} \frac{(x-iy)^2}{r^2}.\)</span></p>
+<p><span class="math inline">\(\quad Y_2^{-1}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{15}{2\pi}} e^{-i\phi} \sin\theta \cos\theta = \frac{1}{2}\sqrt{\frac{15}{2\pi}} \frac{(x-iy)z}{r^2}.\)</span></p>
+<p><span class="math inline">\(\quad Y_2^{0}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{5}{\pi}} (3\cos^2\theta - 1) = \frac{1}{4}\sqrt{\frac{5}{\pi}} \frac{3z^2 - r^2}{r^2}.\)</span></p>
+<p><span class="math inline">\(\quad Y_2^{1}(\theta,\phi) = -\frac{1}{2}\sqrt{\frac{15}{2\pi}} e^{i\phi} \sin\theta \cos\theta = -\frac{1}{2}\sqrt{\frac{15}{2\pi}} \frac{(x+iy)z}{r^2}.\)</span></p>
+<p><span class="math inline">\(\quad Y_2^{2}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{15}{2\pi}} e^{2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}} \frac{(x+iy)^2}{r^2}.\)</span></p>
+<p>Visualizing spherical harmonics presents the same challenges as the particle on a ring, but amplified by dimensionality. The particle lives on a 2D spherical surface (requiring 3D embedding), and we need to show both position (<span class="math inline">\(\theta,\phi\)</span>) and amplitude <span class="math inline">\(\left(Y_\ell^{m_\ell}\right)\)</span>—a 4D problem squeezed into 3D plots.</p>
+<p>The solution mirrors the ring contour plots: we map the amplitude directly to a color gradient on the unit sphere surface. Red shades represent positive values of <span class="math inline">\(\Re\left[ Y_\ell^{m_\ell}(\theta,\phi)\right]\)</span> or <span class="math inline">\(\Im \left[Y_\ell^{m_\ell}(\theta,\phi)\right]\)</span>, blue shades represent negative values, and white/light colors mark the nodes where the harmonic equals zero. <a href="#fig-fig6c4" class="quarto-xref">Figure&nbsp;<span>4.7</span></a> shows these color maps for the real parts across <span class="math inline">\(\ell=0,1,2\)</span>, while <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a> shows the corresponding imaginary parts.</p>
+<div id="fig-fig6c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig6c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_Re.png" class="img-fluid figure-img" style="width:90.0%" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.7: Color gradient maps of the real part <span class="math inline">\((\Re[Y_\ell^{m_\ell}(\theta,\phi)])\)</span> for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal lines where <span class="math inline">\(Y_\ell^{m_\ell}=0\)</span>). Each <span class="math inline">\(\ell\)</span> manifold shows characteristic nodal structure: 0 nodal lines <span class="math inline">\((\ell=0)\)</span>, 1 nodal surface <span class="math inline">\((\ell=1)\)</span>, 2 nodal surfaces <span class="math inline">\((\ell=2)\)</span>.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fig7c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Color maps on spheres of the imaginary part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig7c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_Im.png" class="img-fluid figure-img" style="width:90.0%" alt="Color maps on spheres of the imaginary part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig7c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.8: Color gradient maps of the imaginary part <span class="math inline">\((\Im[Y_\ell^{m_\ell}(\theta,\phi)])\)</span> for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal lines where <span class="math inline">\(Y_\ell^{m_\ell}=0\)</span>). Each <span class="math inline">\(\ell\)</span> manifold shows characteristic nodal structure: 0 nodal lines (<span class="math inline">\(\ell=0\)</span>), 1 nodal surface (<span class="math inline">\(\ell=1\)</span>), 2 nodal surfaces (<span class="math inline">\(\ell=2\)</span>).
+</figcaption>
+</figure>
+</div>
+<p>This approach preserves the spherical geometry while clearly revealing the nodal lines as white curves separating red and blue regions, and makes the lobe structure immediately visible—directly extending the 1D ring visualization strategy to the 2D sphere.</p>
+<p>Crucially, these plots visualize the wavefunction itself, not the probability density. The actual position probability on the sphere is given by <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|^2\)</span>. Unlike the particle on a ring case, where <span class="math inline">\(|\psi_{m_\ell}(\phi)|^2 = |A|^2\)</span> was perfectly uniform, the spherical harmonics have non-uniform angular probability. For example:</p>
+<ul>
+<li><span class="math inline">\(Y_0^0\)</span>: Uniform probability everywhere on sphere</li>
+<li><span class="math inline">\(Y_1^0 \propto \cos\theta\)</span>: Probability peaks at poles, zero at equator</li>
+<li><span class="math inline">\(Y_1^{\pm1} \propto \sin\theta\)</span>: Probability peaks at equator, zero at poles</li>
+<li><span class="math inline">\(Y_2^0\)</span>: Probability concentrated along the <span class="math inline">\(z\)</span>-axis, with nodal cones at <span class="math inline">\(\theta \approx 54.7^\circ\)</span> and <span class="math inline">\(125.3^\circ\)</span> and a smaller maximum at the equator</li>
+</ul>
+<p>To visualize the true probability distribution, we can plot <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span> directly, which eliminates phase information (<span class="math inline">\(\Re\)</span>, <span class="math inline">\(\Im\)</span>) but reveals where the particle is most likely to be found on the sphere’s surface, as in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. The loss of phase is clear from the fact that the positive and negative <span class="math inline">\(m_\ell\)</span> functions on these plots look exactly identical. A simple interpretation of this fact is that the phase is associated with direction of rotation: Functions with positive <span class="math inline">\(m_\ell\)</span> represent counter-clockwise rotation (<span class="math inline">\(L_z\)</span> pointing upwards), while functions with negative <span class="math inline">\(m_\ell\)</span> represent clockwise rotation (<span class="math inline">\(L_z\)</span> pointing downwards), as for the particle on a ring.</p>
+<div id="fig-fig8c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Probability density of the spherical harmonics for l equals 0, 1, and 2 shown on spheres: uniform for l equals 0, concentrated at the poles or around the equator for l equals 1, and in four-lobed or ring-shaped patterns for l equals 2.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig8c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_abs.png" class="img-fluid figure-img" style="width:90.0%" alt="Probability density of the spherical harmonics for l equals 0, 1, and 2 shown on spheres: uniform for l equals 0, concentrated at the poles or around the equator for l equals 1, and in four-lobed or ring-shaped patterns for l equals 2.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig8c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.9: Probability density plots <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|^2\)</span> for spherical harmonics of the rigid rotor. Color scheme: Darker colors indicate higher probability density on the surface of the sphere. Unlike the particle on a ring (uniform <span class="math inline">\(|\psi|^2\)</span>), these show non-uniform angular probability: <span class="math inline">\((\ell=0)\)</span> uniform; <span class="math inline">\((\ell=1)\)</span> states peak at poles/equator; <span class="math inline">\((\ell=2)\)</span> states show complex 4-lobed or toroidal patterns. Probability integrates to 1 over sphere surface for each state.
+</figcaption>
+</figure>
+</div>
+<p>An alternative, and often more intuitive, representation is obtained by plotting the magnitude of the spherical harmonic as a radial deformation of the sphere. In this parametric view, each point on the unit sphere <span class="math inline">\((\theta,\phi)\)</span> is moved radially outward (or inward) by an amount proportional to <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|\)</span>. The deformed surface is then colored to indicate the sign of the real part (for example, red for positive, blue for negative). This results in a parametric plot where the distance from the center at a given angle represents the magnitude of the amplitude of the spherical harmonic. These plots are reported in <a href="#fig-fig9c4" class="quarto-xref">figure&nbsp;<span>4.10</span></a> for the real part of the wave functions, and in <a href="#fig-fig10c4" class="quarto-xref">figure&nbsp;<span>4.11</span></a> for the imaginary part. These deformed plots correspond to the polar plots for the particle on a ring case we reported in <a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>.</p>
+<div id="fig-fig9c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional lobe shapes of the real part of the spherical harmonics for l equals 0, 1, and 2: a sphere, dumbbell shapes, and four-lobed and ring shapes, colored red where positive and blue where negative, with nodal surfaces marked.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig9c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_Re_def.png" class="img-fluid figure-img" style="width:90.0%" alt="Three-dimensional lobe shapes of the real part of the spherical harmonics for l equals 0, 1, and 2: a sphere, dumbbell shapes, and four-lobed and ring shapes, colored red where positive and blue where negative, with nodal surfaces marked.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig9c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.10: Parametric plots of the real part of the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The radial deformation (distance from the center at a given angle) is proportional to <span class="math inline">\(\Re[Y_\ell^{m_\ell}(\theta,\phi)]\)</span> (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal surfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.
+</figcaption>
+</figure>
+</div>
+<div id="fig-fig10c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional lobe shapes of the imaginary part of the spherical harmonics for l equals 1 and 2, colored red where positive and blue where negative, with nodal surfaces marked.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig10c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SH_Im_def.png" class="img-fluid figure-img" style="width:90.0%" alt="Three-dimensional lobe shapes of the imaginary part of the spherical harmonics for l equals 1 and 2, colored red where positive and blue where negative, with nodal surfaces marked.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig10c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.11: Parametric plots of the imaginary part of the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The radial deformation (distance from the center at a given angle) is proportional to <span class="math inline">\(\Im[Y_\ell^{m_\ell}(\theta,\phi)]\)</span> (larger lobes = higher angular probability). The color indicates sign of imaginary part (red=positive, blue=negative). The nodal surfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.
+</figcaption>
+</figure>
+</div>
+<p>The parametric plots are ideal to show the <strong>nodal structure</strong> of the spherical harmonics. This nodal structure follows a simple rule: the <span class="math inline">\(\ell\)</span>-th energy level has exactly <span class="math inline">\(\ell\)</span> nodal surfaces on the sphere. These nodal surfaces—where <span class="math inline">\(Y_\ell^{m_\ell} = 0\)</span>—appear as <em>nodal circles</em> on the spherical surface, as in <a href="#fig-fig6c4" class="quarto-xref">figure&nbsp;<span>4.7</span></a> and <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a>. Most of these nodes are great circles on the sphere, but in some cases they are not, as they can be parallel circles along the <span class="math inline">\(z\)</span>-axis (see e.g., <span class="math inline">\(Y_2^0\)</span>). In parametric plots (deformed polar views), the nodes appear as flat planes cutting through the origin when they are great circles, while they appear as cones when they are parallel circles along the <span class="math inline">\(z\)</span>-axis.</p>
+<p>Finally, it is extremely important to notice that although the deformed polar view resembles the standard “atomic orbital” pictures from general chemistry, <strong>they are fundamentally different visualizations with distinct physical meanings</strong>. Specifically, the deformed lobes do not represent spatial probability in 3D space. Just as with the particle on a ring, the particle remains confined to the sphere’s surface at fixed radius, <span class="math inline">\(r\)</span>. The parametric deformation makes it appear as if the particle explores the 3D volume inside the sphere—<strong>it does not</strong>. When observing the polar plots, it is important to keep in mind that the lobes are not spatial probability distributions in 3D space, but they represent the magnitude of the real/imaginary parts of the spherical harmonic evaluated on the surface of the sphere. As we already discussed above, the probability is not uniform—unlike the particle-on-a-ring where <span class="math inline">\(|\psi|^2 = |A|^2\)</span> was constant. For the rigid rotor, <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span> has maxima and minima (including nodes), showing the electron is more likely found in certain angular directions than others, as it’s clearly shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. The deformed polar view visualizes this angular probability structure, but remains a 2D angular function plotted in a deformed 3D surface, not a 3D spatial probability.</p>
+</section>
+</section>
+<section id="the-harmonic-oscillator" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="the-harmonic-oscillator"><span class="header-section-number">4.5</span> The Harmonic Oscillator</h2>
+<p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
+<p><span id="eq-HO1"><span class="math display">\[
+V(x) = - \int (-kx)\, dx = V_0 + \frac{1}{2} kx^2.
+\tag{4.37}\]</span></span></p>
+<p>If we choose the energy scale such that <span class="math inline">\(V_0 = 0\)</span> then: <span class="math inline">\(V(x) = \frac{1}{2}kx^2\)</span>, and the TISEq becomes:</p>
+<p><span id="eq-HO2"><span class="math display">\[
+- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
+E \psi(x)
+\tag{4.38}\]</span></span></p>
+<p>After some effort, the eigenfunctions are:</p>
+<p><span id="eq-HO3"><span class="math display">\[
+\psi_n(x) = N_{n} H_{n}(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad (n=0,1,2,\ldots,\infty),
+\tag{4.39}\]</span></span></p>
+<p>where <span class="math inline">\(H_{n}\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_{n}\)</span> are defined by</p>
+<p><span id="eq-HO4"><span class="math display">\[
+\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
+N_{n} = \frac{1}{\sqrt{2^{n} (n)!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+\tag{4.40}\]</span></span></p>
+<p>The eigenvalues are:</p>
+<p><span id="eq-HO5"><span class="math display">\[
+E_n = \hbar \omega \left(n + \frac{1}{2} \right),
+\tag{4.41}\]</span></span></p>
+<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous, and the lowest energy state is not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by <a href="#eq-HO5" class="quarto-xref">eq.&nbsp;<span>4.41</span></a>. The lowest possible energy (the ZPE) will be:</p>
+<p><span id="eq-zpeH"><span class="math display">\[
+E_0 = \frac{1}{2} \hbar \omega \neq 0
+\tag{4.42}\]</span></span></p>
+<section id="wave-function-analysis-3" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="wave-function-analysis-3"><span class="header-section-number">4.5.1</span> Wave function analysis</h3>
+<p><a href="#fig-fig11c4" class="quarto-xref">Figure&nbsp;<span>4.12</span></a> shows the first five harmonic oscillator eigenfunctions alongside their probability densities, with vertical positions scaled according to their energy levels. The nodal positions are also marked.</p>
+<div id="fig-fig11c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first five harmonic oscillator wave functions drawn inside a parabolic potential at heights equal to their equally spaced energies, each with n nodes and its probability density.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig11c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/HarmOsc.png" class="img-fluid figure-img" style="width:90.0%" alt="The first five harmonic oscillator wave functions drawn inside a parabolic potential at heights equal to their equally spaced energies, each with n nodes and its probability density.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig11c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle confined inside a harmonic oscillator potential. The nodes of the wave functions are reported as purple dots. The probability density for each level is also plotted in cyan.
+</figcaption>
+</figure>
+</div>
+<p>Similarly to the particle in a box case, each <span class="math inline">\(n\)</span>-th eigenstate has exactly <span class="math inline">\(n\)</span> interior nodes, with the Gaussian envelope <span class="math inline">\(e^{-\alpha x^2/2}\)</span> localizing probability near <span class="math inline">\(x=0\)</span> and ensuring rapid decay at large <span class="math inline">\(|x|\)</span>. The ground state (<span class="math inline">\(n=0\)</span>) is a simple Gaussian with no nodes. The first excited state (<span class="math inline">\(n=1\)</span>) has one node at <span class="math inline">\(x=0\)</span>, and higher states develop increasingly rapid oscillations within the widening classical turning points. In contrast with the particle in a box case, the energy levels are equally spaced, with constant spacing <span class="math inline">\(\Delta E = \hbar \omega\)</span>, reflecting the classical periodicity of simple harmonic motion.</p>
+<p>The probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> always decay rapidly outside the classical turning points. Higher-<span class="math inline">\(n\)</span> states oscillate faster within progressively wider classical turning points, and their probability becomes largest near the turning points, approaching the classical probability, which peaks near maximum displacement where the particle moves slowest.</p>
+</section>
+</section>
+<section id="sec-rev4" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-rev4"><span class="header-section-number">4.6</span> Chapter Review</h2>
+<section id="sec-quest4" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.6.1</span> Study Questions</h3>
+<p><strong>1. Which of the following sets contains only model systems treated in this chapter as analytically solvable?</strong></p>
+<ol type="a">
+<li>Hydrogen atom, particle in a box, rigid rotor<br>
+</li>
+<li>Hydrogen atom, harmonic oscillator, Morse oscillator<br>
+</li>
+<li>Particle in a box, harmonic oscillator, rigid rotor<br>
+</li>
+<li>Free particle, hydrogen atom, rigid rotor<br>
+</li>
+<li>Particle in a box, Coulomb potential, rigid rotor</li>
+</ol>
+<hr>
+<p><strong>2. For the 1D infinite potential well (“particle in a box”), the potential <span class="math inline">\(V(x)\)</span> is what?</strong></p>
+<ol type="a">
+<li>Constant for all <span class="math inline">\(x\)</span><br>
+</li>
+<li>Zero for <span class="math inline">\(0 \le x \le a\)</span>, infinite elsewhere<br>
+</li>
+<li>Linear in <span class="math inline">\(x\)</span> between 0 and <span class="math inline">\(a\)</span><br>
+</li>
+<li>Harmonic in <span class="math inline">\(x^2\)</span> between 0 and <span class="math inline">\(a\)</span><br>
+</li>
+<li>Zero everywhere</li>
+</ol>
+<hr>
+<p><strong>3. What boundary conditions are imposed on the wavefunction for the particle in a box?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\psi(0) = \psi(a) = 1\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(0) = 0,\ \psi(a) = 1\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(0) = \psi'(a) = 0\)</span><br>
+</li>
+<li><span class="math inline">\(\psi'(0) = \psi'(a) = 0\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(0) = \psi(a) = 0\)</span></li>
+</ol>
+<hr>
+<p><strong>4. Applying the <span class="math inline">\(\psi(0)=0\)</span> boundary condition to the particle in a box leads to which condition on the constants?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(A = 0\)</span><br>
+</li>
+<li><span class="math inline">\(k = 0\)</span><br>
+</li>
+<li><span class="math inline">\(A = B\)</span><br>
+</li>
+<li><span class="math inline">\(B = 0\)</span><br>
+</li>
+<li><span class="math inline">\(A = -B\)</span></li>
+</ol>
+<hr>
+<p><strong>5. Which of the following is the correct spatial dependence of the normalized eigenfunctions for the particle in a box?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\psi_n(x) \propto \sin\left(\dfrac{n\pi x}{a}\right)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto \cos\left(\dfrac{n\pi x}{a}\right)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto e^{ikx}\)</span><br>
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto x^n\)</span><br>
+</li>
+<li><span class="math inline">\(\psi_n(x) \propto \delta(x-n)\)</span></li>
+</ol>
+<hr>
+<p><strong>6. Which of the following are the energy eigenvalues <span class="math inline">\(E_n\)</span> for the particle in a box?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(E_n = \dfrac{\hbar^2 n^2}{2 m a^2}\)</span></li>
+<li><span class="math inline">\(E_n = \dfrac{h^2 n^2}{8 m a^2}\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \dfrac{1}{2} m n^2 a^2\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \dfrac{n h c}{a}\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = n \hbar \omega\)</span></li>
+</ol>
+<hr>
+<p><strong>7. The harmonic oscillator eigenfunctions are expressed in terms of which special functions?</strong></p>
+<ol type="a">
+<li>Legendre polynomials <span class="math inline">\(P_n\)</span><br>
+</li>
+<li>Laguerre polynomials <span class="math inline">\(L_n\)</span><br>
+</li>
+<li>Hermite polynomials <span class="math inline">\(H_n\)</span><br>
+</li>
+<li>Bessel functions <span class="math inline">\(J_n\)</span><br>
+</li>
+<li>Spherical harmonics <span class="math inline">\(Y_{\ell}^{m_\ell}\)</span></li>
+</ol>
+<hr>
+<p><strong>8. Which of the following are the energy levels of the harmonic oscillator?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(E_n = \hbar \omega \left(n + \tfrac{1}{2}\right)\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \hbar \omega n\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \dfrac{h^2 n^2}{8 m a^2}\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \dfrac{\hbar^2 n^2}{2m}\)</span><br>
+</li>
+<li><span class="math inline">\(E_n = \dfrac{1}{2} k x^2\)</span></li>
+</ol>
+<hr>
+<p><strong>9. What does the rigid rotor model represent?</strong></p>
+<ol type="a">
+<li>A particle moving in a 1D infinite well<br>
+</li>
+<li>Two point masses at fixed distance rotating in 3D<br>
+</li>
+<li>A mass on a spring moving in 1D<br>
+</li>
+<li>A free particle in 3D<br>
+</li>
+<li>A charged particle in a uniform electric field</li>
+</ol>
+<hr>
+<p><strong>10. Which of the following are the energy levels of the rigid rotor?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(E_\ell = \dfrac{\hbar^2}{2I}\,\ell(\ell+1)\)</span><br>
+</li>
+<li><span class="math inline">\(E_\ell = \hbar \omega (\ell + \tfrac{1}{2})\)</span><br>
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{h^2 \ell^2}{8 I}\)</span><br>
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{\hbar^2}{2I}\,m^2\)</span><br>
+</li>
+<li><span class="math inline">\(E_\ell = \dfrac{1}{2} I \omega^2\)</span></li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.c, 2.b, 3.e, 4.e, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Notice that if we consider an electron rotating at a fixed distance around a nucleus, then the difference in the mass of the electron and the reduced mass of the electron-nucleus system is to all intents and purposes negligible, and we can treat this case as a particle on a sphere.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For a description of the spherical harmonics the <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">Wikipedia article on spherical harmonics</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>You can think of this as either the “speed” at which the rotor is rotating, or even better, as its “angular frequency”.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./03_Schrodinger.html" class="pagination-link" aria-label="The Schrödinger Equation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05_Hydrogen.html" class="pagination-link" aria-label="The Hydrogen Atom">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/04_Models.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

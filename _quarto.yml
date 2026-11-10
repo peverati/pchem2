@@ -1,0 +1,71 @@
+project:
+  type: book
+  output-dir: docs
+  render:
+    - "*.qmd"
+  resources:
+    - .nojekyll   # GitHub Pages: serve site_libs/ as is
+
+lang: en
+language:
+  crossref-ch-prefix: chapter
+  crossref-sec-prefix: section
+
+book:
+  title: "The Live Textbook of Physical Chemistry 2"
+  output-file: pchem2
+  author: "Roberto Peverati"
+  description: "Textbook for the P-Chem 2 class at Florida Tech"
+  date: today
+  date-format: "D MMMM YYYY"
+  repo-url: https://github.com/peverati/pchem2
+  repo-actions: [edit, issue]
+  downloads: [pdf]
+  search: true
+  chapters:
+    - index.qmd
+    - 01_Classical.qmd
+    - 02_Motivation.qmd
+    - 03_Schrodinger.qmd
+    - 04_Models.qmd
+    - 05_Hydrogen.qmd
+    - 06_Operators.qmd
+    - 07_Spin.qmd
+    - 08_Weirdness.qmd
+    - 09_Atoms.qmd
+    - 10_Molecules.qmd
+    - 11_Bonds.qmd
+    - 12_Polyatomic.qmd
+    - 13_Spectroscopy.qmd
+
+crossref:
+  eq-prefix: eq.
+  fig-prefix: figure
+  tbl-prefix: table
+  sec-prefix: section
+
+
+format:
+  html:
+    theme: cosmo
+    css: quarto.css
+    html-math-method: mathjax
+    include-in-header: punctuation.html
+    number-depth: 3
+    fig-align: center
+  pdf:
+    documentclass: scrbook
+    classoption: [oneside]
+    geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - margin=0.75in
+    fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{cancel}
+        \usepackage{booktabs}
+        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+        \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+        \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+    fig-pos: "H"

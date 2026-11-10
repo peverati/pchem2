@@ -1,66 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>The Live Textbook of Physical Chemistry 2</title>
-  <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
 
-  <meta property="og:title" content="The Live Textbook of Physical Chemistry 2" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  <meta name="github-repo" content="peverati/PChem2" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The Live Textbook of Physical Chemistry 2" />
-  
-  <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
-  
+<meta name="author" content="Roberto Peverati">
+<meta name="dcterms.date" content="2026-11-10">
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
 
-<meta name="author" content="Dr. Roberto Peverati" />
-
-
-<meta name="date" content="2026-11-10" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-
-<link rel="next" href="Classical.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<title>The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
 
 
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script type="text/x-mathjax-config">
-MathJax.Ajax.config.path["mhchem"] =
-  "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.3.2";
-MathJax.Hub.Config({
-  TeX: {
-    extensions: ["[mhchem]/mhchem.js"]
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./01_Classical.html" rel="next">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
-});
-</script>
+}</script>
 <script type="text/javascript">
 // Keep punctuation that immediately follows inline math on the same line as the math
 // (otherwise browsers may start a new line with a comma or a period).
@@ -90,435 +107,701 @@ MathJax.Hub.Config({
 </script>
 
 
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="quarto.css">
 </head>
 
-<body>
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">Live Textbook P-Chem 2</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
-<ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>1</b> Brief Summary of Classical Physics</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="Classical.html"><a href="Classical.html#classical-mechanics"><i class="fa fa-check"></i><b>1.1</b> Classical Mechanics</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>1.1.1</b> Newtonian Formulation</a></li>
-<li class="chapter" data-level="1.1.2" data-path="Classical.html"><a href="Classical.html#hamiltonian-formulation"><i class="fa fa-check"></i><b>1.1.2</b> Hamiltonian Formulation</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="Classical.html"><a href="Classical.html#coulombs-law"><i class="fa fa-check"></i><b>1.2</b> Coulomb’s Law</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="Classical.html"><a href="Classical.html#vector-form-of-coulombs-law"><i class="fa fa-check"></i><b>1.2.1</b> Vector Form of Coulomb’s Law</a></li>
-<li class="chapter" data-level="1.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>1.2.2</b> Electric field</a></li>
-<li class="chapter" data-level="1.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>1.2.3</b> Electric Potential Energy</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="Classical.html"><a href="Classical.html#ClassicalWaves"><i class="fa fa-check"></i><b>1.3</b> Classical Waves</a>
-<ul>
-<li class="chapter" data-level="1.3.1" data-path="Classical.html"><a href="Classical.html#describing-a-wave"><i class="fa fa-check"></i><b>1.3.1</b> Describing a wave</a></li>
-<li class="chapter" data-level="1.3.2" data-path="Classical.html"><a href="Classical.html#the-wave-equation"><i class="fa fa-check"></i><b>1.3.2</b> The wave equation</a></li>
-<li class="chapter" data-level="1.3.3" data-path="Classical.html"><a href="Classical.html#standing-waves-on-a-string"><i class="fa fa-check"></i><b>1.3.3</b> Standing waves on a string</a></li>
-<li class="chapter" data-level="1.3.4" data-path="Classical.html"><a href="Classical.html#light-as-an-electromagnetic-wave"><i class="fa fa-check"></i><b>1.3.4</b> Light as an electromagnetic wave</a></li>
-</ul></li>
-<li class="chapter" data-level="1.4" data-path="Classical.html"><a href="Classical.html#rev1"><i class="fa fa-check"></i><b>1.4</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="1.4.1" data-path="Classical.html"><a href="Classical.html#quest1"><i class="fa fa-check"></i><b>1.4.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>2</b> The Failure of Classical Physics</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>2.1</b> Historical Context</a></li>
-<li class="chapter" data-level="2.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>2.2</b> The Ultraviolet Catastrophe</a></li>
-<li class="chapter" data-level="2.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>2.3</b> The Photoelectric Effect</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="Motivation.html"><a href="Motivation.html#why-chemists-care-about-photons"><i class="fa fa-check"></i><b>2.3.1</b> Why chemists care about photons</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="Motivation.html"><a href="Motivation.html#atomic-spectra-and-the-bohr-model"><i class="fa fa-check"></i><b>2.4</b> Atomic Spectra and the Bohr Model</a></li>
-<li class="chapter" data-level="2.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>2.5</b> Wave-Particle Duality</a></li>
-<li class="chapter" data-level="2.6" data-path="Motivation.html"><a href="Motivation.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
-<li class="chapter" data-level="2.7" data-path="Motivation.html"><a href="Motivation.html#rev2"><i class="fa fa-check"></i><b>2.7</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="2.7.1" data-path="Motivation.html"><a href="Motivation.html#quest2"><i class="fa fa-check"></i><b>2.7.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#BornInterpretation"><i class="fa fa-check"></i><b>3.2</b> The Meaning of the Wave Function</a></li>
-<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.3</b> The Time-Dependent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.4</b> Solution for the Free Particle</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.4.1</b> What does the free-particle solution look like?</a></li>
-<li class="chapter" data-level="3.4.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.4.2</b> Wave packets</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="Models.html"><a href="Models.html"><i class="fa fa-check"></i><b>4</b> Analytically Solvable Models</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="Models.html"><a href="Models.html#the-particle-in-a-box"><i class="fa fa-check"></i><b>4.1</b> The Particle in a Box</a>
-<ul>
-<li class="chapter" data-level="4.1.1" data-path="Models.html"><a href="Models.html#wave-function-analysis"><i class="fa fa-check"></i><b>4.1.1</b> Wave function analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-particle-in-a-three-dimensional-box"><i class="fa fa-check"></i><b>4.2</b> The Particle in a Three-Dimensional Box</a></li>
-<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-particle-on-a-ring"><i class="fa fa-check"></i><b>4.3</b> The Particle on a Ring</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-1"><i class="fa fa-check"></i><b>4.3.1</b> Wave function analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-particle-on-a-sphere"><i class="fa fa-check"></i><b>4.4</b> The Particle on a Sphere</a>
-<ul>
-<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-2"><i class="fa fa-check"></i><b>4.4.1</b> Wave function analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="4.5" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.5</b> The Harmonic Oscillator</a>
-<ul>
-<li class="chapter" data-level="4.5.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-3"><i class="fa fa-check"></i><b>4.5.1</b> Wave function analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="4.6" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.6</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="4.6.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.6.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#AtomicUnits"><i class="fa fa-check"></i><b>5.1</b> Atomic Units</a></li>
-<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Radial Wave Functions</a></li>
-<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.3</b> The Angular Wave Functions</a></li>
-<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.4</b> Building the Complete Orbital</a></li>
-<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.5</b> Experimental Access to Orbitals</a></li>
-<li class="chapter" data-level="5.6" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.6</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="5.6.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.6.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="Operators.html"><a href="Operators.html#operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.1</b> Operators in Quantum Mechanics</a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="Operators.html"><a href="Operators.html#basic-properties-of-operators"><i class="fa fa-check"></i><b>6.1.1</b> Basic Properties of Operators</a></li>
-<li class="chapter" data-level="6.1.2" data-path="Operators.html"><a href="Operators.html#linear-operators"><i class="fa fa-check"></i><b>6.1.2</b> Linear Operators</a></li>
-<li class="chapter" data-level="6.1.3" data-path="Operators.html"><a href="Operators.html#hermitian-operators"><i class="fa fa-check"></i><b>6.1.3</b> Hermitian Operators</a></li>
-</ul></li>
-<li class="chapter" data-level="6.2" data-path="Operators.html"><a href="Operators.html#eigenfunctions-and-eigenvalues"><i class="fa fa-check"></i><b>6.2</b> Eigenfunctions and Eigenvalues</a></li>
-<li class="chapter" data-level="6.3" data-path="Operators.html"><a href="Operators.html#common-operators-in-quantum-mechanics"><i class="fa fa-check"></i><b>6.3</b> Common Operators in Quantum Mechanics</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
-<li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
-<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#stationary-states"><i class="fa fa-check"></i><b>6.4.1</b> Stationary states</a></li>
-<li class="chapter" data-level="6.4.2" data-path="Operators.html"><a href="Operators.html#superpositions-of-stationary-states"><i class="fa fa-check"></i><b>6.4.2</b> Superpositions of stationary states</a></li>
-<li class="chapter" data-level="6.4.3" data-path="Operators.html"><a href="Operators.html#conservation-of-probability"><i class="fa fa-check"></i><b>6.4.3</b> Conservation of probability</a></li>
-</ul></li>
-<li class="chapter" data-level="6.5" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="6.5.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="Spin.html"><a href="Spin.html#stern-gerlach-experiment"><i class="fa fa-check"></i><b>7.1</b> Stern-Gerlach Experiment</a></li>
-<li class="chapter" data-level="7.2" data-path="Spin.html"><a href="Spin.html#sequential-stern-gerlach-experiments"><i class="fa fa-check"></i><b>7.2</b> Sequential Stern-Gerlach Experiments</a></li>
-<li class="chapter" data-level="7.3" data-path="Spin.html"><a href="Spin.html#spin-operators"><i class="fa fa-check"></i><b>7.3</b> Spin Operators</a></li>
-<li class="chapter" data-level="7.4" data-path="Spin.html"><a href="Spin.html#operators-commuting-with-the-hamiltonian"><i class="fa fa-check"></i><b>7.4</b> Operators Commuting with the Hamiltonian</a>
-<ul>
-<li class="chapter" data-level="7.4.1" data-path="Spin.html"><a href="Spin.html#free-particle-translational-symmetry-and-momentum"><i class="fa fa-check"></i><b>7.4.1</b> Free particle: translational symmetry and momentum</a></li>
-<li class="chapter" data-level="7.4.2" data-path="Spin.html"><a href="Spin.html#particle-in-a-box-broken-translation-introduction-to-parity"><i class="fa fa-check"></i><b>7.4.2</b> Particle in a box: broken translation, introduction to parity</a></li>
-<li class="chapter" data-level="7.4.3" data-path="Spin.html"><a href="Spin.html#particle-on-a-ring-and-on-a-sphere-rotational-symmetry"><i class="fa fa-check"></i><b>7.4.3</b> Particle on a ring and on a sphere: rotational symmetry</a></li>
-<li class="chapter" data-level="7.4.4" data-path="Spin.html"><a href="Spin.html#hydrogen-atom-coulomb-symmetry"><i class="fa fa-check"></i><b>7.4.4</b> Hydrogen atom: Coulomb symmetry</a></li>
-<li class="chapter" data-level="7.4.5" data-path="Spin.html"><a href="Spin.html#spin-and-manyelectron-atoms-why-spin-matters"><i class="fa fa-check"></i><b>7.4.5</b> Spin and many‑electron atoms: why spin matters</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="Spin.html"><a href="Spin.html#rev7"><i class="fa fa-check"></i><b>7.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="7.5.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>8</b> Quantum Weirdness</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="Weirdness.html"><a href="Weirdness.html#the-measurement-problem-and-interpretations-of-quantum-mechanics"><i class="fa fa-check"></i><b>8.1</b> The Measurement Problem and Interpretations of Quantum Mechanics</a>
-<ul>
-<li class="chapter" data-level="8.1.1" data-path="Weirdness.html"><a href="Weirdness.html#measurement-and-the-collapse-of-the-wave-function"><i class="fa fa-check"></i><b>8.1.1</b> Measurement and the collapse of the wave function</a></li>
-<li class="chapter" data-level="8.1.2" data-path="Weirdness.html"><a href="Weirdness.html#Interpretations"><i class="fa fa-check"></i><b>8.1.2</b> Interpretations of quantum mechanics</a></li>
-</ul></li>
-<li class="chapter" data-level="8.2" data-path="Weirdness.html"><a href="Weirdness.html#the-double-slit-experiment"><i class="fa fa-check"></i><b>8.2</b> The double-slit experiment</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="Weirdness.html"><a href="Weirdness.html#the-individual-particles-experiment"><i class="fa fa-check"></i><b>8.2.1</b> The individual particles experiment</a></li>
-<li class="chapter" data-level="8.2.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>8.2.2</b> “Which way” experiment</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>8.3</b> Heisenberg’s Uncertainty Principle</a></li>
-<li class="chapter" data-level="8.4" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>8.4</b> Tunneling</a>
-<ul>
-<li class="chapter" data-level="8.4.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>8.4.1</b> Tunneling in chemical reactions</a></li>
-</ul></li>
-<li class="chapter" data-level="8.5" data-path="Weirdness.html"><a href="Weirdness.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="8.5.1" data-path="Weirdness.html"><a href="Weirdness.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>9</b> Many-Electron Atoms</a>
-<ul>
-<li class="chapter" data-level="9.1" data-path="Atoms.html"><a href="Atoms.html#many-electron-wave-functions"><i class="fa fa-check"></i><b>9.1</b> Many-Electron Wave Functions</a>
-<ul>
-<li class="chapter" data-level="9.1.1" data-path="Atoms.html"><a href="Atoms.html#identical-particles-fermions-and-bosons"><i class="fa fa-check"></i><b>9.1.1</b> Identical particles: fermions and bosons</a></li>
-<li class="chapter" data-level="9.1.2" data-path="Atoms.html"><a href="Atoms.html#spin-orbitals-and-slater-determinants"><i class="fa fa-check"></i><b>9.1.2</b> Spin-orbitals and Slater determinants</a></li>
-</ul></li>
-<li class="chapter" data-level="9.2" data-path="Atoms.html"><a href="Atoms.html#approximated-hamiltonians"><i class="fa fa-check"></i><b>9.2</b> Approximated Hamiltonians</a>
-<ul>
-<li class="chapter" data-level="9.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>9.2.1</b> Variational method</a></li>
-<li class="chapter" data-level="9.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>9.2.2</b> Approximated solution for the helium atom</a></li>
-</ul></li>
-<li class="chapter" data-level="9.3" data-path="Atoms.html"><a href="Atoms.html#shielding-and-penetration"><i class="fa fa-check"></i><b>9.3</b> Shielding and Penetration</a></li>
-<li class="chapter" data-level="9.4" data-path="Atoms.html"><a href="Atoms.html#TermSymbols"><i class="fa fa-check"></i><b>9.4</b> Atomic States and Term Symbols</a>
-<ul>
-<li class="chapter" data-level="9.4.1" data-path="Atoms.html"><a href="Atoms.html#total-angular-momenta"><i class="fa fa-check"></i><b>9.4.1</b> Total angular momenta</a></li>
-<li class="chapter" data-level="9.4.2" data-path="Atoms.html"><a href="Atoms.html#term-symbols"><i class="fa fa-check"></i><b>9.4.2</b> Term symbols</a></li>
-<li class="chapter" data-level="9.4.3" data-path="Atoms.html"><a href="Atoms.html#the-terms-of-carbon"><i class="fa fa-check"></i><b>9.4.3</b> The terms of carbon</a></li>
-<li class="chapter" data-level="9.4.4" data-path="Atoms.html"><a href="Atoms.html#hunds-rules"><i class="fa fa-check"></i><b>9.4.4</b> Hund’s rules</a></li>
-<li class="chapter" data-level="9.4.5" data-path="Atoms.html"><a href="Atoms.html#spinorbit-coupling"><i class="fa fa-check"></i><b>9.4.5</b> Spin–orbit coupling</a></li>
-</ul></li>
-<li class="chapter" data-level="9.5" data-path="Atoms.html"><a href="Atoms.html#electron-correlation"><i class="fa fa-check"></i><b>9.5</b> Electron Correlation</a></li>
-<li class="chapter" data-level="9.6" data-path="Atoms.html"><a href="Atoms.html#rev9"><i class="fa fa-check"></i><b>9.6</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="9.6.1" data-path="Atoms.html"><a href="Atoms.html#quest9"><i class="fa fa-check"></i><b>9.6.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>10</b> Introduction to Molecules</a>
-<ul>
-<li class="chapter" data-level="10.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>10.1</b> The Molecular Hamiltonian</a>
-<ul>
-<li class="chapter" data-level="10.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>10.1.1</b> Small terms in the molecular Hamiltonian</a></li>
-</ul></li>
-<li class="chapter" data-level="10.2" data-path="Molecules.html"><a href="Molecules.html#the-bornoppenheimer-approximation"><i class="fa fa-check"></i><b>10.2</b> The Born–Oppenheimer Approximation</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="Molecules.html"><a href="Molecules.html#potential-energy-surfaces"><i class="fa fa-check"></i><b>10.2.1</b> Potential energy surfaces</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>10.3</b> Solving the Electronic Eigenvalue Problem</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartreefock-method"><i class="fa fa-check"></i><b>10.3.1</b> The Hartree–Fock Method</a></li>
-</ul></li>
-<li class="chapter" data-level="10.4" data-path="Molecules.html"><a href="Molecules.html#rev10"><i class="fa fa-check"></i><b>10.4</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="10.4.1" data-path="Molecules.html"><a href="Molecules.html#quest10"><i class="fa fa-check"></i><b>10.4.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="11" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond in Diatomic Molecules</a>
-<ul>
-<li class="chapter" data-level="11.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>11.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a>
-<ul>
-<li class="chapter" data-level="11.1.1" data-path="Bonds.html"><a href="Bonds.html#wave-function-analysis-4"><i class="fa fa-check"></i><b>11.1.1</b> Wave function analysis</a></li>
-</ul></li>
-<li class="chapter" data-level="11.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>11.2</b> The Chemical Bond in the Hydrogen Molecule</a>
-<ul>
-<li class="chapter" data-level="11.2.1" data-path="Bonds.html"><a href="Bonds.html#beyond-hartreefock"><i class="fa fa-check"></i><b>11.2.1</b> Beyond Hartree–Fock</a></li>
-</ul></li>
-<li class="chapter" data-level="11.3" data-path="Bonds.html"><a href="Bonds.html#homonuclear-diatomic-molecules-of-the-second-row"><i class="fa fa-check"></i><b>11.3</b> Homonuclear Diatomic Molecules of the Second Row</a>
-<ul>
-<li class="chapter" data-level="11.3.1" data-path="Bonds.html"><a href="Bonds.html#building-the-molecular-orbitals"><i class="fa fa-check"></i><b>11.3.1</b> Building the molecular orbitals</a></li>
-<li class="chapter" data-level="11.3.2" data-path="Bonds.html"><a href="Bonds.html#molecular-orbital-diagrams-of-n_2-and-o_2"><i class="fa fa-check"></i><b>11.3.2</b> Molecular orbital diagrams of N<span class="math inline">\(_2\)</span> and O<span class="math inline">\(_2\)</span></a></li>
-<li class="chapter" data-level="11.3.3" data-path="Bonds.html"><a href="Bonds.html#bond-order-and-magnetic-properties"><i class="fa fa-check"></i><b>11.3.3</b> Bond order and magnetic properties</a></li>
-</ul></li>
-<li class="chapter" data-level="11.4" data-path="Bonds.html"><a href="Bonds.html#heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>11.4</b> Heteronuclear Diatomic Molecules</a></li>
-<li class="chapter" data-level="11.5" data-path="Bonds.html"><a href="Bonds.html#rev11"><i class="fa fa-check"></i><b>11.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="11.5.1" data-path="Bonds.html"><a href="Bonds.html#quest11"><i class="fa fa-check"></i><b>11.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Polyatomic Molecules</a>
-<ul>
-<li class="chapter" data-level="12.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a>
-<ul>
-<li class="chapter" data-level="12.1.1" data-path="Poly.html"><a href="Poly.html#using-symmetry"><i class="fa fa-check"></i><b>12.1.1</b> Using symmetry</a></li>
-</ul></li>
-<li class="chapter" data-level="12.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>12.2</b> Hartree-Fock Calculation for Water</a></li>
-<li class="chapter" data-level="12.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>12.3</b> Shapes and Energies of Molecular Orbitals</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="Poly.html"><a href="Poly.html#the-mo-diagram-of-water"><i class="fa fa-check"></i><b>12.3.1</b> The MO diagram of water</a></li>
-<li class="chapter" data-level="12.3.2" data-path="Poly.html"><a href="Poly.html#comparison-with-experiment-koopmans-theorem"><i class="fa fa-check"></i><b>12.3.2</b> Comparison with experiment: Koopmans’ theorem</a></li>
-<li class="chapter" data-level="12.3.3" data-path="Poly.html"><a href="Poly.html#canonical-and-localized-orbitals"><i class="fa fa-check"></i><b>12.3.3</b> Canonical and localized orbitals</a></li>
-</ul></li>
-<li class="chapter" data-level="12.4" data-path="Poly.html"><a href="Poly.html#h%C3%BCckel-theory-for-conjugated-pi-systems"><i class="fa fa-check"></i><b>12.4</b> Hückel Theory for Conjugated <span class="math inline">\(\pi\)</span> Systems</a>
-<ul>
-<li class="chapter" data-level="12.4.1" data-path="Poly.html"><a href="Poly.html#the-h%C3%BCckel-approximations"><i class="fa fa-check"></i><b>12.4.1</b> The Hückel approximations</a></li>
-<li class="chapter" data-level="12.4.2" data-path="Poly.html"><a href="Poly.html#ethylene-and-butadiene"><i class="fa fa-check"></i><b>12.4.2</b> Ethylene and butadiene</a></li>
-<li class="chapter" data-level="12.4.3" data-path="Poly.html"><a href="Poly.html#polyenes-and-benzene"><i class="fa fa-check"></i><b>12.4.3</b> Polyenes and benzene</a></li>
-</ul></li>
-<li class="chapter" data-level="12.5" data-path="Poly.html"><a href="Poly.html#rev12"><i class="fa fa-check"></i><b>12.5</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="12.5.1" data-path="Poly.html"><a href="Poly.html#quest12"><i class="fa fa-check"></i><b>12.5.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#SelectionRules"><i class="fa fa-check"></i><b>13.1</b> Where Selection Rules Come From</a></li>
-<li class="chapter" data-level="13.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>13.2</b> Rotational Spectroscopy</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.1</b> Rotation of diatomic molecules</a></li>
-</ul></li>
-<li class="chapter" data-level="13.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>13.3</b> Vibrational Spectroscopy</a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.1</b> Vibration of heteronuclear diatomic molecules</a></li>
-<li class="chapter" data-level="13.3.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.2</b> Vibration of homonuclear diatomic molecules</a></li>
-<li class="chapter" data-level="13.3.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrations-of-polyatomic-molecules"><i class="fa fa-check"></i><b>13.3.3</b> Vibrations of polyatomic molecules</a></li>
-</ul></li>
-<li class="chapter" data-level="13.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>13.4</b> Electronic Spectroscopy</a>
-<ul>
-<li class="chapter" data-level="13.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.4.1</b> Electronic spectroscopy of diatomic molecules</a></li>
-<li class="chapter" data-level="13.4.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#fluorescence-and-phosphorescence"><i class="fa fa-check"></i><b>13.4.2</b> Fluorescence and phosphorescence</a></li>
-</ul></li>
-<li class="chapter" data-level="13.5" data-path="Spectroscopy.html"><a href="Spectroscopy.html#magnetic-resonance-spectroscopy"><i class="fa fa-check"></i><b>13.5</b> Magnetic Resonance Spectroscopy</a>
-<ul>
-<li class="chapter" data-level="13.5.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#the-energy-of-a-spin-in-a-magnetic-field"><i class="fa fa-check"></i><b>13.5.1</b> The energy of a spin in a magnetic field</a></li>
-<li class="chapter" data-level="13.5.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#nuclear-magnetic-resonance-nmr"><i class="fa fa-check"></i><b>13.5.2</b> Nuclear magnetic resonance (NMR)</a></li>
-<li class="chapter" data-level="13.5.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electron-spin-resonance-esr"><i class="fa fa-check"></i><b>13.5.3</b> Electron spin resonance (ESR)</a></li>
-</ul></li>
-<li class="chapter" data-level="13.6" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev13"><i class="fa fa-check"></i><b>13.6</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="13.6.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest13"><i class="fa fa-check"></i><b>13.6.1</b> Study Questions</a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
     </div>
-
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">The Live Textbook of Physical Chemistry 2</a>
-          </h1>
-        </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">The Live Textbook of Physical Chemistry 2</h1>
-<p class="author"><em><a href="mailto:rpeverati@fit.edu">Dr. Roberto Peverati</a></em></p>
-<p class="date"><em>10 November 2026</em></p>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
-<div id="preface" class="section level1 unnumbered hasAnchor">
-<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><img src="img/OEP_Figures.000.jpeg" alt="Book cover: a large Greek letter psi, labeled wave function, over a black background filled with ball-and-stick models of small organic molecules." width="80%" style="display: block; margin: auto;" /></p>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to use this book</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The Live Textbook of Physical Chemistry 2</h1>
+</div>
+
+<div>
+  <div class="description">
+    Textbook for the P-Chem 2 class at Florida Tech
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Roberto Peverati </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">10 November 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="preface" class="level1 unnumbered">
+<h1 class="unnumbered">Preface</h1>
+<p><img src="img/OEP_Figures.000.jpeg" class="img-fluid" style="width:80.0%" alt="Book cover: a large Greek letter psi, labeled wave function, over a black background filled with ball-and-stick models of small organic molecules."></p>
 <p>This textbook is the official textbook for the Physical Chemistry 2 Course (CHM 3002) at Florida Tech.</p>
-<p>The instructor for this course and author of this textbook is Dr. Roberto Peverati.</p>
+<p>The instructor for this course and author of this textbook is Dr.&nbsp;Roberto Peverati.</p>
 <p><strong>Contacts</strong>: <a href="mailto:rpeverati@fit.edu">rpeverati@fit.edu</a>, Office: OPS 333, (321) 674-7735</p>
-<p>Chemistry Program, Department of Chemistry and Chemical Engineering
-Florida Institute of Technology, Melbourne, FL.</p>
-<blockquote>
+<p>Chemistry Program, Department of Chemistry and Chemical Engineering Florida Institute of Technology, Melbourne, FL.</p>
+<blockquote class="blockquote">
 <p>This live open textbook is distributed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0 License</a> and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.</p>
 </blockquote>
-<div id="how-to-use-this-book" class="section level2 unnumbered hasAnchor">
-<h2>How to use this book<a href="index.html#how-to-use-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If you have taken P-Chem 1 at Florida Tech, you should already be familiar with this format. Everything we did with the Live Textbook of P-Chem 1 will be happening this semester with P-Chem 2. Please read this book carefully, since everything that will be in your exams is explained here.
-Since this book is specifically tailored for the CHM 3002 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.</p>
-<blockquote>
+<section id="how-to-use-this-book" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to use this book</h2>
+<p>If you have taken P-Chem 1 at Florida Tech, you should already be familiar with this format. Everything we did with the Live Textbook of P-Chem 1 will be happening this semester with P-Chem 2. Please read this book carefully, since everything that will be in your exams is explained here. Since this book is specifically tailored for the CHM 3002 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.</p>
+<blockquote class="blockquote">
 <p>Definitions and exercises are usually numbered and are highlighted in the text in this format (lighter grey, indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.</p>
 </blockquote>
 <p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar’s corresponding icon. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on <a href="https://github.com/peverati/PChem2">over there</a> and fork the book.</p>
-<blockquote>
-<p>If you spot a mistake or a typo, contact Dr. Peverati via <a href="mailto:rpeverati@fit.edu">email</a>.</p>
+<blockquote class="blockquote">
+<p>If you spot a mistake or a typo, contact Dr.&nbsp;Peverati via <a href="mailto:rpeverati@fit.edu">email</a>.</p>
 </blockquote>
 
-</div>
-</div>
-            </section>
 
-          </div>
-        </div>
-      </div>
+</section>
+</section>
 
-<a href="Classical.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/peverati/pchem2/edit/master/index.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["pchem2.pdf"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
-});
-});
-</script>
+  <div class="nav-page nav-page-next">
+      <a href="./01_Classical.html" class="pagination-link" aria-label="Brief Summary of Classical Physics">
+        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-</body>
 
-</html>
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

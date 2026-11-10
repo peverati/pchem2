@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>9&nbsp; Many-Electron Atoms – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./10_Molecules.html" rel="next">
+<link href="./08_Weirdness.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./09_Atoms.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#many-electron-wave-functions" id="toc-many-electron-wave-functions" class="nav-link active" data-scroll-target="#many-electron-wave-functions"><span class="header-section-number">9.1</span> Many-Electron Wave Functions</a>
+  <ul class="collapse">
+  <li><a href="#identical-particles-fermions-and-bosons" id="toc-identical-particles-fermions-and-bosons" class="nav-link" data-scroll-target="#identical-particles-fermions-and-bosons"><span class="header-section-number">9.1.1</span> Identical particles: fermions and bosons</a></li>
+  <li><a href="#spin-orbitals-and-slater-determinants" id="toc-spin-orbitals-and-slater-determinants" class="nav-link" data-scroll-target="#spin-orbitals-and-slater-determinants"><span class="header-section-number">9.1.2</span> Spin-orbitals and Slater determinants</a></li>
+  </ul></li>
+  <li><a href="#approximated-hamiltonians" id="toc-approximated-hamiltonians" class="nav-link" data-scroll-target="#approximated-hamiltonians"><span class="header-section-number">9.2</span> Approximated Hamiltonians</a>
+  <ul class="collapse">
+  <li><a href="#variational-method" id="toc-variational-method" class="nav-link" data-scroll-target="#variational-method"><span class="header-section-number">9.2.1</span> Variational method</a></li>
+  <li><a href="#approximated-solution-for-the-helium-atom" id="toc-approximated-solution-for-the-helium-atom" class="nav-link" data-scroll-target="#approximated-solution-for-the-helium-atom"><span class="header-section-number">9.2.2</span> Approximated solution for the helium atom</a></li>
+  </ul></li>
+  <li><a href="#shielding-and-penetration" id="toc-shielding-and-penetration" class="nav-link" data-scroll-target="#shielding-and-penetration"><span class="header-section-number">9.3</span> Shielding and Penetration</a></li>
+  <li><a href="#sec-TermSymbols" id="toc-sec-TermSymbols" class="nav-link" data-scroll-target="#sec-TermSymbols"><span class="header-section-number">9.4</span> Atomic States and Term Symbols</a>
+  <ul class="collapse">
+  <li><a href="#total-angular-momenta" id="toc-total-angular-momenta" class="nav-link" data-scroll-target="#total-angular-momenta"><span class="header-section-number">9.4.1</span> Total angular momenta</a></li>
+  <li><a href="#term-symbols" id="toc-term-symbols" class="nav-link" data-scroll-target="#term-symbols"><span class="header-section-number">9.4.2</span> Term symbols</a></li>
+  <li><a href="#the-terms-of-carbon" id="toc-the-terms-of-carbon" class="nav-link" data-scroll-target="#the-terms-of-carbon"><span class="header-section-number">9.4.3</span> The terms of carbon</a></li>
+  <li><a href="#hunds-rules" id="toc-hunds-rules" class="nav-link" data-scroll-target="#hunds-rules"><span class="header-section-number">9.4.4</span> Hund’s rules</a></li>
+  <li><a href="#spinorbit-coupling" id="toc-spinorbit-coupling" class="nav-link" data-scroll-target="#spinorbit-coupling"><span class="header-section-number">9.4.5</span> Spin–orbit coupling</a></li>
+  </ul></li>
+  <li><a href="#electron-correlation" id="toc-electron-correlation" class="nav-link" data-scroll-target="#electron-correlation"><span class="header-section-number">9.5</span> Electron Correlation</a></li>
+  <li><a href="#sec-rev9" id="toc-sec-rev9" class="nav-link" data-scroll-target="#sec-rev9"><span class="header-section-number">9.6</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest9" id="toc-sec-quest9" class="nav-link" data-scroll-target="#sec-quest9"><span class="header-section-number">9.6.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/09_Atoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Atoms" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>As soon as a system contains two or more electrons, the TISEq can no longer be solved analytically. Since this is the case for every atom other than hydrogen, and for every molecule other than <span class="math inline">\(\mathrm{H}_2^+\)</span>, almost all of chemistry depends on approximate methods. In this and the following chapters we will introduce the most important of these approximations, starting from many-electron atoms. Keep in mind that, precisely because they are approximations, these methods are still an active field of research, and better ones are developed every year.</p>
+<p>The electronic Hamiltonian for an atom with <span class="math inline">\(N\)</span> electrons can be written as:</p>
+<p><span id="eq-atom1"><span class="math display">\[
+\hat{H}(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m_e }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \varepsilon _{0}}}\sum_{i&lt;j}\frac{1}{r_{ij}},
+\tag{9.1}\]</span></span></p>
+<p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m_e\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\(\mathbf{r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|\mathbf{r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|\mathbf{r}_i-\mathbf{r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using <a href="06_Operators.html#eq-scheqsimple" class="quarto-xref">eq.&nbsp;<span>6.24</span></a>.</p>
+<p>It is worth looking at the three pieces of this Hamiltonian one at a time:</p>
+<ol type="1">
+<li><strong>Kinetic energy</strong>: one term for each electron, identical to the one we used for the hydrogen atom.</li>
+<li><strong>Electron–nucleus attraction</strong>: also one term for each electron, identical to hydrogen except for the nuclear charge <span class="math inline">\(Z\)</span>.</li>
+<li><strong>Electron–electron repulsion</strong>: one term for each <em>pair</em> of electrons. This is the only new ingredient, and it is the one that causes all the trouble. Each of these terms depends on the coordinates of two electrons at the same time, so the Hamiltonian can no longer be split into a sum of one-electron pieces, and the potential is no longer spherically symmetric for any one electron.</li>
+</ol>
+<p>If the third term were not there, the TISEq for the atom would separate into <span class="math inline">\(N\)</span> hydrogen-like equations that we already know how to solve. Most of the approximations in this chapter can be understood as different ways of dealing with this single term.</p>
+<section id="many-electron-wave-functions" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="many-electron-wave-functions"><span class="header-section-number">9.1</span> Many-Electron Wave Functions</h2>
+<section id="identical-particles-fermions-and-bosons" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="identical-particles-fermions-and-bosons"><span class="header-section-number">9.1.1</span> Identical particles: fermions and bosons</h3>
+<p>When a system contains more than one electron, we need to deal with a property of quantum particles that has no classical counterpart: identical particles are truly <em>indistinguishable</em>. In classical mechanics, we could in principle paint one electron red and the other blue, and follow each of them along its trajectory. In quantum mechanics there are no trajectories, and two electrons are completely identical, so there is no experiment that can tell us which one is which.</p>
+<p>To describe this mathematically, we need to include the spin of each electron. We define a variable <span class="math inline">\(\mathbf{x}\)</span> that collects all four coordinates of an electron: the three spatial coordinates <span class="math inline">\(\mathbf{r}\)</span>, and one spin coordinate <span class="math inline">\(\mathbf{s}\)</span>, i.e., <span class="math inline">\(\mathbf{x} = \{ \mathbf{r}, \mathbf{s} \}\)</span>, and we write the wave function of <span class="math inline">\(N\)</span> electrons as <span class="math inline">\(\Psi(\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N)\)</span>. Since the electrons are indistinguishable, swapping the coordinates of any two of them cannot change any measurable quantity, and in particular it cannot change the probability density:</p>
+<p><span id="eq-identical1"><span class="math display">\[
+\left|\Psi\left(\mathbf{x}_1,\mathbf{x}_2,\ldots, \mathbf{x}_N\right)\right|^2=\left|\Psi\left(\mathbf{x}_2,\mathbf{x}_1,\ldots, \mathbf{x}_N\right)\right|^2.
+\tag{9.2}\]</span></span></p>
+<p>This equation can be satisfied in two ways: the wave function can stay the same when we swap two particles (it is <em>symmetric</em>), or it can change sign (it is <em>antisymmetric</em>). Nature uses both options, for two different families of particles:</p>
+<ul>
+<li><strong>Bosons</strong> have symmetric wave functions. Photons and helium-4 atoms are examples of bosons.</li>
+<li><strong>Fermions</strong> have antisymmetric wave functions. Electrons, protons, and neutrons are fermions.</li>
+</ul>
+<p>Which family a particle belongs to is determined by its spin: particles with integer spin (<span class="math inline">\(s=0,1,2,\ldots\)</span>) are bosons, and particles with half-integer spin (<span class="math inline">\(s=\frac{1}{2},\frac{3}{2},\ldots\)</span>) are fermions. This connection is known as the <em>spin-statistics theorem</em>, and it can be proven only in the framework of relativistic quantum mechanics, so we will simply accept it here. Since electrons have <span class="math inline">\(s=\frac{1}{2}\)</span> (<a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>), they are fermions, and their wave function must be antisymmetric with respect to the exchange of any two of them:</p>
+<p><span id="eq-atom2"><span class="math display">\[
+\Psi\left(\mathbf{x}_1,\mathbf{x}_2,\ldots, \mathbf{x}_N\right) = - \Psi\left(\mathbf{x}_2,\mathbf{x}_1,\ldots, \mathbf{x}_N\right)
+\tag{9.3}\]</span></span></p>
+<p>This simple requirement has an enormous consequence. Suppose that we try to describe two electrons with exactly the same state, including their spin, so that <span class="math inline">\(\mathbf{x}_1=\mathbf{x}_2\)</span>. Swapping two identical things cannot change anything, so the wave function must be unchanged by the swap. At the same time, <a href="#eq-atom2" class="quarto-xref">eq.&nbsp;<span>9.3</span></a> says that it must change sign. The only number that is equal to minus itself is zero, so the wave function must vanish: two electrons can never be in the same state. This is the <strong>Pauli exclusion principle</strong>, which we will see again, in a more familiar form, when we build many-electron wave functions below. Bosons, instead, have no such restriction, and any number of them can be described by the same state. This difference is responsible for the shell structure of atoms, and therefore for the whole of chemistry: if electrons were bosons, all of them would be described by the <span class="math inline">\(1s\)</span> orbital, and atoms would not form bonds the way they do.</p>
+</section>
+<section id="spin-orbitals-and-slater-determinants" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="spin-orbitals-and-slater-determinants"><span class="header-section-number">9.1.2</span> Spin-orbitals and Slater determinants</h3>
+<p>A very important step in simplifying <span class="math inline">\(\Psi(\mathbf{x})\)</span> is to build it from one-electron functions. Since we need to take the spin coordinate into account as well, we define a new function, called <strong>spin-orbital</strong>, by multiplying a spatial orbital by one of the two spin functions, <span class="math inline">\(\alpha\)</span> (spin up, <span class="math inline">\(m_s=+\frac{1}{2}\)</span>) or <span class="math inline">\(\beta\)</span> (spin down, <span class="math inline">\(m_s=-\frac{1}{2}\)</span>), that we introduced in <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>:</p>
+<p><span id="eq-atom3"><span class="math display">\[
+\begin{aligned}
+\chi(\mathbf{x}) &amp;= \psi(\mathbf{r}) \alpha(\mathbf{s}), \\
+\chi(\mathbf{x}) &amp;= \psi(\mathbf{r}) \beta(\mathbf{s}).
+\end{aligned}
+\tag{9.4}\]</span></span></p>
+<p>For a given spatial orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> we can therefore form two spin-orbitals, one with spin up and one with spin down (the spin coordinate <span class="math inline">\(\mathbf{s}\)</span> has only two possible values, as we discussed in <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>). For the spatial orbitals we can use the same one-electron functions that solve the TISEq for the hydrogen atom, <span class="math inline">\(\psi_{n\ell m_{\ell}}(\mathbf{r})\)</span> (<a href="05_Hydrogen.html#eq-HA6" class="quarto-xref">eq.&nbsp;<span>5.7</span></a> in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>). Each spin-orbital then depends on four quantum numbers: the three of the spatial part, <span class="math inline">\(n,\ell,m_{\ell}\)</span>, plus the spin quantum number <span class="math inline">\(m_s\)</span>. We need to keep in mind, however, that the spin-orbitals <span class="math inline">\(\chi_{n\ell m_{\ell} m_{s}}\)</span> <em>are not</em> solutions of the many-electron TISEq, so any wave function that we build from them is an approximation, not the exact wave function of the system.</p>
+<p>Once we have spin-orbitals, we can use them as the building blocks of the many-electron wave function, making sure that the result is antisymmetric. We start from the simplest case: two electrons, with coordinates <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>, and two spin-orbitals, <span class="math inline">\(\chi_1\)</span> and <span class="math inline">\(\chi_2\)</span>. The most general wave function that we can build from products of these two spin-orbitals is:</p>
+<p><span id="eq-atom4"><span class="math display">\[
+\begin{aligned}
+\Psi(\mathbf{x}_1, \mathbf{x}_2) =&amp; b_{11} \chi_1(\mathbf{x}_1) \chi_1(\mathbf{x}_2) + b_{12} \chi_1(\mathbf{x}_1) \chi_2(\mathbf{x}_2) + \\
+&amp; b_{21} \chi_2(\mathbf{x}_1) \chi_1(\mathbf{x}_2) + b_{22} \chi_2(\mathbf{x}_1) \chi_2(\mathbf{x}_2).
+\end{aligned}
+\tag{9.5}\]</span></span></p>
+<p>For this function to change sign when we swap <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>, we need <span class="math inline">\(b_{12} = -b_{21}\)</span> and <span class="math inline">\(b_{11} = b_{22} = 0\)</span>, which gives:</p>
+<p><span id="eq-atom5"><span class="math display">\[
+\Psi(\mathbf{x}_1, \mathbf{x}_2) = b_{12} \left[ \chi_1(\mathbf{x}_1) \chi_2(\mathbf{x}_2) - \chi_2(\mathbf{x}_1) \chi_1(\mathbf{x}_2)\right].
+\tag{9.6}\]</span></span></p>
+<p>This wave function is sufficient to describe two-electron atoms and ions, such as helium. The coefficient is fixed by the normalization condition, <span class="math inline">\(b_{12} = \frac{1}{\sqrt{2}}\)</span>. For the ground state of helium, we can use the <span class="math inline">\(1s\)</span> hydrogen-like orbital, <span class="math inline">\(\psi_{100}\)</span>, as the spatial part of both spin-orbitals, obtaining:</p>
+<p><span id="eq-atom6"><span class="math display">\[
+\begin{aligned}
+\Psi(\mathbf{x}_1, \mathbf{x}_2) &amp;= \frac{1}{\sqrt{2}} \left[ \psi_{100}(\mathbf{r}_1)\alpha(1) \; \psi_{100}(\mathbf{r}_2)\beta(2) - \psi_{100}(\mathbf{r}_1)\beta(1) \; \psi_{100}(\mathbf{r}_2)\alpha(2) \right] \\
+&amp;= \psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right],
+\end{aligned}
+\tag{9.7}\]</span></span></p>
+<p>where <span class="math inline">\(\alpha(1)\)</span> is short for <span class="math inline">\(\alpha(\mathbf{s}_1)\)</span>, and so on. This equation shows that we need just one spatial orbital, <span class="math inline">\(\psi_{100}\)</span>, to describe the system, while the antisymmetry is taken care of by the combination of spin functions, <span class="math inline">\(\frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right]\)</span>. Notice that we commit a small inaccuracy when we say that “two electrons occupy one spatial orbital, one electron has spin up, and the other electron has spin down,” as is typically done in general chemistry textbooks with the configuration <span class="math inline">\([\uparrow\downarrow]\)</span>. The real spin state is more subtle: neither electron individually is “the up one”; instead, the ground state of helium is the combination <span class="math inline">\(\frac{1}{\sqrt{2}}\left[\uparrow\downarrow-\downarrow\uparrow\right]\)</span>.</p>
+<p>To go from two electrons to <span class="math inline">\(N\)</span>, we can first observe that <a href="#eq-atom5" class="quarto-xref">eq.&nbsp;<span>9.6</span></a> is exactly the determinant of a <span class="math inline">\(2\times2\)</span> matrix built from the spin-orbitals:</p>
+<p><span id="eq-atom7"><span class="math display">\[
+\Psi(\mathbf{x}_1, \mathbf{x}_2)= \frac{1}{\sqrt{2}}{\left|\begin{matrix} \chi_1(\mathbf{x}_1)&amp;\chi_2(\mathbf{x}_1)\\\chi_1(\mathbf{x}_2)&amp;\chi_2(\mathbf{x}_2)
+\end{matrix}\right|},
+\tag{9.8}\]</span></span></p>
+<p>where each column contains one spin-orbital, each row contains the coordinates of one electron, and the vertical bars mean that we take the determinant of the matrix. This construction is called a <strong>Slater determinant</strong>, and it is the standard way of building an <span class="math inline">\(N\)</span>-electron wave function. Slater determinants can be written for any number of electrons, using the same number of spin-orbitals, and they automatically produce an antisymmetric wave function. A general Slater determinant is written:</p>
+<p><span id="eq-atom8"><span class="math display">\[
+\Psi (\mathbf{x} _{1},\mathbf{x} _{2},\ldots ,\mathbf{x} _{N})={\frac {1}{\sqrt {N!}}}{\left|\begin{matrix}\chi _{1}(\mathbf{x} _{1})&amp;\chi _{2}(\mathbf{x} _{1})&amp;\cdots &amp;\chi _{N}(\mathbf{x} _{1})\\\chi _{1}(\mathbf{x} _{2})&amp;\chi _{2}(\mathbf{x} _{2})&amp;\cdots &amp;\chi _{N}(\mathbf{x} _{2})\\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \\\chi _{1}(\mathbf{x} _{N})&amp;\chi _{2}(\mathbf{x} _{N})&amp;\cdots &amp;\chi _{N}(\mathbf{x} _{N})\end{matrix}\right|} = |\chi _{1}\,\chi _{2}\cdots \chi _{N}|,
+\tag{9.9}\]</span></span></p>
+<p>where the notation <span class="math inline">\(|\cdots|\)</span> on the right is a compact shorthand for the whole determinant (including its normalization factor), in which we only list the spin-orbitals that appear on its diagonal. When a spin-orbital is used in the Slater determinant to describe an electron, we say that it is <em>occupied</em>, and orbitals that are not used are called <em>unoccupied</em> (or <em>virtual</em>). This is convenient language, and we will use it throughout the textbook, but it should not be taken literally: orbitals are not boxes that contain electrons, but mathematical functions that we use to describe them.</p>
+<p>Two properties of determinants that you may remember from linear algebra have important physical consequences here:</p>
+<ol type="1">
+<li><strong>Swapping two rows changes the sign of a determinant.</strong> Swapping two rows means swapping the coordinates of two electrons, so a Slater determinant is always antisymmetric, as required by <a href="#eq-atom2" class="quarto-xref">eq.&nbsp;<span>9.3</span></a>.</li>
+<li><strong>A determinant with two identical columns is zero.</strong> If we try to describe two electrons with the same spin-orbital (same <span class="math inline">\(n,\ell,m_\ell\)</span>, <em>and</em> same <span class="math inline">\(m_s\)</span>), two columns become identical and the wave function vanishes everywhere. In other words, such a state does not exist. This is the familiar form of the Pauli exclusion principle from general chemistry, “no two electrons in an atom can have the same four quantum numbers,” which here appears as a direct consequence of the antisymmetry of the wave function.</li>
+</ol>
+</section>
+</section>
+<section id="approximated-hamiltonians" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="approximated-hamiltonians"><span class="header-section-number">9.2</span> Approximated Hamiltonians</h2>
+<p>To solve the TISEq for a many-electron atom we also need to deal with the Hamiltonian, since analytic solutions of the full Hamiltonian in <a href="#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a> cannot be found. The most important tool that chemists use for this purpose is called the <em>variational method</em>.</p>
+<section id="variational-method" class="level3" data-number="9.2.1">
+<h3 data-number="9.2.1" class="anchored" data-anchor-id="variational-method"><span class="header-section-number">9.2.1</span> Variational method</h3>
+<p>The idea behind the variational method is simple. We guess a “trial” wave function that contains some adjustable numbers, called <em>variational parameters</em>. We then calculate the energy of the trial function and change the parameters until this energy is as low as possible. The trial function with the lowest energy, and that energy itself, are our best approximations to the true ground-state wave function and energy.</p>
+<p>Why should the lowest energy be the best answer? The justification is the <strong>variational theorem</strong>: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, <span class="math inline">\(\mathcal{E}_0\)</span>. The proof uses a nice trick. Let’s call our trial function <span class="math inline">\(\Phi\)</span>. Even if we cannot solve the TISEq, its exact eigenfunctions <span class="math inline">\(\Psi_i\)</span> (with energies <span class="math inline">\(\mathcal{E}_0 \leq \mathcal{E}_1 \leq \mathcal{E}_2 \leq \ldots\)</span>) still exist and form a complete set. We can therefore imagine expanding our trial function in terms of them:</p>
+<p><span id="eq-var1"><span class="math display">\[
+\Phi = \sum_i c_i \Psi_i.
+\tag{9.10}\]</span></span></p>
+<p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. The energy of the trial function is the expectation value of the Hamiltonian:</p>
+<p><span id="eq-var2"><span class="math display">\[
+E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
+\tag{9.11}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)\)</span> collects the spatial coordinates of all electrons, so the integrals are <span class="math inline">\(3N\)</span>-dimensional. The denominator takes care of normalization, so <span class="math inline">\(\Phi\)</span> does not need to be normalized. Inserting the expansion, we obtain:</p>
+<p><span id="eq-var3"><span class="math display">\[
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
+\tag{9.12}\]</span></span></p>
+<p>Since each <span class="math inline">\(\Psi_j\)</span> is an eigenfunction of <span class="math inline">\({\hat H}\)</span>, we can replace <span class="math inline">\({\hat H} \Psi_j\)</span> with <span class="math inline">\(\mathcal{E}_j \Psi_j\)</span>:</p>
+<p><span id="eq-var4"><span class="math display">\[
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
+\tag{9.13}\]</span></span></p>
+<p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
+<p><span id="eq-var5"><span class="math display">\[
+E[\Phi] = \frac{\sum_{i} |c_i|^2 \mathcal{E}_i}{\sum_{i} |c_i|^2}.
+\tag{9.14}\]</span></span></p>
+<p>This equation already tells the whole story: the energy of the trial function is a weighted average of the exact energies, with weights <span class="math inline">\(|c_i|^2\)</span>. An average can never be lower than its smallest member. To make this explicit, we subtract <span class="math inline">\(\mathcal{E}_0\)</span> from both sides:</p>
+<p><span id="eq-var6"><span class="math display">\[
+E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}{
+\sum_i |c_i|^2}.
+\tag{9.15}\]</span></span></p>
+<p>Every term on the right-hand side is greater than or equal to zero, because <span class="math inline">\(|c_i|^2\geq0\)</span> and <span class="math inline">\(\mathcal{E}_i \geq \mathcal{E}_0\)</span>. Therefore:</p>
+<p><span id="eq-varprinciple"><span class="math display">\[
+E[\Phi] \geq \mathcal{E}_0.
+\tag{9.16}\]</span></span></p>
+<p>The energy of any trial wave function is an upper bound to the exact ground-state energy, and the equality holds only if <span class="math inline">\(\Phi\)</span> is the exact ground state. This gives us a clear strategy: any change in the trial function that lowers its energy brings the energy closer to the exact answer. (As the energy goes down, the wave function usually gets better too, although “better” for a wave function is harder to define than for a number, and it is guaranteed to be exact only when <span class="math inline">\(\Phi = \Psi_0\)</span>.)</p>
+</section>
+<section id="approximated-solution-for-the-helium-atom" class="level3" data-number="9.2.2">
+<h3 data-number="9.2.2" class="anchored" data-anchor-id="approximated-solution-for-the-helium-atom"><span class="header-section-number">9.2.2</span> Approximated solution for the helium atom</h3>
+<p>We now have all the ingredients for the simplest approximate solution of the TISEq for a many-electron atom. We start by writing the wave function as the Slater determinant of <a href="#eq-atom8" class="quarto-xref">eq.&nbsp;<span>9.9</span></a>, in which each spatial orbital is used to describe two electrons of opposite spin:</p>
+<p><span id="eq-hf1"><span class="math display">\[
+\Psi (\mathbf{x}_{1},\mathbf{x}_{2},\ldots ,\mathbf{x}_{N})= |\chi_{1}\,\chi_{2}\cdots \chi_{N}| = |\psi_{1}\alpha\;\psi_{1}\beta\cdots \psi_{\frac{N}{2}}\alpha\;\psi_{\frac{N}{2}}\beta|,
+\tag{9.17}\]</span></span></p>
+<p>and we insert it into the TISEq for <span class="math inline">\(N\)</span> electrons. This results in a set of <span class="math inline">\(N\)</span> one-electron equations, one for each electron. When we try to solve each of them, however, we run into the problem that we identified at the beginning of this chapter: because of the electron-electron repulsion term, the potential felt by each electron does not have spherical symmetry, and the one-electron TISEq cannot be solved in spherical polar coordinates as we did for the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>. The crudest way around the problem is to neglect the electron-electron repulsion altogether (i.e., to pretend that the electrons do not interact with each other). For a two-electron atom the Hamiltonian then becomes a sum of two one-electron Hamiltonians:</p>
+<p><span id="eq-hf2"><span class="math display">\[
+\hat{H} =\hat{H}_1+\hat{H}_2,
+\tag{9.18}\]</span></span></p>
+<p>each of them identical to the Hamiltonian of a hydrogen-like atom with nuclear charge <span class="math inline">\(Z\)</span>. This Hamiltonian does not depend on spin, so we can drop the spin part of <a href="#eq-atom6" class="quarto-xref">eq.&nbsp;<span>9.7</span></a> and write the wave function for the ground state of helium simply as:</p>
+<p><span id="eq-hf3"><span class="math display">\[
+\Psi(\mathbf{r}_1, \mathbf{r}_2) = \psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2).
+\tag{9.19}\]</span></span></p>
+<p>The TISEq then separates into two independent one-electron equations:</p>
+<p><span id="eq-hf4"><span class="math display">\[
+\begin{aligned}
+\hat{H}_1 \psi_{100}(\mathbf{r}_1) &amp;= E_1\psi_{100}(\mathbf{r}_1) \\
+\hat{H}_2 \psi_{100}(\mathbf{r}_2) &amp;= E_2\psi_{100}(\mathbf{r}_2),
+\end{aligned}
+\tag{9.20}\]</span></span></p>
+<p>which we already know how to solve (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>), and whose solutions combine to give:</p>
+<p><span id="eq-hf5"><span class="math display">\[
+E = E_1+E_2.
+\tag{9.21}\]</span></span></p>
+<p>In this approximation, the energy of the helium atom is twice the energy of a <span class="math inline">\(1s\)</span> electron in a hydrogen-like atom with <span class="math inline">\(Z=2\)</span>. The energies in <a href="05_Hydrogen.html#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.8</span></a> scale as <span class="math inline">\(Z^2\)</span> when the nuclear charge is <span class="math inline">\(Z\)</span> instead of <span class="math inline">\(1\)</span>, so the <span class="math inline">\(1s\)</span> energy is <span class="math inline">\(-\frac{Z^2}{2}E_h\)</span> and the total is <span class="math inline">\(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\)</span>, or about <span class="math inline">\(-10{,}500 \text{ kJ/mol}\)</span>,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> compared with the exact value of <span class="math inline">\(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\)</span>. The error is enormous, about <span class="math inline">\(40\%\)</span>, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the <em>average</em> repulsion between the two electrons, which for two <span class="math inline">\(1s\)</span> electrons is <span class="math inline">\(\frac{5}{8}Z\,E_h\)</span>. The result, <span class="math inline">\(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\)</span>, is already much better, with an error of about <span class="math inline">\(5\%\)</span>.</p>
+<section id="optimizing-the-effective-nuclear-charge" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="optimizing-the-effective-nuclear-charge">Optimizing the effective nuclear charge</h4>
+<p>We can do better using the variational method. The two electrons do not feel the full charge of the nucleus, since each of them is partially <em>shielded</em> from it by the other. We can account for this by using, for both electrons, a <span class="math inline">\(1s\)</span> orbital with an adjustable charge <span class="math inline">\(\zeta\)</span> in place of <span class="math inline">\(Z\)</span>:</p>
+<p><span id="eq-hevar1"><span class="math display">\[
+\psi_{1s}(r) = \sqrt{\frac{\zeta^3}{\pi a_0^3}}\, e^{-\zeta r/a_0},
+\tag{9.22}\]</span></span></p>
+<p>and treat <span class="math inline">\(\zeta\)</span> as a variational parameter. Calculating the expectation value of the full Hamiltonian, <a href="#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a>, with <span class="math inline">\(\Psi=\psi_{1s}(\mathbf{r}_1)\psi_{1s}(\mathbf{r}_2)\)</span>, gives three contributions (in <span class="math inline">\(E_h\)</span>): the kinetic energy of the two electrons, <span class="math inline">\(\zeta^2\)</span>; their attraction to the nucleus of charge <span class="math inline">\(Z\)</span>, <span class="math inline">\(-2Z\zeta\)</span>; and their mutual repulsion, <span class="math inline">\(+\frac{5}{8}\zeta\)</span>. Summing them:</p>
+<p><span id="eq-hevar2"><span class="math display">\[
+E(\zeta) = \zeta^2 - 2Z\zeta + \frac{5}{8}\zeta.
+\tag{9.23}\]</span></span></p>
+<p>This energy is plotted in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a>. To find its minimum, we set the derivative to zero:</p>
+<p><span id="eq-hevar3"><span class="math display">\[
+\frac{dE}{d\zeta} = 2\zeta - 2Z + \frac{5}{8} = 0 \quad\longrightarrow\quad \zeta_{\text{min}} = Z - \frac{5}{16} = 1.6875,
+\tag{9.24}\]</span></span></p>
+<p>and replacing this value in <a href="#eq-hevar2" class="quarto-xref">eq.&nbsp;<span>9.23</span></a> gives <span class="math inline">\(E(\zeta_{\text{min}}) = -\left(Z-\frac{5}{16}\right)^2 = -2.8477\,E_h = -7{,}477 \text{ kJ/mol}\)</span>.</p>
+<div id="fig-fig1c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the variational energy of helium versus the orbital exponent zeta: a parabola with its minimum at zeta equal 1.6875, above the dotted line of the exact energy, with the unshielded value at zeta equal 2 marked higher on the curve.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/He_var.png" class="img-fluid figure-img" style="width:80.0%" alt="Plot of the variational energy of helium versus the orbital exponent zeta: a parabola with its minimum at zeta equal 1.6875, above the dotted line of the exact energy, with the unshielded value at zeta equal 2 marked higher on the curve.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.1: Variational energy of the helium atom as a function of the orbital exponent <span class="math inline">\(\zeta\)</span>. The orange dot is the energy of the unshielded orbitals (<span class="math inline">\(\zeta=Z=2\)</span>, with the average repulsion included), the purple dot is the variational minimum, and the dotted line is the exact energy.
+</figcaption>
+</figure>
+</div>
+<p>A few important considerations can be made by analyzing these results:</p>
+<ol type="1">
+<li><p><strong>The variational theorem at work</strong>: every point of the curve in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a> lies above the exact energy, as guaranteed by <a href="#eq-varprinciple" class="quarto-xref">eq.&nbsp;<span>9.16</span></a>. The minimum gets within <span class="math inline">\(147 \text{ kJ/mol}\)</span> (about <span class="math inline">\(2\%\)</span>) of the exact value, using a single adjustable number.</p></li>
+<li><p><strong>Shielding</strong>: the optimal value <span class="math inline">\(\zeta_{\text{min}}=1.6875\)</span> is smaller than the real nuclear charge, <span class="math inline">\(Z=2\)</span>. We can interpret it as the <strong>effective nuclear charge</strong>, <span class="math inline">\(Z_\text{eff}\)</span>, felt by each electron. Each electron spends part of its time between the nucleus and the other electron, partially canceling the attraction that the other electron feels. The amount of shielding, <span class="math inline">\(\frac{5}{16}\approx0.31\)</span> of a proton charge, is much less than a full electron charge because the two electrons occupy the same region of space: a <span class="math inline">\(1s\)</span> electron is only rarely found “inside” the other one.</p></li>
+<li><p><strong>Orbital size</strong>: since <span class="math inline">\(\langle r\rangle \propto 1/\zeta\)</span>, a smaller effective charge means a larger orbital. The shielded <span class="math inline">\(1s\)</span> orbitals of helium are about <span class="math inline">\(2/1.6875\approx1.19\)</span> times larger than the unshielded ones.</p></li>
+<li><p><strong>What is still missing</strong>: even the best possible orbitals cannot reach the exact energy if we keep the product form of <a href="#eq-hf3" class="quarto-xref">eq.&nbsp;<span>9.19</span></a>. We will come back to this point at the end of this chapter, when we discuss electron correlation.</p></li>
+</ol>
+<p>The results obtained with the different approximations are summarized in <a href="#fig-fig2c9" class="quarto-xref">figure&nbsp;<span>9.2</span></a>, which also reports the Hartree–Fock limit that we will discuss in the next chapter.</p>
+<div id="fig-fig2c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy levels of helium from different approximations: no electron repulsion near minus 10,500 kilojoules per mole, average repulsion added near minus 7,220, variational near minus 7,477, Hartree-Fock limit near minus 7,513, and exact near minus 7,624.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/He_ladder.png" class="img-fluid figure-img" style="width:80.0%" alt="Energy levels of helium from different approximations: no electron repulsion near minus 10,500 kilojoules per mole, average repulsion added near minus 7,220, variational near minus 7,477, Hartree-Fock limit near minus 7,513, and exact near minus 7,624.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.2: Energy of the helium atom computed with the approximations discussed in this chapter, compared with the exact value.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="shielding-and-penetration" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="shielding-and-penetration"><span class="header-section-number">9.3</span> Shielding and Penetration</h2>
+<p>The helium example shows that the main effect of the other electrons on any given electron is to reduce the nuclear charge that it feels. We can generalize this idea to any atom by writing the effective nuclear charge felt by an electron as:</p>
+<p><span id="eq-zeff"><span class="math display">\[
+Z_{\text{eff}} = Z - \sigma,
+\tag{9.25}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma\)</span> is called the <strong>shielding constant</strong>, and it measures how much the other electrons screen the nucleus. In the simplest model of a many-electron atom, called the <strong>central-field approximation</strong>, each electron moves in the field of the nucleus plus the <em>spherically averaged</em> field of all other electrons. Since this effective potential depends only on <span class="math inline">\(r\)</span>, the angular part of the TISEq is the same as for hydrogen, and the orbitals keep the familiar shapes of the spherical harmonics and the labels <span class="math inline">\(n\)</span>, <span class="math inline">\(\ell\)</span>, <span class="math inline">\(m_\ell\)</span>. The radial part, however, changes, and with it the energies. What the central-field approximation does <em>not</em> include is the instantaneous repulsion between electrons: each electron feels only the average position of the others, not where they actually are at any given moment.</p>
+<p>Inner-shell electrons are very effective at shielding the outer ones, while electrons of the same shell shield each other only partially (as we saw for helium). As a result, outer electrons feel a much smaller effective charge than inner electrons, they are held less tightly, and their orbitals are more diffuse. This explains why the valence electrons of an atom are the ones involved in chemistry, while the core electrons are not.</p>
+<p>The most important consequence of shielding, however, is that it breaks the degeneracy of orbitals with the same <span class="math inline">\(n\)</span> and different <span class="math inline">\(\ell\)</span>. Recall from <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a> that in the hydrogen atom the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals have exactly the same energy. In a many-electron atom this is no longer the case. To understand why, consider the lithium atom, which has two core electrons, described by the <span class="math inline">\(1s\)</span> orbital, and one valence electron. The radial probability distributions of the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals, compared with that of the <span class="math inline">\(1s^2\)</span> core, are plotted in <a href="#fig-fig3c9" class="quarto-xref">figure&nbsp;<span>9.3</span></a>.</p>
+<div id="fig-fig3c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Radial probability of the lithium 1s core, a tall narrow peak near the nucleus, compared with the 2s and 2p orbitals farther out. The 2s orbital has a small inner lobe that overlaps the core, while the 2p orbital does not.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Li_penetration.png" class="img-fluid figure-img" style="width:80.0%" alt="Radial probability of the lithium 1s core, a tall narrow peak near the nucleus, compared with the 2s and 2p orbitals farther out. The 2s orbital has a small inner lobe that overlaps the core, while the 2p orbital does not.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.3: Radial probability distributions of the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals of lithium compared with the <span class="math inline">\(1s^2\)</span> core (gray), computed using hydrogen-like functions with effective nuclear charges. The radial node of the <span class="math inline">\(2s\)</span> orbital is highlighted with a purple dot.
+</figcaption>
+</figure>
+</div>
+<p>The <span class="math inline">\(2s\)</span> orbital has a small inner lobe, the one that we already noticed for hydrogen in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>, which places part of its probability <em>inside</em> the <span class="math inline">\(1s^2\)</span> core. When it is there, a <span class="math inline">\(2s\)</span> electron feels almost the full nuclear charge. We say that the <span class="math inline">\(2s\)</span> orbital <strong>penetrates</strong> the core. The <span class="math inline">\(2p\)</span> orbital, instead, starts at zero at the nucleus and has no inner lobe, so it is more effectively shielded by the core electrons. As a result, a <span class="math inline">\(2s\)</span> electron feels a larger <span class="math inline">\(Z_\text{eff}\)</span> than a <span class="math inline">\(2p\)</span> electron, and it is lower in energy. This is the <span class="math inline">\(2s\)</span>–<span class="math inline">\(2p\)</span> splitting that general chemistry textbooks show in their orbital energy diagrams. In general, for the same <span class="math inline">\(n\)</span>, penetration decreases as <span class="math inline">\(\ell\)</span> increases (because of the <span class="math inline">\(r^\ell\)</span> behavior of the radial functions close to the nucleus), so the energies of the orbitals follow the order <span class="math inline">\(ns &lt; np &lt; nd &lt; nf\)</span>.</p>
+<p>The effective nuclear charges felt by the <span class="math inline">\(1s\)</span>, <span class="math inline">\(2s\)</span>, and <span class="math inline">\(2p\)</span> electrons of the second-row atoms can be obtained from variational calculations similar to the one we did for helium. Some of the results are reported in <a href="#tbl-tab1c9" class="quarto-xref">table&nbsp;<span>9.1</span></a>.</p>
+<div id="tbl-tab1c9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9.1: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi.
+</figcaption>
+<div aria-describedby="tbl-tab1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Atom</th>
+<th style="text-align: center;"><span class="math inline">\(Z\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Z_\text{eff}(1s)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Z_\text{eff}(2s)\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Z_\text{eff}(2p)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Li</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2.69</td>
+<td style="text-align: center;">1.28</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Be</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3.68</td>
+<td style="text-align: center;">1.91</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4.68</td>
+<td style="text-align: center;">2.58</td>
+<td style="text-align: center;">2.42</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5.67</td>
+<td style="text-align: center;">3.22</td>
+<td style="text-align: center;">3.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">N</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6.67</td>
+<td style="text-align: center;">3.85</td>
+<td style="text-align: center;">3.83</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7.66</td>
+<td style="text-align: center;">4.49</td>
+<td style="text-align: center;">4.45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">8.65</td>
+<td style="text-align: center;">5.13</td>
+<td style="text-align: center;">5.10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ne</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">9.64</td>
+<td style="text-align: center;">5.76</td>
+<td style="text-align: center;">5.76</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Notice how the <span class="math inline">\(1s\)</span> electrons feel almost the full nuclear charge (they are shielded only by each other, as in helium), while the valence electrons feel a much smaller charge. Notice also how <span class="math inline">\(Z_\text{eff}(2s)\)</span> is larger than <span class="math inline">\(Z_\text{eff}(2p)\)</span>, as expected from penetration, although the difference becomes small for the heavier atoms of the row. When the electrons of an atom are described using the orbitals in order of increasing energy, following the Pauli exclusion principle, the different penetration of <span class="math inline">\(s\)</span>, <span class="math inline">\(p\)</span>, <span class="math inline">\(d\)</span>, and <span class="math inline">\(f\)</span> orbitals produces the familiar <strong>aufbau</strong> order, <span class="math inline">\(1s&lt;2s&lt;2p&lt;3s&lt;3p&lt;4s&lt;3d&lt;\ldots\)</span>, and with it the structure of the periodic table.</p>
+</section>
+<section id="sec-TermSymbols" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="sec-TermSymbols"><span class="header-section-number">9.4</span> Atomic States and Term Symbols</h2>
+<p>An electron configuration, such as <span class="math inline">\(1s^2 2s^2 2p^2\)</span> for carbon, tells us which orbitals are used to describe the electrons, but it does not tell us everything about the state of the atom. In the carbon configuration, the two <span class="math inline">\(2p\)</span> electrons can be described using any of the three <span class="math inline">\(2p\)</span> orbitals, with either spin, in several different ways, and these arrangements do not all have the same energy. Since electrons repel each other, the energy depends on how their orbital motions and their spins are arranged relative to each other. As a result, a single configuration gives rise to several distinct energy levels, called <em>atomic states</em>. These are the levels that we actually observe in atomic spectra, and chemists and spectroscopists label them using <em>term symbols</em>.</p>
+<section id="total-angular-momenta" class="level3" data-number="9.4.1">
+<h3 data-number="9.4.1" class="anchored" data-anchor-id="total-angular-momenta"><span class="header-section-number">9.4.1</span> Total angular momenta</h3>
+<p>In an atom with several electrons, the individual orbital angular momenta (quantum numbers <span class="math inline">\(\ell_i\)</span> and <span class="math inline">\(m_{\ell,i}\)</span>) and spins (<span class="math inline">\(s_i=\frac{1}{2}\)</span> and <span class="math inline">\(m_{s,i}\)</span>) combine into a <strong>total orbital angular momentum</strong> and a <strong>total spin</strong>. Their projections on the <span class="math inline">\(z\)</span> axis are simply the sums of the individual projections:</p>
+<p><span id="eq-term1"><span class="math display">\[
+M_L = \sum_i m_{\ell,i}, \qquad M_S = \sum_i m_{s,i}.
+\tag{9.26}\]</span></span></p>
+<p>The total angular momenta are described by two new quantum numbers, <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span>, which play the same role as <span class="math inline">\(\ell\)</span> and <span class="math inline">\(s\)</span> for a single electron: <span class="math inline">\(M_L\)</span> can take the <span class="math inline">\(2L+1\)</span> values <span class="math inline">\(-L,\ldots,+L\)</span>, and <span class="math inline">\(M_S\)</span> the <span class="math inline">\(2S+1\)</span> values <span class="math inline">\(-S,\ldots,+S\)</span>. A great simplification comes from the fact that a closed subshell (such as <span class="math inline">\(1s^2\)</span> or <span class="math inline">\(2p^6\)</span>, where every spin-orbital of the subshell is used) always has <span class="math inline">\(M_L=0\)</span> and <span class="math inline">\(M_S=0\)</span> for every possible arrangement, and therefore contributes <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>. Only the electrons of open subshells need to be considered.</p>
+</section>
+<section id="term-symbols" class="level3" data-number="9.4.2">
+<h3 data-number="9.4.2" class="anchored" data-anchor-id="term-symbols"><span class="header-section-number">9.4.2</span> Term symbols</h3>
+<p>The states that arise from a configuration are labeled with a <strong>term symbol</strong>:</p>
+<p><span id="eq-term2"><span class="math display">\[
+^{2S+1}L_J,
+\tag{9.27}\]</span></span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(L\)</span> is written with a capital letter, following the same code used for orbitals: <span class="math inline">\(S\)</span> for <span class="math inline">\(L=0\)</span>, <span class="math inline">\(P\)</span> for <span class="math inline">\(L=1\)</span>, <span class="math inline">\(D\)</span> for <span class="math inline">\(L=2\)</span>, <span class="math inline">\(F\)</span> for <span class="math inline">\(L=3\)</span>, and so on. (Notice the unfortunate double use of the letter <span class="math inline">\(S\)</span>, both for <span class="math inline">\(L=0\)</span> and for the total spin.)</li>
+<li>The left superscript, <span class="math inline">\(2S+1\)</span>, is called the <strong>multiplicity</strong>. States with <span class="math inline">\(S=0\)</span> (all spins paired) have multiplicity <span class="math inline">\(1\)</span> and are called <em>singlets</em>; states with <span class="math inline">\(S=\frac{1}{2}\)</span> are <em>doublets</em>; states with <span class="math inline">\(S=1\)</span> are <em>triplets</em>, and so on.</li>
+<li><span class="math inline">\(J\)</span> is the quantum number of the <strong>total angular momentum</strong>, obtained by combining <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span>. It can take the values <span class="math inline">\(J=|L-S|, |L-S|+1, \ldots, L+S\)</span>.</li>
+</ul>
+<p>For example, a sodium atom (<span class="math inline">\([\mathrm{Ne}]\,3s^1\)</span>) has a single electron outside closed shells, so <span class="math inline">\(L=0\)</span>, <span class="math inline">\(S=\frac{1}{2}\)</span>, and <span class="math inline">\(J=\frac{1}{2}\)</span>: its ground state is <span class="math inline">\(^2S_{1/2}\)</span> (read “doublet S one-half”). The noble gases, and any atom with only closed subshells, have the ground state <span class="math inline">\(^1S_0\)</span>.</p>
+</section>
+<section id="the-terms-of-carbon" class="level3" data-number="9.4.3">
+<h3 data-number="9.4.3" class="anchored" data-anchor-id="the-terms-of-carbon"><span class="header-section-number">9.4.3</span> The terms of carbon</h3>
+<p>When a subshell contains more than one electron, a single configuration produces several terms. To find them, we proceed in three steps: list all the possible ways of describing the electrons, sort them by <span class="math inline">\(M_L\)</span> and <span class="math inline">\(M_S\)</span>, and then group them into terms.</p>
+<p><strong>Step 1: list the microstates.</strong> Each <span class="math inline">\(2p\)</span> electron can be described by one of six spin-orbitals: three values of <span class="math inline">\(m_\ell\)</span> (<span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(-1\)</span>), each with spin up (<span class="math inline">\(\uparrow\)</span>) or down (<span class="math inline">\(\downarrow\)</span>). For two electrons, we need two <em>different</em> spin-orbitals (Pauli principle), and since electrons are indistinguishable, the order does not matter. There are <span class="math inline">\(\frac{6\times5}{2}=15\)</span> ways of choosing them, called <strong>microstates</strong>. For example, <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span> is the microstate in which one electron has <span class="math inline">\(m_\ell=+1\)</span> and spin up, and the other has <span class="math inline">\(m_\ell=0\)</span> and spin up. For each microstate, we can calculate <span class="math inline">\(M_L\)</span> and <span class="math inline">\(M_S\)</span> by adding the values of the two electrons (<a href="#eq-term1" class="quarto-xref">eq.&nbsp;<span>9.26</span></a>). For <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span>, <span class="math inline">\(M_L=+1+0=+1\)</span> and <span class="math inline">\(M_S=+\frac{1}{2}+\frac{1}{2}=+1\)</span>.</p>
+<p><strong>Step 2: sort them in a grid.</strong> We now arrange the 15 microstates in a grid, with one row for each value of <span class="math inline">\(M_L\)</span> and one column for each value of <span class="math inline">\(M_S\)</span>, as shown in <a href="#fig-fig5c9" class="quarto-xref">figure&nbsp;<span>9.4</span></a>. Notice that some cells contain more than one microstate, and that some are empty. For example, <span class="math inline">\(M_L=+2\)</span> requires both electrons to have <span class="math inline">\(m_\ell=+1\)</span>, and the Pauli principle then forces them to have opposite spins, so <span class="math inline">\(M_L=+2\)</span> is only possible with <span class="math inline">\(M_S=0\)</span>.</p>
+<div id="fig-fig5c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A grid with five rows, M L from plus 2 to minus 2, and three columns, M S equal plus 1, 0, and minus 1. The cells list the microstates as pairs such as plus 1 up, 0 up. The top and bottom rows contain a single microstate in the M S equal 0 column; the rows M L equal plus 1 and minus 1 contain one, two, and one microstates; the row M L equal 0 contains one, three, and one microstates.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig5c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Carbon_microstates.png" class="img-fluid figure-img" style="width:70.0%" alt="A grid with five rows, M L from plus 2 to minus 2, and three columns, M S equal plus 1, 0, and minus 1. The cells list the microstates as pairs such as plus 1 up, 0 up. The top and bottom rows contain a single microstate in the M S equal 0 column; the rows M L equal plus 1 and minus 1 contain one, two, and one microstates; the row M L equal 0 contains one, three, and one microstates.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig5c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.4: The 15 microstates of the <span class="math inline">\(2p^2\)</span> configuration, sorted by <span class="math inline">\(M_L\)</span> (rows) and <span class="math inline">\(M_S\)</span> (columns). Each microstate lists the <span class="math inline">\(m_\ell\)</span> value and the spin of the two electrons.
+</figcaption>
+</figure>
+</div>
+<p><strong>Step 3: group them into terms.</strong> The key idea is that each term with quantum numbers <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span> contains exactly <span class="math inline">\((2L+1)(2S+1)\)</span> states: one for each combination of <span class="math inline">\(M_L=-L,\ldots,+L\)</span> and <span class="math inline">\(M_S=-S,\ldots,+S\)</span>. In the grid, a term therefore looks like a <em>rectangle</em>: <span class="math inline">\(2L+1\)</span> rows tall and <span class="math inline">\(2S+1\)</span> columns wide, with exactly one microstate in each cell. The terms can then be found by “peeling off” rectangles from the grid, starting from the largest values of <span class="math inline">\(M_L\)</span>, as shown in <a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>:</p>
+<ol type="1">
+<li><p><strong>The <span class="math inline">\(^1D\)</span> term.</strong> The largest value of <span class="math inline">\(M_L\)</span> in the grid is <span class="math inline">\(+2\)</span>. A microstate with <span class="math inline">\(M_L=+2\)</span> must belong to a term with <span class="math inline">\(L=2\)</span> (a <span class="math inline">\(D\)</span> term), since a term with smaller <span class="math inline">\(L\)</span> cannot reach <span class="math inline">\(M_L=+2\)</span>. This term must also contain all the other values of <span class="math inline">\(M_L\)</span> from <span class="math inline">\(+2\)</span> down to <span class="math inline">\(-2\)</span>, so it is <span class="math inline">\(5\)</span> rows tall. Since the <span class="math inline">\(M_L=+2\)</span> row has a microstate only in the <span class="math inline">\(M_S=0\)</span> column, the term has only <span class="math inline">\(M_S=0\)</span>, so <span class="math inline">\(S=0\)</span>, and it is <span class="math inline">\(1\)</span> column wide. This is a <span class="math inline">\(^1D\)</span> term, a rectangle of <span class="math inline">\(5\times1=5\)</span> microstates, one in each row of the <span class="math inline">\(M_S=0\)</span> column (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>b).</p></li>
+<li><p><strong>The <span class="math inline">\(^3P\)</span> term.</strong> After removing the five <span class="math inline">\(^1D\)</span> states, the largest remaining value of <span class="math inline">\(M_L\)</span> is <span class="math inline">\(+1\)</span>, which now appears in all three columns, <span class="math inline">\(M_S=+1,0,-1\)</span>. This must be a term with <span class="math inline">\(L=1\)</span> (a <span class="math inline">\(P\)</span> term) and <span class="math inline">\(S=1\)</span> (since <span class="math inline">\(M_S\)</span> reaches <span class="math inline">\(+1\)</span>). It is a rectangle <span class="math inline">\(3\)</span> rows tall (<span class="math inline">\(M_L=+1,0,-1\)</span>) and <span class="math inline">\(3\)</span> columns wide: a <span class="math inline">\(^3P\)</span> term with <span class="math inline">\(3\times3=9\)</span> microstates (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>c).</p></li>
+<li><p><strong>The <span class="math inline">\(^1S\)</span> term.</strong> Only one microstate is left, with <span class="math inline">\(M_L=0\)</span> and <span class="math inline">\(M_S=0\)</span>. It is a term with <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>: a <span class="math inline">\(^1S\)</span> term with a single state (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>d).</p></li>
+</ol>
+<div id="fig-fig6c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four copies of a grid with rows M L from plus 2 to minus 2 and columns M S plus 1, 0, minus 1, with dots for microstates. Panel a shows 15 gray dots. Panel b outlines in green the M S equal 0 column, taking one dot from each of its five rows. Panel c outlines in blue the three-by-three block of rows plus 1 to minus 1 and all columns, taking nine dots. Panel d outlines in red the single remaining dot at M L equal 0, M S equal 0.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig6c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Carbon_peeloff.png" class="img-fluid figure-img" style="width:100.0%" alt="Four copies of a grid with rows M L from plus 2 to minus 2 and columns M S plus 1, 0, minus 1, with dots for microstates. Panel a shows 15 gray dots. Panel b outlines in green the M S equal 0 column, taking one dot from each of its five rows. Panel c outlines in blue the three-by-three block of rows plus 1 to minus 1 and all columns, taking nine dots. Panel d outlines in red the single remaining dot at M L equal 0, M S equal 0.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.5: Finding the terms of the <span class="math inline">\(2p^2\)</span> configuration. (a) Each dot is one microstate in the grid of the previous figure. (b)–(d) Each term occupies a rectangle of the grid, with one microstate in each cell: <span class="math inline">\(^1D\)</span> (5 states, green), <span class="math inline">\(^3P\)</span> (9 states, blue), and <span class="math inline">\(^1S\)</span> (1 state, red). Microstates already assigned to a term are shown faded.
+</figcaption>
+</figure>
+</div>
+<p>Notice that, in the cells with more than one microstate, we do not need to decide <em>which</em> microstate belongs to which term: only the number of states in each cell matters. (In fact, the real states of each term are combinations of the microstates in the same cell.) The <span class="math inline">\(2p^2\)</span> configuration of carbon therefore produces three terms, <span class="math inline">\(^3P\)</span>, <span class="math inline">\(^1D\)</span>, and <span class="math inline">\(^1S\)</span>, with <span class="math inline">\(9+5+1=15\)</span> states in total. Their experimental energies are shown in <a href="#fig-fig4c9" class="quarto-xref">figure&nbsp;<span>9.6</span></a>.</p>
+<div id="fig-fig4c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig4c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Carbon_terms.png" class="img-fluid figure-img" style="width:95.0%" alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.6: Energy levels arising from the <span class="math inline">\(1s^22s^22p^2\)</span> configuration of carbon (experimental values). Electron–electron repulsion splits the configuration into three terms, and spin–orbit coupling further splits the <span class="math inline">\(^3P\)</span> term into three levels with different <span class="math inline">\(J\)</span> (inset, magnified).
+</figcaption>
+</figure>
+</div>
+<p>A few important considerations can be made by analyzing this diagram:</p>
+<ol type="1">
+<li><p><strong>The size of the splitting</strong>: the three terms are separated by about <span class="math inline">\(10{,}000\;\text{cm}^{-1}\)</span> (more than <span class="math inline">\(100\;\text{kJ/mol}\)</span>), comparable to the energy of chemical processes. The configuration alone, which is all that the simple orbital picture provides, is not enough to describe the atom.</p></li>
+<li><p><strong>The triplet is lowest</strong>: the term with the highest multiplicity, <span class="math inline">\(^3P\)</span>, has the lowest energy. In the triplet, the two electrons have parallel spins, and the antisymmetry of the wave function keeps electrons with the same spin away from each other (two electrons with the same spin can never be found at the same point), which reduces their repulsion. We will see this effect again in <a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>, where it appears as the exchange term of the Fock operator.</p></li>
+<li><p><strong>Spin–orbit coupling is much smaller</strong>: the three levels of the <span class="math inline">\(^3P\)</span> term are only a few tens of <span class="math inline">\(\text{cm}^{-1}\)</span> apart, a thousand times less than the separation between terms (see below).</p></li>
+</ol>
+</section>
+<section id="hunds-rules" class="level3" data-number="9.4.4">
+<h3 data-number="9.4.4" class="anchored" data-anchor-id="hunds-rules"><span class="header-section-number">9.4.4</span> Hund’s rules</h3>
+<p>Finding all the terms of a configuration can be tedious, but in most cases we only need the ground state. This can be found using three empirical rules, formulated by Friedrich Hund in the 1920s:</p>
+<ol type="1">
+<li>The term with the <strong>largest multiplicity</strong> (largest <span class="math inline">\(S\)</span>) has the lowest energy.</li>
+<li>For terms with the same multiplicity, the one with the <strong>largest <span class="math inline">\(L\)</span></strong> has the lowest energy.</li>
+<li>If the open subshell has <strong>fewer than half</strong> of its maximum number of electrons, the level with the <strong>lowest <span class="math inline">\(J\)</span></strong> has the lowest energy; if it has <strong>more than half</strong>, the level with the <strong>highest <span class="math inline">\(J\)</span></strong> is lowest.</li>
+</ol>
+<p>For carbon, the first rule selects <span class="math inline">\(^3P\)</span> as the ground term, and the third rule (<span class="math inline">\(2p^2\)</span> has fewer than half of the six possible <span class="math inline">\(2p\)</span> electrons) selects <span class="math inline">\(J=0\)</span>: the ground state of carbon is <span class="math inline">\(^3P_0\)</span>, in agreement with <a href="#fig-fig4c9" class="quarto-xref">figure&nbsp;<span>9.6</span></a>. Oxygen (<span class="math inline">\(2p^4\)</span>) has the same terms as carbon, since the <span class="math inline">\(2p^4\)</span> configuration lacks two electrons with respect to the closed <span class="math inline">\(2p^6\)</span> subshell, and behaves like <span class="math inline">\(2p^2\)</span> (the two missing electrons are often called “holes”), but it has more than half of the six possible <span class="math inline">\(2p\)</span> electrons, and its ground state is <span class="math inline">\(^3P_2\)</span>. In practice, the ground term can be found quickly with the orbital diagrams of general chemistry, used here only as a bookkeeping device: we describe the electrons one at a time using the orbitals with the largest <span class="math inline">\(m_\ell\)</span> first, keeping their spins parallel as long as possible, and then reading <span class="math inline">\(S\)</span> from the number of unpaired electrons and <span class="math inline">\(L\)</span> from the sum of the <span class="math inline">\(m_\ell\)</span> values. The ground states of the first ten elements obtained in this way are reported in <a href="#tbl-tab3c9" class="quarto-xref">table&nbsp;<span>9.2</span></a>.</p>
+<div id="tbl-tab3c9" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9.2: Ground-state configurations and term symbols of the first ten elements.
+</figcaption>
+<div aria-describedby="tbl-tab3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Element</th>
+<th style="text-align: center;">Configuration</th>
+<th style="text-align: center;">Ground state</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">H</td>
+<td style="text-align: center;"><span class="math inline">\(1s^1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^2S_{1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">He</td>
+<td style="text-align: center;"><span class="math inline">\(1s^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^1S_0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Li</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^2S_{1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Be</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^1S_0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">B</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^2P_{1/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">C</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^3P_0\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">N</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^3\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^4S_{3/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">O</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^4\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^3P_2\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^5\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^2P_{3/2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ne</td>
+<td style="text-align: center;"><span class="math inline">\([\mathrm{He}]2s^22p^6\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(^1S_0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="spinorbit-coupling" class="level3" data-number="9.4.5">
+<h3 data-number="9.4.5" class="anchored" data-anchor-id="spinorbit-coupling"><span class="header-section-number">9.4.5</span> Spin–orbit coupling</h3>
+<p>Term symbols include the quantum number <span class="math inline">\(J\)</span> because of an effect that we have neglected so far: <strong>spin–orbit coupling</strong>. From the point of view of the electron, the charged nucleus is the one that moves around it, and this moving charge produces a magnetic field proportional to the orbital angular momentum. This field interacts with the magnetic moment associated with its spin. This interaction adds to the energy a term proportional to <span class="math inline">\(\mathbf{L}\cdot\mathbf{S}\)</span>, which depends on whether the spin and orbital angular momenta are aligned or opposed, and therefore on <span class="math inline">\(J\)</span>. It splits each term with <span class="math inline">\(L&gt;0\)</span> and <span class="math inline">\(S&gt;0\)</span> into its levels with different <span class="math inline">\(J\)</span>.</p>
+<p>Spin–orbit coupling is small for light atoms, but it grows very rapidly with the nuclear charge (approximately as <span class="math inline">\(Z^4\)</span>), and it is important for heavy elements. A familiar example is the yellow light of sodium street lamps, which comes from the transition from the first excited configuration, <span class="math inline">\([\mathrm{Ne}]\,3p^1\)</span>, to the ground state, <span class="math inline">\(^2S_{1/2}\)</span>. The <span class="math inline">\(3p^1\)</span> configuration gives a single term, <span class="math inline">\(^2P\)</span>, which spin–orbit coupling splits into two levels, <span class="math inline">\(^2P_{1/2}\)</span> and <span class="math inline">\(^2P_{3/2}\)</span>, separated by <span class="math inline">\(17\;\text{cm}^{-1}\)</span>. As a result, the sodium emission is not a single line, but a pair of lines at <span class="math inline">\(589.6\)</span> and <span class="math inline">\(589.0\;\text{nm}\)</span>, known as the <em>sodium D lines</em>. Their small splitting was one of the first experimental clues that led to the discovery of the electron spin.</p>
+</section>
+</section>
+<section id="electron-correlation" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="electron-correlation"><span class="header-section-number">9.5</span> Electron Correlation</h2>
+<p>Even with the best possible orbitals, a wave function built as a product of orbitals (or as a single Slater determinant) does not give the exact energy. The best energy that can be obtained in this way is called the <strong>Hartree–Fock limit</strong>, and for helium it is <span class="math inline">\(-2.8617\,E_h=-7{,}513 \text{ kJ/mol}\)</span>. This value is still <span class="math inline">\(110 \text{ kJ/mol}\)</span> above the exact energy (<a href="#fig-fig2c9" class="quarto-xref">figure&nbsp;<span>9.2</span></a>). The difference is called the <strong>correlation energy</strong>:</p>
+<p><span id="eq-ecorr"><span class="math display">\[
+E_\text{corr} = E_\text{exact} - E_\text{HF}.
+\tag{9.28}\]</span></span></p>
+<p>The origin of this error is the same approximation that is at the heart of the central-field model. In an orbital-based wave function, each electron moves in the <em>average</em> field of the others, and the probability of finding electron <span class="math inline">\(1\)</span> at some position does not depend on where electron <span class="math inline">\(2\)</span> is at that moment. Real electrons, however, repel each other and tend to stay away from each other: if electron <span class="math inline">\(1\)</span> is on one side of the nucleus, electron <span class="math inline">\(2\)</span> is more likely to be found on the other side. In other words, the motions of the electrons are <em>correlated</em>, and an orbital-based wave function misses part of this correlation. Since the correlated electrons avoid each other more effectively, their repulsion is lower, and the exact energy is lower than the Hartree–Fock limit.</p>
+<p>The correlation energy is a small fraction of the total energy (about <span class="math inline">\(1.5\%\)</span> for helium), but it is of the same order of magnitude as the energy of a chemical bond, so it can be very important for chemistry. We will see a dramatic example in <a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>, when we look at the breaking of the bond in the hydrogen molecule. Methods that go beyond the Hartree–Fock limit are called <em>correlated methods</em>, and they are among the most important tools of modern quantum chemistry.</p>
+<p>The procedure that we used for helium can be extended to atoms with more than two electrons, and to molecules, resulting in the Hartree–Fock method. We will explain it in more detail in the next chapter, since it is also the simplest approximation that can describe the chemical bond.</p>
+</section>
+<section id="sec-rev9" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="sec-rev9"><span class="header-section-number">9.6</span> Chapter Review</h2>
+<section id="sec-quest9" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.6.1</span> Study Questions</h3>
+<p><strong>1. When going from hydrogen to many‑electron atoms, which new term in the electronic Hamiltonian prevents an analytic solution of the TISEq?</strong></p>
+<ol type="a">
+<li>electron–nuclear attraction</li>
+<li>kinetic energy</li>
+<li>electron–electron repulsion</li>
+<li>nuclear–nuclear repulsion</li>
+<li>spin–orbit coupling</li>
+</ol>
+<hr>
+<p><strong>2. For an <span class="math inline">\(N\)</span>‑electron atom in non‑relativistic approximation, how does the dimensionality of the electronic configuration space scale with <span class="math inline">\(N\)</span>?</strong></p>
+<ol type="a">
+<li>it remains 3 (independent of <span class="math inline">\(N\)</span>)</li>
+<li>it is <span class="math inline">\(3N\)</span> (three spatial coordinates for each electron)</li>
+<li>it is <span class="math inline">\(N\)</span></li>
+<li>it is <span class="math inline">\(2N\)</span> (one radial and one angular coordinate per electron)</li>
+<li>it is <span class="math inline">\(N^2\)</span></li>
+</ol>
+<hr>
+<p><strong>3. Which symmetry requirement must the total electronic wave function for identical electrons satisfy?</strong></p>
+<ol type="a">
+<li>symmetry under any electron exchange</li>
+<li>normalization to 1</li>
+<li>invariance under global phase changes only</li>
+<li>periodicity in each coordinate</li>
+<li>antisymmetry under exchange of any two electrons (Pauli principle)</li>
+</ol>
+<hr>
+<p><strong>4. How is antisymmetry enforced in practice in approximate many‑electron wave functions?</strong></p>
+<ol type="a">
+<li>by multiplying one‑electron functions</li>
+<li>by adding a constant term to the Hamiltonian</li>
+<li>by constructing Slater determinants of spin‑orbitals</li>
+<li>by ignoring spin altogether</li>
+<li>by symmetrizing products of orbitals</li>
+</ol>
+<hr>
+<p><strong>5. The variational principle for an approximate normalized trial function <span class="math inline">\(\Phi\)</span> states that the energy functional <span class="math inline">\(E[\Phi]\)</span> is?</strong></p>
+<ol type="a">
+<li>always less than the exact ground‑state energy</li>
+<li>equal to the exact ground‑state energy for any trial function</li>
+<li>always greater than or equal to the exact ground‑state energy</li>
+<li>independent of the choice of trial function</li>
+<li>meaningful only for excited states</li>
+</ol>
+<hr>
+<p><strong>6. In the simplest independent‑electron approximation used in this chapter for the helium atom, each electron is assumed to move:</strong></p>
+<ol type="a">
+<li>in the field of the nucleus only, ignoring other electrons</li>
+<li>in a mean or effective field generated by the nucleus and the average distribution of all other electrons</li>
+<li>in a uniform external electric field</li>
+<li>in a purely harmonic potential</li>
+<li>in free space without any potential</li>
+</ol>
+<hr>
+<p><strong>7. In the variational treatment of helium, the optimized orbital exponent is <span class="math inline">\(\zeta_\text{min}=1.6875\)</span>, smaller than <span class="math inline">\(Z=2\)</span>. What is the physical meaning of this result?</strong></p>
+<ol type="a">
+<li>the helium nucleus loses part of its charge</li>
+<li>each electron is partially shielded from the nucleus by the other electron</li>
+<li>the electrons are farther from the nucleus because they have higher kinetic energy</li>
+<li>the variational method has failed</li>
+<li>the two electrons have parallel spins</li>
+</ol>
+<hr>
+<p><strong>8. Which effect of shielding on inner versus outer electrons is discussed in this chapter?</strong></p>
+<ol type="a">
+<li>outer electrons become more tightly bound than inner ones</li>
+<li>inner electrons shield outer ones, so outer electrons feel a smaller effective nuclear charge and are more diffuse</li>
+<li>shielding causes inner electrons to move further from the nucleus</li>
+<li>outer electrons experience the full nuclear charge without screening</li>
+<li>both inner and outer electrons collapse into the nucleus</li>
+</ol>
+<hr>
+<p><strong>9. Which of the following is <em>not</em> an effect included in the central‑field approximation for many‑electron atoms?</strong></p>
+<ol type="a">
+<li>average electron–electron repulsion</li>
+<li>screening of nuclear charge</li>
+<li>instantaneous electron–electron correlation</li>
+<li>effective one‑electron orbital picture</li>
+<li>approximate shell structure</li>
+</ol>
+<hr>
+<p><strong>10. What is meant by “electron correlation”?</strong></p>
+<ol type="a">
+<li>changes in nuclear positions</li>
+<li>spin conservation</li>
+<li>the normalization condition</li>
+<li>the fact that real electrons avoid each other more than in a mean‑field (orbital) description</li>
+<li>inclusion of relativistic mass corrections</li>
+</ol>
+<hr>
+<p><strong>11. To which type of particles does the Pauli exclusion principle apply?</strong></p>
+<ol type="a">
+<li>All particles, regardless of spin<br>
+</li>
+<li>Bosons only<br>
+</li>
+<li>Fermions, i.e., particles with half‑integer spin (e.g., electrons)<br>
+</li>
+<li>Photons only<br>
+</li>
+<li>Classical point particles</li>
+</ol>
+<hr>
+<p><strong>12. Which term symbol describes the ground state of the carbon atom (<span class="math inline">\(1s^22s^22p^2\)</span>)?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(^1S_0\)</span><br>
+</li>
+<li><span class="math inline">\(^1D_2\)</span><br>
+</li>
+<li><span class="math inline">\(^3P_0\)</span><br>
+</li>
+<li><span class="math inline">\(^3P_2\)</span><br>
+</li>
+<li><span class="math inline">\(^2P_{1/2}\)</span></li>
+</ol>
+<hr>
+<p><strong>13. According to Hund’s first rule, which term of a configuration has the lowest energy?</strong></p>
+<ol type="a">
+<li>the term with the smallest multiplicity<br>
+</li>
+<li>the term with the largest multiplicity (largest total spin <span class="math inline">\(S\)</span>)<br>
+</li>
+<li>the term with the smallest <span class="math inline">\(L\)</span><br>
+</li>
+<li>the term with the largest <span class="math inline">\(J\)</span><br>
+</li>
+<li>all terms have the same energy</li>
+</ol>
+<hr>
+<p><strong>14. Why does the emission of sodium consist of two lines (the D lines) instead of one?</strong></p>
+<ol type="a">
+<li>because sodium has two valence electrons<br>
+</li>
+<li>because of the Pauli exclusion principle<br>
+</li>
+<li>because spin–orbit coupling splits the <span class="math inline">\(^2P\)</span> term into <span class="math inline">\(^2P_{1/2}\)</span> and <span class="math inline">\(^2P_{3/2}\)</span><br>
+</li>
+<li>because the <span class="math inline">\(3s\)</span> and <span class="math inline">\(3p\)</span> orbitals are degenerate<br>
+</li>
+<li>because of the Born–Oppenheimer approximation</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.c, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.b, 9.c, 10.d, 11.c, 12.c, 13.b, 14.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><span class="math inline">\(E_h\)</span> is the hartree, the atomic unit of energy that we introduced in <a href="05_Hydrogen.html#sec-AtomicUnits" class="quarto-xref"><span>section 5.1</span></a>: <span class="math inline">\(1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./08_Weirdness.html" class="pagination-link" aria-label="Quantum Weirdness">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./10_Molecules.html" class="pagination-link" aria-label="Introduction to Molecules">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/09_Atoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

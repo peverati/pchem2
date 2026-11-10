@@ -1,10 +1,29 @@
-This is the github repository for the Live Textbook of Physical Chemistry 1 by Dr. Peverati, Florida institute of Technology.
+This is the GitHub repository for the Live Textbook of Physical Chemistry 2 by Dr. Peverati, Florida Institute of Technology.
 
-This book is generated using R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
+The book is written in Markdown (`.qmd` files) and built with [Quarto](https://quarto.org). R and RStudio are not needed.
 
-The backend was generated using the "A GitBook Example for Teaching" template by dr. Caspar J. van Lissa (https://cjvanlissa.github.io/gitbook-demo/)
-The template is based on the minimal bookdown example by Yihui Xie, available at
-https://bookdown.org/yihui/bookdown-demo.
+## Build
 
-Please see the page "[Get Started](https://bookdown.org/yihui/bookdown/get-started.html)" at https://bookdown.org/yihui/bookdown/ for how to compile this example into HTML. You may generate a copy of the book in `bookdown::pdf_book` format by calling `bookdown::render_book('index.Rmd', 'bookdown::pdf_book')`. 
-You can find the preview of this example at https://cjvanlissa.github.io/gitbook-demo/.
+From this folder:
+
+```bash
+quarto preview      # live preview while writing
+quarto render       # website and PDF (pchem2.pdf) into docs/
+```
+
+Then commit and push: GitHub Pages serves the `docs/` folder.
+
+Optional PDF built with Typst (into `_book-typst/`, not published):
+
+```bash
+quarto render --profile typst --to typst
+```
+
+## Layout
+
+- `index.qmd`, `01_Classical.qmd` … `13_Spectroscopy.qmd`: the chapters, in the order listed in `_quarto.yml`.
+- `img/`: figures; `scripts/`: Python scripts that generate the computed figures.
+- `quarto.css`, `punctuation.html`: accessibility tweaks (caption contrast, scrollable equations, no line breaks before punctuation after math).
+- `_bookdown-archive/`: the former bookdown sources (`.Rmd`) and the script that converted them; kept for reference only.
+
+Old bookdown page names (e.g. `Models.html`) redirect to the new pages (`04_Models.html`).

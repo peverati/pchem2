@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>7&nbsp; Spin – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./08_Weirdness.html" rel="next">
+<link href="./06_Operators.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./07_Spin.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#stern-gerlach-experiment" id="toc-stern-gerlach-experiment" class="nav-link active" data-scroll-target="#stern-gerlach-experiment"><span class="header-section-number">7.1</span> Stern-Gerlach Experiment</a></li>
+  <li><a href="#sequential-stern-gerlach-experiments" id="toc-sequential-stern-gerlach-experiments" class="nav-link" data-scroll-target="#sequential-stern-gerlach-experiments"><span class="header-section-number">7.2</span> Sequential Stern-Gerlach Experiments</a></li>
+  <li><a href="#spin-operators" id="toc-spin-operators" class="nav-link" data-scroll-target="#spin-operators"><span class="header-section-number">7.3</span> Spin Operators</a></li>
+  <li><a href="#operators-commuting-with-the-hamiltonian" id="toc-operators-commuting-with-the-hamiltonian" class="nav-link" data-scroll-target="#operators-commuting-with-the-hamiltonian"><span class="header-section-number">7.4</span> Operators Commuting with the Hamiltonian</a>
+  <ul class="collapse">
+  <li><a href="#free-particle-translational-symmetry-and-momentum" id="toc-free-particle-translational-symmetry-and-momentum" class="nav-link" data-scroll-target="#free-particle-translational-symmetry-and-momentum"><span class="header-section-number">7.4.1</span> Free particle: translational symmetry and momentum</a></li>
+  <li><a href="#particle-in-a-box-broken-translation-introduction-to-parity" id="toc-particle-in-a-box-broken-translation-introduction-to-parity" class="nav-link" data-scroll-target="#particle-in-a-box-broken-translation-introduction-to-parity"><span class="header-section-number">7.4.2</span> Particle in a box: broken translation, introduction to parity</a></li>
+  <li><a href="#particle-on-a-ring-and-on-a-sphere-rotational-symmetry" id="toc-particle-on-a-ring-and-on-a-sphere-rotational-symmetry" class="nav-link" data-scroll-target="#particle-on-a-ring-and-on-a-sphere-rotational-symmetry"><span class="header-section-number">7.4.3</span> Particle on a ring and on a sphere: rotational symmetry</a></li>
+  <li><a href="#hydrogen-atom-coulomb-symmetry" id="toc-hydrogen-atom-coulomb-symmetry" class="nav-link" data-scroll-target="#hydrogen-atom-coulomb-symmetry"><span class="header-section-number">7.4.4</span> Hydrogen atom: Coulomb symmetry</a></li>
+  <li><a href="#spin-and-manyelectron-atoms-why-spin-matters" id="toc-spin-and-manyelectron-atoms-why-spin-matters" class="nav-link" data-scroll-target="#spin-and-manyelectron-atoms-why-spin-matters"><span class="header-section-number">7.4.5</span> Spin and many‑electron atoms: why spin matters</a></li>
+  </ul></li>
+  <li><a href="#sec-rev7" id="toc-sec-rev7" class="nav-link" data-scroll-target="#sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/07_Spin.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Spin" class="quarto-section-identifier"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Spin is a special property of particles that has no classical analogue. Spin is an intrinsic form of angular momentum carried by elementary particles, such as the electron.</p>
+<section id="stern-gerlach-experiment" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="stern-gerlach-experiment"><span class="header-section-number">7.1</span> Stern-Gerlach Experiment</h2>
+<p>In 1922, Otto Stern and Walter Gerlach performed an experiment that unintentionally led to the discovery that electrons have their own intrinsic angular momentum (spin), independent of their orbital motion in an atom. The experiment was done by putting a silver foil in an oven to vaporize its atoms. The silver atoms were collected into a beam that passed through an inhomogeneous magnetic field. The result was that the magnetic field split the beam into two (and only two) separate ones. The Stern–Gerlach experiment demonstrated that the spatial orientation of angular momentum is quantized into two components (up and down). Thus an atomic-scale system was shown to have intrinsically quantum properties. The experiment is normally conducted using electrically neutral particles such as silver atoms. This avoids the large deflection in the path of a charged particle moving through a magnetic field and allows spin-dependent effects to dominate. A schematic of the apparatus is shown in <a href="#fig-Fig1c7" class="quarto-xref">figure&nbsp;<span>7.1</span></a>.</p>
+<div id="fig-Fig1c7" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagram of the Stern-Gerlach experiment: an oven emits silver atoms that pass through two slits and between the poles of a magnet with a pointed north pole and flat south pole, then split into two beams hitting a screen. Side panels compare a continuous band expected classically with the two separate spots observed.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig1c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SG_apparatus.png" class="img-fluid figure-img" style="width:100.0%" alt="Diagram of the Stern-Gerlach experiment: an oven emits silver atoms that pass through two slits and between the poles of a magnet with a pointed north pole and flat south pole, then split into two beams hitting a screen. Side panels compare a continuous band expected classically with the two separate spots observed.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig1c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.1: Schematic of the Stern–Gerlach experiment. A beam of silver atoms from an oven is collimated by two slits and passes between the poles of a magnet shaped to produce an inhomogeneous field. Right: the pattern on the screen expected for classical magnetic dipoles with random orientations (a continuous band) compared with the observed pattern (two separate spots).
+</figcaption>
+</figure>
+</div>
+<p>If the particle is treated as a classical spinning magnetic dipole, it will precess in a magnetic field because of the torque that the magnetic field exerts on the dipole. If it moves through a homogeneous magnetic field, the forces exerted on opposite ends of the dipole cancel each other out and the trajectory of the particle is unaffected. However, if the magnetic field is inhomogeneous then the force on one end of the dipole will be slightly greater than the opposing force on the other end, so that there is a net force which deflects the particle’s trajectory. If the particles were classical spinning objects, one would expect the distribution of their spin angular momentum vectors to be random and continuous. Each particle would be deflected by an amount proportional to its magnetic moment, producing some density distribution on the detector screen. Instead, the particles passing through the Stern–Gerlach apparatus are equally distributed among two possible values, with half of them ending up at an upper spot (“spin up”), and the other half at the lower spot (“spin down”). Since the particles are deflected by a magnetic field, spin is a magnetic property that is associated with some intrinsic form of angular momentum. As we saw in <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>, the quantization of the angular momentum gives energy levels that are <span class="math inline">\((2\ell+1)\)</span>-fold degenerate. Since along the direction of the magnet we observe only two possible eigenvalues for the spin, we conclude the following value for <span class="math inline">\(s\)</span>:</p>
+<p><span id="eq-spin0"><span class="math display">\[
+2s+1=2 \quad\Rightarrow\quad s=\frac{1}{2}.
+\tag{7.1}\]</span></span></p>
+<p>The Stern-Gerlach experiment proves that electrons are spin-<span class="math inline">\(\frac{1}{2}\)</span> particles. These have only two possible spin angular momentum values measured along any axis, <span class="math inline">\(+\frac {\hbar }{2}\)</span> or <span class="math inline">\(-\frac {\hbar }{2}\)</span>, a purely quantum mechanical phenomenon. Because its value is always the same, it is regarded as an intrinsic property of electrons, and is sometimes known as “intrinsic angular momentum” (to distinguish it from orbital angular momentum, which can vary and depends on the presence of other particles).</p>
+<p>The act of observing (measuring) the spin angular momentum along the <span class="math inline">\(z\)</span> direction corresponds to the operator <span class="math inline">\(\hat{S}_z\)</span>, which projects the value of the total spin operator <span class="math inline">\(\hat{S}^2\)</span> along the <span class="math inline">\(z\)</span> axis. The eigenvalue equation for this projection operator is:</p>
+<p><span id="eq-spin0b"><span class="math display">\[
+\hat{S}_z \chi = \hbar m_s \chi,
+\tag{7.2}\]</span></span></p>
+<p>where <span class="math inline">\(m_s=\left\{-s,+s\right\}=\left\{-\frac{1}{2},+\frac{1}{2}\right\}\)</span> is the spin quantum number along the <span class="math inline">\(z\)</span> component. The eigenvalues for the total spin operator <span class="math inline">\(\hat{S}^2\)</span>—similarly to the angular momentum operator <span class="math inline">\(\hat{L}^2\)</span> seen in <a href="06_Operators.html#eq-angmom3" class="quarto-xref">eq.&nbsp;<span>6.31</span></a>—are:</p>
+<p><span id="eq-spin0c"><span class="math display">\[
+\hat{S}^2 \chi = \hbar^2 s(s+1) \chi,
+\tag{7.3}\]</span></span></p>
+<p>Notice that the magnitude of the spin angular momentum, <span class="math inline">\(|\mathbf{S}|=\hbar\sqrt{s(s+1)}=\frac{\sqrt{3}}{2}\hbar\approx0.87\hbar\)</span>, is larger than its largest possible projection on the <span class="math inline">\(z\)</span> axis, <span class="math inline">\(\frac{1}{2}\hbar\)</span>. In other words, the spin vector can never point exactly along <span class="math inline">\(z\)</span>. A common way of picturing this result, shown in <a href="#fig-Fig2c7" class="quarto-xref">figure&nbsp;<span>7.2</span></a>, is to imagine the spin vector lying somewhere on the surface of a cone around the <span class="math inline">\(z\)</span> axis: its <span class="math inline">\(z\)</span> component is well defined (<span class="math inline">\(+\frac{\hbar}{2}\)</span> for <span class="math inline">\(\alpha\)</span>, and <span class="math inline">\(-\frac{\hbar}{2}\)</span> for <span class="math inline">\(\beta\)</span>), while its <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components are not. As we will see in the next sections, this is a consequence of the fact that the three components of spin cannot be measured at the same time.</p>
+<div id="fig-Fig2c7" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Vector model of electron spin: two cones around the vertical z axis, the upper one for spin up with z component plus one half h-bar, and the lower one for spin down with z component minus one half h-bar. Arrows of length root 3 over 2 h-bar lie on the cone surfaces.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig2c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/Spin_cones.png" class="img-fluid figure-img" style="width:65.0%" alt="Vector model of electron spin: two cones around the vertical z axis, the upper one for spin up with z component plus one half h-bar, and the lower one for spin down with z component minus one half h-bar. Arrows of length root 3 over 2 h-bar lie on the cone surfaces.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig2c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.2: Vector model of the two spin states of an electron. The spin vector has length <span class="math inline">\(\frac{\sqrt{3}}{2}\hbar\)</span> and a well-defined projection on the <span class="math inline">\(z\)</span> axis, <span class="math inline">\(+\frac{\hbar}{2}\)</span> (<span class="math inline">\(\alpha\)</span>, red) or <span class="math inline">\(-\frac{\hbar}{2}\)</span> (<span class="math inline">\(\beta\)</span>, blue), but its direction around the cone (i.e., its <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components) is undetermined. The lighter arrows show other possible orientations on the same cone.
+</figcaption>
+</figure>
+</div>
+<p>The initial state of the particles in the Stern-Gerlach experiment is given by the following wave function:</p>
+<p><span id="eq-spin1"><span class="math display">\[
+\chi = c_1\, \alpha + c_2 \,\beta,
+\tag{7.4}\]</span></span></p>
+<p>where <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are the two eigenfunctions of <span class="math inline">\(\hat{S}_z\)</span>, corresponding to spin up (<span class="math inline">\(\uparrow\)</span>, <span class="math inline">\(m_s=+\frac{1}{2}\)</span>, eigenvalue <span class="math inline">\(+\frac{\hbar}{2}\)</span>) and spin down (<span class="math inline">\(\downarrow\)</span>, <span class="math inline">\(m_s=-\frac{1}{2}\)</span>, eigenvalue <span class="math inline">\(-\frac{\hbar}{2}\)</span>), respectively, and the coefficients <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are complex numbers. The names <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> for the two spin functions are standard in chemistry, and we will use them for the rest of this textbook. In this initial state, spin can point in any direction. The expectation value of the operator <span class="math inline">\(\hat{S}_z\)</span> (the quantity that the Stern-Gerlach experiment measures), can be obtained using <a href="06_Operators.html#eq-ee6" class="quarto-xref">eq.&nbsp;<span>6.22</span></a>:</p>
+<p><span id="eq-spin2"><span class="math display">\[
+\begin{aligned}
+&lt;S_z&gt; &amp;= \int \chi^{*} \hat{S}_z \chi \, d\mathbf{s} \\
+&amp;= +\frac{\hbar}{2} \vert c_1\vert^2 -\frac{\hbar}{2} \vert c_2\vert^2,
+\end{aligned}
+\tag{7.5}\]</span></span></p>
+<p>where the integration is performed along a special coordinate <span class="math inline">\(\mathbf{s}\)</span> composed of only two values. Applying the normalization condition, <a href="06_Operators.html#eq-ee4" class="quarto-xref">eq.&nbsp;<span>6.20</span></a>, we can obtain:</p>
+<p><span id="eq-spin3"><span class="math display">\[
+|c_{1}|^{2}+|c_{2}|^{2}=1 \quad\longrightarrow\quad |c_{1}|^{2}=|c_{2}|^{2}=\frac{1}{2}.
+\tag{7.6}\]</span></span></p>
+<p>This equation is not sufficient to determine the values of the coefficients since they are complex numbers. <a href="#eq-spin3" class="quarto-xref">Eq.&nbsp;<span>7.6</span></a>, however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, will be observed with equal probability of <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+</section>
+<section id="sequential-stern-gerlach-experiments" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="sequential-stern-gerlach-experiments"><span class="header-section-number">7.2</span> Sequential Stern-Gerlach Experiments</h2>
+<p>An interesting result can be obtained if we link multiple Stern–Gerlach apparatuses into one experiment and we perform the measurement along two orthogonal directions in space. As we showed in the previous section, all particles leaving the first Stern-Gerlach apparatus are in an eigenstate of the <span class="math inline">\(\hat{S}_z\)</span> operator (i.e., their spin is either “up” or “down” with respect to the <span class="math inline">\(z\)</span>-direction). We can then take either one of the two resulting beams (for simplicity let’s take the “spin up” output), and perform another spin measurement on it. If the second measurement is also aligned along the <span class="math inline">\(z\)</span>-direction then only one outcome will be measured, since all particles are already in the “spin up” eigenstate of <span class="math inline">\(\hat{S}_z\)</span>. In other words, the measurement of a particle being in an eigenstate of the corresponding operator leaves the state unchanged. The possible combinations of sequential experiments discussed in this section are summarized in <a href="#fig-Fig3c7" class="quarto-xref">figure&nbsp;<span>7.3</span></a>.</p>
+<div id="fig-Fig3c7" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three block diagrams of Stern-Gerlach experiments. (a) A z apparatus splits N atoms into N over 2 up and N over 2 down. (b) The up beam sent through a second z apparatus stays entirely up. (c) The up beam sent through an x apparatus splits in two; one of these sent through a z apparatus splits again into N over 8 up and N over 8 down.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig3c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/SG_sequential.png" class="img-fluid figure-img" style="width:95.0%" alt="Three block diagrams of Stern-Gerlach experiments. (a) A z apparatus splits N atoms into N over 2 up and N over 2 down. (b) The up beam sent through a second z apparatus stays entirely up. (c) The up beam sent through an x apparatus splits in two; one of these sent through a z apparatus splits again into N over 8 up and N over 8 down.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig3c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.3: Sequential Stern–Gerlach experiments, with the number of particles in each beam. (a) A single apparatus along <span class="math inline">\(z\)</span> splits a beam of <span class="math inline">\(N\)</span> particles into two equal beams. (b) A second apparatus along <span class="math inline">\(z\)</span> does not split the spin-up beam any further. (c) An apparatus along <span class="math inline">\(x\)</span> splits the spin-up beam into two beams, spin right and spin left; a third apparatus along <span class="math inline">\(z\)</span> then splits the spin-right beam again into spin up and spin down, as if the first measurement had never happened.
+</figcaption>
+</figure>
+</div>
+<p>If, however, we perform the spin measurement along a direction perpendicular to the original <span class="math inline">\(z\)</span>-axis (i.e., the <span class="math inline">\(x\)</span>-axis) then the output will equally distribute among “spin up” or ”spin down” in the <span class="math inline">\(x\)</span>-direction, which in order to avoid confusion, we can call “spin left” and “spin right”. Thus, even though we knew the state of the particles beforehand, in this case the measurement resulted in a random spin flip in either of the measurement directions. Mathematically, this property is expressed by the nonvanishing of the commutator of the spin operators:</p>
+<p><span id="eq-spin4"><span class="math display">\[
+\left[\hat{S}_z,\hat{S}_x \right] \neq 0.
+\tag{7.7}\]</span></span></p>
+<p>We can finally repeat the measurement a third time, with the magnet aligned along the original <span class="math inline">\(z\)</span>-direction. According to classical physics, after the second apparatus, we would expect to have one beam with characteristic “spin up” and “spin left”, and another with characteristic “spin up” and “spin right”. The outcome of the third measurement along the original <span class="math inline">\(z\)</span>-axis should be one output with characteristic “spin up”, regardless of which beam the magnet is applied (since the “spin down” component should have been “filtered out” by the first experiment, and the “spin left” and “spin right” component should be filtered out by the third magnet). This is not what is observed. The output of the third measurement is—once again—two beams in the <span class="math inline">\(z\)</span> direction, one with “spin up” characteristic and the other with “spin down”.</p>
+<p>This experiment shows that spin is not a classical property. The Stern-Gerlach apparatus does not behave as a simple filter, selecting beams with one specific pre-determined characteristic. The second measurement along the <span class="math inline">\(x\)</span> axis destroys the previous determination of the angular momentum in the <span class="math inline">\(z\)</span> direction. This means that this property cannot be measured on two perpendicular directions at the same time.</p>
+</section>
+<section id="spin-operators" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="spin-operators"><span class="header-section-number">7.3</span> Spin Operators</h2>
+<p>The mathematics of quantum mechanics tells us that <span class="math inline">\(\hat{S}_z\)</span> and <span class="math inline">\(\hat{S}_x\)</span> do not commute. As we saw in <a href="06_Operators.html#sec-CommutingOperators" class="quarto-xref"><span>section 6.3.3</span></a>, when two operators do not commute, in general there is no state in which both of the associated quantities have a definite value: they cannot be known at the same time.</p>
+<p>In 3-dimensional space there are three directions that are orthogonal to each other <span class="math inline">\(\left\{x,y,z\right\}\)</span>. Thus, we can define a third spin projection operator along the <span class="math inline">\(y\)</span> direction, <span class="math inline">\(\hat{S}_y\)</span>, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we considered in the previous section. The total spin operator, <span class="math inline">\(\hat{S}^2\)</span>, can then be constructed similarly to the total angular momentum operator of <a href="06_Operators.html#eq-angmom1b" class="quarto-xref">eq.&nbsp;<span>6.29</span></a>, as:</p>
+<p><span id="eq-spop1"><span class="math display">\[
+\begin{aligned}
+\hat{S}^2 &amp;=\hat{S}\cdot\hat{S}=\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z\right)\cdot\left(\mathbf{i}\hat{S}_x+\mathbf{j}\hat{S}_y+\mathbf{k}\hat{S}_z \right) \\
+&amp;=\hat{S}_x^2+\hat{S}_y^2+\hat{S}_z^2,
+\end{aligned}
+\tag{7.8}\]</span></span></p>
+<p>with <span class="math inline">\(\left\{\mathbf{i},\mathbf{j},\mathbf{k}\right\}\)</span> the unit vectors in three-dimensional space.</p>
+<p>Wolfgang Pauli explicitly derived the relationships between all three spin projection operators. Assuming the magnetic field along the <span class="math inline">\(z\)</span> axis, Pauli’s relations can be written using simple equations involving the two possible eigenstates <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>:</p>
+<p><span id="eq-spop2"><span class="math display">\[
+\begin{aligned}
+\hat{S}_x \alpha =  \frac{\hbar}{2} \beta \qquad \hat{S}_y \alpha &amp;=  \frac{\hbar}{2} i \beta \qquad \hat{S}_z \alpha =  \frac{\hbar}{2} \alpha \\
+\hat{S}_x \beta =  \frac{\hbar}{2} \alpha \qquad \hat{S}_y \beta &amp;=  - \frac{\hbar}{2} i \alpha \qquad \hat{S}_z \beta =  -\frac{\hbar}{2} \beta,
+\end{aligned}
+\tag{7.9}\]</span></span></p>
+<p>where <span class="math inline">\(i\)</span> is the imaginary unit (<span class="math inline">\(i^2=-1\)</span>). In other words, for <span class="math inline">\(\hat{S}_z\)</span> we have eigenvalue equations, while the remaining components have the effect of permuting state <span class="math inline">\(\alpha\)</span> with state <span class="math inline">\(\beta\)</span> after multiplication by suitable constants. We can use these equations, together with <a href="06_Operators.html#eq-bp5" class="quarto-xref">eq.&nbsp;<span>6.7</span></a>, to calculate the commutator for each pair of spin projection operators:</p>
+<p><span id="eq-spop3"><span class="math display">\[
+\begin{aligned}
+\left[\hat{S}_x, \hat{S}_y\right] &amp;= i\hbar\hat{S}_z \\
+\left[\hat{S}_y, \hat{S}_z\right] &amp;= i\hbar\hat{S}_x \\
+\left[\hat{S}_z, \hat{S}_x\right] &amp;= i\hbar\hat{S}_y,
+\end{aligned}
+\tag{7.10}\]</span></span></p>
+<p>which prove that the three projection operators do not commute with each other.</p>
+<div id="exm-spinex1" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7.1</strong></span> <em>Proof of Commutator Between Spin Projection Operators.</em></p>
+<p>The equations in <a href="#eq-spop3" class="quarto-xref">eq.&nbsp;<span>7.10</span></a> can be proved by writing the full eigenvalue equation and solving it using the definition of commutator, <a href="06_Operators.html#eq-bp5" class="quarto-xref">eq.&nbsp;<span>6.7</span></a>, in conjunction with Pauli’s relations, <a href="#eq-spop2" class="quarto-xref">eq.&nbsp;<span>7.9</span></a>. For example, for the first pair:</p>
+<p><span id="eq-spop4"><span class="math display">\[
+\begin{aligned}
+\left[\hat{S}_x, \hat{S}_y\right] \alpha &amp;= \hat{S}_x\hat{S}_y\alpha-\hat{S}_y\hat{S}_x\alpha \\
+&amp;= \hat{S}_x \left(\frac{\hbar}{2}i \beta \right)-\hat{S}_y \left(\frac{\hbar}{2} \beta \right) \\
+&amp;= \frac{\hbar}{2}i \left(\frac{\hbar}{2} \alpha \right)- \frac{\hbar}{2} \left(-\frac{\hbar}{2}i \alpha \right) \\
+&amp;= \left(\frac{\hbar^2}{4}+\frac{\hbar^2}{4}\right)i\alpha \\
+&amp;= \frac{\hbar^2}{2}i \alpha \\
+&amp;= i\hbar\hat{S}_z  \alpha
+\end{aligned}
+\tag{7.11}\]</span></span></p>
+</div>
+</section>
+<section id="operators-commuting-with-the-hamiltonian" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="operators-commuting-with-the-hamiltonian"><span class="header-section-number">7.4</span> Operators Commuting with the Hamiltonian</h2>
+<p>To conclude this chapter, it is helpful to step back and see how symmetries and commuting operators give rise to the quantum numbers used to label states, and how spin becomes essential, especially in real atoms. In every system, the operators that commute with the Hamiltonian tell us which physical quantities are conserved and which labels (quantum numbers) are “good.”</p>
+<section id="free-particle-translational-symmetry-and-momentum" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="free-particle-translational-symmetry-and-momentum"><span class="header-section-number">7.4.1</span> Free particle: translational symmetry and momentum</h3>
+<p>For a one‑dimensional free particle, the Hamiltonian is</p>
+<p><span id="eq-spop5"><span class="math display">\[
+\hat{H} = \frac{\hat{p}^2}{2m}.
+\tag{7.12}\]</span></span></p>
+<p>Space is translationally invariant: shifting the particle by any distance does not change the physics. Mathematically, this symmetry implies that the Hamiltonian commutes with the momentum operator:</p>
+<p><span id="eq-spop6"><span class="math display">\[
+[\hat{H}, \hat{p}] = 0.
+\tag{7.13}\]</span></span></p>
+<p>Because of this commutation, and the theorem that we discussed in <a href="06_Operators.html#sec-CommutingOperators" class="quarto-xref"><span>section 6.3.3</span></a>, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector <span class="math inline">\(k\)</span>) is a good quantum number that labels the states.</p>
+</section>
+<section id="particle-in-a-box-broken-translation-introduction-to-parity" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="particle-in-a-box-broken-translation-introduction-to-parity"><span class="header-section-number">7.4.2</span> Particle in a box: broken translation, introduction to parity</h3>
+<p>In a particle‑in‑a‑box of length <span class="math inline">\(a\)</span>, with infinite potential walls at <span class="math inline">\(x = 0\)</span> and <span class="math inline">\(x = a\)</span>, the Hamiltonian inside the box still looks like a free particle, but the boundary conditions</p>
+<p><span id="eq-spop7"><span class="math display">\[
+\psi(0) = 0, \qquad \psi(a) = 0,
+\tag{7.14}\]</span></span></p>
+<p>break translational symmetry: shifting the entire system by any finite amount would move the walls and change the problem. As a result, the momentum operator no longer commutes with the Hamiltonian, and</p>
+<p><span id="eq-spop8"><span class="math display">\[
+[\hat{H}, \hat{p}] \neq 0.
+\tag{7.15}\]</span></span></p>
+<p>Momentum is <strong>not</strong> conserved and is not a good quantum number.</p>
+<p>However, there is still an important discrete symmetry if we choose our coordinates carefully. Consider a symmetric box extending from <span class="math inline">\(-a/2\)</span> to <span class="math inline">\(+a/2\)</span>. In that case, the system is invariant under <strong>inversion</strong> of the coordinate, <span class="math inline">\(x \longrightarrow -x.\)</span></p>
+<p>This operation is described by the <strong>parity operator</strong> <span class="math inline">\(\hat{\Pi}\)</span>, which acts on a wavefunction as</p>
+<p><span id="eq-spop10"><span class="math display">\[
+\hat{\Pi}\psi(x) = \psi(-x).
+\tag{7.16}\]</span></span></p>
+<p>If the potential is symmetric, <span class="math inline">\(V(x) = V(-x)\)</span>, then the Hamiltonian is unchanged by this inversion and commutes with the parity operator:</p>
+<p><span id="eq-spop11"><span class="math display">\[
+[\hat{H}, \hat{\Pi}] = 0.
+\tag{7.17}\]</span></span></p>
+<p>This means that energy eigenfunctions can be chosen to be eigenfunctions of parity as well. Those with</p>
+<p><span id="eq-spop12"><span class="math display">\[
+\hat{\Pi}\psi(x) = +\psi(x)
+\tag{7.18}\]</span></span></p>
+<p>are called <strong>even</strong> functions (symmetric, <span class="math inline">\(\psi(-x) = \psi(x)\)</span>), and those with</p>
+<p><span id="eq-spop13"><span class="math display">\[
+\hat{\Pi}\psi(x) = -\psi(x)
+\tag{7.19}\]</span></span></p>
+<p>are <strong>odd</strong> functions (antisymmetric, <span class="math inline">\(\psi(-x) = -\psi(x)\)</span>). Thus, even though continuous translational symmetry (and conserved momentum) is lost, a discrete symmetry remains, and the corresponding quantity—parity—serves as a useful label for the states. This is a simple example of how a commuting operator encodes a symmetry and yields a quantum “label,” in this case even/odd parity. The parity of the first four states of the particle in a box is shown in <a href="#fig-Fig4c7" class="quarto-xref">figure&nbsp;<span>7.4</span></a>: the states alternate between even and odd as the energy increases.</p>
+<div id="fig-Fig4c7" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first four particle-in-a-box wave functions in a box centered at zero, with a vertical dashed line at the center. The states for n equals 1 and 3 are symmetric about the center (even) and those for n equals 2 and 4 are antisymmetric (odd).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Fig4c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/PIB_parity.png" class="img-fluid figure-img" style="width:65.0%" alt="The first four particle-in-a-box wave functions in a box centered at zero, with a vertical dashed line at the center. The states for n equals 1 and 3 are symmetric about the center (even) and those for n equals 2 and 4 are antisymmetric (odd).">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Fig4c7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7.4: The first four eigenfunctions of a particle in a box placed symmetrically between <span class="math inline">\(-a/2\)</span> and <span class="math inline">\(+a/2\)</span>. Even states (red labels) are unchanged by the inversion <span class="math inline">\(x\rightarrow -x\)</span> (reflection through the purple dashed line), and odd states (blue labels) change sign.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="particle-on-a-ring-and-on-a-sphere-rotational-symmetry" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="particle-on-a-ring-and-on-a-sphere-rotational-symmetry"><span class="header-section-number">7.4.3</span> Particle on a ring and on a sphere: rotational symmetry</h3>
+<p>Rotational symmetry plays a similar but richer role. For a particle on a ring (motion confined to a circle of radius <span class="math inline">\(r\)</span>), the system is invariant under rotations in the plane. The relevant operator is the <span class="math inline">\(z\)</span>‑component of orbital angular momentum, <span class="math inline">\(\hat{L}_z\)</span>. Rotational invariance around the <span class="math inline">\(z\)</span>‑axis implies</p>
+<p><span id="eq-spop14"><span class="math display">\[
+[\hat{H}, \hat{L}_z] = 0,
+\tag{7.20}\]</span></span></p>
+<p>so <span class="math inline">\(\hat{L}_z\)</span> and <span class="math inline">\(\hat{H}\)</span> share a set of eigenfunctions. These eigenfunctions have the form <span class="math inline">\(\mathrm{e}^{\mathrm{i} m_{\ell} \phi}\)</span>, where <span class="math inline">\(\phi\)</span> is the angular coordinate, and <span class="math inline">\(m_{\ell}\)</span> is an integer. The integer <span class="math inline">\(m_\ell = 0, \pm 1, \pm 2, \dots\)</span> is a <strong>good quantum number</strong>: it labels both the allowed angular momenta and the energy levels, which are proportional to <span class="math inline">\(m_\ell^2\)</span>.</p>
+<p>For a particle on a sphere, there is full three‑dimensional rotational symmetry. The Hamiltonian commutes with both the total orbital angular momentum operator <span class="math inline">\(\hat{L}^2\)</span> and with <span class="math inline">\(\hat{L}_z\)</span>:</p>
+<p><span id="eq-spop15"><span class="math display">\[
+[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
+\tag{7.21}\]</span></span></p>
+<p>The simultaneous eigenfunctions of <span class="math inline">\(\hat{L}^2\)</span> and <span class="math inline">\(\hat{L}_z\)</span> are the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. Their quantum numbers arise directly from these commuting operators:</p>
+<ul>
+<li><span class="math inline">\(\ell = 0,1,2,\dots\quad\)</span> from <span class="math inline">\(\quad \hat{L}^2Y_\ell^{m_\ell} = \hbar^2 \ell(\ell+1)Y_\ell^{m_\ell}\)</span>,<br>
+</li>
+<li><span class="math inline">\(m_\ell = -\ell, -\ell+1, \dots, +\ell\quad\)</span> from <span class="math inline">\(\quad\hat{L}_zY_\ell^{m_\ell} = \hbar m_\ell Y_\ell^{m_\ell}\)</span>.</li>
+</ul>
+<p>For each <span class="math inline">\(\ell\)</span>, there are <span class="math inline">\(2\ell+1\)</span> states with different <span class="math inline">\(m_\ell\)</span> but the same energy, a degeneracy that is a direct consequence of rotational symmetry.</p>
+</section>
+<section id="hydrogen-atom-coulomb-symmetry" class="level3" data-number="7.4.4">
+<h3 data-number="7.4.4" class="anchored" data-anchor-id="hydrogen-atom-coulomb-symmetry"><span class="header-section-number">7.4.4</span> Hydrogen atom: Coulomb symmetry</h3>
+<p>The hydrogen atom is a central example where these ideas connect directly to the familiar quantum numbers <span class="math inline">\(n\)</span>, <span class="math inline">\(\ell\)</span>, and <span class="math inline">\(m_\ell\)</span>. In the nonrelativistic approximation, the Hamiltonian depends only on the distance <span class="math inline">\(r\)</span> from the nucleus. This spherical symmetry implies that</p>
+<p><span id="eq-spop16"><span class="math display">\[
+[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
+\tag{7.22}\]</span></span></p>
+<p>Solving the Schrödinger equation in spherical coordinates leads to energy eigenfunctions that are products of a radial function (depending on <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span>) and an angular function, the spherical harmonic <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The commuting set <span class="math inline">\(\hat{H}\)</span>, <span class="math inline">\(\hat{L}^2\)</span>, and <span class="math inline">\(\hat{L}_z\)</span> gives rise to the labels <span class="math inline">\((n, \ell, m_\ell)\)</span>, and the large degeneracy of hydrogenic levels reflects both rotational symmetry and a deeper Coulomb symmetry.</p>
+</section>
+<section id="spin-and-manyelectron-atoms-why-spin-matters" class="level3" data-number="7.4.5">
+<h3 data-number="7.4.5" class="anchored" data-anchor-id="spin-and-manyelectron-atoms-why-spin-matters"><span class="header-section-number">7.4.5</span> Spin and many‑electron atoms: why spin matters</h3>
+<p>So far, all these operators act on the <strong>spatial</strong> part of the electron’s wave function. However, as we introduced in this chapter, the electron also has an intrinsic angular momentum, <strong>spin</strong>, described by spin operators <span class="math inline">\(\hat{S}^2\)</span> and <span class="math inline">\(\hat{S}_z\)</span>. For the simple nonrelativistic hydrogen Hamiltonian (which does not explicitly include spin), these operators commute with <span class="math inline">\(\hat{H}\)</span>:</p>
+<p><span id="eq-spop17"><span class="math display">\[
+[\hat{H}, \hat{S}^2] = 0, \qquad [\hat{H}, \hat{S}_z] = 0.
+\tag{7.23}\]</span></span></p>
+<p>This means that each spatial state labeled by <span class="math inline">\((n, \ell, m_\ell)\)</span> can be combined with two spin states, with spin quantum numbers <span class="math inline">\(s = 1/2\)</span> and <span class="math inline">\(m_s = \pm 1/2\)</span>, doubling the degeneracy. In this simplest picture, spin does not change the energy levels, but it enlarges the set of possible states and will matter whenever magnetic fields or spin‑dependent interactions are present.</p>
+<p>In many‑electron atoms, spin is even more central. The Coulomb Hamiltonian still respects overall rotational symmetry, so one can define a <strong>total orbital angular momentum</strong> <span class="math inline">\(\mathbf{L}\)</span> by adding the orbital angular momenta of all electrons, and a <strong>total spin</strong> <span class="math inline">\(\mathbf{S}\)</span> by adding all individual spins. In a good approximation (LS‑coupling regime), the Hamiltonian commutes with the corresponding operators <span class="math inline">\(\hat{L}^2\)</span> and <span class="math inline">\(\hat{S}^2\)</span>, and the quantum numbers <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span> become important labels for atomic states. At the same time, the Pauli exclusion principle demands that the total electronic wave function be antisymmetric under exchange of any two electrons, tightly linking the allowed combinations of spatial quantum numbers (generalizing <span class="math inline">\(n, \ell, m_\ell\)</span>) with the allowed spin states. In this way, the operators that commute with the Hamiltonian—momentum, parity, orbital angular momentum, and spin—not only reveal the underlying symmetries of each model system, but, in real atoms, highlight how indispensable spin is in determining the structure, degeneracies, and selection rules of atomic spectra.</p>
+</section>
+</section>
+<section id="sec-rev7" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</h2>
+<section id="sec-quest7" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</h3>
+<p><strong>1. The Stern–Gerlach experiment with silver atoms showed that the beam splits into what?</strong></p>
+<ol type="a">
+<li>a continuous smear of intensities<br>
+</li>
+<li>three discrete spots (<span class="math inline">\(m_s = -1, 0, +1\)</span>)<br>
+</li>
+<li>a single undivided spot<br>
+</li>
+<li>two and only two discrete spots on the detector<br>
+</li>
+<li>four discrete spots</li>
+</ol>
+<hr>
+<p><strong>2. What key quantum property is demonstrated by the observed splitting in the Stern–Gerlach experiment?</strong></p>
+<ol type="a">
+<li>continuous distribution of angular momentum orientations<br>
+</li>
+<li>quantization of spin angular momentum along the field direction<br>
+</li>
+<li>conservation of classical orbits<br>
+</li>
+<li>absence of magnetic moments in atoms<br>
+</li>
+<li>violation of energy conservation</li>
+</ol>
+<hr>
+<p><strong>3. For an electron (a spin‑½ particle), what are the possible measured values of the spin component <span class="math inline">\(s_z\)</span>?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(0, \pm \hbar\)</span><br>
+</li>
+<li><span class="math inline">\(\pm \hbar\)</span><br>
+</li>
+<li>Only <span class="math inline">\(+\hbar/2\)</span><br>
+</li>
+<li>Any real multiple of <span class="math inline">\(\hbar\)</span><br>
+</li>
+<li><span class="math inline">\(+\hbar/2\)</span> or <span class="math inline">\(-\hbar/2\)</span></li>
+</ol>
+<hr>
+<p><strong>4. In a Stern–Gerlach experiment measuring <span class="math inline">\(s_z\)</span>, a general spin state can be written as:</strong></p>
+<ol type="a">
+<li>A classical vector of length <span class="math inline">\(\hbar/2\)</span><br>
+</li>
+<li>A single eigenstate of <span class="math inline">\(\hat{s}_z\)</span> only<br>
+</li>
+<li><span class="math inline">\(c_1\,\alpha + c_2\,\beta\)</span> with complex <span class="math inline">\(c_1, c_2\)</span><br>
+</li>
+<li>A mixture of infinitely many <span class="math inline">\(s_z\)</span> eigenvalues<br>
+</li>
+<li>A real linear combination of position eigenstates</li>
+</ol>
+<hr>
+<p><strong>5. After a beam passes through a Stern–Gerlach apparatus aligned along <span class="math inline">\(z\)</span> and only the “spin up” channel is allowed through, what is the spin state of the particles that pass through?</strong></p>
+<ol type="a">
+<li>An equal superposition of up and down<br>
+</li>
+<li>Eigenstate <span class="math inline">\(\beta\)</span> (spin down) of <span class="math inline">\(\hat{s}_z\)</span><br>
+</li>
+<li>Eigenstate <span class="math inline">\(\alpha\)</span> (spin up) of <span class="math inline">\(\hat{s}_z\)</span><br>
+</li>
+<li>A classical mixture of all directions<br>
+</li>
+<li>An eigenstate of <span class="math inline">\(\hat{s}_x\)</span></li>
+</ol>
+<hr>
+<p><strong>6. If a second Stern–Gerlach apparatus is placed after the first and is also aligned along the same <span class="math inline">\(z\)</span> direction, what happens to a beam that is already in the spin-up state <span class="math inline">\(\alpha\)</span>?</strong></p>
+<ol type="a">
+<li>It is entirely transmitted as <span class="math inline">\(\alpha\)</span> with no further splitting<br>
+</li>
+<li>It becomes completely unpolarized<br>
+</li>
+<li>It splits again into up and down beams<br>
+</li>
+<li>It is entirely absorbed<br>
+</li>
+<li>It flips to <span class="math inline">\(\beta\)</span></li>
+</ol>
+<hr>
+<p><strong>7. In a sequential Stern–Gerlach experiment, a <span class="math inline">\(z\)</span>-up beam is sent into a second apparatus aligned along <span class="math inline">\(x\)</span>. What is observed at the second apparatus?</strong></p>
+<ol type="a">
+<li>Only one output beam (“spin left”)<br>
+</li>
+<li>Two beams with equal intensities: “spin left” and “spin right” along <span class="math inline">\(x\)</span><br>
+</li>
+<li>Only one output beam (“spin right”)<br>
+</li>
+<li>A continuous spread in deflection angles<br>
+</li>
+<li>No beam at all</li>
+</ol>
+<hr>
+<p><strong>8. Mathematically, the non‑classical nature of sequential Stern–Gerlach experiments is expressed by which property of spin operators such as <span class="math inline">\(\hat{s}_z\)</span> and <span class="math inline">\(\hat{s}_x\)</span>?</strong></p>
+<ol type="a">
+<li>They commute: <span class="math inline">\([\hat{s}_z,\hat{s}_x] = 0\)</span><br>
+</li>
+<li>They have identical eigenvalues<br>
+</li>
+<li>They are proportional to the identity<br>
+</li>
+<li>They do not commute: <span class="math inline">\([\hat{s}_z,\hat{s}_x] \neq 0\)</span><br>
+</li>
+<li>They vanish when squared</li>
+</ol>
+<hr>
+<p><strong>9. In three dimensions, the spin components are generally associated with which three operators?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\hat{s}_r, \hat{s}_y, \hat{s}_z\)</span><br>
+</li>
+<li><span class="math inline">\(\hat{s}_x, \hat{s}_y, \hat{s}_z\)</span><br>
+</li>
+<li><span class="math inline">\(\hat{s}_+, \hat{s}_-, \hat{s}_z\)</span><br>
+</li>
+<li><span class="math inline">\(\hat{s}_1, \hat{s}_2, \hat{s}_3\)</span> with all commuting<br>
+</li>
+<li><span class="math inline">\(\hat{s}_x, \hat{s}_z, \hat{s}_t\)</span></li>
+</ol>
+<hr>
+<p><strong>10. What key lesson about spin is emphasized by the Stern–Gerlach experiments?</strong></p>
+<ol type="a">
+<li>Spin is a small classical correction to orbital motion<br>
+</li>
+<li>Spin has a direct classical analogue in rotating spheres<br>
+</li>
+<li>Spin is a purely quantum property with no classical analogue<br>
+</li>
+<li>Spin is irrelevant for chemistry<br>
+</li>
+<li>Spin is always conserved and cannot change under measurement</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.d, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.d, 9.b, 10.c</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./06_Operators.html" class="pagination-link" aria-label="Operators and Mathematical Background">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./08_Weirdness.html" class="pagination-link" aria-label="Quantum Weirdness">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/07_Spin.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

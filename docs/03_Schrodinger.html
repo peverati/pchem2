@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>3&nbsp; The Schrödinger Equation – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04_Models.html" rel="next">
+<link href="./02_Motivation.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03_Schrodinger.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#the-time-independent-schrödinger-equation" id="toc-the-time-independent-schrödinger-equation" class="nav-link active" data-scroll-target="#the-time-independent-schrödinger-equation"><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</a></li>
+  <li><a href="#sec-BornInterpretation" id="toc-sec-BornInterpretation" class="nav-link" data-scroll-target="#sec-BornInterpretation"><span class="header-section-number">3.2</span> The Meaning of the Wave Function</a></li>
+  <li><a href="#the-time-dependent-schrödinger-equation" id="toc-the-time-dependent-schrödinger-equation" class="nav-link" data-scroll-target="#the-time-dependent-schrödinger-equation"><span class="header-section-number">3.3</span> The Time-Dependent Schrödinger Equation</a></li>
+  <li><a href="#solution-for-the-free-particle" id="toc-solution-for-the-free-particle" class="nav-link" data-scroll-target="#solution-for-the-free-particle"><span class="header-section-number">3.4</span> Solution for the Free Particle</a>
+  <ul class="collapse">
+  <li><a href="#what-does-the-free-particle-solution-look-like" id="toc-what-does-the-free-particle-solution-look-like" class="nav-link" data-scroll-target="#what-does-the-free-particle-solution-look-like"><span class="header-section-number">3.4.1</span> What does the free-particle solution look like?</a></li>
+  <li><a href="#sec-WavePackets" id="toc-sec-WavePackets" class="nav-link" data-scroll-target="#sec-WavePackets"><span class="header-section-number">3.4.2</span> Wave packets</a></li>
+  </ul></li>
+  <li><a href="#sec-rev3" id="toc-sec-rev3" class="nav-link" data-scroll-target="#sec-rev3"><span class="header-section-number">3.5</span> Chapter Review</a>
+  <ul class="collapse">
+  <li><a href="#sec-quest3" id="toc-sec-quest3" class="nav-link" data-scroll-target="#sec-quest3"><span class="header-section-number">3.5.1</span> Study Questions</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/03_Schrodinger.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="sec-Schrodinger" class="quarto-section-identifier"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>As we saw in the previous chapter, quantum mechanics was born in two different forms: Heisenberg’s matrix mechanics and Schrödinger’s wave mechanics. The two are mathematically equivalent, and we are free to start from either one. In this textbook, we start from Schrödinger’s version, because it is written in the language of waves and differential equations, which is closer to the physics and mathematics that chemistry students already know. Schrödinger’s main idea was simple: if matter behaves as a wave, as de Broglie had proposed, there should be a wave equation that describes it.</p>
+<section id="the-time-independent-schrödinger-equation" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="the-time-independent-schrödinger-equation"><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</h2>
+<p>The Schrödinger equation cannot be derived from classical physics, since it contains new physics that classical physics does not have. We can, however, make it <em>plausible</em>, by combining the mathematical description of a classical wave with de Broglie’s relations. We start from the simplest wave that travels through space, the complex plane wave moving along <span class="math inline">\(x\)</span> that we introduced in <a href="01_Classical.html#sec-ClassicalWaves" class="quarto-xref"><span>section 1.3</span></a>:</p>
+<p><span id="eq-sch1"><span class="math display">\[
+\psi(x,t)=\exp[i(kx-\omega t)],
+\tag{3.1}\]</span></span></p>
+<p>where <span class="math inline">\(x\)</span> is the position, <span class="math inline">\(t\)</span> is time, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span> is the wave vector, and <span class="math inline">\(\omega=2\pi\nu\)</span> is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of <a href="#eq-sch1" class="quarto-xref">eq.&nbsp;<span>3.1</span></a> with respect to the location, which are:</p>
+<p><span id="eq-sch2"><span class="math display">\[
+\begin{aligned}
+\frac{\partial \psi}{\partial x} &amp;=ik\exp[i(kx-\omega t)] = ik\psi, \\
+\frac{\partial^2 \psi}{\partial x^2} &amp;=i^2k^2\exp[i(kx-\omega t)] = -k^2\psi,
+\end{aligned}
+\tag{3.2}\]</span></span></p>
+<p>where we have used the fact that <span class="math inline">\(i^2=-1\)</span>.</p>
+<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
+<p><span id="eq-sch3"><span class="math display">\[
+\frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
+\tag{3.3}\]</span></span></p>
+<p>which can be rearranged to:</p>
+<p><span id="eq-sch4"><span class="math display">\[
+p^2 \psi = -\hbar^2 \frac{\partial^2 \psi}{\partial x^2}.
+\tag{3.4}\]</span></span></p>
+<p>The total energy associated with a wave moving in space is simply the sum of its kinetic and potential energies:</p>
+<p><span id="eq-sch5"><span class="math display">\[
+E = \frac {p^{2}}{2m} + V(x),
+\tag{3.5}\]</span></span></p>
+<p>from which we can obtain:</p>
+<p><span id="eq-sch6"><span class="math display">\[
+p^2 = 2m[E - V(x)],
+\tag{3.6}\]</span></span></p>
+<p>which we can then replace into <a href="#eq-sch4" class="quarto-xref">eq.&nbsp;<span>3.4</span></a> to obtain:</p>
+<p><span id="eq-sch7"><span class="math display">\[
+2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
+\tag{3.7}\]</span></span></p>
+<p>which can then be rearranged to the famous <strong>time-independent Schrödinger equation (TISEq)</strong>:</p>
+<p><span id="eq-TISEq"><span class="math display">\[
+- \frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x) \psi = E\psi,
+\tag{3.8}\]</span></span></p>
+<p>Remember that we did not <em>prove</em> this equation: we only showed that it is consistent with a plane wave and with de Broglie’s relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass <span class="math inline">\(m\)</span>. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace <span class="math inline">\(m\)</span> with the <em>reduced mass</em> of the two particles, <span class="math inline">\(\mu = \frac{m_1 m_2}{m_1+m_2}\)</span>.</p>
+</section>
+<section id="sec-BornInterpretation" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-BornInterpretation"><span class="header-section-number">3.2</span> The Meaning of the Wave Function</h2>
+<p>We now have an equation for the wave function, but we have not yet said what the wave function <em>is</em>. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as <strong>Born’s interpretation</strong>: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along <span class="math inline">\(x\)</span>:</p>
+<p><span id="eq-born1"><span class="math display">\[
+\text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
+\tag{3.9}\]</span></span></p>
+<p>where <span class="math inline">\(|\psi(x)|^2=\psi^*(x)\psi(x)\)</span> is called the <strong>probability density</strong>. Notice that, even if <span class="math inline">\(\psi\)</span> is complex, <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative, as a probability must be. This is similar to what happens for classical waves (<a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a <em>probability amplitude</em>.</p>
+<p>Since the particle must be found somewhere, the probabilities of finding it at all possible positions must add up to one:</p>
+<p><span id="eq-born2"><span class="math display">\[
+\int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
+\tag{3.10}\]</span></span></p>
+<p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>.</p>
+<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</p>
+</section>
+<section id="the-time-dependent-schrödinger-equation" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="the-time-dependent-schrödinger-equation"><span class="header-section-number">3.3</span> The Time-Dependent Schrödinger Equation</h2>
+<p>The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:</p>
+<p><span id="eq-TDSEq"><span class="math display">\[
+i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
+\tag{3.11}\]</span></span></p>
+<p>where <span class="math inline">\(V(x)\)</span> is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>. Replacing it into <a href="#eq-TDSEq" class="quarto-xref">eq.&nbsp;<span>3.11</span></a>, we obtain:</p>
+<p><span id="eq-TDSEq2"><span class="math display">\[
+\psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
+\tag{3.12}\]</span></span></p>
+<p>which can be rearranged to:</p>
+<p><span id="eq-TDSEq3"><span class="math display">\[
+\frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
+\tag{3.13}\]</span></span></p>
+<p>The left-hand side of <a href="#eq-TDSEq3" class="quarto-xref">eq.&nbsp;<span>3.13</span></a> depends only on <span class="math inline">\(t\)</span>, and the right-hand side only on <span class="math inline">\(x\)</span>. The only way for the two to be equal for every value of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant <span class="math inline">\(E\)</span>. We have now split one partial differential equation into two ordinary differential equations:</p>
+<p><span id="eq-TDSEq4"><span class="math display">\[
+\frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
+\tag{3.14}\]</span></span></p>
+<p>and: <span id="eq-TDSEq5"><span class="math display">\[
+-\frac{\hbar^2}{2m} \frac{\partial^2\psi(x)}{\partial x^2} + V(x) \psi(x) =
+E \psi(x).
+\tag{3.15}\]</span></span></p>
+<p>The second equation is the TISEq that we obtained in the previous section. The first one is easy to solve, giving:</p>
+<p><span id="eq-TDSEq6"><span class="math display">\[
+f(t) = e^{-iEt / \hbar}
+\tag{3.16}\]</span></span></p>
+<p>This function oscillates in time, but its magnitude is always equal to one. Therefore, if the wave function is:</p>
+<p><span id="eq-TDSEq6b"><span class="math display">\[
+\psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
+\tag{3.17}\]</span></span></p>
+<p>then <span class="math inline">\(\psi(x, t)\)</span> differs from <span class="math inline">\(\psi(x)\)</span> only by a phase factor that rotates in the complex plane without changing its size. As a consequence, the quantity <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> does not depend on time:</p>
+<p><span id="eq-TDSEq7"><span class="math display">\[
+\vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
+\psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
+\tag{3.18}\]</span></span></p>
+<p>Wave functions of the form of <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a> are called <strong>stationary states</strong>. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><span class="math display">\[
+\psi(\mathbf{r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i(\mathbf{r}).
+\]</span></p>
+</section>
+<section id="solution-for-the-free-particle" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="solution-for-the-free-particle"><span class="header-section-number">3.4</span> Solution for the Free Particle</h2>
+<p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
+<p><span id="eq-FP1"><span class="math display">\[
+- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
+\tag{3.19}\]</span></span></p>
+<p>This equation can be rearranged to:</p>
+<p><span id="eq-FP2"><span class="math display">\[
+\frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
+\tag{3.20}\]</span></span></p>
+<p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span>, multiplied by the function itself. The most general solution to this problem is the function:</p>
+<p><span id="eq-FP3"><span class="math display">\[
+\psi(x) = A \exp(ikx)+B \exp(-ikx),
+\tag{3.21}\]</span></span></p>
+<p>with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> arbitrary (complex) constants. The first and second derivatives of this function are:</p>
+<p><span id="eq-FP4"><span class="math display">\[
+\begin{aligned}
+\frac{d \psi(x)}{dx} &amp;= ik A \exp(ikx) - ikB\exp(-ikx) \\
+\frac{d^2 \psi(x)}{dx^2} &amp;= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
+\end{aligned}
+\tag{3.22}\]</span></span></p>
+<p>Comparing the second derivative in <a href="#eq-FP4" class="quarto-xref">eq.&nbsp;<span>3.22</span></a> with <a href="#eq-FP2" class="quarto-xref">eq.&nbsp;<span>3.20</span></a>, we immediately see that if we set:</p>
+<p><span id="eq-FP5"><span class="math display">\[
+k^2 = \frac{2mE}{\hbar^2},
+\tag{3.23}\]</span></span></p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p><span id="eq-FP6"><span class="math display">\[
+E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
+\tag{3.24}\]</span></span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.21</span></a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of <a href="#eq-FP6" class="quarto-xref">eq.&nbsp;<span>3.24</span></a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+<section id="what-does-the-free-particle-solution-look-like" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="what-does-the-free-particle-solution-look-like"><span class="header-section-number">3.4.1</span> What does the free-particle solution look like?</h3>
+<p>Let’s take a closer look at one of the solutions in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.21</span></a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
+<p><span id="eq-FP7"><span class="math display">\[
+\psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
+\tag{3.25}\]</span></span></p>
+<p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in <a href="#fig-fig1c3" class="quarto-xref">figure&nbsp;<span>3.1</span></a>.</p>
+<div id="fig-fig1c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig1c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/FP_planewave.png" class="img-fluid figure-img" style="width:85.0%" alt="Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig1c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Top: a free-particle plane wave, <span class="math inline">\(\psi(x)=e^{ikx}\)</span>, with its real part, <span class="math inline">\(\cos(kx)\)</span>, in the vertical plane (blue) and its imaginary part, <span class="math inline">\(\sin(kx)\)</span>, in a horizontal plane drawn in perspective (red). Bottom: its probability density, which is the same everywhere.
+</figcaption>
+</figure>
+</div>
+<p>This result is surprising. A particle described by a plane wave has a perfectly well-defined momentum, <span class="math inline">\(p=\hbar k\)</span>, but its probability density is the same everywhere: the particle is equally likely to be found at any point in the universe. The plane wave also extends forever in both directions, so the total probability, <span class="math inline">\(\int|\psi|^2dx\)</span>, is infinite, and the wave function cannot be normalized. A real particle, such as an electron shot from an electron gun, is certainly found somewhere in a limited region of space. Plane waves, therefore, are useful mathematical solutions, but they do not describe real particles by themselves.</p>
+</section>
+<section id="sec-WavePackets" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-WavePackets"><span class="header-section-number">3.4.2</span> Wave packets</h3>
+<p>The way out of this problem comes from the principle of superposition that we discussed for classical waves in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>. Since the Schrödinger equation is linear, any sum of plane waves with different wave vectors is also a solution. When we add waves with slightly different wavelengths, they interfere constructively in some regions and destructively in others. This is illustrated in <a href="#fig-fig2c3" class="quarto-xref">figure&nbsp;<span>3.2</span></a>.</p>
+<div id="fig-fig2c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three panels. Top: the sum of two plane waves shows regularly repeating beats. Middle: the sum of five waves shows sharper bunches that still repeat. Bottom: the sum of 41 waves shows a single localized bunch of oscillations, with the wave canceling to zero everywhere else.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig2c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/FP_buildpacket.png" class="img-fluid figure-img" style="width:85.0%" alt="Three panels. Top: the sum of two plane waves shows regularly repeating beats. Middle: the sum of five waves shows sharper bunches that still repeat. Bottom: the sum of 41 waves shows a single localized bunch of oscillations, with the wave canceling to zero everywhere else.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.2: Superposition of plane waves with wave vectors close to <span class="math inline">\(k_0\)</span>. Two waves produce a periodic pattern of beats; five waves produce sharper but still repeating bunches; many waves with a smooth distribution of wave vectors produce a single, localized wave packet. The thin line is the real part of the sum, and the thick line is its envelope.
+</figcaption>
+</figure>
+</div>
+<p>Two waves produce a regular pattern of <em>beats</em>, the same effect that musicians use to tune two instruments to the same note. As we add more waves, with wave vectors spread over a range around a central value <span class="math inline">\(k_0\)</span>, the regions of constructive interference get narrower and farther apart. With a continuous distribution of wave vectors, only one region of constructive interference survives, and the waves cancel each other everywhere else. The result is a <strong>wave packet</strong>: a wave that oscillates with wavelength close to <span class="math inline">\(2\pi/k_0\)</span> inside a limited region of space, and is essentially zero outside of it. Mathematically, a wave packet is written as a continuous sum (an integral) of plane waves, each with its own amplitude, <span class="math inline">\(\phi(k)\)</span>:</p>
+<p><span id="eq-FP8"><span class="math display">\[
+\Psi(x,t) = \int \phi(k)\, e^{i\left(kx - \omega(k) t\right)} dk, \qquad \omega(k) = \frac{E}{\hbar} = \frac{\hbar k^2}{2m},
+\tag{3.26}\]</span></span></p>
+<p>where each plane wave evolves in time with its own frequency, as we saw in <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
+<p>A few important considerations can be made by analyzing wave packets:</p>
+<ol type="1">
+<li><strong>The price of localization</strong>: to build a packet that is localized in space, we need plane waves with a <em>range</em> of wave vectors, and therefore a range of momenta, <span class="math inline">\(p=\hbar k\)</span>. The more localized we want the particle to be, the wider the range of momenta that we need, as shown in <a href="#fig-fig3c3" class="quarto-xref">figure&nbsp;<span>3.3</span></a>. A plane wave is the extreme case of a perfectly defined momentum and a completely undefined position. A very narrow packet has a well-defined position, but a very uncertain momentum. For the packets in <a href="#fig-fig3c3" class="quarto-xref">figure&nbsp;<span>3.3</span></a>, the widths in position, <span class="math inline">\(\Delta x\)</span>, and in wave vector, <span class="math inline">\(\Delta k\)</span>, are related by <span class="math inline">\(\Delta x\,\Delta k = \frac{1}{2}\)</span>, or, using <span class="math inline">\(p=\hbar k\)</span>, <span class="math inline">\(\Delta x\,\Delta p = \frac{\hbar}{2}\)</span>. This is a first glimpse of the Heisenberg uncertainty principle, which we will discuss in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</li>
+</ol>
+<div id="fig-fig3c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two rows. Top: a narrow wave packet with few oscillations, paired with a broad distribution of wave vectors around k zero. Bottom: a wide wave packet with many oscillations, paired with a narrow distribution of wave vectors around k zero.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig3c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/FP_uncertainty.png" class="img-fluid figure-img" style="width:90.0%" alt="Two rows. Top: a narrow wave packet with few oscillations, paired with a broad distribution of wave vectors around k zero. Bottom: a wide wave packet with many oscillations, paired with a narrow distribution of wave vectors around k zero.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.3: A narrow (top) and a wide (bottom) wave packet in position space (left), together with the corresponding distributions of wave vectors, and therefore of momenta (right). The more localized the particle is in space, the broader its distribution of momenta.
+</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><strong>Motion</strong>: the wave packet moves, as shown in <a href="#fig-fig4c3" class="quarto-xref">figure&nbsp;<span>3.4</span></a>. Its center travels with velocity <span class="math inline">\(v=\frac{d\omega}{dk}=\frac{\hbar k_0}{m}=\frac{p_0}{m}\)</span>, which is exactly the velocity of a classical particle with momentum <span class="math inline">\(p_0\)</span>. (This velocity is called the <em>group velocity</em>. The individual crests inside the packet move at a different speed, but the packet as a whole, and with it the probability of finding the particle, moves at the classical speed.) This is how classical motion emerges from quantum mechanics: a well-localized wave packet follows the trajectory of a classical particle.</li>
+</ol>
+<div id="fig-fig4c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four bell-shaped probability curves at increasing times, each centered farther to the right at equal steps, showing the packet moving at constant speed. Each later curve is lower and wider than the previous one, showing the packet spreading.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fig4c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/FP_packet_motion.png" class="img-fluid figure-img" style="width:95.0%" alt="Four bell-shaped probability curves at increasing times, each centered farther to the right at equal steps, showing the packet moving at constant speed. Each later curve is lower and wider than the previous one, showing the packet spreading.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.4: Probability density of a free-particle wave packet at four different times (in units where <span class="math inline">\(\hbar=m=1\)</span>). The center of the packet (purple triangles) moves at the classical velocity <span class="math inline">\(p/m\)</span>, while the packet spreads out.
+</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li><strong>Spreading</strong>: as the packet moves, it also gets wider. Each plane wave in the packet travels at a slightly different speed (faster for larger <span class="math inline">\(k\)</span>, slower for smaller <span class="math inline">\(k\)</span>), so the packet gradually falls apart. For a packet with initial width <span class="math inline">\(\Delta x_0\)</span>, the width doubles in a time of about <span class="math inline">\(2m\Delta x_0^2/\hbar\)</span>. For an electron localized within <span class="math inline">\(1\;\text{Å}\)</span>, this time is about <span class="math inline">\(10^{-16}\;\text{s}\)</span>: free electrons do not stay localized for long. For a baseball localized within one micrometer, it is about <span class="math inline">\(10^{15}\)</span> years, far longer than the age of the universe. This is why macroscopic objects always appear to be in a definite position, while quantum particles do not.</li>
+</ol>
+<p>The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>.</p>
+</section>
+</section>
+<section id="sec-rev3" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-rev3"><span class="header-section-number">3.5</span> Chapter Review</h2>
+<section id="sec-quest3" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.5.1</span> Study Questions</h3>
+<p><strong>1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\psi(x,t) = \exp[-kx + \omega t]\)</span></li>
+<li><span class="math inline">\(\psi(x,t) = \cos(kx - \omega t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = \sin(kx + \omega t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = \exp[i(kx - \omega t)]\)</span></li>
+<li><span class="math inline">\(\psi(x,t) = kx + \omega t\)</span></li>
+</ol>
+<hr>
+<p><strong>2. For a two-body problem, the single-particle time independent Schrödinger equation can be used if the mass <span class="math inline">\(m\)</span> is replaced by what?</strong></p>
+<ol type="a">
+<li>The total mass <span class="math inline">\(m_1 + m_2\)</span></li>
+<li>The reduced mass <span class="math inline">\(\mu = \dfrac{m_1 m_2}{m_1 + m_2}\)</span></li>
+<li>The mass difference <span class="math inline">\(|m_1 - m_2|\)</span></li>
+<li>The geometric mean <span class="math inline">\(\sqrt{m_1 m_2}\)</span></li>
+<li>Twice the lighter mass</li>
+</ol>
+<hr>
+<p><strong>3. Which of the following equations is the correct time-dependent Schrödinger equation for one particle?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)</span><br>
+</li>
+<li><span class="math inline">\(\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)\)</span><br>
+</li>
+<li><span class="math inline">\(i \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)</span><br>
+</li>
+<li><span class="math inline">\(i\hbar \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = V(x)\psi(x,t)\)</span><br>
+</li>
+<li><span class="math inline">\(\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}\)</span></li>
+</ol>
+<hr>
+<p><strong>4. For which of the following wave functions can we separate the variables in the Schrödinger equation?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\psi(x,t) = \psi(x) + f(t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x) f(t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x)^2/f(t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = x f(t)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x,t) = \psi(x) f(t)^2\)</span></li>
+</ol>
+<hr>
+<p><strong>5. After separation of variables, the time-dependent Schrödinger equation yields two ordinary differential equations with a common constant. Which one?</strong></p>
+<ol type="a">
+<li>The mass <span class="math inline">\(m\)</span><br>
+</li>
+<li>The momentum <span class="math inline">\(p\)</span><br>
+</li>
+<li>The angular frequency <span class="math inline">\(\omega\)</span><br>
+</li>
+<li>The energy <span class="math inline">\(E\)</span><br>
+</li>
+<li>The wave number <span class="math inline">\(k\)</span></li>
+</ol>
+<hr>
+<p><strong>6. What is the time dependence of the probability density <span class="math inline">\(|\psi(x,t)|^2\)</span> of a stationary state?</strong></p>
+<ol type="a">
+<li>It increases linearly with time<br>
+</li>
+<li>It decreases exponentially with time<br>
+</li>
+<li>It oscillates sinusoidally with time<br>
+</li>
+<li>It is time independent<br>
+</li>
+<li>It diverges for large times</li>
+</ol>
+<hr>
+<p><strong>7. For the free particle in 1D, which of the following properties does the potential <span class="math inline">\(V(x)\)</span> have?</strong></p>
+<ol type="a">
+<li>It is a constant nonzero value</li>
+<li>It is infinite at the origin<br>
+</li>
+<li>It is zero everywhere<br>
+</li>
+<li>It is linear in <span class="math inline">\(x\)</span><br>
+</li>
+<li>It is harmonic in <span class="math inline">\(x^2\)</span></li>
+</ol>
+<hr>
+<p><strong>8. Which of the following is a suitable solution for the free-particle time independent Schrödinger equation?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(\psi(x) = A e^{\pm i k x}\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x) = A x\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x) = A e^{k x}\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x) = A \cosh(kx)\)</span><br>
+</li>
+<li><span class="math inline">\(\psi(x) = A \delta(x)\)</span></li>
+</ol>
+<hr>
+<p><strong>9. What is the energy eigenvalue for the free particle?</strong></p>
+<ol type="a">
+<li><span class="math inline">\(E = p^2\)</span><br>
+</li>
+<li><span class="math inline">\(E = \dfrac{1}{2} m p^2\)</span><br>
+</li>
+<li><span class="math inline">\(E = \hbar p\)</span><br>
+</li>
+<li><span class="math inline">\(E = \dfrac{\hbar^2}{2m p^2}\)</span><br>
+</li>
+<li><span class="math inline">\(E = \dfrac{p^2}{2m}\)</span></li>
+</ol>
+<hr>
+<p><strong>10. What is a key difference between the free particle and bound systems regarding energy eigenvalues?</strong></p>
+<ol type="a">
+<li>Free-particle energies are always zero<br>
+</li>
+<li>Free-particle energies are always negative<br>
+</li>
+<li>Free-particle energies are always degenerate<br>
+</li>
+<li>Free-particle energies form a continuous spectrum, while bound systems have discrete levels</li>
+<li>Free-particle energies do not depend on mass</li>
+</ol>
+<hr>
+<p><strong>11. Why can a single plane wave, <span class="math inline">\(\psi(x)=Ae^{ikx}\)</span>, not describe a real localized particle?</strong></p>
+<ol type="a">
+<li>because it does not solve the Schrödinger equation<br>
+</li>
+<li>because its momentum is undefined<br>
+</li>
+<li>because its probability density is the same everywhere, so it cannot be normalized<br>
+</li>
+<li>because it has a negative energy<br>
+</li>
+<li>because it is not complex</li>
+</ol>
+<hr>
+<p><strong>12. What happens to the spread of momenta in a wave packet if we make the packet narrower in space?</strong></p>
+<ol type="a">
+<li>it becomes narrower<br>
+</li>
+<li>it becomes broader<br>
+</li>
+<li>it does not change<br>
+</li>
+<li>it becomes zero<br>
+</li>
+<li>the packet stops moving</li>
+</ol>
+<hr>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d, 11.c, 12.b</p>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>A similar presentation can be found in Prof.&nbsp;C. David Sherrill’s <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">A Brief Review of Elementary Quantum Chemistry</a> notes.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./02_Motivation.html" class="pagination-link" aria-label="The Failure of Classical Physics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04_Models.html" class="pagination-link" aria-label="Analytically Solvable Models">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/03_Schrodinger.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
