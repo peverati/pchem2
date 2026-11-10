@@ -234,23 +234,18 @@ So far, the MO diagrams agree with the Lewis structures. The most interesting di
 
 The same procedure can be applied to all the homonuclear diatomic molecules of the second row, and the results are summarized in @tbl-tab1c11.
 
-```{r}
-#| label: tbl-tab1c11
-#| tbl-cap: "Bond orders predicted by MO theory for the homonuclear diatomic molecules of the second row, compared with approximate experimental bond lengths and bond energies."
-#| echo: false
-knitr::kable(
-  data.frame(
-    Molecule = c("Li$_2$", "Be$_2$", "B$_2$", "C$_2$", "N$_2$", "O$_2$", "F$_2$", "Ne$_2$"),
-    nval = c(2, 4, 6, 8, 10, 12, 14, 16),
-    bo = c(1, 0, 1, 2, 3, 2, 1, 0),
-    unp = c(0, 0, 2, 0, 0, 2, 0, 0),
-    r = c("267", "—", "159", "124", "110", "121", "142", "—"),
-    D = c("105", "~10", "289", "599", "942", "494", "154", "~0")
-  ),
-  col.names = c("Molecule", "Valence electrons", "Bond order", "Unpaired electrons", "Bond length (pm)", "Bond energy (kJ/mol)"),
-  align = "lccccc", escape = FALSE
-)
-```
+|Molecule | Valence electrons | Bond order | Unpaired electrons | Bond length (pm) | Bond energy (kJ/mol) |
+|:--------|:-----------------:|:----------:|:------------------:|:----------------:|:--------------------:|
+|Li$_2$   |         2         |     1      |         0          |       267        |         105          |
+|Be$_2$   |         4         |     0      |         0          |        —         |         ~10          |
+|B$_2$    |         6         |     1      |         2          |       159        |         289          |
+|C$_2$    |         8         |     2      |         0          |       124        |         599          |
+|N$_2$    |        10         |     3      |         0          |       110        |         942          |
+|O$_2$    |        12         |     2      |         2          |       121        |         494          |
+|F$_2$    |        14         |     1      |         0          |       142        |         154          |
+|Ne$_2$   |        16         |     0      |         0          |        —         |          ~0          |
+
+: Bond orders predicted by MO theory for the homonuclear diatomic molecules of the second row, compared with approximate experimental bond lengths and bond energies. {#tbl-tab1c11}
 
 Notice how the experimental data follow the predicted bond orders: as the bond order increases from $\mathrm{Li}_2$ to $\mathrm{N}_2$, the bonds get shorter and stronger, and as it decreases from $\mathrm{N}_2$ to $\mathrm{F}_2$, they get longer and weaker. The molecules with a bond order of zero, $\mathrm{Be}_2$ and $\mathrm{Ne}_2$, are not chemically bound (they exist only as extremely weak van der Waals complexes at very low temperatures). Notice also that MO theory correctly predicts that $\mathrm{B}_2$, like $\mathrm{O}_2$, is paramagnetic: because of the $2s$–$2p$ mixing, its last two electrons are described by the two degenerate $\pi_u$ orbitals, with parallel spins.
 

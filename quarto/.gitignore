@@ -7,3 +7,5 @@
 index_files/
 *_files/
 *.pdf
+
+**/*.quarto_ipynb

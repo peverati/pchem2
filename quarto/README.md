@@ -27,7 +27,7 @@ quarto render --profile typst --to typst
 ## What the converter changes
 
 - Cross-references: `\@ref(eq:x)` → `@eq-x`, `\@ref(fig:x)` → `@fig-x`, `\@ref(tab:x)` → `@tbl-x`, `\@ref(Label)` → `@sec-Label`. Quarto adds the words "eq.", "figure", "chapter", so the preceding word is dropped.
-- Figure chunks become Markdown images with `fig-alt`; kable chunks get `tbl-` labels.
+- Figure chunks become Markdown images with `fig-alt`; `knitr::kable` tables are evaluated once with R and written as plain Markdown tables, so the Quarto book needs no R at all (R is needed only to run the converter).
 - The `<details>` answer blocks become collapsible callouts; examples become `exm-` blocks.
 - Old LaTeX idioms are modernized for Typst: `{\bf x}` → `\mathbf{x}`, `{\cal X}` → `\mathcal{X}`, `vmatrix` → `\left|…\right|`, and `$\\$` spacing lines are dropped.
 

@@ -39,9 +39,6 @@ crossref:
   tbl-prefix: table
   sec-prefix: section
 
-execute:
-  echo: false
-  warning: false
 
 format:
   html:

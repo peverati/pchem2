@@ -42,22 +42,14 @@ Several modern alternatives address these shortcomings. All of them reproduce th
 
 The main features of these interpretations are summarized in @tbl-tab1c8.
 
-```{r}
-#| label: tbl-tab1c8
-#| tbl-cap: "Comparison of some interpretations of quantum mechanics."
-#| echo: false
-knitr::kable(
-  data.frame(
-    interp = c("Copenhagen", "Bohmian mechanics", "Many worlds", "Spontaneous collapse"),
-    wf = c("Tool to compute probabilities", "Real field guiding the particles", "Real, and the only thing that exists", "Real"),
-    col = c("Yes, upon measurement (not explained)", "No (only apparent)", "No (branching instead)", "Yes, as a random physical process"),
-    pos = c("No, until measured", "Yes, always", "Yes, in each branch", "Only after collapse"),
-    det = c("No", "Yes", "Yes", "No")
-  ),
-  col.names = c("Interpretation", "What is the wave function?", "Collapse?", "Definite particle positions?", "Deterministic?"),
-  align = "lllll"
-)
-```
+|Interpretation       |What is the wave function?           |Collapse?                             |Definite particle positions? |Deterministic? |
+|:--------------------|:------------------------------------|:-------------------------------------|:----------------------------|:--------------|
+|Copenhagen           |Tool to compute probabilities        |Yes, upon measurement (not explained) |No, until measured           |No             |
+|Bohmian mechanics    |Real field guiding the particles     |No (only apparent)                    |Yes, always                  |Yes            |
+|Many worlds          |Real, and the only thing that exists |No (branching instead)                |Yes, in each branch          |Yes            |
+|Spontaneous collapse |Real                                 |Yes, as a random physical process     |Only after collapse          |No             |
+
+: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8}
 
 For the purposes of chemistry, all these interpretations give the same answers: energy levels, spectra, bond lengths, and reaction rates do not depend on which one we choose (the tiny deviations predicted by spontaneous collapse theories are far too small to affect any chemical property). This is why, in the rest of this textbook, we will keep using the convenient language of the Copenhagen interpretation. You should be aware, however, that it is a language, and not the final word on what quantum mechanics tells us about reality.
 

@@ -255,22 +255,18 @@ The $2s$ orbital has a small inner lobe, the one that we already noticed for hyd
 
 The effective nuclear charges felt by the $1s$, $2s$, and $2p$ electrons of the second-row atoms can be obtained from variational calculations similar to the one we did for helium. Some of the results are reported in @tbl-tab1c9.
 
-```{r}
-#| label: tbl-tab1c9
-#| tbl-cap: "Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi."
-#| echo: false
-knitr::kable(
-  data.frame(
-    Atom = c("Li", "Be", "B", "C", "N", "O", "F", "Ne"),
-    Z = c(3, 4, 5, 6, 7, 8, 9, 10),
-    s1 = c("2.69", "3.68", "4.68", "5.67", "6.67", "7.66", "8.65", "9.64"),
-    s2 = c("1.28", "1.91", "2.58", "3.22", "3.85", "4.49", "5.13", "5.76"),
-    p2 = c("—", "—", "2.42", "3.14", "3.83", "4.45", "5.10", "5.76")
-  ),
-  col.names = c("Atom", "$Z$", "$Z_\\text{eff}(1s)$", "$Z_\\text{eff}(2s)$", "$Z_\\text{eff}(2p)$"),
-  align = "lcccc", escape = FALSE
-)
-```
+|Atom | $Z$ | $Z_\text{eff}(1s)$ | $Z_\text{eff}(2s)$ | $Z_\text{eff}(2p)$ |
+|:----|:---:|:------------------:|:------------------:|:------------------:|
+|Li   |  3  |        2.69        |        1.28        |         —          |
+|Be   |  4  |        3.68        |        1.91        |         —          |
+|B    |  5  |        4.68        |        2.58        |        2.42        |
+|C    |  6  |        5.67        |        3.22        |        3.14        |
+|N    |  7  |        6.67        |        3.85        |        3.83        |
+|O    |  8  |        7.66        |        4.49        |        4.45        |
+|F    |  9  |        8.65        |        5.13        |        5.10        |
+|Ne   | 10  |        9.64        |        5.76        |        5.76        |
+
+: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi. {#tbl-tab1c9}
 
 Notice how the $1s$ electrons feel almost the full nuclear charge (they are shielded only by each other, as in helium), while the valence electrons feel a much smaller charge. Notice also how $Z_\text{eff}(2s)$ is larger than $Z_\text{eff}(2p)$, as expected from penetration, although the difference becomes small for the heavier atoms of the row. When the electrons of an atom are described using the orbitals in order of increasing energy, following the Pauli exclusion principle, the different penetration of $s$, $p$, $d$, and $f$ orbitals produces the familiar **aufbau** order, $1s<2s<2p<3s<3p<4s<3d<\ldots$, and with it the structure of the periodic table.
 
@@ -351,20 +347,20 @@ Finding all the terms of a configuration can be tedious, but in most cases we on
 
 For carbon, the first rule selects $^3P$ as the ground term, and the third rule ($2p^2$ has fewer than half of the six possible $2p$ electrons) selects $J=0$: the ground state of carbon is $^3P_0$, in agreement with @fig-fig4c9. Oxygen ($2p^4$) has the same terms as carbon, since the $2p^4$ configuration lacks two electrons with respect to the closed $2p^6$ subshell, and behaves like $2p^2$ (the two missing electrons are often called "holes"), but it has more than half of the six possible $2p$ electrons, and its ground state is $^3P_2$. In practice, the ground term can be found quickly with the orbital diagrams of general chemistry, used here only as a bookkeeping device: we describe the electrons one at a time using the orbitals with the largest $m_\ell$ first, keeping their spins parallel as long as possible, and then reading $S$ from the number of unpaired electrons and $L$ from the sum of the $m_\ell$ values. The ground states of the first ten elements obtained in this way are reported in @tbl-tab3c9.
 
-```{r}
-#| label: tbl-tab3c9
-#| tbl-cap: "Ground-state configurations and term symbols of the first ten elements."
-#| echo: false
-knitr::kable(
-  data.frame(
-    el = c("H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne"),
-    conf = c("$1s^1$", "$1s^2$", "$[\\mathrm{He}]2s^1$", "$[\\mathrm{He}]2s^2$", "$[\\mathrm{He}]2s^22p^1$", "$[\\mathrm{He}]2s^22p^2$", "$[\\mathrm{He}]2s^22p^3$", "$[\\mathrm{He}]2s^22p^4$", "$[\\mathrm{He}]2s^22p^5$", "$[\\mathrm{He}]2s^22p^6$"),
-    term = c("$^2S_{1/2}$", "$^1S_0$", "$^2S_{1/2}$", "$^1S_0$", "$^2P_{1/2}$", "$^3P_0$", "$^4S_{3/2}$", "$^3P_2$", "$^2P_{3/2}$", "$^1S_0$")
-  ),
-  col.names = c("Element", "Configuration", "Ground state"),
-  align = "lcc", escape = FALSE
-)
-```
+|Element |      Configuration      | Ground state |
+|:-------|:-----------------------:|:------------:|
+|H       |         $1s^1$          | $^2S_{1/2}$  |
+|He      |         $1s^2$          |   $^1S_0$    |
+|Li      |   $[\mathrm{He}]2s^1$   | $^2S_{1/2}$  |
+|Be      |   $[\mathrm{He}]2s^2$   |   $^1S_0$    |
+|B       | $[\mathrm{He}]2s^22p^1$ | $^2P_{1/2}$  |
+|C       | $[\mathrm{He}]2s^22p^2$ |   $^3P_0$    |
+|N       | $[\mathrm{He}]2s^22p^3$ | $^4S_{3/2}$  |
+|O       | $[\mathrm{He}]2s^22p^4$ |   $^3P_2$    |
+|F       | $[\mathrm{He}]2s^22p^5$ | $^2P_{3/2}$  |
+|Ne      | $[\mathrm{He}]2s^22p^6$ |   $^1S_0$    |
+
+: Ground-state configurations and term symbols of the first ten elements. {#tbl-tab3c9}
 
 ### Spin–orbit coupling
 

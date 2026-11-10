@@ -5,6 +5,9 @@ Reads the .Rmd files listed in _bookdown.yml and writes .qmd files into quarto/.
 The original bookdown sources are not modified.
 """
 import re
+import os
+import subprocess
+import tempfile
 import sys
 from pathlib import Path
 
@@ -43,14 +46,21 @@ def convert_figure(m):
 
 
 def convert_table(m):
+    """Evaluate the knitr::kable call once with R and write a plain Markdown (pipe) table,
+    so the converted book no longer needs R."""
     label, body = m.group(1), m.group(2)
     cap = re.search(r',\s*caption\s*=\s*"((?:[^"\\]|\\.)*)"', body)
     body = re.sub(r',\s*caption\s*=\s*"((?:[^"\\]|\\.)*)"', "", body)
-    lines = ["```{r}", f"#| label: tbl-{label}"]
-    if cap:
-        lines.append(f'#| tbl-cap: "{cap.group(1)}"')
-    lines.append("#| echo: false")
-    return "\n".join(lines) + "\n" + body.strip() + "\n```"
+    code = "cat(" + body.replace("knitr::kable(", "knitr::kable(format = 'pipe', ", 1) + ', sep = "\\n")'
+    with tempfile.NamedTemporaryFile("w", suffix=".R", delete=False) as f:   # Rscript -e mangles backslashes
+        f.write(code)
+    res = subprocess.run(["Rscript", f.name], capture_output=True, text=True)
+    os.unlink(f.name)
+    if res.returncode != 0:
+        warnings.append(f"table {label}: {res.stderr.strip()}")
+        return m.group(0)
+    caption = r_unescape(cap.group(1)) if cap else ""
+    return res.stdout.strip() + f"\n\n: {caption} {{#tbl-{label}}}"
 
 
 def convert_answers(m):

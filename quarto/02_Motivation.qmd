@@ -168,21 +168,14 @@ which are known as **de Broglie's equations**. We will use these equations to de
 
 The four experiments discussed in this chapter, and the new ideas that they introduced, are summarized in @tbl-tab1c2.
 
-```{r}
-#| label: tbl-tab1c2
-#| tbl-cap: "The experiments that led to quantum mechanics."
-#| echo: false
-knitr::kable(
-  data.frame(
-    exp = c("Black-body radiation", "Photoelectric effect", "Atomic line spectra", "Electron diffraction"),
-    cl = c("Intensity grows without limit at short wavelengths", "Electron energy grows with light intensity; any color works", "Continuous emission; electrons spiral into the nucleus", "Electrons are particles and cannot interfere"),
-    obs = c("Intensity peaks and goes to zero at short wavelengths", "Electron energy depends only on frequency; threshold frequency", "Sharp lines at specific wavelengths; atoms are stable", "Diffraction patterns, as for waves"),
-    q = c("Energy is exchanged in quanta, $E=nh\\nu$ (Planck, 1900)", "Light is made of photons, $E=h\\nu$ (Einstein, 1905)", "Atoms have quantized energy levels (Bohr, 1913)", "Matter behaves as waves, $\\lambda=h/p$ (de Broglie, 1924)")
-  ),
-  col.names = c("Experiment", "Classical prediction", "Observation", "Quantum idea"),
-  align = "llll", escape = FALSE
-)
-```
+|Experiment           |Classical prediction                                        |Observation                                                    |Quantum idea                                              |
+|:--------------------|:-----------------------------------------------------------|:--------------------------------------------------------------|:---------------------------------------------------------|
+|Black-body radiation |Intensity grows without limit at short wavelengths          |Intensity peaks and goes to zero at short wavelengths          |Energy is exchanged in quanta, $E=nh\nu$ (Planck, 1900)   |
+|Photoelectric effect |Electron energy grows with light intensity; any color works |Electron energy depends only on frequency; threshold frequency |Light is made of photons, $E=h\nu$ (Einstein, 1905)       |
+|Atomic line spectra  |Continuous emission; electrons spiral into the nucleus      |Sharp lines at specific wavelengths; atoms are stable          |Atoms have quantized energy levels (Bohr, 1913)           |
+|Electron diffraction |Electrons are particles and cannot interfere                |Diffraction patterns, as for waves                             |Matter behaves as waves, $\lambda=h/p$ (de Broglie, 1924) |
+
+: The experiments that led to quantum mechanics. {#tbl-tab1c2}
 
 The common thread of all these results is that, at the scale of atoms and molecules, energy is not continuous, and particles and waves are not separate categories. In the next chapter, we will see how Schrödinger combined these ideas into a single equation.
 
