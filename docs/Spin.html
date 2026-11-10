@@ -221,6 +221,7 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
@@ -489,7 +490,7 @@ Figure 7.3: Sequential Stern–Gerlach experiments, with the number of particles
 </div>
 <div id="spin-operators" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Spin Operators<a href="Spin.html#spin-operators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The mathematics of quantum mechanics tells us that <span class="math inline">\(\hat{S}_z\)</span> and <span class="math inline">\(\hat{S}_x\)</span> do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time.</p>
+<p>The mathematics of quantum mechanics tells us that <span class="math inline">\(\hat{S}_z\)</span> and <span class="math inline">\(\hat{S}_x\)</span> do not commute. As we saw in section <a href="Operators.html#CommutingOperators">6.3.3</a>, when two operators do not commute, in general there is no state in which both of the associated quantities have a definite value: they cannot be known at the same time.</p>
 <p>In 3-dimensional space there are three directions that are orthogonal to each other <span class="math inline">\(\left\{x,y,z\right\}\)</span>. Thus, we can define a third spin projection operator along the <span class="math inline">\(y\)</span> direction, <span class="math inline">\(\hat{S}_y\)</span>, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we considered in the previous section. The total spin operator, <span class="math inline">\(\hat{S}^2\)</span>, can then be constructed similarly to the total angular momentum operator of eq. <a href="Operators.html#eq:angmom1b">(6.29)</a>, as:</p>
 <p><span class="math display" id="eq:spop1">\[\begin{equation}
 \begin{aligned}
@@ -550,7 +551,7 @@ Figure 7.3: Sequential Stern–Gerlach experiments, with the number of particles
 [\hat{H}, \hat{p}] = 0.
 \tag{7.13}
 \end{equation}\]</span></p>
-<p>Because of this commutation, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector <span class="math inline">\(k\)</span>) is a good quantum number that labels the states.</p>
+<p>Because of this commutation, and the theorem that we discussed in section <a href="Operators.html#CommutingOperators">6.3.3</a>, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector <span class="math inline">\(k\)</span>) is a good quantum number that labels the states.</p>
 </div>
 <div id="particle-in-a-box-broken-translation-introduction-to-parity" class="section level3 hasAnchor" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Particle in a box: broken translation, introduction to parity<a href="Spin.html#particle-in-a-box-broken-translation-introduction-to-parity" class="anchor-section" aria-label="Anchor link to header"></a></h3>

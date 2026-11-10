@@ -221,6 +221,7 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
@@ -736,6 +737,22 @@ Figure 6.1: Vector model of the orbital angular momentum for <span class="math i
 </p>
 </div>
 </div>
+<div id="CommutingOperators" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Commuting operators and compatible observables<a href="Operators.html#CommutingOperators" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can now come back to the commutator, eq. <a href="Operators.html#eq:bp5">(6.7)</a>, which turns out to be one of the most important quantities in quantum mechanics. Two facts make it so important.</p>
+<p>The first is a mathematical theorem, which we state without proof: <strong>if two Hermitian operators commute, <span class="math inline">\([\hat{A},\hat{B}]=0\)</span>, they have a common set of eigenfunctions</strong>. In other words, we can find wave functions that are eigenfunctions of <span class="math inline">\(\hat{A}\)</span> and <span class="math inline">\(\hat{B}\)</span> at the same time. A system described by one of these wave functions has a definite value of both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, and measuring one of them does not disturb the other. Observables of this kind are called <em>compatible</em>. We have already met an example: <span class="math inline">\(\hat{L}^2\)</span> and <span class="math inline">\(\hat{L}_z\)</span> commute, and the spherical harmonics are eigenfunctions of both, eqs. <a href="Operators.html#eq:angmom3">(6.31)</a> and <a href="Operators.html#eq:angmom4">(6.32)</a>, so the magnitude of the angular momentum and its <span class="math inline">\(z\)</span> component can be known at the same time. If two operators do <em>not</em> commute, instead, in general there is no wave function that is an eigenfunction of both, and the two observables cannot have definite values at the same time. They are called <em>incompatible</em>.</p>
+<p>The second fact concerns the two most basic operators of all, position and momentum. In one dimension, <span class="math inline">\(\hat{x}\)</span> multiplies by <span class="math inline">\(x\)</span>, and <span class="math inline">\(\hat{p}=-i\hbar\frac{d}{dx}\)</span>. Applying their commutator to an arbitrary function <span class="math inline">\(f(x)\)</span>, and using the result that we obtained above for <span class="math inline">\(\frac{d}{dx}\)</span> and <span class="math inline">\(x\)</span>:</p>
+<p><span class="math display" id="eq:commxp1">\[\begin{equation}
+[\hat{x},\hat{p}]f = x\left(-i\hbar\frac{df}{dx}\right) - \left(-i\hbar\frac{d}{dx}\right)(xf) = -i\hbar x\frac{df}{dx} + i\hbar\left(f + x\frac{df}{dx}\right) = i\hbar f.
+\tag{6.33}
+\end{equation}\]</span></p>
+<p>Since this is true for any function, we can write the result as a relation between the operators themselves:</p>
+<p><span class="math display" id="eq:commxp">\[\begin{equation}
+[\hat{x},\hat{p}] = i\hbar.
+\tag{6.34}
+\end{equation}\]</span></p>
+<p>This is called the <strong>canonical commutation relation</strong>. Position and momentum do not commute, so they are incompatible: no wave function can have both a definite position and a definite momentum. We have already seen this in the wave packets of chapter <a href="Schrodinger.html#Schrodinger">3</a>, and we will make it quantitative with the uncertainty principle in chapter <a href="Weirdness.html#Weirdness">8</a>. It is remarkable that the whole difference between classical and quantum mechanics can be traced back to the fact that the right-hand side of eq. <a href="Operators.html#eq:commxp">(6.34)</a> is not zero: in classical mechanics, multiplying by <span class="math inline">\(x\)</span> and by <span class="math inline">\(p\)</span> in either order gives the same result.</p>
+</div>
 </div>
 <div id="TimeEvolution" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> Time Evolution<a href="Operators.html#TimeEvolution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -749,12 +766,12 @@ Figure 6.1: Vector model of the orbital angular momentum for <span class="math i
 <p>If the wave function is a superposition of eigenfunctions with <em>different</em> energies, the situation is very different. Since the TDSEq is linear, each term evolves with its own phase factor:</p>
 <p><span class="math display" id="eq:tev1">\[\begin{equation}
 \Psi({\bf r}, t) = c_1\psi_1({\bf r})e^{-iE_1t/\hbar} + c_2\psi_2({\bf r})e^{-iE_2t/\hbar}.
-\tag{6.33}
+\tag{6.35}
 \end{equation}\]</span></p>
 <p>Let’s consider the simplest example: a particle in a box prepared in an equal superposition of the two lowest states, with <span class="math inline">\(c_1=c_2=\frac{1}{\sqrt{2}}\)</span>. Using the normalized eigenfunctions of eq. <a href="Models.html#eq:PIBnorm3">(4.16)</a>, the probability density is:</p>
 <p><span class="math display" id="eq:tev2">\[\begin{equation}
 |\Psi(x,t)|^2 = \frac{1}{2}\left[\psi_1^2(x) + \psi_2^2(x)\right] + \psi_1(x)\psi_2(x)\cos\left(\frac{(E_2-E_1)t}{\hbar}\right).
-\tag{6.34}
+\tag{6.36}
 \end{equation}\]</span></p>
 <p>The first term does not depend on time, but the second one oscillates with a period <span class="math inline">\(T=\frac{2\pi\hbar}{E_2-E_1}\)</span>. The result is shown in figure <a href="Operators.html#fig:fig12c6">6.2</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig12c6"></span>
@@ -931,11 +948,37 @@ Figure 6.2: Top: probability density of a particle in a box in the superposition
 <li>Its normalization changes in time</li>
 </ol>
 <hr />
+<p><strong>13. What is the value of the commutator <span class="math inline">\([\hat{x},\hat{p}]\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(0\)</span><br />
+</li>
+<li><span class="math inline">\(i\hbar\)</span><br />
+</li>
+<li><span class="math inline">\(-\hbar^2\)</span><br />
+</li>
+<li><span class="math inline">\(\hbar/2\)</span><br />
+</li>
+<li>it depends on the wave function</li>
+</ol>
+<hr />
+<p><strong>14. What does it mean if two Hermitian operators commute?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>their eigenvalues are equal<br />
+</li>
+<li>they have a common set of eigenfunctions, so their observables can have definite values at the same time<br />
+</li>
+<li>one of them must be the Hamiltonian<br />
+</li>
+<li>their observables cannot be measured<br />
+</li>
+<li>they are both equal to the identity operator</li>
+</ol>
+<hr />
 <details>
 <summary>
 Answers (select to reveal)
 </summary>
-1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c
+1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c, 13.b, 14.b
 </details>
 
 </div>

@@ -221,6 +221,7 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
@@ -557,7 +558,18 @@ Figure 8.4: Probability densities in position space (left) and in momentum space
 \sigma_{x}\sigma_{p} \geq \frac{\hbar }{2}.
 \tag{8.4}  
 \end{equation}\]</span></p>
-<p>The uncertainty principle can be extended to any pair of conjugate variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>The uncertainty principle is a direct consequence of the fact that position and momentum do not commute (section <a href="Operators.html#CommutingOperators">6.3.3</a>). In fact, it is a special case of a general result: for any two observables <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the standard deviations of their measurements, in any state, satisfy:</p>
+<p><span class="math display" id="eq:heis4">\[\begin{equation}
+\sigma_A\,\sigma_B \geq \frac{1}{2}\left|\langle[\hat{A},\hat{B}]\rangle\right|.
+\tag{8.5}
+\end{equation}\]</span></p>
+<p>This general uncertainty relation tells us that the precision with which two quantities can be known at the same time is limited by their commutator:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Position and momentum.</strong> Replacing the canonical commutation relation, <span class="math inline">\([\hat{x},\hat{p}]=i\hbar\)</span>, in eq. <a href="Weirdness.html#eq:heis4">(8.5)</a> gives <span class="math inline">\(\sigma_x\sigma_p\geq\frac{1}{2}|i\hbar|=\frac{\hbar}{2}\)</span>, which is exactly eq. <a href="Weirdness.html#eq:heis3">(8.4)</a>. Since the commutator is a constant, this limit applies to every state, without exceptions.</p></li>
+<li><p><strong>Components of spin and angular momentum.</strong> For the spin components, <span class="math inline">\([\hat{S}_x,\hat{S}_y]=i\hbar\hat{S}_z\)</span> (chapter <a href="Spin.html#Spin">7</a>), so <span class="math inline">\(\sigma_{S_x}\sigma_{S_y}\geq\frac{\hbar}{2}|\langle S_z\rangle|\)</span>. For an electron in the state <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\langle S_z\rangle=+\frac{\hbar}{2}\)</span>, so the <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> components cannot both be known precisely. This is the reason behind the results of the sequential Stern–Gerlach experiments and behind the cone picture of figure <a href="Spin.html#fig:Fig2c7">7.2</a>. The same is true for the components of the orbital angular momentum.</p></li>
+<li><p><strong>Commuting observables.</strong> If <span class="math inline">\([\hat{A},\hat{B}]=0\)</span>, the right-hand side of eq. <a href="Weirdness.html#eq:heis4">(8.5)</a> is zero, and nothing prevents both observables from being known exactly. For example, the magnitude of the angular momentum and its <span class="math inline">\(z\)</span> component can be known at the same time, which is why we can label the states of the hydrogen atom with both <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_\ell\)</span>.</p></li>
+</ol>
+<p>You may also find in other textbooks an <em>energy–time</em> uncertainty relation, <span class="math inline">\(\Delta E\,\Delta t\gtrsim\hbar/2\)</span>. Its meaning is different from eq. <a href="Weirdness.html#eq:heis4">(8.5)</a>, because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy–time relation states that a state that lasts only for a short time, <span class="math inline">\(\Delta t\)</span> (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about <span class="math inline">\(\hbar/\Delta t\)</span>. This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.</p>
 </div>
 <div id="tunneling" class="section level2 hasAnchor" number="8.4">
 <h2><span class="header-section-number">8.4</span> Tunneling<a href="Weirdness.html#tunneling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -572,37 +584,37 @@ Figure 8.5: Real part of the wave function of a particle with energy <span class
 <p>Tunneling can be described using the TISEq, eq. <a href="Operators.html#eq:scheqsimple">(6.24)</a>. For the tunneling problem we can take the potential <span class="math inline">\(V\)</span> to be zero for all space, except for the region inside the barrier (between <span class="math inline">\(0\)</span> and <span class="math inline">\(l\)</span>):</p>
 <p><span class="math display" id="eq:tunn1">\[\begin{equation}
 V=\begin{cases} 0\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ V_0\quad&amp;\text{if}\; 0&lt;x&lt;l \\ 0\quad&amp;\text{if}\; l\leq x&lt; \infty \end{cases}.
-\tag{8.5}  
+\tag{8.6}  
 \end{equation}\]</span></p>
 <p>To solve the TISEq with this potential, we must solve it separately for each region, but we should make sure that the wave function stays single-valued, continuous and everywhere continuously differentiable. The general solution for each region, before applying the boundary conditions, is:</p>
 <p><span class="math display" id="eq:tunn2">\[\begin{equation}
 \psi=\begin{cases} A\sin (kx)+B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ C \exp(-\alpha x) \quad&amp;\text{if}\; 0&lt;x&lt;l \\ D\sin (kx)+E\cos (kx) \quad&amp;\text{if}\; l\leq x&lt; \infty \end{cases}
-\tag{8.6}  
+\tag{8.7}  
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(k=\frac{\sqrt{2mE}}{\hbar}\)</span>, and <span class="math inline">\(\alpha=\frac{\sqrt{2m(V_0-E)}}{\hbar}\)</span>. To enforce continuity, we must have at the first boundary:</p>
 <p><span class="math display" id="eq:tunn3">\[\begin{equation}
 A\sin(0) +B \cos(0)=C\exp(0),
-\tag{8.7}  
+\tag{8.8}  
 \end{equation}\]</span></p>
 <p>which implies that <span class="math inline">\(A=0\)</span>, and <span class="math inline">\(B=C\)</span>. In the final region, the coefficients <span class="math inline">\(D\)</span> and <span class="math inline">\(E\)</span> present a potentially intractable problem. However, if one realizes that the value at the boundary <span class="math inline">\(l\)</span> is driving the wave in the region <span class="math inline">\(l\)</span> to infinity, it may also be realized that the wave function could be rewritten as <span class="math inline">\(B\exp[-\alpha l]\cos[k(x-l)]\)</span>, phase shifting the wave function by the value of <span class="math inline">\(l\)</span>, and setting the amplitude to the boundary value. Summarizing, the wave function is:</p>
 <p><span class="math display" id="eq:tunn5">\[\begin{equation}
 \psi=\begin{cases} B\cos (kx)\quad&amp;\text{if}\; -\infty&lt;x\leq 0 \\ B \exp(-\alpha x)  \quad&amp;\text{if}\; 0&lt;x&lt;l \\ B\exp(-\alpha l)\cos[k(x-l)] \quad&amp;\text{if}\; l\leq x&lt; \infty. \end{cases}
-\tag{8.8}  
+\tag{8.9}  
 \end{equation}\]</span></p>
 <p>Comparing the wave function on the left of the barrier with the one on its right, we notice how the amplitude is attenuated by the barrier as <span class="math inline">\(\exp\left(-l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right)\)</span>, where <span class="math inline">\(l\)</span> is the width of the barrier, and <span class="math inline">\((V_0-E)\)</span> is the difference between the potential energy of the barrier and the current energy of the particle. Since the square of the wave function is the probability distribution, the probability of transmission through a barrier is:</p>
 <p><span class="math display" id="eq:tunn6">\[\begin{equation}
 \exp\left(-2l\frac{\sqrt{2m(V_0-E)}}{\hbar}\right).
-\tag{8.9}  
+\tag{8.10}  
 \end{equation}\]</span></p>
 <p>As the barrier width or height approaches zero, the probability of a particle tunneling through the barrier becomes one. We can also note that <span class="math inline">\(k\)</span> is unchanged on the other side of the barrier. This implies that the energy of the particle is exactly the same as it was before it tunneled through the barrier, as stated earlier, the only thing that changes is the quantity of particles going in that direction. The rest is reflected off the barrier, and goes back the way it came. On the opposite end, as the barrier width or height approaches infinity, the probability of a particle tunneling through the barrier becomes zero, and the barrier behaves similarly to those that contained the particle in the particle in a box example discussed in chapter <a href="Models.html#Models">4</a>.</p>
 <div id="tunneling-in-chemical-reactions" class="section level3 hasAnchor" number="8.4.1">
 <h3><span class="header-section-number">8.4.1</span> Tunneling in chemical reactions<a href="Weirdness.html#tunneling-in-chemical-reactions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, faster than classically predicted. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine (<span class="math inline">\(\text{PH}_3\)</span>) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).</p>
-<p>One of the primary effects of tunneling can be seen on the KIE. The probability of tunneling depends strongly on the mass of the particle, since the mass appears under the square root in the exponent of eq. <a href="Weirdness.html#eq:tunn6">(8.9)</a>. Lighter isotopes therefore tunnel much more efficiently than heavier ones. As a result, tunneling speeds up the reaction of the lighter isotope much more than the reaction of the heavier one, leading to an increase in the KIE compared to the classical prediction. In the case of the umbrella inversion reaction, replacing ammonia with its deuterated counterpart, <span class="math inline">\(\text{ND}_3\)</span>, leaves the height of the barrier essentially unchanged (the potential energy does not depend on the mass of the nuclei), but it makes tunneling much less efficient: <span class="math inline">\(\text{ND}_3\)</span> inverts more than ten times slower than <span class="math inline">\(\text{NH}_3\)</span>.</p>
+<p>One of the primary effects of tunneling can be seen on the KIE. The probability of tunneling depends strongly on the mass of the particle, since the mass appears under the square root in the exponent of eq. <a href="Weirdness.html#eq:tunn6">(8.10)</a>. Lighter isotopes therefore tunnel much more efficiently than heavier ones. As a result, tunneling speeds up the reaction of the lighter isotope much more than the reaction of the heavier one, leading to an increase in the KIE compared to the classical prediction. In the case of the umbrella inversion reaction, replacing ammonia with its deuterated counterpart, <span class="math inline">\(\text{ND}_3\)</span>, leaves the height of the barrier essentially unchanged (the potential energy does not depend on the mass of the nuclei), but it makes tunneling much less efficient: <span class="math inline">\(\text{ND}_3\)</span> inverts more than ten times slower than <span class="math inline">\(\text{NH}_3\)</span>.</p>
 <p>The KIE is defined as the ratio between the rate constants of the reactions involving the light and the heavy isotopes:</p>
 <p><span class="math display" id="eq:kie">\[\begin{equation}
 \text{KIE} = \frac{k(\text{H})}{k(\text{D})},
-\tag{8.10}  
+\tag{8.11}  
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(k(\text{H})\)</span> and <span class="math inline">\(k(\text{D})\)</span> are the rate constants for the reaction involving hydrogen and deuterium, respectively. In the absence of tunneling, the KIEs of reactions that involve the transfer of a hydrogen atom are typically smaller than about 7 at room temperature, since they arise mostly from the difference in the zero-point energies of the two isotopes (see the harmonic oscillator in chapter <a href="Models.html#Models">4</a>). Significantly larger values, together with curved (non-linear) Arrhenius plots, are commonly taken as experimental evidence of tunneling, an effect that must be considered when studying chemical reactions involving light atoms.</p>
 </div>
@@ -650,17 +662,17 @@ A\sin(0) +B \cos(0)=C\exp(0),
 <li>arbitrary experimental tolerances chosen by the user</li>
 </ol>
 <hr />
-<p><strong>4. Which pair of observables is <em>not</em> a standard example of canonically conjugate variables in the context of uncertainty relations?</strong></p>
+<p><strong>4. Which pair of observables obeys an uncertainty relation, so that the two cannot both be known exactly at the same time?</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li>position and momentum<br />
+<li><span class="math inline">\(L^2\)</span> and <span class="math inline">\(L_z\)</span><br />
 </li>
-<li>energy and time (in a suitable sense)<br />
+<li>the mass and the charge of an electron<br />
 </li>
-<li>different components of spin<br />
+<li>the energy and <span class="math inline">\(L^2\)</span> of the hydrogen atom<br />
 </li>
-<li>particle number and phase (in some systems)<br />
+<li>the position <span class="math inline">\(x\)</span> and the momentum component <span class="math inline">\(p_y\)</span><br />
 </li>
-<li>mass and electric charge</li>
+<li>the spin components <span class="math inline">\(S_x\)</span> and <span class="math inline">\(S_y\)</span></li>
 </ol>
 <hr />
 <p><strong>5. Quantum tunneling refers to the phenomenon where a particle does what?</strong></p>
@@ -781,7 +793,6 @@ Answers (select to reveal)
 <hr />
 <ol start="15">
 <li id="fn15"><p>The interested student can read more in the <a href="https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics">Wikipedia article on interpretations of quantum mechanics</a>, and in section <a href="Weirdness.html#Interpretations">8.1.2</a>.<a href="Weirdness.html#fnref15" class="footnote-back">↩︎</a></p></li>
-<li id="fn16"><p>Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.<a href="Weirdness.html#fnref16" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

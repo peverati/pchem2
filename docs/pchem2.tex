@@ -1482,11 +1482,11 @@ Its real and imaginary parts are a cosine and a sine wave with wavelength \(\lam
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.85\linewidth,alt={Top: a cosine wave and a sine wave of the same wavelength, shifted by a quarter wavelength, representing the real and imaginary parts of a plane wave. Bottom: the probability density is a flat horizontal band, the same at every position.}]{./img/FP_planewave} 
+{\centering \includegraphics[width=0.85\linewidth,alt={Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.}]{./img/FP_planewave} 
 
 }
 
-\caption{Top: real (solid) and imaginary (dashed) parts of a free-particle plane wave. Bottom: its probability density, which is the same everywhere.}\label{fig:fig1c3}
+\caption{Top: a free-particle plane wave, $\psi(x)=e^{ikx}$, with its real part, $\cos(kx)$, in the vertical plane (blue) and its imaginary part, $\sin(kx)$, in a horizontal plane drawn in perspective (red). Bottom: its probability density, which is the same everywhere.}\label{fig:fig1c3}
 \end{figure}
 
 This result is surprising. A particle described by a plane wave has a perfectly well-defined momentum, \(p=\hbar k\), but its probability density is the same everywhere: the particle is equally likely to be found at any point in the universe. The plane wave also extends forever in both directions, so the total probability, \(\int|\psi|^2dx\), is infinite, and the wave function cannot be normalized. A real particle, such as an electron shot from an electron gun, is certainly found somewhere in a limited region of space. Plane waves, therefore, are useful mathematical solutions, but they do not describe real particles by themselves.
@@ -3440,6 +3440,28 @@ The interpretation of these results is rather complicated, since the angular mom
 \caption{Vector model of the orbital angular momentum for $\ell=2$. Each cone corresponds to one value of $m_\ell$: the vector has length $\sqrt{6}\hbar$ and a well-defined projection $m_\ell\hbar$ on the $z$ axis, while its direction around the cone (its $x$ and $y$ components) is undetermined.}\label{fig:Fig1c6}
 \end{figure}
 
+\subsection{Commuting operators and compatible observables}\label{CommutingOperators}
+
+We can now come back to the commutator, eq. \eqref{eq:bp5}, which turns out to be one of the most important quantities in quantum mechanics. Two facts make it so important.
+
+The first is a mathematical theorem, which we state without proof: \textbf{if two Hermitian operators commute, \([\hat{A},\hat{B}]=0\), they have a common set of eigenfunctions}. In other words, we can find wave functions that are eigenfunctions of \(\hat{A}\) and \(\hat{B}\) at the same time. A system described by one of these wave functions has a definite value of both \(A\) and \(B\), and measuring one of them does not disturb the other. Observables of this kind are called \emph{compatible}. We have already met an example: \(\hat{L}^2\) and \(\hat{L}_z\) commute, and the spherical harmonics are eigenfunctions of both, eqs. \eqref{eq:angmom3} and \eqref{eq:angmom4}, so the magnitude of the angular momentum and its \(z\) component can be known at the same time. If two operators do \emph{not} commute, instead, in general there is no wave function that is an eigenfunction of both, and the two observables cannot have definite values at the same time. They are called \emph{incompatible}.
+
+The second fact concerns the two most basic operators of all, position and momentum. In one dimension, \(\hat{x}\) multiplies by \(x\), and \(\hat{p}=-i\hbar\frac{d}{dx}\). Applying their commutator to an arbitrary function \(f(x)\), and using the result that we obtained above for \(\frac{d}{dx}\) and \(x\):
+
+\begin{equation}
+[\hat{x},\hat{p}]f = x\left(-i\hbar\frac{df}{dx}\right) - \left(-i\hbar\frac{d}{dx}\right)(xf) = -i\hbar x\frac{df}{dx} + i\hbar\left(f + x\frac{df}{dx}\right) = i\hbar f.
+\label{eq:commxp1}
+\end{equation}
+
+Since this is true for any function, we can write the result as a relation between the operators themselves:
+
+\begin{equation}
+[\hat{x},\hat{p}] = i\hbar.
+\label{eq:commxp}
+\end{equation}
+
+This is called the \textbf{canonical commutation relation}. Position and momentum do not commute, so they are incompatible: no wave function can have both a definite position and a definite momentum. We have already seen this in the wave packets of chapter \ref{Schrodinger}, and we will make it quantitative with the uncertainty principle in chapter \ref{Weirdness}. It is remarkable that the whole difference between classical and quantum mechanics can be traced back to the fact that the right-hand side of eq. \eqref{eq:commxp} is not zero: in classical mechanics, multiplying by \(x\) and by \(p\) in either order gives the same result.
+
 \section{Time Evolution}\label{TimeEvolution}
 
 Eq. \eqref{eq:tdseqop} tells us that, once we know the wave function at some initial time, the Hamiltonian determines it at all later times. In this section, we look at what this means in practice, using the solutions that we already know.
@@ -3723,7 +3745,45 @@ An important property of the time evolution described by eq. \eqref{eq:tdseqop} 
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c
+\textbf{13. What is the value of the commutator \([\hat{x},\hat{p}]\)?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  \(0\)\\
+\item
+  \(i\hbar\)\\
+\item
+  \(-\hbar^2\)\\
+\item
+  \(\hbar/2\)\\
+\item
+  it depends on the wave function
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\textbf{14. What does it mean if two Hermitian operators commute?}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  their eigenvalues are equal\\
+\item
+  they have a common set of eigenfunctions, so their observables can have definite values at the same time\\
+\item
+  one of them must be the Hamiltonian\\
+\item
+  their observables cannot be measured\\
+\item
+  they are both equal to the identity operator
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c, 13.b, 14.b
 
 \chapter{Spin}\label{Spin}
 
@@ -3829,7 +3889,7 @@ This experiment shows that spin is not a classical property. The Stern-Gerlach a
 
 \section{Spin Operators}\label{spin-operators}
 
-The mathematics of quantum mechanics tells us that \(\hat{S}_z\) and \(\hat{S}_x\) do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time.
+The mathematics of quantum mechanics tells us that \(\hat{S}_z\) and \(\hat{S}_x\) do not commute. As we saw in section \ref{CommutingOperators}, when two operators do not commute, in general there is no state in which both of the associated quantities have a definite value: they cannot be known at the same time.
 
 In 3-dimensional space there are three directions that are orthogonal to each other \(\left\{x,y,z\right\}\). Thus, we can define a third spin projection operator along the \(y\) direction, \(\hat{S}_y\), corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we considered in the previous section. The total spin operator, \(\hat{S}^2\), can then be constructed similarly to the total angular momentum operator of eq. \eqref{eq:angmom1b}, as:
 
@@ -3906,7 +3966,7 @@ Space is translationally invariant: shifting the particle by any distance does n
 \label{eq:spop6} 
 \end{equation}
 
-Because of this commutation, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector \(k\)) is a good quantum number that labels the states.
+Because of this commutation, and the theorem that we discussed in section \ref{CommutingOperators}, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector \(k\)) is a good quantum number that labels the states.
 
 \subsection{Particle in a box: broken translation, introduction to parity}\label{particle-in-a-box-broken-translation-introduction-to-parity}
 
@@ -4370,7 +4430,26 @@ One way to quantify the precision of the position and momentum is the standard d
 \label{eq:heis3}  
 \end{equation}
 
-The uncertainty principle can be extended to any pair of conjugate variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.\footnote{Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.}
+The uncertainty principle is a direct consequence of the fact that position and momentum do not commute (section \ref{CommutingOperators}). In fact, it is a special case of a general result: for any two observables \(A\) and \(B\), the standard deviations of their measurements, in any state, satisfy:
+
+\begin{equation}
+\sigma_A\,\sigma_B \geq \frac{1}{2}\left|\langle[\hat{A},\hat{B}]\rangle\right|.
+\label{eq:heis4}
+\end{equation}
+
+This general uncertainty relation tells us that the precision with which two quantities can be known at the same time is limited by their commutator:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{Position and momentum.} Replacing the canonical commutation relation, \([\hat{x},\hat{p}]=i\hbar\), in eq. \eqref{eq:heis4} gives \(\sigma_x\sigma_p\geq\frac{1}{2}|i\hbar|=\frac{\hbar}{2}\), which is exactly eq. \eqref{eq:heis3}. Since the commutator is a constant, this limit applies to every state, without exceptions.
+\item
+  \textbf{Components of spin and angular momentum.} For the spin components, \([\hat{S}_x,\hat{S}_y]=i\hbar\hat{S}_z\) (chapter \ref{Spin}), so \(\sigma_{S_x}\sigma_{S_y}\geq\frac{\hbar}{2}|\langle S_z\rangle|\). For an electron in the state \(\alpha\), \(\langle S_z\rangle=+\frac{\hbar}{2}\), so the \(x\) and \(y\) components cannot both be known precisely. This is the reason behind the results of the sequential Stern--Gerlach experiments and behind the cone picture of figure \ref{fig:Fig2c7}. The same is true for the components of the orbital angular momentum.
+\item
+  \textbf{Commuting observables.} If \([\hat{A},\hat{B}]=0\), the right-hand side of eq. \eqref{eq:heis4} is zero, and nothing prevents both observables from being known exactly. For example, the magnitude of the angular momentum and its \(z\) component can be known at the same time, which is why we can label the states of the hydrogen atom with both \(\ell\) and \(m_\ell\).
+\end{enumerate}
+
+You may also find in other textbooks an \emph{energy--time} uncertainty relation, \(\Delta E\,\Delta t\gtrsim\hbar/2\). Its meaning is different from eq. \eqref{eq:heis4}, because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy--time relation states that a state that lasts only for a short time, \(\Delta t\) (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about \(\hbar/\Delta t\). This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.
 
 \section{Tunneling}\label{tunneling}
 
@@ -4500,21 +4579,21 @@ where \(k(\text{H})\) and \(k(\text{D})\) are the rate constants for the reactio
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{4. Which pair of observables is \emph{not} a standard example of canonically conjugate variables in the context of uncertainty relations?}
+\textbf{4. Which pair of observables obeys an uncertainty relation, so that the two cannot both be known exactly at the same time?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  position and momentum\\
+  \(L^2\) and \(L_z\)\\
 \item
-  energy and time (in a suitable sense)\\
+  the mass and the charge of an electron\\
 \item
-  different components of spin\\
+  the energy and \(L^2\) of the hydrogen atom\\
 \item
-  particle number and phase (in some systems)\\
+  the position \(x\) and the momentum component \(p_y\)\\
 \item
-  mass and electric charge
+  the spin components \(S_x\) and \(S_y\)
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
@@ -6474,21 +6553,21 @@ These qualitative MO diagrams are the starting point of molecular orbital theory
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{10. Comparing H\(_2^+\) and H\(_2\), which statement about their bonding descriptions is true?}
+\textbf{10. Why is an electron described by the bonding orbital \(\varphi_+\) of H\(_2^+\) lower in energy than in an isolated hydrogen atom?}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  both are one‑electron systems with identical Hamiltonians\\
+  because the two protons repel each other\\
 \item
-  H\(_2^+\) is exactly solvable analytically while H\(_2\) is not\\
+  because \(\varphi_+\) has a nodal plane between the nuclei\\
 \item
-  H\(_2^+\) has one‑electron bonding described by a single MO; H\(_2\) requires a two‑electron antisymmetric wave function including spin\\
+  because the probability density builds up between the nuclei, where the electron is attracted by both protons\\
 \item
-  H\(_2^+\) has no bound state\\
+  because the overlap integral \(S\) is zero\\
 \item
-  H\(_2\) can be described without consideration of spin
+  because the spin of the electron changes
 \end{enumerate}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

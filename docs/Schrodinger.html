@@ -221,6 +221,7 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
@@ -433,7 +434,7 @@ MathJax.Hub.Config({
 \tag{3.2}
 \end{equation}\]</span></p>
 <p>where we have used the fact that <span class="math inline">\(i^2=-1\)</span>.</p>
-<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, eq. <a href="#eq:wp1b">(<strong>??</strong>)</a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
+<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, eq. <a href="Motivation.html#eq:wp1b">(2.12)</a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
 <p><span class="math display" id="eq:sch3">\[\begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
 \tag{3.3}
@@ -525,7 +526,7 @@ f(t) = e^{-iEt / \hbar}
 \psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
 \tag{3.18}
 \end{equation}\]</span></p>
-<p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.17)</a> are called <strong>stationary states</strong>. As we saw in section <a href="Schrodinger.html#BornInterpretation">3.2</a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Wave functions of the form of eq. <a href="Schrodinger.html#eq:TDSEq6b">(3.17)</a> are called <strong>stationary states</strong>. As we saw in section <a href="Schrodinger.html#BornInterpretation">3.2</a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
 <p><span class="math display">\[\begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
 \end{equation}\]</span></p>
@@ -560,7 +561,7 @@ f(t) = e^{-iEt / \hbar}
 k^2 = \frac{2mE}{\hbar^2},
 \tag{3.23}
 \end{equation}\]</span></p>
-<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="#eq:wp1b">(<strong>??</strong>)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, eq. <a href="Motivation.html#eq:wp1b">(2.12)</a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
 <p><span class="math display" id="eq:FP6">\[\begin{equation}
 E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 \tag{3.24}
@@ -786,8 +787,8 @@ Answers (select to reveal)
 </div>
 <div class="footnotes">
 <hr />
-<ol start="1">
-<li id="fn1"><p>A similar presentation can be found in Prof. C. David Sherrill’s <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">A Brief Review of Elementary Quantum Chemistry</a> notes.<a href="Schrodinger.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<ol start="7">
+<li id="fn7"><p>A similar presentation can be found in Prof. C. David Sherrill’s <a href="http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html">A Brief Review of Elementary Quantum Chemistry</a> notes.<a href="Schrodinger.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

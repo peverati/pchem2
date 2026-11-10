@@ -221,6 +221,7 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
+<li class="chapter" data-level="6.3.3" data-path="Operators.html"><a href="Operators.html#CommutingOperators"><i class="fa fa-check"></i><b>6.3.3</b> Commuting operators and compatible observables</a></li>
 </ul></li>
 <li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
@@ -543,7 +544,7 @@ Figure 11.6: Geometry of the hydrogen molecule.
 \end{aligned}
 \tag{11.11}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function from two <span class="math inline">\(1s\)</span> atomic orbitals, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, with overlap <span class="math inline">\(S\)</span>. If we neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the Hamiltonian is a sum of two identical one-electron Hamiltonians, and the molecular orbitals are exactly the same as those we obtained for <span class="math inline">\(\mathrm{H}_2^+\)</span>. The most important difference is that now we need to consider the spin of the two electrons. Proceeding as we did for the helium atom in chapter <a href="Atoms.html#Atoms">9</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant in which the lowest molecular orbital, the bonding <span class="math inline">\(\sigma_g\)</span> orbital of eq. <a href="Bonds.html#eq:bond8">(11.8)</a>, is used to describe two electrons with opposite spin:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function from two <span class="math inline">\(1s\)</span> atomic orbitals, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, with overlap <span class="math inline">\(S\)</span>. If we neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the Hamiltonian is a sum of two identical one-electron Hamiltonians, and the molecular orbitals are exactly the same as those we obtained for <span class="math inline">\(\mathrm{H}_2^+\)</span>. The most important difference is that now we need to consider the spin of the two electrons. Proceeding as we did for the helium atom in chapter <a href="Atoms.html#Atoms">9</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant in which the lowest molecular orbital, the bonding <span class="math inline">\(\sigma_g\)</span> orbital of eq. <a href="Bonds.html#eq:bond8">(11.8)</a>, is used to describe two electrons with opposite spin:<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
 <p><span class="math display" id="eq:bond12">\[\begin{equation}
 \Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\alpha\;\sigma_{g}\beta|=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right],
 \tag{11.12}
@@ -877,17 +878,17 @@ Figure 11.12: Schematic color maps of the frontier orbitals of CO, in a plane th
 <li>they make the electrons behave classically</li>
 </ol>
 <hr />
-<p><strong>10. Comparing H<span class="math inline">\(_2^+\)</span> and H<span class="math inline">\(_2\)</span>, which statement about their bonding descriptions is true?</strong></p>
+<p><strong>10. Why is an electron described by the bonding orbital <span class="math inline">\(\varphi_+\)</span> of H<span class="math inline">\(_2^+\)</span> lower in energy than in an isolated hydrogen atom?</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li>both are one‑electron systems with identical Hamiltonians<br />
+<li>because the two protons repel each other<br />
 </li>
-<li>H<span class="math inline">\(_2^+\)</span> is exactly solvable analytically while H<span class="math inline">\(_2\)</span> is not<br />
+<li>because <span class="math inline">\(\varphi_+\)</span> has a nodal plane between the nuclei<br />
 </li>
-<li>H<span class="math inline">\(_2^+\)</span> has one‑electron bonding described by a single MO; H<span class="math inline">\(_2\)</span> requires a two‑electron antisymmetric wave function including spin<br />
+<li>because the probability density builds up between the nuclei, where the electron is attracted by both protons<br />
 </li>
-<li>H<span class="math inline">\(_2^+\)</span> has no bound state<br />
+<li>because the overlap integral <span class="math inline">\(S\)</span> is zero<br />
 </li>
-<li>H<span class="math inline">\(_2\)</span> can be described without consideration of spin</li>
+<li>because the spin of the electron changes</li>
 </ol>
 <hr />
 <p><strong>11. According to the MO diagram of O<span class="math inline">\(_2\)</span>, what are its bond order and the number of unpaired electrons?</strong></p>
@@ -954,8 +955,8 @@ Answers (select to reveal)
 </div>
 <div class="footnotes">
 <hr />
-<ol start="18">
-<li id="fn18"><p>Compare this equation to eq. <a href="Atoms.html#eq:atom6">(9.7)</a> for the helium atom.<a href="Bonds.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p>Compare this equation to eq. <a href="Atoms.html#eq:atom6">(9.7)</a> for the helium atom.<a href="Bonds.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
