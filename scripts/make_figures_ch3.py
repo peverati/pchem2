@@ -23,11 +23,11 @@ re, im = np.cos(k * x), np.sin(k * x)
 # oblique ("cabinet") projection of the horizontal plane: depth goes up-right
 dx, dy = 0.55, 0.32
 X_im, Y_im = x + dx * im, dy * im
-fig = plt.figure(figsize=(12, 5.6))
+fig = plt.figure(figsize=(12, 7.6))
 L = x[-1]
 PAD = 1.6
 sc = 0.82 / L  # figure fraction per unit of x, matching the bottom panel
-ax = fig.add_axes([0.1 - PAD * sc, 0.45, (L + 2 * PAD) * sc, 0.42])
+ax = fig.add_axes([0.1 - PAD * sc, 0.44, (L + 2 * PAD) * sc, 0.465])
 # faint planes
 ax.add_patch(Polygon([(0, -1.25), (L, -1.25), (L, 1.25), (0, 1.25)], closed=True, fc="0.97", ec="0.8", lw=1, zorder=0))
 ax.add_patch(Polygon([(-dx, -dy), (L - dx, -dy), (L + dx, dy), (dx, dy)], closed=True, fc="0.92", ec="0.75", lw=1, zorder=0.5))
@@ -46,8 +46,8 @@ ax.annotate("", xy=(-0.3 + 1.6 * dx, 1.6 * dy), xytext=(-0.3, 0), arrowprops=dic
 ax.text(-0.3 + 1.7 * dx, 1.7 * dy + 0.05, r"Im $\psi$", color=C[3], fontsize=16)
 ax.set_xlim(-PAD, L + PAD); ax.set_ylim(-1.4, 1.75); ax.axis("off")
 h, l = ax.get_legend_handles_labels()
-ax.legend(h[::-1], l[::-1], loc="upper center", ncol=2, fontsize=13, frameon=False, bbox_to_anchor=(0.5, 1.22))
-ax2 = fig.add_axes([0.1, 0.12, 0.82, 0.26])
+ax.legend(h[::-1], l[::-1], loc="upper center", ncol=2, fontsize=13, frameon=False, bbox_to_anchor=(0.5, 1.13))
+ax2 = fig.add_axes([0.1, 0.09, 0.82, 0.29])
 ax2.fill_between(x, np.ones_like(x), color="cyan", alpha=0.5); ax2.plot(x, np.ones_like(x), color="teal", lw=2.2)
 ax2.set_ylabel(r"$|\psi(x)|^2$"); ax2.set_ylim(0, 1.6); ax2.set_xlim(0, L); ax2.set_xticks([]); ax2.grid(alpha=0.3)
 ax2.set_xlabel(r"Position $x$ (the wave continues forever in both directions)")
