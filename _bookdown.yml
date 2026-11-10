@@ -1,18 +1,18 @@
 book_filename: "pchem2"
-Rmd_files: ["index.Rmd",
-            "01_Motivation.Rmd",
-            "02_Classical.Rmd",
+rmd_files: ["index.Rmd",
+            "01_Classical.Rmd",
+            "02_Motivation.Rmd",
             "03_Schrodinger.Rmd",
             "04_Models.Rmd",
             "05_Hydrogen.Rmd",
             "06_Operators.Rmd",
             "07_Spin.Rmd",
-            "08_Postulates.Rmd",
-            "09_Weirdness.Rmd",
-            "10_Atoms.Rmd",
-            "11_Molecules.Rmd",
-            "12_Bonds.Rmd",
-            "13_Spectroscopy.Rmd",
+            "08_Weirdness.Rmd",
+            "09_Atoms.Rmd",
+            "10_Molecules.Rmd",
+            "11_Bonds.Rmd",
+            "12_Polyatomic.Rmd",
+            "13_Spectroscopy.Rmd"
               ]
 output_dir: "docs"
 language:

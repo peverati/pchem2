@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en" xml:lang="en">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>12 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2</title>
+  <title>11 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2</title>
   <meta name="description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="generator" content="bookdown 0.45 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="12 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2" />
+  <meta property="og:title" content="11 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   <meta name="github-repo" content="peverati/PChem2" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="12 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2" />
+  <meta name="twitter:title" content="11 The Chemical Bond in Diatomic Molecules | The Live Textbook of Physical Chemistry 2" />
   
   <meta name="twitter:description" content="Textbook for P-Chem 2 class at Florida Tech" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Dr. Roberto Peverati" />
 
 
-<meta name="date" content="2026-03-09" />
+<meta name="date" content="2026-11-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -61,6 +61,33 @@ MathJax.Hub.Config({
   }
 });
 </script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
 
 
 
@@ -89,41 +116,56 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-to-use-this-book"><i class="fa fa-check"></i>How to use this book</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>1</b> Introduction to Quantum Mechanics</a>
+<li class="chapter" data-level="1" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>1</b> Brief Summary of Classical Physics</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>1.1</b> Historical Context</a></li>
-<li class="chapter" data-level="1.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>1.2</b> The Ultraviolet Catastrophe</a></li>
-<li class="chapter" data-level="1.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>1.3</b> The Photoelectric Effect</a></li>
-<li class="chapter" data-level="1.4" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>1.4</b> Wave-Particle Duality</a></li>
-<li class="chapter" data-level="1.5" data-path="Motivation.html"><a href="Motivation.html#rev1"><i class="fa fa-check"></i><b>1.5</b> Chapter Review</a>
+<li class="chapter" data-level="1.1" data-path="Classical.html"><a href="Classical.html#classical-mechanics"><i class="fa fa-check"></i><b>1.1</b> Classical Mechanics</a>
 <ul>
-<li class="chapter" data-level="1.5.1" data-path="Motivation.html"><a href="Motivation.html#quest1"><i class="fa fa-check"></i><b>1.5.1</b> Study Questions</a></li>
+<li class="chapter" data-level="1.1.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>1.1.1</b> Newtonian Formulation</a></li>
+<li class="chapter" data-level="1.1.2" data-path="Classical.html"><a href="Classical.html#hamiltonian-formulation"><i class="fa fa-check"></i><b>1.1.2</b> Hamiltonian Formulation</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="Classical.html"><a href="Classical.html#coulombs-law"><i class="fa fa-check"></i><b>1.2</b> Coulomb’s Law</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="Classical.html"><a href="Classical.html#vector-form-of-coulombs-law"><i class="fa fa-check"></i><b>1.2.1</b> Vector Form of Coulomb’s Law</a></li>
+<li class="chapter" data-level="1.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>1.2.2</b> Electric field</a></li>
+<li class="chapter" data-level="1.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>1.2.3</b> Electric Potential Energy</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="Classical.html"><a href="Classical.html#ClassicalWaves"><i class="fa fa-check"></i><b>1.3</b> Classical Waves</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="Classical.html"><a href="Classical.html#describing-a-wave"><i class="fa fa-check"></i><b>1.3.1</b> Describing a wave</a></li>
+<li class="chapter" data-level="1.3.2" data-path="Classical.html"><a href="Classical.html#the-wave-equation"><i class="fa fa-check"></i><b>1.3.2</b> The wave equation</a></li>
+<li class="chapter" data-level="1.3.3" data-path="Classical.html"><a href="Classical.html#standing-waves-on-a-string"><i class="fa fa-check"></i><b>1.3.3</b> Standing waves on a string</a></li>
+<li class="chapter" data-level="1.3.4" data-path="Classical.html"><a href="Classical.html#light-as-an-electromagnetic-wave"><i class="fa fa-check"></i><b>1.3.4</b> Light as an electromagnetic wave</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="Classical.html"><a href="Classical.html#rev1"><i class="fa fa-check"></i><b>1.4</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="Classical.html"><a href="Classical.html#quest1"><i class="fa fa-check"></i><b>1.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="Classical.html"><a href="Classical.html"><i class="fa fa-check"></i><b>2</b> Brief Summary of Classical Physics</a>
+<li class="chapter" data-level="2" data-path="Motivation.html"><a href="Motivation.html"><i class="fa fa-check"></i><b>2</b> The Failure of Classical Physics</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="Classical.html"><a href="Classical.html#classical-mechanics"><i class="fa fa-check"></i><b>2.1</b> Classical Mechanics</a>
+<li class="chapter" data-level="2.1" data-path="Motivation.html"><a href="Motivation.html#historical-context"><i class="fa fa-check"></i><b>2.1</b> Historical Context</a></li>
+<li class="chapter" data-level="2.2" data-path="Motivation.html"><a href="Motivation.html#the-ultraviolet-catastrophe"><i class="fa fa-check"></i><b>2.2</b> The Ultraviolet Catastrophe</a></li>
+<li class="chapter" data-level="2.3" data-path="Motivation.html"><a href="Motivation.html#the-photoelectric-effect"><i class="fa fa-check"></i><b>2.3</b> The Photoelectric Effect</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="Classical.html"><a href="Classical.html#newtonian-formulation"><i class="fa fa-check"></i><b>2.1.1</b> Newtonian Formulation</a></li>
-<li class="chapter" data-level="2.1.2" data-path="Classical.html"><a href="Classical.html#lagrangian-formulation"><i class="fa fa-check"></i><b>2.1.2</b> Lagrangian Formulation</a></li>
-<li class="chapter" data-level="2.1.3" data-path="Classical.html"><a href="Classical.html#hamiltonian-mechanics"><i class="fa fa-check"></i><b>2.1.3</b> Hamiltonian mechanics</a></li>
+<li class="chapter" data-level="2.3.1" data-path="Motivation.html"><a href="Motivation.html#why-chemists-care-about-photons"><i class="fa fa-check"></i><b>2.3.1</b> Why chemists care about photons</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="Classical.html"><a href="Classical.html#coulombs-law"><i class="fa fa-check"></i><b>2.2</b> Coulomb’s Law</a>
+<li class="chapter" data-level="2.4" data-path="Motivation.html"><a href="Motivation.html#atomic-spectra-and-the-bohr-model"><i class="fa fa-check"></i><b>2.4</b> Atomic Spectra and the Bohr Model</a></li>
+<li class="chapter" data-level="2.5" data-path="Motivation.html"><a href="Motivation.html#wave-particle-duality"><i class="fa fa-check"></i><b>2.5</b> Wave-Particle Duality</a></li>
+<li class="chapter" data-level="2.6" data-path="Motivation.html"><a href="Motivation.html#summary"><i class="fa fa-check"></i><b>2.6</b> Summary</a></li>
+<li class="chapter" data-level="2.7" data-path="Motivation.html"><a href="Motivation.html#rev2"><i class="fa fa-check"></i><b>2.7</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="Classical.html"><a href="Classical.html#vector-form-of-the-coulombs-law-law"><i class="fa fa-check"></i><b>2.2.1</b> Vector form of the Coulomb’s Law law</a></li>
-<li class="chapter" data-level="2.2.2" data-path="Classical.html"><a href="Classical.html#electric-field"><i class="fa fa-check"></i><b>2.2.2</b> Electric field</a></li>
-<li class="chapter" data-level="2.2.3" data-path="Classical.html"><a href="Classical.html#electric-potential-energy"><i class="fa fa-check"></i><b>2.2.3</b> Electric Potential Energy</a></li>
-</ul></li>
-<li class="chapter" data-level="2.3" data-path="Classical.html"><a href="Classical.html#rev2"><i class="fa fa-check"></i><b>2.3</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="Classical.html"><a href="Classical.html#quest2"><i class="fa fa-check"></i><b>2.3.1</b> Study Questions</a></li>
+<li class="chapter" data-level="2.7.1" data-path="Motivation.html"><a href="Motivation.html#quest2"><i class="fa fa-check"></i><b>2.7.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="Schrodinger.html"><a href="Schrodinger.html"><i class="fa fa-check"></i><b>3</b> The Schrödinger Equation</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-independent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.1</b> The Time-Independent Schrödinger Equation</a></li>
 <li class="chapter" data-level="3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#the-time-dependent-schr%C3%B6dinger-equation"><i class="fa fa-check"></i><b>3.2</b> The Time-Dependent Schrödinger Equation</a></li>
-<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a></li>
+<li class="chapter" data-level="3.3" data-path="Schrodinger.html"><a href="Schrodinger.html#solution-for-the-free-particle"><i class="fa fa-check"></i><b>3.3</b> Solution for the Free Particle</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="Schrodinger.html"><a href="Schrodinger.html#what-does-the-free-particle-solution-look-like"><i class="fa fa-check"></i><b>3.3.1</b> What does the free-particle solution look like?</a></li>
+<li class="chapter" data-level="3.3.2" data-path="Schrodinger.html"><a href="Schrodinger.html#WavePackets"><i class="fa fa-check"></i><b>3.3.2</b> Wave packets</a></li>
+</ul></li>
 <li class="chapter" data-level="3.4" data-path="Schrodinger.html"><a href="Schrodinger.html#rev3"><i class="fa fa-check"></i><b>3.4</b> Chapter Review</a>
 <ul>
 <li class="chapter" data-level="3.4.1" data-path="Schrodinger.html"><a href="Schrodinger.html#quest3"><i class="fa fa-check"></i><b>3.4.1</b> Study Questions</a></li>
@@ -135,35 +177,33 @@ MathJax.Hub.Config({
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="Models.html"><a href="Models.html#wave-function-analysis"><i class="fa fa-check"></i><b>4.1.1</b> Wave function analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-particle-on-a-ring"><i class="fa fa-check"></i><b>4.2</b> The Particle on a Ring</a>
+<li class="chapter" data-level="4.2" data-path="Models.html"><a href="Models.html#the-particle-in-a-three-dimensional-box"><i class="fa fa-check"></i><b>4.2</b> The Particle in a Three-Dimensional Box</a></li>
+<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-particle-on-a-ring"><i class="fa fa-check"></i><b>4.3</b> The Particle on a Ring</a>
 <ul>
-<li class="chapter" data-level="4.2.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-1"><i class="fa fa-check"></i><b>4.2.1</b> Wave function analysis</a></li>
+<li class="chapter" data-level="4.3.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-1"><i class="fa fa-check"></i><b>4.3.1</b> Wave function analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="Models.html"><a href="Models.html#the-particle-on-a-sphere"><i class="fa fa-check"></i><b>4.3</b> The Particle on a Sphere</a>
+<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-particle-on-a-sphere"><i class="fa fa-check"></i><b>4.4</b> The Particle on a Sphere</a>
 <ul>
-<li class="chapter" data-level="4.3.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-2"><i class="fa fa-check"></i><b>4.3.1</b> Wave function analysis</a></li>
+<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-2"><i class="fa fa-check"></i><b>4.4.1</b> Wave function analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.4</b> The Harmonic Oscillator</a>
+<li class="chapter" data-level="4.5" data-path="Models.html"><a href="Models.html#the-harmonic-oscillator"><i class="fa fa-check"></i><b>4.5</b> The Harmonic Oscillator</a>
 <ul>
-<li class="chapter" data-level="4.4.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-3"><i class="fa fa-check"></i><b>4.4.1</b> Wave function analysis</a></li>
+<li class="chapter" data-level="4.5.1" data-path="Models.html"><a href="Models.html#wave-function-analysis-3"><i class="fa fa-check"></i><b>4.5.1</b> Wave function analysis</a></li>
 </ul></li>
-<li class="chapter" data-level="4.5" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.5</b> Chapter Review</a>
+<li class="chapter" data-level="4.6" data-path="Models.html"><a href="Models.html#rev4"><i class="fa fa-check"></i><b>4.6</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="4.5.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.5.1</b> Study Questions</a></li>
+<li class="chapter" data-level="4.6.1" data-path="Models.html"><a href="Models.html#quest4"><i class="fa fa-check"></i><b>4.6.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="Hydrogen.html"><a href="Hydrogen.html"><i class="fa fa-check"></i><b>5</b> The Hydrogen Atom</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#wave-function-analysis-4"><i class="fa fa-check"></i><b>5.1</b> Wave Function Analysis</a>
+<li class="chapter" data-level="5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1</b> The Radial Wave Functions</a></li>
+<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.2</b> The Angular Wave Functions</a></li>
+<li class="chapter" data-level="5.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.3</b> Building the Complete Orbital</a></li>
+<li class="chapter" data-level="5.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.4</b> Experimental Access to Orbitals</a></li>
+<li class="chapter" data-level="5.5" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.5</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="Hydrogen.html"><a href="Hydrogen.html#the-radial-wave-functions"><i class="fa fa-check"></i><b>5.1.1</b> The radial wave functions</a></li>
-<li class="chapter" data-level="5.1.2" data-path="Hydrogen.html"><a href="Hydrogen.html#the-angular-wave-functions"><i class="fa fa-check"></i><b>5.1.2</b> The angular wave functions</a></li>
-<li class="chapter" data-level="5.1.3" data-path="Hydrogen.html"><a href="Hydrogen.html#building-the-complete-orbital"><i class="fa fa-check"></i><b>5.1.3</b> Building the complete orbital</a></li>
-<li class="chapter" data-level="5.1.4" data-path="Hydrogen.html"><a href="Hydrogen.html#experimental-access-to-orbitals"><i class="fa fa-check"></i><b>5.1.4</b> Experimental Access to Orbitals</a></li>
-</ul></li>
-<li class="chapter" data-level="5.2" data-path="Hydrogen.html"><a href="Hydrogen.html#rev5"><i class="fa fa-check"></i><b>5.2</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.2.1</b> Study Questions</a></li>
+<li class="chapter" data-level="5.5.1" data-path="Hydrogen.html"><a href="Hydrogen.html#quest5"><i class="fa fa-check"></i><b>5.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="Operators.html"><a href="Operators.html"><i class="fa fa-check"></i><b>6</b> Operators and Mathematical Background</a>
@@ -180,9 +220,15 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="6.3.1" data-path="Operators.html"><a href="Operators.html#hamiltonian-operator"><i class="fa fa-check"></i><b>6.3.1</b> Hamiltonian Operator</a></li>
 <li class="chapter" data-level="6.3.2" data-path="Operators.html"><a href="Operators.html#angular-momentum-operator"><i class="fa fa-check"></i><b>6.3.2</b> Angular Momentum Operator</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.4</b> Chapter Review</a>
+<li class="chapter" data-level="6.4" data-path="Operators.html"><a href="Operators.html#TimeEvolution"><i class="fa fa-check"></i><b>6.4</b> Time Evolution</a>
 <ul>
-<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="6.4.1" data-path="Operators.html"><a href="Operators.html#stationary-states"><i class="fa fa-check"></i><b>6.4.1</b> Stationary states</a></li>
+<li class="chapter" data-level="6.4.2" data-path="Operators.html"><a href="Operators.html#superpositions-of-stationary-states"><i class="fa fa-check"></i><b>6.4.2</b> Superpositions of stationary states</a></li>
+<li class="chapter" data-level="6.4.3" data-path="Operators.html"><a href="Operators.html#conservation-of-probability"><i class="fa fa-check"></i><b>6.4.3</b> Conservation of probability</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="Operators.html"><a href="Operators.html#rev6"><i class="fa fa-check"></i><b>6.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="Operators.html"><a href="Operators.html#quest6"><i class="fa fa-check"></i><b>6.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="Spin.html"><a href="Spin.html"><i class="fa fa-check"></i><b>7</b> Spin</a>
@@ -203,102 +249,147 @@ MathJax.Hub.Config({
 <li class="chapter" data-level="7.5.1" data-path="Spin.html"><a href="Spin.html#quest7"><i class="fa fa-check"></i><b>7.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="Postulates.html"><a href="Postulates.html"><i class="fa fa-check"></i><b>8</b> Postulates of Quantum Mechanics</a>
+<li class="chapter" data-level="8" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>8</b> Quantum Weirdness</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="Postulates.html"><a href="Postulates.html#postulate-1-the-wave-function-postulate"><i class="fa fa-check"></i><b>8.1</b> Postulate 1: The Wave Function Postulate</a></li>
-<li class="chapter" data-level="8.2" data-path="Postulates.html"><a href="Postulates.html#postulate-2-experimental-observables"><i class="fa fa-check"></i><b>8.2</b> Postulate 2: Experimental Observables</a></li>
-<li class="chapter" data-level="8.3" data-path="Postulates.html"><a href="Postulates.html#postulate-3-individual-measurements"><i class="fa fa-check"></i><b>8.3</b> Postulate 3: Individual Measurements</a></li>
-<li class="chapter" data-level="8.4" data-path="Postulates.html"><a href="Postulates.html#postulate-4-expectation-values-and-collapse-of-the-wavefunction"><i class="fa fa-check"></i><b>8.4</b> Postulate 4: Expectation Values and Collapse of the Wavefunction</a></li>
-<li class="chapter" data-level="8.5" data-path="Postulates.html"><a href="Postulates.html#postulate-5-time-evolution"><i class="fa fa-check"></i><b>8.5</b> Postulate 5: Time Evolution</a></li>
-<li class="chapter" data-level="8.6" data-path="Postulates.html"><a href="Postulates.html#postulate-6-pauli-exclusion-principle"><i class="fa fa-check"></i><b>8.6</b> Postulate 6: Pauli Exclusion Principle</a></li>
-<li class="chapter" data-level="8.7" data-path="Postulates.html"><a href="Postulates.html#rev8"><i class="fa fa-check"></i><b>8.7</b> Chapter Review</a>
+<li class="chapter" data-level="8.1" data-path="Weirdness.html"><a href="Weirdness.html#the-measurement-problem-and-interpretations-of-quantum-mechanics"><i class="fa fa-check"></i><b>8.1</b> The Measurement Problem and Interpretations of Quantum Mechanics</a>
 <ul>
-<li class="chapter" data-level="8.7.1" data-path="Postulates.html"><a href="Postulates.html#quest8"><i class="fa fa-check"></i><b>8.7.1</b> Study Questions</a></li>
+<li class="chapter" data-level="8.1.1" data-path="Weirdness.html"><a href="Weirdness.html#measurement-and-the-collapse-of-the-wave-function"><i class="fa fa-check"></i><b>8.1.1</b> Measurement and the collapse of the wave function</a></li>
+<li class="chapter" data-level="8.1.2" data-path="Weirdness.html"><a href="Weirdness.html#Interpretations"><i class="fa fa-check"></i><b>8.1.2</b> Interpretations of quantum mechanics</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="Weirdness.html"><a href="Weirdness.html#the-double-slit-experiment"><i class="fa fa-check"></i><b>8.2</b> The double-slit experiment</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="Weirdness.html"><a href="Weirdness.html#the-individual-particles-experiment"><i class="fa fa-check"></i><b>8.2.1</b> The individual particles experiment</a></li>
+<li class="chapter" data-level="8.2.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>8.2.2</b> “Which way” experiment</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>8.3</b> Heisenberg’s Uncertainty Principle</a></li>
+<li class="chapter" data-level="8.4" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>8.4</b> Tunneling</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>8.4.1</b> Tunneling in chemical reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="Weirdness.html"><a href="Weirdness.html#rev8"><i class="fa fa-check"></i><b>8.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="8.5.1" data-path="Weirdness.html"><a href="Weirdness.html#quest8"><i class="fa fa-check"></i><b>8.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="Weirdness.html"><a href="Weirdness.html"><i class="fa fa-check"></i><b>9</b> Quantum Weirdness</a>
+<li class="chapter" data-level="9" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>9</b> Many-Electron Atoms</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="Weirdness.html"><a href="Weirdness.html#the-double-slit-experiment"><i class="fa fa-check"></i><b>9.1</b> The double-slit experiment</a>
+<li class="chapter" data-level="9.1" data-path="Atoms.html"><a href="Atoms.html#many-electron-wave-functions"><i class="fa fa-check"></i><b>9.1</b> Many-Electron Wave Functions</a>
 <ul>
-<li class="chapter" data-level="9.1.1" data-path="Weirdness.html"><a href="Weirdness.html#the-individual-particles-experiment"><i class="fa fa-check"></i><b>9.1.1</b> The individual particles experiment</a></li>
-<li class="chapter" data-level="9.1.2" data-path="Weirdness.html"><a href="Weirdness.html#which-way-experiment"><i class="fa fa-check"></i><b>9.1.2</b> “Which way” experiment</a></li>
+<li class="chapter" data-level="9.1.1" data-path="Atoms.html"><a href="Atoms.html#identical-particles-fermions-and-bosons"><i class="fa fa-check"></i><b>9.1.1</b> Identical particles: fermions and bosons</a></li>
+<li class="chapter" data-level="9.1.2" data-path="Atoms.html"><a href="Atoms.html#spin-orbitals-and-slater-determinants"><i class="fa fa-check"></i><b>9.1.2</b> Spin-orbitals and Slater determinants</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="Weirdness.html"><a href="Weirdness.html#heisenbergs-uncertainty-principle"><i class="fa fa-check"></i><b>9.2</b> Heisenberg’s Uncertainty Principle</a></li>
-<li class="chapter" data-level="9.3" data-path="Weirdness.html"><a href="Weirdness.html#tunneling"><i class="fa fa-check"></i><b>9.3</b> Tunneling</a>
+<li class="chapter" data-level="9.2" data-path="Atoms.html"><a href="Atoms.html#approximated-hamiltonians"><i class="fa fa-check"></i><b>9.2</b> Approximated Hamiltonians</a>
 <ul>
-<li class="chapter" data-level="9.3.1" data-path="Weirdness.html"><a href="Weirdness.html#tunneling-in-chemical-reactions"><i class="fa fa-check"></i><b>9.3.1</b> Tunneling in chemical reactions</a></li>
+<li class="chapter" data-level="9.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>9.2.1</b> Variational method</a></li>
+<li class="chapter" data-level="9.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>9.2.2</b> Approximated solution for the helium atom</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="Weirdness.html"><a href="Weirdness.html#rev9"><i class="fa fa-check"></i><b>9.4</b> Chapter Review</a>
+<li class="chapter" data-level="9.3" data-path="Atoms.html"><a href="Atoms.html#shielding-and-penetration"><i class="fa fa-check"></i><b>9.3</b> Shielding and Penetration</a></li>
+<li class="chapter" data-level="9.4" data-path="Atoms.html"><a href="Atoms.html#TermSymbols"><i class="fa fa-check"></i><b>9.4</b> Atomic States and Term Symbols</a>
 <ul>
-<li class="chapter" data-level="9.4.1" data-path="Weirdness.html"><a href="Weirdness.html#quest9"><i class="fa fa-check"></i><b>9.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="9.4.1" data-path="Atoms.html"><a href="Atoms.html#total-angular-momenta"><i class="fa fa-check"></i><b>9.4.1</b> Total angular momenta</a></li>
+<li class="chapter" data-level="9.4.2" data-path="Atoms.html"><a href="Atoms.html#term-symbols"><i class="fa fa-check"></i><b>9.4.2</b> Term symbols</a></li>
+<li class="chapter" data-level="9.4.3" data-path="Atoms.html"><a href="Atoms.html#the-terms-of-carbon"><i class="fa fa-check"></i><b>9.4.3</b> The terms of carbon</a></li>
+<li class="chapter" data-level="9.4.4" data-path="Atoms.html"><a href="Atoms.html#hunds-rules"><i class="fa fa-check"></i><b>9.4.4</b> Hund’s rules</a></li>
+<li class="chapter" data-level="9.4.5" data-path="Atoms.html"><a href="Atoms.html#spinorbit-coupling"><i class="fa fa-check"></i><b>9.4.5</b> Spin–orbit coupling</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="10" data-path="Atoms.html"><a href="Atoms.html"><i class="fa fa-check"></i><b>10</b> Many-Electron Atoms</a>
+<li class="chapter" data-level="9.5" data-path="Atoms.html"><a href="Atoms.html#electron-correlation"><i class="fa fa-check"></i><b>9.5</b> Electron Correlation</a></li>
+<li class="chapter" data-level="9.6" data-path="Atoms.html"><a href="Atoms.html#rev9"><i class="fa fa-check"></i><b>9.6</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="Atoms.html"><a href="Atoms.html#many-electron-wave-functions"><i class="fa fa-check"></i><b>10.1</b> Many-Electron Wave Functions</a></li>
-<li class="chapter" data-level="10.2" data-path="Atoms.html"><a href="Atoms.html#approximated-hamiltonians"><i class="fa fa-check"></i><b>10.2</b> Approximated Hamiltonians</a>
-<ul>
-<li class="chapter" data-level="10.2.1" data-path="Atoms.html"><a href="Atoms.html#variational-method"><i class="fa fa-check"></i><b>10.2.1</b> Variational method</a></li>
-<li class="chapter" data-level="10.2.2" data-path="Atoms.html"><a href="Atoms.html#approximated-solution-for-the-helium-atom"><i class="fa fa-check"></i><b>10.2.2</b> Approximated solution for the helium atom</a></li>
-</ul></li>
-<li class="chapter" data-level="10.3" data-path="Atoms.html"><a href="Atoms.html#rev10"><i class="fa fa-check"></i><b>10.3</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="Atoms.html"><a href="Atoms.html#quest10"><i class="fa fa-check"></i><b>10.3.1</b> Study Questions</a></li>
+<li class="chapter" data-level="9.6.1" data-path="Atoms.html"><a href="Atoms.html#quest9"><i class="fa fa-check"></i><b>9.6.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>11</b> Introduction to Molecules</a>
+<li class="chapter" data-level="10" data-path="Molecules.html"><a href="Molecules.html"><i class="fa fa-check"></i><b>10</b> Introduction to Molecules</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1</b> The Molecular Hamiltonian</a>
+<li class="chapter" data-level="10.1" data-path="Molecules.html"><a href="Molecules.html#the-molecular-hamiltonian"><i class="fa fa-check"></i><b>10.1</b> The Molecular Hamiltonian</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>11.1.1</b> Small terms in the molecular Hamiltonian</a></li>
+<li class="chapter" data-level="10.1.1" data-path="Molecules.html"><a href="Molecules.html#small-terms-in-the-molecular-hamiltonian"><i class="fa fa-check"></i><b>10.1.1</b> Small terms in the molecular Hamiltonian</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="Molecules.html"><a href="Molecules.html#the-born-oppenheimer-approximation"><i class="fa fa-check"></i><b>11.2</b> The Born-Oppenheimer Approximation</a></li>
-<li class="chapter" data-level="11.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>11.3</b> Solving the Electronic Eigenvalue Problem</a>
+<li class="chapter" data-level="10.2" data-path="Molecules.html"><a href="Molecules.html#the-bornoppenheimer-approximation"><i class="fa fa-check"></i><b>10.2</b> The Born–Oppenheimer Approximation</a>
 <ul>
-<li class="chapter" data-level="11.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartree-fock-method"><i class="fa fa-check"></i><b>11.3.1</b> The Hartree-Fock Method</a></li>
+<li class="chapter" data-level="10.2.1" data-path="Molecules.html"><a href="Molecules.html#potential-energy-surfaces"><i class="fa fa-check"></i><b>10.2.1</b> Potential energy surfaces</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="Molecules.html"><a href="Molecules.html#rev11"><i class="fa fa-check"></i><b>11.4</b> Chapter Review</a>
+<li class="chapter" data-level="10.3" data-path="Molecules.html"><a href="Molecules.html#solving-the-electronic-eigenvalue-problem"><i class="fa fa-check"></i><b>10.3</b> Solving the Electronic Eigenvalue Problem</a>
 <ul>
-<li class="chapter" data-level="11.4.1" data-path="Molecules.html"><a href="Molecules.html#quest11"><i class="fa fa-check"></i><b>11.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="10.3.1" data-path="Molecules.html"><a href="Molecules.html#the-hartreefock-method"><i class="fa fa-check"></i><b>10.3.1</b> The Hartree–Fock Method</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Diatomic Molecules</a>
+<li class="chapter" data-level="10.4" data-path="Molecules.html"><a href="Molecules.html#rev10"><i class="fa fa-check"></i><b>10.4</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a></li>
-<li class="chapter" data-level="12.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>12.2</b> The Chemical Bond in the Hydrogen Molecule</a></li>
-<li class="chapter" data-level="12.3" data-path="Bonds.html"><a href="Bonds.html#rev12"><i class="fa fa-check"></i><b>12.3</b> Chapter Review</a>
-<ul>
-<li class="chapter" data-level="12.3.1" data-path="Bonds.html"><a href="Bonds.html#quest12"><i class="fa fa-check"></i><b>12.3.1</b> Study Questions</a></li>
+<li class="chapter" data-level="10.4.1" data-path="Molecules.html"><a href="Molecules.html#quest10"><i class="fa fa-check"></i><b>10.4.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>13</b> The Chemical Bond in Polyatomic Molecules</a>
+<li class="chapter" data-level="11" data-path="Bonds.html"><a href="Bonds.html"><i class="fa fa-check"></i><b>11</b> The Chemical Bond in Diatomic Molecules</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>13.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a></li>
-<li class="chapter" data-level="13.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>13.2</b> Hartree-Fock Calculation for Water</a></li>
-<li class="chapter" data-level="13.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>13.3</b> Shapes and Energies of Molecular Orbitals</a></li>
-<li class="chapter" data-level="13.4" data-path="Poly.html"><a href="Poly.html#rev13"><i class="fa fa-check"></i><b>13.4</b> Chapter Review</a>
+<li class="chapter" data-level="11.1" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation"><i class="fa fa-check"></i><b>11.1</b> The Chemical Bond in the Hydrogen Molecular Cation</a>
 <ul>
-<li class="chapter" data-level="13.4.1" data-path="Poly.html"><a href="Poly.html#quest13"><i class="fa fa-check"></i><b>13.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="11.1.1" data-path="Bonds.html"><a href="Bonds.html#wave-function-analysis-4"><i class="fa fa-check"></i><b>11.1.1</b> Wave function analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="Bonds.html"><a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule"><i class="fa fa-check"></i><b>11.2</b> The Chemical Bond in the Hydrogen Molecule</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="Bonds.html"><a href="Bonds.html#beyond-hartreefock"><i class="fa fa-check"></i><b>11.2.1</b> Beyond Hartree–Fock</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="Bonds.html"><a href="Bonds.html#homonuclear-diatomic-molecules-of-the-second-row"><i class="fa fa-check"></i><b>11.3</b> Homonuclear Diatomic Molecules of the Second Row</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="Bonds.html"><a href="Bonds.html#building-the-molecular-orbitals"><i class="fa fa-check"></i><b>11.3.1</b> Building the molecular orbitals</a></li>
+<li class="chapter" data-level="11.3.2" data-path="Bonds.html"><a href="Bonds.html#molecular-orbital-diagrams-of-n_2-and-o_2"><i class="fa fa-check"></i><b>11.3.2</b> Molecular orbital diagrams of N<span class="math inline">\(_2\)</span> and O<span class="math inline">\(_2\)</span></a></li>
+<li class="chapter" data-level="11.3.3" data-path="Bonds.html"><a href="Bonds.html#bond-order-and-magnetic-properties"><i class="fa fa-check"></i><b>11.3.3</b> Bond order and magnetic properties</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="Bonds.html"><a href="Bonds.html#heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>11.4</b> Heteronuclear Diatomic Molecules</a></li>
+<li class="chapter" data-level="11.5" data-path="Bonds.html"><a href="Bonds.html#rev11"><i class="fa fa-check"></i><b>11.5</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="Bonds.html"><a href="Bonds.html#quest11"><i class="fa fa-check"></i><b>11.5.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>14</b> Spectroscopy</a>
+<li class="chapter" data-level="12" data-path="Poly.html"><a href="Poly.html"><i class="fa fa-check"></i><b>12</b> The Chemical Bond in Polyatomic Molecules</a>
 <ul>
-<li class="chapter" data-level="14.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>14.1</b> Rotational Spectroscopy</a>
+<li class="chapter" data-level="12.1" data-path="Poly.html"><a href="Poly.html#the-chemical-bond-in-the-water-molecule-using-a-minimal-basis"><i class="fa fa-check"></i><b>12.1</b> The Chemical Bond in the Water Molecule Using a Minimal Basis</a>
 <ul>
-<li class="chapter" data-level="14.1.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.1.1</b> Rotation of diatomic molecules</a></li>
+<li class="chapter" data-level="12.1.1" data-path="Poly.html"><a href="Poly.html#using-symmetry"><i class="fa fa-check"></i><b>12.1.1</b> Using symmetry</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>14.2</b> Vibrational Spectroscopy</a>
+<li class="chapter" data-level="12.2" data-path="Poly.html"><a href="Poly.html#hartree-fock-calculation-for-water"><i class="fa fa-check"></i><b>12.2</b> Hartree-Fock Calculation for Water</a></li>
+<li class="chapter" data-level="12.3" data-path="Poly.html"><a href="Poly.html#shapes-and-energies-of-molecular-orbitals"><i class="fa fa-check"></i><b>12.3</b> Shapes and Energies of Molecular Orbitals</a>
 <ul>
-<li class="chapter" data-level="14.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>14.2.1</b> Vibration of heteronuclear diatomic molecules</a></li>
-<li class="chapter" data-level="14.2.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>14.2.2</b> Vibration of homonuclear diatomic molecules</a></li>
+<li class="chapter" data-level="12.3.1" data-path="Poly.html"><a href="Poly.html#the-mo-diagram-of-water"><i class="fa fa-check"></i><b>12.3.1</b> The MO diagram of water</a></li>
+<li class="chapter" data-level="12.3.2" data-path="Poly.html"><a href="Poly.html#comparison-with-experiment-koopmans-theorem"><i class="fa fa-check"></i><b>12.3.2</b> Comparison with experiment: Koopmans’ theorem</a></li>
+<li class="chapter" data-level="12.3.3" data-path="Poly.html"><a href="Poly.html#canonical-and-localized-orbitals"><i class="fa fa-check"></i><b>12.3.3</b> Canonical and localized orbitals</a></li>
 </ul></li>
-<li class="chapter" data-level="14.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>14.3</b> Electronic Spectroscopy</a>
+<li class="chapter" data-level="12.4" data-path="Poly.html"><a href="Poly.html#h%C3%BCckel-theory-for-conjugated-pi-systems"><i class="fa fa-check"></i><b>12.4</b> Hückel Theory for Conjugated <span class="math inline">\(\pi\)</span> Systems</a>
 <ul>
-<li class="chapter" data-level="14.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>14.3.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+<li class="chapter" data-level="12.4.1" data-path="Poly.html"><a href="Poly.html#the-h%C3%BCckel-approximations"><i class="fa fa-check"></i><b>12.4.1</b> The Hückel approximations</a></li>
+<li class="chapter" data-level="12.4.2" data-path="Poly.html"><a href="Poly.html#ethylene-and-butadiene"><i class="fa fa-check"></i><b>12.4.2</b> Ethylene and butadiene</a></li>
+<li class="chapter" data-level="12.4.3" data-path="Poly.html"><a href="Poly.html#polyenes-and-benzene"><i class="fa fa-check"></i><b>12.4.3</b> Polyenes and benzene</a></li>
 </ul></li>
-<li class="chapter" data-level="14.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev14"><i class="fa fa-check"></i><b>14.4</b> Chapter Review</a>
+<li class="chapter" data-level="12.5" data-path="Poly.html"><a href="Poly.html#rev12"><i class="fa fa-check"></i><b>12.5</b> Chapter Review</a>
 <ul>
-<li class="chapter" data-level="14.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest14"><i class="fa fa-check"></i><b>14.4.1</b> Study Questions</a></li>
+<li class="chapter" data-level="12.5.1" data-path="Poly.html"><a href="Poly.html#quest12"><i class="fa fa-check"></i><b>12.5.1</b> Study Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="Spectroscopy.html"><a href="Spectroscopy.html"><i class="fa fa-check"></i><b>13</b> Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#SelectionRules"><i class="fa fa-check"></i><b>13.1</b> Where Selection Rules Come From</a></li>
+<li class="chapter" data-level="13.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotational-spectroscopy"><i class="fa fa-check"></i><b>13.2</b> Rotational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.2.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rotation-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.2.1</b> Rotation of diatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrational-spectroscopy"><i class="fa fa-check"></i><b>13.3</b> Vibrational Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.3.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-heteronuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.1</b> Vibration of heteronuclear diatomic molecules</a></li>
+<li class="chapter" data-level="13.3.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibration-of-homonuclear-diatomic-molecules"><i class="fa fa-check"></i><b>13.3.2</b> Vibration of homonuclear diatomic molecules</a></li>
+<li class="chapter" data-level="13.3.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#vibrations-of-polyatomic-molecules"><i class="fa fa-check"></i><b>13.3.3</b> Vibrations of polyatomic molecules</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy"><i class="fa fa-check"></i><b>13.4</b> Electronic Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.4.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electronic-spectroscopy-of-diatomic-molecules"><i class="fa fa-check"></i><b>13.4.1</b> Electronic spectroscopy of diatomic molecules</a></li>
+<li class="chapter" data-level="13.4.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#fluorescence-and-phosphorescence"><i class="fa fa-check"></i><b>13.4.2</b> Fluorescence and phosphorescence</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="Spectroscopy.html"><a href="Spectroscopy.html#magnetic-resonance-spectroscopy"><i class="fa fa-check"></i><b>13.5</b> Magnetic Resonance Spectroscopy</a>
+<ul>
+<li class="chapter" data-level="13.5.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#the-energy-of-a-spin-in-a-magnetic-field"><i class="fa fa-check"></i><b>13.5.1</b> The energy of a spin in a magnetic field</a></li>
+<li class="chapter" data-level="13.5.2" data-path="Spectroscopy.html"><a href="Spectroscopy.html#nuclear-magnetic-resonance-nmr"><i class="fa fa-check"></i><b>13.5.2</b> Nuclear magnetic resonance (NMR)</a></li>
+<li class="chapter" data-level="13.5.3" data-path="Spectroscopy.html"><a href="Spectroscopy.html#electron-spin-resonance-esr"><i class="fa fa-check"></i><b>13.5.3</b> Electron spin resonance (ESR)</a></li>
+</ul></li>
+<li class="chapter" data-level="13.6" data-path="Spectroscopy.html"><a href="Spectroscopy.html#rev13"><i class="fa fa-check"></i><b>13.6</b> Chapter Review</a>
+<ul>
+<li class="chapter" data-level="13.6.1" data-path="Spectroscopy.html"><a href="Spectroscopy.html#quest13"><i class="fa fa-check"></i><b>13.6.1</b> Study Questions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -321,27 +412,31 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="Bonds" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">12</span> The Chemical Bond in Diatomic Molecules<a href="Bonds.html#Bonds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the <span class="math inline">\(\mathrm{H}_2^+\)</span> molecular ion, and then we will move on to the simplest two-electron bond in the hydrogen molecule. To simplify the notation in this chapter, we will move away from S.I. units and use a set tailored for molecules, called <em>atomic units (a.u.)</em>. This set of units is built by setting <span class="math inline">\(\hbar=e=m_e=a_0=1\)</span>. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a>, simply becomes <span class="math inline">\(E_n=-\frac{1}{2n^2}\)</span> in the a.u. of energy, which are called Hartrees.</p>
-<div id="the-chemical-bond-in-the-hydrogen-molecular-cation" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> The Chemical Bond in the Hydrogen Molecular Cation<a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This system has only one electron, but since its geometry is not spherical (figure <a href="Bonds.html#fig:Fig1c12">12.1</a>), the TISEq cannot be solved analytically as for the hydrogen atom.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig1c12"></span>
-<img src="img/OEP_figure1.jpeg" alt="Geometry of the hydrogen molecular cation." width="70%" />
+<div id="Bonds" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">11</span> The Chemical Bond in Diatomic Molecules<a href="Bonds.html#Bonds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter we will see a couple of examples of how the concept and mathematics of quantum mechanics can be applied to understand the chemical bond in molecules. We will start from the simplest molecule, the <span class="math inline">\(\mathrm{H}_2^+\)</span> molecular ion, we will then move on to the simplest two-electron bond in the hydrogen molecule, and finally we will use the same ideas to understand the bonds in the diatomic molecules of the second row, such as <span class="math inline">\(\mathrm{N}_2\)</span> and <span class="math inline">\(\mathrm{O}_2\)</span>. To simplify the notation in this chapter, we will move away from SI units and use a set tailored for molecules, called <em>atomic units (a.u.)</em>. This set of units is built by setting <span class="math inline">\(\hbar=e=m_e=4\pi\varepsilon_0=1\)</span>, which also makes the Bohr radius, <span class="math inline">\(a_0\)</span>, the unit of length. As an example of the simplification that a.u. allows, the energy eigenvalues of the hydrogen atom, eq. <a href="Hydrogen.html#eq:HA7">(5.8)</a>, simply become <span class="math inline">\(E_n=-\frac{1}{2n^2}\)</span> in the a.u. of energy, which is called the hartree, <span class="math inline">\(E_h\)</span>. Since chemists usually prefer other energy units, we will report the most important results in kJ/mol as well, using:</p>
+<p><span class="math display" id="eq:aunits">\[\begin{equation}
+1\,E_h = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
+\tag{11.1}
+\end{equation}\]</span></p>
+<div id="the-chemical-bond-in-the-hydrogen-molecular-cation" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> The Chemical Bond in the Hydrogen Molecular Cation<a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecular-cation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This system has only one electron, but since its geometry is not spherical (figure <a href="Bonds.html#fig:Fig1c11">11.1</a>), the TISEq cannot be solved analytically as for the hydrogen atom.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig1c11"></span>
+<img src="img/OEP_figure1.jpeg" alt="Geometry of the hydrogen molecular ion: two protons A and B separated by distance R, and an electron at point P at distances r A and r B from them." width="70%" />
 <p class="caption">
-Figure 12.1: Geometry of the hydrogen molecular cation.
+Figure 11.1: Geometry of the hydrogen molecular cation.
 </p>
 </div>
-<p>The electron is at point <span class="math inline">\(P\)</span>, while the two protons are at position <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at a fixed distance <span class="math inline">\(R\)</span>. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:</p>
+<p>The electron is at point <span class="math inline">\(P\)</span>, while the two protons are at positions <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> at a fixed distance <span class="math inline">\(R\)</span>. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as:</p>
 <p><span class="math display" id="eq:bond1">\[\begin{equation}
-\hat{H} = \hat{H}_e+\frac{1}{R} = \left( -\frac{1}{2}\nabla^2-\frac{1}{\mathbf{r}_A}-\frac{1}{\mathbf{r}_B} \right)+\frac{1}{R}
-\tag{12.1}
+\hat{H} = \hat{H}_e+\frac{1}{R} = \left( -\frac{1}{2}\nabla^2-\frac{1}{r_A}-\frac{1}{r_B} \right)+\frac{1}{R}
+\tag{11.2}
 \end{equation}\]</span></p>
-<p>As a first approximation to the variational wave function, we can build the one-electron molecular orbital (MO) by linearly combine two <span class="math inline">\(1s\)</span> hydrogenic orbitals centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively:</p>
+<p>As a first approximation to the variational wave function, we can build the one-electron molecular orbital (MO) by linearly combining two <span class="math inline">\(1s\)</span> hydrogenic orbitals centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively:</p>
 <p><span class="math display" id="eq:bond2">\[\begin{equation}
 \varphi = c_1 a + c_2 b,
-\tag{12.2}
+\tag{11.3}
 \end{equation}\]</span></p>
 <p>with:</p>
 <p><span class="math display" id="eq:bond3">\[\begin{equation}
@@ -349,23 +444,23 @@ Figure 12.1: Geometry of the hydrogen molecular cation.
 a &amp;= 1s_A = \left( \psi_{100} \right)_A\\
 b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
-\tag{12.3}
+\tag{11.4}
 \end{equation}\]</span></p>
-<p>Using eq. <a href="Molecules.html#eq:molham11">(11.11)</a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The secular equation, eq. <a href="Molecules.html#eq:molham12">(11.13)</a> can then be written:</p>
+<p>Using eq. <a href="Molecules.html#eq:molham11">(10.12)</a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, eq. <a href="Molecules.html#eq:molham12">(10.14)</a>, can then be written:</p>
 <p><span class="math display" id="eq:bond4">\[\begin{equation}
 \begin{vmatrix}
-H_{aa}-E   &amp; H_{ab}-ES \\\
+H_{aa}-E   &amp; H_{ab}-ES \\
 H_{ab}-ES  &amp; H_{aa}-E
 \end{vmatrix}=0
-\tag{12.4}
-\end{equation}\]</span>\end{equation}</p>
-<p>The expansion of the determinant results into:</p>
+\tag{11.5}
+\end{equation}\]</span></p>
+<p>The expansion of the determinant results in:</p>
 <p><span class="math display" id="eq:bond5">\[\begin{equation}
 \begin{aligned}
 (H_{aa}-E)^2 &amp;=(H_{ab}-ES)^2 \\
 H_{aa}-E &amp;= \pm (H_{ab}-ES), \\
 \end{aligned}
-\tag{12.5}
+\tag{11.6}
 \end{equation}\]</span></p>
 <p>with roots:</p>
 <p><span class="math display" id="eq:bond6">\[\begin{equation}
@@ -373,91 +468,302 @@ H_{aa}-E &amp;= \pm (H_{ab}-ES), \\
 E_{+} &amp;= \frac{H_{aa}+H_{ab}}{1+S} = H_{aa}+\frac{H_{ba}-SH_{aa}}{1+S}, \\
 E_{-} &amp;= \frac{H_{aa}-H_{ab}}{1-S} = H_{aa}-\frac{H_{ba}-SH_{aa}}{1-S},
 \end{aligned}
-\tag{12.6}
+\tag{11.7}
 \end{equation}\]</span></p>
 <p>the first corresponding to the ground state, the second to the first excited state. Solving for the best value for the coefficients of the linear combination for the ground state <span class="math inline">\(E_{+}\)</span>, we obtain:</p>
 <p><span class="math display" id="eq:bond7">\[\begin{equation}
 c_1=c_2=\frac{1}{\sqrt{2+2S}},
-\tag{12.7}
+\tag{11.8}
 \end{equation}\]</span></p>
 <p>which gives the bonding MO:</p>
 <p><span class="math display" id="eq:bond8">\[\begin{equation}
 \varphi_{+}=\frac{a+b}{\sqrt{2+2S}}.
-\tag{12.8}
+\tag{11.9}
 \end{equation}\]</span></p>
 <p>Proceeding similarly for the excited state, we obtain:</p>
 <p><span class="math display" id="eq:bond9">\[\begin{equation}
 c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
-\tag{12.9}
+\tag{11.10}
 \end{equation}\]</span></p>
 <p>which gives the antibonding MO:</p>
 <p><span class="math display" id="eq:bond10">\[\begin{equation}
-\varphi_{-}=\frac{b-a}{\sqrt{2-2S}}.
-\tag{12.10}
+\varphi_{-}=\frac{a-b}{\sqrt{2-2S}}.
+\tag{11.11}
 \end{equation}\]</span></p>
-<p>These results can be summarized in the molecular orbital diagram of figure <a href="Bonds.html#fig:Fig2c12">12.2</a> We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for <span class="math inline">\(S\neq0\)</span>, the antibonding level being more repulsive and the bonding less attractive than the symmetric case occurring for <span class="math inline">\(S = 0\)</span>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c12"></span>
-<img src="img/OEP_figure2.jpeg" alt="Molecular orbitals diagram for the hydrogen molecular cation." width="70%" />
+<p>These results can be summarized in the molecular orbital diagram of figure <a href="Bonds.html#fig:Fig2c11">11.2</a>. We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for <span class="math inline">\(S\neq0\)</span>, the antibonding level being pushed up more than the bonding level is pushed down, compared with the symmetric case that would occur for <span class="math inline">\(S = 0\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig2c11"></span>
+<img src="img/OEP_figure2.jpeg" alt="Molecular orbital diagram of the hydrogen molecular ion: the 1s levels of the two atoms combine into a lower bonding orbital and a higher antibonding orbital." width="70%" />
 <p class="caption">
-Figure 12.2: Molecular orbitals diagram for the hydrogen molecular cation.
+Figure 11.2: Molecular orbitals diagram for the hydrogen molecular cation.
 </p>
 </div>
-<p>Calculating the values for the integrals and repeating these calculations for different internuclear distances, <span class="math inline">\(R\)</span>, results in the plot of figure <a href="Bonds.html#fig:Fig3c12">12.3</a> As we see from the plots, the ground state solution is negative for a vast portion of the plot. The energy is negative because the electronic energy calculated with the bonding orbital is lower than the nuclear repulsion. In other words, the creation of the molecular orbital stabilizes the molecular configuration versus the isolated fragments (one hydrogen atom and one proton).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig3c12"></span>
-<img src="img/OEP_figure3.jpeg" alt="Born-Oppenheimer energy landscape for the hydrogen molecular cation." width="70%" />
+<div id="wave-function-analysis-4" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Wave function analysis<a href="Bonds.html#wave-function-analysis-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The bonding and antibonding molecular orbitals are plotted in figure <a href="Bonds.html#fig:Fig7c11">11.3</a> as color maps in a plane that contains the two nuclei, and in figure <a href="Bonds.html#fig:Fig8c11">11.4</a> along the internuclear axis, together with their probability densities.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig7c11"></span>
+<img src="img/H2p_MO_maps.png" alt="Two color maps of the hydrogen molecular ion orbitals in a plane containing both nuclei. The bonding orbital is positive everywhere with density concentrated between the nuclei; the antibonding orbital is positive around one nucleus and negative around the other, with a nodal plane midway." width="90%" />
 <p class="caption">
-Figure 12.3: Born-Oppenheimer energy landscape for the hydrogen molecular cation.
+Figure 11.3: Color maps of the bonding (left) and antibonding (right) molecular orbitals of the hydrogen molecular cation at <span class="math inline">\(R=2\,a_0\)</span>, in a plane that contains the two nuclei (black dots). Color scheme: red (positive), blue (negative), white/light (close to zero). The nodal plane of the antibonding orbital is reported in purple.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig8c11"></span>
+<img src="img/H2p_MO_lines.png" alt="Left: bonding and antibonding orbitals of the hydrogen molecular ion along the bond axis, with the bonding orbital positive everywhere and the antibonding orbital crossing zero at the midpoint. Right: the bonding density is larger than the average atomic density between the nuclei, while the antibonding density drops to zero there." width="100%" />
+<p class="caption">
+Figure 11.4: Left: the bonding (blue) and antibonding (red) molecular orbitals of the hydrogen molecular cation along the internuclear axis at <span class="math inline">\(R=2\,a_0\)</span>, compared with the two atomic orbitals <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (gray, dashed). The node of the antibonding orbital is reported as a purple dot. Right: the corresponding probability densities, compared with the average density of the two atomic orbitals (gray, dashed). The positions of the nuclei are marked by dotted vertical lines.
+</p>
+</div>
+<p>A few important considerations can be made by analyzing these plots:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Constructive and destructive interference</strong>: the bonding orbital is the sum of the two atomic orbitals, which add up in the region between the nuclei, just like two waves that interfere constructively. The antibonding orbital is their difference, and the two atomic orbitals cancel each other exactly halfway between the nuclei, like two waves that interfere destructively.</p></li>
+<li><p><strong>Nodes</strong>: as for all the systems that we have studied so far, the higher energy state has more nodes. The bonding orbital has no nodes, while the antibonding orbital has a nodal plane perpendicular to the bond axis, where the probability of finding the electron is exactly zero.</p></li>
+<li><p><strong>Charge accumulation</strong>: the probability density of the bonding orbital is <em>larger</em> than the average density of the atomic orbitals in the region between the nuclei, at the expense of the regions close to the nuclei and behind them. An electron in this region is attracted by both nuclei at the same time, and this is the origin of the chemical bond. The antibonding orbital does the opposite: it removes probability from the region between the nuclei, leaving the two protons less shielded from each other.</p></li>
+<li><p><strong>Symmetry labels</strong>: both orbitals are symmetric with respect to rotations around the bond axis, which is why they are called <span class="math inline">\(\sigma\)</span> orbitals. If we invert any point through the center of the molecule, the bonding orbital stays the same, while the antibonding orbital changes sign. These two behaviors are labeled <span class="math inline">\(g\)</span> (from the German <em>gerade</em>, even) and <span class="math inline">\(u\)</span> (<em>ungerade</em>, odd). Therefore, the bonding orbital is called <span class="math inline">\(\sigma_g\)</span>, and the antibonding orbital <span class="math inline">\(\sigma_u\)</span>.</p></li>
+</ol>
+<p>To obtain the energy as a function of the internuclear distance, we need to calculate the values of the integrals, and to repeat the calculation for different distances, <span class="math inline">\(R\)</span>. For <span class="math inline">\(1s\)</span> orbitals, all the integrals can be calculated analytically. For example, the overlap integral is <span class="math inline">\(S=e^{-R}\left(1+R+\frac{R^2}{3}\right)\)</span>, which goes from <span class="math inline">\(1\)</span> when the two nuclei coincide to <span class="math inline">\(0\)</span> when they are far apart. The resulting energies of the two states, measured from the separated fragments (one hydrogen atom and one proton), are plotted in figure <a href="Bonds.html#fig:Fig3c11">11.5</a>. The energy of the ground state is negative for a wide range of distances, which means that, in this range, the molecule is more stable than the separated fragments. The minimum of the curve is at <span class="math inline">\(R=2.49\,a_0\)</span> and <span class="math inline">\(E_+=-0.065\,E_h=-170\text{ kJ/mol}\)</span>, which is a reasonable first approximation to the exact values (<span class="math inline">\(R=2.00\,a_0\)</span> and <span class="math inline">\(-269\text{ kJ/mol}\)</span>). The excited state, instead, is repulsive at all distances: if the electron is promoted to the antibonding orbital, the molecule falls apart.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig3c11"></span>
+<img src="img/H2p_PEC.png" alt="Energy of the hydrogen molecular ion versus internuclear distance: the bonding curve has a minimum at 2.49 bohr about 170 kilojoules per mole below the separated atoms, the antibonding curve is repulsive at all distances, and a star marks the exact minimum at 2.00 bohr." width="80%" />
+<p class="caption">
+Figure 11.5: Born–Oppenheimer potential energy curves for the ground (bonding) and first excited (antibonding) states of the hydrogen molecular cation, computed with the LCAO wave functions. The purple dot marks the LCAO minimum, and the black star the exact minimum.
 </p>
 </div>
 </div>
-<div id="the-chemical-bond-in-the-hydrogen-molecule" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> The Chemical Bond in the Hydrogen Molecule<a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig4c12"></span>
-<img src="img/OEP_figure4.jpeg" alt="Geometry of the hydrogen molecule." width="70%" />
+</div>
+<div id="the-chemical-bond-in-the-hydrogen-molecule" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> The Chemical Bond in the Hydrogen Molecule<a href="Bonds.html#the-chemical-bond-in-the-hydrogen-molecule" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig4c11"></span>
+<img src="img/OEP_figure4.jpeg" alt="Geometry of the hydrogen molecule: two protons A and B separated by distance R, and two electrons 1 and 2 with their distances to each proton and to each other." width="70%" />
 <p class="caption">
-Figure 12.4: Geometry of the hydrogen molecule.
+Figure 11.6: Geometry of the hydrogen molecule.
 </p>
 </div>
-<p>We can now examine the formation of the two-electron chemical bond in the <span class="math inline">\(\text{H}_2\)</span> molecule. With reference to figure <a href="Bonds.html#fig:Fig4c12">12.4</a>, the molecular Hamiltonian for <span class="math inline">\(\text{H}_2\)</span> in a.u. in the Born-Oppenheimer approximation will be:</p>
+<p>We can now examine the formation of the two-electron chemical bond in the <span class="math inline">\(\text{H}_2\)</span> molecule. With reference to figure <a href="Bonds.html#fig:Fig4c11">11.6</a>, the molecular Hamiltonian for <span class="math inline">\(\text{H}_2\)</span> in a.u. in the Born-Oppenheimer approximation will be:</p>
 <p><span class="math display" id="eq:bond11">\[\begin{equation}
 \begin{aligned}
 \hat{H} &amp;= \hat{H}_e+\frac{1}{R} \\
-&amp;=\left( -\frac{1}{2}\nabla^2_1-\frac{1}{\mathbf{r}_{A1}}-\frac{1}{\mathbf{r}_{B1}} \right)+\left( -\frac{1}{2}\nabla^2_2-\frac{1}{\mathbf{r}_{A2}}-\frac{1}{\mathbf{r}_{B2}} \right)+\frac{1}{r_{12}}+\frac{1}{R}\\
+&amp;=\left( -\frac{1}{2}\nabla^2_1-\frac{1}{r_{A1}}-\frac{1}{r_{B1}} \right)+\left( -\frac{1}{2}\nabla^2_2-\frac{1}{r_{A2}}-\frac{1}{r_{B2}} \right)+\frac{1}{r_{12}}+\frac{1}{R}\\
 &amp;= \hat{h}_1+\hat{h}_2+\frac{1}{r_{12}}+\frac{1}{R},
 \end{aligned}
-\tag{12.11}
+\tag{11.12}
 \end{equation}\]</span></p>
-<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function by considering two <span class="math inline">\(1s\)</span> atomic orbitals <span class="math inline">\(a(\mathbf{r}_1)\)</span> and <span class="math inline">\(b(\mathbf{r}_2)\)</span> centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, having an overlap <span class="math inline">\(S\)</span>. If we Neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the resulting Hartree-Fock equations are exactly the same as in the previous case. The most important difference, though, is that in this case we need to consider the spin of the two electrons. Proceeding similarly to what we have done for the many-electron atom in chapter <a href="Atoms.html#Atoms">10</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant of doubly occupied MOs. For the ground state, we can use the lowest energy orbital obtained from the solution of the Hartree-Fock equations, which we already obtained in eq. <a href="Bonds.html#eq:bond8">(12.8)</a>. Using a notation that is based on the symmetry of the molecule, this bonding orbital in <span class="math inline">\(\text{H}_2\)</span> is usually called <span class="math inline">\(\sigma_g\)</span>, where <span class="math inline">\(\sigma\)</span> refers to the <span class="math inline">\(\sigma\)</span> bond that forms between the two atoms. The Slater determinant for the ground state is therefore:<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
+<p>where <span class="math inline">\(\hat{h}\)</span> is the one-electron Hamiltonian. As for the previous case, we can build the first approximation to the molecular wave function from two <span class="math inline">\(1s\)</span> atomic orbitals, <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, centered at <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, respectively, with overlap <span class="math inline">\(S\)</span>. If we neglect the electron-electron repulsion term, <span class="math inline">\(\frac{1}{r_{12}}\)</span>, the Hamiltonian is a sum of two identical one-electron Hamiltonians, and the molecular orbitals are exactly the same as those we obtained for <span class="math inline">\(\mathrm{H}_2^+\)</span>. The most important difference is that now we need to consider the spin of the two electrons. Proceeding as we did for the helium atom in chapter <a href="Atoms.html#Atoms">9</a>, we can build an antisymmetric wave function for <span class="math inline">\(\text{H}_2\)</span> using a Slater determinant in which the lowest molecular orbital, the bonding <span class="math inline">\(\sigma_g\)</span> orbital of eq. <a href="Bonds.html#eq:bond8">(11.9)</a>, is used to describe two electrons with opposite spin:<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
 <p><span class="math display" id="eq:bond12">\[\begin{equation}
-\Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\phi_{\uparrow},\sigma_{g}\phi_{\downarrow}\rangle,=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \phi_{\uparrow}\phi_{\downarrow} - \phi_{\downarrow}\phi_{\uparrow} \right],
-\tag{12.12}
+\Psi (\mathbf{x}_{1},\mathbf{x}_{2})= |\sigma_{g}\alpha\;\sigma_{g}\beta|=\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) \frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right],
+\tag{11.13}
 \end{equation}\]</span></p>
 <p>where:</p>
 <p><span class="math display" id="eq:bond13">\[\begin{equation}
 \sigma_{g}=\varphi_{+}=\frac{\left(\psi_{100}\right)_A+\left(\psi_{100}\right)_B}{\sqrt{2+2S}}.
-\tag{12.13}
+\tag{11.14}
 \end{equation}\]</span></p>
-<p>The energies and the resulting MO diagram is similar to that for <span class="math inline">\(\mathrm{H}_2^+\)</span>, with the only difference that two electron will be described by the same <span class="math inline">\(\sigma_g\)</span> MO (figure <a href="Bonds.html#fig:Fig5c12">12.5</a>).</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig5c12"></span>
-<img src="img/OEP_figure5.jpeg" alt="Molecular orbitals diagram for the hydrogen molecule." width="70%" />
+<p>A Slater determinant in which each spatial orbital is used to describe two electrons with opposite spin is called a <strong>restricted Hartree–Fock (RHF)</strong> wave function, since both electrons are restricted to be described by the same spatial orbital. The energies and the resulting MO diagram are similar to those for <span class="math inline">\(\mathrm{H}_2^+\)</span>, with the only difference that two electrons are described by the same <span class="math inline">\(\sigma_g\)</span> MO (figure <a href="Bonds.html#fig:Fig5c11">11.7</a>).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig5c11"></span>
+<img src="img/OEP_figure5.jpeg" alt="Molecular orbital diagram of the hydrogen molecule: the 1s levels of the two atoms combine into a bonding sigma g orbital describing two electrons with opposite spins, and an unoccupied antibonding orbital above." width="70%" />
 <p class="caption">
-Figure 12.5: Molecular orbitals diagram for the hydrogen molecule.
+Figure 11.7: Molecular orbitals diagram for the hydrogen molecule.
 </p>
 </div>
-<p>As for the many-electron atoms, the Hartree-Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the bond distance of <span class="math inline">\(R_e=1.4\;a_0\)</span> is <span class="math inline">\(E= -0.17447\;E_h\)</span>. The variational result obtained with the wave function in eq. <a href="Bonds.html#eq:bond12">(12.12)</a> is <span class="math inline">\(E= -0.12778\;E_h\)</span>, which is <span class="math inline">\(\sim 73 \%\)</span> of the exact value. The variational coefficient (i.e., the orbital exponent, <span class="math inline">\(c_0\)</span>, that enters the <span class="math inline">\(1s\)</span> orbital formula <span class="math inline">\(\psi_{100}=\frac{1}{\pi}\exp[c_0r]\)</span>) is optimized at <span class="math inline">\(c_0=1.1695\)</span>, a value that shows how the orbitals significantly contract due to spherical polarization.</p>
-<p>If we scan the Born-Oppenheimer energy landscape using the wave function in eq. <a href="Bonds.html#eq:bond12">(12.12)</a> as we have done for <span class="math inline">\(\mathrm{H}_2^+\)</span>, we obtain the plot in figure <a href="Bonds.html#fig:Fig6c12">12.6</a>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig6c12"></span>
-<img src="img/OEP_figure6.jpeg" alt="Born-Oppenheimer energy landscape for the hydrogen molecule." width="70%" />
+<p>As for the many-electron atoms, the Hartree–Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the equilibrium distance, <span class="math inline">\(R_e=1.4\;a_0\)</span>, is <span class="math inline">\(-0.17447\;E_h\)</span> (<span class="math inline">\(-458\text{ kJ/mol}\)</span>). The variational result obtained with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.13)</a> is <span class="math inline">\(-0.12778\;E_h\)</span> (<span class="math inline">\(-335\text{ kJ/mol}\)</span>), which is about <span class="math inline">\(73 \%\)</span> of the exact value. In this calculation, the exponent of the <span class="math inline">\(1s\)</span> orbitals, <span class="math inline">\(c_0\)</span> in <span class="math inline">\(\psi_{100}=\sqrt{\frac{c_0^3}{\pi}}\exp[-c_0r]\)</span>, is used as a variational parameter, exactly as we did for helium in chapter <a href="Atoms.html#Atoms">9</a>. Its optimal value at <span class="math inline">\(R_e\)</span> is <span class="math inline">\(c_0=1.1695\)</span>, larger than <span class="math inline">\(1\)</span>: in the molecule, each electron feels the attraction of two nuclei, and the orbitals contract.</p>
+<p>If we scan the Born–Oppenheimer potential energy curve with the wave function in eq. <a href="Bonds.html#eq:bond12">(11.13)</a>, as we did for <span class="math inline">\(\mathrm{H}_2^+\)</span>, we obtain the red curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig6c11"></span>
+<img src="img/H2_HF_CI.png" alt="Potential energy curves of the hydrogen molecule from Hartree-Fock and from configuration interaction. Both have a minimum near 1.4 bohr, but the Hartree-Fock curve rises far above the energy of two separated atoms at large distance, while the configuration interaction curve correctly approaches it." width="80%" />
 <p class="caption">
-Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
+Figure 11.8: Born–Oppenheimer potential energy curves for the hydrogen molecule computed with the restricted Hartree–Fock wave function (red) and with configuration interaction (blue). Both calculations use a minimal basis of <span class="math inline">\(1s\)</span> functions with the exponent optimized at each distance (approximated with three gaussian functions, so the numbers differ slightly from those in the text). Energies are measured from two separated hydrogen atoms.
 </p>
 </div>
-<p>As we can see, the Hartree-Fock results for <span class="math inline">\(\mathrm{H}_2\)</span> describes the formation of the bond qualitatively around the bond distance (minimum of the curve), but they fail to describe the molecule at dissociation. This happens because in eq. <a href="Bonds.html#eq:bond12">(12.12)</a> both electrons are in the same orbital with opposite spin (electrons are coupled), and the orbital is shared among both centers. At dissociation, this corresponds to an erroneous ionic dissociation state where both electron are localized on either one of the two centers (this center is therefore negatively charged), with the other proton left without electrons. This is in contrast with the correct dissociation, where each electron should be localized around each center (and therefore, it should be uncoupled from the other electron). This error is once again the result of the approximations that are necessary to treat the TISEq of a many-electron system. It is obviously not a failure of quantum mechanics, and it can be easily corrected using more accurate approximations on modern computers.</p>
+<p>The Hartree–Fock results for <span class="math inline">\(\mathrm{H}_2\)</span> describe the formation of the bond qualitatively around the equilibrium distance (the minimum of the curve), but they fail completely at dissociation: instead of going to the energy of two hydrogen atoms, the curve keeps rising, and at large distances the molecule is predicted to be <em>less</em> stable than the separated atoms by hundreds of kJ/mol. To understand why, we can write the spatial part of eq. <a href="Bonds.html#eq:bond12">(11.13)</a> in terms of the atomic orbitals:</p>
+<p><span class="math display" id="eq:bond14">\[\begin{equation}
+\begin{aligned}
+\sigma_{g}(\mathbf{r}_1)\sigma_{g}(\mathbf{r}_2) &amp;= \frac{1}{2+2S}\left[a(1)+b(1)\right]\left[a(2)+b(2)\right] \\
+&amp;= \frac{1}{2+2S} \Big[ \underbrace{a(1)b(2)+b(1)a(2)}_{\text{covalent: } \mathrm{H}\!-\!\mathrm{H}} + \underbrace{a(1)a(2)+b(1)b(2)}_{\text{ionic: } \mathrm{H}^-\,\mathrm{H}^+ \text{ and } \mathrm{H}^+\,\mathrm{H}^-} \Big],
+\end{aligned}
+\tag{11.15}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(a(1)\)</span> is short for <span class="math inline">\(a(\mathbf{r}_1)\)</span>, and so on. The first two terms describe one electron on each atom, the covalent picture of the bond. The last two terms describe both electrons on the same atom, i.e., an <span class="math inline">\(\mathrm{H}^-\)</span> ion next to a bare proton. The RHF wave function always contains the two types of terms <em>with the same weight</em>, whatever the distance between the nuclei. Close to equilibrium this is not too bad, since the ionic terms give a reasonable description of the electrons being shared between the two nuclei. At dissociation, however, the correct answer is two neutral hydrogen atoms, and the ionic terms (which describe the much less stable <span class="math inline">\(\mathrm{H}^-+\mathrm{H}^+\)</span> pair) should disappear completely. The RHF wave function cannot do that, and its energy at large distance is too high.</p>
+<div id="beyond-hartreefock" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Beyond Hartree–Fock<a href="Bonds.html#beyond-hartreefock" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This failure is not a failure of quantum mechanics, but of the approximation that we used: it is an extreme example of the electron correlation that we discussed in chapter <a href="Atoms.html#Atoms">9</a>. In the RHF wave function the two electrons are described by the same orbital and move independently of each other, so there is nothing that prevents them from being found on the same atom. In reality, when the two atoms are far apart, if one electron is on atom <span class="math inline">\(A\)</span> the other is almost certainly on atom <span class="math inline">\(B\)</span>: their motions are strongly correlated.</p>
+<p>We can fix the problem by mixing into the wave function a second Slater determinant, in which both electrons are described by the antibonding orbital, <span class="math inline">\(\sigma_u=\varphi_-\)</span>:</p>
+<p><span class="math display" id="eq:bond15">\[\begin{equation}
+\Psi_\text{CI} = c_1\, |\sigma_{g}\alpha\;\sigma_{g}\beta| + c_2\, |\sigma_{u}\alpha\;\sigma_{u}\beta|,
+\tag{11.16}
+\end{equation}\]</span></p>
+<p>where the coefficients <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span> are determined with the variational method. Expanding the spatial part of the second determinant as we did in eq. <a href="Bonds.html#eq:bond14">(11.15)</a>, we obtain <span class="math inline">\(\sigma_u(1)\sigma_u(2)\propto\left[a(1)a(2)+b(1)b(2)\right]-\left[a(1)b(2)+b(1)a(2)\right]\)</span>: the same ionic and covalent terms, but with opposite relative sign. By choosing <span class="math inline">\(c_2\)</span> negative, we can therefore reduce the weight of the ionic terms. At equilibrium the variational method gives a small <span class="math inline">\(c_2\)</span>, while at dissociation it gives <span class="math inline">\(c_2=-c_1\)</span>, which removes the ionic terms completely and leaves the correct covalent wave function. The resulting potential energy curve is the blue curve in figure <a href="Bonds.html#fig:Fig6c11">11.8</a>. It goes smoothly to the energy of two hydrogen atoms at dissociation, and it is also lower than the RHF curve near the minimum, since it recovers part of the correlation energy.</p>
+<p>A wave function written as a linear combination of several Slater determinants, such as eq. <a href="Bonds.html#eq:bond15">(11.16)</a>, is called a <strong>configuration interaction (CI)</strong> wave function, and it is the simplest example of a <em>correlated method</em>. Modern quantum chemistry programs routinely use correlated methods to compute bond energies to within a few kJ/mol of the experimental values.</p>
 </div>
-<div id="rev12" class="section level2 hasAnchor" number="12.3">
-<h2><span class="header-section-number">12.3</span> Chapter Review<a href="Bonds.html#rev12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="quest12" class="section level3 hasAnchor" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Study Questions<a href="Bonds.html#quest12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="homonuclear-diatomic-molecules-of-the-second-row" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Homonuclear Diatomic Molecules of the Second Row<a href="Bonds.html#homonuclear-diatomic-molecules-of-the-second-row" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can now use what we learned for <span class="math inline">\(\mathrm{H}_2^+\)</span> and <span class="math inline">\(\mathrm{H}_2\)</span> to understand the bonds formed by the atoms of the second row of the periodic table, from lithium to neon. Here we will not perform the calculations explicitly, but we will use the same ideas to build qualitative MO diagrams, which are one of the most powerful tools that chemists have to reason about bonding.</p>
+<div id="building-the-molecular-orbitals" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Building the molecular orbitals<a href="Bonds.html#building-the-molecular-orbitals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Each second-row atom has a <span class="math inline">\(1s\)</span> core and valence electrons, described by the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals. As we saw in chapter <a href="Atoms.html#Atoms">9</a>, the core orbitals are very compact and very low in energy, so the <span class="math inline">\(1s\)</span> orbitals of the two atoms barely overlap, and they combine into a bonding and an antibonding orbital, which together describe the four core electrons and have almost the same energy as the atomic orbitals. Their effects cancel out, and we can ignore them. The interesting chemistry happens in the valence shell, where each atom contributes four atomic orbitals, <span class="math inline">\(2s\)</span>, <span class="math inline">\(2p_x\)</span>, <span class="math inline">\(2p_y\)</span>, and <span class="math inline">\(2p_z\)</span>, for a total of eight. The LCAO method of chapter <a href="Molecules.html#Molecules">10</a> would then give an <span class="math inline">\(8\times8\)</span> secular determinant. Fortunately, we do not need to solve it to understand the results, because of two simple rules:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Only orbitals with similar energies interact strongly.</strong> The difference between the energies of the atomic orbitals enters the solution of the secular determinant in the same way as <span class="math inline">\(H_{aa}\)</span> did for <span class="math inline">\(\mathrm{H}_2^+\)</span>: the closer two atomic orbitals are in energy, the more they mix and the larger the splitting between the resulting bonding and antibonding orbitals.</li>
+<li><strong>Only orbitals with the same symmetry with respect to the bond axis can interact.</strong> If we take the bond axis as <span class="math inline">\(z\)</span>, the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p_z\)</span> orbitals are symmetric with respect to rotations around the axis, and they form <span class="math inline">\(\sigma\)</span> orbitals, as we saw for hydrogen. The <span class="math inline">\(2p_x\)</span> and <span class="math inline">\(2p_y\)</span> orbitals are perpendicular to the axis, and they change sign when we rotate the molecule by <span class="math inline">\(180^\circ\)</span> around it. Their overlap with an orbital of <span class="math inline">\(\sigma\)</span> symmetry is exactly zero (the positive and negative lobes cancel), so they form separate molecular orbitals, called <span class="math inline">\(\pi\)</span> orbitals.</li>
+</ol>
+<p>Using these two rules, the <span class="math inline">\(8\times8\)</span> problem splits into smaller pieces. To a first approximation, the two <span class="math inline">\(2s\)</span> orbitals combine into a bonding <span class="math inline">\(\sigma_g 2s\)</span> and an antibonding <span class="math inline">\(\sigma_u^* 2s\)</span> orbital, exactly as the <span class="math inline">\(1s\)</span> orbitals did in <span class="math inline">\(\mathrm{H}_2\)</span>. The two <span class="math inline">\(2p_z\)</span> orbitals, which point towards each other, combine into a bonding <span class="math inline">\(\sigma_g 2p\)</span> and an antibonding <span class="math inline">\(\sigma_u^* 2p\)</span> orbital. Finally, the <span class="math inline">\(2p_x\)</span> orbitals on the two atoms combine side by side into a bonding <span class="math inline">\(\pi_u 2p\)</span> and an antibonding <span class="math inline">\(\pi_g^* 2p\)</span> orbital, and the same happens for the <span class="math inline">\(2p_y\)</span> orbitals. The two <span class="math inline">\(\pi_u\)</span> orbitals (one from <span class="math inline">\(p_x\)</span> and one from <span class="math inline">\(p_y\)</span>) have the same energy, and so do the two <span class="math inline">\(\pi_g^*\)</span> orbitals. (The asterisk is a common way of marking antibonding orbitals.) The orbitals formed by the <span class="math inline">\(2p\)</span> functions are plotted in figure <a href="Bonds.html#fig:Fig9c11">11.9</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig9c11"></span>
+<img src="img/MO_2p_maps.png" alt="Four color maps of molecular orbitals formed from 2p atomic orbitals: sigma bonding with density between the nuclei, sigma antibonding with a node between them, pi bonding with lobes above and below the bond axis, and pi antibonding with an additional node between the nuclei." width="80%" />
+<p class="caption">
+Figure 11.9: Color maps of the molecular orbitals formed by the <span class="math inline">\(2p\)</span> atomic orbitals in a homonuclear diatomic molecule, in a plane that contains the two nuclei (black dots, bond axis horizontal). Color scheme: red (positive), blue (negative). Nodal surfaces are reported in purple.
+</p>
+</div>
+<p>A few important considerations can be made by analyzing these orbitals:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong><span class="math inline">\(\sigma\)</span> versus <span class="math inline">\(\pi\)</span> overlap</strong>: the <span class="math inline">\(2p_z\)</span> orbitals point directly at each other and overlap strongly along the bond axis. The <span class="math inline">\(2p_x\)</span> orbitals overlap side by side, above and below the axis, and their overlap is smaller. As a consequence, the splitting between <span class="math inline">\(\pi_u\)</span> and <span class="math inline">\(\pi_g^*\)</span> is usually smaller than the splitting between <span class="math inline">\(\sigma_g 2p\)</span> and <span class="math inline">\(\sigma_u^* 2p\)</span>.</p></li>
+<li><p><strong>Nodes</strong>: as always, the antibonding orbitals have an extra nodal plane perpendicular to the bond axis, halfway between the nuclei. The <span class="math inline">\(\pi\)</span> orbitals also have a nodal plane that <em>contains</em> the bond axis, so the electrons in a <span class="math inline">\(\pi\)</span> bond are found above and below the axis, never on it.</p></li>
+<li><p><strong>Symmetry labels</strong>: if we invert the <span class="math inline">\(\pi\)</span> bonding orbital through the center of the molecule, the upper positive lobe goes into the lower negative lobe, so the orbital changes sign and is labeled <span class="math inline">\(u\)</span>. The <span class="math inline">\(\pi\)</span> antibonding orbital, instead, does not change sign, and is labeled <span class="math inline">\(g\)</span>. Notice that this is the opposite of what happens for <span class="math inline">\(\sigma\)</span> orbitals, where the bonding orbital is <span class="math inline">\(g\)</span> and the antibonding one is <span class="math inline">\(u\)</span>.</p></li>
+</ol>
+</div>
+<div id="molecular-orbital-diagrams-of-n_2-and-o_2" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> Molecular orbital diagrams of N<span class="math inline">\(_2\)</span> and O<span class="math inline">\(_2\)</span><a href="Bonds.html#molecular-orbital-diagrams-of-n_2-and-o_2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once we know the molecular orbitals and their approximate order, we can use them to describe the valence electrons of the molecule, at most two electrons (with opposite spins) for each orbital, starting from the lowest, and following the Pauli exclusion principle as we did for many-electron atoms. The resulting MO diagrams for <span class="math inline">\(\mathrm{N}_2\)</span> (10 valence electrons) and <span class="math inline">\(\mathrm{O}_2\)</span> (12 valence electrons) are shown in figure <a href="Bonds.html#fig:Fig10c11">11.10</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig10c11"></span>
+<img src="img/MO_N2_O2.png" alt="Molecular orbital diagrams of N2 and O2. In N2 the pi bonding orbitals lie below the sigma 2p orbital and all ten valence electrons are paired. In O2 the sigma 2p orbital lies below the pi orbitals, and the last two electrons are described by the two pi antibonding orbitals, one each, with parallel spins." width="100%" />
+<p class="caption">
+Figure 11.10: Qualitative valence molecular orbital diagrams of N<span class="math inline">\(_2\)</span> (left) and O<span class="math inline">\(_2\)</span> (right). The atomic orbitals of the two atoms are on the sides, and the molecular orbitals in the middle (blue: bonding, red: antibonding). The <span class="math inline">\(1s\)</span> core orbitals are not shown.
+</p>
+</div>
+<p>The two diagrams are not identical: in <span class="math inline">\(\mathrm{N}_2\)</span> the <span class="math inline">\(\pi_u 2p\)</span> orbitals are <em>below</em> the <span class="math inline">\(\sigma_g 2p\)</span> orbital, while in <span class="math inline">\(\mathrm{O}_2\)</span> the order is reversed. The reason is a mixing between the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p_z\)</span> orbitals, which we neglected in the simple picture above. The <span class="math inline">\(\sigma_g 2s\)</span> and <span class="math inline">\(\sigma_g 2p\)</span> orbitals have the same symmetry, so, according to the second rule, they can interact. When they do, the lower orbital is pushed further down, and the upper one, <span class="math inline">\(\sigma_g 2p\)</span>, is pushed up, above the <span class="math inline">\(\pi_u 2p\)</span> orbitals. According to the first rule, this mixing is important only if the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> atomic orbitals are close in energy. As we saw in chapter <a href="Atoms.html#Atoms">9</a>, the <span class="math inline">\(2s\)</span> orbitals are lower than the <span class="math inline">\(2p\)</span> orbitals because they penetrate the core. This effect grows across the row, as the nuclear charge increases (see the difference between <span class="math inline">\(Z_\text{eff}(2s)\)</span> and <span class="math inline">\(Z_\text{eff}(2p)\)</span> in table <a href="Atoms.html#tab:tab1c9">9.1</a>, multiplied by the larger charges). For the first part of the row (from <span class="math inline">\(\mathrm{Li}_2\)</span> to <span class="math inline">\(\mathrm{N}_2\)</span>), the <span class="math inline">\(2s\)</span>–<span class="math inline">\(2p\)</span> gap is small, the mixing is strong, and <span class="math inline">\(\pi_u 2p\)</span> is below <span class="math inline">\(\sigma_g 2p\)</span>. For <span class="math inline">\(\mathrm{O}_2\)</span> and <span class="math inline">\(\mathrm{F}_2\)</span>, the gap is large, the mixing is small, and <span class="math inline">\(\sigma_g 2p\)</span> is the lower of the two. This change in order is confirmed experimentally by photoelectron spectroscopy, which measures the energies needed to remove electrons from each orbital.</p>
+</div>
+<div id="bond-order-and-magnetic-properties" class="section level3 hasAnchor" number="11.3.3">
+<h3><span class="header-section-number">11.3.3</span> Bond order and magnetic properties<a href="Bonds.html#bond-order-and-magnetic-properties" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A simple way of summarizing an MO diagram is the <strong>bond order</strong>:</p>
+<p><span class="math display" id="eq:bondorder">\[\begin{equation}
+\text{bond order} = \frac{1}{2}\left(n_\text{bonding} - n_\text{antibonding}\right),
+\tag{11.17}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(n_\text{bonding}\)</span> and <span class="math inline">\(n_\text{antibonding}\)</span> are the numbers of electrons described by bonding and antibonding orbitals, respectively. Since each electron described by a bonding orbital stabilizes the molecule and each electron described by an antibonding orbital destabilizes it by a similar (slightly larger) amount, the bond order measures the net number of bonds between the two atoms. For <span class="math inline">\(\mathrm{H}_2\)</span> it is <span class="math inline">\(\frac{1}{2}(2-0)=1\)</span>, a single bond. From figure <a href="Bonds.html#fig:Fig10c11">11.10</a> we obtain:</p>
+<ul>
+<li><span class="math inline">\(\mathrm{N}_2\)</span>: 8 electrons described by bonding orbitals (<span class="math inline">\(\sigma_g 2s\)</span>, <span class="math inline">\(\pi_u 2p\)</span>, <span class="math inline">\(\sigma_g 2p\)</span>) and 2 by antibonding orbitals (<span class="math inline">\(\sigma_u^* 2s\)</span>), so the bond order is <span class="math inline">\(\frac{1}{2}(8-2)=3\)</span>. This is the triple bond of the Lewis structure, <span class="math inline">\(\mathrm{N}\equiv\mathrm{N}\)</span>, made of one <span class="math inline">\(\sigma\)</span> and two <span class="math inline">\(\pi\)</span> bonds.</li>
+<li><span class="math inline">\(\mathrm{O}_2\)</span>: 8 electrons described by bonding orbitals and 4 by antibonding orbitals (<span class="math inline">\(\sigma_u^* 2s\)</span> and <span class="math inline">\(\pi_g^* 2p\)</span>), so the bond order is <span class="math inline">\(\frac{1}{2}(8-4)=2\)</span>, the double bond of the Lewis structure, <span class="math inline">\(\mathrm{O}=\mathrm{O}\)</span>.</li>
+</ul>
+<p>So far, the MO diagrams agree with the Lewis structures. The most interesting difference is in the last two electrons of <span class="math inline">\(\mathrm{O}_2\)</span>. They are described by two orbitals with exactly the same energy, the two <span class="math inline">\(\pi_g^*\)</span> orbitals, and there are two ways of doing so: using the same orbital for both electrons, with opposite spins, or a different orbital for each electron. As for the many-electron atoms (where this is known as Hund’s rule), the lowest energy is obtained by describing the two electrons with different orbitals, with <em>parallel</em> spins. Electrons described by different orbitals are, on average, farther apart and repel each other less, and electrons with the same spin are kept even farther apart by the antisymmetry of the wave function, which is the origin of the exchange term that we saw in the Fock operator in chapter <a href="Molecules.html#Molecules">10</a>. Molecular oxygen, therefore, has two unpaired electrons. Since each unpaired electron behaves like a tiny magnet (chapter <a href="Spin.html#Spin">7</a>), the molecule is attracted by a magnetic field: it is <strong>paramagnetic</strong>. This can be seen in a classic demonstration, in which liquid oxygen poured between the poles of a strong magnet stays suspended between them, while liquid nitrogen, which has no unpaired electrons (it is <em>diamagnetic</em>), flows straight through. The Lewis structure of <span class="math inline">\(\mathrm{O}_2\)</span>, which pairs all electrons, cannot explain this behavior, while the MO diagram predicts it naturally. This was one of the earliest and most convincing successes of molecular orbital theory.</p>
+<p>The same procedure can be applied to all the homonuclear diatomic molecules of the second row, and the results are summarized in table <a href="Bonds.html#tab:tab1c11">11.1</a>.</p>
+<table>
+<caption><span id="tab:tab1c11">Table 11.1: </span>Bond orders predicted by MO theory for the homonuclear diatomic molecules of the second row, compared with approximate experimental bond lengths and bond energies.</caption>
+<colgroup>
+<col width="9%" />
+<col width="19%" />
+<col width="12%" />
+<col width="20%" />
+<col width="18%" />
+<col width="22%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Molecule</th>
+<th align="center">Valence electrons</th>
+<th align="center">Bond order</th>
+<th align="center">Unpaired electrons</th>
+<th align="center">Bond length (pm)</th>
+<th align="center">Bond energy (kJ/mol)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Li<span class="math inline">\(_2\)</span></td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">267</td>
+<td align="center">105</td>
+</tr>
+<tr class="even">
+<td align="left">Be<span class="math inline">\(_2\)</span></td>
+<td align="center">4</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">—</td>
+<td align="center">~10</td>
+</tr>
+<tr class="odd">
+<td align="left">B<span class="math inline">\(_2\)</span></td>
+<td align="center">6</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">159</td>
+<td align="center">289</td>
+</tr>
+<tr class="even">
+<td align="left">C<span class="math inline">\(_2\)</span></td>
+<td align="center">8</td>
+<td align="center">2</td>
+<td align="center">0</td>
+<td align="center">124</td>
+<td align="center">599</td>
+</tr>
+<tr class="odd">
+<td align="left">N<span class="math inline">\(_2\)</span></td>
+<td align="center">10</td>
+<td align="center">3</td>
+<td align="center">0</td>
+<td align="center">110</td>
+<td align="center">942</td>
+</tr>
+<tr class="even">
+<td align="left">O<span class="math inline">\(_2\)</span></td>
+<td align="center">12</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">121</td>
+<td align="center">494</td>
+</tr>
+<tr class="odd">
+<td align="left">F<span class="math inline">\(_2\)</span></td>
+<td align="center">14</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">142</td>
+<td align="center">154</td>
+</tr>
+<tr class="even">
+<td align="left">Ne<span class="math inline">\(_2\)</span></td>
+<td align="center">16</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">—</td>
+<td align="center">~0</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how the experimental data follow the predicted bond orders: as the bond order increases from <span class="math inline">\(\mathrm{Li}_2\)</span> to <span class="math inline">\(\mathrm{N}_2\)</span>, the bonds get shorter and stronger, and as it decreases from <span class="math inline">\(\mathrm{N}_2\)</span> to <span class="math inline">\(\mathrm{F}_2\)</span>, they get longer and weaker. The molecules with a bond order of zero, <span class="math inline">\(\mathrm{Be}_2\)</span> and <span class="math inline">\(\mathrm{Ne}_2\)</span>, are not chemically bound (they exist only as extremely weak van der Waals complexes at very low temperatures). Notice also that MO theory correctly predicts that <span class="math inline">\(\mathrm{B}_2\)</span>, like <span class="math inline">\(\mathrm{O}_2\)</span>, is paramagnetic: because of the <span class="math inline">\(2s\)</span>–<span class="math inline">\(2p\)</span> mixing, its last two electrons are described by the two degenerate <span class="math inline">\(\pi_u\)</span> orbitals, with parallel spins.</p>
+</div>
+</div>
+<div id="heteronuclear-diatomic-molecules" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Heteronuclear Diatomic Molecules<a href="Bonds.html#heteronuclear-diatomic-molecules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When the two atoms of a diatomic molecule are different, the two rules that we used to build the molecular orbitals still apply, but with an important difference: the atomic orbitals of the two atoms no longer have the same energy. Recall from chapter <a href="Atoms.html#Atoms">9</a> that the energy of an atomic orbital depends on the effective nuclear charge, which increases across a row of the periodic table. Orbitals of more electronegative atoms are therefore lower in energy. This has two consequences, which we can understand by going back to the <span class="math inline">\(2\times2\)</span> secular determinant of <span class="math inline">\(\mathrm{H}_2^+\)</span>, with <span class="math inline">\(H_{aa}\neq H_{bb}\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Smaller splitting.</strong> The larger the energy difference between the two atomic orbitals, the less they mix, and the smaller the stabilization of the bonding orbital. Orbitals that are very far apart in energy do not mix at all, even if they have the same symmetry.</li>
+<li><strong>Unequal sharing.</strong> The bonding orbital is closer in energy to the lower atomic orbital, and it has a larger coefficient on the more electronegative atom. The antibonding orbital, instead, resembles the higher atomic orbital, and it is concentrated on the less electronegative atom. In other words, an electron described by the bonding orbital is more likely to be found near the more electronegative atom: the bond is <strong>polar</strong>.</li>
+</ol>
+<p>These ideas are illustrated by the MO diagrams of hydrogen fluoride and carbon monoxide in figure <a href="Bonds.html#fig:Fig11c11">11.11</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig11c11"></span>
+<img src="img/MO_HF_CO.png" alt="Two molecular orbital diagrams. Left, HF: the hydrogen 1s level at minus 13.6 eV on the left and the much lower fluorine 2s and 2p levels on the right. The fluorine 2s and two of the 2p orbitals remain nonbonding; the hydrogen 1s and fluorine 2p z combine into a bonding 3 sigma orbital close to the fluorine level and an antibonding 4 sigma orbital close to the hydrogen level. Right, CO: carbon levels on the left are higher than oxygen levels on the right; the occupied orbitals 3 sigma, 4 sigma, and 1 pi lie closer to the oxygen levels, the highest occupied 5 sigma orbital is a carbon lone pair, and the lowest unoccupied orbital, 2 pi star, lies closer to the carbon levels." width="100%" />
+<p class="caption">
+Figure 11.11: Qualitative valence molecular orbital diagrams of HF (left) and CO (right). The atomic levels are placed at the approximate energies of the valence atomic orbitals, and the occupied molecular orbitals of CO at the negative of the experimental ionization energies (blue: bonding, red: antibonding, black: nonbonding).
+</p>
+</div>
+<p><strong>Hydrogen fluoride.</strong> The <span class="math inline">\(1s\)</span> orbital of hydrogen (<span class="math inline">\(-13.6\;\text{eV}\)</span>) is much higher in energy than the valence orbitals of fluorine, whose large effective nuclear charge pulls the <span class="math inline">\(2s\)</span> orbital down to about <span class="math inline">\(-40\;\text{eV}\)</span> and the <span class="math inline">\(2p\)</span> orbitals to about <span class="math inline">\(-19\;\text{eV}\)</span>. By symmetry, the hydrogen <span class="math inline">\(1s\)</span> orbital can only combine with the fluorine orbitals of <span class="math inline">\(\sigma\)</span> symmetry, <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p_z\)</span>, and the <span class="math inline">\(2s\)</span> is too low in energy to mix significantly. The bond is therefore formed by the hydrogen <span class="math inline">\(1s\)</span> and the fluorine <span class="math inline">\(2p_z\)</span> orbitals, which give a bonding orbital (<span class="math inline">\(3\sigma\)</span>) much closer to the fluorine level, and therefore mostly localized on fluorine, and an antibonding orbital (<span class="math inline">\(4\sigma^*\)</span>) mostly localized on hydrogen. The fluorine <span class="math inline">\(2s\)</span> (<span class="math inline">\(2\sigma\)</span>) and the two fluorine <span class="math inline">\(2p\)</span> orbitals perpendicular to the bond (<span class="math inline">\(1\pi\)</span>) have no partner on hydrogen, and they remain <em>nonbonding</em>: they are the three lone pairs of the Lewis structure of HF. The eight valence electrons are described by <span class="math inline">\(2\sigma\)</span>, <span class="math inline">\(3\sigma\)</span>, and <span class="math inline">\(1\pi\)</span>, so the bond order is <span class="math inline">\(\frac{1}{2}(2-0)=1\)</span>, a single bond. Since the two bonding electrons are found mostly near fluorine, the molecule has a large dipole moment (<span class="math inline">\(1.83\;\text{D}\)</span>), with the negative end on fluorine.</p>
+<p><strong>Carbon monoxide.</strong> CO has the same number of valence electrons as <span class="math inline">\(\mathrm{N}_2\)</span> (it is <em>isoelectronic</em> with it), and its MO diagram looks similar: the bond order is <span class="math inline">\(\frac{1}{2}(8-2)=3\)</span>, a triple bond, and CO is, in fact, one of the strongest bonds known (<span class="math inline">\(1{,}072\;\text{kJ/mol}\)</span>). The orbitals of oxygen are lower in energy than those of carbon, so the bonding orbitals (<span class="math inline">\(3\sigma\)</span>, <span class="math inline">\(4\sigma\)</span>, and <span class="math inline">\(1\pi\)</span>) are concentrated on oxygen, and the antibonding orbitals on carbon. Two orbitals deserve special attention, since they control the chemistry of CO. They are shown in figure <a href="Bonds.html#fig:Fig12c11">11.12</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Fig12c11"></span>
+<img src="img/CO_frontier.png" alt="Two color maps around a carbon and an oxygen nucleus. Left: the 5 sigma orbital is a large positive lobe on the outer side of the carbon atom, away from the oxygen, with a small negative region near oxygen. Right: the 2 pi star orbital has a large two-lobed shape perpendicular to the bond on carbon, positive above and negative below, and a smaller lobe pair of opposite signs on oxygen." width="85%" />
+<p class="caption">
+Figure 11.12: Schematic color maps of the frontier orbitals of CO, in a plane that contains the bond axis (red: positive, blue: negative). Left: the highest occupied orbital, <span class="math inline">\(5\sigma\)</span>, is a lone pair on carbon pointing away from oxygen. Right: the lowest unoccupied orbital, <span class="math inline">\(2\pi^*\)</span>, has its largest lobes on carbon. The maps are drawn from simple combinations of atomic orbitals and are meant to show the qualitative shape only.
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li><strong>The HOMO (<span class="math inline">\(5\sigma\)</span>)</strong> is mostly a carbon orbital, a combination of carbon <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p_z\)</span> that points <em>away</em> from the oxygen atom. It is essentially a lone pair on carbon, the same lone pair that appears in the Lewis structure <span class="math inline">\(:\mathrm{C}\equiv\mathrm{O}:\)</span>.</li>
+<li><strong>The LUMO (<span class="math inline">\(2\pi^*\)</span>)</strong> is a pair of antibonding <span class="math inline">\(\pi\)</span> orbitals, which, as the antibonding orbitals of a polar bond, have their largest lobes on carbon.</li>
+</ol>
+<p>These two orbitals explain why CO binds to metal atoms through carbon, and not through the more electronegative oxygen. In metal carbonyls, such as <span class="math inline">\(\mathrm{Ni(CO)_4}\)</span>, and in the binding of CO to the iron atom of hemoglobin (which is why CO is so toxic), the carbon lone pair donates electron density to an empty orbital on the metal (<span class="math inline">\(\sigma\)</span> donation), while filled <span class="math inline">\(d\)</span> orbitals of the metal donate electron density back into the <span class="math inline">\(2\pi^*\)</span> orbitals of CO (<span class="math inline">\(\pi\)</span> back-donation). Both interactions involve orbitals that are concentrated on carbon, so carbon is the end that binds. The back-donation also weakens the C–O bond, since it adds electron density to an antibonding orbital, which is observed experimentally as a lower C–O vibrational frequency in metal carbonyls (around <span class="math inline">\(2{,}000\;\text{cm}^{-1}\)</span>) than in free CO (<span class="math inline">\(2{,}143\;\text{cm}^{-1}\)</span>, chapter <a href="Spectroscopy.html#Spectroscopy">13</a>).</p>
+<p>The MO picture also explains a famous puzzle: despite the much larger electronegativity of oxygen, the dipole moment of CO is very small (<span class="math inline">\(0.11\;\text{D}\)</span>), and its negative end is on <em>carbon</em>. The polarization of the bonding orbitals towards oxygen is almost exactly compensated by the carbon lone pair (<span class="math inline">\(5\sigma\)</span>), which places electron density on the outer side of the carbon atom.</p>
+<p>These qualitative MO diagrams are the starting point of molecular orbital theory, but they only work so well for diatomic molecules. For a molecule with more than two atoms, such as water, we cannot easily guess the order and shape of the molecular orbitals, and we need to solve the Hartree–Fock equations explicitly, as we will do in the next chapter.</p>
+</div>
+<div id="rev11" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Chapter Review<a href="Bonds.html#rev11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="quest11" class="section level3 hasAnchor" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> Study Questions<a href="Bonds.html#quest11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>1. In the H<span class="math inline">\(_2^+\)</span> treatment, which one‑electron molecular Hamiltonian (in atomic units, and using the Born–Oppenheimer approximation) is used?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a}\)</span><br />
@@ -508,7 +814,7 @@ Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
 <li>two purely antibonding orbitals</li>
 </ol>
 <hr />
-<p><strong>5. What is the physical meaning of the negative total energy of the ground state for a range of <span class="math inline">\(r\)</span> in H<span class="math inline">\(_2^+\)</span>?</strong></p>
+<p><strong>5. What is the physical meaning of the negative total energy of the ground state for a range of <span class="math inline">\(R\)</span> in H<span class="math inline">\(_2^+\)</span>?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>the molecular ion is unstable relative to separated H + H<span class="math inline">\(^+\)</span><br />
 </li>
@@ -529,29 +835,29 @@ Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
 </li>
 <li><span class="math inline">\(\hat{k}_n + \hat{k}_e\)</span> only<br />
 </li>
-<li><span class="math inline">\(1/r_{12} + 1/r\)</span> only<br />
+<li><span class="math inline">\(1/r_{12} + 1/R\)</span> only<br />
 </li>
-<li><span class="math inline">\(\hat{h}_1 + \hat{h}_2 + 1/r_{12} + 1/r\)</span></li>
+<li><span class="math inline">\(\hat{h}_1 + \hat{h}_2 + 1/r_{12} + 1/R\)</span></li>
 </ol>
 <hr />
-<p><strong>7. For the ground state of H<span class="math inline">\(_2\)</span> in the minimal MO picture used in this chapter, which orbital and occupancy pattern are used?</strong></p>
+<p><strong>7. For the ground state of H<span class="math inline">\(_2\)</span> in the minimal MO picture used in this chapter, how are the two electrons described?</strong></p>
 <ol style="list-style-type: lower-alpha">
-<li>two electrons singly occupying <span class="math inline">\(\varphi_+\)</span> and <span class="math inline">\(\varphi_-\)</span> with parallel spins<br />
+<li>one electron described by <span class="math inline">\(\varphi_+\)</span> and one by <span class="math inline">\(\varphi_-\)</span>, with parallel spins<br />
 </li>
-<li>both electrons in the antibonding MO <span class="math inline">\(\varphi_-\)</span> with opposite spin<br />
+<li>both electrons described by the antibonding MO <span class="math inline">\(\varphi_-\)</span>, with opposite spin<br />
 </li>
-<li>one electron in <span class="math inline">\(\sigma_g\)</span>, one in a core orbital<br />
+<li>one electron described by <span class="math inline">\(\sigma_g\)</span>, and one by a core orbital<br />
 </li>
-<li>both electrons in the bonding MO <span class="math inline">\(\sigma_g = \varphi_+\)</span> with opposite spin<br />
+<li>both electrons described by the bonding MO <span class="math inline">\(\sigma_g = \varphi_+\)</span>, with opposite spin<br />
 </li>
-<li>both electrons in a localized atomic orbital on a single nucleus</li>
+<li>both electrons described by a localized atomic orbital on a single nucleus</li>
 </ol>
 <hr />
-<p><strong>8. why does the RHF‑type description of H<span class="math inline">\(_2\)</span> fail at large H–H separations (dissociation limit)?</strong></p>
+<p><strong>8. Why does the RHF‑type description of H<span class="math inline">\(_2\)</span> fail at large H–H separations (dissociation limit)?</strong></p>
 <ol style="list-style-type: lower-alpha">
 <li>it breaks spin symmetry<br />
 </li>
-<li>it forces both electrons to remain in the same delocalized orbital shared between centers, rather than localizing one electron on each atom<br />
+<li>it forces both electrons to be described by the same delocalized orbital shared between centers, rather than localizing one electron on each atom<br />
 </li>
 <li>it neglects nuclear repulsion<br />
 </li>
@@ -564,7 +870,7 @@ Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
 <ol style="list-style-type: lower-alpha">
 <li>they destroy the bond minimum<br />
 </li>
-<li>they force both electrons into antibonding orbitals<br />
+<li>they describe both electrons with antibonding orbitals<br />
 </li>
 <li>they improve the description of the potential‑energy curve, particularly the dissociation region<br />
 </li>
@@ -586,20 +892,72 @@ Figure 12.6: Born-Oppenheimer energy landscape for the hydrogen molecule.
 <li>H<span class="math inline">\(_2\)</span> can be described without consideration of spin</li>
 </ol>
 <hr />
-<p>Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(&#39;reveal-inline-content&#39;).style.display=&#39;inline&#39;; this.style.display=&#39;none&#39;;">
-Click to reveal
-</span>
-<span id="reveal-inline-content" style="display: none;">
-1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c
-</span></p>
+<p><strong>11. According to the MO diagram of O<span class="math inline">\(_2\)</span>, what are its bond order and the number of unpaired electrons?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>bond order 2, no unpaired electrons<br />
+</li>
+<li>bond order 2, two unpaired electrons<br />
+</li>
+<li>bond order 3, no unpaired electrons<br />
+</li>
+<li>bond order 1, two unpaired electrons<br />
+</li>
+<li>bond order 2.5, one unpaired electron</li>
+</ol>
+<hr />
+<p><strong>12. Why is the <span class="math inline">\(\sigma_g 2p\)</span> orbital above the <span class="math inline">\(\pi_u 2p\)</span> orbitals in N<span class="math inline">\(_2\)</span>, but below them in O<span class="math inline">\(_2\)</span>?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>because N<span class="math inline">\(_2\)</span> has a triple bond<br />
+</li>
+<li>because the <span class="math inline">\(2p\)</span> orbitals of nitrogen are not degenerate<br />
+</li>
+<li>because the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals of nitrogen are closer in energy, so the <span class="math inline">\(\sigma_g\)</span> orbitals from <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> mix more strongly<br />
+</li>
+<li>because O<span class="math inline">\(_2\)</span> is paramagnetic<br />
+</li>
+<li>because <span class="math inline">\(\pi\)</span> orbitals always overlap more than <span class="math inline">\(\sigma\)</span> orbitals</li>
+</ol>
+<hr />
+<p><strong>13. In the HF molecule, why are the two <span class="math inline">\(1\pi\)</span> orbitals nonbonding?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>because they have the wrong energy to mix with the fluorine <span class="math inline">\(2s\)</span><br />
+</li>
+<li>because there is no orbital of <span class="math inline">\(\pi\)</span> symmetry on hydrogen to combine with them<br />
+</li>
+<li>because they are antibonding<br />
+</li>
+<li>because hydrogen has no electrons<br />
+</li>
+<li>because the bond in HF is ionic</li>
+</ol>
+<hr />
+<p><strong>14. Why does carbon monoxide bind to metal atoms through carbon rather than through oxygen?</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>because carbon is more electronegative than oxygen<br />
+</li>
+<li>because the HOMO (<span class="math inline">\(5\sigma\)</span>) is a lone pair on carbon and the LUMO (<span class="math inline">\(2\pi^*\)</span>) is concentrated on carbon<br />
+</li>
+<li>because the bonding orbitals of CO are concentrated on carbon<br />
+</li>
+<li>because oxygen has no lone pairs in CO<br />
+</li>
+<li>because the C–O bond order is 2</li>
+</ol>
+<hr />
+<details>
+<summary>
+Answers (select to reveal)
+</summary>
+1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c, 11.b, 12.c, 13.b, 14.b
+</details>
 
 </div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="28">
-<li id="fn28"><p>Compare this equation to <a href="Atoms.html#eq:atom6">(10.6)</a> for the helium atom.<a href="Bonds.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<ol start="18">
+<li id="fn18"><p>Compare this equation to eq. <a href="Atoms.html#eq:atom6">(9.7)</a> for the helium atom.<a href="Bonds.html#fnref18" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -639,7 +997,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/peverati/pchem2/edit/master/12_Bonds.Rmd",
+    "link": "https://github.com/peverati/pchem2/edit/master/11_Bonds.Rmd",
     "text": "Edit"
   },
   "history": {

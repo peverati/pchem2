@@ -1,10 +1,10 @@
 # The Schrödinger Equation {#Schrodinger}
 
-In 1925, Erwin Schrödinger and Werner Heisenberg independently developed the new quantum theory. Schrödinger's method involves partial differential equations, whereas Heisenberg's method employs matrices; however, a year later the two methods were shown to be mathematically equivalent. Most textbooks begin with Schrödinger's equation, since it seems to have a better physical interpretation via the classical wave equation. Indeed, the Schrödinger equation can be viewed as a form of the wave equation applied to matter waves.
+As we saw in the previous chapter, quantum mechanics was born in two different forms: Heisenberg's matrix mechanics and Schrödinger's wave mechanics. The two are mathematically equivalent, and we are free to start from either one. In this textbook, we start from Schrödinger's version, because it is written in the language of waves and differential equations, which is closer to the physics and mathematics that chemistry students already know. Schrödinger's main idea was simple: if matter behaves as a wave, as de Broglie had proposed, there should be a wave equation that describes it.
 
 ## The Time-Independent Schrödinger Equation
 
-We can start the derivation of the single-particle time-independent Schrödinger equation (TISEq) from the equation that describes the motion of a wave in classical mechanics:
+The Schrödinger equation cannot be derived from classical physics, since it contains new physics that classical physics does not have. We can, however, make it *plausible*, by combining the mathematical description of a classical wave with de Broglie's relations. We start from the simplest wave that travels through space, the complex plane wave moving along $x$ that we introduced in section \@ref(ClassicalWaves):
 
 \begin{equation}
 \psi(x,t)=\exp[i(kx-\omega t)],
@@ -23,7 +23,7 @@ where $x$ is the position, $t$ is time, $k=\frac{2\pi}{\lambda}$ is the wave vec
 
 where we have used the fact that $i^2=-1$. 
 
-Assuming that particles behaves as wave—as proven by de Broglie's we can now use the first of de Broglie's equation, eq. \@ref(eq:wp1b), we can replace $k=\frac{p}{\hbar}$ to obtain:
+Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie's equations, eq. \@ref(eq:wp1b), to replace $k=\frac{p}{\hbar}$ and obtain:
 
 \begin{equation}
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
@@ -65,20 +65,19 @@ which can then be rearranged to the famous **time-independent Schrödinger equat
 (\#eq:TISEq)
 \end{equation}
 
-A two-body problem can also be treated by this equation if the mass $m$ is replaced with a reduced mass $\mu = \frac{m_1 m_2}{m_1+m_2}$.
+Remember that we did not *prove* this equation: we only showed that it is consistent with a plane wave and with de Broglie's relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass $m$. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace $m$ with the *reduced mass* of the two particles, $\mu = \frac{m_1 m_2}{m_1+m_2}$.
 
 
 ## The Time-Dependent Schrödinger Equation
 
-Unfortunately, the analogy with the classical wave equation that allowed us to obtain the TISEq in the previous section cannot be extended to the time domain by considering the equation that involves the partial first derivative with respect to time. Schrödinger himself presented his time-independent equation first, and then went back and postulated the more general time-dependent equation. We are following here the same strategy and just give the time-independent variable as a postulate. The single-particle time-dependent Schrödinger equation is:
+The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:
 
 \begin{equation}
 i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
 (\#eq:TDSEq)
 \end{equation}
 
-where $V \in \mathbb{R}^{n}$ represents the potential energy of the system.
-Obviously, the time-dependent equation can be used to derive the time-independent equation. If we write the wavefunction as a product of spatial and temporal terms,  $\psi(x, t) = \psi(x) f(t)$, then equation \@ref(eq:TDSEq) becomes: 
+where $V(x)$ is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, $\psi(x, t) = \psi(x) f(t)$. Replacing it into eq. \@ref(eq:TDSEq), we obtain: 
 
 \begin{equation}
 \psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
@@ -92,7 +91,7 @@ which can be rearranged to:
 (\#eq:TDSEq3)
 \end{equation}
 
-Since the left-hand side of eq. \@ref(eq:TDSEq3) is a function of $t$ only and the right hand side is a function of $x$ only, the two sides must equal a constant. If we tentatively designate this constant $E$ (since the right-hand side clearly must have the dimensions of energy), then we extract two ordinary differential equations, namely:
+The left-hand side of eq. \@ref(eq:TDSEq3) depends only on $t$, and the right-hand side only on $x$. The only way for the two to be equal for every value of $x$ and $t$ is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant $E$. We have now split one partial differential equation into two ordinary differential equations:
 
 \begin{equation}
 \frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
@@ -106,21 +105,21 @@ E \psi(x).
 (\#eq:TDSEq5)
 \end{equation}
 
-The latter equation is the TISEq. The former equation is easily solved to yield 
+The second equation is the TISEq that we obtained in the previous section. The first one is easy to solve, giving:
 
 \begin{equation}
 f(t) = e^{-iEt / \hbar}
 (\#eq:TDSEq6)
 \end{equation}
 
-The solutions of eq. \@ref(eq:TDSEq6), $f(t)$, are purely oscillatory, since $f(t)$ never changes in magnitude. Thus if:
+This function oscillates in time, but its magnitude is always equal to one. Therefore, if the wave function is:
 
 \begin{equation}
 \psi(x, t) = \psi(x) \exp\left(\frac{-iEt}{\hbar}\right),
 (\#eq:TDSEq6b)
 \end{equation}
 
-then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phase factor of constant magnitude. There are some interesting consequences of this. First of all, the quantity  $\vert \psi(x, t) \vert^2$ is time independent, as we can easily show: 
+then $\psi(x, t)$ differs from $\psi(x)$ only by a phase factor that rotates in the complex plane without changing its size. As a consequence, the quantity $\vert \psi(x, t) \vert^2$ does not depend on time:
 
 \begin{equation}
 \vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
@@ -128,8 +127,7 @@ then the total wave function  $\psi(x, t)$ differs from $\psi(x)$ only by a phas
 (\#eq:TDSEq7)
 \end{equation}
 
-Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called stationary states. The state  $\psi(x, t)$ is "stationary," but the particle it describes is not!
-Of course eq. \@ref(eq:TDSEq6) represents only a particular solution to the time-dependent Schrödinger equation. The general solution is much more complicated, and the factorization of the temporal part is often not possible. The total wave function, however, can in general be written as a linear combination (superposition) of simpler terms, such as:^[This sections was adapted in part from Prof. C. David Sherrill's A Brief Review of Elementary Quantum Chemistry Notes available [here](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html).]
+Wave functions of the form of eq. \@ref(eq:TDSEq6b) are called **stationary states**. As we will see in chapter \@ref(Models), $\vert \psi(x, t) \vert^2$ is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a *superposition*) of stationary states:^[A similar presentation can be found in Prof. C. David Sherrill's [A Brief Review of Elementary Quantum Chemistry](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html) notes.]
 
 \begin{equation}
 \psi({\bf r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i({\bf r}).
@@ -151,7 +149,7 @@ This equation can be rearranged to:
 (\#eq:FP2)
 \end{equation}
 
-which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$ multiplied by the function itself. The most general solution to this problem is the function:
+which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, $- \frac{2mE}{\hbar^2}$, multiplied by the function itself. The most general solution to this problem is the function:
 
 \begin{equation}
 \psi(x) = A \exp(ikx)+B \exp(-ikx),
@@ -182,7 +180,59 @@ E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 (\#eq:FP6)
 \end{equation}
 
-which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).
+which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in eq. \@ref(eq:FP3) solves the Schrödinger equation for the free particle, it is called an *eigenfunction* (or *eigenstate*) of the TISEq. The energy result of eq. \@ref(eq:FP6) is called an *eigenvalue* of the TISEq. Notice that, since $k$ is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of $E$ are acceptable).
+
+### What does the free-particle solution look like?
+
+Let's take a closer look at one of the solutions in eq. \@ref(eq:FP3), for example the one with $B=0$, which describes a particle moving to the right with momentum $p=\hbar k$:
+
+\begin{equation}
+\psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
+(\#eq:FP7)
+\end{equation}
+
+Its real and imaginary parts are a cosine and a sine wave with wavelength $\lambda=2\pi/k=h/p$, exactly as de Broglie proposed. As we will see in chapter \@ref(Models), however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, $|\psi(x)|^2$, which gives the probability of finding the particle at position $x$. For a plane wave, $|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2$, a constant. The plane wave and its probability density are shown in figure \@ref(fig:fig1c3).
+
+```{r fig1c3, out.width='85%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Top: real (solid) and imaginary (dashed) parts of a free-particle plane wave. Bottom: its probability density, which is the same everywhere.', fig.alt='Top: a cosine wave and a sine wave of the same wavelength, shifted by a quarter wavelength, representing the real and imaginary parts of a plane wave. Bottom: the probability density is a flat horizontal band, the same at every position.'}
+knitr::include_graphics('./img/FP_planewave.png')
+```
+
+This result is surprising. A particle described by a plane wave has a perfectly well-defined momentum, $p=\hbar k$, but its probability density is the same everywhere: the particle is equally likely to be found at any point in the universe. The plane wave also extends forever in both directions, so the total probability, $\int|\psi|^2dx$, is infinite, and the wave function cannot be normalized. A real particle, such as an electron shot from an electron gun, is certainly found somewhere in a limited region of space. Plane waves, therefore, are useful mathematical solutions, but they do not describe real particles by themselves.
+
+### Wave packets {#WavePackets}
+
+The way out of this problem comes from the principle of superposition that we discussed for classical waves in chapter \@ref(Classical). Since the Schrödinger equation is linear, any sum of plane waves with different wave vectors is also a solution. When we add waves with slightly different wavelengths, they interfere constructively in some regions and destructively in others. This is illustrated in figure \@ref(fig:fig2c3).
+
+```{r fig2c3, out.width='85%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Superposition of plane waves with wave vectors close to $k_0$. Two waves produce a periodic pattern of beats; five waves produce sharper but still repeating bunches; many waves with a smooth distribution of wave vectors produce a single, localized wave packet. The thin line is the real part of the sum, and the thick line is its envelope.', fig.alt='Three panels. Top: the sum of two plane waves shows regularly repeating beats. Middle: the sum of five waves shows sharper bunches that still repeat. Bottom: the sum of 41 waves shows a single localized bunch of oscillations, with the wave canceling to zero everywhere else.'}
+knitr::include_graphics('./img/FP_buildpacket.png')
+```
+
+Two waves produce a regular pattern of *beats*, the same effect that musicians use to tune two instruments to the same note. As we add more waves, with wave vectors spread over a range around a central value $k_0$, the regions of constructive interference get narrower and farther apart. With a continuous distribution of wave vectors, only one region of constructive interference survives, and the waves cancel each other everywhere else. The result is a **wave packet**: a wave that oscillates with wavelength close to $2\pi/k_0$ inside a limited region of space, and is essentially zero outside of it. Mathematically, a wave packet is written as a continuous sum (an integral) of plane waves, each with its own amplitude, $\phi(k)$:
+
+\begin{equation}
+\Psi(x,t) = \int \phi(k)\, e^{i\left(kx - \omega(k) t\right)} dk, \qquad \omega(k) = \frac{E}{\hbar} = \frac{\hbar k^2}{2m},
+(\#eq:FP8)
+\end{equation}
+
+where each plane wave evolves in time with its own frequency, as we saw in eq. \@ref(eq:TDSEq6b). Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.
+
+A few important considerations can be made by analyzing wave packets:
+
+1. **The price of localization**: to build a packet that is localized in space, we need plane waves with a *range* of wave vectors, and therefore a range of momenta, $p=\hbar k$. The more localized we want the particle to be, the wider the range of momenta that we need, as shown in figure \@ref(fig:fig3c3). A plane wave is the extreme case of a perfectly defined momentum and a completely undefined position. A very narrow packet has a well-defined position, but a very uncertain momentum. For the packets in figure \@ref(fig:fig3c3), the widths in position, $\Delta x$, and in wave vector, $\Delta k$, are related by $\Delta x\,\Delta k = \frac{1}{2}$, or, using $p=\hbar k$, $\Delta x\,\Delta p = \frac{\hbar}{2}$. This is a first glimpse of the Heisenberg uncertainty principle, which we will discuss in chapter \@ref(Weirdness).
+
+```{r fig3c3, out.width='90%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='A narrow (top) and a wide (bottom) wave packet in position space (left), together with the corresponding distributions of wave vectors, and therefore of momenta (right). The more localized the particle is in space, the broader its distribution of momenta.', fig.alt='Two rows. Top: a narrow wave packet with few oscillations, paired with a broad distribution of wave vectors around k zero. Bottom: a wide wave packet with many oscillations, paired with a narrow distribution of wave vectors around k zero.'}
+knitr::include_graphics('./img/FP_uncertainty.png')
+```
+
+2. **Motion**: the wave packet moves, as shown in figure \@ref(fig:fig4c3). Its center travels with velocity $v=\frac{d\omega}{dk}=\frac{\hbar k_0}{m}=\frac{p_0}{m}$, which is exactly the velocity of a classical particle with momentum $p_0$. (This velocity is called the *group velocity*. The individual crests inside the packet move at a different speed, but the packet as a whole, and with it the probability of finding the particle, moves at the classical speed.) This is how classical motion emerges from quantum mechanics: a well-localized wave packet follows the trajectory of a classical particle.
+
+```{r fig4c3, out.width='95%', fig.show='hold', echo=FALSE, fig.align = 'center', fig.cap='Probability density of a free-particle wave packet at four different times (in units where $\\hbar=m=1$). The center of the packet (purple triangles) moves at the classical velocity $p/m$, while the packet spreads out.', fig.alt='Four bell-shaped probability curves at increasing times, each centered farther to the right at equal steps, showing the packet moving at constant speed. Each later curve is lower and wider than the previous one, showing the packet spreading.'}
+knitr::include_graphics('./img/FP_packet_motion.png')
+```
+
+3. **Spreading**: as the packet moves, it also gets wider. Each plane wave in the packet travels at a slightly different speed (faster for larger $k$, slower for smaller $k$), so the packet gradually falls apart. For a packet with initial width $\Delta x_0$, the width doubles in a time of about $2m\Delta x_0^2/\hbar$. For an electron localized within $1\;\text{Å}$, this time is about $10^{-16}\;\text{s}$: free electrons do not stay localized for long. For a baseball localized within one micrometer, it is about $10^{15}$ years, far longer than the age of the universe. This is why macroscopic objects always appear to be in a definite position, while quantum particles do not.
+
+The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in chapter \@ref(Operators).
 
 ## Chapter Review {#rev3}
 ### Study Questions {#quest3}
@@ -207,7 +257,7 @@ e. Twice the lighter mass
 
 ---
 
-**3. Which of the following equation is the correct time-dependent Schrödinger equation for one particle?**
+**3. Which of the following equations is the correct time-dependent Schrödinger equation for one particle?**
 
 a. $i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
 b. $\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
@@ -218,7 +268,7 @@ e. $\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2
 
 ---
 
-**4. For which of the following wave functions we can separate the variables in the Schrödinger equation?**
+**4. For which of the following wave functions can we separate the variables in the Schrödinger equation?**
 
 a. $\psi(x,t) = \psi(x) + f(t)$  
 b. $\psi(x,t) = \psi(x) f(t)$  
@@ -254,7 +304,7 @@ a. It is a constant nonzero value
 b. It is infinite at the origin  
 c. It is zero everywhere  
 d. It is linear in $x$  
-d. It is harmonic in $x^2$  
+e. It is harmonic in $x^2$  
 
 ---
 
@@ -288,17 +338,34 @@ e. Free-particle energies do not depend on mass
 
 ---
 
+**11. Why can a single plane wave, $\psi(x)=Ae^{ikx}$, not describe a real localized particle?**
+
+a. because it does not solve the Schrödinger equation  
+b. because its momentum is undefined  
+c. because its probability density is the same everywhere, so it cannot be normalized  
+d. because it has a negative energy  
+e. because it is not complex  
+
+---
+
+**12. What happens to the spread of momenta in a wave packet if we make the packet narrower in space?**
+
+a. it becomes narrower  
+b. it becomes broader  
+c. it does not change  
+d. it becomes zero  
+e. the packet stops moving  
+
+---
+
 `r if (knitr::is_html_output()) {
   '
-  Answers: <span style="cursor: pointer; color: blue; text-decoration: underline;" onclick="document.getElementById(\'reveal-inline-content\').style.display=\'inline\'; this.style.display=\'none\';">
-    Click to reveal
-  </span>
-  <span id="reveal-inline-content" style="display: none;">
-            1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d
-  </span>
+  <details><summary>Answers (select to reveal)</summary>
+  1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d, 11.c, 12.b
+  </details>
   '
 } else if (knitr::is_latex_output()) {
-  'Answers: 1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d'
+  'Answers: 1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d, 11.c, 12.b'
 }`
 
 

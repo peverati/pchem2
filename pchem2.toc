@@ -1,122 +1,167 @@
+\babel@toc {english}{}\relax 
 \contentsline {chapter}{Preface}{vi}{chapter*.2}%
 \contentsline {section}{How to use this book}{vii}{section*.3}%
-\contentsline {chapter}{\numberline {1}Introduction to Quantum Mechanics}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Historical Context}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}The Ultraviolet Catastrophe}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}The Photoelectric Effect}{4}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Wave-Particle Duality}{6}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Chapter Review}{7}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Study Questions}{7}{subsection.1.5.1}%
-\contentsline {chapter}{\numberline {2}Brief Summary of Classical Physics}{11}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Classical Mechanics}{11}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Newtonian Formulation}{11}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Lagrangian Formulation}{13}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Hamiltonian mechanics}{16}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Coulomb's Law}{18}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Vector form of the Coulomb's Law law}{19}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Electric field}{19}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Electric Potential Energy}{20}{subsection.2.2.3}%
-\contentsline {section}{\numberline {2.3}Chapter Review}{20}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Study Questions}{20}{subsection.2.3.1}%
-\contentsline {chapter}{\numberline {3}The Schrödinger Equation}{25}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The Time-Independent Schrödinger Equation}{25}{section.3.1}%
-\contentsline {section}{\numberline {3.2}The Time-Dependent Schrödinger Equation}{27}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Solution for the Free Particle}{28}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Chapter Review}{30}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Study Questions}{30}{subsection.3.4.1}%
-\contentsline {chapter}{\numberline {4}Analytically Solvable Models}{35}{chapter.4}%
-\contentsline {section}{\numberline {4.1}The Particle in a Box}{35}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Wave function analysis}{38}{subsection.4.1.1}%
-\contentsline {section}{\numberline {4.2}The Particle on a Ring}{40}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Wave function analysis}{44}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}The Particle on a Sphere}{47}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Wave function analysis}{49}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}The Harmonic Oscillator}{57}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Wave function analysis}{58}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Chapter Review}{60}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Study Questions}{60}{subsection.4.5.1}%
-\contentsline {chapter}{\numberline {5}The Hydrogen Atom}{65}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Wave Function Analysis}{67}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}The radial wave functions}{67}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}The angular wave functions}{72}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Building the complete orbital}{72}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Experimental Access to Orbitals}{80}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Chapter Review}{80}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Study Questions}{80}{subsection.5.2.1}%
-\contentsline {chapter}{\numberline {6}Operators and Mathematical Background}{85}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Operators in Quantum Mechanics}{85}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Basic Properties of Operators}{86}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Linear Operators}{87}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Hermitian Operators}{88}{subsection.6.1.3}%
-\contentsline {section}{\numberline {6.2}Eigenfunctions and Eigenvalues}{89}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Common Operators in Quantum Mechanics}{91}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Hamiltonian Operator}{91}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Angular Momentum Operator}{92}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}Chapter Review}{94}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Study Questions}{94}{subsection.6.4.1}%
-\contentsline {chapter}{\numberline {7}Spin}{99}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Stern-Gerlach Experiment}{99}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Sequential Stern-Gerlach Experiments}{101}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Spin Operators}{102}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Operators Commuting with the Hamiltonian}{104}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Free particle: translational symmetry and momentum}{104}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Particle in a box: broken translation, introduction to parity}{105}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Particle on a ring and on a sphere: rotational symmetry}{106}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Hydrogen atom: Coulomb symmetry}{107}{subsection.7.4.4}%
-\contentsline {subsection}{\numberline {7.4.5}Spin and many‑electron atoms: why spin matters}{107}{subsection.7.4.5}%
-\contentsline {section}{\numberline {7.5}Chapter Review}{108}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Study Questions}{108}{subsection.7.5.1}%
-\contentsline {chapter}{\numberline {8}Postulates of Quantum Mechanics}{113}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Postulate 1: The Wave Function Postulate}{114}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Postulate 2: Experimental Observables}{114}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Postulate 3: Individual Measurements}{114}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Postulate 4: Expectation Values and Collapse of the Wavefunction}{115}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Postulate 5: Time Evolution}{116}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Postulate 6: Pauli Exclusion Principle}{116}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Chapter Review}{118}{section.8.7}%
-\contentsline {subsection}{\numberline {8.7.1}Study Questions}{118}{subsection.8.7.1}%
-\contentsline {chapter}{\numberline {9}Quantum Weirdness}{123}{chapter.9}%
-\contentsline {section}{\numberline {9.1}The double-slit experiment}{123}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}The individual particles experiment}{124}{subsection.9.1.1}%
-\contentsline {subsection}{\numberline {9.1.2}``Which way'' experiment}{125}{subsection.9.1.2}%
-\contentsline {section}{\numberline {9.2}Heisenberg's Uncertainty Principle}{126}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Tunneling}{128}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Tunneling in chemical reactions}{130}{subsection.9.3.1}%
-\contentsline {section}{\numberline {9.4}Chapter Review}{131}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Study Questions}{131}{subsection.9.4.1}%
-\contentsline {chapter}{\numberline {10}Many-Electron Atoms}{137}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Many-Electron Wave Functions}{137}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Approximated Hamiltonians}{140}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Variational method}{140}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Approximated solution for the helium atom}{142}{subsection.10.2.2}%
-\contentsline {section}{\numberline {10.3}Chapter Review}{144}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Study Questions}{144}{subsection.10.3.1}%
-\contentsline {chapter}{\numberline {11}Introduction to Molecules}{149}{chapter.11}%
-\contentsline {section}{\numberline {11.1}The Molecular Hamiltonian}{149}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Small terms in the molecular Hamiltonian}{150}{subsection.11.1.1}%
-\contentsline {section}{\numberline {11.2}The Born-Oppenheimer Approximation}{150}{section.11.2}%
-\contentsline {section}{\numberline {11.3}Solving the Electronic Eigenvalue Problem}{152}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}The Hartree-Fock Method}{153}{subsection.11.3.1}%
-\contentsline {section}{\numberline {11.4}Chapter Review}{154}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Study Questions}{154}{subsection.11.4.1}%
-\contentsline {chapter}{\numberline {12}The Chemical Bond in Diatomic Molecules}{159}{chapter.12}%
-\contentsline {section}{\numberline {12.1}The Chemical Bond in the Hydrogen Molecular Cation}{159}{section.12.1}%
-\contentsline {section}{\numberline {12.2}The Chemical Bond in the Hydrogen Molecule}{162}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Chapter Review}{166}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Study Questions}{166}{subsection.12.3.1}%
-\contentsline {chapter}{\numberline {13}The Chemical Bond in Polyatomic Molecules}{171}{chapter.13}%
-\contentsline {section}{\numberline {13.1}The Chemical Bond in the Water Molecule Using a Minimal Basis}{171}{section.13.1}%
-\contentsline {section}{\numberline {13.2}Hartree-Fock Calculation for Water}{173}{section.13.2}%
-\contentsline {section}{\numberline {13.3}Shapes and Energies of Molecular Orbitals}{179}{section.13.3}%
-\contentsline {section}{\numberline {13.4}Chapter Review}{182}{section.13.4}%
-\contentsline {subsection}{\numberline {13.4.1}Study Questions}{182}{subsection.13.4.1}%
-\contentsline {chapter}{\numberline {14}Spectroscopy}{187}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Rotational Spectroscopy}{188}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Rotation of diatomic molecules}{188}{subsection.14.1.1}%
-\contentsline {section}{\numberline {14.2}Vibrational Spectroscopy}{191}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Vibration of heteronuclear diatomic molecules}{191}{subsection.14.2.1}%
-\contentsline {subsection}{\numberline {14.2.2}Vibration of homonuclear diatomic molecules}{193}{subsection.14.2.2}%
-\contentsline {section}{\numberline {14.3}Electronic Spectroscopy}{194}{section.14.3}%
-\contentsline {subsection}{\numberline {14.3.1}Electronic spectroscopy of diatomic molecules}{195}{subsection.14.3.1}%
-\contentsline {section}{\numberline {14.4}Chapter Review}{196}{section.14.4}%
-\contentsline {subsection}{\numberline {14.4.1}Study Questions}{196}{subsection.14.4.1}%
+\contentsline {chapter}{\numberline {1}Brief Summary of Classical Physics}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Classical Mechanics}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Newtonian Formulation}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Hamiltonian Formulation}{4}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}Coulomb's Law}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Vector Form of Coulomb's Law}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Electric field}{7}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Electric Potential Energy}{8}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Classical Waves}{8}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Describing a wave}{8}{subsection.1.3.1}%
+\contentsline {subsubsection}{A useful mathematical tool: complex waves}{10}{section*.5}%
+\contentsline {subsection}{\numberline {1.3.2}The wave equation}{10}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Standing waves on a string}{11}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Light as an electromagnetic wave}{14}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Chapter Review}{14}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Study Questions}{14}{subsection.1.4.1}%
+\contentsline {chapter}{\numberline {2}The Failure of Classical Physics}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Historical Context}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}The Ultraviolet Catastrophe}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The Photoelectric Effect}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Why chemists care about photons}{25}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Atomic Spectra and the Bohr Model}{26}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Wave-Particle Duality}{29}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Summary}{30}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Chapter Review}{31}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Study Questions}{31}{subsection.2.7.1}%
+\contentsline {chapter}{\numberline {3}The Schrödinger Equation}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The Time-Independent Schrödinger Equation}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The Time-Dependent Schrödinger Equation}{39}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Solution for the Free Particle}{41}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}What does the free-particle solution look like?}{42}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Wave packets}{43}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Chapter Review}{47}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Study Questions}{47}{subsection.3.4.1}%
+\contentsline {chapter}{\numberline {4}Analytically Solvable Models}{53}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Particle in a Box}{53}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Wave function analysis}{57}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}The Particle in a Three-Dimensional Box}{59}{section.4.2}%
+\contentsline {section}{\numberline {4.3}The Particle on a Ring}{60}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Wave function analysis}{64}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}The Particle on a Sphere}{66}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Wave function analysis}{70}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}The Harmonic Oscillator}{77}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Wave function analysis}{78}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Chapter Review}{80}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Study Questions}{80}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {5}The Hydrogen Atom}{85}{chapter.5}%
+\contentsline {section}{\numberline {5.1}The Radial Wave Functions}{87}{section.5.1}%
+\contentsline {section}{\numberline {5.2}The Angular Wave Functions}{92}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Building the Complete Orbital}{93}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Experimental Access to Orbitals}{100}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Chapter Review}{100}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Study Questions}{100}{subsection.5.5.1}%
+\contentsline {chapter}{\numberline {6}Operators and Mathematical Background}{105}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Operators in Quantum Mechanics}{105}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Basic Properties of Operators}{106}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Linear Operators}{107}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Hermitian Operators}{108}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}Eigenfunctions and Eigenvalues}{109}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Common Operators in Quantum Mechanics}{111}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Hamiltonian Operator}{112}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Angular Momentum Operator}{113}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Time Evolution}{116}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Stationary states}{116}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Superpositions of stationary states}{116}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Conservation of probability}{118}{subsection.6.4.3}%
+\contentsline {section}{\numberline {6.5}Chapter Review}{118}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Study Questions}{118}{subsection.6.5.1}%
+\contentsline {chapter}{\numberline {7}Spin}{123}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Stern-Gerlach Experiment}{123}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sequential Stern-Gerlach Experiments}{127}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Spin Operators}{129}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Operators Commuting with the Hamiltonian}{131}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Free particle: translational symmetry and momentum}{131}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Particle in a box: broken translation, introduction to parity}{132}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Particle on a ring and on a sphere: rotational symmetry}{133}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Hydrogen atom: Coulomb symmetry}{134}{subsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.4.5}Spin and many‑electron atoms: why spin matters}{135}{subsection.7.4.5}%
+\contentsline {section}{\numberline {7.5}Chapter Review}{135}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Study Questions}{135}{subsection.7.5.1}%
+\contentsline {chapter}{\numberline {8}Quantum Weirdness}{141}{chapter.8}%
+\contentsline {section}{\numberline {8.1}The Measurement Problem and Interpretations of Quantum Mechanics}{141}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Measurement and the collapse of the wave function}{141}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Interpretations of quantum mechanics}{142}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}The double-slit experiment}{145}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}The individual particles experiment}{146}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}``Which way'' experiment}{147}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Heisenberg's Uncertainty Principle}{149}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Tunneling}{151}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Tunneling in chemical reactions}{153}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}Chapter Review}{155}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Study Questions}{155}{subsection.8.5.1}%
+\contentsline {chapter}{\numberline {9}Many-Electron Atoms}{161}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Many-Electron Wave Functions}{162}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Identical particles: fermions and bosons}{162}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Spin-orbitals and Slater determinants}{163}{subsection.9.1.2}%
+\contentsline {section}{\numberline {9.2}Approximated Hamiltonians}{166}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Variational method}{166}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Approximated solution for the helium atom}{168}{subsection.9.2.2}%
+\contentsline {subsubsection}{Optimizing the effective nuclear charge}{169}{section*.48}%
+\contentsline {section}{\numberline {9.3}Shielding and Penetration}{172}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Atomic States and Term Symbols}{174}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Total angular momenta}{174}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Term symbols}{175}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}The terms of carbon}{176}{subsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.4.4}Hund's rules}{179}{subsection.9.4.4}%
+\contentsline {subsection}{\numberline {9.4.5}Spin--orbit coupling}{181}{subsection.9.4.5}%
+\contentsline {section}{\numberline {9.5}Electron Correlation}{181}{section.9.5}%
+\contentsline {section}{\numberline {9.6}Chapter Review}{182}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Study Questions}{182}{subsection.9.6.1}%
+\contentsline {chapter}{\numberline {10}Introduction to Molecules}{187}{chapter.10}%
+\contentsline {section}{\numberline {10.1}The Molecular Hamiltonian}{187}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Small terms in the molecular Hamiltonian}{188}{subsection.10.1.1}%
+\contentsline {section}{\numberline {10.2}The Born--Oppenheimer Approximation}{189}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Potential energy surfaces}{191}{subsection.10.2.1}%
+\contentsline {section}{\numberline {10.3}Solving the Electronic Eigenvalue Problem}{193}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}The Hartree--Fock Method}{194}{subsection.10.3.1}%
+\contentsline {subsubsection}{The Fock operator}{195}{section*.59}%
+\contentsline {subsubsection}{The self-consistent-field procedure}{196}{section*.60}%
+\contentsline {section}{\numberline {10.4}Chapter Review}{197}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Study Questions}{197}{subsection.10.4.1}%
+\contentsline {chapter}{\numberline {11}The Chemical Bond in Diatomic Molecules}{201}{chapter.11}%
+\contentsline {section}{\numberline {11.1}The Chemical Bond in the Hydrogen Molecular Cation}{202}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Wave function analysis}{205}{subsection.11.1.1}%
+\contentsline {section}{\numberline {11.2}The Chemical Bond in the Hydrogen Molecule}{207}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Beyond Hartree--Fock}{211}{subsection.11.2.1}%
+\contentsline {section}{\numberline {11.3}Homonuclear Diatomic Molecules of the Second Row}{212}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Building the molecular orbitals}{212}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Molecular orbital diagrams of N\(_2\) and O\(_2\)}{214}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Bond order and magnetic properties}{216}{subsection.11.3.3}%
+\contentsline {section}{\numberline {11.4}Heteronuclear Diatomic Molecules}{217}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Chapter Review}{221}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Study Questions}{221}{subsection.11.5.1}%
+\contentsline {chapter}{\numberline {12}The Chemical Bond in Polyatomic Molecules}{227}{chapter.12}%
+\contentsline {section}{\numberline {12.1}The Chemical Bond in the Water Molecule Using a Minimal Basis}{227}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Using symmetry}{229}{subsection.12.1.1}%
+\contentsline {section}{\numberline {12.2}Hartree-Fock Calculation for Water}{230}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Shapes and Energies of Molecular Orbitals}{236}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}The MO diagram of water}{238}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Comparison with experiment: Koopmans' theorem}{239}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Canonical and localized orbitals}{240}{subsection.12.3.3}%
+\contentsline {section}{\numberline {12.4}Hückel Theory for Conjugated \(\pi \) Systems}{243}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}The Hückel approximations}{243}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}Ethylene and butadiene}{244}{subsection.12.4.2}%
+\contentsline {subsection}{\numberline {12.4.3}Polyenes and benzene}{246}{subsection.12.4.3}%
+\contentsline {section}{\numberline {12.5}Chapter Review}{248}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Study Questions}{248}{subsection.12.5.1}%
+\contentsline {chapter}{\numberline {13}Spectroscopy}{255}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Where Selection Rules Come From}{256}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Rotational Spectroscopy}{258}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Rotation of diatomic molecules}{258}{subsection.13.2.1}%
+\contentsline {section}{\numberline {13.3}Vibrational Spectroscopy}{261}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Vibration of heteronuclear diatomic molecules}{262}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Vibration of homonuclear diatomic molecules}{265}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Vibrations of polyatomic molecules}{266}{subsection.13.3.3}%
+\contentsline {section}{\numberline {13.4}Electronic Spectroscopy}{268}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Electronic spectroscopy of diatomic molecules}{269}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Fluorescence and phosphorescence}{270}{subsection.13.4.2}%
+\contentsline {section}{\numberline {13.5}Magnetic Resonance Spectroscopy}{273}{section.13.5}%
+\contentsline {subsection}{\numberline {13.5.1}The energy of a spin in a magnetic field}{273}{subsection.13.5.1}%
+\contentsline {subsection}{\numberline {13.5.2}Nuclear magnetic resonance (NMR)}{274}{subsection.13.5.2}%
+\contentsline {subsection}{\numberline {13.5.3}Electron spin resonance (ESR)}{275}{subsection.13.5.3}%
+\contentsline {section}{\numberline {13.6}Chapter Review}{276}{section.13.6}%
+\contentsline {subsection}{\numberline {13.6.1}Study Questions}{276}{subsection.13.6.1}%
