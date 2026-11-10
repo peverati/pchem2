@@ -90,7 +90,7 @@ This experiment shows that spin is not a classical property. The Stern-Gerlach a
 
 
 ## Spin Operators
-The mathematics of quantum mechanics tells us that $\hat{S}_z$ and $\hat{S}_x$ do not commute. When two operators do not commute, the two measurable quantities that are associated with them cannot be known at the same time. 
+The mathematics of quantum mechanics tells us that $\hat{S}_z$ and $\hat{S}_x$ do not commute. As we saw in section \@ref(CommutingOperators), when two operators do not commute, in general there is no state in which both of the associated quantities have a definite value: they cannot be known at the same time. 
 
 In 3-dimensional space there are three directions that are orthogonal to each other $\left\{x,y,z\right\}$. Thus, we can define a third spin projection operator along the $y$ direction, $\hat{S}_y$, corresponding to a new set of Stern-Gerlach experiments where the second magnet is oriented along a direction that is orthogonal to the two that we considered in the previous section. The total spin operator, $\hat{S}^2$, can then be constructed similarly to the total angular momentum operator of eq. \@ref(eq:angmom1b), as:
 
@@ -166,7 +166,7 @@ Space is translationally invariant: shifting the particle by any distance does n
 (\#eq:spop6) 
 \end{equation}
 
-Because of this commutation, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector $k$) is a good quantum number that labels the states.
+Because of this commutation, and the theorem that we discussed in section \@ref(CommutingOperators), energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector $k$) is a good quantum number that labels the states.
 
 ### Particle in a box: broken translation, introduction to parity
 

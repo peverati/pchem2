@@ -122,7 +122,22 @@ One way to quantify the precision of the position and momentum is the standard d
 (\#eq:heis3)  
 \end{equation}
 
-The uncertainty principle can be extended to any pair of conjugate variables, including, for example, energy and time, angular momentum components along perpendicular directions, spin components along perpendicular directions, etc. It is also easy to show that conjugate variables in quantum mechanics correspond to non-commuting operators.^[Therefore, a simpler way of finding if two variables are subject to the uncertainty principle is to check if their corresponding operators commute.]
+The uncertainty principle is a direct consequence of the fact that position and momentum do not commute (section \@ref(CommutingOperators)). In fact, it is a special case of a general result: for any two observables $A$ and $B$, the standard deviations of their measurements, in any state, satisfy:
+
+\begin{equation}
+\sigma_A\,\sigma_B \geq \frac{1}{2}\left|\langle[\hat{A},\hat{B}]\rangle\right|.
+(\#eq:heis4)
+\end{equation}
+
+This general uncertainty relation tells us that the precision with which two quantities can be known at the same time is limited by their commutator:
+
+1. **Position and momentum.** Replacing the canonical commutation relation, $[\hat{x},\hat{p}]=i\hbar$, in eq. \@ref(eq:heis4) gives $\sigma_x\sigma_p\geq\frac{1}{2}|i\hbar|=\frac{\hbar}{2}$, which is exactly eq. \@ref(eq:heis3). Since the commutator is a constant, this limit applies to every state, without exceptions.
+
+2. **Components of spin and angular momentum.** For the spin components, $[\hat{S}_x,\hat{S}_y]=i\hbar\hat{S}_z$ (chapter \@ref(Spin)), so $\sigma_{S_x}\sigma_{S_y}\geq\frac{\hbar}{2}|\langle S_z\rangle|$. For an electron in the state $\alpha$, $\langle S_z\rangle=+\frac{\hbar}{2}$, so the $x$ and $y$ components cannot both be known precisely. This is the reason behind the results of the sequential Stern–Gerlach experiments and behind the cone picture of figure \@ref(fig:Fig2c7). The same is true for the components of the orbital angular momentum.
+
+3. **Commuting observables.** If $[\hat{A},\hat{B}]=0$, the right-hand side of eq. \@ref(eq:heis4) is zero, and nothing prevents both observables from being known exactly. For example, the magnitude of the angular momentum and its $z$ component can be known at the same time, which is why we can label the states of the hydrogen atom with both $\ell$ and $m_\ell$.
+
+You may also find in other textbooks an *energy–time* uncertainty relation, $\Delta E\,\Delta t\gtrsim\hbar/2$. Its meaning is different from eq. \@ref(eq:heis4), because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy–time relation states that a state that lasts only for a short time, $\Delta t$ (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about $\hbar/\Delta t$. This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.
 
 ## Tunneling
 
@@ -219,13 +234,13 @@ e. arbitrary experimental tolerances chosen by the user
 
 ---
 
-**4. Which pair of observables is *not* a standard example of canonically conjugate variables in the context of uncertainty relations?**
+**4. Which pair of observables obeys an uncertainty relation, so that the two cannot both be known exactly at the same time?**
 
-a. position and momentum  
-b. energy and time (in a suitable sense)  
-c. different components of spin  
-d. particle number and phase (in some systems)  
-e. mass and electric charge  
+a. $L^2$ and $L_z$  
+b. the mass and the charge of an electron  
+c. the energy and $L^2$ of the hydrogen atom  
+d. the position $x$ and the momentum component $p_y$  
+e. the spin components $S_x$ and $S_y$  
 
 ---
 

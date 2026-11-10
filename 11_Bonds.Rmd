@@ -392,13 +392,13 @@ e. they make the electrons behave classically
 
 ---
 
-**10. Comparing H$_2^+$ and H$_2$, which statement about their bonding descriptions is true?**
+**10. Why is an electron described by the bonding orbital $\varphi_+$ of H$_2^+$ lower in energy than in an isolated hydrogen atom?**
 
-a. both are one‑electron systems with identical Hamiltonians  
-b. H$_2^+$ is exactly solvable analytically while H$_2$ is not  
-c. H$_2^+$ has one‑electron bonding described by a single MO; H$_2$ requires a two‑electron antisymmetric wave function including spin  
-d. H$_2^+$ has no bound state  
-e. H$_2$ can be described without consideration of spin  
+a. because the two protons repel each other  
+b. because $\varphi_+$ has a nodal plane between the nuclei  
+c. because the probability density builds up between the nuclei, where the electron is attracted by both protons  
+d. because the overlap integral $S$ is zero  
+e. because the spin of the electron changes  
 
 
 ---

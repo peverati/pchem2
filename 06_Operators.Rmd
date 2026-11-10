@@ -333,6 +333,28 @@ knitr::include_graphics('./img/L_vector_model.png')
 ```
 
 
+### Commuting operators and compatible observables {#CommutingOperators}
+
+We can now come back to the commutator, eq. \@ref(eq:bp5), which turns out to be one of the most important quantities in quantum mechanics. Two facts make it so important.
+
+The first is a mathematical theorem, which we state without proof: **if two Hermitian operators commute, $[\hat{A},\hat{B}]=0$, they have a common set of eigenfunctions**. In other words, we can find wave functions that are eigenfunctions of $\hat{A}$ and $\hat{B}$ at the same time. A system described by one of these wave functions has a definite value of both $A$ and $B$, and measuring one of them does not disturb the other. Observables of this kind are called *compatible*. We have already met an example: $\hat{L}^2$ and $\hat{L}_z$ commute, and the spherical harmonics are eigenfunctions of both, eqs. \@ref(eq:angmom3) and \@ref(eq:angmom4), so the magnitude of the angular momentum and its $z$ component can be known at the same time. If two operators do *not* commute, instead, in general there is no wave function that is an eigenfunction of both, and the two observables cannot have definite values at the same time. They are called *incompatible*.
+
+The second fact concerns the two most basic operators of all, position and momentum. In one dimension, $\hat{x}$ multiplies by $x$, and $\hat{p}=-i\hbar\frac{d}{dx}$. Applying their commutator to an arbitrary function $f(x)$, and using the result that we obtained above for $\frac{d}{dx}$ and $x$:
+
+\begin{equation}
+[\hat{x},\hat{p}]f = x\left(-i\hbar\frac{df}{dx}\right) - \left(-i\hbar\frac{d}{dx}\right)(xf) = -i\hbar x\frac{df}{dx} + i\hbar\left(f + x\frac{df}{dx}\right) = i\hbar f.
+(\#eq:commxp1)
+\end{equation}
+
+Since this is true for any function, we can write the result as a relation between the operators themselves:
+
+\begin{equation}
+[\hat{x},\hat{p}] = i\hbar.
+(\#eq:commxp)
+\end{equation}
+
+This is called the **canonical commutation relation**. Position and momentum do not commute, so they are incompatible: no wave function can have both a definite position and a definite momentum. We have already seen this in the wave packets of chapter \@ref(Schrodinger), and we will make it quantitative with the uncertainty principle in chapter \@ref(Weirdness). It is remarkable that the whole difference between classical and quantum mechanics can be traced back to the fact that the right-hand side of eq. \@ref(eq:commxp) is not zero: in classical mechanics, multiplying by $x$ and by $p$ in either order gives the same result.
+
 ## Time Evolution {#TimeEvolution}
 
 Eq. \@ref(eq:tdseqop) tells us that, once we know the wave function at some initial time, the Hamiltonian determines it at all later times. In this section, we look at what this means in practice, using the solutions that we already know.
@@ -502,14 +524,34 @@ e. Its normalization changes in time
 
 ---
 
+**13. What is the value of the commutator $[\hat{x},\hat{p}]$?**
+
+a. $0$  
+b. $i\hbar$  
+c. $-\hbar^2$  
+d. $\hbar/2$  
+e. it depends on the wave function  
+
+---
+
+**14. What does it mean if two Hermitian operators commute?**
+
+a. their eigenvalues are equal  
+b. they have a common set of eigenfunctions, so their observables can have definite values at the same time  
+c. one of them must be the Hamiltonian  
+d. their observables cannot be measured  
+e. they are both equal to the identity operator  
+
+---
+
 `r if (knitr::is_html_output()) {
   '
   <details><summary>Answers (select to reveal)</summary>
-  1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c
+  1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c, 13.b, 14.b
   </details>
   '
 } else if (knitr::is_latex_output()) {
-  'Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c'
+  'Answers: 1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c, 13.b, 14.b'
 }`
 
 
