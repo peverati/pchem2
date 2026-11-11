@@ -83,6 +83,7 @@ format:
     include-in-header: punctuation.html
     include-after-body:
       - sidebar-toc.html
+      - header-pin.html
     number-depth: 3
     page-layout: full   # no right-hand column: the content uses the space
     fig-align: center

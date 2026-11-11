@@ -29,7 +29,13 @@ body.quarto-dark .figure-caption, body.quarto-dark figcaption, body.quarto-dark 
   }
   #quarto-content.page-layout-full main.content { grid-column: body-content-start / body-content-end; max-width: 1050px; }
   #quarto-sidebar { padding-left: 1rem !important; }
+  /* Keep the sidebar fixed beside the text. As a sticky element it was pushed up by the page footer
+     at the end of each chapter, sliding its top (the search box) under the top bar.
+     Its grid column (18rem) stays reserved, so the text does not move. Quarto's JS still sets top and max-height. */
+  #quarto-sidebar { position: fixed !important; left: 0; width: 18rem; bottom: auto; }
 }
+/* Scrolling inside the sidebar never scrolls the page behind it (and vice versa) */
+#quarto-sidebar { overscroll-behavior: contain; }
 
 /* Top bar: same background as the page (so each logo version keeps its intended contrast), larger logo */
 body.quarto-light #quarto-header .navbar { background-color: #ffffff !important; border-bottom: 1px solid #dee2e6; }

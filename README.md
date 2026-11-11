@@ -77,7 +77,7 @@ Every image needs `fig-alt` (accessibility).
 ## Files
 
 - `_quarto.yml`: book settings (title, chapter list, website theme, PDF layout).
-- `quarto.css`, `punctuation.html`, `sidebar-toc.html`: website tweaks (top bar with the group logo in light/dark versions, caption contrast, scrollable equations, no line breaks before punctuation after math, expandable chapter sections in the sidebar; `scripts/sidebar_sections.py` collects the sections after each render).
+- `quarto.css`, `punctuation.html`, `sidebar-toc.html`, `header-pin.html`: website tweaks (top bar with the group logo in light/dark versions, always visible on wide screens, caption contrast, scrollable equations, no line breaks before punctuation after math, expandable chapter sections in the sidebar; `scripts/sidebar_sections.py` collects the sections after each render).
 - `_quarto-typst.yml`: optional Typst PDF, `quarto render --profile typst --to typst` (output in `_book-typst/`, not published).
 - `_bookdown-archive/`: the former bookdown sources and the conversion script, for reference only.
 - `REVISION_CHECKLIST.md`: open items for future revisions.

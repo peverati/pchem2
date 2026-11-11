@@ -947,6 +947,24 @@ document.addEventListener("DOMContentLoaded", function () {
   }).catch(function () {});
 });
 </script>
+<!-- Top bar: always visible on wide screens; on phones it still hides while scrolling down
+     (Quarto's auto-hide), to leave more room for the text. -->
+<script>
+window.addEventListener("load", function () {
+  if (!window.quartoToggleHeadroom) return;
+  var wide = window.matchMedia("(min-width: 992px)");
+  var frozen = false;
+  function apply() {
+    // freeze the auto-hide (with the bar shown) on wide screens, release it on narrow ones
+    if (wide.matches !== frozen) {
+      window.quartoToggleHeadroom();
+      frozen = !frozen;
+    }
+  }
+  apply();
+  if (wide.addEventListener) wide.addEventListener("change", apply);
+});
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
