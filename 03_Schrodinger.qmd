@@ -138,7 +138,7 @@ Wave functions of the form of @eq-TDSEq6b are called **stationary states**. As w
 
 $$
 \psi(\mathbf{r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i(\mathbf{r}).
-$$
+$$ {#eq-TDSEqsum}
 
 ## Solution for the Free Particle
 

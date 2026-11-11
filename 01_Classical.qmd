@@ -23,7 +23,7 @@ A ball of mass $m$ is at ground level and tossed straight up from an initial pos
 
 $$
 F_{\mathrm{gravity}}=-mg,
-$$
+$$ {#eq-newt2}
 
 with $g$ the gravitational acceleration ($g=9.8\; \mathrm{m}/\mathrm{s}^{2}$). We can then replace this expression into @eq-newt1, to obtain:
 
@@ -33,7 +33,7 @@ $$
 -g &=\ddot{\mathbf{r}} \\
 -g &=\frac{d\dot{\mathbf{r}}}{dt}. \\
 \end{aligned}
-$$
+$$ {#eq-newt3}
 
 Working in a 1-dimensional case, we can replace $\mathbf{r}$ with position $x$ to obtain:
 
@@ -43,7 +43,7 @@ $$
 -g &=\ddot{x} \\
 -g &=\frac{d\dot{x}}{dt}. \\
 \end{aligned}
-$$
+$$ {#eq-newt4}
 
 which can then be integrated with respect to time, to obtain:
 
@@ -53,7 +53,7 @@ $$
 \dot{x} &= \dot{x}_0-gt\\
 \frac{dx}{dt} &= \dot{x}_0-gt,\\
 \end{aligned}
-$$
+$$ {#eq-newt5}
 
 which can be further integrated with respect to time, to give:
 
@@ -62,7 +62,7 @@ $$
 \int_{x_0}^{x} dx &= \int_{t=0}^{t} \dot{x}_0 dt -g \int_{t=0}^{t}tdt\\
 x &= x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
 \end{aligned}
-$$
+$$ {#eq-newt6}
 
 This final equation is the equation of motion for the ball, from which we can calculate the position of the ball at any time $t$. Notice how the equation of motion does not depend on the mass of the ball!
 
@@ -126,13 +126,13 @@ $$
 \dot{x} &= \frac{\partial H}{\partial p} = \frac{p}{m}, \\
 \dot{p} &=-\frac{\partial H}{\partial x} = -mg.
 \end{aligned}
-$$
+$$ {#eq-ham5}
 
 The second equation tells us that the momentum of the ball decreases at a constant rate, $p(t)=p_0-mgt$, where $p_0=m\dot{x}_0$ is the initial momentum. Replacing it in the first equation, we obtain $\dot{x}=\dot{x}_0-gt$, and integrating once more we obtain the same equation of motion that we found with Newton's method:
 
 $$
 x = x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
-$$
+$$ {#eq-ham6}
 :::
 
 So, if the Hamiltonian gives the same answers as Newton's equation, why do we bother? There are two reasons, both important for what follows:

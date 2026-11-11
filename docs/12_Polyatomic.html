@@ -1152,6 +1152,12 @@ document.addEventListener("DOMContentLoaded", function () {
       a.parentElement.appendChild(btn);
       li.appendChild(list);
     });
+    // section titles with math (e.g., "The H2+ molecule") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
   }).catch(function () {});
 });
 </script>

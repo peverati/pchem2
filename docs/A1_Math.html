@@ -548,7 +548,7 @@ e^{i\theta} = \cos\theta + i\sin\theta,
 <p><span id="eq-meuler2"><span class="math display">\[
 \cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}, \qquad \sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}.
 \tag{A.5}\]</span></span></p>
-<p>Two consequences are used often. First, <span class="math inline">\(|e^{i\theta}|^2 = e^{-i\theta}e^{i\theta}=1\)</span> for any real <span class="math inline">\(\theta\)</span>, so a complex exponential is a “pure phase” that does not change probabilities. Second, any complex number can be written in <em>polar form</em>, <span class="math inline">\(z = |z|\,e^{i\theta}\)</span>, with a modulus <span class="math inline">\(|z|\)</span> and a phase <span class="math inline">\(\theta\)</span>. Complex numbers first appear with the classical waves of chapter 1 (<a href="01_Classical.html#eq-euler" class="quarto-xref">eq.&nbsp;<span>1.14</span></a>), and they are used for plane waves (<a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>), the particle on a ring (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), and the spherical harmonics (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>).</p>
+<p>Two consequences are used often. First, <span class="math inline">\(|e^{i\theta}|^2 = e^{-i\theta}e^{i\theta}=1\)</span> for any real <span class="math inline">\(\theta\)</span>, so a complex exponential is a “pure phase” that does not change probabilities. Second, any complex number can be written in <em>polar form</em>, <span class="math inline">\(z = |z|\,e^{i\theta}\)</span>, with a modulus <span class="math inline">\(|z|\)</span> and a phase <span class="math inline">\(\theta\)</span>. Complex numbers first appear with the classical waves of chapter 1 (<a href="01_Classical.html#eq-euler" class="quarto-xref">eq.&nbsp;<span>1.21</span></a>), and they are used for plane waves (<a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>), the particle on a ring (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), and the spherical harmonics (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>).</p>
 </section>
 <section id="sec-MathDerivatives" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="sec-MathDerivatives"><span class="header-section-number">A.2</span> Derivatives</h2>
@@ -706,6 +706,12 @@ document.addEventListener("DOMContentLoaded", function () {
       a.parentElement.appendChild(btn);
       li.appendChild(list);
     });
+    // section titles with math (e.g., "The H2+ molecule") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
   }).catch(function () {});
 });
 </script>

@@ -615,46 +615,46 @@ f(t) = e^{-iEt / \hbar}
 \psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
 \tag{3.18}\]</span></span></p>
 <p>Wave functions of the form of <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a> are called <strong>stationary states</strong>. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p><span class="math display">\[
+<p><span id="eq-TDSEqsum"><span class="math display">\[
 \psi(\mathbf{r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i(\mathbf{r}).
-\]</span></p>
+\tag{3.19}\]</span></span></p>
 </section>
 <section id="solution-for-the-free-particle" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="solution-for-the-free-particle"><span class="header-section-number">3.4</span> Solution for the Free Particle</h2>
 <p>We will now show how to solve the time independent portion for the simple system of a particle in motion and not subject to any force. By definition, this free particle does not feel any external force, therefore <span class="math inline">\(V(x)=0\)</span>, and the TISEq is written simply:</p>
 <p><span id="eq-FP1"><span class="math display">\[
 - \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} = E \psi(x).
-\tag{3.19}\]</span></span></p>
+\tag{3.20}\]</span></span></p>
 <p>This equation can be rearranged to:</p>
 <p><span id="eq-FP2"><span class="math display">\[
 \frac{d^2\psi}{dx^2} =- \frac{2mE}{\hbar^2} \psi(x),
-\tag{3.20}\]</span></span></p>
+\tag{3.21}\]</span></span></p>
 <p>which corresponds to a mathematical problem where the second derivative of a function should be equal to a constant, <span class="math inline">\(- \frac{2mE}{\hbar^2}\)</span>, multiplied by the function itself. The most general solution to this problem is the function:</p>
 <p><span id="eq-FP3"><span class="math display">\[
 \psi(x) = A \exp(ikx)+B \exp(-ikx),
-\tag{3.21}\]</span></span></p>
+\tag{3.22}\]</span></span></p>
 <p>with <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> arbitrary (complex) constants. The first and second derivatives of this function are:</p>
 <p><span id="eq-FP4"><span class="math display">\[
 \begin{aligned}
 \frac{d \psi(x)}{dx} &amp;= ik A \exp(ikx) - ikB\exp(-ikx) \\
 \frac{d^2 \psi(x)}{dx^2} &amp;= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
-\tag{3.22}\]</span></span></p>
-<p>Comparing the second derivative in <a href="#eq-FP4" class="quarto-xref">eq.&nbsp;<span>3.22</span></a> with <a href="#eq-FP2" class="quarto-xref">eq.&nbsp;<span>3.20</span></a>, we immediately see that if we set:</p>
+\tag{3.23}\]</span></span></p>
+<p>Comparing the second derivative in <a href="#eq-FP4" class="quarto-xref">eq.&nbsp;<span>3.23</span></a> with <a href="#eq-FP2" class="quarto-xref">eq.&nbsp;<span>3.21</span></a>, we immediately see that if we set:</p>
 <p><span id="eq-FP5"><span class="math display">\[
 k^2 = \frac{2mE}{\hbar^2},
-\tag{3.23}\]</span></span></p>
+\tag{3.24}\]</span></span></p>
 <p>we solve the original differential equation. Considering de Broglie’s equation, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
 <p><span id="eq-FP6"><span class="math display">\[
 E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
-\tag{3.24}\]</span></span></p>
-<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.21</span></a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of <a href="#eq-FP6" class="quarto-xref">eq.&nbsp;<span>3.24</span></a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+\tag{3.25}\]</span></span></p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.22</span></a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of <a href="#eq-FP6" class="quarto-xref">eq.&nbsp;<span>3.25</span></a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
 <section id="what-does-the-free-particle-solution-look-like" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="what-does-the-free-particle-solution-look-like"><span class="header-section-number">3.4.1</span> What does the free-particle solution look like?</h3>
-<p>Let’s take a closer look at one of the solutions in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.21</span></a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
+<p>Let’s take a closer look at one of the solutions in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.22</span></a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
 <p><span id="eq-FP7"><span class="math display">\[
 \psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
-\tag{3.25}\]</span></span></p>
+\tag{3.26}\]</span></span></p>
 <p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in <a href="#fig-fig1c3" class="quarto-xref">figure&nbsp;<span>3.1</span></a>.</p>
 <div id="fig-fig1c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -684,7 +684,7 @@ Figure&nbsp;3.2: Superposition of plane waves with wave vectors close to <span c
 <p>Two waves produce a regular pattern of <em>beats</em>, the same effect that musicians use to tune two instruments to the same note. As we add more waves, with wave vectors spread over a range around a central value <span class="math inline">\(k_0\)</span>, the regions of constructive interference get narrower and farther apart. With a continuous distribution of wave vectors, only one region of constructive interference survives, and the waves cancel each other everywhere else. The result is a <strong>wave packet</strong>: a wave that oscillates with wavelength close to <span class="math inline">\(2\pi/k_0\)</span> inside a limited region of space, and is essentially zero outside of it. Mathematically, a wave packet is written as a continuous sum (an integral) of plane waves, each with its own amplitude, <span class="math inline">\(\phi(k)\)</span>:</p>
 <p><span id="eq-FP8"><span class="math display">\[
 \Psi(x,t) = \int \phi(k)\, e^{i\left(kx - \omega(k) t\right)} dk, \qquad \omega(k) = \frac{E}{\hbar} = \frac{\hbar k^2}{2m},
-\tag{3.26}\]</span></span></p>
+\tag{3.27}\]</span></span></p>
 <p>where each plane wave evolves in time with its own frequency, as we saw in <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
 <p>A few important considerations can be made by analyzing wave packets:</p>
 <ol type="1">
@@ -945,6 +945,12 @@ document.addEventListener("DOMContentLoaded", function () {
       a.parentElement.appendChild(btn);
       li.appendChild(list);
     });
+    // section titles with math (e.g., "The H2+ molecule") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
   }).catch(function () {});
 });
 </script>

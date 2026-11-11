@@ -764,7 +764,7 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d\mathbf{r}\\
 <p><span id="eq-scheqsimple"><span class="math display">\[
 \hat{H} \psi = E\psi.
 \tag{6.24}\]</span></span></p>
-<p>Comparing <a href="#eq-hamilt1" class="quarto-xref">eq.&nbsp;<span>6.23</span></a> to the classical analog in <a href="01_Classical.html#eq-ham2" class="quarto-xref">eq.&nbsp;<span>1.4</span></a>, we notice how the first term in the Hamiltonian operator represents the corresponding kinetic energy operator, <span class="math inline">\(\hat{K}\)</span>, while the second term represents the potential energy operator, <span class="math inline">\(\hat{V}\)</span>. For a one-electron system—such as the ones we studied in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>—we can write:</p>
+<p>Comparing <a href="#eq-hamilt1" class="quarto-xref">eq.&nbsp;<span>6.23</span></a> to the classical analog in <a href="01_Classical.html#eq-ham2" class="quarto-xref">eq.&nbsp;<span>1.9</span></a>, we notice how the first term in the Hamiltonian operator represents the corresponding kinetic energy operator, <span class="math inline">\(\hat{K}\)</span>, while the second term represents the potential energy operator, <span class="math inline">\(\hat{V}\)</span>. For a one-electron system—such as the ones we studied in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>—we can write:</p>
 <p><span id="eq-hamilt2"><span class="math display">\[
 \hat{K}=- \frac{\hbar^2}{2m} \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \right) = -\frac{\hbar^2}{2m} \nabla^2,
 \tag{6.25}\]</span></span></p>
@@ -1139,6 +1139,12 @@ document.addEventListener("DOMContentLoaded", function () {
       a.parentElement.appendChild(btn);
       li.appendChild(list);
     });
+    // section titles with math (e.g., "The H2+ molecule") need MathJax after insertion
+    var lists = Array.prototype.slice.call(document.querySelectorAll(".sidebar-chapter-toc"));
+    (function typeset(tries) {
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise(lists).catch(function () {});
+      else if (tries > 0) setTimeout(function () { typeset(tries - 1); }, 300);
+    })(20);
   }).catch(function () {});
 });
 </script>
