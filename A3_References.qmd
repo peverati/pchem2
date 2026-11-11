@@ -1,0 +1,45 @@
+# Further Reading and References {#sec-FurtherReading}
+
+This book covers the essentials at a level suitable for a first course. When you want a second explanation, more detail, or the derivations that we skipped, these are good places to look. They are grouped by purpose, roughly from the most accessible to the most advanced. Resources marked *free* are available online at no cost.
+
+## A second explanation, at the same level
+
+- **@mcquarrie2008** and **@mcquarriesimon1997**: the classic chemistry texts for this course, with very clear derivations and many worked problems. Most topics in this book have a matching chapter in either one.
+- **@libretexts** (*free*): open textbooks and course notes covering the same material, written by many different instructors. Useful when you want the same topic explained in different words.
+- **@mitocw561** (*free*): lecture notes, problem sets, and exams from MIT's quantum chemistry course.
+- **@pchem1** (*free*): the companion volume, on thermodynamics and kinetics.
+
+## More depth on quantum mechanics
+
+- **@levine2014**: the standard graduate-level quantum chemistry text, more mathematical, with complete derivations for atoms, molecules, and the variational method.
+- **@atkinsfriedman2011**: a more formal treatment, including angular momentum, group theory, and molecular properties.
+- **@griffiths2018**: the most widely used physics text on the subject, excellent for the postulates, operators, spin, and the meaning of the theory (@sec-Weirdness).
+- **@feynman3** (*free*): Feynman's famous lectures, which start from the two-slit experiment and build the theory around probability amplitudes. Good reading for anyone curious about *why* quantum mechanics works the way it does.
+
+## Electronic structure and computational chemistry (chapters 9–12)
+
+- **@szabo1996**: the reference text for the Hartree–Fock method, basis sets, and the SCF procedure, with all the details of @sec-Molecules.
+- **@cramer2004** and **@jensen2017**: modern introductions to computational chemistry, from Hartree–Fock to density functional theory, with practical advice on choosing methods and basis sets.
+- **@sherrill** (*free*): short, clear notes on Hartree–Fock theory, electron correlation, and many other topics, written for students.
+
+## Spectroscopy and symmetry (chapter 13)
+
+- **@harris1989**: an affordable and readable introduction to molecular symmetry, group theory, and vibrational and electronic spectroscopy.
+- **@hollas2004**: a comprehensive spectroscopy text covering rotational, vibrational, electronic, and magnetic resonance spectroscopy.
+
+## Mathematics (@sec-MathToolkit)
+
+- **@mcquarrie2003math**: written by a chemist for chemists, covering everything in the math appendix and much more.
+- **@boas2006**: the standard reference for mathematical methods in the physical sciences.
+
+## Data
+
+- **@codata** (*free*): the recommended values of the fundamental constants (@sec-Constants).
+- **@nistasd** (*free*): experimental energy levels and spectral lines of atoms and ions (@sec-Atoms).
+- **@webbook** (*free*): experimental spectroscopic and thermochemical data for molecules, including vibrational frequencies and bond lengths.
+- **@cccbdb** (*free*): experimental and computed properties of small molecules, useful to compare the results of different computational methods with experiment.
+
+## References {.unnumbered}
+
+::: {#refs}
+:::

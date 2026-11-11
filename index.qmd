@@ -26,6 +26,8 @@ Since this book is specifically tailored for the CHM 3002 course at Florida Tech
 
 Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and  a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar's corresponding icon. If you are *really* old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on [over there](https://github.com/peverati/PChem2) and fork the book. 
 
+The appendices at the end of the book review the mathematical tools that we use (@sec-MathToolkit), collect physical constants and unit conversions (@sec-Constants), and suggest further reading for when you want a second explanation or more depth (@sec-FurtherReading).
+
 > If you spot a mistake or a typo, contact Dr. Peverati via [email](mailto:rpeverati@fit.edu). 
 
 [//]: ## A note on units {-}

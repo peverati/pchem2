@@ -435,6 +435,32 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A2_Constants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Physical Constants and Unit Conversions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A3_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -519,7 +545,7 @@ a &amp;= 1s_A = \left( \psi_{100} \right)_A\\
 b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
 \tag{11.3}\]</span></span></p>
-<p>Using <a href="10_Molecules.html#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.12</span></a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, <a href="10_Molecules.html#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.14</span></a>, can then be written:</p>
+<p>Using <a href="10_Molecules.html#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.12</span></a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, <a href="10_Molecules.html#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.14</span></a>, can then be written (determinants and secular equations are reviewed in <a href="A1_Math.html#sec-MathDeterminants" class="quarto-xref"><span>section A.5</span></a>):</p>
 <p><span id="eq-bond4"><span class="math display">\[
 \left|\begin{matrix}
 H_{aa}-E   &amp; H_{ab}-ES \\
@@ -1108,6 +1134,55 @@ Figure&nbsp;11.12: Schematic color maps of the frontier orbitals of CO, in a pla
     bar.appendChild(a);
   }
 })();
+</script>
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+  }).catch(function () {});
+});
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

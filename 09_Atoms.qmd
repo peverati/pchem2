@@ -271,7 +271,7 @@ The effective nuclear charges felt by the $1s$, $2s$, and $2p$ electrons of the 
 |F    |  9  |        8.65        |        5.13        |        5.10        |
 |Ne   | 10  |        9.64        |        5.76        |        5.76        |
 
-: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi. {#tbl-tab1c9}
+: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi [@clementi1963]. {#tbl-tab1c9}
 
 Notice how the $1s$ electrons feel almost the full nuclear charge (they are shielded only by each other, as in helium), while the valence electrons feel a much smaller charge. Notice also how $Z_\text{eff}(2s)$ is larger than $Z_\text{eff}(2p)$, as expected from penetration, although the difference becomes small for the heavier atoms of the row. When the electrons of an atom are described using the orbitals in order of increasing energy, following the Pauli exclusion principle, the different penetration of $s$, $p$, $d$, and $f$ orbitals produces the familiar **aufbau** order, $1s<2s<2p<3s<3p<4s<3d<\ldots$, and with it the structure of the periodic table.
 
@@ -331,7 +331,7 @@ When a subshell contains more than one electron, a single configuration produces
 Notice that, in the cells with more than one microstate, we do not need to decide *which* microstate belongs to which term: only the number of states in each cell matters. (In fact, the real states of each term are combinations of the microstates in the same cell.) The $2p^2$ configuration of carbon therefore produces three terms, $^3P$, $^1D$, and $^1S$, with $9+5+1=15$ states in total. Their experimental energies are shown in @fig-fig4c9.
 
 
-![Energy levels arising from the $1s^22s^22p^2$ configuration of carbon (experimental values). Electron–electron repulsion splits the configuration into three terms, and spin–orbit coupling further splits the $^3P$ term into three levels with different $J$ (inset, magnified).](img/Carbon_terms.png){#fig-fig4c9 fig-alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters." width="95%"}
+![Energy levels arising from the $1s^22s^22p^2$ configuration of carbon (experimental values from the NIST Atomic Spectra Database [@nistasd]). Electron–electron repulsion splits the configuration into three terms, and spin–orbit coupling further splits the $^3P$ term into three levels with different $J$ (inset, magnified).](img/Carbon_terms.png){#fig-fig4c9 fig-alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters." width="95%"}
 
 
 A few important considerations can be made by analyzing this diagram:

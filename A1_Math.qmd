@@ -1,0 +1,184 @@
+# Mathematical Toolkit {#sec-MathToolkit}
+
+This appendix collects the mathematical tools used throughout the book, with the minimum of theory needed to use them. Each section points to the chapters where the tool is first needed. For a more complete treatment, see the mathematics references in @sec-FurtherReading.
+
+## Complex Numbers {#sec-MathComplex}
+
+A complex number has a real part and an imaginary part:
+
+$$
+z = a + ib, \qquad i^2=-1,
+$$ {#eq-mcomplex1}
+
+where $a$ and $b$ are real numbers. Its **complex conjugate**, $z^*$, is obtained by replacing $i$ with $-i$ everywhere:
+
+$$
+z^* = a - ib.
+$$ {#eq-mcomplex2}
+
+The product of a complex number with its conjugate is always real and non-negative, and it is called the **squared modulus**:
+
+$$
+|z|^2 = z^*z = (a-ib)(a+ib) = a^2+b^2.
+$$ {#eq-mcomplex3}
+
+This is the reason why wave functions, which can be complex, are always combined as $\psi^*\psi=|\psi|^2$ when we compute probabilities (@sec-BornInterpretation): the result is guaranteed to be a real, non-negative number.
+
+**Euler's formula** connects complex exponentials with sines and cosines:
+
+$$
+e^{i\theta} = \cos\theta + i\sin\theta,
+$$ {#eq-meuler}
+
+and, combining it with its conjugate, $e^{-i\theta} = \cos\theta - i\sin\theta$:
+
+$$
+\cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}, \qquad \sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}.
+$$ {#eq-meuler2}
+
+Two consequences are used often. First, $|e^{i\theta}|^2 = e^{-i\theta}e^{i\theta}=1$ for any real $\theta$, so a complex exponential is a "pure phase" that does not change probabilities. Second, any complex number can be written in *polar form*, $z = |z|\,e^{i\theta}$, with a modulus $|z|$ and a phase $\theta$. Complex numbers first appear with the classical waves of chapter 1 (@eq-euler), and they are used for plane waves (@sec-Schrodinger), the particle on a ring (@sec-Models), and the spherical harmonics (@sec-Hydrogen).
+
+## Derivatives {#sec-MathDerivatives}
+
+The derivatives that appear most often in quantum mechanics are:
+
+$$
+\frac{d}{dx}e^{ax} = a\,e^{ax}, \qquad \frac{d}{dx}\sin(kx) = k\cos(kx), \qquad \frac{d}{dx}\cos(kx) = -k\sin(kx),
+$$ {#eq-mderiv1}
+
+together with the **product rule**, $\frac{d}{dx}\left[f(x)g(x)\right] = f'(x)g(x)+f(x)g'(x)$, and the **chain rule**, $\frac{d}{dx}f\left(g(x)\right) = f'\left(g(x)\right)g'(x)$. Taking the derivative of @eq-mderiv1 twice gives:
+
+$$
+\frac{d^2}{dx^2}\sin(kx) = -k^2\sin(kx), \qquad \frac{d^2}{dx^2}e^{ikx} = -k^2e^{ikx}.
+$$ {#eq-mderiv2}
+
+In both cases, the second derivative returns the same function multiplied by a constant. This is exactly why sines, cosines, and complex exponentials are the solutions of the Schrödinger equation for a free particle and for the particle in a box (@sec-Models): they are eigenfunctions of the kinetic energy operator (@sec-MathEigen).
+
+### Partial derivatives
+
+When a function depends on more than one variable, such as a wave function $\psi(x,y,z)$, a **partial derivative** is the derivative with respect to one variable, while all the others are kept constant. For example, for $f(x,y)=x^2y$:
+
+$$
+\frac{\partial f}{\partial x} = 2xy, \qquad \frac{\partial f}{\partial y} = x^2.
+$$ {#eq-mpartial1}
+
+The most important combination of partial derivatives in this book is the **Laplacian**, which appears in the kinetic energy operator:
+
+$$
+\nabla^2 = \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}.
+$$ {#eq-mlaplacian}
+
+## Integrals {#sec-MathIntegrals}
+
+Normalization, expectation values, and overlap integrals all require integrals. The following ones cover almost every case in the book.
+
+**Sines and cosines** (particle in a box, @sec-Models), with $n$ and $m$ positive integers:
+
+$$
+\int_0^a \sin^2\left(\frac{n\pi x}{a}\right)dx = \frac{a}{2}, \qquad \int_0^a \sin\left(\frac{n\pi x}{a}\right)\sin\left(\frac{m\pi x}{a}\right)dx = 0 \quad (n\neq m).
+$$ {#eq-mint1}
+
+The first integral gives the normalization constant $\sqrt{2/a}$; the second one shows that different eigenfunctions are orthogonal.
+
+**Exponentials times powers** (hydrogen atom, @sec-Hydrogen), with $a>0$ and $n=0,1,2,\ldots$:
+
+$$
+\int_0^\infty x^n e^{-ax}dx = \frac{n!}{a^{n+1}}.
+$$ {#eq-mint2}
+
+**Gaussians** (harmonic oscillator, @sec-Models; also the Gaussian basis functions used in the calculations of @sec-Bonds and @sec-Poly), with $a>0$:
+
+$$
+\int_{-\infty}^{\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}}, \qquad \int_{-\infty}^{\infty} x^2e^{-ax^2}dx = \frac{1}{2a}\sqrt{\frac{\pi}{a}}.
+$$ {#eq-mint3}
+
+**Symmetry shortcut.** If a function is *odd*, $f(-x)=-f(x)$, its integral over a symmetric interval, such as $-\infty$ to $\infty$, is zero. For example, $\int_{-\infty}^{\infty} x\,e^{-ax^2}dx=0$ without any calculation. This shortcut is the origin of many selection rules (@sec-Spectroscopy).
+
+As an example, consider the normalization of the hydrogen $1s$ orbital, $\psi=N e^{-r/a_0}$. Using the volume element of spherical coordinates (@sec-MathCoordinates) and @eq-mint2 with $n=2$ and $a=2/a_0$:
+
+$$
+1 = N^2\int_0^{2\pi}\int_0^{\pi}\int_0^\infty e^{-2r/a_0}\,r^2\sin\theta\,dr\,d\theta\,d\varphi = N^2\,(4\pi)\,\frac{2!}{(2/a_0)^3} = N^2\pi a_0^3,
+$$ {#eq-mint4}
+
+which gives $N = 1/\sqrt{\pi a_0^3}$.
+
+## Spherical Polar Coordinates {#sec-MathCoordinates}
+
+Atoms are spherical, and their wave functions are much simpler to write in **spherical polar coordinates** $(r,\theta,\varphi)$ than in Cartesian coordinates $(x,y,z)$. The two sets are related by:
+
+$$
+x = r\sin\theta\cos\varphi, \qquad y = r\sin\theta\sin\varphi, \qquad z = r\cos\theta,
+$$ {#eq-mspherical1}
+
+where $r$ is the distance from the origin ($0\le r<\infty$), $\theta$ is the angle from the $z$ axis ($0\le\theta\le\pi$), and $\varphi$ is the angle around the $z$ axis ($0\le\varphi<2\pi$). The volume of a small box in these coordinates is *not* simply $dr\,d\theta\,d\varphi$, but:
+
+$$
+d\tau = r^2\sin\theta\,dr\,d\theta\,d\varphi.
+$$ {#eq-mspherical2}
+
+The factor $r^2$ is the reason why the radial probability of hydrogen is $r^2R(r)^2$ and not just $R(r)^2$ (@sec-Hydrogen): there is more volume in a thin shell far from the nucleus than in a thin shell close to it. Integrating the angular part alone gives $\int_0^{2\pi}\int_0^\pi\sin\theta\,d\theta\,d\varphi = 4\pi$, the solid angle of a full sphere. Finally, the Laplacian of @eq-mlaplacian becomes:
+
+$$
+\nabla^2 = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial\varphi^2}.
+$$ {#eq-mspherical3}
+
+It looks complicated, but each term depends on one variable only, and this is what allows the separation of variables for the particle on a sphere (@sec-Models), the rigid rotor (@sec-Operators), and the hydrogen atom (@sec-Hydrogen).
+
+## Determinants and Secular Equations {#sec-MathDeterminants}
+
+A **determinant** is a single number computed from a square array of numbers. For a $2\times2$ array:
+
+$$
+\left|\begin{matrix} a & b \\ c & d \end{matrix}\right| = ad - bc,
+$$ {#eq-mdet1}
+
+and for a $3\times3$ array we expand along the first row, multiplying each element by the $2\times2$ determinant left after removing its row and column, with alternating signs:
+
+$$
+\left|\begin{matrix} a & b & c \\ d & e & f \\ g & h & k \end{matrix}\right| = a\left|\begin{matrix} e & f \\ h & k \end{matrix}\right| - b\left|\begin{matrix} d & f \\ g & k \end{matrix}\right| + c\left|\begin{matrix} d & e \\ g & h \end{matrix}\right|.
+$$ {#eq-mdet2}
+
+Two properties are important for this book. Exchanging two rows (or two columns) changes the sign of the determinant, and a determinant with two identical rows (or columns) is zero. These are exactly the properties that make Slater determinants antisymmetric and enforce the Pauli exclusion principle (@sec-Atoms).
+
+### Secular equations
+
+When a molecular orbital is written as a combination of two basis functions, $\psi = c_a\phi_a + c_b\phi_b$, the variational method leads to two equations for the two unknown coefficients (@sec-Bonds):
+
+$$
+\begin{aligned}
+(H_{aa}-E)\,c_a + (H_{ab}-ES)\,c_b &= 0\\
+(H_{ab}-ES)\,c_a + (H_{bb}-E)\,c_b &= 0.
+\end{aligned}
+$$ {#eq-msecular1}
+
+This system always has the useless solution $c_a=c_b=0$. It has other solutions only if the determinant of the coefficients is zero:
+
+$$
+\left|\begin{matrix} H_{aa}-E & H_{ab}-ES \\ H_{ab}-ES & H_{bb}-E \end{matrix}\right| = 0.
+$$ {#eq-msecular2}
+
+This is the **secular determinant**. Expanding it with @eq-mdet1 gives an equation for $E$ whose solutions are the orbital energies. For a homonuclear diatomic, $H_{aa}=H_{bb}$, and the two solutions are:
+
+$$
+E_\pm = \frac{H_{aa}\pm H_{ab}}{1\pm S}.
+$$ {#eq-msecular3}
+
+Once $E$ is known, each value is substituted back into @eq-msecular1 to find the ratio $c_b/c_a$, and normalization fixes the remaining constant. With $n$ basis functions, the determinant is $n\times n$ and gives $n$ orbital energies; this is what the computer solves at each step of the SCF procedure (@sec-Molecules) and what we solve by hand in Hückel theory (@sec-Poly).
+
+## Eigenvalue Problems {#sec-MathEigen}
+
+An **eigenvalue problem** asks: which functions are left unchanged by an operator, apart from a multiplicative constant? In symbols:
+
+$$
+\hat{A}\,f = a\,f,
+$$ {#eq-meigen1}
+
+where $f$ is an **eigenfunction** of the operator $\hat{A}$ and the number $a$ is the corresponding **eigenvalue**. We have already seen an example in @eq-mderiv2: $\sin(kx)$ is an eigenfunction of $\frac{d^2}{dx^2}$ with eigenvalue $-k^2$. A counterexample is $x^2$: its second derivative is $2$, which is not a constant times $x^2$, so $x^2$ is not an eigenfunction of $\frac{d^2}{dx^2}$. The time-independent Schrödinger equation, $\hat{H}\psi = E\psi$, is an eigenvalue problem in which the operator is the Hamiltonian, the eigenfunctions are the wave functions of the stationary states, and the eigenvalues are their energies (@sec-Schrodinger and @sec-Operators).
+
+When the wave function is expanded in a basis set, the operator becomes a matrix, the eigenfunction becomes a column of coefficients, and the eigenvalue problem becomes a matrix equation, $\mathbf{A}\mathbf{c} = a\,\mathbf{c}$. For example, the $2\times2$ matrix below has two eigenvectors:
+
+$$
+\left(\begin{matrix} \alpha & \beta \\ \beta & \alpha \end{matrix}\right)\left(\begin{matrix} 1 \\ 1 \end{matrix}\right) = (\alpha+\beta)\left(\begin{matrix} 1 \\ 1 \end{matrix}\right), \qquad \left(\begin{matrix} \alpha & \beta \\ \beta & \alpha \end{matrix}\right)\left(\begin{matrix} 1 \\ -1 \end{matrix}\right) = (\alpha-\beta)\left(\begin{matrix} 1 \\ -1 \end{matrix}\right).
+$$ {#eq-meigen2}
+
+The eigenvalues $\alpha\pm\beta$ are the roots of the secular determinant $\left|\begin{matrix} \alpha-E & \beta \\ \beta & \alpha-E \end{matrix}\right|=0$. This is the Hückel treatment of ethylene (@sec-Poly): the in-phase combination is the bonding $\pi$ orbital, and the out-of-phase combination is the antibonding $\pi^*$ orbital. Solving a secular determinant and finding the eigenvalues of a matrix are the same problem.

@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+
+<title>Appendix A — Mathematical Toolkit – The Live Textbook of Physical Chemistry 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./A2_Constants.html" rel="next">
+<link href="./13_Spectroscopy.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7e37b2d352f7b62e2d1154366bf60aa6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-01a495efc5497ac6e3f5457e7ed18e65.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="text/javascript">
+// Keep punctuation that immediately follows inline math on the same line as the math
+// (otherwise browsers may start a new line with a comma or a period).
+(function () {
+  function glue(root) {
+    var spans = (root || document).querySelectorAll("span.math.inline:not([data-glued])");
+    for (var i = 0; i < spans.length; i++) {
+      var s = spans[i];
+      s.setAttribute("data-glued", "1");
+      var t = s.nextSibling;
+      if (!t || t.nodeType !== 3) continue;
+      var m = t.nodeValue.match(/^[,.;:!?)\]'’”]+/);
+      if (!m) continue;
+      var rest = t.splitText(m[0].length);
+      var wrap = document.createElement("span");
+      wrap.style.whiteSpace = "nowrap";
+      s.parentNode.insertBefore(wrap, s);
+      wrap.appendChild(s);
+      wrap.appendChild(t);
+    }
+  }
+  if (window.MathJax && MathJax.Hub) {
+    MathJax.Hub.Register.MessageHook("Begin Process", function () { glue(document); });
+  }
+  document.addEventListener("DOMContentLoaded", function () { glue(document); });
+})();
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="quarto.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./A1_Math.html">Appendices</a></li><li class="breadcrumb-item"><a href="./A1_Math.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01_Classical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02_Motivation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">The Failure of Classical Physics</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03_Schrodinger.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The Schrödinger Equation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04_Models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analytically Solvable Models</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05_Hydrogen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Hydrogen Atom</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07_Spin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Spin</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08_Weirdness.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Quantum Weirdness</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./09_Atoms.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Many-Electron Atoms</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./10_Molecules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Introduction to Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./11_Bonds.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">The Chemical Bond in Diatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./12_Polyatomic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">The Chemical Bond in Polyatomic Molecules</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./13_Spectroscopy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Math.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A2_Constants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Physical Constants and Unit Conversions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A3_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sec-MathComplex" id="toc-sec-MathComplex" class="nav-link active" data-scroll-target="#sec-MathComplex"><span class="header-section-number">A.1</span> Complex Numbers</a></li>
+  <li><a href="#sec-MathDerivatives" id="toc-sec-MathDerivatives" class="nav-link" data-scroll-target="#sec-MathDerivatives"><span class="header-section-number">A.2</span> Derivatives</a>
+  <ul class="collapse">
+  <li><a href="#partial-derivatives" id="toc-partial-derivatives" class="nav-link" data-scroll-target="#partial-derivatives"><span class="header-section-number">A.2.1</span> Partial derivatives</a></li>
+  </ul></li>
+  <li><a href="#sec-MathIntegrals" id="toc-sec-MathIntegrals" class="nav-link" data-scroll-target="#sec-MathIntegrals"><span class="header-section-number">A.3</span> Integrals</a></li>
+  <li><a href="#sec-MathCoordinates" id="toc-sec-MathCoordinates" class="nav-link" data-scroll-target="#sec-MathCoordinates"><span class="header-section-number">A.4</span> Spherical Polar Coordinates</a></li>
+  <li><a href="#sec-MathDeterminants" id="toc-sec-MathDeterminants" class="nav-link" data-scroll-target="#sec-MathDeterminants"><span class="header-section-number">A.5</span> Determinants and Secular Equations</a>
+  <ul class="collapse">
+  <li><a href="#secular-equations" id="toc-secular-equations" class="nav-link" data-scroll-target="#secular-equations"><span class="header-section-number">A.5.1</span> Secular equations</a></li>
+  </ul></li>
+  <li><a href="#sec-MathEigen" id="toc-sec-MathEigen" class="nav-link" data-scroll-target="#sec-MathEigen"><span class="header-section-number">A.6</span> Eigenvalue Problems</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/A1_Math.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./A1_Math.html">Appendices</a></li><li class="breadcrumb-item"><a href="./A1_Math.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-MathToolkit" class="quarto-section-identifier">Appendix A — Mathematical Toolkit</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This appendix collects the mathematical tools used throughout the book, with the minimum of theory needed to use them. Each section points to the chapters where the tool is first needed. For a more complete treatment, see the mathematics references in <a href="A3_References.html" class="quarto-xref"><span>Appendix C</span></a>.</p>
+<section id="sec-MathComplex" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="sec-MathComplex"><span class="header-section-number">A.1</span> Complex Numbers</h2>
+<p>A complex number has a real part and an imaginary part:</p>
+<p><span id="eq-mcomplex1"><span class="math display">\[
+z = a + ib, \qquad i^2=-1,
+\tag{A.1}\]</span></span></p>
+<p>where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers. Its <strong>complex conjugate</strong>, <span class="math inline">\(z^*\)</span>, is obtained by replacing <span class="math inline">\(i\)</span> with <span class="math inline">\(-i\)</span> everywhere:</p>
+<p><span id="eq-mcomplex2"><span class="math display">\[
+z^* = a - ib.
+\tag{A.2}\]</span></span></p>
+<p>The product of a complex number with its conjugate is always real and non-negative, and it is called the <strong>squared modulus</strong>:</p>
+<p><span id="eq-mcomplex3"><span class="math display">\[
+|z|^2 = z^*z = (a-ib)(a+ib) = a^2+b^2.
+\tag{A.3}\]</span></span></p>
+<p>This is the reason why wave functions, which can be complex, are always combined as <span class="math inline">\(\psi^*\psi=|\psi|^2\)</span> when we compute probabilities (<a href="03_Schrodinger.html#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>): the result is guaranteed to be a real, non-negative number.</p>
+<p><strong>Euler’s formula</strong> connects complex exponentials with sines and cosines:</p>
+<p><span id="eq-meuler"><span class="math display">\[
+e^{i\theta} = \cos\theta + i\sin\theta,
+\tag{A.4}\]</span></span></p>
+<p>and, combining it with its conjugate, <span class="math inline">\(e^{-i\theta} = \cos\theta - i\sin\theta\)</span>:</p>
+<p><span id="eq-meuler2"><span class="math display">\[
+\cos\theta = \frac{e^{i\theta}+e^{-i\theta}}{2}, \qquad \sin\theta = \frac{e^{i\theta}-e^{-i\theta}}{2i}.
+\tag{A.5}\]</span></span></p>
+<p>Two consequences are used often. First, <span class="math inline">\(|e^{i\theta}|^2 = e^{-i\theta}e^{i\theta}=1\)</span> for any real <span class="math inline">\(\theta\)</span>, so a complex exponential is a “pure phase” that does not change probabilities. Second, any complex number can be written in <em>polar form</em>, <span class="math inline">\(z = |z|\,e^{i\theta}\)</span>, with a modulus <span class="math inline">\(|z|\)</span> and a phase <span class="math inline">\(\theta\)</span>. Complex numbers first appear with the classical waves of chapter 1 (<a href="01_Classical.html#eq-euler" class="quarto-xref">eq.&nbsp;<span>1.14</span></a>), and they are used for plane waves (<a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>), the particle on a ring (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), and the spherical harmonics (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>).</p>
+</section>
+<section id="sec-MathDerivatives" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="sec-MathDerivatives"><span class="header-section-number">A.2</span> Derivatives</h2>
+<p>The derivatives that appear most often in quantum mechanics are:</p>
+<p><span id="eq-mderiv1"><span class="math display">\[
+\frac{d}{dx}e^{ax} = a\,e^{ax}, \qquad \frac{d}{dx}\sin(kx) = k\cos(kx), \qquad \frac{d}{dx}\cos(kx) = -k\sin(kx),
+\tag{A.6}\]</span></span></p>
+<p>together with the <strong>product rule</strong>, <span class="math inline">\(\frac{d}{dx}\left[f(x)g(x)\right] = f'(x)g(x)+f(x)g'(x)\)</span>, and the <strong>chain rule</strong>, <span class="math inline">\(\frac{d}{dx}f\left(g(x)\right) = f'\left(g(x)\right)g'(x)\)</span>. Taking the derivative of <a href="#eq-mderiv1" class="quarto-xref">eq.&nbsp;<span>A.6</span></a> twice gives:</p>
+<p><span id="eq-mderiv2"><span class="math display">\[
+\frac{d^2}{dx^2}\sin(kx) = -k^2\sin(kx), \qquad \frac{d^2}{dx^2}e^{ikx} = -k^2e^{ikx}.
+\tag{A.7}\]</span></span></p>
+<p>In both cases, the second derivative returns the same function multiplied by a constant. This is exactly why sines, cosines, and complex exponentials are the solutions of the Schrödinger equation for a free particle and for the particle in a box (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>): they are eigenfunctions of the kinetic energy operator (<a href="#sec-MathEigen" class="quarto-xref"><span>section A.6</span></a>).</p>
+<section id="partial-derivatives" class="level3" data-number="A.2.1">
+<h3 data-number="A.2.1" class="anchored" data-anchor-id="partial-derivatives"><span class="header-section-number">A.2.1</span> Partial derivatives</h3>
+<p>When a function depends on more than one variable, such as a wave function <span class="math inline">\(\psi(x,y,z)\)</span>, a <strong>partial derivative</strong> is the derivative with respect to one variable, while all the others are kept constant. For example, for <span class="math inline">\(f(x,y)=x^2y\)</span>:</p>
+<p><span id="eq-mpartial1"><span class="math display">\[
+\frac{\partial f}{\partial x} = 2xy, \qquad \frac{\partial f}{\partial y} = x^2.
+\tag{A.8}\]</span></span></p>
+<p>The most important combination of partial derivatives in this book is the <strong>Laplacian</strong>, which appears in the kinetic energy operator:</p>
+<p><span id="eq-mlaplacian"><span class="math display">\[
+\nabla^2 = \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}.
+\tag{A.9}\]</span></span></p>
+</section>
+</section>
+<section id="sec-MathIntegrals" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="sec-MathIntegrals"><span class="header-section-number">A.3</span> Integrals</h2>
+<p>Normalization, expectation values, and overlap integrals all require integrals. The following ones cover almost every case in the book.</p>
+<p><strong>Sines and cosines</strong> (particle in a box, <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), with <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> positive integers:</p>
+<p><span id="eq-mint1"><span class="math display">\[
+\int_0^a \sin^2\left(\frac{n\pi x}{a}\right)dx = \frac{a}{2}, \qquad \int_0^a \sin\left(\frac{n\pi x}{a}\right)\sin\left(\frac{m\pi x}{a}\right)dx = 0 \quad (n\neq m).
+\tag{A.10}\]</span></span></p>
+<p>The first integral gives the normalization constant <span class="math inline">\(\sqrt{2/a}\)</span>; the second one shows that different eigenfunctions are orthogonal.</p>
+<p><strong>Exponentials times powers</strong> (hydrogen atom, <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>), with <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(n=0,1,2,\ldots\)</span>:</p>
+<p><span id="eq-mint2"><span class="math display">\[
+\int_0^\infty x^n e^{-ax}dx = \frac{n!}{a^{n+1}}.
+\tag{A.11}\]</span></span></p>
+<p><strong>Gaussians</strong> (harmonic oscillator, <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>; also the Gaussian basis functions used in the calculations of <a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a> and <a href="12_Polyatomic.html" class="quarto-xref"><span>chapter 12</span></a>), with <span class="math inline">\(a&gt;0\)</span>:</p>
+<p><span id="eq-mint3"><span class="math display">\[
+\int_{-\infty}^{\infty} e^{-ax^2}dx = \sqrt{\frac{\pi}{a}}, \qquad \int_{-\infty}^{\infty} x^2e^{-ax^2}dx = \frac{1}{2a}\sqrt{\frac{\pi}{a}}.
+\tag{A.12}\]</span></span></p>
+<p><strong>Symmetry shortcut.</strong> If a function is <em>odd</em>, <span class="math inline">\(f(-x)=-f(x)\)</span>, its integral over a symmetric interval, such as <span class="math inline">\(-\infty\)</span> to <span class="math inline">\(\infty\)</span>, is zero. For example, <span class="math inline">\(\int_{-\infty}^{\infty} x\,e^{-ax^2}dx=0\)</span> without any calculation. This shortcut is the origin of many selection rules (<a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>).</p>
+<p>As an example, consider the normalization of the hydrogen <span class="math inline">\(1s\)</span> orbital, <span class="math inline">\(\psi=N e^{-r/a_0}\)</span>. Using the volume element of spherical coordinates (<a href="#sec-MathCoordinates" class="quarto-xref"><span>section A.4</span></a>) and <a href="#eq-mint2" class="quarto-xref">eq.&nbsp;<span>A.11</span></a> with <span class="math inline">\(n=2\)</span> and <span class="math inline">\(a=2/a_0\)</span>:</p>
+<p><span id="eq-mint4"><span class="math display">\[
+1 = N^2\int_0^{2\pi}\int_0^{\pi}\int_0^\infty e^{-2r/a_0}\,r^2\sin\theta\,dr\,d\theta\,d\varphi = N^2\,(4\pi)\,\frac{2!}{(2/a_0)^3} = N^2\pi a_0^3,
+\tag{A.13}\]</span></span></p>
+<p>which gives <span class="math inline">\(N = 1/\sqrt{\pi a_0^3}\)</span>.</p>
+</section>
+<section id="sec-MathCoordinates" class="level2" data-number="A.4">
+<h2 data-number="A.4" class="anchored" data-anchor-id="sec-MathCoordinates"><span class="header-section-number">A.4</span> Spherical Polar Coordinates</h2>
+<p>Atoms are spherical, and their wave functions are much simpler to write in <strong>spherical polar coordinates</strong> <span class="math inline">\((r,\theta,\varphi)\)</span> than in Cartesian coordinates <span class="math inline">\((x,y,z)\)</span>. The two sets are related by:</p>
+<p><span id="eq-mspherical1"><span class="math display">\[
+x = r\sin\theta\cos\varphi, \qquad y = r\sin\theta\sin\varphi, \qquad z = r\cos\theta,
+\tag{A.14}\]</span></span></p>
+<p>where <span class="math inline">\(r\)</span> is the distance from the origin (<span class="math inline">\(0\le r&lt;\infty\)</span>), <span class="math inline">\(\theta\)</span> is the angle from the <span class="math inline">\(z\)</span> axis (<span class="math inline">\(0\le\theta\le\pi\)</span>), and <span class="math inline">\(\varphi\)</span> is the angle around the <span class="math inline">\(z\)</span> axis (<span class="math inline">\(0\le\varphi&lt;2\pi\)</span>). The volume of a small box in these coordinates is <em>not</em> simply <span class="math inline">\(dr\,d\theta\,d\varphi\)</span>, but:</p>
+<p><span id="eq-mspherical2"><span class="math display">\[
+d\tau = r^2\sin\theta\,dr\,d\theta\,d\varphi.
+\tag{A.15}\]</span></span></p>
+<p>The factor <span class="math inline">\(r^2\)</span> is the reason why the radial probability of hydrogen is <span class="math inline">\(r^2R(r)^2\)</span> and not just <span class="math inline">\(R(r)^2\)</span> (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>): there is more volume in a thin shell far from the nucleus than in a thin shell close to it. Integrating the angular part alone gives <span class="math inline">\(\int_0^{2\pi}\int_0^\pi\sin\theta\,d\theta\,d\varphi = 4\pi\)</span>, the solid angle of a full sphere. Finally, the Laplacian of <a href="#eq-mlaplacian" class="quarto-xref">eq.&nbsp;<span>A.9</span></a> becomes:</p>
+<p><span id="eq-mspherical3"><span class="math display">\[
+\nabla^2 = \frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right) + \frac{1}{r^2\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right) + \frac{1}{r^2\sin^2\theta}\frac{\partial^2}{\partial\varphi^2}.
+\tag{A.16}\]</span></span></p>
+<p>It looks complicated, but each term depends on one variable only, and this is what allows the separation of variables for the particle on a sphere (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), the rigid rotor (<a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>), and the hydrogen atom (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>).</p>
+</section>
+<section id="sec-MathDeterminants" class="level2" data-number="A.5">
+<h2 data-number="A.5" class="anchored" data-anchor-id="sec-MathDeterminants"><span class="header-section-number">A.5</span> Determinants and Secular Equations</h2>
+<p>A <strong>determinant</strong> is a single number computed from a square array of numbers. For a <span class="math inline">\(2\times2\)</span> array:</p>
+<p><span id="eq-mdet1"><span class="math display">\[
+\left|\begin{matrix} a &amp; b \\ c &amp; d \end{matrix}\right| = ad - bc,
+\tag{A.17}\]</span></span></p>
+<p>and for a <span class="math inline">\(3\times3\)</span> array we expand along the first row, multiplying each element by the <span class="math inline">\(2\times2\)</span> determinant left after removing its row and column, with alternating signs:</p>
+<p><span id="eq-mdet2"><span class="math display">\[
+\left|\begin{matrix} a &amp; b &amp; c \\ d &amp; e &amp; f \\ g &amp; h &amp; k \end{matrix}\right| = a\left|\begin{matrix} e &amp; f \\ h &amp; k \end{matrix}\right| - b\left|\begin{matrix} d &amp; f \\ g &amp; k \end{matrix}\right| + c\left|\begin{matrix} d &amp; e \\ g &amp; h \end{matrix}\right|.
+\tag{A.18}\]</span></span></p>
+<p>Two properties are important for this book. Exchanging two rows (or two columns) changes the sign of the determinant, and a determinant with two identical rows (or columns) is zero. These are exactly the properties that make Slater determinants antisymmetric and enforce the Pauli exclusion principle (<a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>).</p>
+<section id="secular-equations" class="level3" data-number="A.5.1">
+<h3 data-number="A.5.1" class="anchored" data-anchor-id="secular-equations"><span class="header-section-number">A.5.1</span> Secular equations</h3>
+<p>When a molecular orbital is written as a combination of two basis functions, <span class="math inline">\(\psi = c_a\phi_a + c_b\phi_b\)</span>, the variational method leads to two equations for the two unknown coefficients (<a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>):</p>
+<p><span id="eq-msecular1"><span class="math display">\[
+\begin{aligned}
+(H_{aa}-E)\,c_a + (H_{ab}-ES)\,c_b &amp;= 0\\
+(H_{ab}-ES)\,c_a + (H_{bb}-E)\,c_b &amp;= 0.
+\end{aligned}
+\tag{A.19}\]</span></span></p>
+<p>This system always has the useless solution <span class="math inline">\(c_a=c_b=0\)</span>. It has other solutions only if the determinant of the coefficients is zero:</p>
+<p><span id="eq-msecular2"><span class="math display">\[
+\left|\begin{matrix} H_{aa}-E &amp; H_{ab}-ES \\ H_{ab}-ES &amp; H_{bb}-E \end{matrix}\right| = 0.
+\tag{A.20}\]</span></span></p>
+<p>This is the <strong>secular determinant</strong>. Expanding it with <a href="#eq-mdet1" class="quarto-xref">eq.&nbsp;<span>A.17</span></a> gives an equation for <span class="math inline">\(E\)</span> whose solutions are the orbital energies. For a homonuclear diatomic, <span class="math inline">\(H_{aa}=H_{bb}\)</span>, and the two solutions are:</p>
+<p><span id="eq-msecular3"><span class="math display">\[
+E_\pm = \frac{H_{aa}\pm H_{ab}}{1\pm S}.
+\tag{A.21}\]</span></span></p>
+<p>Once <span class="math inline">\(E\)</span> is known, each value is substituted back into <a href="#eq-msecular1" class="quarto-xref">eq.&nbsp;<span>A.19</span></a> to find the ratio <span class="math inline">\(c_b/c_a\)</span>, and normalization fixes the remaining constant. With <span class="math inline">\(n\)</span> basis functions, the determinant is <span class="math inline">\(n\times n\)</span> and gives <span class="math inline">\(n\)</span> orbital energies; this is what the computer solves at each step of the SCF procedure (<a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>) and what we solve by hand in Hückel theory (<a href="12_Polyatomic.html" class="quarto-xref"><span>chapter 12</span></a>).</p>
+</section>
+</section>
+<section id="sec-MathEigen" class="level2" data-number="A.6">
+<h2 data-number="A.6" class="anchored" data-anchor-id="sec-MathEigen"><span class="header-section-number">A.6</span> Eigenvalue Problems</h2>
+<p>An <strong>eigenvalue problem</strong> asks: which functions are left unchanged by an operator, apart from a multiplicative constant? In symbols:</p>
+<p><span id="eq-meigen1"><span class="math display">\[
+\hat{A}\,f = a\,f,
+\tag{A.22}\]</span></span></p>
+<p>where <span class="math inline">\(f\)</span> is an <strong>eigenfunction</strong> of the operator <span class="math inline">\(\hat{A}\)</span> and the number <span class="math inline">\(a\)</span> is the corresponding <strong>eigenvalue</strong>. We have already seen an example in <a href="#eq-mderiv2" class="quarto-xref">eq.&nbsp;<span>A.7</span></a>: <span class="math inline">\(\sin(kx)\)</span> is an eigenfunction of <span class="math inline">\(\frac{d^2}{dx^2}\)</span> with eigenvalue <span class="math inline">\(-k^2\)</span>. A counterexample is <span class="math inline">\(x^2\)</span>: its second derivative is <span class="math inline">\(2\)</span>, which is not a constant times <span class="math inline">\(x^2\)</span>, so <span class="math inline">\(x^2\)</span> is not an eigenfunction of <span class="math inline">\(\frac{d^2}{dx^2}\)</span>. The time-independent Schrödinger equation, <span class="math inline">\(\hat{H}\psi = E\psi\)</span>, is an eigenvalue problem in which the operator is the Hamiltonian, the eigenfunctions are the wave functions of the stationary states, and the eigenvalues are their energies (<a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a> and <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>).</p>
+<p>When the wave function is expanded in a basis set, the operator becomes a matrix, the eigenfunction becomes a column of coefficients, and the eigenvalue problem becomes a matrix equation, <span class="math inline">\(\mathbf{A}\mathbf{c} = a\,\mathbf{c}\)</span>. For example, the <span class="math inline">\(2\times2\)</span> matrix below has two eigenvectors:</p>
+<p><span id="eq-meigen2"><span class="math display">\[
+\left(\begin{matrix} \alpha &amp; \beta \\ \beta &amp; \alpha \end{matrix}\right)\left(\begin{matrix} 1 \\ 1 \end{matrix}\right) = (\alpha+\beta)\left(\begin{matrix} 1 \\ 1 \end{matrix}\right), \qquad \left(\begin{matrix} \alpha &amp; \beta \\ \beta &amp; \alpha \end{matrix}\right)\left(\begin{matrix} 1 \\ -1 \end{matrix}\right) = (\alpha-\beta)\left(\begin{matrix} 1 \\ -1 \end{matrix}\right).
+\tag{A.23}\]</span></span></p>
+<p>The eigenvalues <span class="math inline">\(\alpha\pm\beta\)</span> are the roots of the secular determinant <span class="math inline">\(\left|\begin{matrix} \alpha-E &amp; \beta \\ \beta &amp; \alpha-E \end{matrix}\right|=0\)</span>. This is the Hückel treatment of ethylene (<a href="12_Polyatomic.html" class="quarto-xref"><span>chapter 12</span></a>): the in-phase combination is the bonding <span class="math inline">\(\pi\)</span> orbital, and the out-of-phase combination is the antibonding <span class="math inline">\(\pi^*\)</span> orbital. Solving a secular determinant and finding the eigenvalues of a matrix are the same problem.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<!-- Peverati research group logo at the top right (light and dark versions). -->
+<script>
+(function () {
+  var a = document.createElement("a");
+  a.className = "lab-logo";
+  a.href = "https://peverati.github.io";
+  a.title = "Peverati research group";
+  // Both versions are inserted; CSS shows the one that matches the light/dark theme.
+  a.innerHTML =
+    '<img class="logo-for-light" src="img/logo-light.png" alt="Peverati research group logo">' +
+    '<img class="logo-for-dark" src="img/logo-dark.png" alt="Peverati research group logo">';
+  // Wide screens: top of the right-hand column (above the table of contents).
+  // Narrow screens: right end of the top bar.
+  var margin = document.querySelector("#quarto-margin-sidebar");
+  var bar = document.querySelector("#quarto-header .quarto-secondary-nav .container-fluid") ||
+            document.querySelector("#quarto-header nav");
+  if (margin && getComputedStyle(margin).display !== "none") {
+    a.classList.add("in-margin");
+    margin.insertBefore(a, margin.firstChild);
+  } else if (bar) {
+    a.classList.add("in-bar");
+    bar.appendChild(a);
+  }
+})();
+</script>
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+  }).catch(function () {});
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+      <a href="./13_Spectroscopy.html" class="pagination-link" aria-label="Spectroscopy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./A2_Constants.html" class="pagination-link" aria-label="Physical Constants and Unit Conversions">
+        <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Physical Constants and Unit Conversions</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/main/A1_Math.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

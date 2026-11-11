@@ -18,3 +18,8 @@ body.quarto-dark .lab-logo .logo-for-light { display: none; }
 body.quarto-dark .lab-logo .logo-for-dark { display: block; }
 /* let the breadcrumb shrink so the logo stays on screen in the narrow top bar */
 .quarto-secondary-nav .container-fluid > nav, .quarto-secondary-nav .container-fluid > a.flex-grow-1 { min-width: 0; overflow: hidden; }
+/* Narrow screens: keep the sidebar (and the chapter arrows) inside the screen, wrap long titles */
+@media (max-width: 991.98px) {
+  #quarto-sidebar { max-width: 100vw; overflow-x: hidden; }
+  #quarto-sidebar .sidebar-item-container > a, #quarto-sidebar .sidebar-title, .sidebar-chapter-toc a { white-space: normal; }
+}

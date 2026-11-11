@@ -235,7 +235,7 @@ $$
 e^{i\theta}=\cos\theta + i\sin\theta,
 $$ {#eq-euler}
 
-where $i=\sqrt{-1}$ is the imaginary unit. Using this formula, we can write a wave as:
+where $i=\sqrt{-1}$ is the imaginary unit (complex numbers are reviewed in @sec-MathComplex). Using this formula, we can write a wave as:
 
 $$
 y(x,t) = A\,e^{i(kx-\omega t)} = A\cos(kx-\omega t) + iA\sin(kx-\omega t),

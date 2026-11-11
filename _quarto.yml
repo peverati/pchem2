@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
+  post-render: scripts/sidebar_sections.py
   resources:
     - .nojekyll   # GitHub Pages: serve site_libs/ as is
     - img/logo-light.png
@@ -39,6 +40,13 @@ book:
     - 11_Bonds.qmd
     - 12_Polyatomic.qmd
     - 13_Spectroscopy.qmd
+  appendices:
+    - A1_Math.qmd
+    - A2_Constants.qmd
+    - A3_References.qmd
+
+bibliography: book.bib
+citation-location: document
 
 crossref:
   eq-prefix: eq.
@@ -55,7 +63,9 @@ format:
     css: quarto.css
     html-math-method: mathjax
     include-in-header: punctuation.html
-    include-after-body: logo.html
+    include-after-body:
+      - logo.html
+      - sidebar-toc.html
     number-depth: 3
     fig-align: center
   pdf:

@@ -407,6 +407,32 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A2_Constants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Physical Constants and Unit Conversions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A3_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -481,6 +507,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Definitions and exercises are usually numbered and are highlighted in the text in this format (lighter grey, indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.</p>
 </blockquote>
 <p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar’s corresponding icon. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on <a href="https://github.com/peverati/PChem2">over there</a> and fork the book.</p>
+<p>The appendices at the end of the book review the mathematical tools that we use (<a href="A1_Math.html" class="quarto-xref"><span>Appendix A — Mathematical Toolkit</span></a>), collect physical constants and unit conversions (<a href="A2_Constants.html" class="quarto-xref"><span>Appendix B — Physical Constants and Unit Conversions</span></a>), and suggest further reading for when you want a second explanation or more depth (<a href="A3_References.html" class="quarto-xref"><span>Appendix C — Further Reading and References</span></a>).</p>
 <blockquote class="blockquote">
 <p>If you spot a mistake or a typo, contact Dr.&nbsp;Peverati via <a href="mailto:rpeverati@fit.edu">email</a>.</p>
 </blockquote>
@@ -514,6 +541,55 @@ ul.task-list li input[type="checkbox"] {
     bar.appendChild(a);
   }
 })();
+</script>
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+  }).catch(function () {});
+});
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

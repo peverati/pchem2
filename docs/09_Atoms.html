@@ -27,7 +27,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -435,6 +454,32 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Spectroscopy</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">Appendices</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A1_Math.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Mathematical Toolkit</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A2_Constants.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Physical Constants and Unit Conversions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./A3_References.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Further Reading and References</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -709,7 +754,7 @@ Figure&nbsp;9.3: Radial probability distributions of the <span class="math inlin
 <div id="tbl-tab1c9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;9.1: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi.
+Table&nbsp;9.1: Effective nuclear charges for the orbitals of the ground-state configurations of the second-row atoms, from variational calculations by Clementi and Raimondi <span class="citation" data-cites="clementi1963">(<a href="A3_References.html#ref-clementi1963" role="doc-biblioref">Clementi and Raimondi 1963</a>)</span>.
 </figcaption>
 <div aria-describedby="tbl-tab1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
@@ -856,7 +901,7 @@ Figure&nbsp;9.5: Finding the terms of the <span class="math inline">\(2p^2\)</sp
 <img src="img/Carbon_terms.png" class="img-fluid figure-img" style="width:95.0%" alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9.6: Energy levels arising from the <span class="math inline">\(1s^22s^22p^2\)</span> configuration of carbon (experimental values). Electron–electron repulsion splits the configuration into three terms, and spin–orbit coupling further splits the <span class="math inline">\(^3P\)</span> term into three levels with different <span class="math inline">\(J\)</span> (inset, magnified).
+Figure&nbsp;9.6: Energy levels arising from the <span class="math inline">\(1s^22s^22p^2\)</span> configuration of carbon (experimental values from the NIST Atomic Spectra Database <span class="citation" data-cites="nistasd">(<a href="A3_References.html#ref-nistasd" role="doc-biblioref">Kramida et al., n.d.</a>)</span>). Electron–electron repulsion splits the configuration into three terms, and spin–orbit coupling further splits the <span class="math inline">\(^3P\)</span> term into three levels with different <span class="math inline">\(J\)</span> (inset, magnified).
 </figcaption>
 </figure>
 </div>
@@ -1127,6 +1172,14 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-clementi1963" class="csl-entry" role="listitem">
+Clementi, Enrico, and Daniel L. Raimondi. 1963. <span>“Atomic Screening Constants from <span>SCF</span> Functions.”</span> <em>The Journal of Chemical Physics</em> 38 (11): 2686–89. <a href="https://doi.org/10.1063/1.1733573">https://doi.org/10.1063/1.1733573</a>.
+</div>
+<div id="ref-nistasd" class="csl-entry" role="listitem">
+Kramida, A., Yu. Ralchenko, J. Reader, and NIST ASD Team. n.d. <em><span>NIST</span> Atomic Spectra Database</em>. <a href="https://physics.nist.gov/PhysRefData/ASD/levels_form.html">https://physics.nist.gov/PhysRefData/ASD/levels_form.html</a>.
+</div>
+</div>
 </section>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
@@ -1161,6 +1214,55 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
     bar.appendChild(a);
   }
 })();
+</script>
+<!-- Left sidebar: an arrow next to each chapter expands its sections.
+     The current chapter starts open; the others start closed.
+     Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
+<style>
+#quarto-sidebar .sidebar-item-container { display: flex; align-items: flex-start; }
+#quarto-sidebar .sidebar-item-container > a { flex: 1 1 auto; min-width: 0; }
+.chapter-toggle { flex: none; border: 0; background: none; color: inherit; opacity: 0.6; padding: 0 0.25rem; margin-left: 0.2rem; line-height: 1.4; cursor: pointer; }
+.chapter-toggle:hover, .chapter-toggle:focus-visible { opacity: 1; }
+.chapter-toggle .bi { display: inline-block; transition: transform 0.15s; }
+.chapter-toggle[aria-expanded="true"] .bi { transform: rotate(90deg); }
+.sidebar-chapter-toc { list-style: none; padding-left: 1.1rem; margin: 0.15rem 0 0.4rem; font-size: 0.85em; }
+.sidebar-chapter-toc[hidden] { display: none; }
+.sidebar-chapter-toc ul { list-style: none; padding-left: 0.9rem; margin: 0; }
+.sidebar-chapter-toc a { display: block; padding: 0.1rem 0; color: inherit; opacity: 0.8; text-decoration: none; }
+.sidebar-chapter-toc a:hover { opacity: 1; text-decoration: underline; }
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("sidebar-sections.json").then(function (r) { return r.json(); }).then(function (sections) {
+    var here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("#quarto-sidebar .sidebar-item-container > a.sidebar-link").forEach(function (a, i) {
+      var page = new URL(a.href, location.href).pathname.split("/").pop() || "index.html";
+      if (!sections[page]) return;
+      var li = a.closest("li");
+      var holder = document.createElement("div");
+      holder.innerHTML = sections[page];
+      var list = holder.firstElementChild;
+      list.className = "sidebar-chapter-toc";
+      list.id = "sidebar-sections-" + i;
+      var open = page === here;
+      list.hidden = !open;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chapter-toggle";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-controls", list.id);
+      btn.setAttribute("aria-label", "Show sections of " + a.textContent.trim().replace(/\s+/g, " "));
+      btn.innerHTML = '<i class="bi bi-chevron-right" aria-hidden="true"></i>';
+      btn.addEventListener("click", function () {
+        var nowOpen = list.hidden;
+        list.hidden = !nowOpen;
+        btn.setAttribute("aria-expanded", nowOpen ? "true" : "false");
+      });
+      a.parentElement.appendChild(btn);
+      li.appendChild(list);
+    });
+  }).catch(function () {});
+});
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

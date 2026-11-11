@@ -1,0 +1,39 @@
+# Physical Constants and Unit Conversions {#sec-Constants}
+
+The values below are rounded to six significant figures, which is more than enough for every calculation in this book. Exact values (marked with \*) are fixed by the definition of the SI units. For the full list with all digits, see the NIST reference on constants [@codata].
+
+| Constant | Symbol | Value |
+|:------------------------------|:-------------|:-------------------------------------------|
+| Planck constant\* | $h$ | $6.62607\times10^{-34}\;\text{J s}$ |
+| Reduced Planck constant | $\hbar=h/2\pi$ | $1.05457\times10^{-34}\;\text{J s}$ |
+| Speed of light in vacuum\* | $c$ | $2.99792\times10^{8}\;\text{m s}^{-1}$ |
+| Elementary charge\* | $e$ | $1.60218\times10^{-19}\;\text{C}$ |
+| Electron mass | $m_e$ | $9.10938\times10^{-31}\;\text{kg}$ |
+| Proton mass | $m_p$ | $1.67262\times10^{-27}\;\text{kg}$ |
+| Atomic mass unit | $\text{u}$ | $1.66054\times10^{-27}\;\text{kg}$ |
+| Vacuum permittivity | $\varepsilon_0$ | $8.85419\times10^{-12}\;\text{C}^2\,\text{J}^{-1}\,\text{m}^{-1}$ |
+| Avogadro constant\* | $N_A$ | $6.02214\times10^{23}\;\text{mol}^{-1}$ |
+| Boltzmann constant\* | $k_B$ | $1.38065\times10^{-23}\;\text{J K}^{-1}$ |
+| Bohr radius | $a_0$ | $5.29177\times10^{-11}\;\text{m} = 0.529177\;\text{Å}$ |
+| Hartree energy | $E_h$ | $4.35974\times10^{-18}\;\text{J}$ |
+| Rydberg constant | $R_\infty$ | $1.09737\times10^{5}\;\text{cm}^{-1}$ |
+
+: Physical constants used in this book. {#tbl-constants}
+
+Spectroscopists, chemists, and computational chemists all use different energy units. @tbl-conversions converts between the ones used in this book. To use it, read across a row: for example, $1\;\text{eV} = 96.4853\;\text{kJ/mol}$.
+
+| |$E_h$|eV|kJ/mol|cm$^{-1}$|
+|:-|:-:|:-:|:-:|:-:|
+|1 $E_h$|1|27.2114|2625.50|219475|
+|1 eV|0.0367493|1|96.4853|8065.54|
+|1 kJ/mol|$3.80880\cdot10^{-4}$|0.0103643|1|83.5935|
+|1 cm$^{-1}$|$4.55634\cdot10^{-6}$|$1.23984\cdot10^{-4}$|0.0119627|1|
+
+: Conversion factors between energy units (per molecule for $E_h$, eV, and cm$^{-1}$; per mole for kJ/mol). {#tbl-conversions}
+
+A few more relations that are useful in practice:
+
+- **Photon energy and wavelength:** $E=hc/\lambda$, with $hc = 1239.84\;\text{eV nm}$. A photon of $500\;\text{nm}$ therefore carries $2.48\;\text{eV}$.
+- **Wavenumbers:** $\tilde{\nu} = 1/\lambda$, so a wavelength of $1\;\mu\text{m}$ corresponds to $10{,}000\;\text{cm}^{-1}$.
+- **Thermal energy at room temperature ($298\;\text{K}$):** $k_BT = 0.0257\;\text{eV} = 207\;\text{cm}^{-1}$, and $RT = 2.48\;\text{kJ/mol}$.
+- **Lengths:** $1\;\text{Å} = 10^{-10}\;\text{m} = 100\;\text{pm}$, and $1\;a_0 = 0.529177\;\text{Å}$.

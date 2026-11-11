@@ -35,7 +35,7 @@ b &= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
 $$ {#eq-bond3}
 
-Using @eq-molham11 and considering that the nuclei are identical, we can define the integrals $H_{aa}=H_{bb}, H_{ab}=H_{ba}$ and $S_{ab}=S$ (while $S_{aa}=1$ because the hydrogen atom orbitals are normalized). The integral $H_{aa}$ is called the *Coulomb integral*, and it is the energy of an electron described by orbital $a$, including its attraction to the second nucleus, $B$. The integral $H_{ab}$ is called the *resonance integral* (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, @eq-molham12, can then be written:
+Using @eq-molham11 and considering that the nuclei are identical, we can define the integrals $H_{aa}=H_{bb}, H_{ab}=H_{ba}$ and $S_{ab}=S$ (while $S_{aa}=1$ because the hydrogen atom orbitals are normalized). The integral $H_{aa}$ is called the *Coulomb integral*, and it is the energy of an electron described by orbital $a$, including its attraction to the second nucleus, $B$. The integral $H_{ab}$ is called the *resonance integral* (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, @eq-molham12, can then be written (determinants and secular equations are reviewed in @sec-MathDeterminants):
 
 $$
 \left|\begin{matrix}
