@@ -66,7 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -142,7 +141,7 @@ window.Quarto = {
 <link rel="stylesheet" href="quarto.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -316,6 +315,32 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
+    <img src="./img/logo-light.png" alt="Peverati research group logo" class="navbar-logo light-content">
+    <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">The Live Textbook of Physical Chemistry 2</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
+    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav" aria-label="Toolbar">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -331,19 +356,9 @@ window.Quarto = {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Site">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">The Live Textbook of Physical Chemistry 2</a> 
-        <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
-  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
-</div>
-    </div>
-      </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -488,7 +503,7 @@ window.Quarto = {
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/02_Motivation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content" tabindex="-1">
+<main class="content column-body" id="quarto-document-content" tabindex="-1">
 
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -498,7 +513,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -894,31 +909,6 @@ Table&nbsp;2.1: The experiments that led to quantum mechanics.
 </section>
 
 </main> <!-- /main -->
-<!-- Peverati research group logo at the top right (light and dark versions). -->
-<script>
-(function () {
-  var a = document.createElement("a");
-  a.className = "lab-logo";
-  a.href = "https://peverati.github.io";
-  a.title = "Peverati research group";
-  // Both versions are inserted; CSS shows the one that matches the light/dark theme.
-  a.innerHTML =
-    '<img class="logo-for-light" src="img/logo-light.png" alt="Peverati research group logo">' +
-    '<img class="logo-for-dark" src="img/logo-dark.png" alt="Peverati research group logo">';
-  // Wide screens: top of the right-hand column (above the table of contents).
-  // Narrow screens: right end of the top bar.
-  var margin = document.querySelector("#quarto-margin-sidebar");
-  var bar = document.querySelector("#quarto-header .quarto-secondary-nav .container-fluid") ||
-            document.querySelector("#quarto-header nav");
-  if (margin && getComputedStyle(margin).display !== "none") {
-    a.classList.add("in-margin");
-    margin.insertBefore(a, margin.firstChild);
-  } else if (bar) {
-    a.classList.add("in-bar");
-    bar.appendChild(a);
-  }
-})();
-</script>
 <!-- Left sidebar: an arrow next to each chapter expands its sections.
      The current chapter starts open; the others start closed.
      Section lists come from sidebar-sections.json (written by scripts/sidebar_sections.py). -->
@@ -1492,7 +1482,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <script type="application/javascript">
   window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
   </script>
-<nav class="page-navigation" aria-label="Page">
+<nav class="page-navigation column-body" aria-label="Page">
   <div class="nav-page nav-page-previous">
       <a href="./01_Classical.html" class="pagination-link" aria-label="Brief Summary of Classical Physics">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Brief Summary of Classical Physics</span></span>

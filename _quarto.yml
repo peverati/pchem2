@@ -25,7 +25,22 @@ book:
   repo-branch: master
   repo-actions: [edit, issue]
   downloads: [pdf]
-  search: true
+  search:
+    location: sidebar
+    type: textbox
+  navbar:
+    logo:
+      light:
+        path: img/logo-light.png
+        alt: "Peverati research group logo"
+      dark:
+        path: img/logo-dark.png
+        alt: "Peverati research group logo"
+    logo-href: https://peverati.github.io
+    title: false
+    left:
+      - text: "The Live Textbook of Physical Chemistry 2"
+        href: index.qmd
   page-footer:
     center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) · Figure scripts: [MIT](https://github.com/peverati/pchem2/blob/master/scripts/LICENSE)"
   chapters:
@@ -67,9 +82,9 @@ format:
     html-math-method: mathjax
     include-in-header: punctuation.html
     include-after-body:
-      - logo.html
       - sidebar-toc.html
     number-depth: 3
+    page-layout: full   # no right-hand column: the content uses the space
     fig-align: center
   pdf:
     documentclass: scrbook
