@@ -627,20 +627,18 @@ Figure&nbsp;4.1: The first five eigenfunctions and energy levels of a particle c
 </figcaption>
 </figure>
 </div>
-<p>A few important considerations can be made by analyzing the plots of the solutions, specifically:</p>
+<p>Let’s look at <a href="#fig-fig1c4" class="quarto-xref">figure&nbsp;<span>4.1</span></a> and see what it tells us.</p>
 <ol type="1">
-<li><p><strong>Eigenfunctions</strong>: The solutions of the TISEq for the particle in a box are mathematically identical to the <strong>standing wave</strong> modes on a vibrating string fixed at both ends, <a href="01_Classical.html#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.25</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>. In classical waves, boundary conditions quantize allowed frequencies; in quantum mechanics, the infinite walls quantize energy via de Broglie waves, yielding stationary states that don’t propagate but “stand” with fixed nodes.</p></li>
-<li><p><strong>Eigenvalues</strong>: The energy levels are not equidistant from each other, with the gap between consecutive levels, <span class="math inline">\(E_{n+1}-E_n \propto 2n+1\)</span>, increasing linearly with <span class="math inline">\(n\)</span>: low-lying levels are closer together, and higher levels get progressively farther apart.</p></li>
-<li><p><strong>Nodes</strong>: At <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = a\)</span>, and at <span class="math inline">\(x = \frac{ja}{n}\)</span> (where <span class="math inline">\(j = 1, 2, ..., n-1\)</span>), we have <span class="math inline">\(\sin\left(\frac{n\pi x}{a}\right) = 0\)</span>, so <span class="math inline">\(|\psi_n(x)|^2 = 0\)</span>. These are <strong>nodes</strong> where the probability of finding the particle is exactly zero. The boundary nodes, however, are rather trivial, as they are forced by the infinite potential walls, and not a direct consequence of the wavefunction’s oscillatory nature. The <span class="math inline">\(n\)</span>-th energy eigenstate has exactly (<span class="math inline">\(n-1\)</span>) nodes <em>inside</em> the box.</p></li>
-<li><p><strong>Peak probability</strong>: The maxima of <span class="math inline">\(|\psi_n(x)|^2\)</span> occur where <span class="math inline">\(\sin^2\left(\frac{n\pi x}{a}\right)\)</span> is maximum. These <strong>antinodes</strong> represent regions of highest probability.</p></li>
+<li><p><strong>Standing waves.</strong> The wave functions are exactly the standing waves of a guitar string (<a href="01_Classical.html#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.25</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>). This is not a coincidence: in both cases, a wave is confined between two points where it must vanish, and only the waves that “fit” between them are allowed. For the string, this quantizes the frequency. For the particle, it quantizes the energy.</p></li>
+<li><p><strong>The levels get farther apart.</strong> Since <span class="math inline">\(E_n\propto n^2\)</span>, the gap between two neighboring levels, <span class="math inline">\(E_{n+1}-E_n\propto 2n+1\)</span>, grows with <span class="math inline">\(n\)</span>. The lowest levels are the closest together.</p></li>
+<li><p><strong>Nodes.</strong> The wave function <span class="math inline">\(\psi_n\)</span> is zero, and so is the probability of finding the particle, at <span class="math inline">\(n-1\)</span> points <em>inside</em> the box (the purple dots in the figure). The walls are also zero points, but they are imposed by the boundary conditions, so we do not count them as nodes. The rule “more energy, more nodes” is one that we will meet again in every system in this book.</p></li>
+<li><p><strong>Where is the particle?</strong> The probability density, <span class="math inline">\(|\psi_n|^2\)</span>, is largest halfway between the nodes. In the ground state, the particle is most likely to be found at the center of the box, <span class="math inline">\(x=a/2\)</span>. In the first excited state, instead, the center is a node: the particle is <em>never</em> found there, and it is most likely to be found at <span class="math inline">\(x=a/4\)</span> or <span class="math inline">\(x=3a/4\)</span>.</p></li>
 </ol>
-<p>For the ground state (<span class="math inline">\(n=1\)</span>), <span class="math inline">\(|\psi_1(x)|^2 = |C|^2 \sin^2\left(\frac{\pi x}{a}\right)\)</span> has one maximum at <span class="math inline">\(x = a/2.\)</span> The particle is most likely to be found at the center of the box. For the first excited state (<span class="math inline">\(n=2\)</span>), <span class="math inline">\(|\psi_2(x)|^2 = |C|^2 \sin^2\left(\frac{2\pi x}{a}\right)\)</span> has a node at <span class="math inline">\(x = a/2\)</span> and two equal maxima at <span class="math inline">\(x = a/4\)</span> and <span class="math inline">\(x = 3a/4.\)</span> The particle has zero probability of being at the center.</p>
-<p>Unlike classical mechanics where a particle with definite energy bounces back and forth uniformly across the box, quantum stationary states have non-uniform position probability distributions. The particle doesn’t “spend equal time everywhere” - instead, it’s more likely to be found near the antinodes of the wave function.<br><br> Notice that we can use the trigonometric identity, <span class="math inline">\(\sin^2\theta = \frac{1 - \cos(2\theta)}{2}\)</span>, to obtain:</p>
+<p>This last point is very different from what we would expect for a classical particle. A classical ball bouncing between the walls at constant speed spends the same amount of time everywhere in the box, so all positions are equally likely. Where does this classical picture come back? Using the identity <span class="math inline">\(\sin^2\theta = \frac{1 - \cos(2\theta)}{2}\)</span>, we can rewrite the probability density as:</p>
 <p><span id="eq-PIB15"><span class="math display">\[
-|\psi_n(x)|^2 = \frac{|C|^2}{2} \left[1 - \cos\left(\frac{2n\pi x}{a}\right)\right].
+|\psi_n(x)|^2 = \frac{|C|^2}{2} \left[1 - \cos\left(\frac{2n\pi x}{a}\right)\right],
 \tag{4.18}\]</span></span></p>
-<p>This shows that the probability density is the sum of a uniform background (<span class="math inline">\(|C|^2/2\)</span>) modulated by a rapidly oscillating term whose frequency increases with <span class="math inline">\(n\)</span>. As <span class="math inline">\(n\)</span> becomes large (high energy states), <span class="math inline">\(|\psi_n(x)|^2\)</span> becomes more uniform across the box, approaching the classical limit.</p>
-<p>The connection between nodes, energy, and probability distribution is fundamental. Higher energy states oscillate more rapidly and have more nodes, reflecting their increased “kinetic energy” through faster spatial variation.</p>
+<p>a uniform value, <span class="math inline">\(|C|^2/2\)</span>, plus a wiggle whose wavelength gets shorter as <span class="math inline">\(n\)</span> increases. For very large <span class="math inline">\(n\)</span> the wiggles become so close together that no experiment could resolve them, and on average the particle is equally likely to be anywhere: the classical result.</p>
 </section>
 </section>
 <section id="the-particle-in-a-three-dimensional-box" class="level2" data-number="4.2">
@@ -726,58 +724,40 @@ L_z = \hbar m_\ell \quad (m_\ell = 0, \pm1, \pm2, \ldots, \pm\infty).
 <p>A rotating charged particle orbiting the ring generates a magnetic moment <span class="math inline">\(\boldsymbol{\mu} \propto \mathbf{L}\)</span>. Thus <a href="#eq-PIR10" class="quarto-xref">eq.&nbsp;<span>4.32</span></a>, which quantizes <span class="math inline">\(L_z\)</span>, explains why <span class="math inline">\(m_\ell\)</span> is called the <strong>magnetic quantum number</strong>. Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (<span class="math inline">\(m_\ell = 0\)</span>), each energy level is doubly degenerate: the states with <span class="math inline">\(m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span> have the same energy. This makes physical sense because rotation in the positive and negative directions (counter-clockwise and clockwise) should have the same energy. Third, the energy does not depend on the sign of <span class="math inline">\(m_\ell\)</span>, which is a consequence of the fact that energy depends on <span class="math inline">\(L_z^2\)</span>, and <span class="math inline">\((-m_\ell)^2 = (m_\ell)^2\)</span>. This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).</p>
 <section id="wave-function-analysis-1" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="wave-function-analysis-1"><span class="header-section-number">4.3.1</span> Wave function analysis</h3>
-<p>The eigenfunctions in <a href="#eq-PIR5" class="quarto-xref">eq.&nbsp;<span>4.27</span></a> are complex functions and their visualization is not as simple as for the particle in a box. For <span class="math inline">\(m_\ell \neq 0\)</span>, these represent states with definite angular momentum <span class="math inline">\(L_z = \hbar m_\ell\)</span>. The probability density is:</p>
+<p>The eigenfunctions in <a href="#eq-PIR5" class="quarto-xref">eq.&nbsp;<span>4.27</span></a> are complex, and this makes them harder to picture than the sines of the particle in a box. Let’s start from the most important property, the probability density:</p>
 <p><span id="eq-PIR11"><span class="math display">\[
-|\psi_{m_\ell}(\phi)|^2 = |A|^2,
+|\psi_{m_\ell}(\phi)|^2 = \psi_{m_\ell}^*\psi_{m_\ell} = \frac{1}{2\pi}e^{-im_\ell\phi}e^{im_\ell\phi} = \frac{1}{2\pi},
 \tag{4.33}\]</span></span></p>
-<p>which is <strong>uniform around the ring</strong>. This means that the particle is equally likely to be found at any point on the ring in these states, consistent with our expectation that a state with definite angular momentum should have no preferred position on the ring.</p>
-<p>Visualizing the particle-on-a-ring wave functions presents a challenge: the system is <strong>intrinsically 1D</strong> (motion along the circle), yet the <strong>ring geometry requires 2D projection</strong> for intuitive understanding. The clearest visualization plots the real and imaginary parts of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> as height above/below the ring in the <span class="math inline">\(xy\)</span>-plane, as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>:</p>
-<ul>
-<li><span class="math inline">\(xy\)</span>-plane: Shows the circular path (<span class="math inline">\(\phi = 0\)</span> to <span class="math inline">\(2\pi\)</span>)</li>
-<li><span class="math inline">\(z\)</span>-axis: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span> (left column)</li>
-<li><span class="math inline">\(z\)</span>-axis: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span> (right column)</li>
-</ul>
-<p>This 3D representation preserves both the physical ring constraint and reveals the oscillatory nodal structure as <span class="math inline">\(\phi\)</span> varies around the circle.</p>
+<p>which is the same everywhere on the ring. In other words, a particle with a definite angular momentum is equally likely to be found anywhere on the ring. This makes sense: if the particle has no preferred position, it has no reason to prefer one point of the ring over another. Notice also that, since <span class="math inline">\(|\psi|^2\)</span> is never zero, <strong>the wave function itself has no nodes</strong>.</p>
+<p>To see what the wave functions look like, we need to draw their real and imaginary parts separately, <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span> and <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. The particle moves along a circle, so the most natural picture draws each part as a height above or below the ring, as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>. Going once around the ring, each part oscillates <span class="math inline">\(|m_\ell|\)</span> times, and it crosses zero <span class="math inline">\(2|m_\ell|\)</span> times. These zero crossings are the nodes of the <em>real and imaginary parts</em>. They are not points where the particle cannot be found, since where one part is zero the other one is not.</p>
 <div id="fig-fig2c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2. The real and imaginary parts are drawn as heights above and below a circle, oscillating around it with 2 times the absolute value of m nodes.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/PIR_3d.png" class="img-fluid figure-img" style="width:50.0%" alt="Three-dimensional plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2. The real and imaginary parts are drawn as heights above and below a circle, oscillating around it with 2 times the absolute value of m nodes.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig2c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.3: 3D visualization of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. The black circle represents the ring of fixed radius <span class="math inline">\(r\)</span>. The colored surface shows wavefunction amplitude plotted as height (<span class="math inline">\(z\)</span>-axis) above/below the ring as the azimuthal angle <span class="math inline">\(\phi\)</span> varies from 0 to <span class="math inline">\(2\pi\)</span>. Each component has exactly <span class="math inline">\(2|m_\ell|\)</span> nodal points, with <span class="math inline">\(\pm m_\ell\)</span> pairs showing opposite phase winding directions (degenerate in energy).
+Figure&nbsp;4.3: Real (left) and imaginary (right) parts of the particle-on-a-ring wave functions for <span class="math inline">\(m_\ell=0,\pm1,\pm2\)</span>, drawn as heights above and below the ring (black circle).
 </figcaption>
 </figure>
 </div>
-<p>Alternatively, <strong>2D contour plots</strong> map the real and imaginary parts of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> onto the ring using a color gradient, as it’s done in <a href="#fig-fig3c4" class="quarto-xref">figure&nbsp;<span>4.4</span></a>:</p>
-<ul>
-<li>Red shades (darker = more positive amplitude).</li>
-<li>Blue shades (darker = more negative amplitude).</li>
-<li>White/light colors = near zero (nodes).</li>
-</ul>
-<p>These are top-down views of the 3D plots in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>, excellent for identifying nodal positions. In the particle-in-a-box, nodes were single points along a line. For the particle-on-a-ring, these plots show that nodes become pairs of diametrically opposite points on the circle. The diametric pairing reflects the rotational symmetry: if <span class="math inline">\(\cos(m_\ell\phi_0) = 0\)</span>, then <span class="math inline">\(\cos(m_\ell(\phi_0 + \pi)) = (-1)^{m_\ell}\cos(m_\ell\phi_0) = 0\)</span>.</p>
+<p>The same information can be shown as a color map on the ring, seen from above (<a href="#fig-fig3c4" class="quarto-xref">figure&nbsp;<span>4.4</span></a>), with red for positive values and blue for negative ones, or as a polar plot (<a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>), where the distance from the center is the value of the function at each angle. Polar plots look a lot like the orbital pictures of general chemistry, so let’s be careful: the “lobes” are not regions where the particle is more likely to be. The particle is always on the ring, and it is equally likely to be anywhere on it. The lobes are just another way of drawing how the real and imaginary parts change with the angle.</p>
 <div id="fig-fig3c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/PIR_top.png" class="img-fluid figure-img" style="width:50.0%" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.4: Top-down 2D contour plots of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. Color scheme: Dark red (positive amplitude), dark blue (negative amplitude), white/light colors (nodes <span class="math inline">\(\approx\)</span> 0). Each component shows exactly <span class="math inline">\(2|m_\ell|\)</span> nodal points appearing as diametrically opposite pairs due to rotational symmetry.
+Figure&nbsp;4.4: The same wave functions as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>, seen from above as color maps on the ring (red: positive, blue: negative, white: zero).
 </figcaption>
 </figure>
 </div>
-<p>The eigenfunctions can also be visualized using <strong>polar plots</strong> against the azimuthal angle <span class="math inline">\(\phi\)</span>, as shown in <a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>:</p>
-<ul>
-<li>The <strong>radial distance</strong> from the center represents the <strong>amplitude</strong> of the real or imaginary part of the wavefunction.</li>
-<li>The <strong>angular position</strong> corresponds to <strong>azimuthal angle</strong> (<span class="math inline">\(\phi\)</span>).</li>
-</ul>
-<p>This representation clearly reveals the nodes where amplitude = 0, appearing as returns to the origin, and the lobes, that is regions of maximum amplitude. However, this visualization has a limitation, as it completely loses the physical ring geometry. The particle remains confined to a circle of fixed radius <span class="math inline">\(r\)</span>, but the polar plot makes it appear as if it explores a 2D disk. When observing the polar plots, it is important to keep in mind that <strong>the lobes are not spatial probability distributions</strong> in 2D space. They represent the <strong>magnitude of the real/imaginary parts</strong> of <span class="math inline">\(\psi_{m_\ell}(\phi)\)</span> evaluated along the ring. The actual position probability <span class="math inline">\(|\psi|^2 = |A|^2\)</span> remains perfectly uniform around the circle for all states.</p>
 <div id="fig-fig4c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Polar plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, showing lobes whose number grows with the absolute value of m.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig4c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/PIR_polar.png" class="img-fluid figure-img" style="width:50.0%" alt="Polar plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, showing lobes whose number grows with the absolute value of m.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.5: Polar plots of particle-on-a-ring eigenfunctions <span class="math inline">\(\psi_{m_\ell}(\phi) = \frac{1}{\sqrt{2\pi}} e^{i m_\ell \phi}\)</span>. Left column: Real part <span class="math inline">\(\Re[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span>. Right column: Imaginary part <span class="math inline">\(\Im[\psi_{m_\ell}] = \frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. Each row shows states with quantum numbers <span class="math inline">\(m_\ell = 0, +1, -1, +2, -2\)</span>. Radial distance from center <span class="math inline">\(\propto\)</span> wavefunction amplitude; angular position = <span class="math inline">\(\phi\)</span>. Nodes appear where the curve returns to the origin (<span class="math inline">\(2|m_\ell|\)</span> per component). Note: Lobes represent amplitude along the ring, not 2D spatial probability (actual <span class="math inline">\(|\psi|^2\)</span> is uniform).
+Figure&nbsp;4.5: Polar plots of the real (left) and imaginary (right) parts of the particle-on-a-ring wave functions: the distance from the center is the value of each part at the angle <span class="math inline">\(\phi\)</span>. The lobes are not regions of higher probability: <span class="math inline">\(|\psi|^2\)</span> is the same everywhere on the ring.
 </figcaption>
 </figure>
 </div>
@@ -785,20 +765,25 @@ Figure&nbsp;4.5: Polar plots of particle-on-a-ring eigenfunctions <span class="m
 </section>
 <section id="the-particle-on-a-sphere" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="the-particle-on-a-sphere"><span class="header-section-number">4.4</span> The Particle on a Sphere</h2>
-<p>Extending the particle on a ring to a three-dimensional case, we get a particle confined on the surface of a sphere (particle on a sphere). This system is a 2-dimensional system analogous to the motion of a rigid rotor. The rigid rotor is a simple model of a rotating stick in three dimensions. We consider the stick to consist of two point-masses at a fixed distance. We then reduce the model to a single-particle system by considering the rigid rotor to have one mass fixed at the origin, which is orbited by the reduced mass <span class="math inline">\(\mu\)</span>, at a distance <span class="math inline">\(r\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The Cartesian coordinates, <span class="math inline">\({x,y,z}\)</span>, are not optimal to represent the system, and they are usually replaced by three spherical polar coordinates: the co-latitude (zenith) angle <span class="math inline">\(\theta\)</span>, the longitudinal (azimuth) angle <span class="math inline">\(\phi\)</span>, and the distance <span class="math inline">\(r\)</span>. If the orbiting mass (the electron) is held at a constant distance from the origin, the system reduces to a 2-dimensional system by simply keeping <span class="math inline">\(r\)</span> constant. The TISEq of the system in spherical coordinates is:</p>
+<p>Let’s now move from a circle to the surface of a sphere: a particle free to move anywhere on a sphere of radius <span class="math inline">\(r\)</span>, but never closer to or farther from the center. This model describes, for example, a rotating diatomic molecule (the <em>rigid rotor</em>, two masses at a fixed distance, which we will use in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>), and, as we will see in the next chapter, it gives the angular part of the hydrogen atom.</p>
+<p>On a sphere, the natural coordinates are two angles: <span class="math inline">\(\theta\)</span>, measured down from the north pole (<span class="math inline">\(0\le\theta\le\pi\)</span>), and <span class="math inline">\(\phi\)</span>, measured around the <span class="math inline">\(z\)</span> axis (<span class="math inline">\(0\le\phi&lt;2\pi\)</span>), exactly as on the ring (spherical coordinates are reviewed in <a href="A1_Math.html#sec-MathCoordinates" class="quarto-xref"><span>section A.4</span></a>). Since <span class="math inline">\(r\)</span> is fixed, only the angular part of the kinetic energy remains, and the TISEq is:</p>
 <p><span id="eq-RR1"><span class="math display">\[
 - \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
 \frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(\theta,\phi) = E \psi(\theta,\phi),
 \tag{4.34}\]</span></span></p>
-<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia, as for the particle in a ring case. After a little effort, the eigenfunctions can be shown to be the complex spherical harmonics:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>where <span class="math inline">\(I=\mu r^2\)</span> is the moment of inertia, as for the ring. This equation looks scary, but we do not need to solve it in detail to understand its solutions. The term in <span class="math inline">\(\phi\)</span> is the same as for the particle on a ring, so the dependence on <span class="math inline">\(\phi\)</span> is again <span class="math inline">\(e^{im_\ell\phi}\)</span>. Solving for the dependence on <span class="math inline">\(\theta\)</span> takes more work, and gives polynomials in <span class="math inline">\(\cos\theta\)</span> and <span class="math inline">\(\sin\theta\)</span>, called <em>associated Legendre polynomials</em>, <span class="math inline">\(P_{\ell}^{|m_\ell|}\)</span>. The complete solutions are called <strong>spherical harmonics</strong>:</p>
 <p><span id="eq-RR1b"><span class="math display">\[
-Y_{\ell}^{m_{\ell}}(\theta, \phi) = N P_{\ell}^{|m_\ell|}(\cos\theta) e^{im_\ell\phi},
+Y_{\ell}^{m_{\ell}}(\theta, \phi) = N\, P_{\ell}^{|m_\ell|}(\cos\theta)\, e^{im_\ell\phi},
 \tag{4.35}\]</span></span></p>
-<p>where <span class="math inline">\(P_{\ell}^{|m_\ell|}(\cos\theta)\)</span> denotes the associated Legendre polynomials, <span class="math inline">\(m_\ell\)</span> is the <strong>magnetic quantum number</strong>, and <span class="math inline">\(N\)</span> is a normalization constant. As for the previous cases, the eigenvalues are quantized and are simply:</p>
+<p>with <span class="math inline">\(N\)</span> a normalization constant, and the energies are:</p>
 <p><span id="eq-RR2"><span class="math display">\[
-E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots,\infty).
+E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots).
 \tag{4.36}\]</span></span></p>
-<p>The spherical harmonic functions depend on a second quantum number, <span class="math inline">\(m_{\ell}=-\ell, -\ell+1, \ldots, \ell-1, \ell\)</span> which is the same <strong>magnetic quantum number</strong> that we encounter for the particle on a ring. For the spherical harmonics, however, the energy does not depend on the magnetic quantum number, and functions with the same <span class="math inline">\(\ell\)</span> but different <span class="math inline">\(m_\ell\)</span> are energy-degenerate. Each energy level <span class="math inline">\(E_{\ell}\)</span> is <span class="math inline">\((2\ell+1)\)</span>-fold degenerate in <span class="math inline">\(m_{\ell}\)</span>. Surprisingly enough, this problem was, after all, a one-dimensional problem in disguise, similarly to the previous two cases. The two angular variables, <span class="math inline">\((\theta,\phi)\)</span>, that enter the wave function are indeed completely identical to each other, with one of the two determining the energy (the magnitude of the angular momentum of the circular motion) and the other determining only an energetically irrelevant orientation for the circular motion. Notice, however, that both these components are quantized. So, for a rigid rotor, the magnitude of the angular momentum is quantized and jumps discontinuously from one value to the next, as for the particle on a ring case.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For the particle-on-a-sphere case, however, the orientation in space at which the rotor is allowed to rotate is also quantized and it changes discontinuously. The energy levels of the particle on a sphere are plotted for the first five levels in <a href="#fig-fig5bc4" class="quarto-xref">figure&nbsp;<span>4.6</span></a>.</p>
+<p>Two things are new compared with the ring:</p>
+<ol type="1">
+<li><strong>Two quantum numbers.</strong> The particle on a sphere has two degrees of freedom, so it needs two quantum numbers: <span class="math inline">\(\ell=0,1,2,\ldots\)</span> and <span class="math inline">\(m_\ell=-\ell,\ldots,+\ell\)</span>. The first one fixes the <em>magnitude</em> of the angular momentum, <span class="math inline">\(|\mathbf{L}|=\hbar\sqrt{\ell(\ell+1)}\)</span>, and therefore the energy. The second one fixes its <em>component along <span class="math inline">\(z\)</span></em>, <span class="math inline">\(L_z=m_\ell\hbar\)</span>, as for the ring.</li>
+<li><strong>Degeneracy.</strong> The energy depends only on <span class="math inline">\(\ell\)</span>. Since the sphere looks the same in every direction, the energy cannot depend on how the angular momentum is oriented, that is, on <span class="math inline">\(m_\ell\)</span> (we will come back to this idea in <a href="07_Spin.html#sec-CommutingH" class="quarto-xref"><span>section 7.4</span></a>). Each level is therefore <span class="math inline">\((2\ell+1)\)</span>-fold degenerate, as shown in <a href="#fig-fig5bc4" class="quarto-xref">figure&nbsp;<span>4.6</span></a>.</li>
+</ol>
 <div id="fig-fig5bc4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram for the particle on a sphere, with one level for l equals 0, three degenerate levels for l equals 1, and five for l equals 2, each level farther from the previous one.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig5bc4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -811,28 +796,60 @@ Figure&nbsp;4.6: Energy level diagram and degeneracy pattern for the particle-on
 </div>
 <section id="wave-function-analysis-2" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="wave-function-analysis-2"><span class="header-section-number">4.4.1</span> Wave function analysis</h3>
-<p>The analytical expressions for the first three energy levels <span class="math inline">\((\ell=0,1,2)\)</span> of the rigid rotor are:</p>
-<p><span class="math inline">\(\boldsymbol{\ell=0}:\)</span></p>
-<p><span class="math inline">\(\quad Y_0^0(\theta,\phi) = \frac{1}{2}\sqrt{\frac{1}{\pi}}.\)</span></p>
-<p><span class="math inline">\(\boldsymbol{\ell=1}:\)</span></p>
-<p><span class="math inline">\(\quad Y_1^{-1}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{3}{2\pi}} e^{-i\phi} \sin\theta = \frac{1}{2}\sqrt{\frac{3}{2\pi}} \frac{x-iy}{r}.\)</span></p>
-<p><span class="math inline">\(\quad Y_1^{0}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{3}{\pi}} \cos\theta = \frac{1}{2}\sqrt{\frac{3}{\pi}} \frac{z}{r}.\)</span></p>
-<p><span class="math inline">\(\quad Y_1^{1}(\theta,\phi) = -\frac{1}{2}\sqrt{\frac{3}{2\pi}} e^{i\phi} \sin\theta = -\frac{1}{2}\sqrt{\frac{3}{2\pi}} \frac{x+iy}{r}.\)</span></p>
-<p><span class="math inline">\(\boldsymbol{\ell=2}:\)</span></p>
-<p><span class="math inline">\(\quad Y_2^{-2}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{15}{2\pi}} e^{-2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}} \frac{(x-iy)^2}{r^2}.\)</span></p>
-<p><span class="math inline">\(\quad Y_2^{-1}(\theta,\phi) = \frac{1}{2}\sqrt{\frac{15}{2\pi}} e^{-i\phi} \sin\theta \cos\theta = \frac{1}{2}\sqrt{\frac{15}{2\pi}} \frac{(x-iy)z}{r^2}.\)</span></p>
-<p><span class="math inline">\(\quad Y_2^{0}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{5}{\pi}} (3\cos^2\theta - 1) = \frac{1}{4}\sqrt{\frac{5}{\pi}} \frac{3z^2 - r^2}{r^2}.\)</span></p>
-<p><span class="math inline">\(\quad Y_2^{1}(\theta,\phi) = -\frac{1}{2}\sqrt{\frac{15}{2\pi}} e^{i\phi} \sin\theta \cos\theta = -\frac{1}{2}\sqrt{\frac{15}{2\pi}} \frac{(x+iy)z}{r^2}.\)</span></p>
-<p><span class="math inline">\(\quad Y_2^{2}(\theta,\phi) = \frac{1}{4}\sqrt{\frac{15}{2\pi}} e^{2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}} \frac{(x+iy)^2}{r^2}.\)</span></p>
-<p>Visualizing spherical harmonics presents the same challenges as the particle on a ring, but amplified by dimensionality. The particle lives on a 2D spherical surface (requiring 3D embedding), and we need to show both position (<span class="math inline">\(\theta,\phi\)</span>) and amplitude <span class="math inline">\(\left(Y_\ell^{m_\ell}\right)\)</span>—a 4D problem squeezed into 3D plots.</p>
-<p>The solution mirrors the ring contour plots: we map the amplitude directly to a color gradient on the unit sphere surface. Red shades represent positive values of <span class="math inline">\(\Re\left[ Y_\ell^{m_\ell}(\theta,\phi)\right]\)</span> or <span class="math inline">\(\Im \left[Y_\ell^{m_\ell}(\theta,\phi)\right]\)</span>, blue shades represent negative values, and white/light colors mark the nodes where the harmonic equals zero. <a href="#fig-fig6c4" class="quarto-xref">Figure&nbsp;<span>4.7</span></a> shows these color maps for the real parts across <span class="math inline">\(\ell=0,1,2\)</span>, while <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a> shows the corresponding imaginary parts.</p>
+<p>The first few spherical harmonics are simple functions of the angles:</p>
+<div id="tbl-Ylm" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Ylm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4.1: The first few spherical harmonics.
+</figcaption>
+<div aria-describedby="tbl-Ylm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 36%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(m_\ell\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{2}\sqrt{\frac{1}{\pi}}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{2}\sqrt{\frac{3}{\pi}}\cos\theta\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\pm1\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\mp\frac{1}{2}\sqrt{\frac{3}{2\pi}}\sin\theta\, e^{\pm i\phi}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\frac{1}{4}\sqrt{\frac{5}{\pi}}(3\cos^2\theta-1)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>As for the ring, the functions with <span class="math inline">\(m_\ell\neq0\)</span> are complex, so we draw their real and imaginary parts separately. The most faithful picture is a color map on the sphere itself (<a href="#fig-fig6c4" class="quarto-xref">figure&nbsp;<span>4.7</span></a> for the real parts and <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a> for the imaginary parts): red where the function is positive, blue where it is negative, and white where it is zero. These zero lines are the angular nodes. Each real or imaginary part has <span class="math inline">\(\ell\)</span> of them, the same rule “more energy, more nodes” that we found for the box and the ring.</p>
 <div id="fig-fig6c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig6c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/SH_Re.png" class="img-fluid figure-img" style="width:90.0%" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.7: Color gradient maps of the real part <span class="math inline">\((\Re[Y_\ell^{m_\ell}(\theta,\phi)])\)</span> for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal lines where <span class="math inline">\(Y_\ell^{m_\ell}=0\)</span>). Each <span class="math inline">\(\ell\)</span> manifold shows characteristic nodal structure: 0 nodal lines <span class="math inline">\((\ell=0)\)</span>, 1 nodal surface <span class="math inline">\((\ell=1)\)</span>, 2 nodal surfaces <span class="math inline">\((\ell=2)\)</span>.
+Figure&nbsp;4.7: Real parts of the spherical harmonics for <span class="math inline">\(\ell=0,1,2\)</span>, as color maps on the sphere (red: positive, blue: negative, white: nodes).
 </figcaption>
 </figure>
 </div>
@@ -842,37 +859,34 @@ Figure&nbsp;4.7: Color gradient maps of the real part <span class="math inline">
 <img src="img/SH_Im.png" class="img-fluid figure-img" style="width:90.0%" alt="Color maps on spheres of the imaginary part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig7c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.8: Color gradient maps of the imaginary part <span class="math inline">\((\Im[Y_\ell^{m_\ell}(\theta,\phi)])\)</span> for spherical harmonics of the rigid rotor. Color scheme: Red (positive), blue (negative), white/light (nodal lines where <span class="math inline">\(Y_\ell^{m_\ell}=0\)</span>). Each <span class="math inline">\(\ell\)</span> manifold shows characteristic nodal structure: 0 nodal lines (<span class="math inline">\(\ell=0\)</span>), 1 nodal surface (<span class="math inline">\(\ell=1\)</span>), 2 nodal surfaces (<span class="math inline">\(\ell=2\)</span>).
+Figure&nbsp;4.8: Imaginary parts of the spherical harmonics for <span class="math inline">\(\ell=0,1,2\)</span>, as color maps on the sphere (red: positive, blue: negative, white: nodes).
 </figcaption>
 </figure>
 </div>
-<p>This approach preserves the spherical geometry while clearly revealing the nodal lines as white curves separating red and blue regions, and makes the lobe structure immediately visible—directly extending the 1D ring visualization strategy to the 2D sphere.</p>
-<p>Crucially, these plots visualize the wavefunction itself, not the probability density. The actual position probability on the sphere is given by <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|^2\)</span>. Unlike the particle on a ring case, where <span class="math inline">\(|\psi_{m_\ell}(\phi)|^2 = |A|^2\)</span> was perfectly uniform, the spherical harmonics have non-uniform angular probability. For example:</p>
+<p>The probability of finding the particle at each point of the sphere is <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span>, shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. Unlike the ring, this probability is <strong>not</strong> uniform. <a href="#tbl-Ylm" class="quarto-xref">table&nbsp;<span>4.1</span></a> makes this easy to see:</p>
 <ul>
-<li><span class="math inline">\(Y_0^0\)</span>: Uniform probability everywhere on sphere</li>
-<li><span class="math inline">\(Y_1^0 \propto \cos\theta\)</span>: Probability peaks at poles, zero at equator</li>
-<li><span class="math inline">\(Y_1^{\pm1} \propto \sin\theta\)</span>: Probability peaks at equator, zero at poles</li>
-<li><span class="math inline">\(Y_2^0\)</span>: Probability concentrated along the <span class="math inline">\(z\)</span>-axis, with nodal cones at <span class="math inline">\(\theta \approx 54.7^\circ\)</span> and <span class="math inline">\(125.3^\circ\)</span> and a smaller maximum at the equator</li>
+<li><span class="math inline">\(Y_0^0\)</span> is a constant, so the particle is equally likely to be anywhere on the sphere.</li>
+<li><span class="math inline">\(|Y_1^0|^2\propto\cos^2\theta\)</span> is largest at the poles and zero on the equator.</li>
+<li><span class="math inline">\(|Y_1^{\pm1}|^2\propto\sin^2\theta\)</span> is largest on the equator and zero at the poles. The two functions with <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span> have exactly the same probability density: they differ only in the direction of rotation around <span class="math inline">\(z\)</span>, counterclockwise or clockwise, as for the ring.</li>
 </ul>
-<p>To visualize the true probability distribution, we can plot <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span> directly, which eliminates phase information (<span class="math inline">\(\Re\)</span>, <span class="math inline">\(\Im\)</span>) but reveals where the particle is most likely to be found on the sphere’s surface, as in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. The loss of phase is clear from the fact that the positive and negative <span class="math inline">\(m_\ell\)</span> functions on these plots look exactly identical. A simple interpretation of this fact is that the phase is associated with direction of rotation: Functions with positive <span class="math inline">\(m_\ell\)</span> represent counter-clockwise rotation (<span class="math inline">\(L_z\)</span> pointing upwards), while functions with negative <span class="math inline">\(m_\ell\)</span> represent clockwise rotation (<span class="math inline">\(L_z\)</span> pointing downwards), as for the particle on a ring.</p>
 <div id="fig-fig8c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Probability density of the spherical harmonics for l equals 0, 1, and 2 shown on spheres: uniform for l equals 0, concentrated at the poles or around the equator for l equals 1, and in four-lobed or ring-shaped patterns for l equals 2.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig8c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/SH_abs.png" class="img-fluid figure-img" style="width:90.0%" alt="Probability density of the spherical harmonics for l equals 0, 1, and 2 shown on spheres: uniform for l equals 0, concentrated at the poles or around the equator for l equals 1, and in four-lobed or ring-shaped patterns for l equals 2.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig8c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.9: Probability density plots <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|^2\)</span> for spherical harmonics of the rigid rotor. Color scheme: Darker colors indicate higher probability density on the surface of the sphere. Unlike the particle on a ring (uniform <span class="math inline">\(|\psi|^2\)</span>), these show non-uniform angular probability: <span class="math inline">\((\ell=0)\)</span> uniform; <span class="math inline">\((\ell=1)\)</span> states peak at poles/equator; <span class="math inline">\((\ell=2)\)</span> states show complex 4-lobed or toroidal patterns. Probability integrates to 1 over sphere surface for each state.
+Figure&nbsp;4.9: Probability density <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span> on the sphere (darker: higher probability).
 </figcaption>
 </figure>
 </div>
-<p>An alternative, and often more intuitive, representation is obtained by plotting the magnitude of the spherical harmonic as a radial deformation of the sphere. In this parametric view, each point on the unit sphere <span class="math inline">\((\theta,\phi)\)</span> is moved radially outward (or inward) by an amount proportional to <span class="math inline">\(|Y_\ell^{m_\ell}(\theta,\phi)|\)</span>. The deformed surface is then colored to indicate the sign of the real part (for example, red for positive, blue for negative). This results in a parametric plot where the distance from the center at a given angle represents the magnitude of the amplitude of the spherical harmonic. These plots are reported in <a href="#fig-fig9c4" class="quarto-xref">figure&nbsp;<span>4.10</span></a> for the real part of the wave functions, and in <a href="#fig-fig10c4" class="quarto-xref">figure&nbsp;<span>4.11</span></a> for the imaginary part. These deformed plots correspond to the polar plots for the particle on a ring case we reported in <a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>.</p>
+<p>Finally, the spherical harmonics are often drawn as in <a href="#fig-fig9c4" class="quarto-xref">figure&nbsp;<span>4.10</span></a> and <a href="#fig-fig10c4" class="quarto-xref">figure&nbsp;<span>4.11</span></a>: each point of the sphere is pushed outward by an amount proportional to the absolute value of the real (or imaginary) part, and colored by its sign. These are the three-dimensional versions of the polar plots of the ring, and they show the nodes as flat planes (or cones, as for <span class="math inline">\(Y_2^0\)</span>). They also look very much like the “orbital pictures” of general chemistry, so the same warning applies here: <strong>the lobes are not where the particle is.</strong> The particle is always on the surface of the sphere. The lobes are just a way of drawing the angular function, and their size has nothing to do with the size of anything physical. We will meet the same warning again, and for the same reason, when we discuss the orbitals of the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>.</p>
 <div id="fig-fig9c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional lobe shapes of the real part of the spherical harmonics for l equals 0, 1, and 2: a sphere, dumbbell shapes, and four-lobed and ring shapes, colored red where positive and blue where negative, with nodal surfaces marked.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig9c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/SH_Re_def.png" class="img-fluid figure-img" style="width:90.0%" alt="Three-dimensional lobe shapes of the real part of the spherical harmonics for l equals 0, 1, and 2: a sphere, dumbbell shapes, and four-lobed and ring shapes, colored red where positive and blue where negative, with nodal surfaces marked.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig9c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.10: Parametric plots of the real part of the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The radial deformation (distance from the center at a given angle) is proportional to <span class="math inline">\(\Re[Y_\ell^{m_\ell}(\theta,\phi)]\)</span> (larger lobes = higher angular probability). The color indicates sign of real part (red=positive, blue=negative). The nodal surfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.
+Figure&nbsp;4.10: Real parts of the spherical harmonics drawn as deformed spheres: the distance from the center is proportional to the absolute value of the function, the color gives its sign, and the nodal planes and cones are shown in purple. The lobes do not represent where the particle is: it is always on the surface of the sphere.
 </figcaption>
 </figure>
 </div>
@@ -882,45 +896,41 @@ Figure&nbsp;4.10: Parametric plots of the real part of the spherical harmonics <
 <img src="img/SH_Im_def.png" class="img-fluid figure-img" style="width:90.0%" alt="Three-dimensional lobe shapes of the imaginary part of the spherical harmonics for l equals 1 and 2, colored red where positive and blue where negative, with nodal surfaces marked.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig10c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.11: Parametric plots of the imaginary part of the spherical harmonics <span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span>. The radial deformation (distance from the center at a given angle) is proportional to <span class="math inline">\(\Im[Y_\ell^{m_\ell}(\theta,\phi)]\)</span> (larger lobes = higher angular probability). The color indicates sign of imaginary part (red=positive, blue=negative). The nodal surfaces are also reported in purple. Note: The particle remains confined to a constant sphere surface; the lobes visualize angular probability structure, not 3D spatial extent.
+Figure&nbsp;4.11: Imaginary parts of the spherical harmonics drawn as deformed spheres: the distance from the center is proportional to the absolute value of the function, the color gives its sign, and the nodal planes and cones are shown in purple. The lobes do not represent where the particle is: it is always on the surface of the sphere.
 </figcaption>
 </figure>
 </div>
-<p>The parametric plots are ideal to show the <strong>nodal structure</strong> of the spherical harmonics. This nodal structure follows a simple rule: the <span class="math inline">\(\ell\)</span>-th energy level has exactly <span class="math inline">\(\ell\)</span> nodal surfaces on the sphere. These nodal surfaces—where <span class="math inline">\(Y_\ell^{m_\ell} = 0\)</span>—appear as <em>nodal circles</em> on the spherical surface, as in <a href="#fig-fig6c4" class="quarto-xref">figure&nbsp;<span>4.7</span></a> and <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a>. Most of these nodes are great circles on the sphere, but in some cases they are not, as they can be parallel circles along the <span class="math inline">\(z\)</span>-axis (see e.g., <span class="math inline">\(Y_2^0\)</span>). In parametric plots (deformed polar views), the nodes appear as flat planes cutting through the origin when they are great circles, while they appear as cones when they are parallel circles along the <span class="math inline">\(z\)</span>-axis.</p>
-<p>Finally, it is extremely important to notice that although the deformed polar view resembles the standard “atomic orbital” pictures from general chemistry, <strong>they are fundamentally different visualizations with distinct physical meanings</strong>. Specifically, the deformed lobes do not represent spatial probability in 3D space. Just as with the particle on a ring, the particle remains confined to the sphere’s surface at fixed radius, <span class="math inline">\(r\)</span>. The parametric deformation makes it appear as if the particle explores the 3D volume inside the sphere—<strong>it does not</strong>. When observing the polar plots, it is important to keep in mind that the lobes are not spatial probability distributions in 3D space, but they represent the magnitude of the real/imaginary parts of the spherical harmonic evaluated on the surface of the sphere. As we already discussed above, the probability is not uniform—unlike the particle-on-a-ring where <span class="math inline">\(|\psi|^2 = |A|^2\)</span> was constant. For the rigid rotor, <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span> has maxima and minima (including nodes), showing the electron is more likely found in certain angular directions than others, as it’s clearly shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. The deformed polar view visualizes this angular probability structure, but remains a 2D angular function plotted in a deformed 3D surface, not a 3D spatial probability.</p>
 </section>
 </section>
 <section id="the-harmonic-oscillator" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="the-harmonic-oscillator"><span class="header-section-number">4.5</span> The Harmonic Oscillator</h2>
-<p>We now consider a particle subject to a restoring force <span class="math inline">\(F = -kx\)</span>, as might arise for a mass-spring system obeying Hooke’s Law. The potential is then:</p>
+<p>Our last model is a particle of mass <span class="math inline">\(\mu\)</span> attached to a spring. When the particle is displaced by <span class="math inline">\(x\)</span> from its equilibrium position, the spring pulls it back with a force proportional to the displacement, <span class="math inline">\(F=-kx\)</span> (Hooke’s law), where <span class="math inline">\(k\)</span> is the <em>force constant</em>: the stiffer the spring, the larger <span class="math inline">\(k\)</span>. The corresponding potential energy is:</p>
 <p><span id="eq-HO1"><span class="math display">\[
-V(x) = - \int (-kx)\, dx = V_0 + \frac{1}{2} kx^2.
+V(x) = - \int (-kx)\, dx = \frac{1}{2} kx^2,
 \tag{4.37}\]</span></span></p>
-<p>If we choose the energy scale such that <span class="math inline">\(V_0 = 0\)</span> then: <span class="math inline">\(V(x) = \frac{1}{2}kx^2\)</span>, and the TISEq becomes:</p>
+<p>where we have chosen <span class="math inline">\(V=0\)</span> at the equilibrium position. This simple parabola is more important than it looks: close to the bottom of <em>any</em> potential energy well, the potential looks like a parabola. This is why the harmonic oscillator is the starting point for describing the vibrations of molecules (<a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a> and <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>), where <span class="math inline">\(\mu\)</span> is the reduced mass of the vibrating atoms. The TISEq is:</p>
 <p><span id="eq-HO2"><span class="math display">\[
-- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) =
-E \psi(x)
+- \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) = E \psi(x).
 \tag{4.38}\]</span></span></p>
-<p>After some effort, the eigenfunctions are:</p>
+<p>We will not solve this equation step by step, but we can understand the form of its solutions. Far from the center, the potential grows very quickly, and the wave function must die off quickly; the function that does this is a Gaussian, <span class="math inline">\(e^{-\alpha x^2/2}\)</span>. Near the center, the wave function can oscillate, and the oscillations are described by a polynomial. The solutions are:</p>
 <p><span id="eq-HO3"><span class="math display">\[
-\psi_n(x) = N_{n} H_{n}(\alpha^{1/2} x) e^{-\alpha x^2 / 2} \quad (n=0,1,2,\ldots,\infty),
+\psi_n(x) = N_{n}\, H_{n}\!\left(\sqrt{\alpha}\, x\right) e^{-\alpha x^2 / 2} \quad (n=0,1,2,\ldots),
 \tag{4.39}\]</span></span></p>
-<p>where <span class="math inline">\(H_{n}\)</span> is the Hermite polynomial of degree <span class="math inline">\(n\)</span>, and <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(N_{n}\)</span> are defined by</p>
+<p>where <span class="math inline">\(\alpha = \sqrt{k \mu}/\hbar\)</span> sets the width of the Gaussian, <span class="math inline">\(N_n\)</span> is a normalization constant, and <span class="math inline">\(H_n\)</span> are polynomials called <em>Hermite polynomials</em>. The first three are simple, with <span class="math inline">\(y=\sqrt{\alpha}\,x\)</span>:</p>
 <p><span id="eq-HO4"><span class="math display">\[
-\alpha = \sqrt{\frac{k \mu}{\hbar^2}} \hspace{1.5cm}
-N_{n} = \frac{1}{\sqrt{2^{n} (n)!}} \left( \frac{\alpha}{\pi} \right)^{1/4}.
+H_0(y)=1, \qquad H_1(y)=2y, \qquad H_2(y)=4y^2-2.
 \tag{4.40}\]</span></span></p>
-<p>The eigenvalues are:</p>
+<p>Notice that <span class="math inline">\(H_n\)</span> has degree <span class="math inline">\(n\)</span>, and therefore crosses zero <span class="math inline">\(n\)</span> times. The energies are:</p>
 <p><span id="eq-HO5"><span class="math display">\[
-E_n = \hbar \omega \left(n + \frac{1}{2} \right),
+E_n = \hbar \omega \left(n + \frac{1}{2} \right), \qquad \omega = \sqrt{\frac{k}{\mu}},
 \tag{4.41}\]</span></span></p>
-<p>with <span class="math inline">\(\omega = \sqrt{k/ \mu}\)</span>. Notice how, once again, the eigenfunctions and eigenvalues are not continuous, and the lowest energy state is not zero. In other words, the two masses of a quantum harmonic oscillator are always in motion. The frequencies at which they vibrate do not form a continuous spectrum. That is, the vibration frequency cannot take any value that we can think of, but only those given by <a href="#eq-HO5" class="quarto-xref">eq.&nbsp;<span>4.41</span></a>. The lowest possible energy (the ZPE) will be:</p>
+<p>where <span class="math inline">\(\omega\)</span> is the same angular frequency that a classical mass on a spring would have. As for the particle in a box, the energy is quantized, and the lowest level is not zero. The zero-point energy is:</p>
 <p><span id="eq-zpeH"><span class="math display">\[
-E_0 = \frac{1}{2} \hbar \omega \neq 0
+E_0 = \frac{1}{2} \hbar \omega \neq 0.
 \tag{4.42}\]</span></span></p>
+<p>This means that a quantum oscillator can never be completely at rest at the bottom of the well. Even at absolute zero, the atoms of a molecule keep vibrating. This zero-point vibration is real and measurable: for example, it is the main reason why bonds to deuterium are slightly stronger than bonds to hydrogen (<a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>).</p>
 <section id="wave-function-analysis-3" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="wave-function-analysis-3"><span class="header-section-number">4.5.1</span> Wave function analysis</h3>
-<p><a href="#fig-fig11c4" class="quarto-xref">Figure&nbsp;<span>4.12</span></a> shows the first five harmonic oscillator eigenfunctions alongside their probability densities, with vertical positions scaled according to their energy levels. The nodal positions are also marked.</p>
 <div id="fig-fig11c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first five harmonic oscillator wave functions drawn inside a parabolic potential at heights equal to their equally spaced energies, each with n nodes and its probability density.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig11c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -931,8 +941,13 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </figcaption>
 </figure>
 </div>
-<p>Similarly to the particle in a box case, each <span class="math inline">\(n\)</span>-th eigenstate has exactly <span class="math inline">\(n\)</span> interior nodes, with the Gaussian envelope <span class="math inline">\(e^{-\alpha x^2/2}\)</span> localizing probability near <span class="math inline">\(x=0\)</span> and ensuring rapid decay at large <span class="math inline">\(|x|\)</span>. The ground state (<span class="math inline">\(n=0\)</span>) is a simple Gaussian with no nodes. The first excited state (<span class="math inline">\(n=1\)</span>) has one node at <span class="math inline">\(x=0\)</span>, and higher states develop increasingly rapid oscillations within the widening classical turning points. In contrast with the particle in a box case, the energy levels are equally spaced, with constant spacing <span class="math inline">\(\Delta E = \hbar \omega\)</span>, reflecting the classical periodicity of simple harmonic motion.</p>
-<p>The probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> always decay rapidly outside the classical turning points. Higher-<span class="math inline">\(n\)</span> states oscillate faster within progressively wider classical turning points, and their probability becomes largest near the turning points, approaching the classical probability, which peaks near maximum displacement where the particle moves slowest.</p>
+<p>Let’s look at <a href="#fig-fig11c4" class="quarto-xref">figure&nbsp;<span>4.12</span></a>:</p>
+<ol type="1">
+<li><strong>Equally spaced levels.</strong> Unlike the particle in a box, the levels of the harmonic oscillator are all separated by the same amount, <span class="math inline">\(\hbar\omega\)</span>. As we will see in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>, this is why a vibrating molecule absorbs light at one main frequency.</li>
+<li><strong>Nodes.</strong> The ground state (<span class="math inline">\(n=0\)</span>) is a Gaussian with no nodes, and each level adds one node: <span class="math inline">\(\psi_n\)</span> has <span class="math inline">\(n\)</span> nodes, the same rule “more energy, more nodes” that we found for all the other systems.</li>
+<li><strong>Beyond the classical limits.</strong> A classical oscillator with energy <span class="math inline">\(E\)</span> can never go beyond the points where <span class="math inline">\(V(x)=E\)</span>, called the <em>classical turning points</em>: there, all its energy is potential energy, and it turns back. The quantum wave functions, instead, do not stop at the turning points. They decay quickly but smoothly, so there is a small probability of finding the particle in the classically forbidden region. This is the same effect that allows a particle to tunnel through a barrier (<a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>).</li>
+<li><strong>The classical limit again.</strong> For large <span class="math inline">\(n\)</span>, the probability density is largest near the turning points. This is what we expect classically: a mass on a spring moves slowest near the turning points, so it spends most of its time there.</li>
+</ol>
 </section>
 </section>
 <section id="sec-rev4" class="level2" data-number="4.6">
@@ -1087,14 +1102,6 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 
 
 </section>
-</section>
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>Notice that if we consider an electron rotating at a fixed distance around a nucleus, then the difference in the mass of the electron and the reduced mass of the electron-nucleus system is to all intents and purposes negligible, and we can treat this case as a particle on a sphere.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>For a description of the spherical harmonics the <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">Wikipedia article on spherical harmonics</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>You can think of this as either the “speed” at which the rotor is rotating, or even better, as its “angular frequency”.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
 </section>
 
 </main> <!-- /main -->
