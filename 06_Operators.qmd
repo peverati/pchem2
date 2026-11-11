@@ -249,7 +249,7 @@ $$
 \end{aligned}
 $$ {#eq-hamilt3}
 
-While these three cases are trivial to solve, the case of the rigid rotor is more complicated to solve, since the kinetic energy operator needs to be expressed in spherical polar coordinates, as we will show in the next section.
+While these three cases are simple to solve, the rigid rotor is more complicated, since the kinetic energy operator needs to be expressed in spherical polar coordinates, as we will see in the next section.
 
 The Hamiltonian has a second, equally important role. Using the operator notation, the time-dependent Schrödinger equation, @eq-TDSEq, can be written simply as:
 
@@ -261,22 +261,32 @@ In other words, the Hamiltonian is not only the operator associated with the tot
 
 ### Angular Momentum Operator
 
-To write the kinetic energy operator $\hat{K}$ for the rigid rotor, we need to express the Laplacian, $\nabla^2$, in spherical polar coordinates:
+Angular momentum is the quantity that describes rotation, and rotation is everywhere in chemistry. We have already met it for the particle on a ring and on a sphere (@sec-Models), and it will give us the quantum numbers $\ell$ and $m_\ell$ of the hydrogen orbitals (@sec-Hydrogen), the spin of the electron (@sec-Spin), the term symbols of atoms (@sec-Atoms), and the rotational spectra of molecules (@sec-Spectroscopy). So it is worth collecting here what we know about its operators.
+
+As in classical mechanics, angular momentum is a vector with three components, $\hat{L}_x$, $\hat{L}_y$, and $\hat{L}_z$. In practice, however, we almost never use the components $\hat{L}_x$ and $\hat{L}_y$. The two operators that we need are the *square* of the angular momentum, which tells us how fast the system rotates:
 
 $$
-\nabla^2=\nabla^2_r - \frac{\hat{L}^2}{\hbar^2 r^2},
-$$ {#eq-angmom1}
-
-where $\nabla_r^2 = \frac{1}{r^2}\frac{\partial}{\partial r} \left( r^2\frac{\partial}{\partial r} \right)$ is the radial Laplacian, and $\hat{L}^2$ is the square of the total angular momentum operator, which is:
-
-$$
-\begin{aligned}
-\hat{L}^2 &=\hat{L}\cdot\hat{L}=\left(\mathbf{i}\hat{L}_x+\mathbf{j}\hat{L}_y+\mathbf{k}\hat{L}_z\right)\cdot\left(\mathbf{i}\hat{L}_x+\mathbf{j}\hat{L}_y+\mathbf{k}\hat{L}_z \right) \\
-&=\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2,
-\end{aligned}
+\hat{L}^2 = \hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2,
 $$ {#eq-angmom1b}
 
-with $\left\{\mathbf{i},\mathbf{j},\mathbf{k}\right\}$ the unit vectors in three-dimensional space. The components along each direction, $\left\{\hat{L}_x,\hat{L}_y,\hat{L}_z\right\}$, are then expressed in Cartesian coordinates using the following formulas:
+and its component along one axis, by convention $\hat{L}_z$, which tells us how the rotation is oriented. Their eigenfunctions are the spherical harmonics of @sec-Models, and their eigenvalue equations are:
+
+$$
+\hat{L}^2 Y_{\ell}^{m_{\ell}}(\theta, \varphi) =
+\hbar^2 \ell(\ell+1) Y_{\ell}^{m_{\ell}}(\theta, \varphi),
+$$ {#eq-angmom3}
+
+$$
+\hat{L}_z Y_{\ell}^{m_{\ell}}(\theta, \varphi) =
+\hbar m_{\ell} Y_{\ell}^{m_{\ell}}(\theta, \varphi),
+$$ {#eq-angmom4}
+
+with $\ell=0,1,2,\ldots$ and $m_\ell=-\ell,\ldots,+\ell$. In words: the magnitude of the angular momentum can only take the values $|\mathbf{L}|=\hbar\sqrt{\ell(\ell+1)}$, and, for each of them, its $z$ component can only take the $2\ell+1$ values $m_\ell\hbar$. Notice that $|\mathbf{L}|$ is always a bit larger than the largest possible $L_z=\ell\hbar$: the angular momentum can never point exactly along $z$.
+
+::: {.callout-note collapse="true" icon="false"}
+## Details: the angular momentum operators in coordinates
+
+The components of the angular momentum are obtained from the classical definition, $\mathbf{L}=\mathbf{r}\times\mathbf{p}$, replacing the momentum with its operator, $\hat{\mathbf{p}}=-i\hbar\nabla$:
 
 $$
 \begin{aligned}
@@ -286,25 +296,18 @@ $$
 \end{aligned}
 $$ {#eq-angmom2}
 
-The eigenvalue equation corresponding to the total angular momentum is:
+In spherical coordinates, $\hat{L}_z$ becomes simply $-i\hbar\frac{\partial}{\partial\varphi}$, the operator that we used for the particle on a ring, and $\hat{L}^2$ contains all the angular derivatives of the Laplacian (@sec-MathCoordinates), which can be written as:
 
 $$
-\hat{L}^2 Y_{\ell}^{m_{\ell}}(\theta, \varphi) =
-\hbar^2 \ell(\ell+1) Y_{\ell}^{m_{\ell}}(\theta, \varphi),
-$$ {#eq-angmom3}
- 
-where $\ell$ is the azimuthal quantum number and $Y_{\ell}^{m_\ell}(\theta, \varphi)$ are the spherical harmonics, both of which we already encountered in @sec-Models. Recall once again that each energy level $E_{\ell}$ is $(2\ell+1)$-fold degenerate in $m_{\ell}$, since $m_{\ell}$ can have values  $-\ell, -\ell+1, \ldots, \ell-1, \ell$. This means that there are $(2\ell+1)$ states with the same energy $E_{\ell}$, each characterized by the magnetic quantum number $m_{\ell}$. This quantum number can be determined using the following eigenvalue equation:
+\nabla^2=\nabla^2_r - \frac{\hat{L}^2}{\hbar^2 r^2},
+$$ {#eq-angmom1}
 
-$$
-\hat{L}_z Y_{\ell}^{m_{\ell}}(\theta, \varphi) =
-\hbar m_{\ell} Y_{\ell}^{m_{\ell}}(\theta, \varphi).
-$$ {#eq-angmom4}
+where $\nabla_r^2 = \frac{1}{r^2}\frac{\partial}{\partial r} \left( r^2\frac{\partial}{\partial r} \right)$ is the radial part. This is why the kinetic energy of any particle moving in three dimensions splits into a radial part and a rotational part, $\hat{L}^2/2\mu r^2$, the same form as the classical rotational energy $L^2/2I$. We will use this result for the hydrogen atom in @sec-Hydrogen.
+:::
 
-The interpretation of these results is rather complicated, since the angular momenta are quantum operators and they cannot be drawn as vectors like in classical mechanics. Nevertheless, it is common to depict them heuristically as in @fig-Fig1c6, where a set of states with quantum numbers $\ell =2$, and $m_{\ell}=-2,-1,0,1,2$ are reported. Since $|L|={\sqrt {L^{2}}}=\hbar {\sqrt {6}}$, the vectors are all shown with length $\hbar \sqrt{6}$. The rings represent the fact that $L_{z}$ is known with certainty, but $L_{x}$ and $L_{y}$ are unknown; therefore every classical vector with the appropriate length and $z$-component is drawn, forming a cone. The expected value of the angular momentum for a given ensemble of systems in the quantum state characterized by $\ell$ and $m_{\ell}$, could be somewhere on this cone but it cannot be defined for a single system.
-
+Since $\hat{L}_x$, $\hat{L}_y$, and $\hat{L}_z$ do not commute with each other (for example, $[\hat{L}_x,\hat{L}_y]=i\hbar\hat{L}_z$, and we will see the same relations for spin in @sec-Spin), only one component can have a definite value at a time. This is why angular momentum is often pictured with the *vector model* of @fig-Fig1c6. For $\ell=2$, the vector has length $\hbar\sqrt{6}$ and one of five possible $z$ components. Its $x$ and $y$ components, instead, are not defined, so the vector is drawn anywhere on a cone around the $z$ axis. The cone is only a picture, not a vector that rotates around the axis: in these states, a measurement of $L_x$ or $L_y$ gives a random result, and its average is zero.
 
 ![Vector model of the orbital angular momentum for $\ell=2$. Each cone corresponds to one value of $m_\ell$: the vector has length $\sqrt{6}\hbar$ and a well-defined projection $m_\ell\hbar$ on the $z$ axis, while its direction around the cone (its $x$ and $y$ components) is undetermined.](img/L_vector_model.png){#fig-Fig1c6 fig-alt="Five cones around a vertical z axis for l equals 2, one for each value of m from plus 2 to minus 2. Each cone has an arrow of the same length, square root of 6 times h-bar, on its surface; the arrows have z components of plus 2, plus 1, 0, minus 1, and minus 2 times h-bar." width="60%"}
-
 
 
 ### Commuting operators and compatible observables {#sec-CommutingOperators}
