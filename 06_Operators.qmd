@@ -92,53 +92,52 @@ $$ {#eq-linop3}
 
 ### Hermitian Operators
 
-We said above that operators associated with observables must have real eigenvalues. The operators that guarantee this are called Hermitian, and they are defined by the following property (called *self-adjointness*):
+We said at the beginning of this chapter that every observable is associated with an operator, and that the possible results of a measurement are the eigenvalues of that operator. This immediately puts a requirement on the operator: the result of a measurement, such as an energy or a position, is always a *real* number, so the eigenvalues must be real. Operators that guarantee this are called **Hermitian**.
+
+An operator $\hat{A}$ is Hermitian if, for any two well-behaved functions $\psi_1$ and $\psi_2$:
 
 $$
-\int \psi_a^{*} (\hat{A} \psi_a)d\mathbf{r} =  \int \psi_a (\hat{A} \psi_a)^{*}d\mathbf{r},
-$$ {#eq-hop1}
-
-where the integral is performed over all space. This property guarantees that all the eigenvalues of the operators are real. Defining $a$ as the eigenvalue of operator $\hat{A}$ using: 
-
-$$
-\hat{A} \psi(\mathbf{r}) = a \psi(\mathbf{r}),
-$$ {#eq-hop2}
-
-we can prove that $a$ is real by replacing @eq-hop2 into @eq-hop1:
-
-$$
-\begin{aligned}
-a \int \psi_a^{*} \psi_a d\mathbf{r}&= a^{*} \int \psi_a \psi_a^{*} d\mathbf{r}\\
-(a - a^{*}) \int \vert\psi_a\vert^2 d\mathbf{r} &= 0,
-\end{aligned}
-$$ {#eq-hop4}
-
-and since $\vert\psi_a\vert^2$ is never negative, either $a = a^{*}$ or $\psi_a = 0$. Since $\psi_a = 0$ is not an acceptable wavefunction, $a = a^{*}$, and $a$ is real.
-
-A Hermitian operator also satisfies the following, more general, relations (we will not prove them here):
-
-$$
-\int \psi^{*}\hat{A} \psi d\mathbf{r} = \int (\hat{A} \psi)^{*} \psi d\mathbf{r},
-$$ {#eq-hop2b}
-
-and for any two states $\psi_1$ and $\psi_2$:
-
-$$
-\int \psi_1^{*} \hat{A} \psi_2 d\mathbf{r}=
-\int (\hat{A} \psi_1)^{*} \psi_2 d\mathbf{r}.
+\int \psi_1^{*}\, (\hat{A} \psi_2)\, d\mathbf{r}= \int (\hat{A} \psi_1)^{*}\, \psi_2\, d\mathbf{r}.
 $$ {#eq-hop3}
 
-Taking $\psi_a$ and $\psi_b$ as eigenfunctions of $\hat{A}$ with eigenvalues $a$ and $b$ with $a \neq b$, and using @eq-hop3, we obtain:
+In words: in an integral like this one, we can let the operator act on the function on the right or on the one on the left (complex conjugated), and we get the same result. The operators of @tbl-operators (position, momentum, kinetic energy, the Hamiltonian, angular momentum) are all Hermitian.
+
+Hermitian operators have two properties that we will use over and over again:
+
+1. **Their eigenvalues are real.** This is what makes them suitable to represent observables.
+2. **Their eigenfunctions with different eigenvalues are orthogonal**, that is, if $\hat{A}\psi_a=a\psi_a$ and $\hat{A}\psi_b=b\psi_b$ with $a\neq b$, then $\int \psi_a^{*}\psi_b\, d\mathbf{r}=0$. Eigenfunctions with the *same* eigenvalue (degenerate ones) are not automatically orthogonal, but they can always be combined so that they are. This property is what allows us, in the next section, to calculate expectation values of superpositions so easily, and it is what we have already used, without saying it, for the particle in a box (@sec-MathIntegrals).
+
+Both properties follow directly from @eq-hop3, in a few lines that you can find below.
+
+::: {.callout-note collapse="true" icon="false"}
+## Proof: the eigenvalues are real
+
+Take an eigenfunction of $\hat{A}$:
 
 $$
-\begin{aligned}
-\int \psi_a^{*} \hat{A} \psi_b d\mathbf{r} &= \int (\hat{A} \psi_a)^{*} \psi_b	d\mathbf{r}\\
-b \int \psi_a^{*} \psi_b d\mathbf{r}	&= a^{*} \int \psi_a^{*} \psi_b d\mathbf{r}\\
-(b - a) \int \psi_a^{*} \psi_b d\mathbf{r} &= 0.
-\end{aligned}
+\hat{A} \psi_a = a \psi_a,
+$$ {#eq-hop2}
+
+and use it as both $\psi_1$ and $\psi_2$ in @eq-hop3:
+
+$$
+a \int \psi_a^{*} \psi_a\, d\mathbf{r} = a^{*} \int \psi_a^{*} \psi_a\, d\mathbf{r} \quad\Rightarrow\quad (a - a^{*}) \int \vert\psi_a\vert^2 d\mathbf{r} = 0.
+$$ {#eq-hop4}
+
+The integral of $\vert\psi_a\vert^2$ is positive (it is the total probability), so $a=a^{*}$: the eigenvalue is real.
+:::
+
+::: {.callout-note collapse="true" icon="false"}
+## Proof: eigenfunctions with different eigenvalues are orthogonal
+
+Use two eigenfunctions, $\psi_1=\psi_a$ and $\psi_2=\psi_b$, in @eq-hop3, and remember that $a$ is real:
+
+$$
+b \int \psi_a^{*} \psi_b\, d\mathbf{r} = a \int \psi_a^{*} \psi_b\, d\mathbf{r} \quad\Rightarrow\quad (b - a) \int \psi_a^{*} \psi_b\, d\mathbf{r} = 0.
 $$ {#eq-hop5}
 
-Thus, since $a = a^{*}$, and since we assumed $b \neq a$, we must have $\int \psi_a^{*} \psi_b d\mathbf{r} = 0$, i.e. $\psi_a$ and $\psi_b$ are orthogonal. In other words, eigenfunctions of a Hermitian operator with different eigenvalues are orthogonal (or can be chosen to be so). 
+Since $a\neq b$, the integral must be zero.
+:::
 
 ## Eigenfunctions and Eigenvalues
 
@@ -213,6 +212,9 @@ Some common operators occurring in quantum mechanics are collected in the table 
 |                  | $L_x$       | $\hat{L}_x$       | $-i\hbar\left(y\frac{\partial}{\partial z} - z \frac{\partial}{\partial y} \right)$ |
 |                  | $L_y$       |  $\hat{L}_y$      | $-i \hbar \left(z\frac{\partial}{\partial x} - x \frac{\partial}{\partial z} \right)$ |
 |                  | $L_z$       | $\hat{L}_z$       | $-i \hbar \left(x\frac{\partial}{\partial y} - y \frac{\partial}{\partial x} \right)$ |
+
+: Common operators in quantum mechanics. {#tbl-operators}
+
 \normalsize
 
 In the sections below we analyze in detail two main operators for the energy and the angular momentum.
@@ -420,8 +422,8 @@ e. Eigenvalues must be positive
 
 **6. For a Hermitian operator, eigenfunctions corresponding to different eigenvalues have what property?**
 
-a. They are always identical up to a phase
-b. They are orthogonal (or can be chosen orthogonal)    
+a. They are always identical up to a phase  
+b. They are orthogonal  
 c. They are linearly dependent  
 d. They have the same expectation value of all observables  
 e. They must be degenerate  
