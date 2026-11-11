@@ -640,38 +640,54 @@ window.Quarto = {
 <section id="variational-method" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="variational-method"><span class="header-section-number">9.2.1</span> Variational method</h3>
 <p>The idea behind the variational method is simple. We guess a “trial” wave function that contains some adjustable numbers, called <em>variational parameters</em>. We then calculate the energy of the trial function and change the parameters until this energy is as low as possible. The trial function with the lowest energy, and that energy itself, are our best approximations to the true ground-state wave function and energy.</p>
-<p>Why should the lowest energy be the best answer? The justification is the <strong>variational theorem</strong>: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, <span class="math inline">\(\mathcal{E}_0\)</span>. The proof uses a nice trick. Let’s call our trial function <span class="math inline">\(\Phi\)</span>. Even if we cannot solve the TISEq, its exact eigenfunctions <span class="math inline">\(\Psi_i\)</span> (with energies <span class="math inline">\(\mathcal{E}_0 \leq \mathcal{E}_1 \leq \mathcal{E}_2 \leq \ldots\)</span>) still exist and form a complete set. We can therefore imagine expanding our trial function in terms of them:</p>
-<p><span id="eq-var1"><span class="math display">\[
-\Phi = \sum_i c_i \Psi_i.
-\tag{9.10}\]</span></span></p>
-<p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. The energy of the trial function is the expectation value of the Hamiltonian:</p>
+<p>Why should the lowest energy be the best answer? The energy of a trial function <span class="math inline">\(\Phi\)</span> is the expectation value of the Hamiltonian:</p>
 <p><span id="eq-var2"><span class="math display">\[
 E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
+\tag{9.10}\]</span></span></p>
+<p>where <span class="math inline">\(\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)\)</span> collects the spatial coordinates of all electrons, so the integrals are <span class="math inline">\(3N\)</span>-dimensional. The denominator takes care of normalization, so <span class="math inline">\(\Phi\)</span> does not need to be normalized. The justification of the method is the <strong>variational theorem</strong>: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, <span class="math inline">\(\mathcal{E}_0\)</span>:</p>
+<p><span id="eq-varprinciple"><span class="math display">\[
+E[\Phi] \geq \mathcal{E}_0.
 \tag{9.11}\]</span></span></p>
-<p>where <span class="math inline">\(\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)\)</span> collects the spatial coordinates of all electrons, so the integrals are <span class="math inline">\(3N\)</span>-dimensional. The denominator takes care of normalization, so <span class="math inline">\(\Phi\)</span> does not need to be normalized. Inserting the expansion, we obtain:</p>
+<p>and the equality holds only if <span class="math inline">\(\Phi\)</span> is the exact ground state. In other words, we can never “overshoot” the exact energy from below. This gives us a clear strategy: any change in the trial function that lowers its energy brings the energy closer to the exact answer. (As the energy goes down, the wave function usually gets better too, although “better” for a wave function is harder to define than for a number, and it is guaranteed to be exact only when <span class="math inline">\(\Phi = \Psi_0\)</span>.)</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Proof: the variational theorem
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The proof uses a nice trick. Even if we cannot solve the TISEq, its exact eigenfunctions <span class="math inline">\(\Psi_i\)</span> (with energies <span class="math inline">\(\mathcal{E}_0 \leq \mathcal{E}_1 \leq \mathcal{E}_2 \leq \ldots\)</span>) still exist and form a complete set. We can therefore imagine expanding our trial function in terms of them:</p>
+<p><span id="eq-var1"><span class="math display">\[
+\Phi = \sum_i c_i \Psi_i.
+\tag{9.12}\]</span></span></p>
+<p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. Inserting it in <a href="#eq-var2" class="quarto-xref">eq.&nbsp;<span>9.10</span></a>, we obtain:</p>
 <p><span id="eq-var3"><span class="math display">\[
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
 \sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
-\tag{9.12}\]</span></span></p>
+\tag{9.13}\]</span></span></p>
 <p>Since each <span class="math inline">\(\Psi_j\)</span> is an eigenfunction of <span class="math inline">\({\hat H}\)</span>, we can replace <span class="math inline">\({\hat H} \Psi_j\)</span> with <span class="math inline">\(\mathcal{E}_j \Psi_j\)</span>:</p>
 <p><span id="eq-var4"><span class="math display">\[
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
 \sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
-\tag{9.13}\]</span></span></p>
-<p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
+\tag{9.14}\]</span></span></p>
+<p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
 <p><span id="eq-var5"><span class="math display">\[
 E[\Phi] = \frac{\sum_{i} |c_i|^2 \mathcal{E}_i}{\sum_{i} |c_i|^2}.
-\tag{9.14}\]</span></span></p>
-<p>This equation already tells the whole story: the energy of the trial function is a weighted average of the exact energies, with weights <span class="math inline">\(|c_i|^2\)</span>. An average can never be lower than its smallest member. To make this explicit, we subtract <span class="math inline">\(\mathcal{E}_0\)</span> from both sides:</p>
+\tag{9.15}\]</span></span></p>
+<p>This equation already tells the whole story: the energy of the trial function is a weighted average of the exact energies, with weights <span class="math inline">\(|c_i|^2\)</span>, and an average can never be lower than its smallest member. To make this explicit, we subtract <span class="math inline">\(\mathcal{E}_0\)</span> from both sides:</p>
 <p><span id="eq-var6"><span class="math display">\[
 E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}{
 \sum_i |c_i|^2}.
-\tag{9.15}\]</span></span></p>
-<p>Every term on the right-hand side is greater than or equal to zero, because <span class="math inline">\(|c_i|^2\geq0\)</span> and <span class="math inline">\(\mathcal{E}_i \geq \mathcal{E}_0\)</span>. Therefore:</p>
-<p><span id="eq-varprinciple"><span class="math display">\[
-E[\Phi] \geq \mathcal{E}_0.
 \tag{9.16}\]</span></span></p>
-<p>The energy of any trial wave function is an upper bound to the exact ground-state energy, and the equality holds only if <span class="math inline">\(\Phi\)</span> is the exact ground state. This gives us a clear strategy: any change in the trial function that lowers its energy brings the energy closer to the exact answer. (As the energy goes down, the wave function usually gets better too, although “better” for a wave function is harder to define than for a number, and it is guaranteed to be exact only when <span class="math inline">\(\Phi = \Psi_0\)</span>.)</p>
+<p>Every term on the right-hand side is greater than or equal to zero, because <span class="math inline">\(|c_i|^2\geq0\)</span> and <span class="math inline">\(\mathcal{E}_i \geq \mathcal{E}_0\)</span>. Therefore, <span class="math inline">\(E[\Phi] \geq \mathcal{E}_0\)</span>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="approximated-solution-for-the-helium-atom" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="approximated-solution-for-the-helium-atom"><span class="header-section-number">9.2.2</span> Approximated solution for the helium atom</h3>
@@ -726,7 +742,7 @@ Figure&nbsp;9.1: Variational energy of the helium atom as a function of the orbi
 </div>
 <p>A few important considerations can be made by analyzing these results:</p>
 <ol type="1">
-<li><p><strong>The variational theorem at work</strong>: every point of the curve in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a> lies above the exact energy, as guaranteed by <a href="#eq-varprinciple" class="quarto-xref">eq.&nbsp;<span>9.16</span></a>. The minimum gets within <span class="math inline">\(147 \text{ kJ/mol}\)</span> (about <span class="math inline">\(2\%\)</span>) of the exact value, using a single adjustable number.</p></li>
+<li><p><strong>The variational theorem at work</strong>: every point of the curve in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a> lies above the exact energy, as guaranteed by <a href="#eq-varprinciple" class="quarto-xref">eq.&nbsp;<span>9.11</span></a>. The minimum gets within <span class="math inline">\(147 \text{ kJ/mol}\)</span> (about <span class="math inline">\(2\%\)</span>) of the exact value, using a single adjustable number.</p></li>
 <li><p><strong>Shielding</strong>: the optimal value <span class="math inline">\(\zeta_{\text{min}}=1.6875\)</span> is smaller than the real nuclear charge, <span class="math inline">\(Z=2\)</span>. We can interpret it as the <strong>effective nuclear charge</strong>, <span class="math inline">\(Z_\text{eff}\)</span>, felt by each electron. Each electron spends part of its time between the nucleus and the other electron, partially canceling the attraction that the other electron feels. The amount of shielding, <span class="math inline">\(\frac{5}{16}\approx0.31\)</span> of a proton charge, is much less than a full electron charge because the two electrons occupy the same region of space: a <span class="math inline">\(1s\)</span> electron is only rarely found “inside” the other one.</p></li>
 <li><p><strong>Orbital size</strong>: since <span class="math inline">\(\langle r\rangle \propto 1/\zeta\)</span>, a smaller effective charge means a larger orbital. The shielded <span class="math inline">\(1s\)</span> orbitals of helium are about <span class="math inline">\(2/1.6875\approx1.19\)</span> times larger than the unshielded ones.</p></li>
 <li><p><strong>What is still missing</strong>: even the best possible orbitals cannot reach the exact energy if we keep the product form of <a href="#eq-hf3" class="quarto-xref">eq.&nbsp;<span>9.19</span></a>. We will come back to this point at the end of this chapter, when we discuss electron correlation.</p></li>
@@ -1170,7 +1186,7 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1179,7 +1195,7 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.b, 9.c, 10.d, 11.c, 12.c, 13.b, 14.c</p>
 </div>

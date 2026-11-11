@@ -632,7 +632,31 @@ I = \frac{h}{8\pi^2 c B} = 1.449\times10^{-46}\;\text{kg m}^2,
 <p><span id="eq-rot7"><span class="math display">\[
 \mathrm{population} \propto (2J+1)\exp\left[-\frac{E_J}{kT}\right].
 \tag{13.11}\]</span></span></p>
-<p>The most populated level can be found by setting the derivative of <a href="#eq-rot7" class="quarto-xref">eq.&nbsp;<span>13.11</span></a> with respect to <span class="math inline">\(J\)</span> equal to zero, which gives <span class="math inline">\(J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}\)</span>. For CO at <span class="math inline">\(298\;\text{K}\)</span>, <span class="math inline">\(J_\text{max}\approx 6.8\)</span>, so the most populated level is <span class="math inline">\(J=7\)</span>, and the strongest lines of the spectrum are found around <span class="math inline">\(2B(J+1)\approx 30-45\;\text{cm}^{-1}\)</span>. Notice that, even at room temperature, dozens of rotational levels are populated, since <span class="math inline">\(B\)</span> is much smaller than <span class="math inline">\(kT/hc\approx207\;\text{cm}^{-1}\)</span>.</p>
+<p>The most populated level is the maximum of <a href="#eq-rot7" class="quarto-xref">eq.&nbsp;<span>13.11</span></a>, at:</p>
+<p><span id="eq-rot8"><span class="math display">\[
+J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}.
+\tag{13.12}\]</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Derivation: the most populated rotational level
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Treating <span class="math inline">\(J\)</span> as a continuous variable and writing <span class="math inline">\(x=hcB/kT\)</span>, the population is proportional to <span class="math inline">\(f(J)=(2J+1)\,e^{-xJ(J+1)}\)</span>. At the maximum, the derivative is zero:</p>
+<p><span class="math display">\[
+\frac{df}{dJ} = 2\,e^{-xJ(J+1)} - (2J+1)^2\,x\,e^{-xJ(J+1)} = 0 \quad\Rightarrow\quad (2J+1)^2=\frac{2}{x}=\frac{2kT}{hcB},
+\]</span></p>
+<p>which gives <a href="#eq-rot8" class="quarto-xref">eq.&nbsp;<span>13.12</span></a>.</p>
+</div>
+</div>
+</div>
+<p>For CO at <span class="math inline">\(298\;\text{K}\)</span>, <span class="math inline">\(J_\text{max}\approx 6.8\)</span>, so the most populated level is <span class="math inline">\(J=7\)</span>, and the strongest lines of the spectrum are found around <span class="math inline">\(2B(J+1)\approx 30-45\;\text{cm}^{-1}\)</span>. Notice that, even at room temperature, dozens of rotational levels are populated, since <span class="math inline">\(B\)</span> is much smaller than <span class="math inline">\(kT/hc\approx207\;\text{cm}^{-1}\)</span>.</p>
 <div id="fig-Fig5c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left: bar plot of the fraction of CO molecules in each rotational level at 298 kelvin, rising to a maximum near J equals 7 and then decaying. Right: the corresponding simulated rotational spectrum of equally spaced lines with the same rise-and-fall intensity pattern.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig5c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -654,16 +678,16 @@ Figure&nbsp;13.3: Left: population of the rotational levels of CO at 298 K, calc
 <p>A diatomic molecule <span class="math inline">\(\mathrm{AB}\)</span> has only one way of vibrating: the stretching of the <span class="math inline">\(\mathrm{A}-\mathrm{B}\)</span> bond. As we saw in <a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>, close to its minimum the potential energy curve of the molecule can be approximated by a parabola, so we can use the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> as our model. In wavenumbers, the vibrational term values are:</p>
 <p><span id="eq-vib1"><span class="math display">\[
 G(v) = \omega_e \left( v + \frac{1}{2} \right) \qquad v=0,1,2,\ldots,
-\tag{13.12}\]</span></span></p>
+\tag{13.13}\]</span></span></p>
 <p>where <span class="math inline">\(v\)</span> is the vibrational quantum number, and <span class="math inline">\(\omega_e=\frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}\)</span> is the harmonic vibrational wavenumber, which depends on the force constant of the bond, <span class="math inline">\(k\)</span>, and on the reduced mass of the molecule, <span class="math inline">\(\mu\)</span>. Since the molecule also rotates, each vibrational level has a ladder of rotational levels on top of it, and the total term values are obtained by summing the two contributions:</p>
 <p><span id="eq-vib2"><span class="math display">\[
 G(v)+F_{v}(J)=\omega_e \left(v + \frac{1}{2} \right) +B_{v}J(J+1),
-\tag{13.13}\]</span></span></p>
+\tag{13.14}\]</span></span></p>
 <p>where <span class="math inline">\(B_{v}\)</span> is the rotational constant in the vibrational level <span class="math inline">\(v\)</span>. <span class="math inline">\(B_v\)</span> decreases slightly as <span class="math inline">\(v\)</span> increases, because the average bond length gets longer when the molecule vibrates more.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>For a vibration to absorb IR light, the dipole moment of the molecule must <em>change</em> as the bond stretches. This is why heteronuclear diatomics, such as <span class="math inline">\(\mathrm{HCl}\)</span> and <span class="math inline">\(\mathrm{CO}\)</span>, are IR active. For the harmonic oscillator, the transition dipole moment is different from zero only between neighboring levels, and the selection rules for the rovibrational transitions of a diatomic molecule are:</p>
 <p><span id="eq-vib3"><span class="math display">\[
 \Delta v=\pm 1,\; \Delta J=\pm 1.
-\tag{13.14}\]</span></span></p>
+\tag{13.15}\]</span></span></p>
 <p>The transition from <span class="math inline">\(v=0\)</span> to <span class="math inline">\(v=1\)</span> is called the <em>fundamental transition</em>. Since real bonds are not perfectly harmonic, transitions with <span class="math inline">\(\Delta v=\pm 2,\pm 3,\ldots\)</span>, called <em>overtones</em>, are also observed, but they are much weaker. The selection rules have two important consequences:</p>
 <ol type="1">
 <li>Both quantum numbers must change. A purely vibrational transition, with <span class="math inline">\(\Delta v=+1\)</span> and <span class="math inline">\(\Delta J=0\)</span> (which would be called the Q-branch), is forbidden.</li>
@@ -675,7 +699,7 @@ G(v)+F_{v}(J)=\omega_e \left(v + \frac{1}{2} \right) +B_{v}J(J+1),
 \tilde{\nu}_R &amp;= \tilde{\nu}_0 + 2B(J^{\prime\prime}+1) \qquad J^{\prime\prime}=0,1,2,\ldots \\
 \tilde{\nu}_P &amp;= \tilde{\nu}_0 - 2BJ^{\prime\prime} \qquad\quad\;\;\, J^{\prime\prime}=1,2,3,\ldots
 \end{aligned}
-\tag{13.15}\]</span></span></p>
+\tag{13.16}\]</span></span></p>
 <p>where <span class="math inline">\(\tilde{\nu}_0=G(1)-G(0)\)</span> is the position of the (missing) purely vibrational transition, called the <em>band center</em>.</p>
 <div id="fig-Fig2c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Simulated infrared spectrum of carbon monoxide: two groups of lines, the P branch at lower and the R branch at higher wavenumber, separated by a gap at the band center near 2143 inverse centimeters where no line appears.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -692,7 +716,7 @@ Figure&nbsp;13.4: Simulated rovibrational spectrum of the fundamental band of ca
 <li><p><strong>The missing line</strong>: there is a gap at the band center, where the forbidden Q-branch would be. The gap is <span class="math inline">\(4B\)</span> wide (twice the normal spacing), because the first line of the R-branch is at <span class="math inline">\(\tilde{\nu}_0+2B\)</span> and the first line of the P-branch is at <span class="math inline">\(\tilde{\nu}_0-2B\)</span>. Even if no line is observed there, the position of the band center can be read directly from the spectrum, and it gives the vibrational energy. For CO, <span class="math inline">\(\tilde{\nu}_0=2{,}143\;\text{cm}^{-1}\)</span>, and using <span class="math inline">\(\omega_e\approx\tilde{\nu}_0\)</span> we obtain the force constant of the bond: <span class="math inline">\(k=\mu(2\pi c\tilde{\nu}_0)^2\approx1{,}860\;\text{N/m}\)</span>, one of the stiffest bonds in chemistry.</p></li>
 <li><p><strong>The spacing</strong>: the lines in each branch are separated by about <span class="math inline">\(2B\)</span>, so the same spectrum also gives the bond length, exactly as in pure rotational spectroscopy. This makes rovibrational spectroscopy useful also for molecules whose rotational spectrum is difficult to measure.</p></li>
 <li><p><strong>The intensities</strong>: the two branches have the same envelope as the rotational populations of <a href="#fig-Fig5c13" class="quarto-xref">figure&nbsp;<span>13.3</span></a>, since the intensity of each line depends on the population of its initial rotational level.</p></li>
-<li><p><strong>The asymmetry</strong>: if you look closely, the lines in the R-branch get slightly closer to each other as <span class="math inline">\(J\)</span> increases, while those in the P-branch get slightly farther apart. This is the effect of <span class="math inline">\(B_1\)</span> being slightly smaller than <span class="math inline">\(B_0\)</span>, which we neglected in <a href="#eq-vib4" class="quarto-xref">eq.&nbsp;<span>13.15</span></a>.</p></li>
+<li><p><strong>The asymmetry</strong>: if you look closely, the lines in the R-branch get slightly closer to each other as <span class="math inline">\(J\)</span> increases, while those in the P-branch get slightly farther apart. This is the effect of <span class="math inline">\(B_1\)</span> being slightly smaller than <span class="math inline">\(B_0\)</span>, which we neglected in <a href="#eq-vib4" class="quarto-xref">eq.&nbsp;<span>13.16</span></a>.</p></li>
 </ol>
 <div id="fig-Fig3c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two ladders of rotational levels, J equals 0 to 4, one for v equals 0 at the bottom and one for v equals 1 at the top. Blue upward arrows labeled P(1) to P(4) go from each J to J minus 1 in the upper ladder; red arrows labeled R(0) to R(3) go from each J to J plus 1.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -742,27 +766,43 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 <p>Each vibronic band of a diatomic molecule in the gas phase shows a rotational fine structure, with P- and R-branches as in the IR spectrum. For some electronic transitions, a Q-branch (<span class="math inline">\(\Delta J=0\)</span>) is also allowed. The positions of the lines of a vibronic band are given (in wavenumbers) by:</p>
 <p><span id="eq-elec1"><span class="math display">\[
 \tilde{\nu}(J^{\prime },J^{{\prime \prime }})={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+B^{\prime }J^{\prime }(J^{\prime }+1)-B^{{\prime \prime }}J^{{\prime \prime }}(J^{{\prime \prime }}+1),
-\tag{13.16}\]</span></span></p>
+\tag{13.17}\]</span></span></p>
 <p>where <span class="math inline">\({\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}\)</span> is the position of the band center. The main difference with the IR case is that now the rotational constants of the two states, <span class="math inline">\(B^{\prime}\)</span> and <span class="math inline">\(B^{\prime\prime}\)</span>, can be very different, since the two electronic states can have very different bond lengths. Since <span class="math inline">\(B\propto 1/d^2\)</span>, and since an electronic excitation often changes the description of one electron from a bonding to an antibonding orbital, making the bond longer, usually <span class="math inline">\(B^{\prime}&lt;B^{\prime\prime}\)</span>.</p>
-<p>To find the lines of the P-branch, we replace <span class="math inline">\(J^{\prime }=J^{{\prime \prime}}-1\)</span> in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.16</span></a>:</p>
+<p>Each branch is obtained by replacing the selection rule in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>: <span class="math inline">\(J^{\prime}=J^{\prime\prime}-1\)</span> for the P-branch, and <span class="math inline">\(J^{\prime}=J^{\prime\prime}+1\)</span> for the R-branch. The two branches can then be combined into a single formula by introducing an index <span class="math inline">\(m\)</span>:</p>
+<p><span id="eq-elec4"><span class="math display">\[
+{\tilde  \nu }_{{P,R}}={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots,
+\tag{13.18}\]</span></span></p>
+<p>where positive values of <span class="math inline">\(m\)</span> give the R-branch (<span class="math inline">\(m=J^{\prime}=J^{\prime\prime}+1\)</span>) and negative values give the P-branch (<span class="math inline">\(m=-J^{\prime\prime}\)</span>). If <span class="math inline">\(B^{\prime}=B^{\prime\prime}\)</span>, the quadratic term disappears, and we recover the equally spaced lines of the IR spectrum. When <span class="math inline">\(B^{\prime}&lt;B^{\prime\prime}\)</span>, the quadratic term is negative, and the lines of the R-branch get closer and closer as <span class="math inline">\(m\)</span> increases, until they turn around and start moving back towards lower wavenumbers. The point where this happens is called the <em>band head</em>, and it is one of the most recognizable features of electronic spectra of diatomic molecules.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Derivation: the P- and R-branch formulas
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>To find the lines of the P-branch, we replace <span class="math inline">\(J^{\prime }=J^{{\prime \prime}}-1\)</span> in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>:</p>
 <p><span id="eq-elec2"><span class="math display">\[
 \begin{aligned}
 {\tilde  \nu }_{P}&amp;={\tilde  \nu}_{{v^{\prime}-v^{\prime\prime}}}+B^{\prime}(J^{\prime\prime}-1)J^{\prime\prime}-B^{\prime\prime}J^{\prime\prime}(J^{\prime\prime}+1) \\
 &amp;={\tilde  \nu }_{{v^{\prime}-v^{\prime\prime}}}-(B^{\prime}+B^{\prime\prime})J^{\prime\prime}+(B^{\prime}-B^{\prime\prime}){J^{\prime\prime}}^{2}.
 \end{aligned}
-\tag{13.17}\]</span></span></p>
+\tag{13.19}\]</span></span></p>
 <p>Similarly, for the R-branch we replace <span class="math inline">\(J^{\prime\prime }=J^{{\prime }}-1\)</span>:</p>
 <p><span id="eq-elec3"><span class="math display">\[
 \begin{aligned}
 {\tilde  \nu }_{R} &amp;={\tilde  \nu}_{{v^{\prime}-v^{\prime\prime}}}+B^{\prime}J^{\prime}(J^{\prime}+1)-B^{\prime\prime}J^{\prime}(J^{\prime}-1) \\
 &amp;={\tilde  \nu }_{{v^{\prime}-v^{\prime\prime}}}+(B^{\prime}+B^{\prime\prime})J^{\prime}+(B^{\prime}-B^{\prime\prime}){J^{\prime}}^{2}.
 \end{aligned}
-\tag{13.18}\]</span></span></p>
-<p>The two branches can be combined into a single formula by introducing an index <span class="math inline">\(m\)</span>:</p>
-<p><span id="eq-elec4"><span class="math display">\[
-{\tilde  \nu }_{{P,R}}={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots,
-\tag{13.19}\]</span></span></p>
-<p>where positive values of <span class="math inline">\(m\)</span> give the R-branch (<span class="math inline">\(m=J^{\prime}=J^{\prime\prime}+1\)</span>) and negative values give the P-branch (<span class="math inline">\(m=-J^{\prime\prime}\)</span>). If <span class="math inline">\(B^{\prime}=B^{\prime\prime}\)</span>, the quadratic term disappears, and we recover the equally spaced lines of the IR spectrum. When <span class="math inline">\(B^{\prime}&lt;B^{\prime\prime}\)</span>, the quadratic term is negative, and the lines of the R-branch get closer and closer as <span class="math inline">\(m\)</span> increases, until they turn around and start moving back towards lower wavenumbers. The point where this happens is called the <em>band head</em>, and it is one of the most recognizable features of electronic spectra of diatomic molecules.</p>
+\tag{13.20}\]</span></span></p>
+<p>Writing <span class="math inline">\(m=-J^{\prime\prime}\)</span> in <a href="#eq-elec2" class="quarto-xref">eq.&nbsp;<span>13.19</span></a> and <span class="math inline">\(m=J^{\prime}\)</span> in <a href="#eq-elec3" class="quarto-xref">eq.&nbsp;<span>13.20</span></a> gives the same expression, <a href="#eq-elec4" class="quarto-xref">eq.&nbsp;<span>13.18</span></a>.</p>
+</div>
+</div>
+</div>
 <p>The intensities of the different vibronic bands are explained by the <strong>Franck–Condon principle</strong>. Since the electronic transition is much faster than the motion of the nuclei, the nuclei do not have time to move while the electron jumps from one state to the other. In a potential energy diagram, the transition is therefore a vertical line, as shown in <a href="#fig-Fig4c13" class="quarto-xref">figure&nbsp;<span>13.7</span></a>. The most intense transitions are those to the vibrational levels of the excited state whose wave functions overlap the most with the initial vibrational wave function. If the two states have similar bond lengths, the strongest band is <span class="math inline">\(v^{\prime}=0\leftarrow v^{\prime\prime}=0\)</span>. If the excited state has a much longer bond, the strongest bands are those to higher vibrational levels, whose wave functions have large amplitude near their classical turning points (recall the harmonic oscillator wave functions of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>).</p>
 <div id="fig-Fig4c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two potential energy curves, a ground state at the bottom and an excited state above it shifted to longer bond length. Vibrational wave functions are drawn on the excited-state levels. A vertical arrow rises from the lowest ground-state level, at the ground-state bond length, to the fourth excited-state level, labeled v prime equals 3.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -805,11 +845,11 @@ Figure&nbsp;13.8: Jablonski diagram. Straight arrows are radiative processes (ab
 <p>A particle with spin has a magnetic moment proportional to its spin. In a magnetic field <span class="math inline">\(B_0\)</span> along the <span class="math inline">\(z\)</span> axis, the energy of the particle depends on the orientation of its spin, that is, on its quantum number <span class="math inline">\(m\)</span>:</p>
 <p><span id="eq-nmr1"><span class="math display">\[
 E_m = -\gamma\hbar m B_0,
-\tag{13.20}\]</span></span></p>
+\tag{13.21}\]</span></span></p>
 <p>where <span class="math inline">\(\gamma\)</span> is a constant, called the <em>gyromagnetic ratio</em>, which is characteristic of each type of particle. For a particle with spin <span class="math inline">\(\frac{1}{2}\)</span>, the field splits the two spin states, <span class="math inline">\(m=+\frac{1}{2}\)</span> and <span class="math inline">\(m=-\frac{1}{2}\)</span>, by an amount that grows linearly with the field, as shown in <a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>a. This splitting is called the <strong>Zeeman effect</strong>. A photon can drive a transition between the two states (the selection rule is <span class="math inline">\(\Delta m=\pm1\)</span>) if its energy matches the splitting:</p>
 <p><span id="eq-nmr2"><span class="math display">\[
 \Delta E = h\nu = \gamma\hbar B_0, \qquad \nu = \frac{\gamma B_0}{2\pi}.
-\tag{13.21}\]</span></span></p>
+\tag{13.22}\]</span></span></p>
 <div id="fig-Fig9c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three panels. Left: two straight lines starting from the same point at zero field and diverging as the field increases, with an arrow marking the energy difference at field B zero. Middle: an NMR spectrum with a quartet near 3.7 ppm, a single peak near 2.6 ppm, and a triplet near 1.2 ppm. Right: an ESR spectrum with four derivative-shaped lines with intensities 1 to 3 to 3 to 1, equally spaced by 2.3 millitesla around 340 millitesla.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig9c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -823,7 +863,7 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </section>
 <section id="nuclear-magnetic-resonance-nmr" class="level3" data-number="13.5.2">
 <h3 data-number="13.5.2" class="anchored" data-anchor-id="nuclear-magnetic-resonance-nmr"><span class="header-section-number">13.5.2</span> Nuclear magnetic resonance (NMR)</h3>
-<p>Many nuclei have a spin, called <em>nuclear spin</em>, with quantum number <span class="math inline">\(I\)</span>. The most important for chemistry are <span class="math inline">\(^1\mathrm{H}\)</span> and <span class="math inline">\(^{13}\mathrm{C}\)</span>, both with <span class="math inline">\(I=\frac{1}{2}\)</span>, so their behavior in a magnetic field is exactly the one in <a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>a. For protons, <span class="math inline">\(\gamma=2.675\times10^{8}\;\text{rad s}^{-1}\,\text{T}^{-1}\)</span>, so, in the field of a typical superconducting magnet (<span class="math inline">\(B_0=9.4\;\text{T}\)</span>), <a href="#eq-nmr2" class="quarto-xref">eq.&nbsp;<span>13.21</span></a> gives a frequency of <span class="math inline">\(400\;\text{MHz}\)</span>, in the radio-frequency region. This is why NMR spectrometers are named by the proton frequency at which they operate (“a 400 MHz NMR”).</p>
+<p>Many nuclei have a spin, called <em>nuclear spin</em>, with quantum number <span class="math inline">\(I\)</span>. The most important for chemistry are <span class="math inline">\(^1\mathrm{H}\)</span> and <span class="math inline">\(^{13}\mathrm{C}\)</span>, both with <span class="math inline">\(I=\frac{1}{2}\)</span>, so their behavior in a magnetic field is exactly the one in <a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>a. For protons, <span class="math inline">\(\gamma=2.675\times10^{8}\;\text{rad s}^{-1}\,\text{T}^{-1}\)</span>, so, in the field of a typical superconducting magnet (<span class="math inline">\(B_0=9.4\;\text{T}\)</span>), <a href="#eq-nmr2" class="quarto-xref">eq.&nbsp;<span>13.22</span></a> gives a frequency of <span class="math inline">\(400\;\text{MHz}\)</span>, in the radio-frequency region. This is why NMR spectrometers are named by the proton frequency at which they operate (“a 400 MHz NMR”).</p>
 <p>The energy splitting is tiny: <span class="math inline">\(h\nu\)</span> at <span class="math inline">\(400\;\text{MHz}\)</span> is only about <span class="math inline">\(0.16\;\text{J/mol}\)</span>, thousands of times smaller than the thermal energy at room temperature. As a consequence, the two spin states are almost equally populated (<a href="#eq-rot6" class="quarto-xref">eq.&nbsp;<span>13.10</span></a>), with an excess of only about 3 nuclei per hundred thousand in the lower state. Since absorption and stimulated emission cancel each other for equally populated levels, only this small excess contributes to the signal, which is why NMR requires strong magnets and relatively concentrated samples.</p>
 <p>What makes NMR so powerful for chemistry are two small effects that make the frequency of each nucleus depend on its chemical environment:</p>
 <ol type="1">
@@ -1010,7 +1050,7 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1019,7 +1059,7 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.a, 2.c, 3.b, 4.a, 5.b, 6.b, 7.d, 8.d, 9.b, 10.c, 11.b, 12.c, 13.c, 14.b, 15.d, 16.b</p>
 </div>

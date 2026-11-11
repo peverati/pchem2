@@ -86,6 +86,24 @@ $$
 \varphi_{-}=\frac{a-b}{\sqrt{2-2S}}.
 $$ {#eq-bond10}
 
+::: {.callout-note collapse="true" icon="false"}
+## Derivation: the coefficients of the molecular orbitals
+
+The secular determinant comes from two linear equations for the coefficients (@sec-MathDeterminants):
+
+$$
+(H_{aa}-E)\,c_1 + (H_{ab}-ES)\,c_2 = 0, \qquad (H_{ab}-ES)\,c_1 + (H_{aa}-E)\,c_2 = 0.
+$$
+
+For $E=E_+$, @eq-bond5 with the plus sign gives $H_{aa}-E_+=H_{ab}-E_+S$, so the first equation becomes $(H_{aa}-E_+)(c_1+c_2)=0$, and therefore $c_2=c_1$. For $E=E_-$, the minus sign gives $H_{aa}-E_-=-(H_{ab}-E_-S)$, and therefore $c_2=-c_1$. The remaining constant is fixed by normalization. For $\varphi_+=c_1(a+b)$:
+
+$$
+\int \varphi_+^2\, d\mathbf{r} = c_1^2\left(\int a^2 d\mathbf{r}+\int b^2 d\mathbf{r}+2\int ab\, d\mathbf{r}\right) = c_1^2\,(1+1+2S) = 1,
+$$
+
+which gives $c_1=1/\sqrt{2+2S}$. The same steps for $\varphi_-=c_1(a-b)$ give $c_1=1/\sqrt{2-2S}$.
+:::
+
 These results can be summarized in the molecular orbital diagram of @fig-Fig2c11. We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for $S\neq0$, the antibonding level being pushed up more than the bonding level is pushed down, compared with the symmetric case that would occur for $S = 0$.
 
 

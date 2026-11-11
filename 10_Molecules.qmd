@@ -33,25 +33,24 @@ where $M_i$, $Z_i$, and $\mathbf{R}_i$ are the mass, atomic number, and coordina
 
 ## The Born–Oppenheimer Approximation
 
-Before looking at molecules, let's recall a general property that we already used for the helium atom. Suppose that a Hamiltonian can be written as the sum of two terms, each depending on a different set of coordinates, $q_1$ and $q_2$:
+Before looking at molecules, let's recall a general property that we already used for the helium atom. If a Hamiltonian can be written as the sum of two terms, each depending on a different set of coordinates, $q_1$ and $q_2$:
 
 $$
 \hat{H} = \hat{H}_1(q_1) + \hat{H}_2(q_2),
 $$ {#eq-molham3}
 
-with the TISEq:
+then its eigenfunctions are products of the eigenfunctions of each piece, and its eigenvalues are sums of their eigenvalues:
 
 $$
-\hat{H} \psi(q_1, q_2) = E \psi(q_1, q_2).
-$$ {#eq-molham4}
-
-Let's try a wave function written as a product of two functions, one for each set of coordinates:
-
-$$
-\psi(q_1, q_2) = \psi_1(q_1) \psi_2(q_2),
+\psi(q_1, q_2) = \psi_1(q_1) \psi_2(q_2), \qquad E = E_1 + E_2.
 $$ {#eq-molham5}
 
-where $\psi_1(q_1)$ and $\psi_2(q_2)$ are eigenfunctions of $\hat{H}_1$ and $\hat{H}_2$ with eigenvalues $E_1$ and $E_2$. Since $\hat{H}_1$ acts only on $q_1$ and $\hat{H}_2$ only on $q_2$, we obtain:
+A big problem is broken into smaller ones, which is exactly what we did when we wrote the wave function of helium as a product of two hydrogen-like orbitals.
+
+::: {.callout-note collapse="true" icon="false"}
+## Proof: separable Hamiltonians
+
+Take $\psi_1(q_1)$ and $\psi_2(q_2)$ as eigenfunctions of $\hat{H}_1$ and $\hat{H}_2$, with eigenvalues $E_1$ and $E_2$. Since $\hat{H}_1$ acts only on $q_1$ and $\hat{H}_2$ only on $q_2$, applying $\hat{H}$ to their product gives:
 
 $$
 \begin{aligned}
@@ -63,7 +62,8 @@ $$
 \end{aligned}
 $$ {#eq-molham6}
 
-In other words, when a Hamiltonian is a sum of independent pieces, its eigenfunctions are products of the eigenfunctions of each piece, and its eigenvalues are sums of their eigenvalues. A big problem is broken into smaller ones.
+So the product is an eigenfunction of $\hat{H}$ with eigenvalue $E_1+E_2$.
+:::
 
 Can we use this trick to separate the electrons from the nuclei in @eq-molham1? Not exactly, because the electron–nucleus attraction, $\hat{V}_{eN}$, depends on the coordinates of both electrons and nuclei at the same time. However, nuclei are much heavier than electrons (a proton is about $1{,}836$ times heavier than an electron), so they move much more slowly. From the point of view of the electrons, the nuclei are almost standing still; from the point of view of the nuclei, the electrons adjust almost instantaneously to any change in their positions. This suggests that we can write the total wave function, approximately, as:
 

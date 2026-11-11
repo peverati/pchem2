@@ -120,12 +120,12 @@ $$
 \end{aligned}
 $$ {#eq-spop3}
 
-which prove that the three projection operators do not commute with each other.
+In words: no two components of the spin commute with each other, so, as we saw for position and momentum, no state can have definite values of two different components at the same time. This is exactly what the sequential Stern–Gerlach experiments showed.
 
-::: {#exm-spinex1}
-*Proof of Commutator Between Spin Projection Operators.*
+::: {.callout-note collapse="true" icon="false"}
+## Proof: the commutators of the spin components
 
-The equations in @eq-spop3 can be proved by writing the full eigenvalue equation and solving it using the definition of commutator, @eq-bp5, in conjunction with Pauli's relations, @eq-spop2. For example, for the first pair:
+The commutators in @eq-spop3 follow from Pauli's relations, @eq-spop2, and the definition of commutator, @eq-bp5. We apply both sides to $\alpha$ (applying them to $\beta$ gives the same result). For the first pair:
 
 $$
 \begin{aligned}

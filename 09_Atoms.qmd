@@ -113,19 +113,30 @@ To solve the TISEq for a many-electron atom we also need to deal with the Hamilt
 
 The idea behind the variational method is simple. We guess a "trial" wave function that contains some adjustable numbers, called *variational parameters*. We then calculate the energy of the trial function and change the parameters until this energy is as low as possible. The trial function with the lowest energy, and that energy itself, are our best approximations to the true ground-state wave function and energy.
 
-Why should the lowest energy be the best answer? The justification is the **variational theorem**: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, $\mathcal{E}_0$. The proof uses a nice trick. Let's call our trial function $\Phi$. Even if we cannot solve the TISEq, its exact eigenfunctions $\Psi_i$ (with energies $\mathcal{E}_0 \leq \mathcal{E}_1 \leq \mathcal{E}_2 \leq \ldots$) still exist and form a complete set. We can therefore imagine expanding our trial function in terms of them:
-
-$$
-\Phi = \sum_i c_i \Psi_i.
-$$ {#eq-var1}
-
-We never need to know the $\Psi_i$ or the $c_i$; the expansion is only a tool for the proof. The energy of the trial function is the expectation value of the Hamiltonian:
+Why should the lowest energy be the best answer? The energy of a trial function $\Phi$ is the expectation value of the Hamiltonian:
 
 $$
 E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
 $$ {#eq-var2}
 
-where $\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)$ collects the spatial coordinates of all electrons, so the integrals are $3N$-dimensional. The denominator takes care of normalization, so $\Phi$ does not need to be normalized. Inserting the expansion, we obtain:
+where $\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)$ collects the spatial coordinates of all electrons, so the integrals are $3N$-dimensional. The denominator takes care of normalization, so $\Phi$ does not need to be normalized. The justification of the method is the **variational theorem**: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, $\mathcal{E}_0$:
+
+$$
+E[\Phi] \geq \mathcal{E}_0.
+$$ {#eq-varprinciple}
+
+and the equality holds only if $\Phi$ is the exact ground state. In other words, we can never "overshoot" the exact energy from below. This gives us a clear strategy: any change in the trial function that lowers its energy brings the energy closer to the exact answer. (As the energy goes down, the wave function usually gets better too, although "better" for a wave function is harder to define than for a number, and it is guaranteed to be exact only when $\Phi = \Psi_0$.)
+
+::: {.callout-note collapse="true" icon="false"}
+## Proof: the variational theorem
+
+The proof uses a nice trick. Even if we cannot solve the TISEq, its exact eigenfunctions $\Psi_i$ (with energies $\mathcal{E}_0 \leq \mathcal{E}_1 \leq \mathcal{E}_2 \leq \ldots$) still exist and form a complete set. We can therefore imagine expanding our trial function in terms of them:
+
+$$
+\Phi = \sum_i c_i \Psi_i.
+$$ {#eq-var1}
+
+We never need to know the $\Psi_i$ or the $c_i$; the expansion is only a tool for the proof. Inserting it in @eq-var2, we obtain:
 
 $$
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
@@ -139,26 +150,21 @@ E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{
 \sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
 $$ {#eq-var4}
 
-The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be), so all integrals with $i\neq j$ vanish and those with $i=j$ are equal to one:
+The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, @sec-Operators), so all integrals with $i\neq j$ vanish and those with $i=j$ are equal to one:
 
 $$
 E[\Phi] = \frac{\sum_{i} |c_i|^2 \mathcal{E}_i}{\sum_{i} |c_i|^2}.
 $$ {#eq-var5}
 
-This equation already tells the whole story: the energy of the trial function is a weighted average of the exact energies, with weights $|c_i|^2$. An average can never be lower than its smallest member. To make this explicit, we subtract $\mathcal{E}_0$ from both sides:
+This equation already tells the whole story: the energy of the trial function is a weighted average of the exact energies, with weights $|c_i|^2$, and an average can never be lower than its smallest member. To make this explicit, we subtract $\mathcal{E}_0$ from both sides:
 
 $$
 E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}{
 \sum_i |c_i|^2}.
 $$ {#eq-var6}
 
-Every term on the right-hand side is greater than or equal to zero, because $|c_i|^2\geq0$ and $\mathcal{E}_i \geq \mathcal{E}_0$. Therefore:
-
-$$
-E[\Phi] \geq \mathcal{E}_0.
-$$ {#eq-varprinciple}
-
-The energy of any trial wave function is an upper bound to the exact ground-state energy, and the equality holds only if $\Phi$ is the exact ground state. This gives us a clear strategy: any change in the trial function that lowers its energy brings the energy closer to the exact answer. (As the energy goes down, the wave function usually gets better too, although "better" for a wave function is harder to define than for a number, and it is guaranteed to be exact only when $\Phi = \Psi_0$.)
+Every term on the right-hand side is greater than or equal to zero, because $|c_i|^2\geq0$ and $\mathcal{E}_i \geq \mathcal{E}_0$. Therefore, $E[\Phi] \geq \mathcal{E}_0$.
+:::
 
 ### Approximated solution for the helium atom
 

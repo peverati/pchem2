@@ -560,7 +560,7 @@ a &amp;= 1s_A = \left( \psi_{100} \right)_A\\
 b &amp;= 1s_B = \left( \psi_{100} \right)_B.
 \end{aligned}
 \tag{11.3}\]</span></span></p>
-<p>Using <a href="10_Molecules.html#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.12</span></a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, <a href="10_Molecules.html#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.14</span></a>, can then be written (determinants and secular equations are reviewed in <a href="A1_Math.html#sec-MathDeterminants" class="quarto-xref"><span>section A.5</span></a>):</p>
+<p>Using <a href="10_Molecules.html#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.11</span></a> and considering that the nuclei are identical, we can define the integrals <span class="math inline">\(H_{aa}=H_{bb}, H_{ab}=H_{ba}\)</span> and <span class="math inline">\(S_{ab}=S\)</span> (while <span class="math inline">\(S_{aa}=1\)</span> because the hydrogen atom orbitals are normalized). The integral <span class="math inline">\(H_{aa}\)</span> is called the <em>Coulomb integral</em>, and it is the energy of an electron described by orbital <span class="math inline">\(a\)</span>, including its attraction to the second nucleus, <span class="math inline">\(B\)</span>. The integral <span class="math inline">\(H_{ab}\)</span> is called the <em>resonance integral</em> (or exchange integral), and it has no classical counterpart: it describes the energy associated with the electron being shared between the two centers. It is negative, and it is responsible for the bond. The secular equation, <a href="10_Molecules.html#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.13</span></a>, can then be written (determinants and secular equations are reviewed in <a href="A1_Math.html#sec-MathDeterminants" class="quarto-xref"><span>section A.5</span></a>):</p>
 <p><span id="eq-bond4"><span class="math display">\[
 \left|\begin{matrix}
 H_{aa}-E   &amp; H_{ab}-ES \\
@@ -597,6 +597,30 @@ c_1=\frac{1}{\sqrt{2-2S}}\;\quad c_2=-\frac{1}{\sqrt{2-2S}},
 <p><span id="eq-bond10"><span class="math display">\[
 \varphi_{-}=\frac{a-b}{\sqrt{2-2S}}.
 \tag{11.10}\]</span></span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Derivation: the coefficients of the molecular orbitals
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The secular determinant comes from two linear equations for the coefficients (<a href="A1_Math.html#sec-MathDeterminants" class="quarto-xref"><span>section A.5</span></a>):</p>
+<p><span class="math display">\[
+(H_{aa}-E)\,c_1 + (H_{ab}-ES)\,c_2 = 0, \qquad (H_{ab}-ES)\,c_1 + (H_{aa}-E)\,c_2 = 0.
+\]</span></p>
+<p>For <span class="math inline">\(E=E_+\)</span>, <a href="#eq-bond5" class="quarto-xref">eq.&nbsp;<span>11.5</span></a> with the plus sign gives <span class="math inline">\(H_{aa}-E_+=H_{ab}-E_+S\)</span>, so the first equation becomes <span class="math inline">\((H_{aa}-E_+)(c_1+c_2)=0\)</span>, and therefore <span class="math inline">\(c_2=c_1\)</span>. For <span class="math inline">\(E=E_-\)</span>, the minus sign gives <span class="math inline">\(H_{aa}-E_-=-(H_{ab}-E_-S)\)</span>, and therefore <span class="math inline">\(c_2=-c_1\)</span>. The remaining constant is fixed by normalization. For <span class="math inline">\(\varphi_+=c_1(a+b)\)</span>:</p>
+<p><span class="math display">\[
+\int \varphi_+^2\, d\mathbf{r} = c_1^2\left(\int a^2 d\mathbf{r}+\int b^2 d\mathbf{r}+2\int ab\, d\mathbf{r}\right) = c_1^2\,(1+1+2S) = 1,
+\]</span></p>
+<p>which gives <span class="math inline">\(c_1=1/\sqrt{2+2S}\)</span>. The same steps for <span class="math inline">\(\varphi_-=c_1(a-b)\)</span> give <span class="math inline">\(c_1=1/\sqrt{2-2S}\)</span>.</p>
+</div>
+</div>
+</div>
 <p>These results can be summarized in the molecular orbital diagram of <a href="#fig-Fig2c11" class="quarto-xref">figure&nbsp;<span>11.2</span></a>. We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for <span class="math inline">\(S\neq0\)</span>, the antibonding level being pushed up more than the bonding level is pushed down, compared with the symmetric case that would occur for <span class="math inline">\(S = 0\)</span>.</p>
 <div id="fig-Fig2c11" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Molecular orbital diagram of the hydrogen molecular ion: the 1s levels of the two atoms combine into a lower bonding orbital and a higher antibonding orbital.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1098,7 +1122,7 @@ Figure&nbsp;11.12: Schematic color maps of the frontier orbitals of CO, in a pla
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1107,7 +1131,7 @@ Figure&nbsp;11.12: Schematic color maps of the frontier orbitals of CO, in a pla
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c, 11.b, 12.c, 13.b, 14.b</p>
 </div>

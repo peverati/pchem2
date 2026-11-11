@@ -113,7 +113,25 @@ $$
 \mathrm{population} \propto (2J+1)\exp\left[-\frac{E_J}{kT}\right].
 $$ {#eq-rot7}
 
-The most populated level can be found by setting the derivative of @eq-rot7 with respect to $J$ equal to zero, which gives $J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}$. For CO at $298\;\text{K}$, $J_\text{max}\approx 6.8$, so the most populated level is $J=7$, and the strongest lines of the spectrum are found around $2B(J+1)\approx 30-45\;\text{cm}^{-1}$. Notice that, even at room temperature, dozens of rotational levels are populated, since $B$ is much smaller than $kT/hc\approx207\;\text{cm}^{-1}$.
+The most populated level is the maximum of @eq-rot7, at:
+
+$$
+J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}.
+$$ {#eq-rot8}
+
+::: {.callout-note collapse="true" icon="false"}
+## Derivation: the most populated rotational level
+
+Treating $J$ as a continuous variable and writing $x=hcB/kT$, the population is proportional to $f(J)=(2J+1)\,e^{-xJ(J+1)}$. At the maximum, the derivative is zero:
+
+$$
+\frac{df}{dJ} = 2\,e^{-xJ(J+1)} - (2J+1)^2\,x\,e^{-xJ(J+1)} = 0 \quad\Rightarrow\quad (2J+1)^2=\frac{2}{x}=\frac{2kT}{hcB},
+$$
+
+which gives @eq-rot8.
+:::
+
+For CO at $298\;\text{K}$, $J_\text{max}\approx 6.8$, so the most populated level is $J=7$, and the strongest lines of the spectrum are found around $2B(J+1)\approx 30-45\;\text{cm}^{-1}$. Notice that, even at room temperature, dozens of rotational levels are populated, since $B$ is much smaller than $kT/hc\approx207\;\text{cm}^{-1}$.
 
 
 ![Left: population of the rotational levels of CO at 298 K, calculated with the Boltzmann distribution. The purple dashed line marks the most populated level, $J_\text{max}$. Right: the corresponding simulated rotational absorption spectrum.](img/CO_rot.png){#fig-Fig5c13 fig-alt="Left: bar plot of the fraction of CO molecules in each rotational level at 298 kelvin, rising to a maximum near J equals 7 and then decaying. Right: the corresponding simulated rotational spectrum of equally spaced lines with the same rise-and-fall intensity pattern." width="100%"}
@@ -219,6 +237,17 @@ $$ {#eq-elec1}
 
 where ${\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}$ is the position of the band center. The main difference with the IR case is that now the rotational constants of the two states, $B^{\prime}$ and $B^{\prime\prime}$, can be very different, since the two electronic states can have very different bond lengths. Since $B\propto 1/d^2$, and since an electronic excitation often changes the description of one electron from a bonding to an antibonding orbital, making the bond longer, usually $B^{\prime}<B^{\prime\prime}$.
 
+Each branch is obtained by replacing the selection rule in @eq-elec1: $J^{\prime}=J^{\prime\prime}-1$ for the P-branch, and $J^{\prime}=J^{\prime\prime}+1$ for the R-branch. The two branches can then be combined into a single formula by introducing an index $m$:
+
+$$
+{\tilde  \nu }_{{P,R}}={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots,
+$$ {#eq-elec4}
+
+where positive values of $m$ give the R-branch ($m=J^{\prime}=J^{\prime\prime}+1$) and negative values give the P-branch ($m=-J^{\prime\prime}$). If $B^{\prime}=B^{\prime\prime}$, the quadratic term disappears, and we recover the equally spaced lines of the IR spectrum. When $B^{\prime}<B^{\prime\prime}$, the quadratic term is negative, and the lines of the R-branch get closer and closer as $m$ increases, until they turn around and start moving back towards lower wavenumbers. The point where this happens is called the *band head*, and it is one of the most recognizable features of electronic spectra of diatomic molecules.
+
+::: {.callout-note collapse="true" icon="false"}
+## Derivation: the P- and R-branch formulas
+
 To find the lines of the P-branch, we replace $J^{\prime }=J^{{\prime \prime}}-1$ in @eq-elec1:
 
 $$
@@ -237,13 +266,8 @@ $$
 \end{aligned}
 $$ {#eq-elec3}
 
-The two branches can be combined into a single formula by introducing an index $m$:
-
-$$
-{\tilde  \nu }_{{P,R}}={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots,
-$$ {#eq-elec4}
-
-where positive values of $m$ give the R-branch ($m=J^{\prime}=J^{\prime\prime}+1$) and negative values give the P-branch ($m=-J^{\prime\prime}$). If $B^{\prime}=B^{\prime\prime}$, the quadratic term disappears, and we recover the equally spaced lines of the IR spectrum. When $B^{\prime}<B^{\prime\prime}$, the quadratic term is negative, and the lines of the R-branch get closer and closer as $m$ increases, until they turn around and start moving back towards lower wavenumbers. The point where this happens is called the *band head*, and it is one of the most recognizable features of electronic spectra of diatomic molecules.
+Writing $m=-J^{\prime\prime}$ in @eq-elec2 and $m=J^{\prime}$ in @eq-elec3 gives the same expression, @eq-elec4.
+:::
 
 The intensities of the different vibronic bands are explained by the **Franck–Condon principle**. Since the electronic transition is much faster than the motion of the nuclei, the nuclei do not have time to move while the electron jumps from one state to the other. In a potential energy diagram, the transition is therefore a vertical line, as shown in @fig-Fig4c13. The most intense transitions are those to the vibrational levels of the excited state whose wave functions overlap the most with the initial vibrational wave function. If the two states have similar bond lengths, the strongest band is $v^{\prime}=0\leftarrow v^{\prime\prime}=0$. If the excited state has a much longer bond, the strongest bands are those to higher vibrational levels, whose wave functions have large amplitude near their classical turning points (recall the harmonic oscillator wave functions of @sec-Models).
 
