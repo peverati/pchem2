@@ -1,8 +1,6 @@
-# Revision Checklist — Live Textbook of P-Chem 2
+# Revision Checklist: Live Textbook of P-Chem 2
 
-Status of the improvements identified in the November 2026 review. Effort: **S** = under an hour, **M** = a few hours, **L** = a day or more. This file is not part of the Quarto build.
-
-Chapter numbers below refer to the **current** structure of the book:
+The status of the November 2026 revision. This file is not part of the book.
 
 | Ch. | File | Title |
 |---|---|---|
@@ -19,55 +17,81 @@ Chapter numbers below refer to the **current** structure of the book:
 | 11 | `11_Bonds.qmd` | The Chemical Bond in Diatomic Molecules |
 | 12 | `12_Polyatomic.qmd` | The Chemical Bond in Polyatomic Molecules |
 | 13 | `13_Spectroscopy.qmd` | Spectroscopy |
-
-(The former Postulates chapter was removed; its content was moved to Ch. 4, 6, 8, and 9.)
+| A | `A1_Math.qmd` | Mathematical Toolkit |
+| B | `A2_Constants.qmd` | Physical Constants and Unit Conversions |
+| C | `A3_References.qmd` | Further Reading and References |
 
 ---
 
 ## Open items
 
-- [ ] **Perturbation theory** (M), next to the variational method in Ch. 9: first-order energy correction, with helium's electron repulsion as the example (the $-7{,}220$ kJ/mol value is exactly this).
-- [ ] **Ch. 9 extras** (M): helium excited states (singlet vs. triplet, exchange) and the periodic table / ionization-energy trends.
-- [ ] **Anharmonicity and the Morse potential; centrifugal distortion** (M), in Ch. 13.
-- [ ] **Molecular symmetry and group theory** (L), if the course covers it.
-- [ ] **Use the bibliography** (M). `book.bib` exists but no citations are used. Add citations and a short "Further reading" list per chapter.
-- [ ] **Accessibility of the PDF** (M–L). The HTML version is done; the PDF is not tagged (PDF/UA fails with the Quarto Typst book template). Also check the site with WAVE or axe on the live site.
-- [ ] **Runnable code** (L, optional). Candidates: plot particle-in-a-box and harmonic-oscillator states for any $n$; interactive hydrogen radial probability; a minimal SCF loop for water (Ch. 12); a simulated CO rovibrational spectrum (Ch. 13). The figure scripts in `scripts/` are a starting point.
-- [ ] **Practice problems** — not in the book by design: they will be on the companion website.
+- [ ] **Hidden edit/issue links.** "Edit this page" and "Report an issue" disappeared on wide screens when the right-hand column was hidden; they could go in the footer.
+- [ ] **Print edition** (see `SELF_PUBLISHING_GUIDE.md`):
+  - a new front cover with the print title;
+  - a print PDF profile: two-sided layout, 300-dpi figures, answers at the end of each chapter, a copyright page;
+  - KDP and IngramSpark.
+- [ ] **Worked examples** (optional): one or two step-by-step numerical examples per chapter, in collapsible boxes.
+- [ ] **Chapter summaries** (optional): a short "what you should know" list before the study questions.
+- [ ] **Older images** (optional): replace the few remaining non-computed figures (e.g., the H₂⁺ MO diagram, `OEP_figure2.jpeg`) with computed ones.
+- [ ] **Interactive figures** (optional): for example, hydrogen radial probabilities or particle-in-a-box superpositions with sliders.
+
+## Potential additions (parked: not planned; consider only on request)
+
+- Perturbation theory (first order, with helium as the example).
+- Helium excited states (singlet vs. triplet, exchange) and periodic trends.
+- Anharmonicity, the Morse potential, centrifugal distortion.
+- Molecular symmetry and group theory.
+- Runnable code or notebooks.
+
+## Not pursued
+
+- **Tagged/accessible PDF.** Accessibility is handled on the website; the PDF is provided as is.
 
 ---
 
 ## Done (November 2026)
 
-**Structure**
-- [x] Chapters 1 and 2 swapped; Postulates chapter removed and redistributed; `12b_Polyatomic` renumbered as Ch. 12 and Spectroscopy as Ch. 13; `_bookdown.yml` key fixed (`rmd_files`).
+**Platform and publishing**
+- [x] Moved from bookdown to Quarto, with the website and PDF built into `docs/`. Old page names redirect. The bookdown version is kept on the `bookdown` branch, and its sources in `_bookdown-archive/`.
+- [x] Website:
+  - a top bar with the title, GitHub, PDF, dark mode, and the group logo (light and dark versions);
+  - a left sidebar with search and expandable chapter sections;
+  - no right-hand column;
+  - layout tuned for phones.
+- [x] PDF: cover page, floating figures, Table 8.1 layout, and a print title page ("Beyond the Classical World").
+- [x] License: CC BY-NC-SA 4.0 for the book and MIT for `scripts/`, from 10 November 2026.
+- [x] README with the update and publish procedure.
 
-**Consistency**
-- [x] Review questions aligned with their chapters in every chapter (and several replaced, e.g., Ch. 11 Q10, Ch. 8 Q4).
-- [x] Particle-in-a-box normalization derived (Ch. 4); Born's interpretation and the normalization condition introduced in Ch. 3.
-- [x] 2s–2p splitting explained by penetration (Ch. 9), as promised in Ch. 5.
-- [x] Atomic units introduced once in Ch. 5 and referenced from Ch. 9 and 11.
-- [x] Commutators: $[\hat{x},\hat{p}]=i\hbar$ and the common-eigenfunction theorem in Ch. 6; Ch. 7 points back to them; general uncertainty relation $\sigma_A\sigma_B\geq\frac{1}{2}|\langle[\hat{A},\hat{B}]\rangle|$ and a correct energy–time note in Ch. 8.
-- [x] No Dirac notation (kets removed; Slater determinants written as $|\chi_1\,\chi_2\cdots|$).
-- [x] Notation: $\alpha/\beta$ spin functions, $g$ for gravity, $m_\ell$ for the quantum number, `\text{Å}`, energies in kJ/mol alongside $E_h$, eV, or cm$^{-1}$.
-- [x] Orbitals "describe" electrons (no "placing electrons in orbitals").
-- [x] Preface updated (by the author).
+**Structure and content**
+- [x] Chapters reordered; the Postulates chapter redistributed.
+- [x] New sections throughout:
+  - classical waves (Ch. 1);
+  - computed figures, the Bohr model, and line spectra (Ch. 2);
+  - the meaning of ψ and wave packets (Ch. 3);
+  - the 3D box (Ch. 4);
+  - commutators and time evolution (Ch. 6);
+  - symmetry and quantum numbers (Ch. 7);
+  - measurement, interpretations, and the uncertainty relation (Ch. 8);
+  - identical particles, variational helium, shielding, and term symbols (Ch. 9);
+  - potential energy surfaces and SCF (Ch. 10);
+  - second-row and heteronuclear diatomics (Ch. 11);
+  - water MOs, Koopmans' theorem, localized orbitals, and Hückel theory (Ch. 12);
+  - selection rules, normal modes, Jablonski diagrams, and NMR/ESR (Ch. 13).
+- [x] Appendices: mathematical toolkit, constants and conversions, further reading with references.
+- [x] All display equations numbered.
 
-**New content**
-- [x] Ch. 1: classical waves; rewritten Hamiltonian section (Lagrangian reduced to a mention).
-- [x] Ch. 2: computed black-body and photoelectric figures, Bohr model and line spectra, summary table.
-- [x] Ch. 3: meaning of the wave function, plane waves, wave packets.
-- [x] Ch. 4: 3D box (separation of variables, degeneracy).
-- [x] Ch. 6: expectation values explained; commuting operators; time evolution of superpositions.
-- [x] Ch. 7: Stern–Gerlach, sequential experiments, spin-cone, and parity figures.
-- [x] Ch. 8: measurement and collapse; interpretations; new slit, which-way, uncertainty, and tunneling figures.
-- [x] Ch. 9: identical particles, variational helium, shielding and penetration, term symbols, Hund's rules, spin–orbit coupling, correlation.
-- [x] Ch. 10: potential energy surfaces and reaction coordinate; Fock operator; SCF.
-- [x] Ch. 11: H$_2^+$ orbital analysis, beyond Hartree–Fock (CI), second-row and heteronuclear diatomics (HF, CO).
-- [x] Ch. 12: symmetry, water MO diagram, Koopmans, localized orbitals, Hückel theory.
-- [x] Ch. 13: selection rules, polyatomic vibrations, Jablonski diagram, NMR and ESR.
+**Style (see `STYLE_CHECKLIST.md`)**
+- [x] Colloquial, guided style throughout, including rewrites of:
+  - Coulomb's law (Ch. 1);
+  - all four models (Ch. 4);
+  - the hydrogen atom (Ch. 5);
+  - Hermitian operators and angular momentum (Ch. 6);
+  - symmetry (Ch. 7);
+  - tunneling (Ch. 8).
+- [x] Misconceptions removed: no orbits, no orbital "shapes", electrons described by orbitals; no Dirac notation.
+- [x] Proofs and derivations in collapsible boxes; formulaic openers varied.
+- [x] Study questions rewritten: 10 per chapter, 5 choices each.
 
-**Figures, voice, and accessibility**
-- [x] Over 70 computed figures (scripts in `scripts/`); no Wikipedia images left.
-- [x] Borrowed passages (ChatGPT, Sherrill, Cramer, Wikipedia) rewritten in the author's voice.
-- [x] HTML accessibility: alt text on all images, `lang: en`, keyboard-accessible answers, descriptive links, caption contrast, scrollable wide equations, no line breaks before punctuation after inline math.
+**Figures and accessibility (website)**
+- [x] Over 70 computed figures (scripts in `scripts/`), with no Wikipedia images.
+- [x] Alt text, `lang`, caption contrast, keyboard-accessible answers and proofs, scrollable equations, punctuation glued to math, light and dark modes.

@@ -88,6 +88,7 @@ format:
     page-layout: full   # no right-hand column: the content uses the space
     fig-align: center
   pdf:
+    subtitle: "Quantum Mechanics, Atoms, Molecules, and Spectra"
     documentclass: scrbook
     classoption: [oneside]
     geometry:
@@ -100,6 +101,8 @@ format:
         \usepackage{cancel}
         \usepackage{booktabs}
         \usepackage{pdfpages}
+        \subject{The Live Textbook of Physical Chemistry, Volume 2}
+        \AtBeginDocument{\title{Beyond the Classical World}}  % print title (the website keeps the series name)
         \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
