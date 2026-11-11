@@ -333,171 +333,109 @@ The most important difference with NMR is that ESR is only possible for molecule
 
 ## Chapter Review {#sec-rev13}
 ### Study Questions {#sec-quest13}
-**1. In the rigid‑rotor model for a diatomic molecule, the rotational energy levels are given by $F(J) = B J(J+1)$. What does $B$ represent?**
 
-a. rotational constant related to the moment of inertia
-b. bond length
-c. rotational quantum number
-d. vibrational frequency
-e. electronic excitation energy
+**1. A transition between two states is forbidden when:**
 
----
-
-**2. What are the allowed rotational quantum numbers $J$ for a linear rigid rotor?**
-
-a. $J = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots$
-b. $J = 1, 2, 3, \dots$
-c. $J = 0, 1, 2, 3, \dots$
-d. $J = -\infty, \dots, \infty$
-e. $J = 2, 4, 6, \dots$
+a. the two states have different energies  
+b. the light is too intense  
+c. the transition dipole moment integral between the two states is zero  
+d. the molecule has a dipole moment  
+e. the upper state is degenerate  
 
 ---
 
-**3. In pure rotational spectroscopy of a heteronuclear diatomic in the rigid‑rotor approximation, which of the following is the selection rule for rotational transitions?**
+**2. Which of the following molecules has a pure rotational (microwave) spectrum?**
 
-a. $\Delta J = 0$
-b. $\Delta J = \pm 1$
-c. $\Delta J = \pm 2$
-d. $\Delta J = \pm 3$
-e. no selection rule applies
-
----
-
-**4. For a harmonic oscillator model of a diatomic vibration, the vibrational energy levels are $G(v) = \omega_e \left( v + \frac{1}{2} \right)$. What are the allowed values of $v$?**
-
-a. $v = 0, 1, 2, \dots$
-b. $v = 1, 2, 3, \dots$
-c. $v = -\infty, \dots, \infty$
-d. $v = 0, \tfrac{1}{2}, 1, \tfrac{3}{2}, \dots$
-e. $v = 2, 4, 6, \dots$
-
+a. $\mathrm{N}_2$  
+b. $\mathrm{H}_2$  
+c. $\mathrm{O}_2$  
+d. $\mathrm{CO}_2$  
+e. $\mathrm{CO}$  
 
 ---
 
-**5. What is the main vibrational selection rule for an infrared‑active diatomic in the harmonic approximation?**
+**3. The lines of the rotational spectrum of a rigid diatomic molecule are:**
 
-a. $\Delta v = 0$
-b. $\Delta v = \pm 1$
-c. $\Delta v = \pm 2$ only
-d. $\Delta v = \pm 3$
-e. no selection rule
-
-
----
-
-**6. In rovibrational spectroscopy of a diatomic molecule, transitions are often labeled as P‑ and R‑branches. These correspond, respectively, to which of the following?**
-
-a. $\Delta J = 0$ (P) and $\Delta J = \pm 2$ (R)
-b. $\Delta J = -1$ (P) and $\Delta J = +1$ (R)
-c. $\Delta J = +1$ (P) and $\Delta J = -1$ (R)
-d. $\Delta J = 0$ for both P and R
-e. $\Delta J = \pm 3$
+a. equally spaced by $2B$  
+b. equally spaced by $B$  
+c. closer together as $J$ increases  
+d. all at the same frequency  
+e. farther apart as $J$ increases  
 
 ---
 
-**7. Which of the following approximates the rovibrational transition wavenumbers in a simple harmonic‑oscillator plus rigid‑rotor model?**
+**4. At room temperature, why are many rotational levels populated, with a maximum at $J>0$?**
 
-a. a single line independent of $J$
-b. $\tilde{\nu} \approx \tilde{\nu}_0^2$
-c. $\tilde{\nu} \approx 2BJ(J+1)$ only
-d. $\tilde{\nu}_R \approx \tilde{\nu}_0 + 2B(J''+1)$ and $\tilde{\nu}_P \approx \tilde{\nu}_0 - 2BJ''$
-e. a random distribution
-
----
-
-**8. In electronic spectroscopy of diatomic molecules, which combination of changes typically occurs in an electronic transition?**
-
-a. electronic state changes, but vibrational and rotational states remain fixed
-b. only rotational quantum number changes
-c. primarily vibrational changes with no electronic change
-d. electronic, vibrational, and rotational quantum numbers can all change, giving vibronic‑rotational structure
-e. only spin quantum numbers change
+a. because the energy levels are degenerate in $J$  
+b. because only $J=0$ is populated  
+c. because rotational energies are larger than $kT$  
+d. because of the Pauli principle  
+e. because the degeneracy $2J+1$ grows with $J$, while the Boltzmann factor decreases  
 
 ---
 
-**9. Why are electronic transitions typically found at much higher energies (shorter wavelengths) than vibrational or rotational transitions?**
+**5. A vibration absorbs infrared light only if:**
 
-a. electronic masses are larger than nuclear masses
-b. changes in electronic energy levels are usually much larger than nuclear vibrational or rotational spacings
-c. vibrational transitions require relativistic corrections
-d. rotational transitions do not conserve energy
-e. electronic transitions have zero frequency
-
----
-
-**10. Which region is most commonly associated with *electronic* transitions in small molecules?**
-
-a. microwave region
-b. infrared region
-c. visible and ultraviolet regions
-d. radio‑frequency region
-e. far‑infrared only
+a. the molecule has a permanent dipole moment  
+b. the molecule is homonuclear  
+c. the dipole moment of the molecule changes during the vibration  
+d. the vibration is very fast  
+e. the polarizability of the molecule is zero  
 
 ---
 
-**11. Why is the transition from $v=0$ to $v=2$ of a harmonic oscillator forbidden?**
+**6. The fundamental band of the infrared spectrum of CO shows:**
 
-a. because it requires too much energy  
-b. because the integrand of the transition dipole moment is odd, and its integral is zero  
-c. because the molecule has no dipole moment  
-d. because $v=2$ is not populated  
-e. because the transition changes the spin  
-
----
-
-**12. How many vibrational normal modes does a molecule of CO$_2$ have?**
-
-a. 2  
-b. 3  
-c. 4  
-d. 6  
-e. 9  
+a. a single line  
+b. a P-branch, a Q-branch, and an R-branch  
+c. only an R-branch  
+d. a P-branch and an R-branch separated by a gap at the band center  
+e. a continuous absorption  
 
 ---
 
-**13. Which vibration of CO$_2$ is IR inactive?**
+**7. How many vibrational normal modes does the linear molecule $\mathrm{CO}_2$ have?**
 
-a. the antisymmetric stretch  
-b. the bend  
-c. the symmetric stretch  
-d. all of them  
-e. none of them  
-
----
-
-**14. Why is phosphorescence much slower than fluorescence?**
-
-a. because it occurs at higher energy  
-b. because it involves a change in total spin ($T_1\rightarrow S_0$), which is forbidden by the selection rule $\Delta S=0$  
-c. because it requires vibrational relaxation  
-d. because it only occurs in the gas phase  
-e. because triplet states are higher in energy than singlet states  
+a. $3$  
+b. $4$  
+c. $5$  
+d. $6$  
+e. $9$  
 
 ---
 
-**15. Which of the following molecules gives an ESR signal?**
+**8. According to the Franck–Condon principle, an electronic transition:**
 
-a. N$_2$  
-b. H$_2$O  
-c. CH$_4$  
-d. the methyl radical, $\cdot$CH$_3$  
-e. CO  
+a. is vertical, since the nuclei do not move while the electron changes state  
+b. always ends in the lowest vibrational level of the excited state  
+c. changes the bond length during the absorption  
+d. is forbidden if the bond lengths of the two states differ  
+e. happens only between states with the same vibrational quantum number  
 
 ---
 
-**16. In the $^1$H NMR spectrum of ethanol, why is the CH$_3$ signal split into a triplet?**
+**9. Why is phosphorescence much slower than fluorescence?**
 
-a. because the CH$_3$ group has three protons  
-b. because of coupling with the two neighboring CH$_2$ protons ($n+1=3$ lines)  
-c. because of the chemical shift  
-d. because of coupling with the OH proton  
-e. because of the Zeeman effect on carbon  
+a. because triplet states have higher energy  
+b. because the emission from $T_1$ to $S_0$ is spin-forbidden  
+c. because the molecule must first rotate  
+d. because phosphorescence involves only vibrational levels  
+e. because fluorescence is spin-forbidden  
+
+---
+
+**10. In NMR, the chemical shift arises because:**
+
+a. nuclei have different masses  
+b. the nuclei vibrate  
+c. neighboring nuclei transfer electrons  
+d. the electrons around each nucleus partially shield it from the external magnetic field  
+e. the magnetic field is not uniform  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.a, 2.c, 3.b, 4.a, 5.b, 6.b, 7.d, 8.d, 9.b, 10.c, 11.b, 12.c, 13.c, 14.b, 15.d, 16.b
+1.c, 2.e, 3.a, 4.e, 5.c, 6.d, 7.b, 8.a, 9.b, 10.d
 :::
-

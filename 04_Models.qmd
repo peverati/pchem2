@@ -408,111 +408,109 @@ Let's look at @fig-fig11c4:
 
 ## Chapter Review {#sec-rev4}
 ### Study Questions {#sec-quest4}
-**1. Which of the following sets contains only model systems treated in this chapter as analytically solvable?**
 
-a. Hydrogen atom, particle in a box, rigid rotor  
-b. Hydrogen atom, harmonic oscillator, Morse oscillator  
-c. Particle in a box, harmonic oscillator, rigid rotor  
-d. Free particle, hydrogen atom, rigid rotor  
-e. Particle in a box, Coulomb potential, rigid rotor  
+**1. The energy levels of a particle of mass $m$ in a one-dimensional box of length $a$ are:**
 
----
-
-**2. For the 1D infinite potential well (“particle in a box”), the potential $V(x)$ is what?**
-
-a. Constant for all $x$  
-b. Zero for $0 \le x \le a$, infinite elsewhere  
-c. Linear in $x$ between 0 and $a$  
-d. Harmonic in $x^2$ between 0 and $a$  
-e. Zero everywhere  
+a. $E_n=\frac{nh^2}{8ma^2}$, with $n=0,1,2,\ldots$  
+b. $E_n=\hbar\omega(n+\frac{1}{2})$  
+c. $E_n=\frac{n^2h^2}{8ma^2}$, with $n=1,2,3,\ldots$  
+d. $E_n=-\frac{1}{2n^2}E_h$  
+e. any non-negative value  
 
 ---
 
-**3. What boundary conditions are imposed on the wavefunction for the particle in a box?**
+**2. Why is the lowest energy of the particle in a box not zero?**
 
-a. $\psi(0) = \psi(a) = 1$  
-b. $\psi(0) = 0,\ \psi(a) = 1$  
-c. $\psi(0) = \psi'(a) = 0$  
-d. $\psi'(0) = \psi'(a) = 0$  
-e. $\psi(0) = \psi(a) = 0$  
-  
----
-
-**4. Applying the $\psi(0)=0$ boundary condition to the particle in a box leads to which condition on the constants?**
-
-a. $A = 0$  
-b. $k = 0$  
-c. $A = B$  
-d. $B = 0$  
-e. $A = -B$  
+a. because the walls repel the particle  
+b. because the particle always moves at the speed of light  
+c. because energy is never zero in classical physics  
+d. because $n=0$ would give a wave function equal to zero everywhere, that is, no particle  
+e. because of the Coulomb attraction to the walls  
 
 ---
 
-**5. Which of the following is the correct spatial dependence of the normalized eigenfunctions for the particle in a box?**
+**3. How many nodes inside the box does the particle-in-a-box wave function $\psi_n$ have?**
 
-a. $\psi_n(x) \propto \sin\left(\dfrac{n\pi x}{a}\right)$  
-b. $\psi_n(x) \propto \cos\left(\dfrac{n\pi x}{a}\right)$  
-c. $\psi_n(x) \propto e^{ikx}$  
-d. $\psi_n(x) \propto x^n$  
-e. $\psi_n(x) \propto \delta(x-n)$  
-
----
-
-**6. Which of the following are the energy eigenvalues $E_n$ for the particle in a box?**
-
-a. $E_n = \dfrac{\hbar^2 n^2}{2 m a^2}$ 
-b. $E_n = \dfrac{h^2 n^2}{8 m a^2}$  
-c. $E_n = \dfrac{1}{2} m n^2 a^2$  
-d. $E_n = \dfrac{n h c}{a}$  
-e. $E_n = n \hbar \omega$  
+a. $n-1$  
+b. $n$  
+c. $n+1$  
+d. $2n$  
+e. none, for every $n$  
 
 ---
 
-**7. The harmonic oscillator eigenfunctions are expressed in terms of which special functions?**
+**4. For the first excited state of the particle in a box ($n=2$), the probability of finding the particle at the center of the box is:**
 
-a. Legendre polynomials $P_n$  
-b. Laguerre polynomials $L_n$  
-c. Hermite polynomials $H_n$  
-d. Bessel functions $J_n$  
-e. Spherical harmonics $Y_{\ell}^{m_\ell}$  
-
----
-
-**8. Which of the following are the energy levels of the harmonic oscillator?**
-
-a. $E_n = \hbar \omega \left(n + \tfrac{1}{2}\right)$  
-b. $E_n = \hbar \omega n$  
-c. $E_n = \dfrac{h^2 n^2}{8 m a^2}$  
-d. $E_n = \dfrac{\hbar^2 n^2}{2m}$  
-e. $E_n = \dfrac{1}{2} k x^2$  
+a. the largest in the box  
+b. the same as anywhere else in the box  
+c. one  
+d. zero  
+e. negative  
 
 ---
 
-**9. What does the rigid rotor model represent?**
+**5. In a cubic box, the states $(n_x,n_y,n_z)=(1,1,2)$, $(1,2,1)$, and $(2,1,1)$:**
 
-a. A particle moving in a 1D infinite well  
-b. Two point masses at fixed distance rotating in 3D  
-c. A mass on a spring moving in 1D  
-d. A free particle in 3D  
-e. A charged particle in a uniform electric field  
-
+a. have different energies  
+b. are not allowed  
+c. have the same energy, because the three directions of the cube are equivalent  
+d. have zero energy  
+e. are the same state  
 
 ---
 
-**10. Which of the following are the energy levels of the rigid rotor?**
+**6. For a particle on a ring, the energy levels with $m_\ell\neq0$ are:**
 
-a. $E_\ell = \dfrac{\hbar^2}{2I}\,\ell(\ell+1)$  
-b. $E_\ell = \hbar \omega (\ell + \tfrac{1}{2})$  
-c. $E_\ell = \dfrac{h^2 \ell^2}{8 I}$  
-d. $E_\ell = \dfrac{\hbar^2}{2I}\,m^2$  
-e. $E_\ell = \dfrac{1}{2} I \omega^2$  
+a. not degenerate  
+b. triply degenerate  
+c. all at zero energy  
+d. equally spaced  
+e. doubly degenerate, since $+m_\ell$ and $-m_\ell$ (rotation in opposite directions) have the same energy  
+
+---
+
+**7. For a particle on a ring in a state with definite angular momentum, the probability density is:**
+
+a. largest at $\phi=0$  
+b. the same everywhere on the ring, and the wave function has no nodes  
+c. zero at $2|m_\ell|$ points  
+d. largest at the center of the ring  
+e. different for $+m_\ell$ and $-m_\ell$  
+
+---
+
+**8. How many states have the same energy $E_\ell$ for a particle on a sphere?**
+
+a. $2\ell+1$  
+b. $\ell$  
+c. $2\ell$  
+d. $\ell^2$  
+e. one  
+
+---
+
+**9. The energy levels of the harmonic oscillator are:**
+
+a. equally spaced by $\hbar\omega$, with the lowest one at zero  
+b. farther apart as $n$ increases  
+c. closer together as $n$ increases  
+d. continuous  
+e. equally spaced by $\hbar\omega$, with the lowest one at $\frac{1}{2}\hbar\omega$  
+
+---
+
+**10. Can a quantum harmonic oscillator be found beyond its classical turning points?**
+
+a. no, the wave function is exactly zero there  
+b. yes, with a small probability, since the wave function decays smoothly beyond them  
+c. yes, with the same probability as near the center  
+d. only in the ground state  
+e. only if its energy is larger than the potential  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.c, 2.b, 3.e, 4.e, 5.a, 6.b, 7.c, 8.a, 9.b, 10.a
+1.c, 2.d, 3.a, 4.d, 5.c, 6.e, 7.b, 8.a, 9.e, 10.b
 :::
-
-

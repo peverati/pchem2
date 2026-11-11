@@ -370,156 +370,109 @@ An important property of the time evolution described by @eq-tdseqop is that it 
 
 ## Chapter Review {#sec-rev6}
 ### Study Questions {#sec-quest6}
-**1. Which expression gives the expectation value of an observable represented by operator $\hat{a}$ in state $\psi(\mathbf{r})$?**
 
-a. $\langle a \rangle = \int \psi^*(\mathbf{r})\,\hat{a}\,\psi(\mathbf{r})\,d\mathbf{r}$  
-b. $\langle a \rangle = \int \hat{a}\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}$  
-c. $\langle a \rangle = \int |\psi(\mathbf{r})|^2\,d\mathbf{r}$  
-d. $\langle a \rangle = \int a\,\psi^*(\mathbf{r})\,\psi(\mathbf{r})\,d\mathbf{r}$  
-e. $\langle a \rangle = \int \psi(\mathbf{r})\,\hat{a}\,\psi^*(\mathbf{r})\,d\mathbf{r}$  
+**1. If we measure an observable $A$ on a system, the possible results are:**
 
-
----
-
-**2. An eigenfunction $f$ of an operator $\hat{a}$ with eigenvalue $k$ satisfies which equation?**
-
-a. $\hat{a} f = k$  
-b. $\hat{a} f = k f$  
-c. $\hat{a} f = f + k$  
-d. $\hat{a}^2 f = k f$  
-e. $\hat{a} f = k^2 f$  
-
+a. any real number  
+b. the eigenfunctions of $\hat{A}$  
+c. the eigenvalues of the operator $\hat{A}$  
+d. only the expectation value $\langle A\rangle$  
+e. the eigenvalues of the Hamiltonian, whatever $A$ is  
 
 ---
 
-**3. If $f$ is an eigenfunction of $\hat{a}$ with eigenvalue $k$, which statement is true for any nonzero scalar $c$?**
+**2. The expectation value $\langle A\rangle$ is:**
 
-a. $c f$ has eigenvalue $k/c$  
-b. $c f$ is an eigenfunction with eigenvalue $ck$  
-c. $c f$ is no longer an eigenfunction  
-d. $c f$ is an eigenfunction only if $|c|=1$  
-e. $c f$ is also an eigenfunction with the same eigenvalue $k$  
-
-
----
-
-**4. What is the commutator of two operators $\hat{a}$ and $\hat{b}$?**
-
-a. $[\hat{a},\hat{b}] = \hat{a} + \hat{b}$  
-b. $[\hat{a},\hat{b}] = \hat{a}\hat{b} + \hat{b}\hat{a}$  
-c. $[\hat{a},\hat{b}] = \hat{a}\hat{b} - \hat{b}\hat{a}$  
-d. $[\hat{a},\hat{b}] = \hat{a} - \hat{b}$  
-e. $[\hat{a},\hat{b}] = 0$ by definition  
+a. the result of a single measurement  
+b. the largest possible result of a measurement  
+c. always an eigenvalue of $\hat{A}$  
+d. the uncertainty in the measurement of $A$  
+e. the average of the results of many measurements of $A$ on identically prepared systems  
 
 ---
 
-**5. Which important consequence follows for the eigenvalues of a Hermitian operator $\hat{a}$?**
+**3. For a normalized wave function $\psi$, the expectation value of $\hat{A}$ is:**
 
-a. All eigenvalues are real  
-b. All eigenvalues are purely imaginary  
-c. Eigenvalues occur only in complex-conjugate pairs  
-d. Eigenvalues must be integers  
-e. Eigenvalues must be positive  
-
----
-
-**6. For a Hermitian operator, eigenfunctions corresponding to different eigenvalues have what property?**
-
-a. They are always identical up to a phase  
-b. They are orthogonal  
-c. They are linearly dependent  
-d. They have the same expectation value of all observables  
-e. They must be degenerate  
+a. $\langle A\rangle=\int\hat{A}\psi\,d\mathbf{r}$  
+b. $\langle A\rangle=\int\psi^*\hat{A}\psi\,d\mathbf{r}$  
+c. $\langle A\rangle=\int\psi^*\psi\,d\mathbf{r}$  
+d. $\langle A\rangle=\hat{A}\psi$  
+e. $\langle A\rangle=\int\psi\hat{A}\,d\mathbf{r}$  
 
 ---
 
-**7. In one dimension, the standard momentum operator $\hat{p}_x$ acting on $\psi(x)$ is:**
+**4. Why are the operators associated with observables Hermitian?**
 
-a. $\hat{p}_x = -\dfrac{\hbar^2}{2m}\dfrac{d^2}{dx^2}$  
-b. $\hat{p}_x = i\hbar \dfrac{d}{dx}$  
-c. $\hat{p}_x = -i\hbar \dfrac{d}{dx}$
-d. $\hat{p}_x = x$  
-e. $\hat{p}_x = \dfrac{d}{dx}$  
-
-
----
-
-**8. If a wavefunction $\psi$ is written as a linear combination of eigenfunctions $\{\psi_i\}$ of $\hat{a}$, $\psi = \sum_i c_i \psi_i$, what are the possible outcomes of a measurement of $a$?**
-
-a. Any complex number
-b. Any real number in the spectrum of $\hat{a}$  
-c. Only the expectation value $\langle a \rangle$  
-d. Only the eigenvalues $a_i$ corresponding to the eigenfunctions present in the expansion  
-e. Only the largest eigenvalue  
+a. because Hermitian operators always commute with each other  
+b. because Hermitian operators are always real  
+c. because Hermitian operators have no eigenfunctions  
+d. because Hermitian operators have real eigenvalues, and the results of measurements are real numbers  
+e. because Hermitian operators do not depend on position  
 
 ---
 
-**9. In the same expansion $\psi = \sum_i c_i \psi_i$, what is the probability of obtaining eigenvalue $a_k$ upon measuring $a$ (assuming normalized eigenfunctions)?**
+**5. Eigenfunctions of a Hermitian operator with different eigenvalues are:**
 
-a. $|c_k|^2$
-b. $c_k$  
-c. $|a_k|^2$  
-d. $1/|c_k|^2$  
-e. $\operatorname{Re}(c_k)$  
-
----
-
-**10. What is the general role of the Hamiltonian operator $\hat{H}$ in quantum mechanics?**
-
-a. It has no observable meaning  
-b. It represents only the kinetic energy  
-c. It represents only the potential energy  
-d. It measures the position of particles  
-e. It represents the total energy and generates time evolution  
+a. orthogonal  
+b. identical  
+c. always degenerate  
+d. complex conjugates of each other  
+e. normalized to zero  
 
 ---
 
-**11. Which property must the time‑evolution operator $e^{-i\hat{H}t/\hbar}$ have?**
+**6. A system is described by $\psi=c_1\psi_a+c_2\psi_b$, where $\psi_a$ and $\psi_b$ are normalized eigenfunctions of $\hat{A}$ with eigenvalues $a$ and $b$. A measurement of $A$ gives:**
 
-a. It is unitary, preserving the normalization of $\Psi$  
-b. It is Hermitian  
-c. It is real and symmetric  
-d. It is diagonal in the position representation  
-e. It always commutes with position  
-
----
-
-**12. A particle in a box is in the superposition $\frac{1}{\sqrt{2}}(\psi_1+\psi_2)$. Which statement is correct?**
-
-a. Its probability density does not change in time  
-b. A measurement of the energy always gives $\frac{1}{2}(E_1+E_2)$  
-c. Its probability density oscillates in time with frequency $(E_2-E_1)/h$  
-d. It is a stationary state  
-e. Its normalization changes in time  
+a. always $c_1a+c_2b$  
+b. always $a$, the lowest eigenvalue  
+c. $a$ and $b$ at the same time  
+d. $a$ with probability $|c_1|^2$, or $b$ with probability $|c_2|^2$  
+e. $a$ with probability $c_1$, or $b$ with probability $c_2$  
 
 ---
 
-**13. What is the value of the commutator $[\hat{x},\hat{p}]$?**
+**7. In one dimension, the momentum operator is:**
 
-a. $0$  
-b. $i\hbar$  
-c. $-\hbar^2$  
-d. $\hbar/2$  
-e. it depends on the wave function  
+a. $\hat{p}=-i\hbar\frac{d}{dx}$  
+b. $\hat{p}=m\frac{dx}{dt}$  
+c. $\hat{p}=-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}$  
+d. $\hat{p}=x$  
+e. $\hat{p}=i\hbar x$  
 
 ---
 
-**14. What does it mean if two Hermitian operators commute?**
+**8. The commutator of position and momentum is $[\hat{x},\hat{p}]=i\hbar$. This means that:**
 
-a. their eigenvalues are equal  
-b. they have a common set of eigenfunctions, so their observables can have definite values at the same time  
-c. one of them must be the Hamiltonian  
+a. position and momentum can always be measured together exactly  
+b. no wave function can have a definite position and a definite momentum at the same time  
+c. momentum is always imaginary  
+d. position is quantized  
+e. the momentum of a particle is always zero  
+
+---
+
+**9. If two operators commute, $[\hat{A},\hat{B}]=0$:**
+
+a. they have the same eigenvalues  
+b. one of them must be the Hamiltonian  
+c. they have a common set of eigenfunctions, and both observables can have definite values at the same time  
 d. their observables cannot be measured  
-e. they are both equal to the identity operator  
+e. their eigenfunctions are always orthogonal to each other  
+
+---
+
+**10. A particle in a box is in a superposition of the two lowest energy eigenstates. Its probability density:**
+
+a. does not change in time  
+b. decays to zero  
+c. oscillates with frequency $\nu=E_1/h$  
+d. is the same everywhere in the box  
+e. oscillates back and forth with frequency $\nu=(E_2-E_1)/h$  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.a, 2.b, 3.e, 4.c, 5.a, 6.b, 7.c, 8.d, 9.a, 10.e, 11.a, 12.c, 13.b, 14.b
+1.c, 2.e, 3.b, 4.d, 5.a, 6.d, 7.a, 8.b, 9.c, 10.e
 :::
-
-
-
-

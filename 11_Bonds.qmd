@@ -304,150 +304,109 @@ These qualitative MO diagrams are the starting point of molecular orbital theory
 
 ## Chapter Review {#sec-rev11}
 ### Study Questions {#sec-quest11}
-**1. In the H$_2^+$ treatment, which one‑electron molecular Hamiltonian (in atomic units, and using the Born–Oppenheimer approximation) is used?**
 
-a. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a}$  
-b. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_b}$  
-c. $\hat{H} = -\tfrac{1}{2}\nabla^2 - \dfrac{1}{r_a} - \dfrac{1}{r_b}$  
-d. $\hat{H} = -\tfrac{1}{2}\nabla^2 + \dfrac{1}{r_a} + \dfrac{1}{r_b}$  
-e. $\hat{H} = -\nabla^2 + \dfrac{1}{r_a r_b}$  
+**1. In the bonding orbital of $\mathrm{H}_2^+$, $\varphi_+=(a+b)/\sqrt{2+2S}$:**
 
----
-
-**2. Which of the following is used as the first variational ansatz for the one‑electron molecular orbital in H$_2^+$?**
-
-a. $\varphi = a$  
-b. $\varphi = b$  
-c. $\varphi = a b$  
-d. $\varphi = c_1 a + c_2 b$
-e. $\varphi = a^2 + b^2$  
+a. the two atomic orbitals cancel between the nuclei  
+b. the electron is found only near nucleus $a$  
+c. there is a node between the nuclei  
+d. the energy is higher than that of the separated atoms  
+e. the two atomic orbitals add up in phase, and the probability between the nuclei increases  
 
 ---
 
-**3. In the secular problem for H$_2^+$, what is the physical meaning of the overlap integral $S = S_{ab}$?**
+**2. Compared with the energy of a hydrogen $1s$ orbital, the antibonding orbital of $\mathrm{H}_2^+$ is:**
 
-a. integral $\int a(\mathbf{r}) b(\mathbf{r}) d\mathbf{r}$ measuring non‑orthogonality of the two 1s orbitals 
-b. nuclear repulsion between the two protons  
-c. kinetic energy between $a$ and $b$  
-d. electron–electron repulsion  
-e. spin overlap between alpha and beta functions  
-
----
-
-**4. The diagonalization of the 2×2 secular problem for H$_2^+$ gives which types of molecular orbitals?**
-
-a. a nonbonding and an antinonbonding orbital  
-b. a bonding $\varphi_+$ and an antibonding $\varphi_-$ combination  
-c. two identical orbitals with the same energy  
-d. two core orbitals localized on each nucleus  
-e. two purely antibonding orbitals
+a. pushed up exactly as much as the bonding orbital is pushed down  
+b. pushed down  
+c. at the same energy  
+d. pushed up more than the bonding orbital is pushed down  
+e. pushed up less than the bonding orbital is pushed down  
 
 ---
 
-**5. What is the physical meaning of the negative total energy of the ground state for a range of $R$ in H$_2^+$?**
+**3. Which integral is mainly responsible for the formation of the bond in $\mathrm{H}_2^+$?**
 
-a. the molecular ion is unstable relative to separated H + H$^+$  
-b. the molecular orbital stabilizes the system relative to the separated fragments  
-c. electron–nuclear attraction is negligible  
-d. only nuclear–nuclear repulsion matters  
-e. there is no chemical bond  
-
----
-
-**6. Which of the following is the correct molecular Hamiltonian, in a.u. and under the Born–Oppenheimer approximation, for H$_2$?**
-
-a. $\hat{h}_1 + \hat{h}_2$ only  
-b. $\hat{h}_1 + \hat{h}_2 - 1/r_{12}$  
-c. $\hat{k}_n + \hat{k}_e$ only  
-d. $1/r_{12} + 1/R$ only  
-e. $\hat{h}_1 + \hat{h}_2 + 1/r_{12} + 1/R$  
+a. the overlap integral $S$  
+b. the Coulomb integral $H_{aa}$  
+c. the nuclear repulsion  
+d. the kinetic energy of the proton  
+e. the resonance integral $H_{ab}$, which is negative  
 
 ---
 
-**7. For the ground state of H$_2$ in the minimal MO picture used in this chapter, how are the two electrons described?**
+**4. Why does the Hartree–Fock wave function give the wrong energy when the $\mathrm{H}_2$ molecule is dissociated?**
 
-a. one electron described by $\varphi_+$ and one by $\varphi_-$, with parallel spins  
-b. both electrons described by the antibonding MO $\varphi_-$, with opposite spin  
-c. one electron described by $\sigma_g$, and one by a core orbital  
-d. both electrons described by the bonding MO $\sigma_g = \varphi_+$, with opposite spin  
-e. both electrons described by a localized atomic orbital on a single nucleus   
-
----
-
-**8. Why does the RHF‑type description of H$_2$ fail at large H–H separations (dissociation limit)?**
-
-a. it breaks spin symmetry  
-b. it forces both electrons to be described by the same delocalized orbital shared between centers, rather than localizing one electron on each atom  
-c. it neglects nuclear repulsion  
-d. it neglects electron kinetic energy  
-e. it overestimates overlap as $S=1$
+a. because the Hamiltonian is wrong at large distances  
+b. because the basis set is too large  
+c. because the electrons have the same spin  
+d. because it contains equal amounts of covalent and ionic ($\mathrm{H}^+\mathrm{H}^-$) terms at all distances  
+e. because the variational theorem does not apply to molecules  
 
 ---
 
-**9. What is the main qualitative effect of including electron–electron repulsion and better correlation methods beyond the simple Hartree–Fock picture in H$_2$?**
+**5. How can the wave function of $\mathrm{H}_2$ be improved at large distances?**
 
-a. they destroy the bond minimum  
-b. they describe both electrons with antibonding orbitals  
-c. they improve the description of the potential‑energy curve, particularly the dissociation region  
-d. they eliminate spin considerations  
-e. they make the electrons behave classically  
-
----
-
-**10. Why is an electron described by the bonding orbital $\varphi_+$ of H$_2^+$ lower in energy than in an isolated hydrogen atom?**
-
-a. because the two protons repel each other  
-b. because $\varphi_+$ has a nodal plane between the nuclei  
-c. because the probability density builds up between the nuclei, where the electron is attracted by both protons  
-d. because the overlap integral $S$ is zero  
-e. because the spin of the electron changes  
-
+a. by removing the electron spin  
+b. by using a single atomic orbital  
+c. by mixing in a second Slater determinant (configuration interaction)  
+d. by neglecting electron–electron repulsion  
+e. by fixing the nuclei closer together  
 
 ---
 
-**11. According to the MO diagram of O$_2$, what are its bond order and the number of unpaired electrons?**
+**6. Two atomic orbitals interact strongly to form molecular orbitals only if:**
 
-a. bond order 2, no unpaired electrons  
-b. bond order 2, two unpaired electrons  
-c. bond order 3, no unpaired electrons  
-d. bond order 1, two unpaired electrons  
-e. bond order 2.5, one unpaired electron  
-
----
-
-**12. Why is the $\sigma_g 2p$ orbital above the $\pi_u 2p$ orbitals in N$_2$, but below them in O$_2$?**
-
-a. because N$_2$ has a triple bond  
-b. because the $2p$ orbitals of nitrogen are not degenerate  
-c. because the $2s$ and $2p$ orbitals of nitrogen are closer in energy, so the $\sigma_g$ orbitals from $2s$ and $2p$ mix more strongly  
-d. because O$_2$ is paramagnetic  
-e. because $\pi$ orbitals always overlap more than $\sigma$ orbitals  
+a. they are on the same atom  
+b. they have similar energies and the same symmetry with respect to the bond axis  
+c. they have different symmetries  
+d. they have very different energies  
+e. they are both core orbitals  
 
 ---
 
-**13. In the HF molecule, why are the two $1\pi$ orbitals nonbonding?**
+**7. What is the bond order of $\mathrm{N}_2$?**
 
-a. because they have the wrong energy to mix with the fluorine $2s$  
-b. because there is no orbital of $\pi$ symmetry on hydrogen to combine with them  
-c. because they are antibonding  
-d. because hydrogen has no electrons  
-e. because the bond in HF is ionic  
+a. $1$  
+b. $2$  
+c. $3$  
+d. $2.5$  
+e. $0$  
 
 ---
 
-**14. Why does carbon monoxide bind to metal atoms through carbon rather than through oxygen?**
+**8. Why is $\mathrm{O}_2$ paramagnetic?**
 
-a. because carbon is more electronegative than oxygen  
-b. because the HOMO ($5\sigma$) is a lone pair on carbon and the LUMO ($2\pi^*$) is concentrated on carbon  
-c. because the bonding orbitals of CO are concentrated on carbon  
-d. because oxygen has no lone pairs in CO  
-e. because the C–O bond order is 2  
+a. because its last two electrons are described by two degenerate $\pi^*$ orbitals with parallel spins  
+b. because it has a triple bond  
+c. because its bond order is zero  
+d. because oxygen nuclei are magnetic  
+e. because all its electrons are paired  
+
+---
+
+**9. In hydrogen fluoride, the bonding molecular orbital:**
+
+a. is mostly made of the hydrogen $1s$ orbital  
+b. is mostly made of the fluorine orbital, so the electrons are shared unequally  
+c. has equal contributions from the two atoms  
+d. is made only of fluorine core orbitals  
+e. does not exist, because the energies are too different  
+
+---
+
+**10. Why does carbon monoxide bind to metal atoms through carbon, not through oxygen?**
+
+a. because its highest occupied orbital, $5\sigma$, is mostly a carbon orbital pointing away from oxygen  
+b. because carbon is more electronegative than oxygen  
+c. because oxygen has no lone pairs  
+d. because the dipole moment of CO is large  
+e. because CO has a single bond  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.c, 2.d, 3.a, 4.b, 5.b, 6.e, 7.d, 8.b, 9.c, 10.c, 11.b, 12.c, 13.b, 14.b
+1.e, 2.d, 3.e, 4.d, 5.c, 6.b, 7.c, 8.a, 9.b, 10.a
 :::
-

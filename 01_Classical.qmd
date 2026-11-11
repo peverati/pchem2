@@ -293,113 +293,109 @@ Different wavelengths correspond to different types of radiation, which together
 
 ## Chapter Review {#sec-rev1}
 ### Study Questions {#sec-quest1}
-**1. What is the central quantity in Newtonian mechanics?**
 
-a. Force  
-b. Action  
-c. Wavefunction  
-d. Electric field  
-e. Partition function 
+**1. If we know the net force acting on a particle, and its position and velocity at one instant, Newton's equation allows us to:**
 
----
-
-**2. In the ball-under-gravity example, which force is used to set up the equation of motion?**
-
-a. $F_{\text{gravity}} = +mg$
-b. $F_{\text{gravity}} = -mg$ 
-c. $F_{\text{gravity}} = -k x$
-d. $F_{\text{gravity}} = qE$ 
-e. $F_{\text{gravity}} = 0$  
- 
+a. calculate only its average position  
+b. calculate only the probability of finding it at each position  
+c. calculate its position at any future (or past) time  
+d. calculate its energy, but not its position  
+e. calculate its position only if no force acts on it  
 
 ---
 
-**3. Which statement is true about the equation of motion for the 1D motion of a ball tossed vertically?**
+**2. The momentum of a particle of mass $m$ moving with velocity $\dot{x}$ is:**
 
-a. It is valid only for very small masses  
-b. It is valid only in two dimensions  
-c. It assumes variable gravitational acceleration 
-d. It requires relativistic corrections  
-e. It does not depend on the mass of the ball  
-
----
-
-**4. In the Hamiltonian formulation of classical mechanics, what does the Hamiltonian $H$ represent for a particle?**
-
-a. the force acting on the particle  
-b. the total energy, $K+V$  
-c. the difference between kinetic and potential energy, $K-V$  
-d. the momentum of the particle  
-e. the acceleration of the particle  
+a. $p=\frac{1}{2}m\dot{x}^2$  
+b. $p=m\ddot{x}$  
+c. $p=\dot{x}/m$  
+d. $p=mgx$  
+e. $p=m\dot{x}$  
 
 ---
 
-**5. Which of the following is the Hamiltonian of a particle of mass $m$ moving in one dimension with potential energy $V(x)$?**
+**3. Which of the following is the Hamiltonian of a particle of mass $m$ moving in one dimension with potential energy $V(x)$?**
 
-a. $H = \dfrac{p^2}{2m} + V(x)$  
-b. $H = \dfrac{p^2}{2m} - V(x)$  
-c. $H = m\ddot{x}$  
-d. $H = p\,V(x)$  
-e. $H = \dfrac{p}{m} + V(x)$  
-
----
-
-**6. For a traveling wave with wavelength $\lambda$ and frequency $\nu$, what is the speed $v$ of the wave?**
-
-a. $v = \lambda/\nu$  
-b. $v = \nu/\lambda$  
-c. $v = \lambda\nu$  
-d. $v = 2\pi\lambda$  
-e. $v = \lambda^2\nu$  
+a. $H=\frac{p^2}{2m}-V(x)$  
+b. $H=m\ddot{x}$  
+c. $H=\frac{1}{2}mp^2+V(x)$  
+d. $H=\frac{p^2}{2m}+V(x)$  
+e. $H=p\,V(x)$  
 
 ---
 
-**7. What are the allowed wavelengths of the standing waves on a string of length $L$ fixed at both ends?**
+**4. Why is the Hamiltonian, rather than Newton's equation, the starting point of quantum mechanics?**
+
+a. because it is easier to integrate than Newton's equation  
+b. because it describes the system through its energy, which keeps its meaning even when trajectories do not  
+c. because it does not depend on the potential energy  
+d. because it gives different results from Newton's equation for heavy particles  
+e. because forces do not exist in quantum mechanics  
+
+---
+
+**5. The Coulomb force between an electron and a proton is:**
+
+a. repulsive, because the two charges have opposite signs  
+b. zero, because the two charges cancel each other  
+c. attractive, because the two charges have opposite signs  
+d. attractive only at large distances  
+e. independent of the distance between the particles  
+
+---
+
+**6. The electrostatic potential energy $V$ of two point charges $q_1$ and $q_2$ separated by a distance $r$ is:**
+
+a. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}$  
+b. $V = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r$  
+c. $V = q_1 q_2 r^2$  
+d. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}$  
+e. $V = \dfrac{q_1 + q_2}{r}$  
+
+---
+
+**7. The speed $v$, wavelength $\lambda$, and frequency $\nu$ of a wave are related by:**
+
+a. $v=\lambda/\nu$  
+b. $v=\nu/\lambda$  
+c. $v=2\pi\lambda\nu$  
+d. $v=\lambda^2\nu$  
+e. $v=\lambda\nu$  
+
+---
+
+**8. Euler's formula, which allows us to write waves using complex exponentials, is:**
+
+a. $e^{i\theta}=\cos\theta+i\sin\theta$  
+b. $e^{i\theta}=\cos\theta-i\sin\theta$  
+c. $e^{i\theta}=\sin\theta+i\cos\theta$  
+d. $e^{\theta}=\cos\theta+\sin\theta$  
+e. $e^{i\theta}=i\cos\theta\sin\theta$  
+
+---
+
+**9. A guitar string of length $L$ is fixed at both ends. Which wavelengths can its standing waves have?**
 
 a. any wavelength  
-b. $\lambda_n = nL$  
-c. $\lambda_n = L/2n$  
-d. $\lambda_n = 2L/n$, with $n=1,2,3,\ldots$  
-e. $\lambda_n = 2\pi L$  
+b. only $\lambda_n=2L/n$, with $n=1,2,3,\ldots$  
+c. only $\lambda=L$  
+d. only wavelengths longer than $2L$  
+e. only $\lambda_n=nL$, with $n=1,2,3,\ldots$  
 
 ---
 
-**8. What is the origin of the quantization of the frequencies of a vibrating string?**
+**10. How many nodes (points that never move, not counting the two fixed ends) does the standing wave with quantum number $n$ have?**
 
-a. the boundary conditions imposed by the fixed ends of the string  
-b. the mass of the string  
-c. the principle of superposition  
-d. the amplitude of the vibration  
-e. friction with the air  
-
----
-
-**9. If the distance between two point charges is doubled, the Coulomb force between them:**
-
-a. becomes four times weaker  
-b. becomes two times weaker  
-c. does not change  
-d. becomes two times stronger  
-e. changes sign
-
----
-
-**10. The electrostatic potential energy $V$ of two point charges $q_1$ and $q_2$ separated by distance $r$ is given by which of the following formulas?**
-
-a. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}$
-b. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}$ 
-c. $V = q_1 q_2 r$
-d. $V = k_B T r$ 
-e. $V = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2$
+a. $n-1$  
+b. $n$  
+c. $n+1$  
+d. $2n$  
+e. none  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.a, 2.b, 3.e, 4.b, 5.a, 6.c, 7.d, 8.a, 9.a, 10.b
+1.c, 2.e, 3.d, 4.b, 5.c, 6.d, 7.e, 8.a, 9.b, 10.a
 :::
-
-
-
-

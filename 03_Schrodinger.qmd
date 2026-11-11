@@ -234,131 +234,109 @@ The wave packet gives us an important lesson that we will meet again many times:
 
 ## Chapter Review {#sec-rev3}
 ### Study Questions {#sec-quest3}
-**1. The starting point for deriving the 1D time-independent Schrödinger equation in Chapter 3 is a classical wave of which form?**
 
-a. $\psi(x,t) = \exp[-kx + \omega t]$
-b. $\psi(x,t) = \cos(kx - \omega t)$  
-c. $\psi(x,t) = \sin(kx + \omega t)$  
-d. $\psi(x,t) = \exp[i(kx - \omega t)]$
-e. $\psi(x,t) = kx + \omega t$
+**1. Which of the following is the time-independent Schrödinger equation for a particle in one dimension?**
 
----
-
-**2. For a two-body problem, the single-particle time independent Schrödinger equation can be used if the mass $m$ is replaced by what?**
-
-a. The total mass $m_1 + m_2$
-b. The reduced mass $\mu = \dfrac{m_1 m_2}{m_1 + m_2}$
-c. The mass difference $|m_1 - m_2|$
-d. The geometric mean $\sqrt{m_1 m_2}$
-e. Twice the lighter mass  
+a. $-\frac{\hbar^2}{2m}\frac{d\psi}{dx}+V(x)\psi=E\psi$  
+b. $\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=V(x)$  
+c. $m\frac{d^2x}{dt^2}=-\frac{dV}{dx}$  
+d. $\psi=E\,V(x)$  
+e. $-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi$  
 
 ---
 
-**3. Which of the following equations is the correct time-dependent Schrödinger equation for one particle?**
+**2. How was the Schrödinger equation obtained?**
 
-a. $i\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
-b. $\hbar \dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2} + V(x)\psi(x,t)$  
-c. $i \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = -\dfrac{\hbar^2}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}$  
-d. $i\hbar \dfrac{\partial^2 \psi(x,t)}{\partial t^2} = V(x)\psi(x,t)$  
-e. $\dfrac{\partial \psi(x,t)}{\partial t} = -\dfrac{\hbar}{2m}\dfrac{\partial^2 \psi(x,t)}{\partial x^2}$  
-
-
----
-
-**4. For which of the following wave functions can we separate the variables in the Schrödinger equation?**
-
-a. $\psi(x,t) = \psi(x) + f(t)$  
-b. $\psi(x,t) = \psi(x) f(t)$  
-c. $\psi(x,t) = \psi(x)^2/f(t)$  
-d. $\psi(x,t) = x f(t)$  
-e. $\psi(x,t) = \psi(x) f(t)^2$  
+a. it cannot be derived from classical physics; we can make it plausible, and it is justified by its agreement with experiments  
+b. it was derived from Newton's equation  
+c. it was derived from Coulomb's law  
+d. it was obtained by measuring wave functions  
+e. it was derived from the Bohr model  
 
 ---
 
-**5. After separation of variables, the time-dependent Schrödinger equation yields two ordinary differential equations with a common constant. Which one?**
+**3. According to Born's interpretation, $|\psi(x)|^2dx$ is:**
 
-a. The mass $m$  
-b. The momentum $p$  
-c. The angular frequency $\omega$  
-d. The energy $E$  
-e. The wave number $k$  
-
----
-
-**6. What is the time dependence of the probability density $|\psi(x,t)|^2$ of a stationary state?**
-
-a. It increases linearly with time  
-b. It decreases exponentially with time  
-c. It oscillates sinusoidally with time  
-d. It is time independent  
-e. It diverges for large times  
+a. the energy of the particle at $x$  
+b. the charge of the particle  
+c. the fraction of the particle located at $x$  
+d. the probability of finding the particle between $x$ and $x+dx$  
+e. the velocity of the particle at $x$  
 
 ---
 
-**7. For the free particle in 1D, which of the following properties does the potential $V(x)$ have?**
+**4. Why must a wave function be normalized, $\int|\psi|^2dx=1$?**
 
-a. It is a constant nonzero value 
-b. It is infinite at the origin  
-c. It is zero everywhere  
-d. It is linear in $x$  
-e. It is harmonic in $x^2$  
-
----
-
-**8. Which of the following is a suitable solution for the free-particle time independent Schrödinger equation?**
-
-a. $\psi(x) = A e^{\pm i k x}$  
-b. $\psi(x) = A x$  
-c. $\psi(x) = A e^{k x}$  
-d. $\psi(x) = A \cosh(kx)$  
-e. $\psi(x) = A \delta(x)$  
+a. because the energy must be positive  
+b. because the particle must be found somewhere  
+c. because the wave function must be real  
+d. because the particle cannot move  
+e. because $\psi$ must be zero everywhere  
 
 ---
 
-**9. What is the energy eigenvalue for the free particle?**
+**5. Why do we always use $|\psi|^2=\psi^*\psi$, and not $\psi$ itself, to compute probabilities?**
 
-a. $E = p^2$  
-b. $E = \dfrac{1}{2} m p^2$  
-c. $E = \hbar p$  
-d. $E = \dfrac{\hbar^2}{2m p^2}$  
-e. $E = \dfrac{p^2}{2m}$  
-
----
-
-**10. What is a key difference between the free particle and bound systems regarding energy eigenvalues?**
-
-a. Free-particle energies are always zero  
-b. Free-particle energies are always negative  
-c. Free-particle energies are always degenerate  
-d. Free-particle energies form a continuous spectrum, while bound systems have discrete levels
-e. Free-particle energies do not depend on mass  
+a. because $\psi$ can be complex, while $\psi^*\psi$ is always real and never negative  
+b. because $\psi$ is always negative  
+c. because $\psi^*\psi$ is always larger than $\psi$  
+d. because $\psi$ has no units  
+e. because $\psi^*\psi$ is easier to differentiate  
 
 ---
 
-**11. Why can a single plane wave, $\psi(x)=Ae^{ikx}$, not describe a real localized particle?**
+**6. For a stationary state, what does not change in time?**
 
-a. because it does not solve the Schrödinger equation  
-b. because its momentum is undefined  
-c. because its probability density is the same everywhere, so it cannot be normalized  
-d. because it has a negative energy  
-e. because it is not complex  
+a. the wave function $\psi(x,t)$  
+b. the phase of the wave function  
+c. the probability density $|\psi(x,t)|^2$  
+d. the real part of the wave function  
+e. nothing: everything changes in time  
 
 ---
 
-**12. What happens to the spread of momenta in a wave packet if we make the packet narrower in space?**
+**7. A stationary state with energy $E$ evolves in time by multiplication with which factor?**
 
-a. it becomes narrower  
-b. it becomes broader  
-c. it does not change  
-d. it becomes zero  
-e. the packet stops moving  
+a. $e^{-Et/\hbar}$  
+b. $\cos(Et)$  
+c. $e^{iEx/\hbar}$  
+d. $e^{-iEt/\hbar}$  
+e. $E\,t$  
+
+---
+
+**8. The energy of a free particle is:**
+
+a. $E=\frac{p^2}{2m}$, but only integer multiples of $h\nu$  
+b. $E=\frac{p^2}{2m}$, and it can take any non-negative value  
+c. always zero  
+d. $E=mc^2$  
+e. $E=\frac{n^2h^2}{8ma^2}$  
+
+---
+
+**9. A particle described by a single plane wave, $\psi=e^{ikx}$, has:**
+
+a. a perfectly defined position, but undefined momentum  
+b. a perfectly defined position and momentum  
+c. zero momentum  
+d. a probability density that oscillates with $x$  
+e. a perfectly defined momentum, but the same probability of being found anywhere  
+
+---
+
+**10. To describe a particle localized in a small region of space, we need:**
+
+a. a single plane wave with a very large momentum  
+b. a single plane wave with zero momentum  
+c. a wave packet, a superposition of plane waves with a range of momenta  
+d. a wave function equal to zero everywhere  
+e. a classical trajectory  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.d, 2.b, 3.a, 4.b, 5.d, 6.d, 7.c, 8.a, 9.e, 10.d, 11.c, 12.b
+1.e, 2.a, 3.d, 4.b, 5.a, 6.c, 7.d, 8.b, 9.e, 10.c
 :::
-
-

@@ -187,141 +187,109 @@ The common thread of all these results is that, at the scale of atoms and molecu
 
 ## Chapter Review {#sec-rev2}
 ### Study Questions {#sec-quest2}
-**1. The “ultraviolet catastrophe” refers to which failure of classical physics?**
 
-a. Inability to explain discrete atomic emission spectra  
-b. Prediction that black-body intensity vanishes at long wavelengths  
-c. Prediction that black-body intensity diverges at short wavelengths  
-d. Failure to explain the existence of photons  
-e. Prediction that all objects emit only in the ultraviolet region  
+**1. What did classical physics (the Rayleigh–Jeans law) predict for the radiation emitted by a black body?**
 
----
-
-**2. What key assumption did Planck introduce to resolve the ultraviolet catastrophe?**
-
-a. Charge is quantized in units of the electron charge  
-b. Energy of oscillators is quantized in multiples of $h\nu$
-c. Momentum is continuous but position is quantized  
-d. Light speed depends on wavelength in vacuum  
-e. Temperature of a black body is quantized  
+a. the intensity peaks and then goes to zero at short wavelengths  
+b. the intensity grows without limit at short wavelengths  
+c. no radiation is emitted at room temperature  
+d. the intensity is the same at all wavelengths  
+e. only visible light is emitted  
 
 ---
 
-**3. What is the main qualitative difference between the Rayleigh–Jeans law and Planck’s law at short wavelengths?**
+**2. Which assumption did Planck introduce to explain black-body radiation?**
 
-a. Rayleigh–Jeans diverges, Planck’s law goes to zero  
-b. Both diverge to infinity but at different rates  
-c. Rayleigh–Jeans is constant, Planck’s law oscillates  
-d. Rayleigh–Jeans is valid only in the ultraviolet, Planck only in infrared  
-e. Planck’s law diverges while Rayleigh–Jeans goes to zero  
-
----
-
-**4. In the classical wave picture of the photoelectric effect, how is the kinetic energy $K$ of emitted electrons predicted to depend on the incident light?**
-
-
-a. Proportional to the square of the wavelength  
-b. Independent of intensity, depends only on work function  
-c. Proportional to the inverse of exposure time  
-d. Proportional to the intensity of the light  
-e. Independent of both intensity and frequency  
+a. light travels faster at short wavelengths  
+b. atoms have a nucleus  
+c. energy is exchanged only in multiples of $h\nu$  
+d. electrons are waves  
+e. energy is not conserved in the emission of light  
 
 ---
 
-**5. Which experimental observation about the photoelectric effect contradicts the classical wave prediction?**
+**3. As the temperature of a black body increases, the maximum of its emission:**
 
-a. Increase of emission with higher temperature of the metal  
-b. Emission of electrons only for polarized light  
-c. Existence of negative ions at the surface  
-d. Disappearance of current at very high intensities  
-e. Existence of a threshold frequency independent of intensity 
-
----
-
-**6. Using $E = h\nu$ and $\lambda \nu = c$, which expression correctly relates photon energy to wavelength?**
-
-a. $E = h c / \lambda$
-b. $E = h \lambda / c$ 
-c. $E = c / (h \lambda)$
-d. $E = h c \lambda$
-e. $E = \lambda^2 / h c$
+a. moves to longer wavelengths  
+b. moves to shorter wavelengths  
+c. does not move  
+d. disappears  
+e. moves to longer wavelengths and becomes weaker  
 
 ---
 
-**7. Which de Broglie relation connects particle momentum $p$ with wave vector $k$?**
+**4. Light with a frequency below the threshold frequency shines on a metal. If we increase its intensity:**
 
-a. $p = k / \hbar$
-b. $p = \hbar / k$
-c. $p = \hbar k^2$
-d. $p = k^2 / \hbar$
-e. $p = \hbar k$ 
-
----
-
-**8. What is the main conceptual implication of wave–particle duality for matter?**
-
-a. Matter is purely a continuous wave  
-b. Matter has only discrete allowed velocities  
-c. Matter exhibits both wave-like and particle-like properties depending on the experiment  
-d. Matter exists only as photons at small scales  
-e. Matter cannot be localized in space  
+a. still no electrons are ejected  
+b. electrons are ejected with more kinetic energy  
+c. electrons are ejected after a short delay  
+d. more electrons are ejected, all with the same kinetic energy  
+e. the threshold frequency decreases  
 
 ---
 
-**9. In the historical development described in this chapter, which of the following came first chronologically?**
+**5. In the photoelectric effect, the kinetic energy of an ejected electron is:**
 
-a. Planck’s black-body quantization  
-b. Schrödinger’s wave equation  
-c. De Broglie’s matter waves  
-d. Heisenberg’s matrix mechanics  
-e. Bohr’s model of the atom  
-
----
-
-**10. Which of the following best summarizes the crisis that led from classical to quantum physics as outlined in this Chapter?**
-
-a. Classical theories failed to conserve energy in chemical reactions
-b. Classical theories could not explain black-body spectra, photoelectric thresholds, atomic line spectra, and matter diffraction
-c. Classical mechanics could not describe planetary motion
-d. Classical thermodynamics predicted negative absolute temperatures
-e. Classical optics could not describe refraction at dielectric interfaces
-
+a. proportional to the intensity of the light  
+b. $K=h\nu+\Phi$  
+c. $K=h\nu-\Phi$, where $\Phi$ is the work function of the metal  
+d. the same for all frequencies above the threshold  
+e. $K=\Phi/h\nu$  
 
 ---
 
-**11. Using the Rydberg formula, which transition produces the red line of hydrogen at 656 nm?**
+**6. The energy of a single photon depends on:**
 
-a. $n=2 \rightarrow n=1$  
-b. $n=3 \rightarrow n=2$  
-c. $n=4 \rightarrow n=3$  
-d. $n=\infty \rightarrow n=1$  
-e. $n=5 \rightarrow n=2$  
-
----
-
-**12. According to the Bohr model, what is the energy needed to ionize a hydrogen atom from its ground state?**
-
-a. $1.0\;\text{eV}$  
-b. $3.4\;\text{eV}$  
-c. $10.2\;\text{eV}$  
-d. $13.6\;\text{eV}$  
-e. $27.2\;\text{eV}$  
+a. the intensity of the light  
+b. the number of photons in the beam  
+c. the temperature of the source  
+d. its frequency only, $E=h\nu$  
+e. the size of the source  
 
 ---
 
-**13. Which of the following is a limitation of the Bohr model?**
+**7. What do the sharp lines in the spectrum of hydrogen tell us?**
 
-a. it cannot reproduce the energy levels of hydrogen  
-b. it predicts a continuous spectrum for hydrogen  
-c. it works only for atoms and ions with a single electron, and its quantization is assumed rather than derived  
-d. it does not use Coulomb's law  
-e. it predicts that the hydrogen atom has no ionization energy  
+a. that the electron spirals into the nucleus  
+b. that hydrogen emits light at all wavelengths  
+c. that light is a classical wave  
+d. that the hydrogen atom has many electrons  
+e. that the atom can only have certain discrete energies  
+
+---
+
+**8. Which of the following is a problem of the Bohr model?**
+
+a. it works only for atoms with one electron, and its assumptions have no justification  
+b. it cannot explain the lines of the hydrogen spectrum  
+c. it predicts that atoms are not stable  
+d. it gives the wrong value of the ionization energy of hydrogen  
+e. it does not use Planck's constant  
+
+---
+
+**9. The de Broglie wavelength of a particle with momentum $p$ is:**
+
+a. $\lambda=hp$  
+b. $\lambda=p/h$  
+c. $\lambda=h\nu$  
+d. $\lambda=c/p$  
+e. $\lambda=h/p$  
+
+---
+
+**10. Why don't we observe the wave nature of a thrown baseball?**
+
+a. because a baseball has no momentum  
+b. because only charged particles have a wavelength  
+c. because a baseball moves faster than light  
+d. because its de Broglie wavelength is far smaller than any object or opening it could interact with  
+e. because its de Broglie wavelength is too long to be measured  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.c, 2.b, 3.a, 4.d, 5.e, 6.a, 7.e, 8.c, 9.a, 10.b, 11.b, 12.d, 13.c
+1.b, 2.c, 3.b, 4.a, 5.c, 6.d, 7.e, 8.a, 9.e, 10.d
 :::
-

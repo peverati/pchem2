@@ -907,173 +907,134 @@ E_\pi = 2(\alpha+2\beta) + 4(\alpha+\beta) = 6\alpha+8\beta.
 <h2 data-number="12.5" class="anchored" data-anchor-id="sec-rev12"><span class="header-section-number">12.5</span> Chapter Review</h2>
 <section id="sec-quest12" class="level3" data-number="12.5.1">
 <h3 data-number="12.5.1" class="anchored" data-anchor-id="sec-quest12"><span class="header-section-number">12.5.1</span> Study Questions</h3>
-<p><strong>1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?</strong></p>
+<p><strong>1. How many basis functions does a minimal basis set have for the water molecule?</strong></p>
 <ol type="a">
-<li>only <span class="math inline">\(1s\)</span><br>
+<li><span class="math inline">\(3\)</span><br>
 </li>
-<li><span class="math inline">\(1s\)</span> and <span class="math inline">\(2s\)</span><br>
+<li><span class="math inline">\(5\)</span><br>
 </li>
-<li><span class="math inline">\(2s\)</span> and <span class="math inline">\(2p_z\)</span> only<br>
+<li><span class="math inline">\(7\)</span><br>
 </li>
-<li><span class="math inline">\(1s\)</span>, <span class="math inline">\(2s\)</span>, and three <span class="math inline">\(2p\)</span> (<span class="math inline">\(2p_x\)</span>, <span class="math inline">\(2p_y\)</span>, <span class="math inline">\(2p_z\)</span>)<br>
+<li><span class="math inline">\(10\)</span><br>
 </li>
-<li>only three <span class="math inline">\(2p\)</span> orbitals</li>
+<li><span class="math inline">\(14\)</span></li>
 </ol>
 <hr>
-<p><strong>2. How many atomic basis functions are used in the minimal representation of H<span class="math inline">\(_2\)</span>O?</strong></p>
+<p><strong>2. Why does the symmetry of a molecule simplify the calculation of its molecular orbitals?</strong></p>
 <ol type="a">
-<li>3<br>
+<li>because symmetric molecules have no electrons in core orbitals<br>
 </li>
-<li>5<br>
+<li>because all integrals become equal<br>
 </li>
-<li>7<br>
+<li>because the Hamiltonian becomes zero<br>
 </li>
-<li>9<br>
+<li>because the molecular orbitals become atomic orbitals<br>
 </li>
-<li>12</li>
+<li>because only basis functions with the same symmetry can mix, so the problem splits into smaller pieces</li>
 </ol>
 <hr>
-<p><strong>3. Which general method is used to build molecular orbitals for water from the chosen atomic basis in this chapter?</strong></p>
+<p><strong>3. During the SCF iterations of the water calculation, the total energy:</strong></p>
 <ol type="a">
-<li>pure valence‑bond resonance structures<br>
+<li>increases at each step<br>
 </li>
-<li>LCAO-MO (linear combination of atomic orbitals to form molecular orbitals)<br>
+<li>stays constant<br>
 </li>
-<li>perturbation theory on hydrogenic orbitals only<br>
+<li>oscillates without converging<br>
 </li>
-<li>classical hybridization rules only<br>
+<li>decreases at each step until it converges<br>
 </li>
-<li>direct diagonalization of the nuclear Hamiltonian</li>
+<li>becomes positive</li>
 </ol>
 <hr>
-<p><strong>4. In the minimal‑basis HF treatment of water, the number of <em>one‑electron</em> basis functions <span class="math inline">\(m\)</span> determines the size of which matrix?</strong></p>
+<p><strong>4. The highest occupied molecular orbital of water, <span class="math inline">\(1b_1\)</span>, is:</strong></p>
 <ol type="a">
-<li>the overlap and Fock matrices, each of size <span class="math inline">\(m \times m\)</span><br>
+<li>a bonding orbital between oxygen and hydrogen<br>
 </li>
-<li>the nuclear–nuclear repulsion matrix of size <span class="math inline">\(m^2 \times m^2\)</span><br>
+<li>a pure oxygen <span class="math inline">\(2p\)</span> orbital perpendicular to the plane of the molecule, which is a non-bonding lone pair<br>
 </li>
-<li>a scalar energy value<br>
+<li>the oxygen <span class="math inline">\(1s\)</span> orbital<br>
 </li>
-<li>the <span class="math inline">\(3m\times 3m\)</span> kinetic matrix<br>
+<li>an antibonding orbital<br>
 </li>
-<li>only the density matrix of size <span class="math inline">\(2\times 2\)</span></li>
+<li>a hydrogen <span class="math inline">\(1s\)</span> orbital</li>
 </ol>
 <hr>
-<p><strong>5. In the minimal‑basis water example, how many total one‑electron integrals (kinetic or nuclear attraction) over contracted basis functions are there before considering primitive gaussians?</strong></p>
+<p><strong>5. According to Koopmans’ theorem, the energy needed to remove an electron described by orbital <span class="math inline">\(i\)</span> is approximately:</strong></p>
 <ol type="a">
-<li>7<br>
+<li><span class="math inline">\(\varepsilon_i\)</span><br>
 </li>
-<li>49<br>
+<li>the total energy of the molecule<br>
 </li>
-<li>147<br>
+<li><span class="math inline">\(-\varepsilon_i\)</span>, minus the orbital energy<br>
 </li>
-<li>196<br>
+<li>zero for the HOMO<br>
 </li>
-<li>2,401</li>
+<li><span class="math inline">\(2\varepsilon_i\)</span></li>
 </ol>
 <hr>
-<p><strong>6. For the <em>two‑electron</em> integrals over the 7 contracted basis functions on water, how many total contracted two‑electron integrals are there (before primitives)?</strong></p>
+<p><strong>6. The photoelectron spectrum of water shows four distinct valence bands. This shows that:</strong></p>
 <ol type="a">
-<li>7<br>
+<li>the two lone pairs of water are not equivalent, as predicted by the canonical molecular orbitals<br>
 </li>
-<li>49<br>
+<li>water has four equivalent <span class="math inline">\(sp^3\)</span> orbitals<br>
 </li>
-<li>147<br>
+<li>water has four lone pairs<br>
 </li>
-<li>196<br>
+<li>Koopmans’ theorem is wrong<br>
 </li>
-<li>2,401</li>
+<li>water has only two valence electrons</li>
 </ol>
 <hr>
-<p><strong>7. What main point does the water/minimal‑basis example illustrate about <em>ab initio</em> calculations, even for small molecules?</strong></p>
+<p><strong>7. Canonical and localized molecular orbitals:</strong></p>
 <ol type="a">
-<li>the number of two‑electron integrals quickly becomes very large and dominates computational cost<br>
+<li>give different energies<br>
 </li>
-<li>only one‑electron integrals matter for molecular properties<br>
+<li>describe different molecules<br>
 </li>
-<li>integrals scale linearly with system size<br>
+<li>differ in the number of electrons<br>
 </li>
-<li>integral evaluation is trivial and negligible<br>
+<li>cannot both be obtained from the same calculation<br>
 </li>
-<li>minimal bases always give chemically exact results</li>
+<li>give the same total wave function and energy; they are just different choices of orbitals</li>
 </ol>
 <hr>
-<p><strong>8. In the minimal‑basis H<span class="math inline">\(_2\)</span>O example, which qualitative feature of the resulting MO diagram is reproduced correctly?</strong></p>
+<p><strong>8. In Hückel theory, the <span class="math inline">\(\pi\)</span> orbital energies of ethylene are:</strong></p>
 <ol type="a">
-<li>exact experimental orbital energies<br>
+<li><span class="math inline">\(\alpha+\beta\)</span> and <span class="math inline">\(\alpha-\beta\)</span>, with the bonding orbital lower since <span class="math inline">\(\beta&lt;0\)</span><br>
 </li>
-<li>ordering of core, bonding, lone‑pair, and antibonding orbitals<br>
+<li><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span><br>
 </li>
-<li>no distinction between bonding and nonbonding orbitals<br>
+<li><span class="math inline">\(2\alpha\)</span> and <span class="math inline">\(2\beta\)</span><br>
 </li>
-<li>completely delocalized electrons with no identifiable lone pairs<br>
+<li><span class="math inline">\(\alpha+2\beta\)</span> and <span class="math inline">\(\alpha-2\beta\)</span><br>
 </li>
-<li>degenerate <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\pi\)</span> orbitals</li>
+<li>both equal to <span class="math inline">\(\alpha\)</span></li>
 </ol>
 <hr>
-<p><strong>9. Which of the following best describes the highest occupied MO of water in this calculation?</strong></p>
+<p><strong>9. As a conjugated polyene gets longer, the energy gap between its HOMO and LUMO:</strong></p>
 <ol type="a">
-<li>a <span class="math inline">\(\sigma\)</span> bond along the H‑O‑H bisector<br>
+<li>increases<br>
 </li>
-<li>a core orbital on oxygen<br>
+<li>does not change<br>
 </li>
-<li>one of two equivalent <span class="math inline">\(sp^3\)</span> lone pairs<br>
+<li>becomes negative<br>
 </li>
-<li>a pure oxygen <span class="math inline">\(2p\)</span> orbital perpendicular to the molecular plane<br>
+<li>decreases, so the molecule absorbs light of longer wavelength<br>
 </li>
-<li>a purely hydrogen <span class="math inline">\(1s\)</span> orbital</li>
+<li>decreases, so the molecule absorbs light of shorter wavelength</li>
 </ol>
 <hr>
-<p><strong>10. How does the minimal‑basis HF treatment reconcile the MO picture of water with its tetrahedral hydrogen‑bonding network?</strong></p>
-<ol type="a">
-<li>it shows that the occupied MOs are four equivalent <span class="math inline">\(sp^3\)</span> hybrids<br>
-</li>
-<li>it shows that water has no lone pairs<br>
-</li>
-<li>the electrostatic potential of the total electron density is negative on the oxygen side and bulges towards the tetrahedral directions<br>
-</li>
-<li>it predicts a linear geometry for water<br>
-</li>
-<li>it shows that hydrogen bonds are formed by the virtual MOs</li>
-</ol>
-<hr>
-<p><strong>11. According to Koopmans’ theorem, how is the ionization energy needed to remove an electron described by an occupied orbital related to the orbital energy <span class="math inline">\(\varepsilon_i\)</span>?</strong></p>
-<ol type="a">
-<li><span class="math inline">\(IE_i \approx \varepsilon_i\)</span><br>
-</li>
-<li><span class="math inline">\(IE_i \approx -\varepsilon_i\)</span><br>
-</li>
-<li><span class="math inline">\(IE_i \approx 2\varepsilon_i\)</span><br>
-</li>
-<li><span class="math inline">\(IE_i \approx \varepsilon_i^2\)</span><br>
-</li>
-<li>ionization energies are not related to orbital energies</li>
-</ol>
-<hr>
-<p><strong>12. In water, why is the <span class="math inline">\(1b_1\)</span> orbital a pure oxygen <span class="math inline">\(2p_x\)</span> orbital?</strong></p>
-<ol type="a">
-<li>because <span class="math inline">\(2p_x\)</span> has the lowest energy among the oxygen orbitals<br>
-</li>
-<li>because <span class="math inline">\(2p_x\)</span> is the only basis function that is antisymmetric with respect to the molecular plane, so it cannot mix with any other function<br>
-</li>
-<li>because the hydrogen atoms lie along the <span class="math inline">\(x\)</span> axis<br>
-</li>
-<li>because the Hartree–Fock method ignores <span class="math inline">\(p\)</span> orbitals<br>
-</li>
-<li>because <span class="math inline">\(2p_x\)</span> is a core orbital</li>
-</ol>
-<hr>
-<p><strong>13. In Hückel theory, what is the delocalization energy of benzene?</strong></p>
+<p><strong>10. What is the delocalization energy of benzene in Hückel theory?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(0\)</span><br>
 </li>
-<li><span class="math inline">\(0.472\beta\)</span><br>
-</li>
 <li><span class="math inline">\(2\beta\)</span><br>
+</li>
+<li><span class="math inline">\(\beta\)</span><br>
 </li>
 <li><span class="math inline">\(6\beta\)</span><br>
 </li>
-<li><span class="math inline">\(8\beta\)</span></li>
+<li><span class="math inline">\(0.472\beta\)</span></li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
@@ -1088,7 +1049,7 @@ E_\pi = 2(\alpha+2\beta) + 4(\alpha+\beta) = 6\alpha+8\beta.
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.d, 10.c, 11.b, 12.b, 13.c</p>
+<p>1.c, 2.e, 3.d, 4.b, 5.c, 6.a, 7.e, 8.a, 9.d, 10.b</p>
 </div>
 </div>
 </div>

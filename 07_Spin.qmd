@@ -220,123 +220,109 @@ To summarize, every quantum number we use in chemistry can be traced back to a s
 
 ## Chapter Review {#sec-rev7}
 ### Study Questions {#sec-quest7}
-**1. The Stern–Gerlach experiment with silver atoms showed that the beam splits into what?**
 
-a. a continuous smear of intensities  
-b. three discrete spots ($m_s = -1, 0, +1$)  
-c. a single undivided spot  
-d. two and only two discrete spots on the detector  
-e. four discrete spots  
+**1. In the Stern–Gerlach experiment, a beam of silver atoms passing through an inhomogeneous magnetic field:**
 
----
-
-**2. What key quantum property is demonstrated by the observed splitting in the Stern–Gerlach experiment?**
-
-a. continuous distribution of angular momentum orientations  
-b. quantization of spin angular momentum along the field direction  
-c. conservation of classical orbits  
-d. absence of magnetic moments in atoms  
-e. violation of energy conservation  
-
+a. is deflected into a continuous band  
+b. is not deflected  
+c. splits into three beams  
+d. is absorbed by the magnet  
+e. splits into two beams  
 
 ---
 
-**3. For an electron (a spin‑½ particle), what are the possible measured values of the spin component $s_z$?**
+**2. The possible results of a measurement of the $z$ component of the spin of an electron are:**
 
-a. $0, \pm \hbar$  
-b. $\pm \hbar$  
-c. Only $+\hbar/2$  
-d. Any real multiple of $\hbar$  
-e. $+\hbar/2$ or $-\hbar/2$  
-
----
-
-**4. In a Stern–Gerlach experiment measuring $s_z$, a general spin state can be written as:**
-
-a. A classical vector of length $\hbar/2$  
-b. A single eigenstate of $\hat{s}_z$ only  
-c. $c_1\,\alpha + c_2\,\beta$ with complex $c_1, c_2$  
-d. A mixture of infinitely many $s_z$ eigenvalues  
-e. A real linear combination of position eigenstates  
+a. $+\hbar$ and $-\hbar$  
+b. $+\frac{\hbar}{2}$ and $-\frac{\hbar}{2}$  
+c. $0$ and $\hbar$  
+d. any value between $-\frac{\hbar}{2}$ and $+\frac{\hbar}{2}$  
+e. $\frac{\sqrt{3}}{2}\hbar$  
 
 ---
 
-**5. After a beam passes through a Stern–Gerlach apparatus aligned along $z$ and only the “spin up” channel is allowed through, what is the spin state of the particles that pass through?**
+**3. The magnitude of the spin of an electron, $\frac{\sqrt{3}}{2}\hbar$, is larger than its largest $z$ component, $\frac{\hbar}{2}$. This means that:**
 
-a. An equal superposition of up and down  
-b. Eigenstate $\beta$ (spin down) of $\hat{s}_z$  
-c. Eigenstate $\alpha$ (spin up) of $\hat{s}_z$  
-d. A classical mixture of all directions  
-e. An eigenstate of $\hat{s}_x$  
-
----
-
-**6. If a second Stern–Gerlach apparatus is placed after the first and is also aligned along the same $z$ direction, what happens to a beam that is already in the spin-up state $\alpha$?** 
-
-a. It is entirely transmitted as $\alpha$ with no further splitting  
-b. It becomes completely unpolarized  
-c. It splits again into up and down beams  
-d. It is entirely absorbed  
-e. It flips to $\beta$  
+a. the spin always points along $z$  
+b. the measurement of $S_z$ is wrong  
+c. the spin can never point exactly along the $z$ axis  
+d. the electron has two spins  
+e. the spin is not quantized  
 
 ---
 
-**7. In a sequential Stern–Gerlach experiment, a $z$-up beam is sent into a second apparatus aligned along $x$. What is observed at the second apparatus?**
+**4. An electron is described by the spin function $c_1\alpha+c_2\beta$. The probability of measuring spin up along $z$ is:**
 
-a. Only one output beam (“spin left”)  
-b. Two beams with equal intensities: “spin left” and “spin right” along $x$  
-c. Only one output beam (“spin right”)  
-d. A continuous spread in deflection angles  
-e. No beam at all  
-
----
-
-**8. Mathematically, the non‑classical nature of sequential Stern–Gerlach experiments is expressed by which property of spin operators such as $\hat{s}_z$ and $\hat{s}_x$?**
-
-a. They commute: $[\hat{s}_z,\hat{s}_x] = 0$  
-b. They have identical eigenvalues  
-c. They are proportional to the identity  
-d. They do not commute: $[\hat{s}_z,\hat{s}_x] \neq 0$  
-e. They vanish when squared  
+a. $c_1$  
+b. $|c_2|^2$  
+c. $\frac{1}{2}$, whatever the coefficients  
+d. $|c_1|^2$  
+e. $|c_1|^2+|c_2|^2$  
 
 ---
 
-**9. In three dimensions, the spin components are generally associated with which three operators?**
+**5. Electrons selected with spin up along $z$ pass through an apparatus aligned along $x$, and then the spin-up-along-$x$ beam is measured again along $z$. The result is:**
 
-a. $\hat{s}_r, \hat{s}_y, \hat{s}_z$  
-b. $\hat{s}_x, \hat{s}_y, \hat{s}_z$  
-c. $\hat{s}_+, \hat{s}_-, \hat{s}_z$  
-d. $\hat{s}_1, \hat{s}_2, \hat{s}_3$ with all commuting  
-e. $\hat{s}_x, \hat{s}_z, \hat{s}_t$  
-
----
-
-**10. What key lesson about spin is emphasized by the Stern–Gerlach experiments?**
-
-a. Spin is a small classical correction to orbital motion  
-b. Spin has a direct classical analogue in rotating spheres  
-c. Spin is a purely quantum property with no classical analogue  
-d. Spin is irrelevant for chemistry  
-e. Spin is always conserved and cannot change under measurement  
+a. both spin up and spin down along $z$, with equal probability  
+b. only spin up along $z$  
+c. only spin down along $z$  
+d. no electrons  
+e. a continuous distribution of values  
 
 ---
 
-**11. Why are the energy levels of a particle on a sphere $(2\ell+1)$ times degenerate?**
+**6. The commutator $[\hat{S}_x,\hat{S}_y]=i\hbar\hat{S}_z\neq0$ means that:**
+
+a. $S_x$ and $S_y$ are always zero  
+b. spin is a classical vector  
+c. the three spin components have the same value  
+d. an electron cannot have definite values of two different spin components at the same time  
+e. $S_z$ cannot be measured  
+
+---
+
+**7. A quantum number is called a *good quantum number* when:**
+
+a. it is an eigenvalue of an operator that commutes with the Hamiltonian, so it does not change in time  
+b. it is an integer  
+c. it determines the energy  
+d. it is positive  
+e. it can only take two values  
+
+---
+
+**8. For a particle in a box placed symmetrically around $x=0$, the energy eigenfunctions are:**
+
+a. all even  
+b. alternately even and odd under the reflection $x\rightarrow-x$  
+c. all odd  
+d. neither even nor odd  
+e. eigenfunctions of momentum  
+
+---
+
+**9. Why are the energy levels of a particle on a sphere $(2\ell+1)$ times degenerate?**
 
 a. because the Hamiltonian does not commute with $\hat{L}_z$  
-b. because the sphere has no preferred direction, so the energy cannot depend on $m_\ell$  
-c. because of the Pauli exclusion principle  
+b. because of the Pauli exclusion principle  
+c. because the sphere has no preferred direction, so the energy cannot depend on $m_\ell$  
 d. because of spin  
 e. because the potential energy is $1/r$  
+
+---
+
+**10. Including spin, how many different states does the $n=2$ level of the hydrogen atom have?**
+
+a. $2$  
+b. $4$  
+c. $6$  
+d. $16$  
+e. $8$  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.d, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.d, 9.b, 10.c, 11.b
+1.e, 2.b, 3.c, 4.d, 5.a, 6.d, 7.a, 8.b, 9.c, 10.e
 :::
-
-
-
-

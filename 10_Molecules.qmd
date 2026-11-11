@@ -191,113 +191,109 @@ The SCF procedure is too tedious to perform by hand, even for small molecules, b
 
 ## Chapter Review {#sec-rev10}
 ### Study Questions {#sec-quest10}
-**1. In the full non‑relativistic molecular Hamiltonian (before approximations), which terms are present?**
 
-a. only electronic kinetic energy and electron–nuclear attraction
-b. only nuclear kinetic energy and nuclear–nuclear repulsion
-c. spin–orbit and relativistic corrections only
-d. only electron–electron repulsion and nuclear–nuclear repulsion
-e. electronic and nuclear kinetic energies, electron–nuclear, electron–electron, and nuclear–nuclear interactions
+**1. What justifies the Born–Oppenheimer approximation?**
 
----
-
-**2. What makes the exact molecular Schrödinger equation harder than the atomic case?**
-
-a. electrons disappear in molecules
-b. nuclei can be treated classically in atoms but not in molecules
-c. the presence of multiple moving nuclei in addition to many electrons
-d. there is no Coulomb interaction in molecules
-e. the electron mass changes in molecules
+a. electrons and nuclei have the same mass  
+b. nuclei are much heavier than electrons, so they move much more slowly  
+c. nuclei do not interact with electrons  
+d. electrons are fermions  
+e. the molecule is always at its equilibrium geometry  
 
 ---
 
-**3. What is the central physical idea behind the Born–Oppenheimer approximation?**
+**2. A potential energy surface is:**
 
-a. electrons are much heavier than nuclei
-b. nuclei are much heavier than electrons, so electrons adjust almost instantaneously to nuclear motion
-c. electrons and nuclei move with the same characteristic time scale
-d. both electrons and nuclei can be treated as classical particles
-e. nuclei do not contribute to the energy at all
-
-
----
-
-**4. Mathematically, the Born–Oppenheimer approximation relies on what property of the Hamiltonian?**
-
-a. exact commutation with the position operator
-b. approximate separability into electronic and nuclear parts
-c. absence of kinetic energy terms
-d. Hermiticity of the potential energy operator
-e. linearity of the time derivative
-
+a. the surface of the molecule  
+b. the probability density of the electrons  
+c. the kinetic energy of the nuclei  
+d. the electronic energy of a molecule as a function of the positions of its nuclei  
+e. the energy of a molecule as a function of temperature  
 
 ---
 
-**5. In practical quantum‑chemistry, what is usually meant (by abuse of language) by "total energy" of a molecule at fixed geometry?**
+**3. The minimum of the potential energy curve of a diatomic molecule corresponds to:**
 
-a. electronic energy $E_e$ at that geometry plus the constant nuclear–nuclear repulsion term
-b. nuclear kinetic energy only
-c. electronic energy without nuclear–nuclear repulsion
-d. purely classical potential energy
-e. nuclear vibrational zero‑point energy
-
----
-
-**6. Which of the following statements regarding potential‑energy surfaces (PESs) is correct?**
-
-a. a PES is the graph of electronic energy (plus nuclear repulsion) as a function of nuclear geometry
-b. a PES is the graph of nuclear kinetic energy versus time
-c. a PES is independent of nuclear positions
-d. a PES depends only on electron spin
-e. PESs are defined only for diatomic molecules
-
+a. the dissociated atoms  
+b. the transition state  
+c. the equilibrium bond length  
+d. the zero-point energy  
+e. the ionization energy  
 
 ---
 
-**7. Which of the following is *not* a direct consequence or assumption of the Born–Oppenheimer approximation?**
+**4. The depth of the well of the potential energy curve of $\mathrm{H}_2$ is:**
 
-a. electronic and nuclear motions can be approximately separated
-b. electrons move in the field of fixed nuclei
-c. nuclear motion can be described on a PES obtained from electronic energies
-d. electron–nuclear coupling can never be important for any property
-e. total wave functions are approximated as products of electronic and nuclear parts
-
----
-
-**8. When the variational principle is applied to a Slater determinant built from molecular spin‑orbitals, minimizing the energy with respect to the orbitals leads to what?**
-
-a. the time‑dependent Schrödinger equation
-b. an over‑determined system with no nontrivial solutions
-c. a single algebraic equation for the total energy
-d. purely classical equations of motion for nuclei
-e. a set of coupled one‑electron equations involving the Fock operator (Hartree–Fock equations)
+a. the energy needed to remove an electron  
+b. the zero-point energy  
+c. the energy of the first excited state  
+d. the energy needed to separate the two atoms (the bond energy)  
+e. the kinetic energy of the nuclei  
 
 ---
 
-**9. Which of the following sentences describes the Fock operator $\hat{f}$ in Hartree–Fock theory?**
+**5. On a potential energy surface, the transition state of a reaction is:**
 
-a. a two‑electron operator containing only electron–electron repulsion
-b. a purely nuclear operator
-c. a one‑electron effective operator containing kinetic, nuclear attraction, and averaged electron–electron (Coulomb and exchange) terms
-d. an operator that depends only on spin and not on spatial coordinates
-e. the exact electronic Hamiltonian
+a. the deepest minimum  
+b. the point where the energy is zero  
+c. the geometry of the products  
+d. any point with a high energy  
+e. a saddle point, the highest point along the minimum energy path between reactants and products  
 
 ---
 
-**10. In the Hartree–Fock method, how is the Pauli exclusion principle enforced for many‑electron systems?**
+**6. How many internal coordinates are needed to describe the geometry of a water molecule?**
 
-a. by forcing all electrons into different nuclei
-b. by requiring all spatial orbitals to be orthogonal but ignoring spin
-c. by constructing an antisymmetric Slater determinant of spin‑orbitals
-d. by adding a large repulsive potential at short inter‑electronic distances
-e. by using only hydrogen‑like orbitals
+a. $1$  
+b. $6$  
+c. $3$  
+d. $9$  
+e. $4$  
 
+---
+
+**7. In the LCAO method, each molecular orbital is written as:**
+
+a. a product of atomic orbitals  
+b. a linear combination of basis functions centered on the atoms  
+c. a single atomic orbital  
+d. a Slater determinant of atomic orbitals  
+e. the sum of all the atomic orbitals of the molecule, with equal coefficients  
+
+---
+
+**8. The overlap integral $S_{ij}=\int f_i^*f_j\,d\mathbf{r}$ between two basis functions on different atoms:**
+
+a. measures how much the two functions share the same region of space, and is in general not zero  
+b. is always zero, because basis functions are orthogonal  
+c. is always equal to one  
+d. is the energy of the bond  
+e. is negative for bonding orbitals  
+
+---
+
+**9. The exchange operator $\hat{K}$ in the Fock operator:**
+
+a. describes the attraction of the electrons to the nuclei  
+b. describes the kinetic energy of the electrons  
+c. is the classical repulsion between two charge distributions  
+d. describes the repulsion between nuclei  
+e. has no classical analog, and it appears because the wave function is a Slater determinant  
+
+---
+
+**10. Why must the Hartree–Fock equations be solved iteratively, with the SCF procedure?**
+
+a. because the Fock operator depends on the orbitals that are the solutions of the equations  
+b. because computers cannot solve linear equations directly  
+c. because the nuclei move during the calculation  
+d. because the basis set changes at each step  
+e. because the energy is not variational  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.e, 2.c, 3.b, 4.b, 5.a, 6.a, 7.d, 8.e, 9.c, 10.c
+1.b, 2.d, 3.c, 4.d, 5.e, 6.c, 7.b, 8.a, 9.e, 10.a
 :::
-

@@ -360,143 +360,109 @@ Hückel theory neglects electron-electron repulsion entirely, and it treats all 
 
 ## Chapter Review {#sec-rev12}
 ### Study Questions {#sec-quest12}
-**1. In the minimal‑basis description of the water molecule, which atomic orbitals are included on oxygen?**
 
-a. only $1s$  
-b. $1s$ and $2s$  
-c. $2s$ and $2p_z$ only  
-d. $1s$, $2s$, and three $2p$ ($2p_x$, $2p_y$, $2p_z$)  
-e. only three $2p$ orbitals  
+**1. How many basis functions does a minimal basis set have for the water molecule?**
 
----
-
-**2. How many atomic basis functions are used in the minimal representation of H$_2$O?**
-
-a. 3  
-b. 5  
-c. 7  
-d. 9  
-e. 12  
+a. $3$  
+b. $5$  
+c. $7$  
+d. $10$  
+e. $14$  
 
 ---
 
-**3. Which general method is used to build molecular orbitals for water from the chosen atomic basis in this chapter?**
+**2. Why does the symmetry of a molecule simplify the calculation of its molecular orbitals?**
 
-a. pure valence‑bond resonance structures  
-b. LCAO-MO (linear combination of atomic orbitals to form molecular orbitals)  
-c. perturbation theory on hydrogenic orbitals only  
-d. classical hybridization rules only  
-e. direct diagonalization of the nuclear Hamiltonian  
-
----
-
-**4.  In the minimal‑basis HF treatment of water, the number of *one‑electron* basis functions $m$ determines the size of which matrix?**
-
-a. the overlap and Fock matrices, each of size $m \times m$  
-b. the nuclear–nuclear repulsion matrix of size $m^2 \times m^2$  
-c. a scalar energy value  
-d. the $3m\times 3m$ kinetic matrix  
-e. only the density matrix of size $2\times 2$
-
+a. because symmetric molecules have no electrons in core orbitals  
+b. because all integrals become equal  
+c. because the Hamiltonian becomes zero  
+d. because the molecular orbitals become atomic orbitals  
+e. because only basis functions with the same symmetry can mix, so the problem splits into smaller pieces  
 
 ---
 
-**5. In the minimal‑basis water example, how many total one‑electron integrals (kinetic or nuclear attraction) over contracted basis functions are there before considering primitive gaussians?**
+**3. During the SCF iterations of the water calculation, the total energy:**
 
-a. 7  
-b. 49  
-c. 147  
-d. 196  
-e. 2,401  
-
----
-
-**6. For the *two‑electron* integrals over the 7 contracted basis functions on water, how many total contracted two‑electron integrals are there (before primitives)?**
-
-a. 7  
-b. 49  
-c. 147  
-d. 196  
-e. 2,401    
+a. increases at each step  
+b. stays constant  
+c. oscillates without converging  
+d. decreases at each step until it converges  
+e. becomes positive  
 
 ---
 
-**7. What main point does the water/minimal‑basis example illustrate about *ab initio* calculations, even for small molecules?**
+**4. The highest occupied molecular orbital of water, $1b_1$, is:**
 
-a. the number of two‑electron integrals quickly becomes very large and dominates computational cost  
-b. only one‑electron integrals matter for molecular properties  
-c. integrals scale linearly with system size  
-d. integral evaluation is trivial and negligible  
-e. minimal bases always give chemically exact results  
-
----
-
-**8. In the minimal‑basis H$_2$O example, which qualitative feature of the resulting MO diagram is reproduced correctly?**
-
-a. exact experimental orbital energies  
-b. ordering of core, bonding, lone‑pair, and antibonding orbitals  
-c. no distinction between bonding and nonbonding orbitals  
-d. completely delocalized electrons with no identifiable lone pairs  
-e. degenerate $\sigma$ and $\pi$ orbitals  
+a. a bonding orbital between oxygen and hydrogen  
+b. a pure oxygen $2p$ orbital perpendicular to the plane of the molecule, which is a non-bonding lone pair  
+c. the oxygen $1s$ orbital  
+d. an antibonding orbital  
+e. a hydrogen $1s$ orbital  
 
 ---
 
-**9. Which of the following best describes the highest occupied MO of water in this calculation?**
+**5. According to Koopmans' theorem, the energy needed to remove an electron described by orbital $i$ is approximately:**
 
-a. a $\sigma$ bond along the H‑O‑H bisector  
-b. a core orbital on oxygen  
-c. one of two equivalent $sp^3$ lone pairs  
-d. a pure oxygen $2p$ orbital perpendicular to the molecular plane  
-e. a purely hydrogen $1s$ orbital  
-
----
-
-**10. How does the minimal‑basis HF treatment reconcile the MO picture of water with its tetrahedral hydrogen‑bonding network?**
-
-a. it shows that the occupied MOs are four equivalent $sp^3$ hybrids  
-b. it shows that water has no lone pairs  
-c. the electrostatic potential of the total electron density is negative on the oxygen side and bulges towards the tetrahedral directions  
-d. it predicts a linear geometry for water  
-e. it shows that hydrogen bonds are formed by the virtual MOs  
-
+a. $\varepsilon_i$  
+b. the total energy of the molecule  
+c. $-\varepsilon_i$, minus the orbital energy  
+d. zero for the HOMO  
+e. $2\varepsilon_i$  
 
 ---
 
-**11. According to Koopmans' theorem, how is the ionization energy needed to remove an electron described by an occupied orbital related to the orbital energy $\varepsilon_i$?**
+**6. The photoelectron spectrum of water shows four distinct valence bands. This shows that:**
 
-a. $IE_i \approx \varepsilon_i$  
-b. $IE_i \approx -\varepsilon_i$  
-c. $IE_i \approx 2\varepsilon_i$  
-d. $IE_i \approx \varepsilon_i^2$  
-e. ionization energies are not related to orbital energies  
-
----
-
-**12. In water, why is the $1b_1$ orbital a pure oxygen $2p_x$ orbital?**
-
-a. because $2p_x$ has the lowest energy among the oxygen orbitals  
-b. because $2p_x$ is the only basis function that is antisymmetric with respect to the molecular plane, so it cannot mix with any other function  
-c. because the hydrogen atoms lie along the $x$ axis  
-d. because the Hartree–Fock method ignores $p$ orbitals  
-e. because $2p_x$ is a core orbital  
+a. the two lone pairs of water are not equivalent, as predicted by the canonical molecular orbitals  
+b. water has four equivalent $sp^3$ orbitals  
+c. water has four lone pairs  
+d. Koopmans' theorem is wrong  
+e. water has only two valence electrons  
 
 ---
 
-**13. In Hückel theory, what is the delocalization energy of benzene?**
+**7. Canonical and localized molecular orbitals:**
+
+a. give different energies  
+b. describe different molecules  
+c. differ in the number of electrons  
+d. cannot both be obtained from the same calculation  
+e. give the same total wave function and energy; they are just different choices of orbitals  
+
+---
+
+**8. In Hückel theory, the $\pi$ orbital energies of ethylene are:**
+
+a. $\alpha+\beta$ and $\alpha-\beta$, with the bonding orbital lower since $\beta<0$  
+b. $\alpha$ and $\beta$  
+c. $2\alpha$ and $2\beta$  
+d. $\alpha+2\beta$ and $\alpha-2\beta$  
+e. both equal to $\alpha$  
+
+---
+
+**9. As a conjugated polyene gets longer, the energy gap between its HOMO and LUMO:**
+
+a. increases  
+b. does not change  
+c. becomes negative  
+d. decreases, so the molecule absorbs light of longer wavelength  
+e. decreases, so the molecule absorbs light of shorter wavelength  
+
+---
+
+**10. What is the delocalization energy of benzene in Hückel theory?**
 
 a. $0$  
-b. $0.472\beta$  
-c. $2\beta$  
+b. $2\beta$  
+c. $\beta$  
 d. $6\beta$  
-e. $8\beta$  
+e. $0.472\beta$  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.d, 2.c, 3.b, 4.a, 5.d, 6.e, 7.a, 8.b, 9.d, 10.c, 11.b, 12.b, 13.c
+1.c, 2.e, 3.d, 4.b, 5.c, 6.a, 7.e, 8.a, 9.d, 10.b
 :::
-
-
-
