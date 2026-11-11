@@ -83,3 +83,12 @@ Every image needs `fig-alt` (accessibility).
 - `REVISION_CHECKLIST.md`: open items for future revisions.
 
 Old bookdown page names (e.g. `Models.html`) redirect to the new pages (`04_Models.html`).
+
+---
+
+## License
+
+- **Book text and figures:** [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/), see `LICENSE`. You may share and adapt the book for non-commercial purposes, with attribution, under the same license. Commercial reproduction or resale requires the author's permission.
+- **Python scripts in `scripts/`:** MIT License, see `scripts/LICENSE`.
+
+This licensing applies from 10 November 2026 (commit after `3b5f684`). Earlier versions of the book remain under the license they were released with (CC BY 4.0 in `LICENSE`; the preface stated CC BY-SA 4.0).

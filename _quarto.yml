@@ -22,9 +22,12 @@ book:
   date: today
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem2
+  repo-branch: master
   repo-actions: [edit, issue]
   downloads: [pdf]
   search: true
+  page-footer:
+    center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) · Figure scripts: [MIT](https://github.com/peverati/pchem2/blob/master/scripts/LICENSE)"
   chapters:
     - index.qmd
     - 01_Classical.qmd

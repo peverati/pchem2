@@ -15,7 +15,7 @@ Chemistry Program, Department of Chemistry and Chemical Engineering
 Florida Institute of Technology, Melbourne, FL.
 
 
-> This live open textbook is distributed under the [CC-BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/) and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library.
+> This live open textbook is distributed under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/) and it was funded by the Florida Tech Open Educational Resources Grant Program: A Collaboration of the Teaching Council, eEducation, and the Evans Library. The Python scripts that generate the figures are available under the [MIT License](https://opensource.org/license/mit).
 
 
 ## How to use this book {.unnumbered}
