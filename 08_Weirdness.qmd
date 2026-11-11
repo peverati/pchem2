@@ -47,14 +47,22 @@ Several modern alternatives address these shortcomings. All of them reproduce th
 
 The main features of these interpretations are summarized in @tbl-tab1c8.
 
-|Interpretation       |What is the wave function?           |Collapse?                             |Definite particle positions? |Deterministic? |
-|:--------------------|:------------------------------------|:-------------------------------------|:----------------------------|:--------------|
-|Copenhagen           |Tool to compute probabilities        |Yes, upon measurement (not explained) |No, until measured           |No             |
-|Bohmian mechanics    |Real field guiding the particles     |No (only apparent)                    |Yes, always                  |Yes            |
-|Many worlds          |Real, and the only thing that exists |No (branching instead)                |Yes, in each branch          |Yes            |
-|Spontaneous collapse |Real                                 |Yes, as a random physical process     |Only after collapse          |No             |
+```{=latex}
+\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
+```
 
-: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8}
+| Interpretation | What is the wave function? | Collapse? | Definite positions? | Deterministic? |
+|:--------------------|:------------------------|:------------------------|:------------------|:--------------|
+| Copenhagen | Tool to compute probabilities | Yes, upon measurement (not explained) | No, until measured | No |
+| Bohmian mechanics | Real field guiding the particles | No (only apparent) | Yes, always | Yes |
+| Many worlds | Real, and the only thing that exists | No (branching instead) | Yes, in each branch | Yes |
+| Spontaneous collapse | Real | Yes, as a random physical process | Only after collapse | No |
+
+: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[20,22,21,15,22]"}
+
+```{=latex}
+\endgroup
+```
 
 For the purposes of chemistry, all these interpretations give the same answers: energy levels, spectra, bond lengths, and reaction rates do not depend on which one we choose (the tiny deviations predicted by spontaneous collapse theories are far too small to affect any chemical property). This is why, in the rest of this textbook, we will keep using the convenient language of the Copenhagen interpretation. You should be aware, however, that it is a language, and not the final word on what quantum mechanics tells us about reality.
 
@@ -188,131 +196,109 @@ where $k(\text{H})$ and $k(\text{D})$ are the rate constants for the reaction in
 
 ## Chapter Review {#sec-rev8}
 ### Study Questions {#sec-quest8}
-**1. In the double‑slit experiment with single particles (e.g., electrons), what is observed on the screen after many particles have passed?**
 
-a. a single sharp peak at the center  
-b. two non‑overlapping bands corresponding to the two slits  
-c. a classical shadow pattern with uniform intensity between slits  
-d. an interference pattern with alternating bright and dark fringes  
-e. a completely uniform distribution over the screen  
+**1. A measurement of the observable $A$ gives the eigenvalue $a_i$. Immediately after the measurement, the wave function is:**
 
----
-
-**2. When detectors are placed at the slits to determine “which slit” each particle goes through, what typically happens to the interference pattern?**
-
-a. it becomes sharper and more pronounced  
-b. it disappears, leaving two classical‑like bands  
-c. it reverses (bright and dark fringes swap)  
-d. it doubles in fringe number  
-e. it becomes independent of slit separation  
+a. the same as before the measurement  
+b. zero  
+c. the eigenfunction $\psi_i$ corresponding to $a_i$  
+d. a superposition of all the eigenfunctions of $\hat{A}$  
+e. the eigenfunction with the lowest eigenvalue  
 
 ---
 
-**3. In the Heisenberg uncertainty principle for position and momentum along $x$, @eq-heis3, what do $\sigma_x$ and $\sigma_p$ represent?**
+**2. If we repeat the same measurement immediately after the first one, we obtain:**
 
-a. exact measurement errors of the apparatus  
-b. spreads (standard deviations) in the probability distributions of $x$ and $p_x$  
-c. mean values of position and momentum  
-d. classical trajectory deviations  
-e. arbitrary experimental tolerances chosen by the user   
-
----
-
-**4. Which pair of observables obeys an uncertainty relation, so that the two cannot both be known exactly at the same time?**
-
-a. $L^2$ and $L_z$  
-b. the mass and the charge of an electron  
-c. the energy and $L^2$ of the hydrogen atom  
-d. the position $x$ and the momentum component $p_y$  
-e. the spin components $S_x$ and $S_y$  
+a. a random result  
+b. the same result, with certainty  
+c. the expectation value  
+d. zero  
+e. the next eigenvalue  
 
 ---
 
-**5. Quantum tunneling refers to the phenomenon where a particle does what?**
+**3. The different interpretations of quantum mechanics (Copenhagen, Bohmian mechanics, many worlds, spontaneous collapse):**
 
-a. moves faster than light through a barrier  
-b. passes through a region where its classical kinetic energy would be negative  
-c. reflects perfectly from any finite barrier  
-d. ceases to exist inside a barrier  
-e. behaves as a classical wave inside a barrier but as a particle outside  
-
----
-
-**6. In a 1D potential‑barrier problem, what happens to the wave function in a classically forbidden region where $E < V(x)$?**
-
-a. it vanishes identically  
-b. it oscillates with constant amplitude  
-c. it decays (or grows) exponentially with distance into the barrier  
-d. it becomes a delta function at the barrier edge  
-e. it becomes purely imaginary and non‑normalizable  
+a. give different energy levels for atoms  
+b. have all been ruled out by experiments, except Copenhagen  
+c. disagree on the Schrödinger equation for the hydrogen atom  
+d. agree on the predictions for chemistry, but disagree on what the wave function is and on whether it collapses  
+e. are different names for the same theory  
 
 ---
 
-**7. For a finite barrier of width $l$, which statement about transmission probability in the tunneling example is qualitatively correct?**
+**4. In the double-slit experiment with electrons sent one at a time:**
 
-a. it is exactly zero if $E < V_0$  
-b. it is 1/2 regardless of barrier parameters  
-c. it decreases rapidly as barrier width and/or height increase  
-d. it is independent of the particle’s mass  
-e. it is always 1 for normalized wave functions  
-
----
-
-**8. Which of the following best explains *why* tunneling can occur even when $E < V_0$ for a barrier?**
-
-a. energy is not conserved in quantum mechanics  
-b. the wave function penetrates the classically forbidden region and has nonzero amplitude beyond it  
-c. the particle temporarily borrows energy from the vacuum  
-d. relativistic corrections allow the particle to accelerate  
-e. the barrier momentarily disappears due to fluctuations  
+a. each electron splits into two halves  
+b. no pattern is ever formed  
+c. the electrons form two bright lines behind the slits, as classical particles  
+d. each electron is detected as a wave spread over the whole screen  
+e. each electron is detected at a single point, but many electrons build up an interference pattern  
 
 ---
 
-**9. In a chemical reaction coordinate picture, what does tunneling correspond to?**
+**5. If we place detectors at the slits to find out which slit each electron goes through:**
 
-a. the reactant climbing *over* the transition-state barrier  
-b. the reactant remaining in a metastable well forever  
-c. the system passing *through* the barrier region where classical energy would be insufficient  
-d. the system skipping the transition state entirely with zero probability  
-e. the system following a purely classical minimum‑energy path  
-
----
-
-**10. Which experimental signature is commonly taken as evidence for significant hydrogen tunneling in reactions?**
-
-a. linear Arrhenius plots with classical slopes  
-b. very small kinetic isotope effects ($k_\text{H}/k_\text{D} \approx 1$ at all temperatures)  
-c. large kinetic isotope effects and curved (non‑linear) Arrhenius plots  
-d. complete absence of isotope effects  
-e. rate constants independent of temperature and isotope  
-
+a. the interference pattern disappears  
+b. the interference pattern becomes sharper  
+c. the electrons stop going through the slits  
+d. the electrons go through both slits and are detected twice  
+e. nothing changes  
 
 ---
 
-**11. Once a measurement of $A$ yields a particular eigenvalue $a_k$, what happens to the wave function (in the idealized description)?**
+**6. Heisenberg's uncertainty principle for position and momentum states that:**
 
-a. It remains unchanged  
-b. It collapses to the corresponding eigenstate of $\hat{A}$  
-c. It becomes identically zero  
-d. It becomes a uniform superposition of all eigenstates  
-e. It collapses to the ground state of the Hamiltonian  
+a. $\sigma_x\sigma_p=0$  
+b. $\sigma_x\sigma_p\geq\frac{\hbar}{2}$  
+c. $\sigma_x+\sigma_p\geq\hbar$  
+d. $\sigma_x\sigma_p\leq\frac{\hbar}{2}$  
+e. $\sigma_x=\sigma_p$  
 
 ---
 
-**12. Which interpretation of quantum mechanics describes electrons as particles with definite positions and trajectories, guided by the wave function?**
+**7. What is the origin of the uncertainty principle?**
 
-a. Copenhagen interpretation  
-b. Many worlds  
-c. Bohmian mechanics  
-d. Spontaneous collapse  
-e. Local hidden variables  
+a. our measuring instruments are not precise enough  
+b. the particle is disturbed by the light used to observe it  
+c. the particle moves too fast  
+d. the operators of the two observables do not commute  
+e. the Schrödinger equation is only an approximation  
+
+---
+
+**8. A particle tunnels through a barrier with transmission probability $T\approx e^{-2\alpha l}$. If the width $l$ of the barrier doubles:**
+
+a. $T$ doubles  
+b. $T$ halves  
+c. $T$ becomes the square of its previous value, which is much smaller  
+d. $T$ does not change  
+e. $T$ becomes one  
+
+---
+
+**9. Why do electrons tunnel much more easily than protons through the same barrier?**
+
+a. because the transmission probability decreases exponentially with the square root of the mass  
+b. because electrons are charged and protons are not  
+c. because protons have no wave function  
+d. because electrons have more energy than the barrier  
+e. because tunneling does not conserve energy  
+
+---
+
+**10. Which experimental evidence suggests that hydrogen tunneling is important in a chemical reaction?**
+
+a. a kinetic isotope effect close to one  
+b. a reaction rate that does not depend on the isotope  
+c. a linear Arrhenius plot  
+d. a very high activation energy  
+e. a large kinetic isotope effect and a curved Arrhenius plot  
 
 ---
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.d, 2.b, 3.b, 4.e, 5.b, 6.c, 7.c, 8.b, 9.c, 10.c, 11.b, 12.c
+1.c, 2.b, 3.d, 4.e, 5.a, 6.b, 7.d, 8.c, 9.a, 10.e
 :::
-
-
