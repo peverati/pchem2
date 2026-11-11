@@ -122,7 +122,7 @@ The bonding and antibonding molecular orbitals are plotted in @fig-Fig7c11 as co
 ![Left: the bonding (blue) and antibonding (red) molecular orbitals of the hydrogen molecular cation along the internuclear axis at $R=2\,a_0$, compared with the two atomic orbitals $a$ and $b$ (gray, dashed). The node of the antibonding orbital is reported as a purple dot. Right: the corresponding probability densities, compared with the average density of the two atomic orbitals (gray, dashed). The positions of the nuclei are marked by dotted vertical lines.](img/H2p_MO_lines.png){#fig-Fig8c11 fig-alt="Left: bonding and antibonding orbitals of the hydrogen molecular ion along the bond axis, with the bonding orbital positive everywhere and the antibonding orbital crossing zero at the midpoint. Right: the bonding density is larger than the average atomic density between the nuclei, while the antibonding density drops to zero there." width="100%"}
 
 
-A few important considerations can be made by analyzing these plots:
+What do these plots tell us about the bond?
 
 1. **Constructive and destructive interference**: the bonding orbital is the sum of the two atomic orbitals, which add up in the region between the nuclei, just like two waves that interfere constructively. The antibonding orbital is their difference, and the two atomic orbitals cancel each other exactly halfway between the nuclei, like two waves that interfere destructively.
 
@@ -222,7 +222,7 @@ Using these two rules, the $8\times8$ problem splits into smaller pieces. To a f
 ![Color maps of the molecular orbitals formed by the $2p$ atomic orbitals in a homonuclear diatomic molecule, in a plane that contains the two nuclei (black dots, bond axis horizontal). Color scheme: red (positive), blue (negative). Nodal surfaces are reported in purple.](img/MO_2p_maps.png){#fig-Fig9c11 fig-alt="Four color maps of molecular orbitals formed from 2p atomic orbitals: sigma bonding with density between the nuclei, sigma antibonding with a node between them, pi bonding with lobes above and below the bond axis, and pi antibonding with an additional node between the nuclei." width="80%"}
 
 
-A few important considerations can be made by analyzing these orbitals:
+Notice three things in these orbitals:
 
 1. **$\sigma$ versus $\pi$ overlap**: the $2p_z$ orbitals point directly at each other and overlap strongly along the bond axis. The $2p_x$ orbitals overlap side by side, above and below the axis, and their overlap is smaller. As a consequence, the splitting between $\pi_u$ and $\pi_g^*$ is usually smaller than the splitting between $\sigma_g 2p$ and $\sigma_u^* 2p$.
 

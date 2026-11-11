@@ -47,7 +47,7 @@ $$ {#eq-uvcatpl}
 
 At short wavelengths, the exponential in the denominator grows much faster than $\lambda^5$ decreases, and $I$ goes to zero as $\lambda \rightarrow 0$, in agreement with the experiments. (At long wavelengths, instead, $e^{x}-1\approx x$, and Planck's law reduces to the Rayleigh–Jeans law.) Physically, quantization works because at short wavelengths the minimum quantum of energy, $hc/\lambda$, becomes much larger than the typical thermal energy, $k_{\mathrm{B}}T$, and the high-frequency oscillations are simply too "expensive" to be excited. By fitting @eq-uvcatpl to the experimental data, Planck also obtained the value of the new constant, $h = 6.626 \times 10^{-34} \; \text{J s}$, which is now called the *Planck constant*.
 
-A few important considerations can be made by analyzing @fig-Fig1c2:
+Let's look at what @fig-Fig1c2 tells us:
 
 1. **Color and temperature**: as the temperature increases, the maximum of the curve moves to shorter wavelengths. The position of the maximum follows a simple rule, called *Wien's displacement law*, which can be derived from @eq-uvcatpl: $\lambda_\text{max}T = 2.898\times10^{-3}\;\text{m K}$. The surface of the Sun ($T\approx5800\;\text{K}$) has its maximum at $\lambda_\text{max}\approx500\;\text{nm}$, in the middle of the visible region (our eyes evolved to see the light that the Sun emits the most). An incandescent light bulb ($T\approx3000\;\text{K}$) has its maximum at about $970\;\text{nm}$, in the infrared, which is why it looks yellowish and why most of its energy is wasted as heat. Our bodies ($T\approx310\;\text{K}$) emit mostly at about $9{,}000\;\text{nm}$, in the infrared, where thermal cameras can see it.
 
@@ -124,7 +124,7 @@ and the radius of the smallest orbit, now called the *Bohr radius*, is $a_0=0.52
 ![Top: energy levels of the hydrogen atom according to the Bohr model, and the transitions that produce the Lyman, Balmer, and Paschen series of emission lines. Bottom: the visible lines of the Balmer series, with their wavelengths in nm.](img/H_spectrum.png){#fig-Fig3c2 fig-alt="Energy level diagram of hydrogen with levels at minus 13.6 electronvolts divided by n squared. Downward arrows show the Lyman series ending on n equals 1, the Balmer series ending on n equals 2, and the Paschen series ending on n equals 3. Below, a dark strip shows the visible Balmer lines at 656, 486, 434, 410, and 397 nanometers." width="90%"}
 
 
-A few important considerations can be made by analyzing this diagram:
+This diagram explains three features of atomic spectra:
 
 1. **Quantized energy levels explain line spectra**: since the electron can only have the energies of @eq-bohr1, the photons emitted when it jumps from a higher level to a lower one can only have the energies $E_{n_2}-E_{n_1}=13.6\;\text{eV}\left(\frac{1}{n_1^2}-\frac{1}{n_2^2}\right)$. Dividing by $hc$ gives exactly the Rydberg formula, @eq-rydberg, with $R_H=13.6\;\text{eV}/hc=1.097\times10^{7}\;\text{m}^{-1}$, in perfect agreement with the experimental value.
 

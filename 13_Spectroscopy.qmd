@@ -184,7 +184,7 @@ where $\tilde{\nu}_0=G(1)-G(0)$ is the position of the (missing) purely vibratio
 ![Simulated rovibrational spectrum of the fundamental band of carbon monoxide at 298 K. The P-branch is to the left of the band center at $2{,}143\;\text{cm}^{-1}$ (purple dashed line), and the R-branch is to the right.](img/CO_rovib.png){#fig-Fig2c13 fig-alt="Simulated infrared spectrum of carbon monoxide: two groups of lines, the P branch at lower and the R branch at higher wavenumber, separated by a gap at the band center near 2143 inverse centimeters where no line appears." width="90%"}
 
 
-The simulated spectrum of CO is reported in @fig-Fig2c13, and the transitions that produce it are shown in @fig-Fig3c13. A few important considerations can be made by analyzing this spectrum:
+The simulated spectrum of CO is reported in @fig-Fig2c13, and the transitions that produce it are shown in @fig-Fig3c13. Four features of this spectrum are worth noticing:
 
 1. **The missing line**: there is a gap at the band center, where the forbidden Q-branch would be. The gap is $4B$ wide (twice the normal spacing), because the first line of the R-branch is at $\tilde{\nu}_0+2B$ and the first line of the P-branch is at $\tilde{\nu}_0-2B$. Even if no line is observed there, the position of the band center can be read directly from the spectrum, and it gives the vibrational energy. For CO, $\tilde{\nu}_0=2{,}143\;\text{cm}^{-1}$, and using $\omega_e\approx\tilde{\nu}_0$ we obtain the force constant of the bond: $k=\mu(2\pi c\tilde{\nu}_0)^2\approx1{,}860\;\text{N/m}$, one of the stiffest bonds in chemistry.
 
@@ -213,7 +213,7 @@ In a polyatomic molecule, the atoms do not vibrate independently. If we treat th
 ![Normal modes of water (top) and carbon dioxide (bottom), with experimental wavenumbers and their activity in IR and Raman spectroscopy. The arrows show the directions in which the atoms move (not to scale). The bending mode of CO$_2$ is doubly degenerate: the molecule can bend in the plane of the page or perpendicular to it.](img/Normal_modes.png){#fig-Fig7c13 fig-alt="Six diagrams of atoms with arrows. Water: symmetric stretch with both hydrogens moving away from oxygen, 3657 inverse centimeters; bend with the hydrogens closing the angle, 1595; antisymmetric stretch with one hydrogen moving away and the other towards oxygen, 3756; all IR and Raman active. Carbon dioxide: symmetric stretch with both oxygens moving outward and carbon still, about 1330, Raman only; bend with carbon moving up and oxygens down, 667, IR only; antisymmetric stretch with carbon moving right and oxygens left, 2349, IR only." width="100%"}
 
 
-A few important considerations can be made by analyzing these normal modes:
+The normal modes tell us which vibrations we can observe, and how:
 
 1. **IR activity.** As we saw at the beginning of this chapter, a vibration absorbs IR light only if the dipole moment of the molecule changes during the motion. All three modes of water change its dipole moment, so all three are IR active. In $\mathrm{CO_2}$, the symmetric stretch keeps the molecule symmetric, and its dipole moment stays zero: this mode is IR inactive. The bend and the antisymmetric stretch, instead, create a dipole moment, and they are IR active. The antisymmetric stretch of $\mathrm{CO_2}$ at $2{,}349\;\text{cm}^{-1}$ and its bend at $667\;\text{cm}^{-1}$ are the absorptions responsible for the greenhouse effect of carbon dioxide.
 

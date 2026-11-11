@@ -188,7 +188,7 @@ $$ {#eq-eigenvalMO}
 
 where the first row reports the eigenvalue of each MO in $E_h$ (i.e., the energy of one electron described by that orbital), and each column contains the coefficients of the basis functions in that MO. If we add up the energies of the occupied orbitals (twice each, since each orbital describes two electrons), we obtain $2(-20.24094{-}1.27218{-}0.62173{-}0.45392{-}0.39176)=-45.961\,060$. This sum is *not* the electronic energy, and it is too high. The reason is that the energy of each orbital contains the repulsion of its electron with all other electrons, so when we add up the orbital energies the repulsion between each pair of electrons is counted twice. If we subtract the electron-electron repulsion energy once, $38.265\,406$, we get $-84.226\,466$, and if we add the nuclear repulsion energy, $9.264\,701$, we get a total energy of $-74.961\,765$. The small difference with the converged result above ($-74.961\,754$) comes from rounding the orbital energies to 5 decimal places. Notice that all five occupied MOs have negative energies, so their electrons are bound to the molecule, while the two unoccupied (or *virtual*) MOs have positive energies, meaning that the molecule would not gain energy by accepting an extra electron described by them.
 
-##  Shapes and Energies of Molecular Orbitals
+## The Molecular Orbitals of Water
 
 Looking at the coefficients of the occupied MOs in @eq-eigenvalMO, we see that the lowest orbital (by far) is almost a pure oxygen $1s$ orbital: its coefficient is very close to 1, and all others are close to 0. This is the core orbital of oxygen, which is basically unaffected by the formation of the bonds. (Keep in mind that the coefficients are not percentages, since the basis functions are not orthogonal to each other.) The second MO is dominated by the oxygen $2s$ function, but it has significant contributions from other functions as well, and it is difficult to describe it from the numbers alone. As we did for the hydrogen atom in @sec-Hydrogen, the best way to understand an orbital is to look at it. We can compute the square of each orbital on a three-dimensional grid of points, and plot the surface where the probability density has a chosen value, for example $0.04\; a_0^{-3}$. This *isodensity surface* encloses the region where the electron is most likely to be found, and we can color it according to the sign of the wave function, blue where it is positive and red where it is negative. The five occupied and two unoccupied MOs of water are plotted in this way in @fig-Fig1c12.
 
@@ -204,7 +204,7 @@ Using the symmetry labels of the previous section, the seven MOs of water are, i
 ![Molecular orbital diagram of water from the minimal-basis Hartree–Fock calculation. The MO energies (in $E_h$) are those of the converged calculation; the positions of the atomic levels are qualitative. Dashed lines connect each MO with its main atomic contributions (blue: occupied, red: unoccupied). Each MO is labeled with its number, as in the previous figure, and with its symmetry label.](img/H2O_MOdiagram.png){#fig-Fig3c12 fig-alt="Molecular orbital diagram of water with oxygen 2s and 2p levels on the left, hydrogen 1s levels on the right, and in the middle the occupied orbitals 2a1, 1b2, 3a1, and 1b1 at minus 1.272, minus 0.622, minus 0.454, and minus 0.392 hartree, and the unoccupied orbitals 4a1 and 2b2 at plus 0.613 and plus 0.751." width="80%"}
 
 
-A few important considerations can be made by analyzing this diagram:
+Let's go through this diagram from the bottom up:
 
 1. **Core orbital**: $1a_1$ (not shown, at $-20.24\,E_h$) is the oxygen $1s$ orbital, which does not participate in bonding.
 
@@ -318,7 +318,7 @@ The coefficients of the butadiene orbitals are plotted in @fig-Fig5c12, together
 ![Coefficients $c_j$ of the four Hückel $\pi$ orbitals of butadiene on each carbon atom (blue: occupied, red: unoccupied), compared with the particle-in-a-box wave functions $\sqrt{2/a}\sin(n\pi x/a)$ with $n=1,\ldots,4$ and $a=5$ (gray dashed lines).](img/Huckel_butadiene.png){#fig-Fig5c12 fig-alt="Four bar plots of the Hückel coefficients of butadiene on its four carbon atoms, for the four pi orbitals from lowest to highest energy, with zero, one, two, and three sign changes. The bars fall exactly on dashed sine curves of the particle in a box." width="100%"}
 
 
-A few important considerations can be made by analyzing these orbitals:
+These orbitals should look familiar:
 
 1. **Nodes**: the lowest orbital has no nodes, and each following orbital has one more node, exactly as for the particle in a box (@sec-Models) and for all the other systems that we have studied.
 

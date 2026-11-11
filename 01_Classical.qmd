@@ -273,7 +273,7 @@ The first four standing waves are shown in @fig-Fig3c1.
 ![The first four standing waves on a string of length $L$ fixed at both ends (black squares). The solid and dashed lines show the string at its two extreme positions, and the light lines show intermediate positions. The nodes are reported as purple dots.](img/Wave_standing.png){#fig-Fig3c1 fig-alt="The first four standing waves on a string fixed at both ends, stacked vertically. They have one, two, three, and four half-wavelengths between the ends, and zero, one, two, and three nodes, marked as dots." width="70%"}
 
 
-A few important considerations can be made by analyzing these results:
+Three things in these results are worth noticing:
 
 1. **Quantization**: a confined wave can only have certain wavelengths and frequencies, labeled by a whole number, $n$. This is why a guitar string plays a definite note (the frequency with $n=1$, called the *fundamental*) together with its *overtones* ($n=2,3,\ldots$), and not any frequency at all. Notice that nothing in the wave equation itself is quantized: the quantization comes entirely from the boundary conditions, i.e., from confining the wave.
 

@@ -105,7 +105,7 @@ For a diatomic molecule, the only coordinate that matters is the internuclear di
 ![Potential energy curve of the hydrogen molecule (blue), compared with its harmonic approximation (orange, dashed). The horizontal lines are the vibrational energy levels, and the energy is measured from the separated atoms. The purple dot marks the equilibrium bond distance.](img/H2_PEC.png){#fig-fig1c10 fig-alt="Potential energy curve of the hydrogen molecule versus internuclear distance: a steep wall at short distance, a minimum at 1.4 bohr about 458 kilojoules per mole deep, and a flat approach to zero at large distance. A parabola fits only near the minimum, and horizontal lines mark vibrational levels that get closer together near the top." width="80%"}
 
 
-A few important considerations can be made by analyzing this curve:
+This single curve contains a lot of chemistry:
 
 1. **Equilibrium geometry**: the minimum of the curve, at $R_e=1.40\,a_0=0.74\,\text{Å}$, is the equilibrium bond distance of the molecule. For larger molecules, minima of the PES correspond to stable structures, and finding them is called *geometry optimization*.
 

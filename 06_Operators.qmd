@@ -353,7 +353,7 @@ The first term does not depend on time, but the second one oscillates with a per
 ![Top: probability density of a particle in a box in the superposition $\frac{1}{\sqrt{2}}(\psi_1+\psi_2)$ at four different times, with the expectation value of the position marked by a purple dashed line. Bottom: the expectation value of the position as a function of time.](img/PIB_superposition.png){#fig-fig12c6 fig-alt="Top: four snapshots of the probability density of a particle in a box in an equal mix of the two lowest states. The density is piled on the left at time zero, spread symmetrically at one quarter period, piled on the right at half period, and symmetric again at three quarters. Bottom: the average position oscillates between the left and right of the box center." width="100%"}
 
 
-A few important considerations can be made by analyzing these results:
+What do these results mean?
 
 1. **Motion**: the probability density sloshes back and forth between the left and the right side of the box, and the expectation value of the position oscillates around the center, $\langle x\rangle=\frac{a}{2}-\frac{16a}{9\pi^2}\cos\left(\frac{(E_2-E_1)t}{\hbar}\right)$. This is how a quantum particle moves: motion requires a superposition of states with different energies. A particle in a single stationary state, instead, never moves, in the sense that none of its measurable properties change in time.
 
