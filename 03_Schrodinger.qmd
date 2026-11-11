@@ -83,6 +83,28 @@ This requirement is called the **normalization condition**, and a wave function 
 
 The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how *likely* it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in @sec-Weirdness.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: normalizing a wave function
+
+A particle confined between $x=0$ and $x=a$ is described by $\psi(x)=N\,x(a-x)$ inside this region and $\psi=0$ outside. Find the normalization constant $N$.
+
+**Step 1: write the normalization condition.** Since $\psi$ is real, $|\psi|^2=\psi^2$:
+
+$$
+\int_0^a N^2x^2(a-x)^2\,dx = 1.
+$$
+
+**Step 2: expand and integrate.** $x^2(a-x)^2=a^2x^2-2ax^3+x^4$, so:
+
+$$
+\int_0^a \left(a^2x^2-2ax^3+x^4\right)dx=\frac{a^5}{3}-\frac{2a^5}{4}+\frac{a^5}{5}=\frac{a^5}{30}.
+$$
+
+**Step 3: solve for $N$.** $N^2\,a^5/30=1$, so $N=\sqrt{30/a^5}$.
+
+Notice that the units work out: $N$ has units of $(\text{length})^{-5/2}$, so that $|\psi|^2$ has units of $(\text{length})^{-1}$, as a probability per unit length should.
+:::
+
 ## The Time-Dependent Schrödinger Equation
 
 The argument that we used in the previous section does not work for the time dependence of the wave function. Historically, Schrödinger also published the time-independent equation first, and only later proposed the more general time-dependent one. We will follow the same order, and simply state the time-dependent equation without derivation, as a basic assumption of the theory, whose justification is that its predictions agree with experiments. For a single particle moving in one dimension, the time-dependent Schrödinger equation (TDSEq) is:
@@ -233,6 +255,14 @@ Wave packets teach us three important lessons:
 The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in @sec-Operators.
 
 ## Chapter Review {#sec-rev3}
+### Key Ideas
+
+- The Schrödinger equation, $\hat{H}\psi=E\psi$, cannot be derived from classical physics; it is justified by its agreement with experiments.
+- The wave function itself is not observable: $|\psi|^2$ is a probability density (Born's interpretation), and the total probability must be one (normalization).
+- Stationary states have a definite energy, and their probability density does not change in time.
+- A free particle with a definite momentum is a plane wave, equally likely to be anywhere. Its energy is not quantized.
+- A localized particle is a wave packet, a superposition of plane waves with a range of momenta: localization in space requires uncertainty in momentum.
+
 ### Study Questions {#sec-quest3}
 
 **1. Which of the following is the time-independent Schrödinger equation for a particle in one dimension?**

@@ -405,7 +405,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -505,7 +505,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev4" id="toc-sec-rev4" class="nav-link" data-scroll-target="#sec-rev4"><span class="header-section-number">4.6</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest4" id="toc-sec-quest4" class="nav-link" data-scroll-target="#sec-quest4"><span class="header-section-number">4.6.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">4.6.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest4" id="toc-sec-quest4" class="nav-link" data-scroll-target="#sec-quest4"><span class="header-section-number">4.6.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/04_Models.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -639,6 +640,32 @@ Figure&nbsp;4.1: The first five eigenfunctions and energy levels of a particle c
 |\psi_n(x)|^2 = \frac{|C|^2}{2} \left[1 - \cos\left(\frac{2n\pi x}{a}\right)\right],
 \tag{4.18}\]</span></span></p>
 <p>a uniform value, <span class="math inline">\(|C|^2/2\)</span>, plus a wiggle whose wavelength gets shorter as <span class="math inline">\(n\)</span> increases. For very large <span class="math inline">\(n\)</span> the wiggles become so close together that no experiment could resolve them, and on average the particle is equally likely to be anywhere: the classical result.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: an electron in a 1 nm box
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>An electron is confined in a one-dimensional box of length <span class="math inline">\(a=1.0\;\text{nm}\)</span>, roughly the length of a conjugated molecule such as hexatriene. What are its two lowest energies, and what wavelength of light would it absorb going from <span class="math inline">\(n=1\)</span> to <span class="math inline">\(n=2\)</span>?</p>
+<p><strong>Step 1: the ground state.</strong> With <span class="math inline">\(m_e=9.109\times10^{-31}\;\text{kg}\)</span>:</p>
+<p><span class="math display">\[
+E_1=\frac{h^2}{8m_ea^2}=\frac{(6.626\times10^{-34}\;\text{J s})^2}{8(9.109\times10^{-31}\;\text{kg})(1.0\times10^{-9}\;\text{m})^2}=6.02\times10^{-20}\;\text{J}=0.376\;\text{eV}.
+\]</span></p>
+<p><strong>Step 2: the first excited state.</strong> Since <span class="math inline">\(E_n\propto n^2\)</span>, <span class="math inline">\(E_2=4E_1=1.50\;\text{eV}\)</span>.</p>
+<p><strong>Step 3: the transition.</strong> <span class="math inline">\(\Delta E=E_2-E_1=3E_1=1.13\;\text{eV}\)</span>, and the corresponding wavelength is:</p>
+<p><span class="math display">\[
+\lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3\times6.02\times10^{-20}\;\text{J}}=1.10\times10^{-6}\;\text{m}=1100\;\text{nm},
+\]</span></p>
+<p>in the near infrared. Notice how strongly the result depends on the size of the box: since <span class="math inline">\(E\propto1/a^2\)</span>, a box twice as long would absorb at a wavelength four times longer.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="the-particle-in-a-three-dimensional-box" class="level2" data-number="4.2">
@@ -952,8 +979,18 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </section>
 <section id="sec-rev4" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="sec-rev4"><span class="header-section-number">4.6</span> Chapter Review</h2>
-<section id="sec-quest4" class="level3" data-number="4.6.1">
-<h3 data-number="4.6.1" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.6.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">4.6.1</span> Key Ideas</h3>
+<ul>
+<li>Confining a particle quantizes its energy. In a box, <span class="math inline">\(E_n=\frac{n^2h^2}{8ma^2}\)</span>, and the lowest energy is not zero (zero-point energy).</li>
+<li>In every model, higher energy means more nodes (for the ring and the sphere, in the real and imaginary parts of the wave function).</li>
+<li>Symmetry produces degeneracy: equivalent directions in a cubic box, opposite rotations on a ring (<span class="math inline">\(\pm m_\ell\)</span>), and all orientations on a sphere (<span class="math inline">\(2\ell+1\)</span> states).</li>
+<li>A particle on a ring or on a sphere has quantized angular momentum. The pictures of the spherical harmonics are drawings of functions, not of where the particle is.</li>
+<li>The harmonic oscillator has equally spaced levels, <span class="math inline">\(E_n=\hbar\omega(n+\tfrac{1}{2})\)</span>. It is the model for molecular vibrations, and its wave functions extend beyond the classical turning points.</li>
+</ul>
+</section>
+<section id="sec-quest4" class="level3" data-number="4.6.2">
+<h3 data-number="4.6.2" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.6.2</span> Study Questions</h3>
 <p><strong>1. The energy levels of a particle of mass <span class="math inline">\(m\)</span> in a one-dimensional box of length <span class="math inline">\(a\)</span> are:</strong></p>
 <ol type="a">
 <li><span class="math inline">\(E_n=\frac{nh^2}{8ma^2}\)</span>, with <span class="math inline">\(n=0,1,2,\ldots\)</span><br>
@@ -1085,7 +1122,7 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1094,7 +1131,7 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.d, 3.a, 4.d, 5.c, 6.e, 7.b, 8.a, 9.e, 10.b</p>
 </div>

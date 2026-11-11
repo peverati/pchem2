@@ -292,6 +292,14 @@ $$ {#eq-light1}
 Different wavelengths correspond to different types of radiation, which together form the *electromagnetic spectrum*: from radio waves (wavelengths of meters or more), to microwaves (millimeters to centimeters), infrared (micrometers), visible light ($400$–$700\;\text{nm}$), ultraviolet, X-rays, and gamma rays (shorter than a billionth of a meter). In classical physics, the energy carried by an electromagnetic wave depends on its amplitude (the brighter the light, the more energy it carries), and not on its frequency. As we will see in the next chapter, this classical picture of light is one of the first things that quantum mechanics had to change.
 
 ## Chapter Review {#sec-rev1}
+### Key Ideas
+
+- Newton's equation, $F=m\ddot{x}$, determines the trajectory of a particle once we know the forces and the initial conditions.
+- The Hamiltonian, $H=\frac{p^2}{2m}+V(x)$, describes the same physics through the total energy, which is conserved. It is the bridge to quantum mechanics.
+- Charged particles interact through the Coulomb potential energy, $V(r)=\frac{q_1q_2}{4\pi\varepsilon_0 r}$, which is negative (attractive) for an electron and a nucleus.
+- Waves are described by their wavelength, frequency, and speed, $v=\lambda\nu$, and they are conveniently written as complex exponentials using Euler's formula.
+- A wave confined between two fixed points can only have certain wavelengths: confinement leads to quantization, and higher frequencies mean more nodes.
+
 ### Study Questions {#sec-quest1}
 
 **1. If we know the net force acting on a particle, and its position and velocity at one instant, Newton's equation allows us to:**

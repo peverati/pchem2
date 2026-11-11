@@ -11,7 +11,7 @@ In this chapter we will see a couple of examples of how the concept and mathemat
 This system has only one electron, but since its geometry is not spherical (@fig-Fig1c11), the TISEq cannot be solved analytically as for the hydrogen atom. 
 
 
-![Geometry of the hydrogen molecular cation.](img/OEP_figure1.jpeg){#fig-Fig1c11 fig-alt="Geometry of the hydrogen molecular ion: two protons A and B separated by distance R, and an electron at point P at distances r A and r B from them." width="70%"}
+![Geometry of the hydrogen molecular cation.](img/H2p_geometry.png){#fig-Fig1c11 fig-alt="Geometry of the hydrogen molecular ion: two protons A and B separated by distance R, and an electron at point P at distances r A and r B from them." width="70%"}
 
 
 The electron is at point $P$, while the two protons are at positions $A$ and $B$ at a fixed distance $R$. Using the Born-Oppenheimer approximation we can write the one-electron molecular Hamiltonian in a.u. as: 
@@ -107,7 +107,7 @@ which gives $c_1=1/\sqrt{2+2S}$. The same steps for $\varphi_-=c_1(a-b)$ give $c
 These results can be summarized in the molecular orbital diagram of @fig-Fig2c11. We notice that the splitting of the doubly degenerate atomic level under the interaction is non-symmetric for $S\neq0$, the antibonding level being pushed up more than the bonding level is pushed down, compared with the symmetric case that would occur for $S = 0$.
 
 
-![Molecular orbitals diagram for the hydrogen molecular cation.](img/OEP_figure2.jpeg){#fig-Fig2c11 fig-alt="Molecular orbital diagram of the hydrogen molecular ion: the 1s levels of the two atoms combine into a lower bonding orbital and a higher antibonding orbital." width="70%"}
+![Molecular orbital diagram of the hydrogen molecular cation. The antibonding orbital is pushed up more than the bonding orbital is pushed down.](img/H2p_MO.png){#fig-Fig2c11 fig-alt="Molecular orbital diagram of the hydrogen molecular ion: the 1s levels of the two atoms combine into a lower bonding orbital and a higher antibonding orbital." width="70%"}
 
 
 ### Wave function analysis
@@ -141,7 +141,7 @@ To obtain the energy as a function of the internuclear distance, we need to calc
 ## The Chemical Bond in the Hydrogen Molecule
 
 
-![Geometry of the hydrogen molecule.](img/OEP_figure4.jpeg){#fig-Fig4c11 fig-alt="Geometry of the hydrogen molecule: two protons A and B separated by distance R, and two electrons 1 and 2 with their distances to each proton and to each other." width="70%"}
+![Geometry of the hydrogen molecule.](img/H2_geometry.png){#fig-Fig4c11 fig-alt="Geometry of the hydrogen molecule: two protons A and B separated by distance R, and two electrons 1 and 2 with their distances to each proton and to each other." width="70%"}
 
 
 We can now examine the formation of the two-electron chemical bond in the $\text{H}_2$ molecule. With reference to @fig-Fig4c11, the molecular Hamiltonian for $\text{H}_2$ in a.u. in the Born-Oppenheimer approximation will be: 
@@ -169,7 +169,7 @@ $$ {#eq-bond13}
 A Slater determinant in which each spatial orbital is used to describe two electrons with opposite spin is called a **restricted Hartree–Fock (RHF)** wave function, since both electrons are restricted to be described by the same spatial orbital. The energies and the resulting MO diagram are similar to those for $\mathrm{H}_2^+$, with the only difference that two electrons are described by the same $\sigma_g$ MO (@fig-Fig5c11). 
 
 
-![Molecular orbitals diagram for the hydrogen molecule.](img/OEP_figure5.jpeg){#fig-Fig5c11 fig-alt="Molecular orbital diagram of the hydrogen molecule: the 1s levels of the two atoms combine into a bonding sigma g orbital describing two electrons with opposite spins, and an unoccupied antibonding orbital above." width="70%"}
+![Molecular orbital diagram of the hydrogen molecule, with both electrons described by the bonding orbital, with opposite spins.](img/H2_MO.png){#fig-Fig5c11 fig-alt="Molecular orbital diagram of the hydrogen molecule: the 1s levels of the two atoms combine into a bonding sigma g orbital describing two electrons with opposite spins, and an unoccupied antibonding orbital above." width="70%"}
 
 
 As for the many-electron atoms, the Hartree–Fock method is just an approximation to the exact solution. The accurate theoretical value for the bond energy at the equilibrium distance, $R_e=1.4\;a_0$, is $-0.17447\;E_h$ ($-458\text{ kJ/mol}$). The variational result obtained with the wave function in @eq-bond12 is $-0.12778\;E_h$ ($-335\text{ kJ/mol}$), which is about $73 \%$ of the exact value. In this calculation, the exponent of the $1s$ orbitals, $c_0$ in $\psi_{100}=\sqrt{\frac{c_0^3}{\pi}}\exp[-c_0r]$, is used as a variational parameter, exactly as we did for helium in @sec-Atoms. Its optimal value at $R_e$ is $c_0=1.1695$, larger than $1$: in the molecule, each electron feels the attraction of two nuclei, and the orbitals contract.
@@ -272,6 +272,24 @@ The same procedure can be applied to all the homonuclear diatomic molecules of t
 
 Notice how the experimental data follow the predicted bond orders: as the bond order increases from $\mathrm{Li}_2$ to $\mathrm{N}_2$, the bonds get shorter and stronger, and as it decreases from $\mathrm{N}_2$ to $\mathrm{F}_2$, they get longer and weaker. The molecules with a bond order of zero, $\mathrm{Be}_2$ and $\mathrm{Ne}_2$, are not chemically bound (they exist only as extremely weak van der Waals complexes at very low temperatures). Notice also that MO theory correctly predicts that $\mathrm{B}_2$, like $\mathrm{O}_2$, is paramagnetic: because of the $2s$–$2p$ mixing, its last two electrons are described by the two degenerate $\pi_u$ orbitals, with parallel spins.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: removing an electron from O$_2$
+
+What happens to the bond of $\mathrm{O}_2$ when we remove one electron to form $\mathrm{O}_2^+$?
+
+**Step 1: which electron is removed?** The highest occupied orbitals of $\mathrm{O}_2$ are the two $\pi_g^*$ antibonding orbitals, which describe the last two electrons (@fig-Fig10c11). The electron that is removed is one of these.
+
+**Step 2: new bond order.** $\mathrm{O}_2^+$ has $8$ electrons described by bonding orbitals and $3$ by antibonding orbitals:
+
+$$
+\text{bond order}=\frac{8-3}{2}=2.5,
+$$
+
+larger than the bond order of $\mathrm{O}_2$, $2$.
+
+**Step 3: predictions.** Since an antibonding electron was removed, the bond becomes *stronger and shorter*: experimentally, the bond length decreases from $121\;\text{pm}$ in $\mathrm{O}_2$ to $112\;\text{pm}$ in $\mathrm{O}_2^+$. With one unpaired electron, $\mathrm{O}_2^+$ is still paramagnetic. Notice how different this is from removing an electron from $\mathrm{N}_2$, where the electron comes from a bonding orbital and the bond becomes weaker.
+:::
+
 ## Heteronuclear Diatomic Molecules
 
 When the two atoms of a diatomic molecule are different, the two rules that we used to build the molecular orbitals still apply, but with an important difference: the atomic orbitals of the two atoms no longer have the same energy. Recall from @sec-Atoms that the energy of an atomic orbital depends on the effective nuclear charge, which increases across a row of the periodic table. Orbitals of more electronegative atoms are therefore lower in energy. This has two consequences, which we can understand by going back to the $2\times2$ secular determinant of $\mathrm{H}_2^+$, with $H_{aa}\neq H_{bb}$:
@@ -303,6 +321,14 @@ The MO picture also explains a famous puzzle: despite the much larger electroneg
 These qualitative MO diagrams are the starting point of molecular orbital theory, but they only work so well for diatomic molecules. For a molecule with more than two atoms, such as water, we cannot easily guess the order and shape of the molecular orbitals, and we need to solve the Hartree–Fock equations explicitly, as we will do in the next chapter.
 
 ## Chapter Review {#sec-rev11}
+### Key Ideas
+
+- In $\mathrm{H}_2^+$, the in-phase combination of two $1s$ orbitals is bonding and the out-of-phase one antibonding; the antibonding orbital is destabilized more.
+- Hartree–Fock describes the $\mathrm{H}_2$ bond well near equilibrium, but fails at dissociation; configuration interaction fixes this.
+- Atomic orbitals interact strongly only if they have similar energies and the same symmetry with respect to the bond axis.
+- The bond order, $\frac{1}{2}(n_\text{bonding}-n_\text{antibonding})$, predicts bond strengths and lengths, and MO theory explains why $\mathrm{O}_2$ is paramagnetic.
+- In heteronuclear molecules, electrons are shared unequally, and the composition of the frontier orbitals explains reactivity, as for CO binding to metals through carbon.
+
 ### Study Questions {#sec-quest11}
 
 **1. In the bonding orbital of $\mathrm{H}_2^+$, $\varphi_+=(a+b)/\sqrt{2+2S}$:**

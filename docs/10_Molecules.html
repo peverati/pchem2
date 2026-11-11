@@ -405,7 +405,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -500,7 +500,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev10" id="toc-sec-rev10" class="nav-link" data-scroll-target="#sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">10.4.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest10" id="toc-sec-quest10" class="nav-link" data-scroll-target="#sec-quest10"><span class="header-section-number">10.4.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/10_Molecules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -641,6 +642,29 @@ Figure&nbsp;10.2: (a) Contour plot of a model two-dimensional potential energy s
 </div>
 <p>Each minimum (A, B, and C) corresponds to a stable structure of the molecule, such as a reactant, a product, or an intermediate. To go from one minimum to another, the molecule must pass over a mountain pass, called a <strong>saddle point</strong>: a point that is a maximum along the path that connects the two minima, but a minimum along every other direction. In chemistry, these saddle points are the <strong>transition states</strong> of chemical reactions, and the energy difference between a minimum and the transition state is the activation energy of the reaction.</p>
 <p>If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the <strong>minimum energy path</strong>, and it is shown as a dashed line in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>a. The distance traveled along this path, measured from the starting minimum, is called the <strong>reaction coordinate</strong>. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>b, the many-dimensional surface reduces to the familiar one-dimensional <em>reaction profile</em> of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates <span class="math inline">\(q_1\)</span> or <span class="math inline">\(q_2\)</span>, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: bond energy and zero-point energy of H<span class="math inline">\(_2\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The depth of the potential energy curve of <span class="math inline">\(\mathrm{H}_2\)</span> is <span class="math inline">\(D_e=458\;\text{kJ/mol}\)</span>, and its vibrational wavenumber is <span class="math inline">\(\tilde{\nu}=4401\;\text{cm}^{-1}\)</span>. How much energy is actually needed to break the bond?</p>
+<p><strong>Step 1: the molecule is never at the bottom of the well.</strong> As we saw for the harmonic oscillator (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), the lowest vibrational level is the zero-point energy, <span class="math inline">\(E_0=\tfrac{1}{2}h\nu=\tfrac{1}{2}hc\tilde{\nu}\)</span>, above the minimum.</p>
+<p><strong>Step 2: compute the zero-point energy.</strong></p>
+<p><span class="math display">\[
+E_0=\tfrac{1}{2}(6.626\times10^{-34}\;\text{J s})(2.998\times10^{10}\;\text{cm/s})(4401\;\text{cm}^{-1})=4.37\times10^{-20}\;\text{J},
+\]</span></p>
+<p>or <span class="math inline">\(4.37\times10^{-20}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}=26\;\text{kJ/mol}\)</span>.</p>
+<p><strong>Step 3: the dissociation energy.</strong> Starting from the lowest vibrational level, <span class="math inline">\(D_0=D_e-E_0=458-26=432\;\text{kJ/mol}\)</span>, which is the experimental bond energy of <span class="math inline">\(\mathrm{H}_2\)</span>.</p>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="solving-the-electronic-eigenvalue-problem" class="level2" data-number="10.3">
@@ -707,8 +731,18 @@ Figure&nbsp;10.3: Flowchart of the self-consistent-field (SCF) procedure used to
 </section>
 <section id="sec-rev10" class="level2" data-number="10.4">
 <h2 data-number="10.4" class="anchored" data-anchor-id="sec-rev10"><span class="header-section-number">10.4</span> Chapter Review</h2>
-<section id="sec-quest10" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="10.4.1">
+<h3 data-number="10.4.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">10.4.1</span> Key Ideas</h3>
+<ul>
+<li>The Born–Oppenheimer approximation separates the motion of the electrons from that of the much heavier nuclei.</li>
+<li>The electronic energy as a function of the nuclear positions is the potential energy surface: its minima are stable structures, and its saddle points are transition states.</li>
+<li>In the LCAO method, molecular orbitals are linear combinations of atom-centered basis functions, and the variational method leads to the secular determinant.</li>
+<li>The Hartree–Fock method describes each electron in the average field of the others through the Fock operator, which includes the exchange term.</li>
+<li>The Hartree–Fock equations are solved iteratively with the self-consistent-field (SCF) procedure.</li>
+</ul>
+</section>
+<section id="sec-quest10" class="level3" data-number="10.4.2">
+<h3 data-number="10.4.2" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.2</span> Study Questions</h3>
 <p><strong>1. What justifies the Born–Oppenheimer approximation?</strong></p>
 <ol type="a">
 <li>electrons and nuclei have the same mass<br>
@@ -840,7 +874,7 @@ Figure&nbsp;10.3: Flowchart of the self-consistent-field (SCF) procedure used to
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -849,7 +883,7 @@ Figure&nbsp;10.3: Flowchart of the self-consistent-field (SCF) procedure used to
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.b, 2.d, 3.c, 4.d, 5.e, 6.c, 7.b, 8.a, 9.e, 10.a</p>
 </div>

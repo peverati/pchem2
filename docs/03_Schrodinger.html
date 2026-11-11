@@ -405,7 +405,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -496,7 +496,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev3" id="toc-sec-rev3" class="nav-link" data-scroll-target="#sec-rev3"><span class="header-section-number">3.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest3" id="toc-sec-quest3" class="nav-link" data-scroll-target="#sec-quest3"><span class="header-section-number">3.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">3.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest3" id="toc-sec-quest3" class="nav-link" data-scroll-target="#sec-quest3"><span class="header-section-number">3.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/03_Schrodinger.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -578,6 +579,32 @@ p^2 = 2m[E - V(x)],
 \tag{3.10}\]</span></span></p>
 <p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>.</p>
 <p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: normalizing a wave function
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A particle confined between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> is described by <span class="math inline">\(\psi(x)=N\,x(a-x)\)</span> inside this region and <span class="math inline">\(\psi=0\)</span> outside. Find the normalization constant <span class="math inline">\(N\)</span>.</p>
+<p><strong>Step 1: write the normalization condition.</strong> Since <span class="math inline">\(\psi\)</span> is real, <span class="math inline">\(|\psi|^2=\psi^2\)</span>:</p>
+<p><span class="math display">\[
+\int_0^a N^2x^2(a-x)^2\,dx = 1.
+\]</span></p>
+<p><strong>Step 2: expand and integrate.</strong> <span class="math inline">\(x^2(a-x)^2=a^2x^2-2ax^3+x^4\)</span>, so:</p>
+<p><span class="math display">\[
+\int_0^a \left(a^2x^2-2ax^3+x^4\right)dx=\frac{a^5}{3}-\frac{2a^5}{4}+\frac{a^5}{5}=\frac{a^5}{30}.
+\]</span></p>
+<p><strong>Step 3: solve for <span class="math inline">\(N\)</span>.</strong> <span class="math inline">\(N^2\,a^5/30=1\)</span>, so <span class="math inline">\(N=\sqrt{30/a^5}\)</span>.</p>
+<p>Notice that the units work out: <span class="math inline">\(N\)</span> has units of <span class="math inline">\((\text{length})^{-5/2}\)</span>, so that <span class="math inline">\(|\psi|^2\)</span> has units of <span class="math inline">\((\text{length})^{-1}\)</span>, as a probability per unit length should.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="the-time-dependent-schrödinger-equation" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="the-time-dependent-schrödinger-equation"><span class="header-section-number">3.3</span> The Time-Dependent Schrödinger Equation</h2>
@@ -721,8 +748,18 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 </section>
 <section id="sec-rev3" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="sec-rev3"><span class="header-section-number">3.5</span> Chapter Review</h2>
-<section id="sec-quest3" class="level3" data-number="3.5.1">
-<h3 data-number="3.5.1" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">3.5.1</span> Key Ideas</h3>
+<ul>
+<li>The Schrödinger equation, <span class="math inline">\(\hat{H}\psi=E\psi\)</span>, cannot be derived from classical physics; it is justified by its agreement with experiments.</li>
+<li>The wave function itself is not observable: <span class="math inline">\(|\psi|^2\)</span> is a probability density (Born’s interpretation), and the total probability must be one (normalization).</li>
+<li>Stationary states have a definite energy, and their probability density does not change in time.</li>
+<li>A free particle with a definite momentum is a plane wave, equally likely to be anywhere. Its energy is not quantized.</li>
+<li>A localized particle is a wave packet, a superposition of plane waves with a range of momenta: localization in space requires uncertainty in momentum.</li>
+</ul>
+</section>
+<section id="sec-quest3" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.5.2</span> Study Questions</h3>
 <p><strong>1. Which of the following is the time-independent Schrödinger equation for a particle in one dimension?</strong></p>
 <ol type="a">
 <li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d\psi}{dx}+V(x)\psi=E\psi\)</span><br>
@@ -854,7 +891,7 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -863,7 +900,7 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.e, 2.a, 3.d, 4.b, 5.a, 6.c, 7.d, 8.b, 9.e, 10.c</p>
 </div>

@@ -198,6 +198,26 @@ The simulated spectrum of CO is reported in @fig-Fig2c13, and the transitions th
 ![Rotational levels of the vibrational states $v=0$ and $v=1$ of a diatomic molecule, with the transitions of the P-branch ($\Delta J=-1$, blue) and of the R-branch ($\Delta J=+1$, red) of the fundamental band.](img/Rovib_levels.png){#fig-Fig3c13 fig-alt="Two ladders of rotational levels, J equals 0 to 4, one for v equals 0 at the bottom and one for v equals 1 at the top. Blue upward arrows labeled P(1) to P(4) go from each J to J minus 1 in the upper ladder; red arrows labeled R(0) to R(3) go from each J to J plus 1." width="70%"}
 
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: how stiff is the bond of HCl?
+
+The fundamental vibrational transition of $\mathrm{H}^{35}\mathrm{Cl}$ is observed at $\tilde{\nu}=2990\;\text{cm}^{-1}$. What is the force constant of the bond?
+
+**Step 1: reduced mass.** With masses of $1.008$ and $34.969\;\text{u}$:
+
+$$
+\mu=\frac{(1.008)(34.969)}{1.008+34.969}\;\text{u}=0.980\;\text{u}=1.627\times10^{-27}\;\text{kg}.
+$$
+
+**Step 2: solve for $k$.** From $\tilde{\nu}=\frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}$ (@sec-Models), we get $k=\mu\,(2\pi c\tilde{\nu})^2$. With $c$ in cm/s:
+
+$$
+k=(1.627\times10^{-27}\;\text{kg})\left[2\pi(2.998\times10^{10}\;\text{cm/s})(2990\;\text{cm}^{-1})\right]^2=516\;\text{N/m}.
+$$
+
+This is a typical value for a single bond. Notice that the reduced mass is almost exactly the mass of the hydrogen atom: in a bond to hydrogen, it is essentially only the hydrogen atom that moves.
+:::
+
 ### Vibration of homonuclear diatomic molecules
 The energy levels of homonuclear diatomic molecules, such as $\mathrm{H}_2$, $\mathrm{N}_2$, and $\mathrm{O}_2$, are described by the same equations as those of heteronuclear molecules. Their spectra, however, are very different. Because of their symmetry, these molecules have no dipole moment, and stretching the bond does not create one. As a result, they have no rotational spectrum and no IR spectrum. (This is also the reason why the two main components of the atmosphere do not absorb IR radiation, and do not contribute to the greenhouse effect.)
 
@@ -332,6 +352,15 @@ The most important difference with NMR is that ESR is only possible for molecule
 
 
 ## Chapter Review {#sec-rev13}
+### Key Ideas
+
+- Spectra are maps of energy levels: line positions come from energy differences, intensities from populations, and selection rules from the transition dipole integral.
+- Rotational spectra require a permanent dipole moment. Their lines are spaced by $2B$, which gives the bond length.
+- Vibrations absorb IR light only if the dipole moment changes. Rovibrational spectra show P- and R-branches, and the vibrational frequency gives the force constant.
+- A molecule with $N$ atoms has $3N-6$ normal modes ($3N-5$ if linear). Raman spectroscopy observes vibrations that change the polarizability.
+- Electronic transitions are vertical (Franck–Condon). After absorption, molecules relax by fluorescence or, through triplet states, by slow phosphorescence.
+- NMR and ESR measure the energies of nuclear and electron spins in a magnetic field; the chemical shift reflects the electronic environment of each nucleus.
+
 ### Study Questions {#sec-quest13}
 
 **1. A transition between two states is forbidden when:**

@@ -90,9 +90,35 @@ $$ {#eq-HA7au}
 
 so the ground state is at $-\frac{1}{2}\,E_h$ ($-13.6\;\text{eV}$, the value that we found with the Bohr model in @sec-Motivation), the first excited level at $-\frac{1}{8}\,E_h$, and so on, as shown in @fig-fig0c5. Similarly, the Hamiltonian of the hydrogen atom becomes $\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}$, and the radial wave functions in the next section, which we write in terms of $r/a_0$, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs ($a_0$), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: the red line of hydrogen
+
+What is the wavelength of the light emitted when a hydrogen atom goes from $n=3$ to $n=2$?
+
+**Step 1: energy difference in atomic units.** Using @eq-HA7au:
+
+$$
+\Delta E=E_3-E_2=-\frac{1}{18}\,E_h-\left(-\frac{1}{8}\,E_h\right)=\frac{5}{72}\,E_h=0.0694\,E_h.
+$$
+
+**Step 2: convert to familiar units.** $0.0694\,E_h\times27.211\;\text{eV}/E_h=1.89\;\text{eV}$, or $0.0694\times2625.5=182\;\text{kJ/mol}$.
+
+**Step 3: wavelength.** $\Delta E=0.0694\times4.360\times10^{-18}\;\text{J}=3.03\times10^{-19}\;\text{J}$, so:
+
+$$
+\lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3.03\times10^{-19}\;\text{J}}=656\;\text{nm}.
+$$
+
+This is the red line of the Balmer series, the brightest line in the visible spectrum of hydrogen (@sec-Motivation).
+:::
+
 ## The Radial Wave Functions
 
 The radial wave functions for the first three energy levels are collected in @tbl-radial. They all have the same structure: a polynomial in $r$ multiplied by a decaying exponential, $e^{-r/na_0}$. The exponential makes sure that the wave function goes to zero far from the nucleus, and it decays more slowly for larger $n$, so orbitals with larger $n$ extend farther out. The polynomial is responsible for the nodes.
+
+```{=latex}
+\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
+```
 
 | Orbital | $n$ | $\ell$ | $R_{n\ell}(r)$ |
 |:--:|:--:|:--:|:--|
@@ -103,7 +129,11 @@ The radial wave functions for the first three energy levels are collected in @tb
 | $3p$ | $3$ | $1$ | $\frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}$ |
 | $3d$ | $3$ | $2$ | $\frac{4}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}$ |
 
-: Radial wave functions of the hydrogen atom for $n=1,2,3$. {#tbl-radial}
+: Radial wave functions of the hydrogen atom for $n=1,2,3$. {#tbl-radial tbl-colwidths="[12,6,6,76]"}
+
+```{=latex}
+\endgroup
+```
 
 ::: {.callout-note collapse="true" icon="false"}
 ## Details: the general formula
@@ -137,6 +167,45 @@ $$ {#eq-HA8}
 ![The radial probability functions of the hydrogen atom orbitals in the first three energy levels. The radial nodes are highlighted with purple dots.](img/H_rpf.png){#fig-fig2c5 fig-alt="Radial probability distributions of the 1s, 2s, 2p, 3s, 3p, and 3d orbitals of hydrogen versus distance from the nucleus. The 1s curve peaks at one Bohr radius; higher orbitals peak farther out, and s orbitals show small inner peaks separated by radial nodes." width="90%"}
 
 Notice how different $P(r)$ is from $|R_{n\ell}|^2$. For the $1s$ orbital, $|R_{10}|^2$ is largest at the nucleus, but there is very little volume close to the nucleus, so $P(r)$ is zero there. Its maximum, the most probable distance of the electron from the nucleus, is at exactly $r=a_0$, the radius of the Bohr model, although now the electron can be found at any distance. The $2s$ distribution has two maxima, at about $0.76\,a_0$ and $5.24\,a_0$, separated by the radial node at $2a_0$: even though the $2s$ electron is mostly found far from the nucleus, it has a small but important probability of being found close to it. We will see in @sec-Atoms that this small inner maximum is what makes the $2s$ orbital lower in energy than $2p$ in atoms with more than one electron.
+
+::: {.content-visible when-format="html"}
+**Try it yourself.** Choose $n$ and $\ell$ to see the radial probability distribution, $P(r)=r^2|R_{n\ell}(r)|^2$, of any hydrogen orbital. Notice how the number of maxima, $n-\ell$, and the most probable distance change.
+
+```{ojs}
+//| echo: false
+viewof hn = Inputs.range([1, 6], {step: 1, value: 3, label: "n (principal quantum number)"})
+viewof hl = Inputs.range([0, 5], {step: 1, value: 0, label: "ℓ (must be smaller than n)"})
+```
+
+```{ojs}
+//| echo: false
+hydrogenPlot = {
+  const n = hn, l = Math.min(hl, n - 1);
+  // generalized Laguerre polynomial L_k^a(x) by recurrence
+  const lag = (k, a, x) => {
+    if (k === 0) return 1;
+    let L0 = 1, L1 = 1 + a - x;
+    for (let j = 1; j < k; j++) { const L2 = ((2 * j + 1 + a - x) * L1 - (j + a) * L0) / (j + 1); L0 = L1; L1 = L2; }
+    return L1;
+  };
+  const rmax = 2 * n * n + 10 * n, N = 1200, data = [];
+  for (let i = 0; i <= N; i++) {
+    const r = rmax * i / N, rho = 2 * r / n;
+    const R = Math.pow(rho, l) * Math.exp(-rho / 2) * lag(n - l - 1, 2 * l + 1, rho);
+    data.push({r, P: r * r * R * R});
+  }
+  const norm = data.reduce((s, d) => s + d.P, 0) * (rmax / N);
+  data.forEach(d => d.P /= norm);
+  const names = "spdfgh";
+  return Plot.plot({
+    height: 320, grid: true,
+    x: {label: "r (Bohr radii, a₀)"}, y: {label: "P(r)"},
+    caption: `Radial probability distribution of the ${n}${names[l]} orbital of hydrogen` + (hl > n - 1 ? ` (ℓ reduced to ${l}, since ℓ ≤ n − 1)` : ""),
+    marks: [Plot.areaY(data, {x: "r", y: "P", fill: "steelblue", fillOpacity: 0.25}), Plot.line(data, {x: "r", y: "P", stroke: "steelblue", strokeWidth: 2}), Plot.ruleY([0])]
+  });
+}
+```
+:::
 
 ## The Angular Wave Functions
 
@@ -192,6 +261,14 @@ All three show the same information. Notice, however, that these pictures are co
 Since the wave function is not an observable, orbitals cannot be measured directly. What experiments can measure are quantities related to them. X-ray diffraction measures the total electron density of a molecule or a crystal, the sum of the probability densities of all its electrons. Photoelectron spectroscopy measures the energy needed to remove an electron, which is closely related to the energy of the orbital that described it (we will see how in @sec-Poly). Some modern experiments, such as scanning tunneling microscopy of single molecules, can produce images that look remarkably like the pictures of individual orbitals, but they too measure probabilities, not wave functions, and they need theory to be interpreted. Orbitals remain what they are: an extremely useful theoretical tool to describe electrons, not objects that we can observe.
 
 ## Chapter Review {#sec-rev5}
+### Key Ideas
+
+- The hydrogen atom can be solved exactly. Its orbitals are products of a radial function and a spherical harmonic, $\psi_{n\ell m_\ell}=R_{n\ell}(r)Y_\ell^{m_\ell}(\theta,\phi)$.
+- The energy depends only on $n$: $E_n=-\frac{1}{2n^2}\,E_h$ in atomic units. In hydrogen, $2s$ and $2p$ have the same energy.
+- $\ell$ gives the magnitude of the angular momentum and the number of angular nodes, $m_\ell$ its $z$ component, and there are $n-\ell-1$ radial nodes.
+- The radial probability, $P(r)=r^2|R_{n\ell}|^2$, tells us how likely the electron is to be at each distance from the nucleus; for $1s$ it peaks at $a_0$.
+- Orbitals are wave functions that describe one electron. Their pictures are plots of functions, not objects with a shape: only $|\psi|^2$ has a physical meaning.
+
 ### Study Questions {#sec-quest5}
 
 **1. Why can the hydrogen atom wave function be written as a product $R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)$?**

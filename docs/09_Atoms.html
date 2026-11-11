@@ -424,7 +424,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -527,7 +527,8 @@ window.Quarto = {
   <li><a href="#electron-correlation" id="toc-electron-correlation" class="nav-link" data-scroll-target="#electron-correlation"><span class="header-section-number">9.5</span> Electron Correlation</a></li>
   <li><a href="#sec-rev9" id="toc-sec-rev9" class="nav-link" data-scroll-target="#sec-rev9"><span class="header-section-number">9.6</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest9" id="toc-sec-quest9" class="nav-link" data-scroll-target="#sec-quest9"><span class="header-section-number">9.6.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">9.6.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest9" id="toc-sec-quest9" class="nav-link" data-scroll-target="#sec-quest9"><span class="header-section-number">9.6.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/09_Atoms.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -714,7 +715,7 @@ E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}
 <p><span id="eq-hf5"><span class="math display">\[
 E = E_1+E_2.
 \tag{9.21}\]</span></span></p>
-<p>In this approximation, the energy of the helium atom is twice the energy of a <span class="math inline">\(1s\)</span> electron in a hydrogen-like atom with <span class="math inline">\(Z=2\)</span>. The energies in <a href="05_Hydrogen.html#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.7</span></a> scale as <span class="math inline">\(Z^2\)</span> when the nuclear charge is <span class="math inline">\(Z\)</span> instead of <span class="math inline">\(1\)</span>, so the <span class="math inline">\(1s\)</span> energy is <span class="math inline">\(-\frac{Z^2}{2}E_h\)</span> and the total is <span class="math inline">\(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\)</span>, or about <span class="math inline">\(-10{,}500 \text{ kJ/mol}\)</span>,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> compared with the exact value of <span class="math inline">\(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\)</span>. The error is enormous, about <span class="math inline">\(40\%\)</span>, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the <em>average</em> repulsion between the two electrons, which for two <span class="math inline">\(1s\)</span> electrons is <span class="math inline">\(\frac{5}{8}Z\,E_h\)</span>. The result, <span class="math inline">\(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\)</span>, is already much better, with an error of about <span class="math inline">\(5\%\)</span>.</p>
+<p>In this approximation, the energy of the helium atom is twice the energy of a <span class="math inline">\(1s\)</span> electron in a hydrogen-like atom with <span class="math inline">\(Z=2\)</span>. The energies in <a href="05_Hydrogen.html#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.7</span></a> scale as <span class="math inline">\(Z^2\)</span> when the nuclear charge is <span class="math inline">\(Z\)</span> instead of <span class="math inline">\(1\)</span>, so the <span class="math inline">\(1s\)</span> energy is <span class="math inline">\(-\frac{Z^2}{2}E_h\)</span> and the total is <span class="math inline">\(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\)</span>, or about <span class="math inline">\(-10{,}500 \text{ kJ/mol}\)</span>,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> compared with the exact value of <span class="math inline">\(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\)</span>. The error is enormous, about <span class="math inline">\(40\%\)</span>, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the <em>average</em> repulsion between the two electrons, which for two <span class="math inline">\(1s\)</span> electrons is <span class="math inline">\(\frac{5}{8}Z\,E_h\)</span> (<span class="math inline">\(1.25\,E_h=3{,}282\text{ kJ/mol}\)</span> for helium). The result, <span class="math inline">\(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\)</span>, is already much better, with an error of about <span class="math inline">\(5\%\)</span>.</p>
 <section id="optimizing-the-effective-nuclear-charge" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="optimizing-the-effective-nuclear-charge">Optimizing the effective nuclear charge</h4>
 <p>We can do better using the variational method. The two electrons do not feel the full charge of the nucleus, since each of them is partially <em>shielded</em> from it by the other. We can account for this by using, for both electrons, a <span class="math inline">\(1s\)</span> orbital with an adjustable charge <span class="math inline">\(\zeta\)</span> in place of <span class="math inline">\(Z\)</span>:</p>
@@ -1022,6 +1023,26 @@ Table&nbsp;9.2: Ground-state configurations and term symbols of the first ten el
 </div>
 </figure>
 </div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: the ground state of oxygen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Find the ground-state term symbol of the oxygen atom, <span class="math inline">\(1s^22s^22p^4\)</span>, using Hund’s rules.</p>
+<p><strong>Step 1: only the open subshell matters.</strong> Filled subshells have <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>, so we only need the four <span class="math inline">\(2p\)</span> electrons.</p>
+<p><strong>Step 2: maximize <span class="math inline">\(S\)</span> (first rule).</strong> The three <span class="math inline">\(2p\)</span> spin-orbitals with <span class="math inline">\(m_s=+\tfrac{1}{2}\)</span> describe three electrons, and the fourth one must have <span class="math inline">\(m_s=-\tfrac{1}{2}\)</span>: <span class="math inline">\(M_S=\tfrac{3}{2}-\tfrac{1}{2}=1\)</span>, so <span class="math inline">\(S=1\)</span> (a triplet).</p>
+<p><strong>Step 3: maximize <span class="math inline">\(L\)</span> (second rule).</strong> The fourth electron can use <span class="math inline">\(m_\ell=+1\)</span>, so <span class="math inline">\(M_L=(+1+0-1)+1=1\)</span>, and <span class="math inline">\(L=1\)</span>: a <span class="math inline">\(^3P\)</span> term.</p>
+<p><strong>Step 4: choose <span class="math inline">\(J\)</span> (third rule).</strong> <span class="math inline">\(J\)</span> can be <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(0\)</span>. The subshell is <em>more</em> than half filled (four of six electrons), so the lowest level has the largest <span class="math inline">\(J\)</span>: the ground state is <span class="math inline">\(^3P_2\)</span>, in agreement with <a href="#tbl-tab3c9" class="quarto-xref">table&nbsp;<span>9.2</span></a>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="spinorbit-coupling" class="level3" data-number="9.4.5">
 <h3 data-number="9.4.5" class="anchored" data-anchor-id="spinorbit-coupling"><span class="header-section-number">9.4.5</span> Spin–orbit coupling</h3>
@@ -1041,8 +1062,19 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </section>
 <section id="sec-rev9" class="level2" data-number="9.6">
 <h2 data-number="9.6" class="anchored" data-anchor-id="sec-rev9"><span class="header-section-number">9.6</span> Chapter Review</h2>
-<section id="sec-quest9" class="level3" data-number="9.6.1">
-<h3 data-number="9.6.1" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.6.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="9.6.1">
+<h3 data-number="9.6.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">9.6.1</span> Key Ideas</h3>
+<ul>
+<li>The electron–electron repulsion makes many-electron atoms impossible to solve exactly, so we need approximations.</li>
+<li>Electrons are fermions: their wave function is antisymmetric, which we build with Slater determinants, and the Pauli principle follows.</li>
+<li>The variational theorem guarantees that the energy of any trial wave function is an upper bound to the exact energy.</li>
+<li>Shielding and penetration explain effective nuclear charges and why <span class="math inline">\(2s\)</span> is lower than <span class="math inline">\(2p\)</span> in many-electron atoms.</li>
+<li>A configuration gives several atomic states, labeled by term symbols <span class="math inline">\(^{2S+1}L_J\)</span>. Hund’s rules find the ground state.</li>
+<li>The difference between the exact energy and the best single-determinant energy is the correlation energy.</li>
+</ul>
+</section>
+<section id="sec-quest9" class="level3" data-number="9.6.2">
+<h3 data-number="9.6.2" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.6.2</span> Study Questions</h3>
 <p><strong>1. Why can the Schrödinger equation not be solved exactly for an atom with two or more electrons?</strong></p>
 <ol type="a">
 <li>because the nucleus is too heavy<br>
@@ -1174,7 +1206,7 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1183,7 +1215,7 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.e, 2.b, 3.a, 4.b, 5.d, 6.c, 7.a, 8.d, 9.e, 10.c</p>
 </div>

@@ -95,6 +95,28 @@ For example, the work function of sodium is about $2.3\;\text{eV}$.^[The electro
 
 The energy of a single photon looks tiny in joules, but chemists usually think in terms of moles. A photon of green light ($\lambda=500\;\text{nm}$) has an energy of $E=hc/\lambda=3.97\times10^{-19}\;\text{J}$, or $2.48\;\text{eV}$. A mole of such photons carries $3.97\times10^{-19}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}\approx239\;\text{kJ/mol}$. This is the same order of magnitude as the energy of a chemical bond (a $\mathrm{C}-\mathrm{C}$ single bond is about $350\;\text{kJ/mol}$). Ultraviolet photons ($\lambda=250\;\text{nm}$, $479\;\text{kJ/mol}$) carry enough energy to break chemical bonds, which is why UV light causes sunburns and can be used to sterilize surfaces, while visible photons can only excite electrons in molecules (which is how our eyes, and photosynthesis, work), and infrared photons can only make molecules vibrate. The interaction between light and molecules, one photon at a time, is the basis of spectroscopy, which we will discuss in @sec-Spectroscopy.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: the photoelectric effect in sodium
+
+Ultraviolet light with a wavelength of $250\;\text{nm}$ shines on a sodium surface (work function $\Phi=2.3\;\text{eV}$). What is the maximum kinetic energy of the ejected electrons?
+
+**Step 1: energy of one photon.**
+
+$$
+E=\frac{hc}{\lambda}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{250\times10^{-9}\;\text{m}}=7.95\times10^{-19}\;\text{J}=4.96\;\text{eV}.
+$$
+
+(Per mole of photons, this is $7.95\times10^{-19}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}=479\;\text{kJ/mol}$, more than enough to break most chemical bonds.)
+
+**Step 2: subtract the work function.** Each photon gives all its energy to one electron, and $2.3\;\text{eV}$ of it is needed to remove the electron from the metal:
+
+$$
+K_{\text{max}}=h\nu-\Phi=4.96\;\text{eV}-2.3\;\text{eV}=2.7\;\text{eV}.
+$$
+
+Notice that doubling the intensity of the light would double the number of ejected electrons, but would not change this value.
+:::
+
 ## Atomic Spectra and the Bohr Model
 
 The third failure of classical physics is the one that matters most for chemistry, since it concerns atoms themselves. When a gas of hydrogen atoms is heated or excited by an electric discharge, it emits light. If this light is passed through a prism, it does not produce a continuous rainbow, like the light from a black body, but a series of sharp lines, each with a precise wavelength. In the visible region, hydrogen emits only four lines: red ($656\;\text{nm}$), blue-green ($486\;\text{nm}$), violet ($434\;\text{nm}$), and deep violet ($410\;\text{nm}$). Every element has its own characteristic set of lines, which can be used to identify it, as a fingerprint (this is how helium was discovered in the spectrum of the Sun, before it was found on Earth).
@@ -173,6 +195,10 @@ which are known as **de Broglie's equations**. We will use these equations to de
 
 The four experiments discussed in this chapter, and the new ideas that they introduced, are summarized in @tbl-tab1c2.
 
+```{=latex}
+\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
+```
+
 |Experiment           |Classical prediction                                        |Observation                                                    |Quantum idea                                              |
 |:--------------------|:-----------------------------------------------------------|:--------------------------------------------------------------|:---------------------------------------------------------|
 |Black-body radiation |Intensity grows without limit at short wavelengths          |Intensity peaks and goes to zero at short wavelengths          |Energy is exchanged in quanta, $E=nh\nu$ (Planck, 1900)   |
@@ -180,12 +206,24 @@ The four experiments discussed in this chapter, and the new ideas that they intr
 |Atomic line spectra  |Continuous emission; electrons spiral into the nucleus      |Sharp lines at specific wavelengths; atoms are stable          |Atoms have quantized energy levels (Bohr, 1913)           |
 |Electron diffraction |Electrons are particles and cannot interfere                |Diffraction patterns, as for waves                             |Matter behaves as waves, $\lambda=h/p$ (de Broglie, 1924) |
 
-: The experiments that led to quantum mechanics. {#tbl-tab1c2}
+: The experiments that led to quantum mechanics. {#tbl-tab1c2 tbl-colwidths="[20,26,27,27]"}
+
+```{=latex}
+\endgroup
+```
 
 The common thread of all these results is that, at the scale of atoms and molecules, energy is not continuous, and particles and waves are not separate categories. In the next chapter, we will see how Schrödinger combined these ideas into a single equation.
 
 
 ## Chapter Review {#sec-rev2}
+### Key Ideas
+
+- Black-body radiation could only be explained by assuming that energy is exchanged in quanta, $E=h\nu$ (Planck).
+- The photoelectric effect showed that light is made of photons: the energy of the ejected electrons depends on the frequency of the light, not on its intensity.
+- The sharp lines of atomic spectra show that atoms have discrete energy levels. The Bohr model explained hydrogen, but not why quantization happens.
+- Particles behave as waves, with wavelength $\lambda=h/p$ (de Broglie). The effect matters only for very light particles such as electrons.
+- At the scale of atoms, energy is not continuous, and particles and waves are not separate categories.
+
 ### Study Questions {#sec-quest2}
 
 **1. What did classical physics (the Rayleigh–Jeans law) predict for the radiation emitted by a black body?**

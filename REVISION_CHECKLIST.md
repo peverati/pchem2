@@ -9,7 +9,7 @@ The status of the November 2026 revision. This file is not part of the book.
 | 3 | `03_Schrodinger.qmd` | The Schrödinger Equation |
 | 4 | `04_Models.qmd` | Analytically Solvable Models |
 | 5 | `05_Hydrogen.qmd` | The Hydrogen Atom |
-| 6 | `06_Operators.qmd` | Operators and Mathematical Background |
+| 6 | `06_Operators.qmd` | Operators, Observables, and Measurements |
 | 7 | `07_Spin.qmd` | Spin |
 | 8 | `08_Weirdness.qmd` | Quantum Weirdness |
 | 9 | `09_Atoms.qmd` | Many-Electron Atoms |
@@ -30,10 +30,10 @@ The status of the November 2026 revision. This file is not part of the book.
   - a new front cover with the print title;
   - a print PDF profile: two-sided layout, 300-dpi figures, answers at the end of each chapter, a copyright page;
   - KDP and IngramSpark.
-- [ ] **Worked examples** (optional): one or two step-by-step numerical examples per chapter, in collapsible boxes.
-- [ ] **Chapter summaries** (optional): a short "what you should know" list before the study questions.
-- [ ] **Older images** (optional): replace the few remaining non-computed figures (e.g., the H₂⁺ MO diagram, `OEP_figure2.jpeg`) with computed ones.
-- [ ] **Interactive figures** (optional): for example, hydrogen radial probabilities or particle-in-a-box superpositions with sliders.
+- [x] **Worked examples**: one step-by-step example per chapter (Ch. 2–13), in collapsible boxes.
+- [x] **Chapter summaries**: "Key Ideas" at the start of each chapter review.
+- [x] **Older images**: the four H₂⁺/H₂ diagrams of Ch. 11 redrawn (`scripts/make_figures_h2.py`).
+- [x] **Interactive figures** (website only): hydrogen radial probability (Ch. 5) and particle-in-a-box superposition (Ch. 6), with sliders.
 
 ## Potential additions (parked: not planned; consider only on request)
 

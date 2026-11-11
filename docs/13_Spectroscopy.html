@@ -405,7 +405,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -510,7 +510,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev13" id="toc-sec-rev13" class="nav-link" data-scroll-target="#sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">13.6.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest13" id="toc-sec-quest13" class="nav-link" data-scroll-target="#sec-quest13"><span class="header-section-number">13.6.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/13_Spectroscopy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -728,6 +729,31 @@ Figure&nbsp;13.5: Rotational levels of the vibrational states <span class="math 
 </figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: how stiff is the bond of HCl?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The fundamental vibrational transition of <span class="math inline">\(\mathrm{H}^{35}\mathrm{Cl}\)</span> is observed at <span class="math inline">\(\tilde{\nu}=2990\;\text{cm}^{-1}\)</span>. What is the force constant of the bond?</p>
+<p><strong>Step 1: reduced mass.</strong> With masses of <span class="math inline">\(1.008\)</span> and <span class="math inline">\(34.969\;\text{u}\)</span>:</p>
+<p><span class="math display">\[
+\mu=\frac{(1.008)(34.969)}{1.008+34.969}\;\text{u}=0.980\;\text{u}=1.627\times10^{-27}\;\text{kg}.
+\]</span></p>
+<p><strong>Step 2: solve for <span class="math inline">\(k\)</span>.</strong> From <span class="math inline">\(\tilde{\nu}=\frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}\)</span> (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), we get <span class="math inline">\(k=\mu\,(2\pi c\tilde{\nu})^2\)</span>. With <span class="math inline">\(c\)</span> in cm/s:</p>
+<p><span class="math display">\[
+k=(1.627\times10^{-27}\;\text{kg})\left[2\pi(2.998\times10^{10}\;\text{cm/s})(2990\;\text{cm}^{-1})\right]^2=516\;\text{N/m}.
+\]</span></p>
+<p>This is a typical value for a single bond. Notice that the reduced mass is almost exactly the mass of the hydrogen atom: in a bond to hydrogen, it is essentially only the hydrogen atom that moves.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="vibration-of-homonuclear-diatomic-molecules" class="level3" data-number="13.3.2">
 <h3 data-number="13.3.2" class="anchored" data-anchor-id="vibration-of-homonuclear-diatomic-molecules"><span class="header-section-number">13.3.2</span> Vibration of homonuclear diatomic molecules</h3>
@@ -774,7 +800,7 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 \tag{13.18}\]</span></span></p>
 <p>where positive values of <span class="math inline">\(m\)</span> give the R-branch (<span class="math inline">\(m=J^{\prime}=J^{\prime\prime}+1\)</span>) and negative values give the P-branch (<span class="math inline">\(m=-J^{\prime\prime}\)</span>). If <span class="math inline">\(B^{\prime}=B^{\prime\prime}\)</span>, the quadratic term disappears, and we recover the equally spaced lines of the IR spectrum. When <span class="math inline">\(B^{\prime}&lt;B^{\prime\prime}\)</span>, the quadratic term is negative, and the lines of the R-branch get closer and closer as <span class="math inline">\(m\)</span> increases, until they turn around and start moving back towards lower wavenumbers. The point where this happens is called the <em>band head</em>, and it is one of the most recognizable features of electronic spectra of diatomic molecules.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -783,7 +809,7 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>To find the lines of the P-branch, we replace <span class="math inline">\(J^{\prime }=J^{{\prime \prime}}-1\)</span> in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>:</p>
 <p><span id="eq-elec2"><span class="math display">\[
@@ -879,8 +905,19 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </section>
 <section id="sec-rev13" class="level2" data-number="13.6">
 <h2 data-number="13.6" class="anchored" data-anchor-id="sec-rev13"><span class="header-section-number">13.6</span> Chapter Review</h2>
-<section id="sec-quest13" class="level3" data-number="13.6.1">
-<h3 data-number="13.6.1" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="13.6.1">
+<h3 data-number="13.6.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">13.6.1</span> Key Ideas</h3>
+<ul>
+<li>Spectra are maps of energy levels: line positions come from energy differences, intensities from populations, and selection rules from the transition dipole integral.</li>
+<li>Rotational spectra require a permanent dipole moment. Their lines are spaced by <span class="math inline">\(2B\)</span>, which gives the bond length.</li>
+<li>Vibrations absorb IR light only if the dipole moment changes. Rovibrational spectra show P- and R-branches, and the vibrational frequency gives the force constant.</li>
+<li>A molecule with <span class="math inline">\(N\)</span> atoms has <span class="math inline">\(3N-6\)</span> normal modes (<span class="math inline">\(3N-5\)</span> if linear). Raman spectroscopy observes vibrations that change the polarizability.</li>
+<li>Electronic transitions are vertical (Franck–Condon). After absorption, molecules relax by fluorescence or, through triplet states, by slow phosphorescence.</li>
+<li>NMR and ESR measure the energies of nuclear and electron spins in a magnetic field; the chemical shift reflects the electronic environment of each nucleus.</li>
+</ul>
+</section>
+<section id="sec-quest13" class="level3" data-number="13.6.2">
+<h3 data-number="13.6.2" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.2</span> Study Questions</h3>
 <p><strong>1. A transition between two states is forbidden when:</strong></p>
 <ol type="a">
 <li>the two states have different energies<br>
@@ -1012,7 +1049,7 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1021,7 +1058,7 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.e, 3.a, 4.e, 5.c, 6.d, 7.b, 8.a, 9.b, 10.d</p>
 </div>

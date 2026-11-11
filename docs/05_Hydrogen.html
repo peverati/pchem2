@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -107,6 +142,8 @@ ul.task-list li input[type="checkbox"] {
   document.addEventListener("DOMContentLoaded", function () { glue(document); });
 })();
 </script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -405,7 +442,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -497,7 +534,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev5" id="toc-sec-rev5" class="nav-link" data-scroll-target="#sec-rev5"><span class="header-section-number">5.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest5" id="toc-sec-quest5" class="nav-link" data-scroll-target="#sec-quest5"><span class="header-section-number">5.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">5.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest5" id="toc-sec-quest5" class="nav-link" data-scroll-target="#sec-quest5"><span class="header-section-number">5.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/05_Hydrogen.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -593,11 +631,37 @@ Figure&nbsp;5.1: Energy level diagram and degeneracy pattern for the first five 
 E_n = -\frac{1}{2n^2}\;E_h,
 \tag{5.10}\]</span></span></p>
 <p>so the ground state is at <span class="math inline">\(-\frac{1}{2}\,E_h\)</span> (<span class="math inline">\(-13.6\;\text{eV}\)</span>, the value that we found with the Bohr model in <a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>), the first excited level at <span class="math inline">\(-\frac{1}{8}\,E_h\)</span>, and so on, as shown in <a href="#fig-fig0c5" class="quarto-xref">figure&nbsp;<span>5.1</span></a>. Similarly, the Hamiltonian of the hydrogen atom becomes <span class="math inline">\(\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}\)</span>, and the radial wave functions in the next section, which we write in terms of <span class="math inline">\(r/a_0\)</span>, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs (<span class="math inline">\(a_0\)</span>), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: the red line of hydrogen
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>What is the wavelength of the light emitted when a hydrogen atom goes from <span class="math inline">\(n=3\)</span> to <span class="math inline">\(n=2\)</span>?</p>
+<p><strong>Step 1: energy difference in atomic units.</strong> Using <a href="#eq-HA7au" class="quarto-xref">eq.&nbsp;<span>5.10</span></a>:</p>
+<p><span class="math display">\[
+\Delta E=E_3-E_2=-\frac{1}{18}\,E_h-\left(-\frac{1}{8}\,E_h\right)=\frac{5}{72}\,E_h=0.0694\,E_h.
+\]</span></p>
+<p><strong>Step 2: convert to familiar units.</strong> <span class="math inline">\(0.0694\,E_h\times27.211\;\text{eV}/E_h=1.89\;\text{eV}\)</span>, or <span class="math inline">\(0.0694\times2625.5=182\;\text{kJ/mol}\)</span>.</p>
+<p><strong>Step 3: wavelength.</strong> <span class="math inline">\(\Delta E=0.0694\times4.360\times10^{-18}\;\text{J}=3.03\times10^{-19}\;\text{J}\)</span>, so:</p>
+<p><span class="math display">\[
+\lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3.03\times10^{-19}\;\text{J}}=656\;\text{nm}.
+\]</span></p>
+<p>This is the red line of the Balmer series, the brightest line in the visible spectrum of hydrogen (<a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>).</p>
+</div>
+</div>
+</div>
 </section>
 <section id="the-radial-wave-functions" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="the-radial-wave-functions"><span class="header-section-number">5.2</span> The Radial Wave Functions</h2>
 <p>The radial wave functions for the first three energy levels are collected in <a href="#tbl-radial" class="quarto-xref">table&nbsp;<span>5.1</span></a>. They all have the same structure: a polynomial in <span class="math inline">\(r\)</span> multiplied by a decaying exponential, <span class="math inline">\(e^{-r/na_0}\)</span>. The exponential makes sure that the wave function goes to zero far from the nucleus, and it decays more slowly for larger <span class="math inline">\(n\)</span>, so orbitals with larger <span class="math inline">\(n\)</span> extend farther out. The polynomial is responsible for the nodes.</p>
-<div id="tbl-radial" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="tbl-radial" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[12,6,6,76]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-radial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;5.1: Radial wave functions of the hydrogen atom for <span class="math inline">\(n=1,2,3\)</span>.
@@ -605,10 +669,10 @@ Table&nbsp;5.1: Radial wave functions of the hydrogen atom for <span class="math
 <div aria-describedby="tbl-radial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 20%">
+<col style="width: 12%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 76%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -661,7 +725,7 @@ Table&nbsp;5.1: Radial wave functions of the hydrogen atom for <span class="math
 </figure>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -670,7 +734,7 @@ Table&nbsp;5.1: Radial wave functions of the hydrogen atom for <span class="math
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For any <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span>, the radial functions can be written as:</p>
 <p><span id="eq-HA5"><span class="math display">\[
@@ -712,6 +776,57 @@ Figure&nbsp;5.3: The radial probability functions of the hydrogen atom orbitals 
 </figure>
 </div>
 <p>Notice how different <span class="math inline">\(P(r)\)</span> is from <span class="math inline">\(|R_{n\ell}|^2\)</span>. For the <span class="math inline">\(1s\)</span> orbital, <span class="math inline">\(|R_{10}|^2\)</span> is largest at the nucleus, but there is very little volume close to the nucleus, so <span class="math inline">\(P(r)\)</span> is zero there. Its maximum, the most probable distance of the electron from the nucleus, is at exactly <span class="math inline">\(r=a_0\)</span>, the radius of the Bohr model, although now the electron can be found at any distance. The <span class="math inline">\(2s\)</span> distribution has two maxima, at about <span class="math inline">\(0.76\,a_0\)</span> and <span class="math inline">\(5.24\,a_0\)</span>, separated by the radial node at <span class="math inline">\(2a_0\)</span>: even though the <span class="math inline">\(2s\)</span> electron is mostly found far from the nucleus, it has a small but important probability of being found close to it. We will see in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a> that this small inner maximum is what makes the <span class="math inline">\(2s\)</span> orbital lower in energy than <span class="math inline">\(2p\)</span> in atoms with more than one electron.</p>
+<p><strong>Try it yourself.</strong> Choose <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span> to see the radial probability distribution, <span class="math inline">\(P(r)=r^2|R_{n\ell}(r)|^2\)</span>, of any hydrogen orbital. Notice how the number of maxima, <span class="math inline">\(n-\ell\)</span>, and the most probable distance change.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="176" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 175;"><span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>viewof hn <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">6</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"n (principal quantum number)"</span>})</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>viewof hl <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">0</span><span class="op">,</span> <span class="dv">5</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"ℓ (must be smaller than n)"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="181" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 180;"><span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>hydrogenPlot <span class="op">=</span> {</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> n <span class="op">=</span> hn<span class="op">,</span> l <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(hl<span class="op">,</span> n <span class="op">-</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>  <span class="co">// generalized Laguerre polynomial L_k^a(x) by recurrence</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> lag <span class="op">=</span> (k<span class="op">,</span> a<span class="op">,</span> x) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (k <span class="op">===</span> <span class="dv">0</span>) <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> L0 <span class="op">=</span> <span class="dv">1</span><span class="op">,</span> L1 <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> a <span class="op">-</span> x<span class="op">;</span></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> j <span class="op">&lt;</span> k<span class="op">;</span> j<span class="op">++</span>) { <span class="kw">const</span> L2 <span class="op">=</span> ((<span class="dv">2</span> <span class="op">*</span> j <span class="op">+</span> <span class="dv">1</span> <span class="op">+</span> a <span class="op">-</span> x) <span class="op">*</span> L1 <span class="op">-</span> (j <span class="op">+</span> a) <span class="op">*</span> L0) <span class="op">/</span> (j <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span> L0 <span class="op">=</span> L1<span class="op">;</span> L1 <span class="op">=</span> L2<span class="op">;</span> }</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> L1<span class="op">;</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> rmax <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> n <span class="op">*</span> n <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span> n<span class="op">,</span> N <span class="op">=</span> <span class="dv">1200</span><span class="op">,</span> data <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;=</span> N<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> r <span class="op">=</span> rmax <span class="op">*</span> i <span class="op">/</span> N<span class="op">,</span> rho <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> r <span class="op">/</span> n<span class="op">;</span></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> R <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">pow</span>(rho<span class="op">,</span> l) <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">exp</span>(<span class="op">-</span>rho <span class="op">/</span> <span class="dv">2</span>) <span class="op">*</span> <span class="fu">lag</span>(n <span class="op">-</span> l <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">2</span> <span class="op">*</span> l <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> rho)<span class="op">;</span></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>    data<span class="op">.</span><span class="fu">push</span>({r<span class="op">,</span> <span class="dt">P</span><span class="op">:</span> r <span class="op">*</span> r <span class="op">*</span> R <span class="op">*</span> R})<span class="op">;</span></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> norm <span class="op">=</span> data<span class="op">.</span><span class="fu">reduce</span>((s<span class="op">,</span> d) <span class="kw">=&gt;</span> s <span class="op">+</span> d<span class="op">.</span><span class="at">P</span><span class="op">,</span> <span class="dv">0</span>) <span class="op">*</span> (rmax <span class="op">/</span> N)<span class="op">;</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>  data<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">P</span> <span class="op">/=</span> norm)<span class="op">;</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> names <span class="op">=</span> <span class="st">"spdfgh"</span><span class="op">;</span></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">320</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"r (Bohr radii, a₀)"</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"P(r)"</span>}<span class="op">,</span></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>    <span class="dt">caption</span><span class="op">:</span> <span class="vs">`Radial probability distribution of the </span><span class="sc">${</span>n<span class="sc">}${</span>names[l]<span class="sc">}</span><span class="vs"> orbital of hydrogen`</span> <span class="op">+</span> (hl <span class="op">&gt;</span> n <span class="op">-</span> <span class="dv">1</span> <span class="op">?</span> <span class="vs">` (ℓ reduced to </span><span class="sc">${</span>l<span class="sc">}</span><span class="vs">, since ℓ ≤ n − 1)`</span> <span class="op">:</span> <span class="st">""</span>)<span class="op">,</span></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">areaY</span>(data<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"P"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.25</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">line</span>(data<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"r"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"P"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"steelblue"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span> Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])]</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
 </section>
 <section id="the-angular-wave-functions" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="the-angular-wave-functions"><span class="header-section-number">5.3</span> The Angular Wave Functions</h2>
@@ -805,8 +920,18 @@ Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a po
 </section>
 <section id="sec-rev5" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="sec-rev5"><span class="header-section-number">5.5</span> Chapter Review</h2>
-<section id="sec-quest5" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">5.5.1</span> Key Ideas</h3>
+<ul>
+<li>The hydrogen atom can be solved exactly. Its orbitals are products of a radial function and a spherical harmonic, <span class="math inline">\(\psi_{n\ell m_\ell}=R_{n\ell}(r)Y_\ell^{m_\ell}(\theta,\phi)\)</span>.</li>
+<li>The energy depends only on <span class="math inline">\(n\)</span>: <span class="math inline">\(E_n=-\frac{1}{2n^2}\,E_h\)</span> in atomic units. In hydrogen, <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> have the same energy.</li>
+<li><span class="math inline">\(\ell\)</span> gives the magnitude of the angular momentum and the number of angular nodes, <span class="math inline">\(m_\ell\)</span> its <span class="math inline">\(z\)</span> component, and there are <span class="math inline">\(n-\ell-1\)</span> radial nodes.</li>
+<li>The radial probability, <span class="math inline">\(P(r)=r^2|R_{n\ell}|^2\)</span>, tells us how likely the electron is to be at each distance from the nucleus; for <span class="math inline">\(1s\)</span> it peaks at <span class="math inline">\(a_0\)</span>.</li>
+<li>Orbitals are wave functions that describe one electron. Their pictures are plots of functions, not objects with a shape: only <span class="math inline">\(|\psi|^2\)</span> has a physical meaning.</li>
+</ul>
+</section>
+<section id="sec-quest5" class="level3" data-number="5.5.2">
+<h3 data-number="5.5.2" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.5.2</span> Study Questions</h3>
 <p><strong>1. Why can the hydrogen atom wave function be written as a product <span class="math inline">\(R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)\)</span>?</strong></p>
 <ol type="a">
 <li>because the electron moves on a circular orbit<br>
@@ -938,7 +1063,7 @@ Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a po
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -947,7 +1072,7 @@ Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a po
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.b, 2.d, 3.e, 4.b, 5.a, 6.c, 7.d, 8.a, 9.e, 10.c</p>
 </div>
@@ -1031,6 +1156,17 @@ window.addEventListener("load", function () {
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
 });
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBobiA9IElucHV0cy5yYW5nZShbMSwgNl0sIHtzdGVwOiAxLCB2YWx1ZTogMywgbGFiZWw6IFwibiAocHJpbmNpcGFsIHF1YW50dW0gbnVtYmVyKVwifSlcbnZpZXdvZiBobCA9IElucHV0cy5yYW5nZShbMCwgNV0sIHtzdGVwOiAxLCB2YWx1ZTogMCwgbGFiZWw6IFwi4oSTIChtdXN0IGJlIHNtYWxsZXIgdGhhbiBuKVwifSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Imh5ZHJvZ2VuUGxvdCA9IHtcbiAgY29uc3QgbiA9IGhuLCBsID0gTWF0aC5taW4oaGwsIG4gLSAxKTtcbiAgLy8gZ2VuZXJhbGl6ZWQgTGFndWVycmUgcG9seW5vbWlhbCBMX2teYSh4KSBieSByZWN1cnJlbmNlXG4gIGNvbnN0IGxhZyA9IChrLCBhLCB4KSA9PiB7XG4gICAgaWYgKGsgPT09IDApIHJldHVybiAxO1xuICAgIGxldCBMMCA9IDEsIEwxID0gMSArIGEgLSB4O1xuICAgIGZvciAobGV0IGogPSAxOyBqIDwgazsgaisrKSB7IGNvbnN0IEwyID0gKCgyICogaiArIDEgKyBhIC0geCkgKiBMMSAtIChqICsgYSkgKiBMMCkgLyAoaiArIDEpOyBMMCA9IEwxOyBMMSA9IEwyOyB9XG4gICAgcmV0dXJuIEwxO1xuICB9O1xuICBjb25zdCBybWF4ID0gMiAqIG4gKiBuICsgMTAgKiBuLCBOID0gMTIwMCwgZGF0YSA9IFtdO1xuICBmb3IgKGxldCBpID0gMDsgaSA8PSBOOyBpKyspIHtcbiAgICBjb25zdCByID0gcm1heCAqIGkgLyBOLCByaG8gPSAyICogciAvIG47XG4gICAgY29uc3QgUiA9IE1hdGgucG93KHJobywgbCkgKiBNYXRoLmV4cCgtcmhvIC8gMikgKiBsYWcobiAtIGwgLSAxLCAyICogbCArIDEsIHJobyk7XG4gICAgZGF0YS5wdXNoKHtyLCBQOiByICogciAqIFIgKiBSfSk7XG4gIH1cbiAgY29uc3Qgbm9ybSA9IGRhdGEucmVkdWNlKChzLCBkKSA9PiBzICsgZC5QLCAwKSAqIChybWF4IC8gTik7XG4gIGRhdGEuZm9yRWFjaChkID0+IGQuUCAvPSBub3JtKTtcbiAgY29uc3QgbmFtZXMgPSBcInNwZGZnaFwiO1xuICByZXR1cm4gUGxvdC5wbG90KHtcbiAgICBoZWlnaHQ6IDMyMCwgZ3JpZDogdHJ1ZSxcbiAgICB4OiB7bGFiZWw6IFwiciAoQm9ociByYWRpaSwgYeKCgClcIn0sIHk6IHtsYWJlbDogXCJQKHIpXCJ9LFxuICAgIGNhcHRpb246IGBSYWRpYWwgcHJvYmFiaWxpdHkgZGlzdHJpYnV0aW9uIG9mIHRoZSAke259JHtuYW1lc1tsXX0gb3JiaXRhbCBvZiBoeWRyb2dlbmAgKyAoaGwgPiBuIC0gMSA/IGAgKOKEkyByZWR1Y2VkIHRvICR7bH0sIHNpbmNlIOKEkyDiiaQgbiDiiJIgMSlgIDogXCJcIiksXG4gICAgbWFya3M6IFtQbG90LmFyZWFZKGRhdGEsIHt4OiBcInJcIiwgeTogXCJQXCIsIGZpbGw6IFwic3RlZWxibHVlXCIsIGZpbGxPcGFjaXR5OiAwLjI1fSksIFBsb3QubGluZShkYXRhLCB7eDogXCJyXCIsIHk6IFwiUFwiLCBzdHJva2U6IFwic3RlZWxibHVlXCIsIHN0cm9rZVdpZHRoOiAyfSksIFBsb3QucnVsZVkoWzBdKV1cbiAgfSk7XG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2huJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2hsJykifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1563,8 +1699,8 @@ window.addEventListener("load", function () {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./06_Operators.html" class="pagination-link" aria-label="Operators and Mathematical Background">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./06_Operators.html" class="pagination-link" aria-label="Operators, Observables, and Measurements">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

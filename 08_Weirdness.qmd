@@ -140,6 +140,22 @@ This general uncertainty relation tells us that the precision with which two qua
 
 You may also find in other textbooks an *energy–time* uncertainty relation, $\Delta E\,\Delta t\gtrsim\hbar/2$. Its meaning is different from @eq-heis4, because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy–time relation states that a state that lasts only for a short time, $\Delta t$ (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about $\hbar/\Delta t$. This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: how uncertain is the velocity of an electron in an atom?
+
+An electron in an atom is confined to a region of about $1\;\text{Å}$. Taking $\sigma_x=1.0\times10^{-10}\;\text{m}$, what is the smallest possible uncertainty in its velocity?
+
+**Step 1: minimum uncertainty in momentum.** From $\sigma_x\sigma_p\geq\hbar/2$:
+
+$$
+\sigma_p\geq\frac{\hbar}{2\sigma_x}=\frac{1.055\times10^{-34}\;\text{J s}}{2\times1.0\times10^{-10}\;\text{m}}=5.3\times10^{-25}\;\text{kg m/s}.
+$$
+
+**Step 2: velocity.** $\sigma_v=\sigma_p/m_e=5.3\times10^{-25}/9.109\times10^{-31}=5.8\times10^{5}\;\text{m/s}$.
+
+The uncertainty in the velocity is enormous, almost $600\;\text{km/s}$: it makes no sense to talk about the trajectory of an electron in an atom. For comparison, a $0.145\;\text{kg}$ baseball localized to within $1\;\mu\text{m}$ has $\sigma_v\approx4\times10^{-28}\;\text{m/s}$, which is why the uncertainty principle never shows up in everyday life.
+:::
+
 ## Tunneling
 
 Tunneling is the ability of a quantum particle to cross a barrier even when its energy is lower than the top of the barrier. The particle is said to "tunnel through" the barrier, a purely quantum mechanical phenomenon (@fig-Fig3c8).
@@ -195,6 +211,14 @@ $$ {#eq-kie}
 where $k(\text{H})$ and $k(\text{D})$ are the rate constants for the reaction involving hydrogen and deuterium, respectively. In the absence of tunneling, the KIEs of reactions that involve the transfer of a hydrogen atom are typically smaller than about 7 at room temperature, since they arise mostly from the difference in the zero-point energies of the two isotopes (see the harmonic oscillator in @sec-Models). Significantly larger values, together with curved (non-linear) Arrhenius plots, are commonly taken as experimental evidence of tunneling, an effect that must be considered when studying chemical reactions involving light atoms.
 
 ## Chapter Review {#sec-rev8}
+### Key Ideas
+
+- A measurement gives one eigenvalue and collapses the wave function onto the corresponding eigenfunction.
+- Different interpretations of quantum mechanics disagree on what the wave function is, but they give the same predictions for chemistry.
+- In the double-slit experiment, single particles build up an interference pattern, which disappears if we find out which slit each particle goes through.
+- The uncertainty principle, $\sigma_x\sigma_p\geq\hbar/2$, comes from the fact that the operators do not commute, not from imperfect instruments.
+- Particles can tunnel through barriers higher than their energy. The probability decreases exponentially with the width of the barrier and with the square root of the mass, which makes tunneling important for electrons and hydrogen atoms.
+
 ### Study Questions {#sec-quest8}
 
 **1. A measurement of the observable $A$ gives the eigenvalue $a_i$. Immediately after the measurement, the wave function is:**

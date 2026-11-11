@@ -405,7 +405,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./06_Operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -499,7 +499,8 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-rev7" id="toc-sec-rev7" class="nav-link" data-scroll-target="#sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</a>
   <ul class="collapse">
-  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas"><span class="header-section-number">7.5.1</span> Key Ideas</a></li>
+  <li><a href="#sec-quest7" id="toc-sec-quest7" class="nav-link" data-scroll-target="#sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/07_Spin.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -581,6 +582,29 @@ Figure&nbsp;7.2: Vector model of the two spin states of an electron. The spin ve
 |c_{1}|^{2}+|c_{2}|^{2}=1 \quad\longrightarrow\quad |c_{1}|^{2}=|c_{2}|^{2}=\frac{1}{2}.
 \tag{7.6}\]</span></span></p>
 <p>This equation is not sufficient to determine the values of the coefficients since they are complex numbers. <a href="#eq-spin3" class="quarto-xref">Eq.&nbsp;<span>7.6</span></a>, however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>, will be observed with equal probability of <span class="math inline">\(\frac{1}{2}\)</span>.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Worked example: spin probabilities
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>An electron is described by the spin function <span class="math inline">\(\chi=\tfrac{\sqrt{3}}{2}\,\alpha+\tfrac{1}{2}\,\beta\)</span>. What are the probabilities of measuring spin up and spin down along <span class="math inline">\(z\)</span>, and what is <span class="math inline">\(\langle S_z\rangle\)</span>?</p>
+<p><strong>Step 1: check the normalization.</strong> <span class="math inline">\(\left|\tfrac{\sqrt{3}}{2}\right|^2+\left|\tfrac{1}{2}\right|^2=\tfrac{3}{4}+\tfrac{1}{4}=1\)</span>.</p>
+<p><strong>Step 2: probabilities.</strong> <span class="math inline">\(P(\uparrow)=\tfrac{3}{4}\)</span> and <span class="math inline">\(P(\downarrow)=\tfrac{1}{4}\)</span>.</p>
+<p><strong>Step 3: expectation value.</strong> Each result is weighted by its probability:</p>
+<p><span class="math display">\[
+\langle S_z\rangle=\tfrac{3}{4}\left(+\tfrac{\hbar}{2}\right)+\tfrac{1}{4}\left(-\tfrac{\hbar}{2}\right)=+\tfrac{\hbar}{4}.
+\]</span></p>
+<p>As for any superposition, a single measurement gives either <span class="math inline">\(+\hbar/2\)</span> or <span class="math inline">\(-\hbar/2\)</span>, never <span class="math inline">\(\hbar/4\)</span>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="sequential-stern-gerlach-experiments" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="sequential-stern-gerlach-experiments"><span class="header-section-number">7.2</span> Sequential Stern-Gerlach Experiments</h2>
@@ -630,7 +654,7 @@ Figure&nbsp;7.3: Sequential Stern–Gerlach experiments, with the number of part
 \tag{7.10}\]</span></span></p>
 <p>In words: no two components of the spin commute with each other, so, as we saw for position and momentum, no state can have definite values of two different components at the same time. This is exactly what the sequential Stern–Gerlach experiments showed.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -639,7 +663,7 @@ Figure&nbsp;7.3: Sequential Stern–Gerlach experiments, with the number of part
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The commutators in <a href="#eq-spop3" class="quarto-xref">eq.&nbsp;<span>7.10</span></a> follow from Pauli’s relations, <a href="#eq-spop2" class="quarto-xref">eq.&nbsp;<span>7.9</span></a>, and the definition of commutator, <a href="06_Operators.html#eq-bp5" class="quarto-xref">eq.&nbsp;<span>6.7</span></a>. We apply both sides to <span class="math inline">\(\alpha\)</span> (applying them to <span class="math inline">\(\beta\)</span> gives the same result). For the first pair:</p>
 <p><span id="eq-spop4"><span class="math display">\[
@@ -783,8 +807,18 @@ Table&nbsp;7.1: Symmetries, commuting operators, and quantum numbers.
 </section>
 <section id="sec-rev7" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="sec-rev7"><span class="header-section-number">7.5</span> Chapter Review</h2>
-<section id="sec-quest7" class="level3" data-number="7.5.1">
-<h3 data-number="7.5.1" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.1</span> Study Questions</h3>
+<section id="key-ideas" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="key-ideas"><span class="header-section-number">7.5.1</span> Key Ideas</h3>
+<ul>
+<li>The Stern–Gerlach experiment shows that electrons have an intrinsic angular momentum, spin, with only two possible <span class="math inline">\(z\)</span> components, <span class="math inline">\(\pm\hbar/2\)</span>.</li>
+<li>The spin components do not commute with each other, so measuring one of them randomizes the others.</li>
+<li>A spin state <span class="math inline">\(c_1\alpha+c_2\beta\)</span> gives spin up with probability <span class="math inline">\(|c_1|^2\)</span> and spin down with probability <span class="math inline">\(|c_2|^2\)</span>.</li>
+<li>Every quantum number comes from a symmetry of the system, through an operator that commutes with the Hamiltonian.</li>
+<li>Spin adds a fourth label, <span class="math inline">\(m_s\)</span>, and doubles the number of states of each orbital.</li>
+</ul>
+</section>
+<section id="sec-quest7" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="sec-quest7"><span class="header-section-number">7.5.2</span> Study Questions</h3>
 <p><strong>1. In the Stern–Gerlach experiment, a beam of silver atoms passing through an inhomogeneous magnetic field:</strong></p>
 <ol type="a">
 <li>is deflected into a continuous band<br>
@@ -916,7 +950,7 @@ Table&nbsp;7.1: Symmetries, commuting operators, and quantum numbers.
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -925,7 +959,7 @@ Table&nbsp;7.1: Symmetries, commuting operators, and quantum numbers.
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.e, 2.b, 3.c, 4.d, 5.a, 6.d, 7.a, 8.b, 9.c, 10.e</p>
 </div>
@@ -1536,8 +1570,8 @@ window.addEventListener("load", function () {
   </script>
 <nav class="page-navigation column-body" aria-label="Page">
   <div class="nav-page nav-page-previous">
-      <a href="./06_Operators.html" class="pagination-link" aria-label="Operators and Mathematical Background">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators and Mathematical Background</span></span>
+      <a href="./06_Operators.html" class="pagination-link" aria-label="Operators, Observables, and Measurements">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Operators, Observables, and Measurements</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

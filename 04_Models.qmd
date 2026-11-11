@@ -157,6 +157,28 @@ $$ {#eq-PIB15}
 
 a uniform value, $|C|^2/2$, plus a wiggle whose wavelength gets shorter as $n$ increases. For very large $n$ the wiggles become so close together that no experiment could resolve them, and on average the particle is equally likely to be anywhere: the classical result.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: an electron in a 1 nm box
+
+An electron is confined in a one-dimensional box of length $a=1.0\;\text{nm}$, roughly the length of a conjugated molecule such as hexatriene. What are its two lowest energies, and what wavelength of light would it absorb going from $n=1$ to $n=2$?
+
+**Step 1: the ground state.** With $m_e=9.109\times10^{-31}\;\text{kg}$:
+
+$$
+E_1=\frac{h^2}{8m_ea^2}=\frac{(6.626\times10^{-34}\;\text{J s})^2}{8(9.109\times10^{-31}\;\text{kg})(1.0\times10^{-9}\;\text{m})^2}=6.02\times10^{-20}\;\text{J}=0.376\;\text{eV}.
+$$
+
+**Step 2: the first excited state.** Since $E_n\propto n^2$, $E_2=4E_1=1.50\;\text{eV}$.
+
+**Step 3: the transition.** $\Delta E=E_2-E_1=3E_1=1.13\;\text{eV}$, and the corresponding wavelength is:
+
+$$
+\lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3\times6.02\times10^{-20}\;\text{J}}=1.10\times10^{-6}\;\text{m}=1100\;\text{nm},
+$$
+
+in the near infrared. Notice how strongly the result depends on the size of the box: since $E\propto1/a^2$, a box twice as long would absorb at a wavelength four times longer.
+:::
+
 ## The Particle in a Three-Dimensional Box
 
 Real particles move in three dimensions, so let's briefly extend the particle in a box to a rectangular box with sides $a$, $b$, and $c$, with the potential equal to zero inside and infinite outside. The Hamiltonian contains the kinetic energy along the three directions:
@@ -407,6 +429,14 @@ Let's look at @fig-fig11c4:
 4. **The classical limit again.** For large $n$, the probability density is largest near the turning points. This is what we expect classically: a mass on a spring moves slowest near the turning points, so it spends most of its time there.
 
 ## Chapter Review {#sec-rev4}
+### Key Ideas
+
+- Confining a particle quantizes its energy. In a box, $E_n=\frac{n^2h^2}{8ma^2}$, and the lowest energy is not zero (zero-point energy).
+- In every model, higher energy means more nodes (for the ring and the sphere, in the real and imaginary parts of the wave function).
+- Symmetry produces degeneracy: equivalent directions in a cubic box, opposite rotations on a ring ($\pm m_\ell$), and all orientations on a sphere ($2\ell+1$ states).
+- A particle on a ring or on a sphere has quantized angular momentum. The pictures of the spherical harmonics are drawings of functions, not of where the particle is.
+- The harmonic oscillator has equally spaced levels, $E_n=\hbar\omega(n+\tfrac{1}{2})$. It is the model for molecular vibrations, and its wave functions extend beyond the classical turning points.
+
 ### Study Questions {#sec-quest4}
 
 **1. The energy levels of a particle of mass $m$ in a one-dimensional box of length $a$ are:**

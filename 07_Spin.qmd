@@ -65,6 +65,24 @@ $$ {#eq-spin3}
 
 This equation is not sufficient to determine the values of the coefficients since they are complex numbers. @Eq-spin3, however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, $\alpha$ and $\beta$, will be observed with equal probability of $\frac{1}{2}$.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: spin probabilities
+
+An electron is described by the spin function $\chi=\tfrac{\sqrt{3}}{2}\,\alpha+\tfrac{1}{2}\,\beta$. What are the probabilities of measuring spin up and spin down along $z$, and what is $\langle S_z\rangle$?
+
+**Step 1: check the normalization.** $\left|\tfrac{\sqrt{3}}{2}\right|^2+\left|\tfrac{1}{2}\right|^2=\tfrac{3}{4}+\tfrac{1}{4}=1$.
+
+**Step 2: probabilities.** $P(\uparrow)=\tfrac{3}{4}$ and $P(\downarrow)=\tfrac{1}{4}$.
+
+**Step 3: expectation value.** Each result is weighted by its probability:
+
+$$
+\langle S_z\rangle=\tfrac{3}{4}\left(+\tfrac{\hbar}{2}\right)+\tfrac{1}{4}\left(-\tfrac{\hbar}{2}\right)=+\tfrac{\hbar}{4}.
+$$
+
+As for any superposition, a single measurement gives either $+\hbar/2$ or $-\hbar/2$, never $\hbar/4$.
+:::
+
 ## Sequential Stern-Gerlach Experiments
 
 An interesting result can be obtained if we link multiple Stern–Gerlach apparatuses into one experiment and we perform the measurement along two orthogonal directions in space. 
@@ -219,6 +237,14 @@ To summarize, every quantum number we use in chemistry can be traced back to a s
 : Symmetries, commuting operators, and quantum numbers. {#tbl-symmetries}
 
 ## Chapter Review {#sec-rev7}
+### Key Ideas
+
+- The Stern–Gerlach experiment shows that electrons have an intrinsic angular momentum, spin, with only two possible $z$ components, $\pm\hbar/2$.
+- The spin components do not commute with each other, so measuring one of them randomizes the others.
+- A spin state $c_1\alpha+c_2\beta$ gives spin up with probability $|c_1|^2$ and spin down with probability $|c_2|^2$.
+- Every quantum number comes from a symmetry of the system, through an operator that commutes with the Hamiltonian.
+- Spin adds a fourth label, $m_s$, and doubles the number of states of each orbital.
+
 ### Study Questions {#sec-quest7}
 
 **1. In the Stern–Gerlach experiment, a beam of silver atoms passing through an inhomogeneous magnetic field:**

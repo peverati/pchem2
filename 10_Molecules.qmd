@@ -123,6 +123,24 @@ Each minimum (A, B, and C) corresponds to a stable structure of the molecule, su
 
 If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the **minimum energy path**, and it is shown as a dashed line in [@fig-fig2c10]a. The distance traveled along this path, measured from the starting minimum, is called the **reaction coordinate**. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in [@fig-fig2c10]b, the many-dimensional surface reduces to the familiar one-dimensional *reaction profile* of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates $q_1$ or $q_2$, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: bond energy and zero-point energy of H$_2$
+
+The depth of the potential energy curve of $\mathrm{H}_2$ is $D_e=458\;\text{kJ/mol}$, and its vibrational wavenumber is $\tilde{\nu}=4401\;\text{cm}^{-1}$. How much energy is actually needed to break the bond?
+
+**Step 1: the molecule is never at the bottom of the well.** As we saw for the harmonic oscillator (@sec-Models), the lowest vibrational level is the zero-point energy, $E_0=\tfrac{1}{2}h\nu=\tfrac{1}{2}hc\tilde{\nu}$, above the minimum.
+
+**Step 2: compute the zero-point energy.**
+
+$$
+E_0=\tfrac{1}{2}(6.626\times10^{-34}\;\text{J s})(2.998\times10^{10}\;\text{cm/s})(4401\;\text{cm}^{-1})=4.37\times10^{-20}\;\text{J},
+$$
+
+or $4.37\times10^{-20}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}=26\;\text{kJ/mol}$.
+
+**Step 3: the dissociation energy.** Starting from the lowest vibrational level, $D_0=D_e-E_0=458-26=432\;\text{kJ/mol}$, which is the experimental bond energy of $\mathrm{H}_2$.
+:::
+
 ## Solving the Electronic Eigenvalue Problem
 
 Once we have invoked the Born–Oppenheimer approximation, we can try to solve the electronic TISEq in @eq-molham9. For any molecule with more than one electron (i.e., all molecules except $\mathrm{H}_2^+$ and a few exotic ions), we need to keep in mind the antisymmetry of the wave function, so we write the electronic wave function as a Slater determinant, as we did for atoms in @sec-Atoms. Then we need to approximate the Hamiltonian, since the electron-electron repulsion term does not allow an analytic solution. Similarly to the many-electron atom case, the simplest approximation is to use the variational method and to treat the electron-electron repulsion only in an average way, as we did for the helium atom in the previous chapter. This approximation is called the Hartree–Fock method.
@@ -190,6 +208,14 @@ Since the Fock operator and its solutions depend on each other, the Hartree–Fo
 The SCF procedure is too tedious to perform by hand, even for small molecules, but it is easily done by computer programs. Every time that you run a quantum chemistry calculation, the first thing the program does is solve this cycle.
 
 ## Chapter Review {#sec-rev10}
+### Key Ideas
+
+- The Born–Oppenheimer approximation separates the motion of the electrons from that of the much heavier nuclei.
+- The electronic energy as a function of the nuclear positions is the potential energy surface: its minima are stable structures, and its saddle points are transition states.
+- In the LCAO method, molecular orbitals are linear combinations of atom-centered basis functions, and the variational method leads to the secular determinant.
+- The Hartree–Fock method describes each electron in the average field of the others through the Fock operator, which includes the exchange term.
+- The Hartree–Fock equations are solved iteratively with the self-consistent-field (SCF) procedure.
+
 ### Study Questions {#sec-quest10}
 
 **1. What justifies the Born–Oppenheimer approximation?**

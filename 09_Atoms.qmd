@@ -201,7 +201,7 @@ $$
 E = E_1+E_2.
 $$ {#eq-hf5}
 
-In this approximation, the energy of the helium atom is twice the energy of a $1s$ electron in a hydrogen-like atom with $Z=2$. The energies in @eq-HA7 scale as $Z^2$ when the nuclear charge is $Z$ instead of $1$, so the $1s$ energy is $-\frac{Z^2}{2}E_h$ and the total is $E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h$, or about $-10{,}500 \text{ kJ/mol}$,^[$E_h$ is the hartree, the atomic unit of energy that we introduced in @sec-AtomicUnits: $1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}$.] compared with the exact value of $-2.9037\,E_h=-7{,}624 \text{ kJ/mol}$. The error is enormous, about $40\%$, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the *average* repulsion between the two electrons, which for two $1s$ electrons is $\frac{5}{8}Z\,E_h$. The result, $-2.75\,E_h = -7{,}220 \text{ kJ/mol}$, is already much better, with an error of about $5\%$.
+In this approximation, the energy of the helium atom is twice the energy of a $1s$ electron in a hydrogen-like atom with $Z=2$. The energies in @eq-HA7 scale as $Z^2$ when the nuclear charge is $Z$ instead of $1$, so the $1s$ energy is $-\frac{Z^2}{2}E_h$ and the total is $E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h$, or about $-10{,}500 \text{ kJ/mol}$,^[$E_h$ is the hartree, the atomic unit of energy that we introduced in @sec-AtomicUnits: $1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}$.] compared with the exact value of $-2.9037\,E_h=-7{,}624 \text{ kJ/mol}$. The error is enormous, about $40\%$, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the *average* repulsion between the two electrons, which for two $1s$ electrons is $\frac{5}{8}Z\,E_h$ ($1.25\,E_h=3{,}282\text{ kJ/mol}$ for helium). The result, $-2.75\,E_h = -7{,}220 \text{ kJ/mol}$, is already much better, with an error of about $5\%$.
 
 #### Optimizing the effective nuclear charge {.unnumbered}
 We can do better using the variational method. The two electrons do not feel the full charge of the nucleus, since each of them is partially *shielded* from it by the other. We can account for this by using, for both electrons, a $1s$ orbital with an adjustable charge $\zeta$ in place of $Z$:
@@ -373,6 +373,20 @@ For carbon, the first rule selects $^3P$ as the ground term, and the third rule 
 
 : Ground-state configurations and term symbols of the first ten elements. {#tbl-tab3c9}
 
+::: {.callout-tip collapse="true" icon="false"}
+## Worked example: the ground state of oxygen
+
+Find the ground-state term symbol of the oxygen atom, $1s^22s^22p^4$, using Hund's rules.
+
+**Step 1: only the open subshell matters.** Filled subshells have $L=0$ and $S=0$, so we only need the four $2p$ electrons.
+
+**Step 2: maximize $S$ (first rule).** The three $2p$ spin-orbitals with $m_s=+\tfrac{1}{2}$ describe three electrons, and the fourth one must have $m_s=-\tfrac{1}{2}$: $M_S=\tfrac{3}{2}-\tfrac{1}{2}=1$, so $S=1$ (a triplet).
+
+**Step 3: maximize $L$ (second rule).** The fourth electron can use $m_\ell=+1$, so $M_L=(+1+0-1)+1=1$, and $L=1$: a $^3P$ term.
+
+**Step 4: choose $J$ (third rule).** $J$ can be $2$, $1$, or $0$. The subshell is *more* than half filled (four of six electrons), so the lowest level has the largest $J$: the ground state is $^3P_2$, in agreement with @tbl-tab3c9.
+:::
+
 ### Spin–orbit coupling
 
 Term symbols include the quantum number $J$ because of an effect that we have neglected so far: **spin–orbit coupling**. From the point of view of the electron, the charged nucleus is the one that moves around it, and this moving charge produces a magnetic field proportional to the orbital angular momentum. This field interacts with the magnetic moment associated with its spin. This interaction adds to the energy a term proportional to $\mathbf{L}\cdot\mathbf{S}$, which depends on whether the spin and orbital angular momenta are aligned or opposed, and therefore on $J$. It splits each term with $L>0$ and $S>0$ into its levels with different $J$.
@@ -394,6 +408,15 @@ The correlation energy is a small fraction of the total energy (about $1.5\%$ fo
 The procedure that we used for helium can be extended to atoms with more than two electrons, and to molecules, resulting in the Hartree–Fock method. We will explain it in more detail in the next chapter, since it is also the simplest approximation that can describe the chemical bond.
 
 ## Chapter Review {#sec-rev9}
+### Key Ideas
+
+- The electron–electron repulsion makes many-electron atoms impossible to solve exactly, so we need approximations.
+- Electrons are fermions: their wave function is antisymmetric, which we build with Slater determinants, and the Pauli principle follows.
+- The variational theorem guarantees that the energy of any trial wave function is an upper bound to the exact energy.
+- Shielding and penetration explain effective nuclear charges and why $2s$ is lower than $2p$ in many-electron atoms.
+- A configuration gives several atomic states, labeled by term symbols $^{2S+1}L_J$. Hund's rules find the ground state.
+- The difference between the exact energy and the best single-determinant energy is the correlation energy.
+
 ### Study Questions {#sec-quest9}
 
 **1. Why can the Schrödinger equation not be solved exactly for an atom with two or more electrons?**
