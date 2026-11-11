@@ -142,63 +142,38 @@ So, if the Hamiltonian gives the same answers as Newton's equation, why do we bo
 2. **The Hamiltonian is the bridge to quantum mechanics.** In quantum mechanics we will not be able to talk about the trajectory of a particle, so Newton's equation will be of little use. The Hamiltonian, on the other hand, will survive almost unchanged. In @sec-Operators, we will see that the central equation of quantum mechanics, the Schrödinger equation, is obtained by taking @eq-ham2 and replacing the momentum, $p$, with a mathematical operation (a derivative) acting on a wave function.
 
 ## Coulomb's Law
-Coulomb's Law  states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them:
+Chemistry is, in the end, all about charged particles: positive nuclei and negative electrons. The force between them is described by **Coulomb's law**, discovered by Charles-Augustin de Coulomb in 1785. For two point charges $q_1$ and $q_2$ at a distance $r$ from each other, the force is:
 
 $$
-|\mathbf{F}| = k_e \frac{|q_1q_2|}{r^2} = \frac{1}{4\pi\varepsilon_0}\frac{|q_1q_2|}{r^{2}}.
+F = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^{2}},
 $$ {#eq-coulomb1}
 
-The constant $k_e$ is called the Coulomb constant and is equal to ${1}/{4\pi\varepsilon_0}$, where $\varepsilon_0$ is the vacuum permittivity constant; $k_e \simeq 8.988\times10^9\;\mathrm{Nm^2C^{-2}}$. If the product $q_1q_2$ is positive, the force between the two charges is repulsive; if the product is negative, the force between them is attractive.
+where $\varepsilon_0=8.854\times10^{-12}\;\mathrm{C^2\,J^{-1}\,m^{-1}}$ is the *vacuum permittivity*, a constant that sets the strength of electric forces. The force acts along the line that joins the two charges, and @eq-coulomb1 tells us two things:
 
-### Vector Form of Coulomb's Law
+- **The sign.** If the two charges have the same sign, $q_1q_2>0$ and the force is positive: the charges repel each other. If they have opposite signs, as for an electron and a nucleus, $q_1q_2<0$ and the force is negative: the charges attract each other.
+- **The distance dependence.** The force decreases with the *square* of the distance: doubling the distance between the charges makes the force four times weaker.
 
+You may also find the same law written in terms of the **electric field**, $\mathbf{E}$. We can think of each charge as creating a field around itself, and of the other charge as feeling a force $\mathbf{F}=q\,\mathbf{E}$ from that field. The two descriptions are equivalent, and we will mention the electric field again only when we discuss how light interacts with molecules (@sec-Spectroscopy).
 
-Coulomb's law in vector form states that the electrostatic force ${\textstyle \mathbf {F}_{1}}$ experienced by a charge, $q_{1}$ at position $\mathbf {r}_{1}$, in the vicinity of another charge, $q_{2}$ at position $\mathbf {r}_{2}$, in a vacuum is equal 
-$$
-{\displaystyle \mathbf{F}_{1}={\frac {q_{1}q_{2}}{4\pi \varepsilon _{0}}}{\frac {\mathbf{r}_{1}-\mathbf{r}_{2}}{|\mathbf {r}_{1}-\mathbf{r}_{2}|^{3}}}={\frac {q_{1}q_{2}}{4\pi \varepsilon_{0}}}{\frac{\mathbf{\hat{r}} _{12}}{|\mathbf {r} _{12}|^{2}}}},
-$$ {#eq-coulomb2}
+### Electrostatic potential energy
 
-where ${\textstyle {\boldsymbol {r}}_{12}={\boldsymbol {r}}_{1}-{\boldsymbol {r}}_{2}}$ is the vectorial distance between the charges, ${\textstyle {\widehat {\mathbf {r} }}_{12}={\frac {\mathbf {r} _{12}}{|\mathbf {r} _{12}|}}}$ a unit vector pointing from ${\textstyle q_{2}}$ to ${\textstyle q_{1}}$, and $\varepsilon_{0}$ the vacuum permittivity constant. Here, ${\textstyle \mathbf {\hat {r}} _{12}}$ is used for the vector notation.
-
-The vector form of Coulomb's law is simply the scalar definition of the law with the direction given by the unit vector, ${\textstyle {\widehat {\mathbf {r} }}_{12}}$, parallel with the line from charge $q_{2}$ to charge $q_{1}$. If both charges have the same sign (like charges) then the product $q_1q_2$ is positive and the direction of the force on $q_{1}$ is given by ${\textstyle {\widehat {\mathbf {r} }}_{12}}$; the charges repel each other. If the charges have opposite signs then the product $q_1q_2$ is negative and the direction of the force on $q_{1}$ is ${\textstyle -{\hat {\mathbf {r} }}_{12}}$; the charges attract each other.
-
-The electrostatic force ${\textstyle \mathbf {F} _{2}}$ experienced by $q_{2}$, according to Newton's third law, is ${\textstyle \mathbf {F} _{2}=-\mathbf {F} _{1}}$.
-
-### Electric field
-
-An electric field is a vector field that associates to each point in space the Coulomb force experienced by a unit test charge. The strength and direction of the Coulomb force ${\textstyle \mathbf {F} }$ on a charge 
-${\textstyle q_{t}}$ depends on the electric field ${\textstyle \mathbf {E} }$ established by other charges that it finds itself in, such that 
-${\textstyle \mathbf {F} =q_{t}\mathbf {E} }$. In the simplest case, the field is considered to be generated solely by a single source point charge. If the field is generated by a positive source point charge ${\textstyle q}$, the direction of the electric field points along lines directed radially outwards from it, i.e. in the direction that a positive point test charge ${\textstyle q_{t}}$ would move if placed in the field. For a negative point source charge, the direction is radially inwards.
-
-The magnitude of the electric field, $|\mathbf{E}|$, can be derived from Coulomb's law, @eq-coulomb1, by choosing one of the point charges to be the source ($q_1=q$), and the other to be the test charge ($q_2=q_t$), and is given by:
+In quantum mechanics, as we will see in @sec-Schrodinger, we do not work with forces, but with energies. So what we really need is the **potential energy** of two charges, $V(r)$. This is the energy stored in the pair of charges, and it is equal to the work that we have to do to bring them from very far apart (where they do not interact, and $V=0$) to the distance $r$. Since the force changes with the distance, this work is an integral:
 
 $$
-{\displaystyle |\mathbf {E} |=|\mathbf{F}|\cdot \frac{1}{q_t}=\frac{1}{4\pi\varepsilon_0}{\frac {|q|}{r^{2}}}}
-$$ {#eq-coulomb3}
-
-
-### Electric Potential Energy
-
-The electric potential energy of a system of point charges is defined as the work required to assemble this system of charges by bringing them close together from an infinite distance. 
-
-The electrostatic potential energy, $E$, of one point charge $q$ at position $\mathbf{r}$ in the presence of an electric field $\mathbf{E}$ is defined as the negative of the work $W$ done by the electrostatic force to bring it from a reference position at infinite distance $\mathbf{r}_{\infty}$ to that position $\mathbf{r}$:
-
-$$
-{\displaystyle E=-W_{\mathbf{r}_{\infty}\rightarrow \mathbf{r}}=-\int _{{\mathbf {r}}_{\infty}}^{\mathbf {r} }q\mathbf {E} (\mathbf {r'} )\cdot d \mathbf {r'} },
-$$ {#eq-coulomb4}
-
-where $\mathbf{E}$ is the electrostatic field and $d\mathbf{r'}$ is the displacement vector in a curve from the reference position $\mathbf{r}_{\infty}$ to the final position $\mathbf{r}$.
-
-In the simplest case of two point charges $q_1$ and $q_2$, the electrostatic potential energy at position $r$, can be derived from Coulomb's Law, @eq-coulomb1, as:
-
-
-$$
-{\displaystyle E=|\mathbf{F}|\cdot r = {\frac{1}{4\pi\varepsilon_0}}{\frac{q_1q_2}{r}}}.
+V(r) = -\int_{\infty}^{r} F(r')\,dr' = -\frac{q_1q_2}{4\pi\varepsilon_0}\int_{\infty}^{r}\frac{dr'}{r'^2} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r}.
 $$ {#eq-coulomb5}
 
-This last equation will become very important in future chapters. Notice the difference between @eq-coulomb5 for the *energy*, $E$, and @eq-coulomb3 for the *magnitude of the electric field*, $|\mathbf{E}|$. 
+(The minus sign is there because we push *against* the force: for two charges that repel, we need to do work to bring them closer, and the potential energy is positive.)
 
+@Eq-coulomb5 is the most important result of this section, and it will appear in almost every chapter of this book. Notice how similar it is to @eq-coulomb1, but with $r$ instead of $r^2$ in the denominator. As a consequence, the potential energy decreases with distance more slowly than the force does.
 
+For an electron ($q_1=-e$) and a proton ($q_2=+e$), with $e=1.602\times10^{-19}\;\mathrm{C}$, the potential energy is always negative, and it becomes more and more negative as the two particles get closer:
+
+$$
+V(r) = -\frac{e^2}{4\pi\varepsilon_0\,r}.
+$$ {#eq-coulomb6}
+
+To get a feeling for the numbers, at a distance of $0.529\;\text{Å}$ (the typical size of a hydrogen atom, as we will see in @sec-Motivation), @eq-coulomb6 gives $V=-4.36\times10^{-18}\;\mathrm{J}$ per electron–proton pair, or $-2625\;\text{kJ/mol}$. This is several times larger than the energy of a typical chemical bond (a few hundred kJ/mol), which tells us that the Coulomb interaction is more than strong enough to hold atoms and molecules together.
 
 ## Classical Waves {#sec-ClassicalWaves}
 The last ingredient of classical physics that we need is the description of waves. Waves are everywhere: on the surface of water, in a vibrating guitar string, in sound, and in light. As we will see in the next two chapters, the central idea of quantum mechanics is that particles such as electrons also behave like waves, and the mathematics of quantum mechanics is, to a large extent, the mathematics of waves.
@@ -399,23 +374,23 @@ e. friction with the air
 
 ---
 
-**9. The magnitude of the electric field $|E|$ created by a point charge $q$ at distance $r$ is given by which of the following formulas?**
+**9. If the distance between two point charges is doubled, the Coulomb force between them:**
 
-a. $|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r^2}$ 
-b. $|E| = \dfrac{1}{4\pi \varepsilon_0} |q| r^2$
-c. $|E| = \dfrac{|q|}{r}$
-d. $|E| = k_B T / r^2$
-e. $|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r}$
+a. becomes four times weaker  
+b. becomes two times weaker  
+c. does not change  
+d. becomes two times stronger  
+e. changes sign
 
 ---
 
-**10. The electrostatic potential energy $E$ of two point charges $q_1$ and $q_2$ separated by distance $r$ is given by which of the following formulas?**
+**10. The electrostatic potential energy $V$ of two point charges $q_1$ and $q_2$ separated by distance $r$ is given by which of the following formulas?**
 
-a. $E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}$
-b. $E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}$ 
-c. $E = q_1 q_2 r$
-d. $E = k_B T r$ 
-e. $E = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2$
+a. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}$
+b. $V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}$ 
+c. $V = q_1 q_2 r$
+d. $V = k_B T r$ 
+e. $V = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2$
 
 ---
 

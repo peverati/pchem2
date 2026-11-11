@@ -493,9 +493,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#coulombs-law" id="toc-coulombs-law" class="nav-link" data-scroll-target="#coulombs-law"><span class="header-section-number">1.2</span> Coulomb’s Law</a>
   <ul class="collapse">
-  <li><a href="#vector-form-of-coulombs-law" id="toc-vector-form-of-coulombs-law" class="nav-link" data-scroll-target="#vector-form-of-coulombs-law"><span class="header-section-number">1.2.1</span> Vector Form of Coulomb’s Law</a></li>
-  <li><a href="#electric-field" id="toc-electric-field" class="nav-link" data-scroll-target="#electric-field"><span class="header-section-number">1.2.2</span> Electric field</a></li>
-  <li><a href="#electric-potential-energy" id="toc-electric-potential-energy" class="nav-link" data-scroll-target="#electric-potential-energy"><span class="header-section-number">1.2.3</span> Electric Potential Energy</a></li>
+  <li><a href="#electrostatic-potential-energy" id="toc-electrostatic-potential-energy" class="nav-link" data-scroll-target="#electrostatic-potential-energy"><span class="header-section-number">1.2.1</span> Electrostatic potential energy</a></li>
   </ul></li>
   <li><a href="#sec-ClassicalWaves" id="toc-sec-ClassicalWaves" class="nav-link" data-scroll-target="#sec-ClassicalWaves"><span class="header-section-number">1.3</span> Classical Waves</a>
   <ul class="collapse">
@@ -639,41 +637,29 @@ x = x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
 </section>
 <section id="coulombs-law" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="coulombs-law"><span class="header-section-number">1.2</span> Coulomb’s Law</h2>
-<p>Coulomb’s Law states that the magnitude of the electrostatic force of attraction or repulsion between two point charges is directly proportional to the product of the magnitudes of charges and inversely proportional to the square of the distance between them:</p>
+<p>Chemistry is, in the end, all about charged particles: positive nuclei and negative electrons. The force between them is described by <strong>Coulomb’s law</strong>, discovered by Charles-Augustin de Coulomb in 1785. For two point charges <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span> at a distance <span class="math inline">\(r\)</span> from each other, the force is:</p>
 <p><span id="eq-coulomb1"><span class="math display">\[
-|\mathbf{F}| = k_e \frac{|q_1q_2|}{r^2} = \frac{1}{4\pi\varepsilon_0}\frac{|q_1q_2|}{r^{2}}.
+F = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^{2}},
 \tag{1.14}\]</span></span></p>
-<p>The constant <span class="math inline">\(k_e\)</span> is called the Coulomb constant and is equal to <span class="math inline">\({1}/{4\pi\varepsilon_0}\)</span>, where <span class="math inline">\(\varepsilon_0\)</span> is the vacuum permittivity constant; <span class="math inline">\(k_e \simeq 8.988\times10^9\;\mathrm{Nm^2C^{-2}}\)</span>. If the product <span class="math inline">\(q_1q_2\)</span> is positive, the force between the two charges is repulsive; if the product is negative, the force between them is attractive.</p>
-<section id="vector-form-of-coulombs-law" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="vector-form-of-coulombs-law"><span class="header-section-number">1.2.1</span> Vector Form of Coulomb’s Law</h3>
-<p>Coulomb’s law in vector form states that the electrostatic force <span class="math inline">\({\textstyle \mathbf {F}_{1}}\)</span> experienced by a charge, <span class="math inline">\(q_{1}\)</span> at position <span class="math inline">\(\mathbf {r}_{1}\)</span>, in the vicinity of another charge, <span class="math inline">\(q_{2}\)</span> at position <span class="math inline">\(\mathbf {r}_{2}\)</span>, in a vacuum is equal <span id="eq-coulomb2"><span class="math display">\[
-{\displaystyle \mathbf{F}_{1}={\frac {q_{1}q_{2}}{4\pi \varepsilon _{0}}}{\frac {\mathbf{r}_{1}-\mathbf{r}_{2}}{|\mathbf {r}_{1}-\mathbf{r}_{2}|^{3}}}={\frac {q_{1}q_{2}}{4\pi \varepsilon_{0}}}{\frac{\mathbf{\hat{r}} _{12}}{|\mathbf {r} _{12}|^{2}}}},
-\tag{1.15}\]</span></span></p>
-<p>where <span class="math inline">\({\textstyle {\boldsymbol {r}}_{12}={\boldsymbol {r}}_{1}-{\boldsymbol {r}}_{2}}\)</span> is the vectorial distance between the charges, <span class="math inline">\({\textstyle {\widehat {\mathbf {r} }}_{12}={\frac {\mathbf {r} _{12}}{|\mathbf {r} _{12}|}}}\)</span> a unit vector pointing from <span class="math inline">\({\textstyle q_{2}}\)</span> to <span class="math inline">\({\textstyle q_{1}}\)</span>, and <span class="math inline">\(\varepsilon_{0}\)</span> the vacuum permittivity constant. Here, <span class="math inline">\({\textstyle \mathbf {\hat {r}} _{12}}\)</span> is used for the vector notation.</p>
-<p>The vector form of Coulomb’s law is simply the scalar definition of the law with the direction given by the unit vector, <span class="math inline">\({\textstyle {\widehat {\mathbf {r} }}_{12}}\)</span>, parallel with the line from charge <span class="math inline">\(q_{2}\)</span> to charge <span class="math inline">\(q_{1}\)</span>. If both charges have the same sign (like charges) then the product <span class="math inline">\(q_1q_2\)</span> is positive and the direction of the force on <span class="math inline">\(q_{1}\)</span> is given by <span class="math inline">\({\textstyle {\widehat {\mathbf {r} }}_{12}}\)</span>; the charges repel each other. If the charges have opposite signs then the product <span class="math inline">\(q_1q_2\)</span> is negative and the direction of the force on <span class="math inline">\(q_{1}\)</span> is <span class="math inline">\({\textstyle -{\hat {\mathbf {r} }}_{12}}\)</span>; the charges attract each other.</p>
-<p>The electrostatic force <span class="math inline">\({\textstyle \mathbf {F} _{2}}\)</span> experienced by <span class="math inline">\(q_{2}\)</span>, according to Newton’s third law, is <span class="math inline">\({\textstyle \mathbf {F} _{2}=-\mathbf {F} _{1}}\)</span>.</p>
-</section>
-<section id="electric-field" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="electric-field"><span class="header-section-number">1.2.2</span> Electric field</h3>
-<p>An electric field is a vector field that associates to each point in space the Coulomb force experienced by a unit test charge. The strength and direction of the Coulomb force <span class="math inline">\({\textstyle \mathbf {F} }\)</span> on a charge <span class="math inline">\({\textstyle q_{t}}\)</span> depends on the electric field <span class="math inline">\({\textstyle \mathbf {E} }\)</span> established by other charges that it finds itself in, such that <span class="math inline">\({\textstyle \mathbf {F} =q_{t}\mathbf {E} }\)</span>. In the simplest case, the field is considered to be generated solely by a single source point charge. If the field is generated by a positive source point charge <span class="math inline">\({\textstyle q}\)</span>, the direction of the electric field points along lines directed radially outwards from it, i.e.&nbsp;in the direction that a positive point test charge <span class="math inline">\({\textstyle q_{t}}\)</span> would move if placed in the field. For a negative point source charge, the direction is radially inwards.</p>
-<p>The magnitude of the electric field, <span class="math inline">\(|\mathbf{E}|\)</span>, can be derived from Coulomb’s law, <a href="#eq-coulomb1" class="quarto-xref">eq.&nbsp;<span>1.14</span></a>, by choosing one of the point charges to be the source (<span class="math inline">\(q_1=q\)</span>), and the other to be the test charge (<span class="math inline">\(q_2=q_t\)</span>), and is given by:</p>
-<p><span id="eq-coulomb3"><span class="math display">\[
-{\displaystyle |\mathbf {E} |=|\mathbf{F}|\cdot \frac{1}{q_t}=\frac{1}{4\pi\varepsilon_0}{\frac {|q|}{r^{2}}}}
-\tag{1.16}\]</span></span></p>
-</section>
-<section id="electric-potential-energy" class="level3" data-number="1.2.3">
-<h3 data-number="1.2.3" class="anchored" data-anchor-id="electric-potential-energy"><span class="header-section-number">1.2.3</span> Electric Potential Energy</h3>
-<p>The electric potential energy of a system of point charges is defined as the work required to assemble this system of charges by bringing them close together from an infinite distance.</p>
-<p>The electrostatic potential energy, <span class="math inline">\(E\)</span>, of one point charge <span class="math inline">\(q\)</span> at position <span class="math inline">\(\mathbf{r}\)</span> in the presence of an electric field <span class="math inline">\(\mathbf{E}\)</span> is defined as the negative of the work <span class="math inline">\(W\)</span> done by the electrostatic force to bring it from a reference position at infinite distance <span class="math inline">\(\mathbf{r}_{\infty}\)</span> to that position <span class="math inline">\(\mathbf{r}\)</span>:</p>
-<p><span id="eq-coulomb4"><span class="math display">\[
-{\displaystyle E=-W_{\mathbf{r}_{\infty}\rightarrow \mathbf{r}}=-\int _{{\mathbf {r}}_{\infty}}^{\mathbf {r} }q\mathbf {E} (\mathbf {r'} )\cdot d \mathbf {r'} },
-\tag{1.17}\]</span></span></p>
-<p>where <span class="math inline">\(\mathbf{E}\)</span> is the electrostatic field and <span class="math inline">\(d\mathbf{r'}\)</span> is the displacement vector in a curve from the reference position <span class="math inline">\(\mathbf{r}_{\infty}\)</span> to the final position <span class="math inline">\(\mathbf{r}\)</span>.</p>
-<p>In the simplest case of two point charges <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span>, the electrostatic potential energy at position <span class="math inline">\(r\)</span>, can be derived from Coulomb’s Law, <a href="#eq-coulomb1" class="quarto-xref">eq.&nbsp;<span>1.14</span></a>, as:</p>
+<p>where <span class="math inline">\(\varepsilon_0=8.854\times10^{-12}\;\mathrm{C^2\,J^{-1}\,m^{-1}}\)</span> is the <em>vacuum permittivity</em>, a constant that sets the strength of electric forces. The force acts along the line that joins the two charges, and <a href="#eq-coulomb1" class="quarto-xref">eq.&nbsp;<span>1.14</span></a> tells us two things:</p>
+<ul>
+<li><strong>The sign.</strong> If the two charges have the same sign, <span class="math inline">\(q_1q_2&gt;0\)</span> and the force is positive: the charges repel each other. If they have opposite signs, as for an electron and a nucleus, <span class="math inline">\(q_1q_2&lt;0\)</span> and the force is negative: the charges attract each other.</li>
+<li><strong>The distance dependence.</strong> The force decreases with the <em>square</em> of the distance: doubling the distance between the charges makes the force four times weaker.</li>
+</ul>
+<p>You may also find the same law written in terms of the <strong>electric field</strong>, <span class="math inline">\(\mathbf{E}\)</span>. We can think of each charge as creating a field around itself, and of the other charge as feeling a force <span class="math inline">\(\mathbf{F}=q\,\mathbf{E}\)</span> from that field. The two descriptions are equivalent, and we will mention the electric field again only when we discuss how light interacts with molecules (<a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>).</p>
+<section id="electrostatic-potential-energy" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="electrostatic-potential-energy"><span class="header-section-number">1.2.1</span> Electrostatic potential energy</h3>
+<p>In quantum mechanics, as we will see in <a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>, we do not work with forces, but with energies. So what we really need is the <strong>potential energy</strong> of two charges, <span class="math inline">\(V(r)\)</span>. This is the energy stored in the pair of charges, and it is equal to the work that we have to do to bring them from very far apart (where they do not interact, and <span class="math inline">\(V=0\)</span>) to the distance <span class="math inline">\(r\)</span>. Since the force changes with the distance, this work is an integral:</p>
 <p><span id="eq-coulomb5"><span class="math display">\[
-{\displaystyle E=|\mathbf{F}|\cdot r = {\frac{1}{4\pi\varepsilon_0}}{\frac{q_1q_2}{r}}}.
-\tag{1.18}\]</span></span></p>
-<p>This last equation will become very important in future chapters. Notice the difference between <a href="#eq-coulomb5" class="quarto-xref">eq.&nbsp;<span>1.18</span></a> for the <em>energy</em>, <span class="math inline">\(E\)</span>, and <a href="#eq-coulomb3" class="quarto-xref">eq.&nbsp;<span>1.16</span></a> for the <em>magnitude of the electric field</em>, <span class="math inline">\(|\mathbf{E}|\)</span>.</p>
+V(r) = -\int_{\infty}^{r} F(r')\,dr' = -\frac{q_1q_2}{4\pi\varepsilon_0}\int_{\infty}^{r}\frac{dr'}{r'^2} = \frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r}.
+\tag{1.15}\]</span></span></p>
+<p>(The minus sign is there because we push <em>against</em> the force: for two charges that repel, we need to do work to bring them closer, and the potential energy is positive.)</p>
+<p><a href="#eq-coulomb5" class="quarto-xref">Eq.&nbsp;<span>1.15</span></a> is the most important result of this section, and it will appear in almost every chapter of this book. Notice how similar it is to <a href="#eq-coulomb1" class="quarto-xref">eq.&nbsp;<span>1.14</span></a>, but with <span class="math inline">\(r\)</span> instead of <span class="math inline">\(r^2\)</span> in the denominator. As a consequence, the potential energy decreases with distance more slowly than the force does.</p>
+<p>For an electron (<span class="math inline">\(q_1=-e\)</span>) and a proton (<span class="math inline">\(q_2=+e\)</span>), with <span class="math inline">\(e=1.602\times10^{-19}\;\mathrm{C}\)</span>, the potential energy is always negative, and it becomes more and more negative as the two particles get closer:</p>
+<p><span id="eq-coulomb6"><span class="math display">\[
+V(r) = -\frac{e^2}{4\pi\varepsilon_0\,r}.
+\tag{1.16}\]</span></span></p>
+<p>To get a feeling for the numbers, at a distance of <span class="math inline">\(0.529\;\text{Å}\)</span> (the typical size of a hydrogen atom, as we will see in <a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>), <a href="#eq-coulomb6" class="quarto-xref">eq.&nbsp;<span>1.16</span></a> gives <span class="math inline">\(V=-4.36\times10^{-18}\;\mathrm{J}\)</span> per electron–proton pair, or <span class="math inline">\(-2625\;\text{kJ/mol}\)</span>. This is several times larger than the energy of a typical chemical bond (a few hundred kJ/mol), which tells us that the Coulomb interaction is more than strong enough to hold atoms and molecules together.</p>
 </section>
 </section>
 <section id="sec-ClassicalWaves" class="level2" data-number="1.3">
@@ -690,7 +676,7 @@ x = x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
 </ul>
 <p><span id="eq-wave1"><span class="math display">\[
 v = \lambda\nu.
-\tag{1.19}\]</span></span></p>
+\tag{1.17}\]</span></span></p>
 <div id="fig-Fig1c1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A sine wave at time zero and the same wave shifted slightly to the right a moment later, with arrows marking the wavelength between two crests, the amplitude from the axis to a crest, and the direction of travel.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig1c1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -704,18 +690,18 @@ Figure&nbsp;1.1: A traveling wave at <span class="math inline">\(t=0\)</span> (s
 <p>Mathematically, the displacement <span class="math inline">\(y\)</span> of the rope at position <span class="math inline">\(x\)</span> and time <span class="math inline">\(t\)</span> for a wave moving to the right can be written as:</p>
 <p><span id="eq-wave2"><span class="math display">\[
 y(x,t) = A\sin(kx-\omega t),
-\tag{1.20}\]</span></span></p>
-<p>where we have introduced two quantities that make the formulas simpler: the <strong>wave vector</strong>, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, which tells us how many radians the wave advances per unit length, and the <strong>angular frequency</strong>, <span class="math inline">\(\omega=2\pi\nu\)</span>, which tells us how many radians it advances per unit time. You can check that <a href="#eq-wave2" class="quarto-xref">eq.&nbsp;<span>1.20</span></a> repeats itself every time <span class="math inline">\(x\)</span> increases by <span class="math inline">\(\lambda\)</span> (at fixed <span class="math inline">\(t\)</span>) or <span class="math inline">\(t\)</span> increases by <span class="math inline">\(1/\nu\)</span> (at fixed <span class="math inline">\(x\)</span>), and that the crests move with speed <span class="math inline">\(v=\omega/k=\lambda\nu\)</span>.</p>
+\tag{1.18}\]</span></span></p>
+<p>where we have introduced two quantities that make the formulas simpler: the <strong>wave vector</strong>, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, which tells us how many radians the wave advances per unit length, and the <strong>angular frequency</strong>, <span class="math inline">\(\omega=2\pi\nu\)</span>, which tells us how many radians it advances per unit time. You can check that <a href="#eq-wave2" class="quarto-xref">eq.&nbsp;<span>1.18</span></a> repeats itself every time <span class="math inline">\(x\)</span> increases by <span class="math inline">\(\lambda\)</span> (at fixed <span class="math inline">\(t\)</span>) or <span class="math inline">\(t\)</span> increases by <span class="math inline">\(1/\nu\)</span> (at fixed <span class="math inline">\(x\)</span>), and that the crests move with speed <span class="math inline">\(v=\omega/k=\lambda\nu\)</span>.</p>
 <section id="a-useful-mathematical-tool-complex-waves" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="a-useful-mathematical-tool-complex-waves">A useful mathematical tool: complex waves</h4>
 <p>In quantum mechanics, waves are usually written using complex numbers instead of sines and cosines. The reason is <strong>Euler’s formula</strong>, which connects the exponential function with the trigonometric functions:</p>
 <p><span id="eq-euler"><span class="math display">\[
 e^{i\theta}=\cos\theta + i\sin\theta,
-\tag{1.21}\]</span></span></p>
+\tag{1.19}\]</span></span></p>
 <p>where <span class="math inline">\(i=\sqrt{-1}\)</span> is the imaginary unit (complex numbers are reviewed in <a href="A1_Math.html#sec-MathComplex" class="quarto-xref"><span>section A.1</span></a>). Using this formula, we can write a wave as:</p>
 <p><span id="eq-wave3"><span class="math display">\[
 y(x,t) = A\,e^{i(kx-\omega t)} = A\cos(kx-\omega t) + iA\sin(kx-\omega t),
-\tag{1.22}\]</span></span></p>
+\tag{1.20}\]</span></span></p>
 <p>which contains both a cosine wave (the real part) and a sine wave (the imaginary part). The advantage is that exponentials are much easier to differentiate than sines and cosines: taking a derivative with respect to <span class="math inline">\(x\)</span> simply multiplies the function by <span class="math inline">\(ik\)</span>, since <span class="math inline">\(\frac{d}{dx}e^{ikx}=ike^{ikx}\)</span>. We will start from exactly this form of a wave when we introduce the Schrödinger equation in <a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>.</p>
 </section>
 </section>
@@ -724,8 +710,8 @@ y(x,t) = A\,e^{i(kx-\omega t)} = A\cos(kx-\omega t) + iA\sin(kx-\omega t),
 <p>Just as Newton’s equation describes the motion of a particle, there is an equation that describes the motion of a wave. For a wave moving along a string, it is called the <strong>classical wave equation</strong>:</p>
 <p><span id="eq-waveeq"><span class="math display">\[
 \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2 y}{\partial t^2}.
-\tag{1.23}\]</span></span></p>
-<p>The left-hand side measures how curved the string is at a given point, and the right-hand side measures how fast that point accelerates up or down. In words, the equation says that the more a piece of string is curved, the faster it accelerates back towards a straight line. We can check that <a href="#eq-wave2" class="quarto-xref">eq.&nbsp;<span>1.20</span></a> is a solution: taking two derivatives with respect to <span class="math inline">\(x\)</span> gives <span class="math inline">\(-k^2y\)</span>, and taking two derivatives with respect to <span class="math inline">\(t\)</span> gives <span class="math inline">\(-\omega^2y\)</span>. Replacing them in <a href="#eq-waveeq" class="quarto-xref">eq.&nbsp;<span>1.23</span></a>, we obtain <span class="math inline">\(-k^2y=-\frac{\omega^2}{v^2}y\)</span>, which is true as long as <span class="math inline">\(v=\omega/k\)</span>, the relation between speed, frequency, and wavelength that we already found.</p>
+\tag{1.21}\]</span></span></p>
+<p>The left-hand side measures how curved the string is at a given point, and the right-hand side measures how fast that point accelerates up or down. In words, the equation says that the more a piece of string is curved, the faster it accelerates back towards a straight line. We can check that <a href="#eq-wave2" class="quarto-xref">eq.&nbsp;<span>1.18</span></a> is a solution: taking two derivatives with respect to <span class="math inline">\(x\)</span> gives <span class="math inline">\(-k^2y\)</span>, and taking two derivatives with respect to <span class="math inline">\(t\)</span> gives <span class="math inline">\(-\omega^2y\)</span>. Replacing them in <a href="#eq-waveeq" class="quarto-xref">eq.&nbsp;<span>1.21</span></a>, we obtain <span class="math inline">\(-k^2y=-\frac{\omega^2}{v^2}y\)</span>, which is true as long as <span class="math inline">\(v=\omega/k\)</span>, the relation between speed, frequency, and wavelength that we already found.</p>
 <p>An important property of the wave equation is that it is <strong>linear</strong>: if <span class="math inline">\(y_1(x,t)\)</span> and <span class="math inline">\(y_2(x,t)\)</span> are two solutions, their sum, <span class="math inline">\(y_1+y_2\)</span>, is also a solution. This is called the <strong>principle of superposition</strong>, and it means that when two waves meet, their displacements simply add up. If the crests of the two waves coincide (they are <em>in phase</em>), they reinforce each other and produce a larger wave, which is called <strong>constructive interference</strong>. If the crests of one wave coincide with the troughs of the other (they are <em>out of phase</em>), they cancel each other, which is called <strong>destructive interference</strong>. The two cases are shown in <a href="#fig-Fig2c1" class="quarto-xref">figure&nbsp;<span>1.2</span></a>. Interference is the signature of wave behavior, and we will see in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a> that it is also observed for electrons.</p>
 <div id="fig-Fig2c1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two panels. Left: two identical sine waves in phase add to a wave of twice the amplitude. Right: two sine waves out of phase cancel, giving a flat line.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -744,11 +730,11 @@ Figure&nbsp;1.2: Superposition of two waves with the same wavelength. Left: when
 <p>To find them, we look for solutions of the wave equation in which the shape of the string does not change, but only its size, which oscillates in time:</p>
 <p><span id="eq-standing1"><span class="math display">\[
 y(x,t) = \psi(x)\cos(\omega t).
-\tag{1.24}\]</span></span></p>
-<p>Here <span class="math inline">\(\psi(x)\)</span> describes the shape of the string, and <span class="math inline">\(\cos(\omega t)\)</span> describes how it oscillates. Replacing <a href="#eq-standing1" class="quarto-xref">eq.&nbsp;<span>1.24</span></a> in the wave equation, <a href="#eq-waveeq" class="quarto-xref">eq.&nbsp;<span>1.23</span></a>, the time-dependent factor cancels out, and we are left with an equation for the shape only:</p>
+\tag{1.22}\]</span></span></p>
+<p>Here <span class="math inline">\(\psi(x)\)</span> describes the shape of the string, and <span class="math inline">\(\cos(\omega t)\)</span> describes how it oscillates. Replacing <a href="#eq-standing1" class="quarto-xref">eq.&nbsp;<span>1.22</span></a> in the wave equation, <a href="#eq-waveeq" class="quarto-xref">eq.&nbsp;<span>1.21</span></a>, the time-dependent factor cancels out, and we are left with an equation for the shape only:</p>
 <p><span id="eq-standing2"><span class="math display">\[
 \frac{d^2 \psi}{d x^2} = -k^2\psi(x), \qquad k=\frac{\omega}{v}.
-\tag{1.25}\]</span></span></p>
+\tag{1.23}\]</span></span></p>
 <p>The solutions of this equation are sines and cosines, <span class="math inline">\(\psi(x)=a\sin(kx)+b\cos(kx)\)</span>. Now we use the fact that the string is fixed at both ends, which gives two <strong>boundary conditions</strong>:</p>
 <ul>
 <li>At <span class="math inline">\(x=0\)</span>, the string cannot move, so <span class="math inline">\(\psi(0)=0\)</span>. Since <span class="math inline">\(\sin(0)=0\)</span> and <span class="math inline">\(\cos(0)=1\)</span>, this requires <span class="math inline">\(b=0\)</span>, and <span class="math inline">\(\psi(x)=a\sin(kx)\)</span>.</li>
@@ -757,11 +743,11 @@ y(x,t) = \psi(x)\cos(\omega t).
 <p>The second condition can only be satisfied by special values of <span class="math inline">\(k\)</span>, and therefore of the wavelength, <span class="math inline">\(\lambda=2\pi/k\)</span>, and of the frequency, <span class="math inline">\(\nu=v/\lambda\)</span>:</p>
 <p><span id="eq-standing3"><span class="math display">\[
 k_n = \frac{n\pi}{L}, \qquad \lambda_n = \frac{2L}{n}, \qquad \nu_n = \frac{nv}{2L}, \qquad n = 1, 2, 3, \ldots
-\tag{1.26}\]</span></span></p>
+\tag{1.24}\]</span></span></p>
 <p>and the corresponding shapes are:</p>
 <p><span id="eq-standing4"><span class="math display">\[
 \psi_n(x) = a\sin\left(\frac{n\pi x}{L}\right).
-\tag{1.27}\]</span></span></p>
+\tag{1.25}\]</span></span></p>
 <p>The first four standing waves are shown in <a href="#fig-Fig3c1" class="quarto-xref">figure&nbsp;<span>1.3</span></a>.</p>
 <div id="fig-Fig3c1" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first four standing waves on a string fixed at both ends, stacked vertically. They have one, two, three, and four half-wavelengths between the ends, and zero, one, two, and three nodes, marked as dots.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -777,15 +763,15 @@ Figure&nbsp;1.3: The first four standing waves on a string of length <span class
 <ol type="1">
 <li><p><strong>Quantization</strong>: a confined wave can only have certain wavelengths and frequencies, labeled by a whole number, <span class="math inline">\(n\)</span>. This is why a guitar string plays a definite note (the frequency with <span class="math inline">\(n=1\)</span>, called the <em>fundamental</em>) together with its <em>overtones</em> (<span class="math inline">\(n=2,3,\ldots\)</span>), and not any frequency at all. Notice that nothing in the wave equation itself is quantized: the quantization comes entirely from the boundary conditions, i.e., from confining the wave.</p></li>
 <li><p><strong>Nodes</strong>: the standing wave with quantum number <span class="math inline">\(n\)</span> has <span class="math inline">\(n-1\)</span> points between the two ends where the string never moves, called <strong>nodes</strong>. The higher the frequency, the more nodes the wave has.</p></li>
-<li><p><strong>The link with quantum mechanics</strong>: in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>, we will solve the Schrödinger equation for an electron confined in a one-dimensional box, and we will obtain <em>exactly</em> the same functions as in <a href="#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.27</span></a>, with the same conditions on the wavelength. The quantization of the energy of atoms and molecules has the same origin as the quantization of the notes of a guitar: a wave that is confined in a region of space.</p></li>
+<li><p><strong>The link with quantum mechanics</strong>: in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>, we will solve the Schrödinger equation for an electron confined in a one-dimensional box, and we will obtain <em>exactly</em> the same functions as in <a href="#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.25</span></a>, with the same conditions on the wavelength. The quantization of the energy of atoms and molecules has the same origin as the quantization of the notes of a guitar: a wave that is confined in a region of space.</p></li>
 </ol>
 </section>
 <section id="light-as-an-electromagnetic-wave" class="level3" data-number="1.3.4">
 <h3 data-number="1.3.4" class="anchored" data-anchor-id="light-as-an-electromagnetic-wave"><span class="header-section-number">1.3.4</span> Light as an electromagnetic wave</h3>
-<p>One more type of wave will be important for us: light. In the 19th century, James Clerk Maxwell showed that light is a wave of oscillating electric and magnetic fields, called an <em>electromagnetic wave</em>. In a vacuum, all electromagnetic waves travel at the same speed, the speed of light, <span class="math inline">\(c=2.998\times10^8\;\text{m/s}\)</span>, so <a href="#eq-wave1" class="quarto-xref">eq.&nbsp;<span>1.19</span></a> becomes:</p>
+<p>One more type of wave will be important for us: light. In the 19th century, James Clerk Maxwell showed that light is a wave of oscillating electric and magnetic fields, called an <em>electromagnetic wave</em>. In a vacuum, all electromagnetic waves travel at the same speed, the speed of light, <span class="math inline">\(c=2.998\times10^8\;\text{m/s}\)</span>, so <a href="#eq-wave1" class="quarto-xref">eq.&nbsp;<span>1.17</span></a> becomes:</p>
 <p><span id="eq-light1"><span class="math display">\[
 c = \lambda\nu.
-\tag{1.28}\]</span></span></p>
+\tag{1.26}\]</span></span></p>
 <p>Different wavelengths correspond to different types of radiation, which together form the <em>electromagnetic spectrum</em>: from radio waves (wavelengths of meters or more), to microwaves (millimeters to centimeters), infrared (micrometers), visible light (<span class="math inline">\(400\)</span>–<span class="math inline">\(700\;\text{nm}\)</span>), ultraviolet, X-rays, and gamma rays (shorter than a billionth of a meter). In classical physics, the energy carried by an electromagnetic wave depends on its amplitude (the brighter the light, the more energy it carries), and not on its frequency. As we will see in the next chapter, this classical picture of light is one of the first things that quantum mechanics had to change.</p>
 </section>
 </section>
@@ -892,22 +878,26 @@ c = \lambda\nu.
 <li>friction with the air</li>
 </ol>
 <hr>
-<p><strong>9. The magnitude of the electric field <span class="math inline">\(|E|\)</span> created by a point charge <span class="math inline">\(q\)</span> at distance <span class="math inline">\(r\)</span> is given by which of the following formulas?</strong></p>
+<p><strong>9. If the distance between two point charges is doubled, the Coulomb force between them:</strong></p>
 <ol type="a">
-<li><span class="math inline">\(|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r^2}\)</span></li>
-<li><span class="math inline">\(|E| = \dfrac{1}{4\pi \varepsilon_0} |q| r^2\)</span></li>
-<li><span class="math inline">\(|E| = \dfrac{|q|}{r}\)</span></li>
-<li><span class="math inline">\(|E| = k_B T / r^2\)</span></li>
-<li><span class="math inline">\(|E| = \dfrac{1}{4\pi \varepsilon_0} \dfrac{|q|}{r}\)</span></li>
+<li>becomes four times weaker<br>
+</li>
+<li>becomes two times weaker<br>
+</li>
+<li>does not change<br>
+</li>
+<li>becomes two times stronger<br>
+</li>
+<li>changes sign</li>
 </ol>
 <hr>
-<p><strong>10. The electrostatic potential energy <span class="math inline">\(E\)</span> of two point charges <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span> separated by distance <span class="math inline">\(r\)</span> is given by which of the following formulas?</strong></p>
+<p><strong>10. The electrostatic potential energy <span class="math inline">\(V\)</span> of two point charges <span class="math inline">\(q_1\)</span> and <span class="math inline">\(q_2\)</span> separated by distance <span class="math inline">\(r\)</span> is given by which of the following formulas?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}\)</span></li>
-<li><span class="math inline">\(E = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}\)</span></li>
-<li><span class="math inline">\(E = q_1 q_2 r\)</span></li>
-<li><span class="math inline">\(E = k_B T r\)</span></li>
-<li><span class="math inline">\(E = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2\)</span></li>
+<li><span class="math inline">\(V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r^2}\)</span></li>
+<li><span class="math inline">\(V = \dfrac{1}{4\pi \varepsilon_0} \dfrac{q_1 q_2}{r}\)</span></li>
+<li><span class="math inline">\(V = q_1 q_2 r\)</span></li>
+<li><span class="math inline">\(V = k_B T r\)</span></li>
+<li><span class="math inline">\(V = \dfrac{1}{4\pi \varepsilon_0} q_1 q_2 r^2\)</span></li>
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">

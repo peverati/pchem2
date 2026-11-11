@@ -139,123 +139,84 @@ $$
 $$ {#eq-spop4}
 :::
 
-## Operators Commuting with the Hamiltonian
-To conclude this chapter, it is helpful to step back and see how symmetries and commuting operators give rise to the quantum numbers used to label states, and how spin becomes essential, especially in real atoms. In every system, the operators that commute with the Hamiltonian tell us which physical quantities are conserved and which labels (quantum numbers) are “good.”
+## Operators Commuting with the Hamiltonian {#sec-CommutingH}
+We have now met several quantum numbers: $n$ for the particle in a box, $m_\ell$ for the particle on a ring, $\ell$ and $m_\ell$ for the particle on a sphere, $n$, $\ell$, and $m_\ell$ for the hydrogen atom, and now $m_s$ for spin. At first sight, they look like a random collection of labels, each one coming out of a different calculation. To conclude this chapter, let's step back and see that they all have the same origin.
 
-### Free particle: translational symmetry and momentum
+The key is the theorem that we discussed in @sec-CommutingOperators: if an operator $\hat{A}$ commutes with the Hamiltonian, $[\hat{H},\hat{A}]=0$, we can find wave functions that are eigenfunctions of both. Each of these wave functions then has a definite energy *and* a definite value of the observable $A$, and we can use the eigenvalue of $\hat{A}$ as a label for the state. Moreover, since $\hat{A}$ commutes with $\hat{H}$, which controls the time evolution (@sec-TimeEvolution), this label does not change in time: the observable $A$ is *conserved*. Physicists call such a label a **good quantum number**.
 
-For a one‑dimensional free particle, the Hamiltonian is  
+So, the question "which quantum numbers does a system have?" becomes "which operators commute with its Hamiltonian?". And, as we will see in the examples below, the answer to this second question comes from the **symmetry** of the system: every time the system looks the same after some operation (a shift, a reflection, a rotation), there is an operator that commutes with $\hat{H}$, and a quantum number that comes with it.
 
-$$
-\hat{H} = \frac{\hat{p}^2}{2m}.
-$$ {#eq-spop5}
+### Free particle: shifts and momentum
 
-Space is translationally invariant: shifting the particle by any distance does not change the physics. Mathematically, this symmetry implies that the Hamiltonian commutes with the momentum operator:
+A free particle feels no potential, so its Hamiltonian contains only the kinetic energy, $\hat{H}=\hat{p}^2/2m$. Its symmetry is that space looks the same everywhere: if we shift the whole system by any distance, nothing changes. The operator associated with this symmetry is the momentum, and since $\hat{H}$ contains only $\hat{p}$, the two commute:
 
 $$
 [\hat{H}, \hat{p}] = 0.
-$$ {#eq-spop6}
+$$ {#eq-spop5}
 
-Because of this commutation, and the theorem that we discussed in @sec-CommutingOperators, energy eigenfunctions can be chosen to be momentum eigenfunctions as well, and momentum (or equivalently the wavevector $k$) is a good quantum number that labels the states.
+This is why the free-particle solutions of @sec-Schrodinger, the plane waves $e^{ikx}$, have both a definite energy and a definite momentum, $p=\hbar k$, and why we can label them with $k$.
 
-### Particle in a box: broken translation, introduction to parity
+### Particle in a box: no more momentum, but parity
 
-In a particle‑in‑a‑box of length $a$, with infinite potential walls at $x = 0$ and $x = a$, the Hamiltonian inside the box still looks like a free particle, but the boundary conditions  
+Inside a box, the particle is still free, but the walls break the symmetry: if we shift the system, the walls move, and the problem changes. As a consequence, $\hat{p}$ no longer commutes with $\hat{H}$, and momentum is not a good quantum number. We can check this directly: the eigenfunctions of the particle in a box, $\sin(n\pi x/a)$, are not eigenfunctions of $\hat{p}=-i\hbar\frac{d}{dx}$, since the derivative turns a sine into a cosine. (Using Euler's formula, each sine is a combination of two plane waves, one moving to the right and one to the left, with opposite momenta. A measurement of momentum would give either one, but the state does not have a definite momentum.)
 
-$$
-\psi(0) = 0, \qquad \psi(a) = 0,
-$$ {#eq-spop7}
-
-break translational symmetry: shifting the entire system by any finite amount would move the walls and change the problem. As a result, the momentum operator no longer commutes with the Hamiltonian, and  
+Some symmetry, however, survives. If we place the box symmetrically, between $-a/2$ and $+a/2$, the system looks the same when we reflect it through its center, $x\rightarrow-x$. The operator that performs this reflection is called the **parity operator**, $\hat{\Pi}$:
 
 $$
-[\hat{H}, \hat{p}] \neq 0.
-$$ {#eq-spop8}
-
-Momentum is **not** conserved and is not a good quantum number.
-
-However, there is still an important discrete symmetry if we choose our coordinates carefully. Consider a symmetric box extending from $-a/2$ to $+a/2$. In that case, the system is invariant under **inversion** of the coordinate, $x \longrightarrow -x.$
-
-This operation is described by the **parity operator** $\hat{\Pi}$, which acts on a wavefunction as  
-
-$$
-\hat{\Pi}\psi(x) = \psi(-x).
+\hat{\Pi}\,\psi(x) = \psi(-x).
 $$ {#eq-spop10}
 
-If the potential is symmetric, $V(x) = V(-x)$, then the Hamiltonian is unchanged by this inversion and commutes with the parity operator:  
+Whenever the potential is symmetric, $V(-x)=V(x)$, the Hamiltonian does not change under reflection, and it commutes with parity, $[\hat{H},\hat{\Pi}]=0$. The energy eigenfunctions can then be chosen to be eigenfunctions of parity too. Since reflecting twice brings us back to where we started, the only possible eigenvalues are $+1$ and $-1$:
 
-$$
-[\hat{H}, \hat{\Pi}] = 0.
-$$ {#eq-spop11}
+- **Even** functions are unchanged by the reflection, $\psi(-x)=+\psi(x)$.
+- **Odd** functions change sign, $\psi(-x)=-\psi(x)$.
 
-This means that energy eigenfunctions can be chosen to be eigenfunctions of parity as well. Those with  
-
-$$
-\hat{\Pi}\psi(x) = +\psi(x)
-$$ {#eq-spop12}
-
-are called **even** functions (symmetric, $\psi(-x) = \psi(x)$), and those with  
-
-$$
-\hat{\Pi}\psi(x) = -\psi(x)
-$$ {#eq-spop13}
-
-are **odd** functions (antisymmetric, $\psi(-x) = -\psi(x)$). Thus, even though continuous translational symmetry (and conserved momentum) is lost, a discrete symmetry remains, and the corresponding quantity—parity—serves as a useful label for the states. This is a simple example of how a commuting operator encodes a symmetry and yields a quantum “label,” in this case even/odd parity. The parity of the first four states of the particle in a box is shown in @fig-Fig4c7: the states alternate between even and odd as the energy increases.
-
+As shown in @fig-Fig4c7, the states of the particle in a box alternate between even and odd as the energy increases. Parity is a simple label, but a very useful one: it is the origin of the $g$ and $u$ labels of molecular orbitals in @sec-Bonds, and of many selection rules in @sec-Spectroscopy, since the integral of an odd function over a symmetric interval is zero (@sec-MathIntegrals).
 
 ![The first four eigenfunctions of a particle in a box placed symmetrically between $-a/2$ and $+a/2$. Even states (red labels) are unchanged by the inversion $x\rightarrow -x$ (reflection through the purple dashed line), and odd states (blue labels) change sign.](img/PIB_parity.png){#fig-Fig4c7 fig-alt="The first four particle-in-a-box wave functions in a box centered at zero, with a vertical dashed line at the center. The states for n equals 1 and 3 are symmetric about the center (even) and those for n equals 2 and 4 are antisymmetric (odd)." width="65%"}
 
+### Particle on a ring and on a sphere: rotations and angular momentum
 
-
-### Particle on a ring and on a sphere: rotational symmetry
-
-Rotational symmetry plays a similar but richer role. For a particle on a ring (motion confined to a circle of radius $r$), the system is invariant under rotations in the plane. The relevant operator is the $z$‑component of orbital angular momentum, $\hat{L}_z$. Rotational invariance around the $z$‑axis implies  
+A particle on a ring looks the same if we rotate the ring by any angle around its axis, $z$. The operator associated with rotations around $z$ is the $z$ component of the angular momentum, so:
 
 $$
-[\hat{H}, \hat{L}_z] = 0,
+[\hat{H}, \hat{L}_z] = 0.
 $$ {#eq-spop14}
 
-so $\hat{L}_z$ and $\hat{H}$ share a set of eigenfunctions. These eigenfunctions have the form $\mathrm{e}^{\mathrm{i} m_{\ell} \phi}$, where $\phi$ is the angular coordinate, and $m_{\ell}$ is an integer. The integer $m_\ell = 0, \pm 1, \pm 2, \dots$ is a **good quantum number**: it labels both the allowed angular momenta and the energy levels, which are proportional to $m_\ell^2$.
+This is why the solutions of the particle on a ring, $e^{im_\ell\phi}$, have both a definite energy and a definite angular momentum, $L_z=m_\ell\hbar$ (@sec-Models), and why we can label them with $m_\ell$.
 
-For a particle on a sphere, there is full three‑dimensional rotational symmetry. The Hamiltonian commutes with both the total orbital angular momentum operator $\hat{L}^2$ and with $\hat{L}_z$:  
-
+A particle on a sphere looks the same after a rotation around *any* axis. Its Hamiltonian commutes with all three components of the angular momentum, and therefore also with $\hat{L}^2$. Since the components do not commute with each other (@sec-Operators), we cannot use all of them as labels at the same time. The best we can do is to pick $\hat{L}^2$ and one component, by convention $\hat{L}_z$:
 
 $$
-[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
+[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0,
 $$ {#eq-spop15}
 
+which give the two quantum numbers $\ell$ (from $L^2=\hbar^2\ell(\ell+1)$) and $m_\ell$ (from $L_z=\hbar m_\ell$) of the spherical harmonics. There is one more consequence of the symmetry. Since the sphere has no preferred direction, the energy cannot depend on the orientation of the angular momentum, that is, on $m_\ell$. This is why each level $\ell$ is $(2\ell+1)$ times degenerate: the degeneracy *is* the rotational symmetry.
 
-The simultaneous eigenfunctions of $\hat{L}^2$ and $\hat{L}_z$ are the spherical harmonics $Y_\ell^{m_\ell}(\theta,\phi)$. Their quantum numbers arise directly from these commuting operators:
+### Hydrogen atom: one label more, and an extra degeneracy
 
-- $\ell = 0,1,2,\dots\quad$ from $\quad \hat{L}^2Y_\ell^{m_\ell} = \hbar^2 \ell(\ell+1)Y_\ell^{m_\ell}$,  
-- $m_\ell = -\ell, -\ell+1, \dots, +\ell\quad$ from $\quad\hat{L}_zY_\ell^{m_\ell} = \hbar m_\ell Y_\ell^{m_\ell}$.
+The Coulomb potential of the hydrogen atom depends only on the distance from the nucleus, $r$, so the atom has the same rotational symmetry as the sphere, and $\hat{H}$ commutes with $\hat{L}^2$ and $\hat{L}_z$. Together with the energy itself, this gives the three labels $n$, $\ell$, and $m_\ell$ of the hydrogen orbitals.
 
-For each $\ell$, there are $2\ell+1$ states with different $m_\ell$ but the same energy, a degeneracy that is a direct consequence of rotational symmetry.
+Rotational symmetry explains why the energy does not depend on $m_\ell$. It does not explain, however, why the energy of hydrogen does not depend on $\ell$ either, so that, for example, the $2s$ and $2p$ orbitals have the same energy (@sec-Hydrogen). This additional degeneracy is a special property of the $1/r$ potential, which has a hidden symmetry that goes beyond simple rotations (its discussion is beyond the scope of this book). As soon as the potential is no longer exactly $1/r$, as for an electron in a many-electron atom shielded by the others, this degeneracy disappears, and the $2s$ and $2p$ energies split (@sec-Atoms).
 
-### Hydrogen atom: Coulomb symmetry
+### Spin: why it matters
 
-The hydrogen atom is a central example where these ideas connect directly to the familiar quantum numbers $n$, $\ell$, and $m_\ell$. In the nonrelativistic approximation, the Hamiltonian depends only on the distance $r$ from the nucleus. This spherical symmetry implies that  
+The hydrogen Hamiltonian that we used does not contain spin at all, so it automatically commutes with $\hat{S}^2$ and $\hat{S}_z$. Each spatial state $(n,\ell,m_\ell)$ can therefore be combined with either spin function, $\alpha$ or $\beta$, giving a fourth label, $m_s=\pm\frac{1}{2}$, and doubling the number of states. In hydrogen, spin does not change the energies (except for the tiny spin–orbit effects that we will discuss in @sec-TermSymbols), but it changes the counting: this is why the first shell of the periodic table holds two elements, and the second one eight.
 
-$$
-[\hat{H}, \hat{L}^2] = 0, \qquad [\hat{H}, \hat{L}_z] = 0.
-$$ {#eq-spop16}
+In atoms with many electrons, the same reasoning applies to the whole atom. The atom as a whole is still rotationally symmetric, so the *total* orbital angular momentum, $L$, and the *total* spin, $S$, become the good quantum numbers that label its states. These are the labels of the term symbols that we will meet in @sec-TermSymbols.
 
-Solving the Schrödinger equation in spherical coordinates leads to energy eigenfunctions that are products of a radial function (depending on $n$ and $\ell$) and an angular function, the spherical harmonic $Y_\ell^{m_\ell}(\theta,\phi)$. The commuting set $\hat{H}$, $\hat{L}^2$, and $\hat{L}_z$ gives rise to the labels $(n, \ell, m_\ell)$, and the large degeneracy of hydrogenic levels reflects both rotational symmetry and a deeper Coulomb symmetry.
+To summarize, every quantum number we use in chemistry can be traced back to a symmetry of the system, as collected in @tbl-symmetries.
 
-### Spin and many‑electron atoms: why spin matters
+| System | Symmetry | Commutes with $\hat{H}$ | Quantum numbers |
+|:-------------------|:-------------------|:----------------|:--------------|
+| Free particle | shifts in space | $\hat{p}$ | $k$ |
+| Symmetric box | reflection $x\rightarrow-x$ | $\hat{\Pi}$ | parity (even/odd) |
+| Particle on a ring | rotations around $z$ | $\hat{L}_z$ | $m_\ell$ |
+| Sphere, hydrogen atom | all rotations | $\hat{L}^2$, $\hat{L}_z$ | $\ell$, $m_\ell$ |
+| Electron spin | (not in $\hat{H}$) | $\hat{S}^2$, $\hat{S}_z$ | $s$, $m_s$ |
+| Many-electron atom | all rotations | $\hat{L}^2$, $\hat{S}^2$ (total) | $L$, $S$ |
 
-So far, all these operators act on the **spatial** part of the electron’s wave function. However, as we introduced in this chapter, the electron also has an intrinsic angular momentum, **spin**, described by spin operators $\hat{S}^2$ and $\hat{S}_z$. For the simple nonrelativistic hydrogen Hamiltonian (which does not explicitly include spin), these operators commute with $\hat{H}$:  
-
-$$
-[\hat{H}, \hat{S}^2] = 0, \qquad [\hat{H}, \hat{S}_z] = 0.
-$$ {#eq-spop17}
-
-This means that each spatial state labeled by $(n, \ell, m_\ell)$ can be combined with two spin states, with spin quantum numbers $s = 1/2$ and $m_s = \pm 1/2$, doubling the degeneracy. In this simplest picture, spin does not change the energy levels, but it enlarges the set of possible states and will matter whenever magnetic fields or spin‑dependent interactions are present.
-
-In many‑electron atoms, spin is even more central. The Coulomb Hamiltonian still respects overall rotational symmetry, so one can define a **total orbital angular momentum** $\mathbf{L}$ by adding the orbital angular momenta of all electrons, and a **total spin** $\mathbf{S}$ by adding all individual spins. In a good approximation (LS‑coupling regime), the Hamiltonian commutes with the corresponding operators $\hat{L}^2$ and $\hat{S}^2$, and the quantum numbers $L$ and $S$ become important labels for atomic states. At the same time, the Pauli exclusion principle demands that the total electronic wave function be antisymmetric under exchange of any two electrons, tightly linking the allowed combinations of spatial quantum numbers (generalizing $n, \ell, m_\ell$) with the allowed spin states. In this way, the operators that commute with the Hamiltonian—momentum, parity, orbital angular momentum, and spin—not only reveal the underlying symmetries of each model system, but, in real atoms, highlight how indispensable spin is in determining the structure, degeneracies, and selection rules of atomic spectra.
-
-
-
+: Symmetries, commuting operators, and quantum numbers. {#tbl-symmetries}
 
 ## Chapter Review {#sec-rev7}
 ### Study Questions {#sec-quest7}
@@ -360,10 +321,20 @@ e. Spin is always conserved and cannot change under measurement
 
 ---
 
+**11. Why are the energy levels of a particle on a sphere $(2\ell+1)$ times degenerate?**
+
+a. because the Hamiltonian does not commute with $\hat{L}_z$  
+b. because the sphere has no preferred direction, so the energy cannot depend on $m_\ell$  
+c. because of the Pauli exclusion principle  
+d. because of spin  
+e. because the potential energy is $1/r$  
+
+---
+
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.d, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.d, 9.b, 10.c
+1.d, 2.b, 3.e, 4.c, 5.c, 6.a, 7.b, 8.d, 9.b, 10.c, 11.b
 :::
 
 
