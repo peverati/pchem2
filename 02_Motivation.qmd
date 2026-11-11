@@ -95,8 +95,8 @@ For example, the work function of sodium is about $2.3\;\text{eV}$.^[The electro
 
 The energy of a single photon looks tiny in joules, but chemists usually think in terms of moles. A photon of green light ($\lambda=500\;\text{nm}$) has an energy of $E=hc/\lambda=3.97\times10^{-19}\;\text{J}$, or $2.48\;\text{eV}$. A mole of such photons carries $3.97\times10^{-19}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}\approx239\;\text{kJ/mol}$. This is the same order of magnitude as the energy of a chemical bond (a $\mathrm{C}-\mathrm{C}$ single bond is about $350\;\text{kJ/mol}$). Ultraviolet photons ($\lambda=250\;\text{nm}$, $479\;\text{kJ/mol}$) carry enough energy to break chemical bonds, which is why UV light causes sunburns and can be used to sterilize surfaces, while visible photons can only excite electrons in molecules (which is how our eyes, and photosynthesis, work), and infrared photons can only make molecules vibrate. The interaction between light and molecules, one photon at a time, is the basis of spectroscopy, which we will discuss in @sec-Spectroscopy.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: the photoelectric effect in sodium
+::: {#tip-the-photoelectric-effect-in-sodium .callout-tip collapse="true" icon="false"}
+## The photoelectric effect in sodium
 
 Ultraviolet light with a wavelength of $250\;\text{nm}$ shines on a sodium surface (work function $\Phi=2.3\;\text{eV}$). What is the maximum kinetic energy of the ejected electrons?
 

@@ -123,8 +123,8 @@ Each minimum (A, B, and C) corresponds to a stable structure of the molecule, su
 
 If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the **minimum energy path**, and it is shown as a dashed line in [@fig-fig2c10]a. The distance traveled along this path, measured from the starting minimum, is called the **reaction coordinate**. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in [@fig-fig2c10]b, the many-dimensional surface reduces to the familiar one-dimensional *reaction profile* of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates $q_1$ or $q_2$, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: bond energy and zero-point energy of H$_2$
+::: {#tip-bond-energy-and-zero-point-energy-of-H .callout-tip collapse="true" icon="false"}
+## Bond energy and zero-point energy of H$_2$
 
 The depth of the potential energy curve of $\mathrm{H}_2$ is $D_e=458\;\text{kJ/mol}$, and its vibrational wavenumber is $\tilde{\nu}=4401\;\text{cm}^{-1}$. How much energy is actually needed to break the bond?
 

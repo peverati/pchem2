@@ -157,8 +157,8 @@ $$ {#eq-PIB15}
 
 a uniform value, $|C|^2/2$, plus a wiggle whose wavelength gets shorter as $n$ increases. For very large $n$ the wiggles become so close together that no experiment could resolve them, and on average the particle is equally likely to be anywhere: the classical result.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: an electron in a 1 nm box
+::: {#tip-an-electron-in-a-1-nm-box .callout-tip collapse="true" icon="false"}
+## An electron in a 1 nm box
 
 An electron is confined in a one-dimensional box of length $a=1.0\;\text{nm}$, roughly the length of a conjugated molecule such as hexatriene. What are its two lowest energies, and what wavelength of light would it absorb going from $n=1$ to $n=2$?
 

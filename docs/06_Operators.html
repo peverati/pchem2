@@ -352,7 +352,7 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
@@ -360,18 +360,20 @@ window.Quarto = {
     <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">The Live Textbook of Physical Chemistry 2</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/peverati/pchem2/issues/new"> <i class="bi bi-bug" role="img" aria-label="Report a bug">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
@@ -548,7 +550,7 @@ window.Quarto = {
   <li><a href="#sec-quest6" id="toc-sec-quest6" class="nav-link" data-scroll-target="#sec-quest6"><span class="header-section-number">6.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/06_Operators.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content" tabindex="-1">
@@ -737,13 +739,13 @@ b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d\mathbf{r}\\
 \end{aligned}
 \tag{6.20}\]</span></span></p>
 <p>This result shows that the expectation value of <span class="math inline">\(A\)</span> is a weighted average of the two eigenvalues, with weights given by the squared magnitudes of the coefficients, <span class="math inline">\(\vert c_a\vert^2\)</span> and <span class="math inline">\(\vert c_b\vert^2\)</span>. Notice that <span class="math inline">\(\langle A\rangle\)</span> can be any number between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, but each individual measurement can only give either <span class="math inline">\(a\)</span> or <span class="math inline">\(b\)</span>, with probabilities <span class="math inline">\(\vert c_a\vert^2\)</span> and <span class="math inline">\(\vert c_b\vert^2\)</span>, respectively. (What happens to the wave function after such a measurement is one of the most surprising aspects of quantum mechanics, and we will discuss it in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div id="tip-measuring-the-energy-of-a-superposition" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Worked example: measuring the energy of a superposition
+Example&nbsp;6.1: Measuring the energy of a superposition
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1176,7 +1178,7 @@ Figure&nbsp;6.2: Top: probability density of a particle in a box in the superpos
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Answers
+<span class="screen-reader-only">Example</span>Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1271,6 +1273,14 @@ window.addEventListener("load", function () {
   }
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
+});
+
+// "Report a bug" link in the top bar: icon only, with the label shown on hover
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('#quarto-header a[href*="/issues/new"]').forEach(function (a) {
+    a.setAttribute("title", "Report a bug");
+    a.setAttribute("aria-label", "Report a bug");
+  });
 });
 </script>
 <script type="ojs-module-contents">
@@ -1828,7 +1838,7 @@ window._ojs.runtime.interpretFromScriptTags();
     </div>   
     <div class="nav-footer-center">
 <p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Figure scripts: <a href="https://github.com/peverati/pchem2/blob/master/scripts/LICENSE">MIT</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/06_Operators.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

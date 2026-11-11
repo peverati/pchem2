@@ -174,8 +174,8 @@ This general uncertainty relation tells us that the precision with which two qua
 
 You may also find in other textbooks an *energy–time* uncertainty relation, $\Delta E\,\Delta t\gtrsim\hbar/2$. Its meaning is different from @eq-heis4, because time is not an observable described by an operator, but a parameter that labels the evolution of the system. The energy–time relation states that a state that lasts only for a short time, $\Delta t$ (for example, an excited state that quickly emits a photon), does not have a perfectly defined energy, but an energy spread of about $\hbar/\Delta t$. This is the reason why spectral lines always have a finite width: the shorter the lifetime of the excited state, the broader the line.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: how uncertain is the velocity of an electron in an atom?
+::: {#tip-how-uncertain-is-the-velocity-of-an-elec .callout-tip collapse="true" icon="false"}
+## How uncertain is the velocity of an electron in an atom?
 
 An electron in an atom is confined to a region of about $1\;\text{Å}$. Taking $\sigma_x=1.0\times10^{-10}\;\text{m}$, what is the smallest possible uncertainty in its velocity?
 

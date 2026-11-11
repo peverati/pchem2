@@ -16,7 +16,9 @@ $$ {#eq-newt1}
 
 Or, in other words, if we know the net force acting on a system of mass $m$ at position $\mathbf{r}$ at some time $t_0$, we can use @eq-newt1 to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.^[Notice that $\mathbf{r}$ $\in$ $\mathbb{R}^{3}$ is the position vector and $\dot{\mathbf{r}}$ $\in$ $\mathbb{R}^{3}$ is the velocity vector. As such, all the equations of classical mechanics are vector equations in 3-dimensional space, and not just simple numerical equations. To simplify the picture, we can restrict ourselves to a 1-dimensional space, replace $\mathbf{r}$ with $x$, and forget the complications of vector algebra, as we do in the examples.]
 
-::: {#exm-newtonianEx}
+::: {#tip-newtonianEx .callout-tip collapse="true" icon="false"}
+## A ball tossed straight up (Newton)
+
 A ball of mass $m$ is at ground level and tossed straight up from an initial position $x_0$ with an initial velocity $\dot{x}_0$ and subject to gravity alone. Calculate the equation of motion for the ball (i.e. where is the ball going to be after some time $t$?).^[This example is based on [Rhett Allain's blog post on classical mechanics](https://rhettallain.com/2018/10/31/classical-mechanics-newtonian-lagrangian-and-hamiltonian/).]
 
 *Solution:* Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:
@@ -110,7 +112,9 @@ $$ {#eq-ham3}
 
 These two equations are less mysterious than they look. If we apply them to @eq-ham2, the first one gives $\dot{x}=\frac{p}{m}$, which is just the definition of momentum, @eq-ham1, read backwards. The second one gives $\dot{p}=-\frac{dV}{dx}$. Since $\dot{p}=m\ddot{x}$, and since minus the derivative of the potential energy is the force, $F=-\frac{dV}{dx}$, this is just Newton's equation, $F=m\ddot{x}$, written in a different form. Hamilton's equations, in other words, contain no new physics: they are a different way of organizing the same information, starting from the energy instead of the forces.
 
-::: {#exm-hamex1}
+::: {#tip-hamex1 .callout-tip collapse="true" icon="false"}
+## The same ball, using the Hamiltonian
+
 Let's apply the Hamiltonian formulation to the same problem as in the previous example: a ball of mass $m$ tossed straight up and subject only to gravity.
 
 The potential energy of the ball at height $x$ is $V(x)=mgx$, so the Hamiltonian, @eq-ham2, is:

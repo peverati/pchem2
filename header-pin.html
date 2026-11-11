@@ -15,4 +15,12 @@ window.addEventListener("load", function () {
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
 });
+
+// "Report a bug" link in the top bar: icon only, with the label shown on hover
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('#quarto-header a[href*="/issues/new"]').forEach(function (a) {
+    a.setAttribute("title", "Report a bug");
+    a.setAttribute("aria-label", "Report a bug");
+  });
+});
 </script>

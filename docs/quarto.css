@@ -64,3 +64,16 @@ body.quarto-dark svg[class^="plot-"] [aria-label$="grid"] { stroke-opacity: 0.25
 .interactive-row { flex-wrap: nowrap; }
 @media (max-width: 767.98px) { .interactive-row { flex-wrap: wrap; } }
 .interactive-title { font-weight: 600; text-align: center; margin-bottom: 0.25rem; }
+/* "Report a bug" icon in the top bar: same size and spacing as the GitHub/PDF/dark-mode icons */
+#quarto-header .navbar-nav .nav-link[href*="/issues/new"] { padding-left: 0.25rem; padding-right: 0.25rem; }
+#quarto-header .navbar-nav .nav-link[href*="/issues/new"] .bi { font-size: 1rem; }
+/* Top bar order (no hamburger menu): title | bug | GitHub, PDF, dark mode | logo.
+   On narrow windows the title is dropped and the icons stay at the right. */
+#quarto-header .navbar-container { display: flex; flex-wrap: nowrap; justify-content: flex-start; }
+#quarto-header .navbar-nav.me-auto { order: 1 !important; flex-grow: 1; }
+#quarto-header .navbar-nav.ms-auto { order: 2 !important; margin-left: auto !important; flex-direction: row; }
+#quarto-header .quarto-navbar-tools { order: 3 !important; }
+#quarto-header .navbar-brand-container { order: 4 !important; margin-left: 0.75rem !important; margin-right: 0 !important; }
+@media (max-width: 991.98px) {
+  #quarto-header .navbar-nav.me-auto { display: none !important; }
+}

@@ -196,8 +196,8 @@ $$ {#eq-ee6}
 
 This result shows that the expectation value of $A$ is a weighted average of the two eigenvalues, with weights given by the squared magnitudes of the coefficients, $\vert c_a\vert^2$ and $\vert c_b\vert^2$. Notice that $\langle A\rangle$ can be any number between $a$ and $b$, but each individual measurement can only give either $a$ or $b$, with probabilities $\vert c_a\vert^2$ and $\vert c_b\vert^2$, respectively. (What happens to the wave function after such a measurement is one of the most surprising aspects of quantum mechanics, and we will discuss it in @sec-Weirdness.)^[A similar presentation of these topics can be found in Prof. C. David Sherrill's [A Brief Review of Elementary Quantum Chemistry](http://vergil.chemistry.gatech.edu/notes/quantrev/node1.html) notes.]
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: measuring the energy of a superposition
+::: {#tip-measuring-the-energy-of-a-superposition .callout-tip collapse="true" icon="false"}
+## Measuring the energy of a superposition
 
 A particle in a box is described by $\psi=\sqrt{\tfrac{1}{3}}\,\psi_1+\sqrt{\tfrac{2}{3}}\,\psi_2$, where $\psi_1$ and $\psi_2$ are the two lowest eigenfunctions. What can a measurement of the energy give, with which probabilities, and what is the expectation value of the energy?
 

@@ -65,8 +65,8 @@ $$ {#eq-spin3}
 
 This equation is not sufficient to determine the values of the coefficients since they are complex numbers. @Eq-spin3, however, tells us that the squared magnitudes of the coefficients can be interpreted as probabilities of outcome from the experiment. This is true because their values are obtained from the normalization condition, and the normalization condition guarantees that the system is observed with probability equal to one. Summarizing, since we started with random initial directions, each of the two states, $\alpha$ and $\beta$, will be observed with equal probability of $\frac{1}{2}$.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: spin probabilities
+::: {#tip-spin-probabilities .callout-tip collapse="true" icon="false"}
+## Spin probabilities
 
 An electron is described by the spin function $\chi=\tfrac{\sqrt{3}}{2}\,\alpha+\tfrac{1}{2}\,\beta$. What are the probabilities of measuring spin up and spin down along $z$, and what is $\langle S_z\rangle$?
 

@@ -83,8 +83,8 @@ This requirement is called the **normalization condition**, and a wave function 
 
 The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how *likely* it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in @sec-Weirdness.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: normalizing a wave function
+::: {#tip-normalizing-a-wave-function .callout-tip collapse="true" icon="false"}
+## Normalizing a wave function
 
 A particle confined between $x=0$ and $x=a$ is described by $\psi(x)=N\,x(a-x)$ inside this region and $\psi=0$ outside. Find the normalization constant $N$.
 

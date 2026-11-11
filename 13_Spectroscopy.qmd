@@ -136,6 +136,37 @@ For CO at $298\;\text{K}$, $J_\text{max}\approx 6.8$, so the most populated leve
 
 ![Left: population of the rotational levels of CO at 298 K, calculated with the Boltzmann distribution. The purple dashed line marks the most populated level, $J_\text{max}$. Right: the corresponding simulated rotational absorption spectrum.](img/CO_rot.png){#fig-Fig5c13 fig-alt="Left: bar plot of the fraction of CO molecules in each rotational level at 298 kelvin, rising to a maximum near J equals 7 and then decaying. Right: the corresponding simulated rotational spectrum of equally spaced lines with the same rise-and-fall intensity pattern." width="100%"}
 
+::: {.content-visible when-format="html"}
+**Try it yourself.** Change the temperature and the rotational constant, $B$, and see how the populations of the rotational levels and the shape of the rotational spectrum change. Try the values for CO ($B=1.93\;\text{cm}^{-1}$) and HCl ($B=10.6\;\text{cm}^{-1}$).
+
+```{ojs}
+//| echo: false
+viewof rotT = Inputs.range([10, 1000], {step: 5, value: 298, label: "temperature (K)"})
+viewof rotB = Inputs.range([0.5, 15], {step: 0.01, value: 1.93, label: "rotational constant B (cm⁻¹)"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const kT = 0.69504 * rotT;   // kT/hc in cm^-1
+  const Jmax = Math.min(150, Math.ceil(Math.sqrt(12 * kT / rotB)) + 3);
+  const pops = d3.range(Jmax + 1).map(J => ({J, w: (2 * J + 1) * Math.exp(-rotB * J * (J + 1) / kT)}));
+  const Z = d3.sum(pops, d => d.w); pops.forEach(d => d.f = d.w / Z);
+  const lines = pops.slice(0, -1).map(d => ({nu: 2 * rotB * (d.J + 1), f: d.f}));
+  const jm = Math.sqrt(kT / (2 * rotB)) - 0.5;
+  const narrow = width < 600, w = narrow ? width : Math.floor((width - 16) / 2);
+  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 280, grid: true, x: {label: "J"}, y: {label: "fraction of molecules"},
+    caption: `Most populated level: J = ${Math.max(0, Math.round(jm))} (J_max = ${Math.max(0, jm).toFixed(1)})`,
+    marks: [Plot.rectY(pops, {x1: d => d.J - 0.4, x2: d => d.J + 0.4, y: "f", fill: "#1f77b4"}), Plot.ruleY([0])]});
+  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 280, grid: true, x: {label: "wavenumber (cm⁻¹)"}, y: {label: "intensity", ticks: []},
+    caption: `Lines at 2B(J+1), spaced by 2B = ${(2 * rotB).toFixed(2)} cm⁻¹`,
+    marks: [Plot.ruleX(lines, {x: "nu", y1: 0, y2: "f", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
+  return htl.html`<div style="display: flex; flex-wrap: ${narrow ? "wrap" : "nowrap"}; gap: 16px; align-items: flex-start;">${p1}${p2}</div>`;
+}
+```
+:::
+
+
 
 For non-linear molecules, there are up to three different moments of inertia, and the rotational energy levels are more complicated. Only a few special cases (such as symmetric tops like $\mathrm{NH}_3$) can be solved analytically, and the other cases are treated numerically. The principle, however, is the same: from the measured lines we obtain the moments of inertia, and from them the geometry of the molecule.
 
@@ -198,8 +229,8 @@ The simulated spectrum of CO is reported in @fig-Fig2c13, and the transitions th
 ![Rotational levels of the vibrational states $v=0$ and $v=1$ of a diatomic molecule, with the transitions of the P-branch ($\Delta J=-1$, blue) and of the R-branch ($\Delta J=+1$, red) of the fundamental band.](img/Rovib_levels.png){#fig-Fig3c13 fig-alt="Two ladders of rotational levels, J equals 0 to 4, one for v equals 0 at the bottom and one for v equals 1 at the top. Blue upward arrows labeled P(1) to P(4) go from each J to J minus 1 in the upper ladder; red arrows labeled R(0) to R(3) go from each J to J plus 1." width="70%"}
 
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: how stiff is the bond of HCl?
+::: {#tip-how-stiff-is-the-bond-of-HCl .callout-tip collapse="true" icon="false"}
+## How stiff is the bond of HCl?
 
 The fundamental vibrational transition of $\mathrm{H}^{35}\mathrm{Cl}$ is observed at $\tilde{\nu}=2990\;\text{cm}^{-1}$. What is the force constant of the bond?
 

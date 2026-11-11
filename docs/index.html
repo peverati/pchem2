@@ -287,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
@@ -295,18 +295,20 @@ ul.task-list li input[type="checkbox"] {
     <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">The Live Textbook of Physical Chemistry 2</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/peverati/pchem2/issues/new"> <i class="bi bi-bug" role="img" aria-label="Report a bug">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
@@ -463,7 +465,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to use this book</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content" tabindex="-1">
@@ -523,6 +525,7 @@ ul.task-list li input[type="checkbox"] {
 </blockquote>
 <p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar’s corresponding icon. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on <a href="https://github.com/peverati/PChem2">over there</a> and fork the book.</p>
 <p>The appendices at the end of the book review the mathematical tools that we use (<a href="A1_Math.html" class="quarto-xref"><span>Appendix A — Mathematical Toolkit</span></a>), collect physical constants and unit conversions (<a href="A2_Constants.html" class="quarto-xref"><span>Appendix B — Physical Constants and Unit Conversions</span></a>), and suggest further reading for when you want a second explanation or more depth (<a href="A3_References.html" class="quarto-xref"><span>Appendix C — Further Reading and References</span></a>).</p>
+<p><strong>A note on the use of AI.</strong> The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic’s Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching quantum chemistry are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed and interactive figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.</p>
 <blockquote class="blockquote">
 <p>If you spot a mistake or a typo, contact Dr.&nbsp;Peverati via <a href="mailto:rpeverati@fit.edu">email</a>.</p>
 </blockquote>
@@ -603,6 +606,14 @@ window.addEventListener("load", function () {
   }
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
+});
+
+// "Report a bug" link in the top bar: icon only, with the label shown on hover
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('#quarto-header a[href*="/issues/new"]').forEach(function (a) {
+    a.setAttribute("title", "Report a bug");
+    a.setAttribute("aria-label", "Report a bug");
+  });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1146,7 +1157,7 @@ window.addEventListener("load", function () {
     </div>   
     <div class="nav-footer-center">
 <p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Figure scripts: <a href="https://github.com/peverati/pchem2/blob/master/scripts/LICENSE">MIT</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

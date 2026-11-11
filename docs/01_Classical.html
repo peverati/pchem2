@@ -315,7 +315,7 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
@@ -323,18 +323,20 @@ window.Quarto = {
     <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">The Live Textbook of Physical Chemistry 2</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/peverati/pchem2/issues/new"> <i class="bi bi-bug" role="img" aria-label="Report a bug">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
@@ -508,7 +510,7 @@ window.Quarto = {
   <li><a href="#sec-quest1" id="toc-sec-quest1" class="nav-link" data-scroll-target="#sec-quest1"><span class="header-section-number">1.4.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/01_Classical.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content" tabindex="-1">
@@ -543,8 +545,19 @@ window.Quarto = {
 F_{\mathrm{net}}(\mathbf{r}) = m\ddot{\mathbf{r}} = m \frac{d^2 \mathbf{r}}{dt^2}.
 \tag{1.1}\]</span></span></p>
 <p>Or, in other words, if we know the net force acting on a system of mass <span class="math inline">\(m\)</span> at position <span class="math inline">\(\mathbf{r}\)</span> at some time <span class="math inline">\(t_0\)</span>, we can use <a href="#eq-newt1" class="quarto-xref">eq.&nbsp;<span>1.1</span></a> to calculate the position of the system at any future (or past) time. We have completely determined the dynamical evolution of the system.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div id="exm-newtonianEx" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.1</strong></span> A ball of mass <span class="math inline">\(m\)</span> is at ground level and tossed straight up from an initial position <span class="math inline">\(x_0\)</span> with an initial velocity <span class="math inline">\(\dot{x}_0\)</span> and subject to gravity alone. Calculate the equation of motion for the ball (i.e.&nbsp;where is the ball going to be after some time <span class="math inline">\(t\)</span>?).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<div id="tip-newtonianEx" class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example&nbsp;1.1: A ball tossed straight up (Newton)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A ball of mass <span class="math inline">\(m\)</span> is at ground level and tossed straight up from an initial position <span class="math inline">\(x_0\)</span> with an initial velocity <span class="math inline">\(\dot{x}_0\)</span> and subject to gravity alone. Calculate the equation of motion for the ball (i.e.&nbsp;where is the ball going to be after some time <span class="math inline">\(t\)</span>?).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <p><em>Solution:</em> Since the only force acting on the ball is gravity, we can use the equation for the gravitational force to start our derivation:</p>
 <p><span id="eq-newt2"><span class="math display">\[
 F_{\mathrm{gravity}}=-mg,
@@ -584,6 +597,8 @@ x &amp;= x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
 <p><em>Numerical problem:</em> How much time will a ball ejected from a height of <span class="math inline">\(1 \;\mathrm{m}\)</span> at an initial velocity of <span class="math inline">\(10 \;\mathrm{m/s}\)</span> take to hit the floor?</p>
 <p>We can use the equation of motion obtained above to solve this problem, and obtain for this specific case <span class="math inline">\(t\simeq2.14\;\mathrm{s}\)</span>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 </div>
+</div>
+</div>
 <p>Newton’s equation is not the only way of writing the laws of classical mechanics. Physicists have developed other, equivalent formulations, which give exactly the same results but are more convenient for some problems. The most famous are the <em>Lagrangian</em> formulation, based on the difference between the kinetic and the potential energy of a system, and the <em>Hamiltonian</em> formulation, based on their sum.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Only the second one will be important for us, because it is the one that quantum mechanics is built upon.</p>
 </section>
 <section id="hamiltonian-formulation" class="level3" data-number="1.1.2">
@@ -611,8 +626,19 @@ H(x,p) = \frac{p^2}{2m} + V(x).
 \end{aligned}
 \tag{1.10}\]</span></span></p>
 <p>These two equations are less mysterious than they look. If we apply them to <a href="#eq-ham2" class="quarto-xref">eq.&nbsp;<span>1.9</span></a>, the first one gives <span class="math inline">\(\dot{x}=\frac{p}{m}\)</span>, which is just the definition of momentum, <a href="#eq-ham1" class="quarto-xref">eq.&nbsp;<span>1.7</span></a>, read backwards. The second one gives <span class="math inline">\(\dot{p}=-\frac{dV}{dx}\)</span>. Since <span class="math inline">\(\dot{p}=m\ddot{x}\)</span>, and since minus the derivative of the potential energy is the force, <span class="math inline">\(F=-\frac{dV}{dx}\)</span>, this is just Newton’s equation, <span class="math inline">\(F=m\ddot{x}\)</span>, written in a different form. Hamilton’s equations, in other words, contain no new physics: they are a different way of organizing the same information, starting from the energy instead of the forces.</p>
-<div id="exm-hamex1" class="theorem example">
-<p><span class="theorem-title"><strong>Example 1.2</strong></span> Let’s apply the Hamiltonian formulation to the same problem as in the previous example: a ball of mass <span class="math inline">\(m\)</span> tossed straight up and subject only to gravity.</p>
+<div id="tip-hamex1" class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example&nbsp;1.2: The same ball, using the Hamiltonian
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Let’s apply the Hamiltonian formulation to the same problem as in the previous example: a ball of mass <span class="math inline">\(m\)</span> tossed straight up and subject only to gravity.</p>
 <p>The potential energy of the ball at height <span class="math inline">\(x\)</span> is <span class="math inline">\(V(x)=mgx\)</span>, so the Hamiltonian, <a href="#eq-ham2" class="quarto-xref">eq.&nbsp;<span>1.9</span></a>, is:</p>
 <p><span id="eq-ham4"><span class="math display">\[
 H=\frac{p^2}{2m}+mgx.
@@ -628,6 +654,8 @@ H=\frac{p^2}{2m}+mgx.
 <p><span id="eq-ham6"><span class="math display">\[
 x = x_0 + \dot{x}_0 t -\frac{1}{2}gt^2.
 \tag{1.13}\]</span></span></p>
+</div>
+</div>
 </div>
 <p>So, if the Hamiltonian gives the same answers as Newton’s equation, why do we bother? There are two reasons, both important for what follows:</p>
 <ol type="1">
@@ -921,16 +949,16 @@ c = \lambda\nu.
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Answers
+<span class="screen-reader-only">Example</span>Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.e, 3.d, 4.b, 5.c, 6.d, 7.e, 8.a, 9.b, 10.a</p>
 </div>
@@ -1022,6 +1050,14 @@ window.addEventListener("load", function () {
   }
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
+});
+
+// "Report a bug" link in the top bar: icon only, with the label shown on hover
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('#quarto-header a[href*="/issues/new"]').forEach(function (a) {
+    a.setAttribute("title", "Report a bug");
+    a.setAttribute("aria-label", "Report a bug");
+  });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1568,7 +1604,7 @@ window.addEventListener("load", function () {
     </div>   
     <div class="nav-footer-center">
 <p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Figure scripts: <a href="https://github.com/peverati/pchem2/blob/master/scripts/LICENSE">MIT</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/01_Classical.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -272,8 +272,8 @@ The same procedure can be applied to all the homonuclear diatomic molecules of t
 
 Notice how the experimental data follow the predicted bond orders: as the bond order increases from $\mathrm{Li}_2$ to $\mathrm{N}_2$, the bonds get shorter and stronger, and as it decreases from $\mathrm{N}_2$ to $\mathrm{F}_2$, they get longer and weaker. The molecules with a bond order of zero, $\mathrm{Be}_2$ and $\mathrm{Ne}_2$, are not chemically bound (they exist only as extremely weak van der Waals complexes at very low temperatures). Notice also that MO theory correctly predicts that $\mathrm{B}_2$, like $\mathrm{O}_2$, is paramagnetic: because of the $2s$–$2p$ mixing, its last two electrons are described by the two degenerate $\pi_u$ orbitals, with parallel spins.
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: removing an electron from O$_2$
+::: {#tip-removing-an-electron-from-O .callout-tip collapse="true" icon="false"}
+## Removing an electron from O$_2$
 
 What happens to the bond of $\mathrm{O}_2$ when we remove one electron to form $\mathrm{O}_2^+$?
 

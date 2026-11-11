@@ -28,6 +28,8 @@ Navigating the book should be straightforward. On each page, there is a useful s
 
 The appendices at the end of the book review the mathematical tools that we use (@sec-MathToolkit), collect physical constants and unit conversions (@sec-Constants), and suggest further reading for when you want a second explanation or more depth (@sec-FurtherReading).
 
+**A note on the use of AI.** The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic's Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching quantum chemistry are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed and interactive figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.
+
 > If you spot a mistake or a typo, contact Dr. Peverati via [email](mailto:rpeverati@fit.edu). 
 
 [//]: ## A note on units {-}

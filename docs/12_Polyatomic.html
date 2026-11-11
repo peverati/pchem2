@@ -27,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -107,6 +142,8 @@ ul.task-list li input[type="checkbox"] {
   document.addEventListener("DOMContentLoaded", function () { glue(document); });
 })();
 </script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -315,7 +352,7 @@ window.Quarto = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+    <nav class="navbar navbar-expand " data-bs-theme="dark" aria-label="Site">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="https://peverati.github.io" class="navbar-brand navbar-brand-logo">
@@ -323,18 +360,20 @@ window.Quarto = {
     <img src="./img/logo-dark.png" alt="Peverati research group logo" class="navbar-logo dark-content">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+          <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">The Live Textbook of Physical Chemistry 2</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
+          <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/peverati/pchem2/issues/new"> <i class="bi bi-bug" role="img" aria-label="Report a bug">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          <div class="quarto-navbar-tools tools-wide">
     <a href="https://github.com/peverati/pchem2" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <a href="./pchem2.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
@@ -509,7 +548,7 @@ window.Quarto = {
   <li><a href="#sec-quest12" id="toc-sec-quest12" class="nav-link" data-scroll-target="#sec-quest12"><span class="header-section-number">12.5.2</span> Study Questions</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/12_Polyatomic.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content" tabindex="-1">
@@ -876,13 +915,13 @@ E_k = \alpha + 2\beta\cos\left(\frac{k\pi}{N+1}\right), \qquad c_{jk} = \sqrt{\f
 \tag{12.18}\]</span></span> The <span class="math inline">\(\pi\)</span> electrons of a conjugated chain behave like particles in a one-dimensional box, which is why the particle in a box is a good model for the colors of conjugated molecules.</p></li>
 <li><p><strong>Bonding character</strong>: in the lowest orbital, all the coefficients have the same sign, and the orbital is bonding between every pair of neighbors. In the second orbital, the HOMO, the coefficients have the same sign on atoms <span class="math inline">\(1\)</span> and <span class="math inline">\(2\)</span> and on atoms <span class="math inline">\(3\)</span> and <span class="math inline">\(4\)</span>, but opposite signs on atoms <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>. The HOMO is therefore bonding between <span class="math inline">\(\mathrm{C}_1\)</span>–<span class="math inline">\(\mathrm{C}_2\)</span> and <span class="math inline">\(\mathrm{C}_3\)</span>–<span class="math inline">\(\mathrm{C}_4\)</span>, and antibonding between <span class="math inline">\(\mathrm{C}_2\)</span>–<span class="math inline">\(\mathrm{C}_3\)</span>. Adding the contributions of the two occupied orbitals, the outer bonds have more double-bond character than the central one, in agreement with the experimental bond lengths of butadiene (<span class="math inline">\(1.34\;\text{Å}\)</span> for the outer bonds and <span class="math inline">\(1.46\;\text{Å}\)</span> for the central one).</p></li>
 </ol>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div id="tip-huckel-allyl" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Worked example: Hückel theory for the allyl system
+Example&nbsp;12.1: Hückel theory for the allyl system
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -911,6 +950,62 @@ E_k = \alpha + 2\beta\cos\left(\frac{k\pi}{N+1}\right), \qquad c_{jk} = \sqrt{\f
 Figure&nbsp;12.6: Hückel <span class="math inline">\(\pi\)</span> energy levels of ethylene, butadiene, hexatriene, and benzene (blue: bonding, red: antibonding), with their <span class="math inline">\(\pi\)</span> electrons. The dotted line marks the energy <span class="math inline">\(\alpha\)</span> of an isolated carbon <span class="math inline">\(2p\)</span> orbital. Since <span class="math inline">\(\beta&lt;0\)</span>, levels with <span class="math inline">\(+\beta\)</span> are lower in energy.
 </figcaption>
 </figure>
+</div>
+<p><strong>Try it yourself.</strong> Choose the number of carbon atoms and whether they form a chain (a polyene) or a ring, and see the Hückel <span class="math inline">\(\pi\)</span> levels, with the <span class="math inline">\(\pi\)</span> electrons of the neutral molecule (energies relative to <span class="math inline">\(\alpha\)</span>, in units of <span class="math inline">\(|\beta|\)</span>; lower is more stable). Watch how the HOMO–LUMO gap shrinks as the chain gets longer, and compare rings with <span class="math inline">\(4n+2\)</span> and <span class="math inline">\(4n\)</span> electrons.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="361" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 360;"><span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>viewof hN <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">2</span><span class="op">,</span> <span class="dv">14</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"number of carbon atoms"</span>})</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a>viewof hRing <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">radio</span>([<span class="st">"chain"</span><span class="op">,</span> <span class="st">"ring"</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="st">"chain"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"arrangement"</span>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="366" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 365;"><span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> N <span class="op">=</span> (hRing <span class="op">===</span> <span class="st">"ring"</span> <span class="op">&amp;&amp;</span> hN <span class="op">&lt;</span> <span class="dv">4</span>) <span class="op">?</span> <span class="dv">4</span> <span class="op">:</span> hN<span class="op">,</span> ring <span class="op">=</span> hRing <span class="op">===</span> <span class="st">"ring"</span><span class="op">;</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a>  <span class="co">// E = alpha + 2 beta cos(theta); with beta = -|beta|, (E - alpha)/|beta| = -2 cos(theta)</span></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> lev <span class="op">=</span> ring <span class="op">?</span> d3<span class="op">.</span><span class="fu">range</span>(N)<span class="op">.</span><span class="fu">map</span>(k <span class="kw">=&gt;</span> <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(<span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> k <span class="op">/</span> N)) <span class="op">:</span> d3<span class="op">.</span><span class="fu">range</span>(<span class="dv">1</span><span class="op">,</span> N <span class="op">+</span> <span class="dv">1</span>)<span class="op">.</span><span class="fu">map</span>(k <span class="kw">=&gt;</span> <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">cos</span>(k <span class="op">*</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">/</span> (N <span class="op">+</span> <span class="dv">1</span>)))<span class="op">;</span></span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>  lev <span class="op">=</span> lev<span class="op">.</span><span class="fu">map</span>(e <span class="kw">=&gt;</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(e <span class="op">*</span> <span class="fl">1e9</span>) <span class="op">/</span> <span class="fl">1e9</span>)<span class="op">.</span><span class="fu">sort</span>((a<span class="op">,</span> b) <span class="kw">=&gt;</span> a <span class="op">-</span> b)<span class="op">;</span></span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> groups <span class="op">=</span> d3<span class="op">.</span><span class="fu">groups</span>(lev<span class="op">,</span> e <span class="kw">=&gt;</span> e<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">6</span>))<span class="op">.</span><span class="fu">map</span>(([key<span class="op">,</span> es]) <span class="kw">=&gt;</span> ({<span class="dt">e</span><span class="op">:</span> es[<span class="dv">0</span>]<span class="op">,</span> <span class="dt">n</span><span class="op">:</span> es<span class="op">.</span><span class="at">length</span>}))<span class="op">;</span></span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>  <span class="co">// fill N electrons, two per orbital, one at a time in degenerate levels (Hund's rule)</span></span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> left <span class="op">=</span> N<span class="op">;</span> <span class="kw">const</span> segs <span class="op">=</span> []<span class="op">,</span> elec <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> g <span class="kw">of</span> groups) {</span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> occ <span class="op">=</span> []<span class="op">;</span> <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> g<span class="op">.</span><span class="at">n</span><span class="op">;</span> j<span class="op">++</span>) occ<span class="op">.</span><span class="fu">push</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> pass <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> pass <span class="op">&lt;</span> <span class="dv">2</span><span class="op">;</span> pass<span class="op">++</span>) <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> g<span class="op">.</span><span class="at">n</span> <span class="op">&amp;&amp;</span> left <span class="op">&gt;</span> <span class="dv">0</span><span class="op">;</span> j<span class="op">++</span>) { occ[j]<span class="op">++;</span> left<span class="op">--;</span> }</span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (<span class="kw">let</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> g<span class="op">.</span><span class="at">n</span><span class="op">;</span> j<span class="op">++</span>) {</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> xc <span class="op">=</span> (j <span class="op">-</span> (g<span class="op">.</span><span class="at">n</span> <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span>) <span class="op">*</span> <span class="fl">1.1</span><span class="op">;</span></span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>      segs<span class="op">.</span><span class="fu">push</span>({<span class="dt">x1</span><span class="op">:</span> xc <span class="op">-</span> <span class="fl">0.4</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> xc <span class="op">+</span> <span class="fl">0.4</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> g<span class="op">.</span><span class="at">e</span>})<span class="op">;</span></span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (occ[j] <span class="op">&gt;=</span> <span class="dv">1</span>) elec<span class="op">.</span><span class="fu">push</span>({<span class="dt">x</span><span class="op">:</span> xc <span class="op">-</span> (occ[j] <span class="op">===</span> <span class="dv">2</span> <span class="op">?</span> <span class="fl">0.13</span> <span class="op">:</span> <span class="dv">0</span>)<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> g<span class="op">.</span><span class="at">e</span><span class="op">,</span> <span class="dt">t</span><span class="op">:</span> <span class="st">"↑"</span>})<span class="op">;</span></span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (occ[j] <span class="op">===</span> <span class="dv">2</span>) elec<span class="op">.</span><span class="fu">push</span>({<span class="dt">x</span><span class="op">:</span> xc <span class="op">+</span> <span class="fl">0.13</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> g<span class="op">.</span><span class="at">e</span><span class="op">,</span> <span class="dt">t</span><span class="op">:</span> <span class="st">"↓"</span>})<span class="op">;</span></span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> occE <span class="op">=</span> []<span class="op">;</span> <span class="kw">let</span> n2 <span class="op">=</span> N<span class="op">;</span> <span class="cf">for</span> (<span class="kw">const</span> e <span class="kw">of</span> lev) { <span class="kw">const</span> k <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="dv">2</span><span class="op">,</span> n2)<span class="op">;</span> n2 <span class="op">-=</span> k<span class="op">;</span> <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> k<span class="op">;</span> i<span class="op">++</span>) occE<span class="op">.</span><span class="fu">push</span>(e)<span class="op">;</span> }</span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> homoIdx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">ceil</span>(N <span class="op">/</span> <span class="dv">2</span>) <span class="op">-</span> <span class="dv">1</span><span class="op">,</span> gap <span class="op">=</span> lev[homoIdx <span class="op">+</span> <span class="dv">1</span>] <span class="op">-</span> lev[homoIdx]<span class="op">;</span></span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> Epi <span class="op">=</span> occE<span class="op">.</span><span class="fu">reduce</span>((s<span class="op">,</span> e) <span class="kw">=&gt;</span> s <span class="op">+</span> e<span class="op">,</span> <span class="dv">0</span>)<span class="op">,</span> Eloc <span class="op">=</span> <span class="op">-</span><span class="dv">2</span> <span class="op">*</span> N <span class="op">/</span> <span class="dv">2</span><span class="op">;</span>   <span class="co">// N/2 isolated double bonds, each 2(alpha + beta)</span></span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> deloc <span class="op">=</span> Epi <span class="op">-</span> Eloc<span class="op">;</span></span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> p <span class="op">=</span> Plot<span class="op">.</span><span class="fu">plot</span>({<span class="dt">style</span><span class="op">:</span> {<span class="dt">fontSize</span><span class="op">:</span> <span class="st">"14px"</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"var(--bs-body-color)"</span><span class="op">,</span> <span class="dt">background</span><span class="op">:</span> <span class="st">"transparent"</span>}<span class="op">,</span> <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">60</span><span class="op">,</span> <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">45</span><span class="op">,</span> <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">35</span><span class="op">,</span> <span class="dt">height</span><span class="op">:</span> <span class="dv">380</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(width<span class="op">,</span> <span class="dv">520</span>)<span class="op">,</span></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a>    <span class="dt">x</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">2.6</span><span class="op">,</span> <span class="fl">2.6</span>]<span class="op">,</span> <span class="dt">axis</span><span class="op">:</span> <span class="kw">null</span>}<span class="op">,</span> <span class="dt">y</span><span class="op">:</span> {<span class="dt">domain</span><span class="op">:</span> [<span class="op">-</span><span class="fl">2.3</span><span class="op">,</span> <span class="fl">2.3</span>]<span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"(E − α) / |β|"</span><span class="op">,</span> <span class="dt">reverse</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a>    <span class="dt">caption</span><span class="op">:</span> <span class="vs">`</span><span class="sc">${</span>ring <span class="op">?</span> <span class="st">"Ring"</span> <span class="op">:</span> <span class="st">"Chain"</span><span class="sc">}</span><span class="vs"> of </span><span class="sc">${</span>N<span class="sc">}</span><span class="vs"> carbon atoms`</span><span class="op">,</span></span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a>    <span class="dt">marks</span><span class="op">:</span> [Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>]<span class="op">,</span> {<span class="dt">stroke</span><span class="op">:</span> <span class="st">"gray"</span><span class="op">,</span> <span class="dt">strokeDasharray</span><span class="op">:</span> <span class="st">"4,4"</span>})<span class="op">,</span></span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">link</span>(segs<span class="op">,</span> {<span class="dt">x1</span><span class="op">:</span> <span class="st">"x1"</span><span class="op">,</span> <span class="dt">x2</span><span class="op">:</span> <span class="st">"x2"</span><span class="op">,</span> <span class="dt">y1</span><span class="op">:</span> <span class="st">"y"</span><span class="op">,</span> <span class="dt">y2</span><span class="op">:</span> <span class="st">"y"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"currentColor"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">3</span>})<span class="op">,</span></span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>            Plot<span class="op">.</span><span class="fu">text</span>(elec<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"x"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"y"</span><span class="op">,</span> <span class="dt">text</span><span class="op">:</span> <span class="st">"t"</span><span class="op">,</span> <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">18</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"#d62728"</span>})]})<span class="op">;</span></span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;</span><span class="sc">${</span>p<span class="sc">}</span><span class="vs">&lt;p style="margin: 0.25rem 0 0.75rem;"&gt;HOMO–LUMO gap: &lt;b&gt;</span><span class="sc">${</span>gap<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs"> |β|&lt;/b&gt; &amp;nbsp;·&amp;nbsp; π energy: &lt;b&gt;</span><span class="sc">${</span>N<span class="sc">}</span><span class="vs">α + </span><span class="sc">${</span>(<span class="op">-</span>Epi)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">β&lt;/b&gt; &amp;nbsp;·&amp;nbsp; delocalization energy (vs. </span><span class="sc">${</span>N <span class="op">/</span> <span class="dv">2</span><span class="sc">}</span><span class="vs"> isolated double bonds): &lt;b&gt;</span><span class="sc">${</span>(<span class="op">-</span>deloc)<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">3</span>)<span class="sc">}</span><span class="vs">β&lt;/b&gt;</span><span class="sc">${</span>gap <span class="op">&lt;</span> <span class="fl">1e-6</span> <span class="op">?</span> <span class="st">" &amp;nbsp;·&amp;nbsp; &lt;b&gt;degenerate half-filled HOMO: two unpaired electrons&lt;/b&gt;"</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">&lt;/p&gt;&lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
 </div>
 <p>As the chain gets longer, the levels get closer to each other, and the gap between the HOMO and the LUMO decreases: it is <span class="math inline">\(2|\beta|\)</span> for ethylene, <span class="math inline">\(1.236|\beta|\)</span> for butadiene, and <span class="math inline">\(0.890|\beta|\)</span> for hexatriene. The lowest electronic transition of these molecules (<a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>) changes the description of one electron from the HOMO to the LUMO, so their absorption moves to longer wavelengths as the chain grows. This is exactly what is observed: ethylene absorbs at about <span class="math inline">\(165\;\text{nm}\)</span>, butadiene at <span class="math inline">\(217\;\text{nm}\)</span>, and hexatriene at <span class="math inline">\(258\;\text{nm}\)</span>. Long polyenes, such as <span class="math inline">\(\beta\)</span>-carotene, with 11 conjugated double bonds, absorb visible light (around <span class="math inline">\(450\;\text{nm}\)</span>), which gives carrots their orange color.</p>
 <p>For benzene, the six carbon atoms form a ring, so atom <span class="math inline">\(6\)</span> is also bonded to atom <span class="math inline">\(1\)</span>, and the Hückel determinant has one extra <span class="math inline">\(1\)</span> in its corners. The solutions are:</p>
@@ -1076,7 +1171,7 @@ E_\pi = 2(\alpha+2\beta) + 4(\alpha+\beta) = 6\alpha+8\beta.
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Answers
+<span class="screen-reader-only">Example</span>Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1172,6 +1267,25 @@ window.addEventListener("load", function () {
   apply();
   if (wide.addEventListener) wide.addEventListener("change", apply);
 });
+
+// "Report a bug" link in the top bar: icon only, with the label shown on hover
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('#quarto-header a[href*="/issues/new"]').forEach(function (a) {
+    a.setAttribute("title", "Report a bug");
+    a.setAttribute("aria-label", "Report a bug");
+  });
+});
+</script>
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBoTiA9IElucHV0cy5yYW5nZShbMiwgMTRdLCB7c3RlcDogMiwgdmFsdWU6IDYsIGxhYmVsOiBcIm51bWJlciBvZiBjYXJib24gYXRvbXNcIn0pXG52aWV3b2YgaFJpbmcgPSBJbnB1dHMucmFkaW8oW1wiY2hhaW5cIiwgXCJyaW5nXCJdLCB7dmFsdWU6IFwiY2hhaW5cIiwgbGFiZWw6IFwiYXJyYW5nZW1lbnRcIn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IE4gPSAoaFJpbmcgPT09IFwicmluZ1wiICYmIGhOIDwgNCkgPyA0IDogaE4sIHJpbmcgPSBoUmluZyA9PT0gXCJyaW5nXCI7XG4gIC8vIEUgPSBhbHBoYSArIDIgYmV0YSBjb3ModGhldGEpOyB3aXRoIGJldGEgPSAtfGJldGF8LCAoRSAtIGFscGhhKS98YmV0YXwgPSAtMiBjb3ModGhldGEpXG4gIGxldCBsZXYgPSByaW5nID8gZDMucmFuZ2UoTikubWFwKGsgPT4gLTIgKiBNYXRoLmNvcygyICogTWF0aC5QSSAqIGsgLyBOKSkgOiBkMy5yYW5nZSgxLCBOICsgMSkubWFwKGsgPT4gLTIgKiBNYXRoLmNvcyhrICogTWF0aC5QSSAvIChOICsgMSkpKTtcbiAgbGV2ID0gbGV2Lm1hcChlID0+IE1hdGgucm91bmQoZSAqIDFlOSkgLyAxZTkpLnNvcnQoKGEsIGIpID0+IGEgLSBiKTtcbiAgY29uc3QgZ3JvdXBzID0gZDMuZ3JvdXBzKGxldiwgZSA9PiBlLnRvRml4ZWQoNikpLm1hcCgoW2tleSwgZXNdKSA9PiAoe2U6IGVzWzBdLCBuOiBlcy5sZW5ndGh9KSk7XG4gIC8vIGZpbGwgTiBlbGVjdHJvbnMsIHR3byBwZXIgb3JiaXRhbCwgb25lIGF0IGEgdGltZSBpbiBkZWdlbmVyYXRlIGxldmVscyAoSHVuZCdzIHJ1bGUpXG4gIGxldCBsZWZ0ID0gTjsgY29uc3Qgc2VncyA9IFtdLCBlbGVjID0gW107XG4gIGZvciAoY29uc3QgZyBvZiBncm91cHMpIHtcbiAgICBjb25zdCBvY2MgPSBbXTsgZm9yIChsZXQgaiA9IDA7IGogPCBnLm47IGorKykgb2NjLnB1c2goMCk7XG4gICAgZm9yIChsZXQgcGFzcyA9IDA7IHBhc3MgPCAyOyBwYXNzKyspIGZvciAobGV0IGogPSAwOyBqIDwgZy5uICYmIGxlZnQgPiAwOyBqKyspIHsgb2NjW2pdKys7IGxlZnQtLTsgfVxuICAgIGZvciAobGV0IGogPSAwOyBqIDwgZy5uOyBqKyspIHtcbiAgICAgIGNvbnN0IHhjID0gKGogLSAoZy5uIC0gMSkgLyAyKSAqIDEuMTtcbiAgICAgIHNlZ3MucHVzaCh7eDE6IHhjIC0gMC40LCB4MjogeGMgKyAwLjQsIHk6IGcuZX0pO1xuICAgICAgaWYgKG9jY1tqXSA+PSAxKSBlbGVjLnB1c2goe3g6IHhjIC0gKG9jY1tqXSA9PT0gMiA/IDAuMTMgOiAwKSwgeTogZy5lLCB0OiBcIuKGkVwifSk7XG4gICAgICBpZiAob2NjW2pdID09PSAyKSBlbGVjLnB1c2goe3g6IHhjICsgMC4xMywgeTogZy5lLCB0OiBcIuKGk1wifSk7XG4gICAgfVxuICB9XG4gIGNvbnN0IG9jY0UgPSBbXTsgbGV0IG4yID0gTjsgZm9yIChjb25zdCBlIG9mIGxldikgeyBjb25zdCBrID0gTWF0aC5taW4oMiwgbjIpOyBuMiAtPSBrOyBmb3IgKGxldCBpID0gMDsgaSA8IGs7IGkrKykgb2NjRS5wdXNoKGUpOyB9XG4gIGNvbnN0IGhvbW9JZHggPSBNYXRoLmNlaWwoTiAvIDIpIC0gMSwgZ2FwID0gbGV2W2hvbW9JZHggKyAxXSAtIGxldltob21vSWR4XTtcbiAgY29uc3QgRXBpID0gb2NjRS5yZWR1Y2UoKHMsIGUpID0+IHMgKyBlLCAwKSwgRWxvYyA9IC0yICogTiAvIDI7ICAgLy8gTi8yIGlzb2xhdGVkIGRvdWJsZSBib25kcywgZWFjaCAyKGFscGhhICsgYmV0YSlcbiAgY29uc3QgZGVsb2MgPSBFcGkgLSBFbG9jO1xuICBjb25zdCBwID0gUGxvdC5wbG90KHtzdHlsZToge2ZvbnRTaXplOiBcIjE0cHhcIiwgY29sb3I6IFwidmFyKC0tYnMtYm9keS1jb2xvcilcIiwgYmFja2dyb3VuZDogXCJ0cmFuc3BhcmVudFwifSwgbWFyZ2luTGVmdDogNjAsIG1hcmdpbkJvdHRvbTogNDUsIG1hcmdpblRvcDogMzUsIGhlaWdodDogMzgwLCB3aWR0aDogTWF0aC5taW4od2lkdGgsIDUyMCksXG4gICAgeDoge2RvbWFpbjogWy0yLjYsIDIuNl0sIGF4aXM6IG51bGx9LCB5OiB7ZG9tYWluOiBbLTIuMywgMi4zXSwgbGFiZWw6IFwiKEUg4oiSIM6xKSAvIHzOsnxcIiwgcmV2ZXJzZTogZmFsc2V9LFxuICAgIGNhcHRpb246IGAke3JpbmcgPyBcIlJpbmdcIiA6IFwiQ2hhaW5cIn0gb2YgJHtOfSBjYXJib24gYXRvbXNgLFxuICAgIG1hcmtzOiBbUGxvdC5ydWxlWShbMF0sIHtzdHJva2U6IFwiZ3JheVwiLCBzdHJva2VEYXNoYXJyYXk6IFwiNCw0XCJ9KSxcbiAgICAgICAgICAgIFBsb3QubGluayhzZWdzLCB7eDE6IFwieDFcIiwgeDI6IFwieDJcIiwgeTE6IFwieVwiLCB5MjogXCJ5XCIsIHN0cm9rZTogXCJjdXJyZW50Q29sb3JcIiwgc3Ryb2tlV2lkdGg6IDN9KSxcbiAgICAgICAgICAgIFBsb3QudGV4dChlbGVjLCB7eDogXCJ4XCIsIHk6IFwieVwiLCB0ZXh0OiBcInRcIiwgZm9udFNpemU6IDE4LCBmaWxsOiBcIiNkNjI3MjhcIn0pXX0pO1xuICByZXR1cm4gaHRsLmh0bWxgPGRpdj4ke3B9PHAgc3R5bGU9XCJtYXJnaW46IDAuMjVyZW0gMCAwLjc1cmVtO1wiPkhPTU/igJNMVU1PIGdhcDogPGI+JHtnYXAudG9GaXhlZCgzKX0gfM6yfDwvYj4gJm5ic3A7wrcmbmJzcDsgz4AgZW5lcmd5OiA8Yj4ke059zrEgKyAkeygtRXBpKS50b0ZpeGVkKDMpfc6yPC9iPiAmbmJzcDvCtyZuYnNwOyBkZWxvY2FsaXphdGlvbiBlbmVyZ3kgKHZzLiAke04gLyAyfSBpc29sYXRlZCBkb3VibGUgYm9uZHMpOiA8Yj4keygtZGVsb2MpLnRvRml4ZWQoMyl9zrI8L2I+JHtnYXAgPCAxZS02ID8gXCIgJm5ic3A7wrcmbmJzcDsgPGI+ZGVnZW5lcmF0ZSBoYWxmLWZpbGxlZCBIT01POiB0d28gdW5wYWlyZWQgZWxlY3Ryb25zPC9iPlwiIDogXCJcIn08L3A+PC9kaXY+YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaE4nKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnaFJpbmcnKSJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -1717,7 +1831,7 @@ window.addEventListener("load", function () {
     </div>   
     <div class="nav-footer-center">
 <p>Text and figures: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> · Figure scripts: <a href="https://github.com/peverati/pchem2/blob/master/scripts/LICENSE">MIT</a></p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/edit/master/12_Polyatomic.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

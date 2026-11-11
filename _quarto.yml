@@ -12,6 +12,9 @@ project:
 lang: en
 language:
   crossref-ch-prefix: chapter
+  crossref-tip-title: "Example"     # numbered worked examples are collapsible tip callouts (#tip-...)
+  crossref-tip-prefix: "example"
+  callout-tip-title: "Example"       # PDF name of numbered tip callouts
   crossref-sec-prefix: section
 
 book:
@@ -23,12 +26,13 @@ book:
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem2
   repo-branch: master
-  repo-actions: [edit, issue]
+  repo-actions: [issue]
   downloads: [pdf]
   search:
     location: sidebar
     type: textbox
   navbar:
+    collapse: false     # no hamburger menu: the icons stay visible; the title is hidden on narrow screens (quarto.css)
     logo:
       light:
         path: img/logo-light.png
@@ -41,6 +45,10 @@ book:
     left:
       - text: "The Live Textbook of Physical Chemistry 2"
         href: index.qmd
+    right:
+      - icon: bug
+        href: https://github.com/peverati/pchem2/issues/new
+        aria-label: "Report a bug"
   page-footer:
     center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) · Figure scripts: [MIT](https://github.com/peverati/pchem2/blob/master/scripts/LICENSE)"
   chapters:
@@ -101,6 +109,7 @@ format:
         \usepackage{cancel}
         \usepackage{booktabs}
         \usepackage{pdfpages}
+        \AtBeginDocument{\ifcsname c@quartocallouttipno\endcsname\counterwithin{quartocallouttipno}{chapter}\fi}  % examples numbered by chapter
         \subject{The Live Textbook of Physical Chemistry, Volume 2}
         \AtBeginDocument{\title{Beyond the Classical World}}  % print title (the website keeps the series name)
         \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover

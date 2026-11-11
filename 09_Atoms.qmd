@@ -373,8 +373,8 @@ For carbon, the first rule selects $^3P$ as the ground term, and the third rule 
 
 : Ground-state configurations and term symbols of the first ten elements. {#tbl-tab3c9}
 
-::: {.callout-tip collapse="true" icon="false"}
-## Worked example: the ground state of oxygen
+::: {#tip-the-ground-state-of-oxygen .callout-tip collapse="true" icon="false"}
+## The ground state of oxygen
 
 Find the ground-state term symbol of the oxygen atom, $1s^22s^22p^4$, using Hund's rules.
 
