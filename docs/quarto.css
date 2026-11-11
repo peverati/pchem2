@@ -54,3 +54,13 @@ body.quarto-dark #quarto-header .navbar .quarto-navigation-tool, body.quarto-dar
 @media (max-width: 991.98px) {
   #quarto-header .navbar-brand-container { margin-left: auto !important; }
 }
+
+/* Interactive (Observable Plot) figures: axes and labels follow the text color, also in dark mode */
+svg[class^="plot-"] { color: inherit; background: transparent !important; }
+body.quarto-dark svg[class^="plot-"] { color: #e8e8e8 !important; }
+body.quarto-dark svg[class^="plot-"] [aria-label$="grid"] { stroke-opacity: 0.25; }
+.interactive-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; }
+.interactive-readout { font-size: 0.95em; margin: 0.25rem 0 0.75rem; }
+.interactive-row { flex-wrap: nowrap; }
+@media (max-width: 767.98px) { .interactive-row { flex-wrap: wrap; } }
+.interactive-title { font-weight: 600; text-align: center; margin-bottom: 0.25rem; }

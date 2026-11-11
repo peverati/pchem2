@@ -117,6 +117,40 @@ where $\varphi(p)$ gives the amplitude of each plane wave in the packet. The fun
 
 ![Probability densities in position space (left) and in momentum space (right) for three wave packets (in units where $\hbar=1$). As the packet becomes narrower in position (from top to bottom), it becomes broader in momentum, and the product of the two standard deviations stays equal to $\hbar/2$.](img/Uncertainty_xp.png){#fig-Fig5c8 fig-alt="Three rows of paired bell curves. Top: a wide curve in position paired with a narrow curve in momentum. Middle: medium widths in both. Bottom: a narrow curve in position paired with a wide curve in momentum. Arrows mark twice the standard deviation of each curve." width="90%"}
 
+::: {.content-visible when-format="html"}
+**Try it yourself.** Change the width of the packet and see how $\sigma_x$ and $\sigma_p$ change (in units where $\hbar=1$). For a single Gaussian packet, the product $\sigma_x\sigma_p$ is always exactly $\hbar/2$, the smallest value allowed. Now split the packet into two humps: the product grows, but it can never go below $\hbar/2$.
+
+```{ojs}
+//| echo: false
+viewof sxu = Inputs.range([0.3, 2.5], {step: 0.05, value: 1, label: "width of each hump"})
+viewof du = Inputs.range([0, 4], {step: 0.1, value: 0, label: "separation of the two humps"})
+```
+
+```{ojs}
+//| echo: false
+{
+  const N = 700, L = 32, dx = L / N, xs = d3.range(N).map(i => -L / 2 + i * dx);
+  const psi = xs.map(x => Math.exp(-((x - du / 2) ** 2) / (4 * sxu * sxu)) + Math.exp(-((x + du / 2) ** 2) / (4 * sxu * sxu)));
+  const nx = psi.reduce((s, v) => s + v * v, 0) * dx;
+  const Px = psi.map(v => v * v / nx);
+  const mx = xs.reduce((s, x, i) => s + x * Px[i], 0) * dx, sx = Math.sqrt(xs.reduce((s, x, i) => s + (x - mx) ** 2 * Px[i], 0) * dx);
+  // momentum distribution by direct Fourier transform (psi is real and even, so a cosine transform is enough)
+  const M = 400, pmax = 8, dp = 2 * pmax / M, ps = d3.range(M + 1).map(j => -pmax + j * dp);
+  const phi = ps.map(p => psi.reduce((s, v, i) => s + v * Math.cos(p * xs[i]), 0) * dx);
+  const np = phi.reduce((s, v) => s + v * v, 0) * dp;
+  const Pp = phi.map(v => v * v / np);
+  const sp = Math.sqrt(ps.reduce((s, p, j) => s + p * p * Pp[j], 0) * dp);
+  const narrow = width < 600, w = narrow ? width : Math.floor((width - 16) / 2);
+  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x"}, y: {label: "|ψ(x)|²"}, caption: `σₓ = ${sx.toFixed(2)}`,
+    marks: [Plot.areaY(xs.map((x, i) => ({x, P: Px[i]})), {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(xs.map((x, i) => ({x, P: Px[i]})), {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
+  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "momentum p"}, y: {label: "|φ(p)|²"}, caption: `σₚ = ${sp.toFixed(2)}`,
+    marks: [Plot.areaY(ps.map((p, j) => ({p, P: Pp[j]})), {x: "p", y: "P", fill: "#d62728", fillOpacity: 0.3}), Plot.line(ps.map((p, j) => ({p, P: Pp[j]})), {x: "p", y: "P", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
+  return htl.html`<div style="display: flex; flex-wrap: ${narrow ? "wrap" : "nowrap"}; gap: 16px; align-items: flex-start;"><div><div style="font-weight: 600; text-align: center;">position space</div>${p1}</div><div><div style="font-weight: 600; text-align: center;">momentum space</div>${p2}</div></div><p style="margin: 0.25rem 0 0.75rem;">σₓ σₚ = <b>${(sx * sp).toFixed(3)}</b> ℏ &nbsp; (minimum allowed: 0.500 ℏ)</p>`;
+}
+```
+:::
+
+
 
 One way to quantify the precision of the position and momentum is the standard deviation, $\sigma$. Since $|\psi (x)|^{2}$ is a probability density function for position, we calculate its standard deviation. The precision of the position is improved—i.e., reduced $\sigma_x$—by using many plane waves, thereby weakening the precision of the momentum—i.e., increased $\sigma_p$. Another way of stating this is that $\sigma_x$ and $\sigma_p$ have an inverse relationship (once we know one with absolute precision, the other becomes completely unknown). This fact was discovered by Werner Heisenberg and is now called **Heisenberg's uncertainty principle**. The mathematical treatment of this procedure results in the simple formula:
 
@@ -196,6 +230,98 @@ where we have dropped a numerical factor in front of the exponential, which depe
 3. **Tunneling conserves energy.** The transmitted wave has the same $k$ as the incoming one, so the particle has exactly the same energy before and after the barrier. What changes is only the *probability* of finding it on the other side. The rest of the probability, $1-T$, is reflected back.
 
 In the two limits, @eq-tunn6 also behaves as we would expect: as the barrier becomes infinitely wide or infinitely high, $T\rightarrow0$, and the barrier behaves like the walls of the particle in a box (@sec-Models). Tunneling of electrons is not an exotic curiosity: it is the principle behind the *scanning tunneling microscope*, which images individual atoms on a surface by measuring the tiny current of electrons that tunnel between a sharp metal tip and the sample. Since the current depends exponentially on the distance, the microscope is sensitive to changes in height much smaller than the size of an atom.
+
+::: {.content-visible when-format="html"}
+**Try it yourself.** This simulation solves the time-dependent Schrödinger equation for a wave packet hitting a barrier (in units where $\hbar=1$; the average energy of the packet, $E$, is kept fixed). Choose the height and width of the barrier and the mass of the particle, then press *Play* (and *Pause* to stop it). Watch how part of the packet is reflected and part tunnels through, and read the transmitted probability at the end.
+
+```{ojs}
+//| echo: false
+viewof V0t = Inputs.range([0.5, 2.5], {step: 0.05, value: 1.3, label: "barrier height V₀ / E"})
+viewof lt = Inputs.range([0.2, 5], {step: 0.05, value: 1, label: "barrier width l"})
+viewof mt = Inputs.range([0.5, 4], {step: 0.1, value: 1, label: "mass m"})
+viewof runt = {
+  // the button sits inside a <span>, which only notifies the page when we dispatch "input" (a bare button would react to every click)
+  const btn = htl.html`<button class="btn btn-primary btn-sm" style="min-width: 6em">▶ Play</button>`;
+  const w = htl.html`<span>${btn}</span>`;
+  w.value = 0; w.dataset.running = "0";
+  btn.onclick = (e) => {
+    e.preventDefault(); e.stopPropagation();
+    if (w.dataset.running === "1") { w.dataset.running = "0"; btn.textContent = "▶ Play"; }   // pause where it is
+    else { w.dataset.running = "1"; btn.textContent = "❚❚ Pause"; w.value += 1; w.dispatchEvent(new Event("input")); }  // play (resume)
+  };
+  w.setLabel = (txt) => { btn.textContent = txt; };
+  return w;
+}
+```
+
+```{ojs}
+//| echo: false
+//| output: false
+tunnelFrames = {
+  const ctl = viewof runt; runt;   // re-run this cell when Play is pressed
+  const N = 2048, L = 160, dx = L / N, E = 1, dt = 0.05, s0 = 5, x0 = -30;
+  const key = `${V0t}|${lt}|${mt}`;
+  const init = () => {
+    const m = mt, k0 = Math.sqrt(2 * m * E);
+    const x = Float64Array.from({length: N}, (_, i) => -L / 2 + i * dx);
+    const V = x.map(xi => (xi >= 0 && xi <= lt) ? V0t * E : 0);
+    const re = new Float64Array(N), im = new Float64Array(N);
+    for (let i = 0; i < N; i++) { const g = Math.exp(-((x[i] - x0) ** 2) / (4 * s0 * s0)); re[i] = g * Math.cos(k0 * x[i]); im[i] = g * Math.sin(k0 * x[i]); }
+    let nrm = 0; for (let i = 0; i < N; i++) nrm += (re[i] ** 2 + im[i] ** 2) * dx; nrm = Math.sqrt(nrm);
+    for (let i = 0; i < N; i++) { re[i] /= nrm; im[i] /= nrm; }
+    const kgrid = Float64Array.from({length: N}, (_, i) => 2 * Math.PI * (i < N / 2 ? i : i - N) / L);
+    return {key, x, re, im, t: 0, absT: 0, done: false,
+      kr: kgrid.map(k => Math.cos(-k * k * dt / (2 * m))), ki: kgrid.map(k => Math.sin(-k * k * dt / (2 * m))),
+      vr: V.map(v => Math.cos(-v * dt / 2)), vi: V.map(v => Math.sin(-v * dt / 2)),
+      mask: x.map(xi => { const d = Math.abs(xi) - (L / 2 - 12); return d > 0 ? Math.exp(-0.02 * d * d) : 1; }),
+      tmax: (Math.abs(x0) + 45) / Math.sqrt(2 * E / m)};
+  };
+  // radix-2 FFT (in place); sign = -1 forward, +1 inverse (unnormalized)
+  const fft = (ar, ai, sign) => {
+    for (let i = 1, j = 0; i < N; i++) { let bit = N >> 1; for (; j & bit; bit >>= 1) j ^= bit; j ^= bit; if (i < j) { [ar[i], ar[j]] = [ar[j], ar[i]]; [ai[i], ai[j]] = [ai[j], ai[i]]; } }
+    for (let len = 2; len <= N; len <<= 1) {
+      const ang = sign * 2 * Math.PI / len, wr = Math.cos(ang), wi = Math.sin(ang);
+      for (let i = 0; i < N; i += len) { let cr = 1, ci = 0;
+        for (let j = 0; j < len / 2; j++) { const a = i + j, b = a + len / 2, tr = ar[b] * cr - ai[b] * ci, ti = ar[b] * ci + ai[b] * cr;
+          ar[b] = ar[a] - tr; ai[b] = ai[a] - ti; ar[a] += tr; ai[a] += ti; const nr = cr * wr - ci * wi; ci = cr * wi + ci * wr; cr = nr; } } }
+  };
+  const mul = (ar, ai, br, bi) => { for (let i = 0; i < N; i++) { const r = ar[i] * br[i] - ai[i] * bi[i]; ai[i] = ar[i] * bi[i] + ai[i] * br[i]; ar[i] = r; } };
+  const frame = (S) => {
+    const P = []; let PT = 0;
+    for (let i = 0; i < N; i += 2) P.push({x: S.x[i], P: S.re[i] ** 2 + S.im[i] ** 2});
+    for (let i = 0; i < N; i++) if (S.x[i] > lt) PT += (S.re[i] ** 2 + S.im[i] ** 2) * dx;
+    return {P, t: S.t, T: PT + S.absT, V0: V0t, l: lt, done: S.done};
+  };
+  if (!ctl.sim || ctl.sim.key !== key) ctl.sim = init();        // new parameters: start from the beginning
+  if (ctl.dataset.running === "1" && ctl.sim.done) ctl.sim = init();   // Play after the end: run again
+  let S = ctl.sim;
+  yield frame(S);
+  while (ctl.dataset.running === "1" && S.t < S.tmax) {
+    for (let s = 0; s < 12; s++) {
+      mul(S.re, S.im, S.vr, S.vi); fft(S.re, S.im, -1); mul(S.re, S.im, S.kr, S.ki); fft(S.re, S.im, +1);
+      for (let i = 0; i < N; i++) { S.re[i] /= N; S.im[i] /= N; }
+      mul(S.re, S.im, S.vr, S.vi);
+      for (let i = 0; i < N; i++) { if (S.mask[i] < 1) { const lost = (S.re[i] ** 2 + S.im[i] ** 2) * (1 - S.mask[i] ** 2) * dx; if (S.x[i] > 0) S.absT += lost; S.re[i] *= S.mask[i]; S.im[i] *= S.mask[i]; } }
+      S.t += dt;
+    }
+    yield frame(S);
+  }
+  if (S.t >= S.tmax) { S.done = true; ctl.dataset.running = "0"; ctl.setLabel("▶ Play"); }
+}
+```
+
+```{ojs}
+//| echo: false
+{
+  const f = tunnelFrames, ymax = 0.35;
+  return Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, height: 320, grid: true, x: {domain: [-60, 60], label: "position x"}, y: {domain: [0, ymax], label: "|ψ(x,t)|²"},
+    caption: `t = ${f.t.toFixed(1)}; probability found beyond the barrier: ${(100 * f.T).toFixed(2)}%`,
+    marks: [Plot.rect([{x1: 0, x2: Math.max(f.l, 0.6), y1: 0, y2: ymax * Math.min(1, f.V0 / 2.5)}], {x1: "x1", x2: "x2", y1: "y1", y2: "y2", fill: "gray", fillOpacity: 0.5, stroke: "gray"}),
+            Plot.text([{x: f.l / 2, y: ymax * Math.min(1, f.V0 / 2.5)}], {x: "x", y: "y", text: () => "barrier", dy: -8, fill: "gray"}),
+            Plot.areaY(f.P, {x: "x", y: "P", fill: "steelblue", fillOpacity: 0.3}), Plot.line(f.P, {x: "x", y: "P", stroke: "steelblue", strokeWidth: 1.5}), Plot.ruleY([0])]});
+}
+```
+:::
 
 ### Tunneling in chemical reactions
 The ammonia umbrella inversion reaction provides an excellent example of the impact of quantum mechanical tunneling on the kinetic isotope effect (KIE). The reaction involves the inversion of the nitrogen atom in ammonia, which changes its position from above the plane of the three hydrogen atoms to below it and vice versa. This is a rapid oscillation of the atom and substituents, classically described by the molecule passing through a planar transition state. The ammonia interconversion is, however, faster than classically predicted. At room temperature, ammonia inverts 30 billion times per second. Two factors contribute to the rapidity of the inversion: a low energy barrier (24.2 kJ/mol) and a narrow width of the barrier itself, which allows for frequent quantum tunneling of the hydrogen atoms. In contrast, phosphine ($\text{PH}_3$) inverts very slowly at room temperature (energy barrier: 132 kJ/mol).

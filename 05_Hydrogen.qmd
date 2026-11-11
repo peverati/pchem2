@@ -197,7 +197,7 @@ hydrogenPlot = {
   const norm = data.reduce((s, d) => s + d.P, 0) * (rmax / N);
   data.forEach(d => d.P /= norm);
   const names = "spdfgh";
-  return Plot.plot({
+  return Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, 
     height: 320, grid: true,
     x: {label: "r (Bohr radii, a₀)"}, y: {label: "P(r)"},
     caption: `Radial probability distribution of the ${n}${names[l]} orbital of hydrogen` + (hl > n - 1 ? ` (ℓ reduced to ${l}, since ℓ ≤ n − 1)` : ""),
