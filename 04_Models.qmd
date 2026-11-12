@@ -380,7 +380,7 @@ As for the ring, the functions with $m_\ell\neq0$ are complex, so we draw their 
 
 ![Real parts of the spherical harmonics for $\ell=0,1,2$, as color maps on the sphere (red: positive, blue: negative, white: nodes).](img/SH_Re.png){#fig-fig6c4 fig-alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l." width="90%"}
 
-![Imaginary parts of the spherical harmonics for $\ell=0,1,2$, as color maps on the sphere (red: positive, blue: negative, white: nodes).](img/SH_Im.png){#fig-fig7c4 fig-alt="Color maps on spheres of the imaginary part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines." width="90%"}
+![Imaginary parts of the spherical harmonics for $\ell=0,1,2$, as color maps on the sphere (red: positive, blue: negative, white: nodes).](img/SH_Im.png){#fig-fig7c4 fig-alt="Color maps on spheres of the imaginary part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines. Functions with m equal to 0 have no imaginary part, so their boxes are empty." width="90%"}
 
 The probability of finding the particle at each point of the sphere is $|Y_\ell^{m_\ell}|^2$, shown in @fig-fig8c4. Unlike the ring, this probability is **not** uniform. The formulas in the box above make this easy to see:
 
