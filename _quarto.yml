@@ -21,7 +21,7 @@ book:
   title: "The Live Textbook of Physical Chemistry 2"
   output-file: pchem2
   author: "Roberto Peverati"
-  description: "Textbook for the P-Chem 2 class at Florida Tech"
+  description: "Volume 2 — Beyond the Classical World: Quantum Mechanics, Atoms, Molecules, and Spectra"   # print title, same as the PDF
   date: today
   date-format: "D MMMM YYYY"
   repo-url: https://github.com/peverati/pchem2
@@ -112,6 +112,7 @@ format:
         \AtBeginDocument{\ifcsname c@quartocallouttipno\endcsname\counterwithin{quartocallouttipno}{chapter}\fi}  % examples numbered by chapter
         \subject{The Live Textbook of Physical Chemistry, Volume 2}
         \AtBeginDocument{\title{Beyond the Classical World}}  % print title (the website keeps the series name)
+        \AtBeginDocument{\subtitle{Quantum Mechanics, Atoms, Molecules, and Spectra}}  % the preface's own subtitle would otherwise replace it
         \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
         \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
         \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}

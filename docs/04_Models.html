@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Textbook for the P-Chem 2 class at Florida Tech">
+<meta name="description" content="Volume 2 — Beyond the Classical World: Quantum Mechanics, Atoms, Molecules, and Spectra">
 
 <title>4&nbsp; Analytically Solvable Models – The Live Textbook of Physical Chemistry 2</title>
 <style>
@@ -825,51 +825,40 @@ Figure&nbsp;4.6: Energy level diagram and degeneracy pattern for the particle-on
 </div>
 <section id="wave-function-analysis-2" class="level3" data-number="4.4.1">
 <h3 data-number="4.4.1" class="anchored" data-anchor-id="wave-function-analysis-2"><span class="header-section-number">4.4.1</span> Wave function analysis</h3>
-<p>The first few spherical harmonics are simple functions of the angles:</p>
-<div id="tbl-Ylm" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-Ylm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;4.1: The first few spherical harmonics.
-</figcaption>
-<div aria-describedby="tbl-Ylm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 36%">
-<col style="width: 36%">
-<col style="width: 27%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(\ell\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(m_\ell\)</span></th>
-<th style="text-align: left;"><span class="math inline">\(Y_\ell^{m_\ell}(\theta,\phi)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{1}{2}\sqrt{\frac{1}{\pi}}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{1}{2}\sqrt{\frac{3}{\pi}}\cos\theta\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(1\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\pm1\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\mp\frac{1}{2}\sqrt{\frac{3}{2\pi}}\sin\theta\, e^{\pm i\phi}\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(2\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{1}{4}\sqrt{\frac{5}{\pi}}(3\cos^2\theta-1)\)</span></td>
-</tr>
-</tbody>
-</table>
+<p>The spherical harmonics are simple functions of the angles. Those for the first three levels, <span class="math inline">\(\ell=0,1,2\)</span>, are listed in the box below, each written in two ways: with the angles <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span>, and with the Cartesian coordinates <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span> (on a sphere of radius <span class="math inline">\(r\)</span>).</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-</figure>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Details: the spherical harmonics for <span class="math inline">\(\ell=0,1,2\)</span>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\boldsymbol{\ell=0}\)</span>: <span class="math display">\[
+Y_0^0(\theta,\phi) = \frac{1}{2}\sqrt{\frac{1}{\pi}}.
+\]</span></p>
+<p><span class="math inline">\(\boldsymbol{\ell=1}\)</span>: <span class="math display">\[
+\begin{aligned}
+Y_1^{-1}(\theta,\phi) &amp;= \frac{1}{2}\sqrt{\frac{3}{2\pi}}\, e^{-i\phi} \sin\theta = \frac{1}{2}\sqrt{\frac{3}{2\pi}}\, \frac{x-iy}{r},\\
+Y_1^{0}(\theta,\phi) &amp;= \frac{1}{2}\sqrt{\frac{3}{\pi}}\, \cos\theta = \frac{1}{2}\sqrt{\frac{3}{\pi}}\, \frac{z}{r},\\
+Y_1^{1}(\theta,\phi) &amp;= -\frac{1}{2}\sqrt{\frac{3}{2\pi}}\, e^{i\phi} \sin\theta = -\frac{1}{2}\sqrt{\frac{3}{2\pi}}\, \frac{x+iy}{r}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\boldsymbol{\ell=2}\)</span>: <span class="math display">\[
+\begin{aligned}
+Y_2^{-2}(\theta,\phi) &amp;= \frac{1}{4}\sqrt{\frac{15}{2\pi}}\, e^{-2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}}\, \frac{(x-iy)^2}{r^2},\\
+Y_2^{-1}(\theta,\phi) &amp;= \frac{1}{2}\sqrt{\frac{15}{2\pi}}\, e^{-i\phi} \sin\theta \cos\theta = \frac{1}{2}\sqrt{\frac{15}{2\pi}}\, \frac{(x-iy)z}{r^2},\\
+Y_2^{0}(\theta,\phi) &amp;= \frac{1}{4}\sqrt{\frac{5}{\pi}}\, (3\cos^2\theta - 1) = \frac{1}{4}\sqrt{\frac{5}{\pi}}\, \frac{3z^2 - r^2}{r^2},\\
+Y_2^{1}(\theta,\phi) &amp;= -\frac{1}{2}\sqrt{\frac{15}{2\pi}}\, e^{i\phi} \sin\theta \cos\theta = -\frac{1}{2}\sqrt{\frac{15}{2\pi}}\, \frac{(x+iy)z}{r^2},\\
+Y_2^{2}(\theta,\phi) &amp;= \frac{1}{4}\sqrt{\frac{15}{2\pi}}\, e^{2i\phi} \sin^2\theta = \frac{1}{4}\sqrt{\frac{15}{2\pi}}\, \frac{(x+iy)^2}{r^2}.
+\end{aligned}
+\]</span></p>
+</div>
+</div>
 </div>
 <p>As for the ring, the functions with <span class="math inline">\(m_\ell\neq0\)</span> are complex, so we draw their real and imaginary parts separately. The most faithful picture is a color map on the sphere itself (<a href="#fig-fig6c4" class="quarto-xref">figure&nbsp;<span>4.7</span></a> for the real parts and <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a> for the imaginary parts): red where the function is positive, blue where it is negative, and white where it is zero. These zero lines are the angular nodes. Each real or imaginary part has <span class="math inline">\(\ell\)</span> of them, the same rule “more energy, more nodes” that we found for the box and the ring.</p>
 <div id="fig-fig6c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
@@ -892,7 +881,7 @@ Figure&nbsp;4.8: Imaginary parts of the spherical harmonics for <span class="mat
 </figcaption>
 </figure>
 </div>
-<p>The probability of finding the particle at each point of the sphere is <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span>, shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. Unlike the ring, this probability is <strong>not</strong> uniform. <a href="#tbl-Ylm" class="quarto-xref">table&nbsp;<span>4.1</span></a> makes this easy to see:</p>
+<p>The probability of finding the particle at each point of the sphere is <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span>, shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. Unlike the ring, this probability is <strong>not</strong> uniform. The formulas in the box above make this easy to see:</p>
 <ul>
 <li><span class="math inline">\(Y_0^0\)</span> is a constant, so the particle is equally likely to be anywhere on the sphere.</li>
 <li><span class="math inline">\(|Y_1^0|^2\propto\cos^2\theta\)</span> is largest at the poles and zero on the equator.</li>
@@ -1124,7 +1113,7 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </ol>
 <hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1133,7 +1122,7 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>1.c, 2.d, 3.a, 4.d, 5.c, 6.e, 7.b, 8.a, 9.e, 10.b</p>
 </div>

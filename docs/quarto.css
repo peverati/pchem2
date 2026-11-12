@@ -77,3 +77,10 @@ body.quarto-dark svg[class^="plot-"] [aria-label$="grid"] { stroke-opacity: 0.25
 @media (max-width: 991.98px) {
   #quarto-header .navbar-nav.me-auto { display: none !important; }
 }
+
+/* Preface title block, sized like the PDF title page: series name (medium), volume title (largest), subtitle (smallest) */
+/* only the preface has a subtitle: there, the book title ("...Chemistry 2") is shown as "..., Volume 2" like in the PDF */
+#title-block-header .quarto-title:has(.subtitle) h1.title { font-size: 0; }
+#title-block-header .quarto-title:has(.subtitle) h1.title::before { content: "The Live Textbook of Physical Chemistry, Volume 2"; font-size: 1.6rem; font-weight: 500; }
+#title-block-header .quarto-title .subtitle { font-size: 2.6rem; font-weight: 600; line-height: 1.15; margin-top: 0.4rem; }
+#title-block-header .description { font-size: 1.15rem; }

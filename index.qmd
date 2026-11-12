@@ -1,5 +1,7 @@
-
-
+---
+subtitle: "Beyond the Classical World"   # print title, same as the PDF
+description: "Quantum Mechanics, Atoms, Molecules, and Spectra"
+---
 
 # Preface {.unnumbered}
 ![](img/OEP_Figures.000.jpeg){fig-alt="Book cover: a large Greek letter psi, labeled wave function, over a black background filled with ball-and-stick models of small organic molecules." width="80%"}

@@ -114,29 +114,10 @@ This is the red line of the Balmer series, the brightest line in the visible spe
 
 ## The Radial Wave Functions
 
-The radial wave functions for the first three energy levels are collected in @tbl-radial. They all have the same structure: a polynomial in $r$ multiplied by a decaying exponential, $e^{-r/na_0}$. The exponential makes sure that the wave function goes to zero far from the nucleus, and it decays more slowly for larger $n$, so orbitals with larger $n$ extend farther out. The polynomial is responsible for the nodes.
-
-```{=latex}
-\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
-```
-
-| Orbital | $n$ | $\ell$ | $R_{n\ell}(r)$ |
-|:--:|:--:|:--:|:--|
-| $1s$ | $1$ | $0$ | $2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0}$ |
-| $2s$ | $2$ | $0$ | $\frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0}$ |
-| $2p$ | $2$ | $1$ | $\frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\frac{r}{a_0}\, e^{-r/2a_0}$ |
-| $3s$ | $3$ | $0$ | $\frac{2}{81\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\frac{r}{a_0} + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0}$ |
-| $3p$ | $3$ | $1$ | $\frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0}$ |
-| $3d$ | $3$ | $2$ | $\frac{4}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0}$ |
-
-: Radial wave functions of the hydrogen atom for $n=1,2,3$. {#tbl-radial tbl-colwidths="[12,6,6,76]"}
-
-```{=latex}
-\endgroup
-```
+The radial wave functions for the first three energy levels are listed in the box below. They all have the same structure: a polynomial in $r$ multiplied by a decaying exponential, $e^{-r/na_0}$. The exponential makes sure that the wave function goes to zero far from the nucleus, and it decays more slowly for larger $n$, so orbitals with larger $n$ extend farther out. The polynomial is responsible for the nodes.
 
 ::: {.callout-note collapse="true" icon="false"}
-## Details: the general formula
+## Details: the radial wave functions
 
 For any $n$ and $\ell$, the radial functions can be written as:
 
@@ -144,7 +125,18 @@ $$
 R_{n\ell}(r) = - \left[ \frac{(n - \ell - 1)!}{2n[(n+\ell)!]^3} \right]^{1/2}\left(\frac{2}{na_0}\right)^{\ell+3/2}r^{\ell} e^{-r/na_0} L_{n+\ell}^{2\ell+1}\left( \frac{2r}{n a_0} \right),
 $$ {#eq-HA5}
 
-where $L_{n+\ell}^{2\ell+1}$ are polynomials called *associated Laguerre polynomials*. In @tbl-radial, these polynomials and the normalization constants have already been worked out (and the overall sign, which has no physical meaning, has been chosen to make each function positive near the nucleus).
+where $L_{n+\ell}^{2\ell+1}$ are polynomials called *associated Laguerre polynomials*. Working out these polynomials and the normalization constants for the first three energy levels, $n=1,2,3$, gives (the overall sign, which has no physical meaning, has been chosen to make each function positive near the nucleus):
+
+$$
+\begin{aligned}
+R_{10}(r) &= 2\left(\frac{1}{a_0}\right)^{3/2} e^{-r/a_0} && (1s),\\
+R_{20}(r) &= \frac{1}{2\sqrt{2}}\left(\frac{1}{a_0}\right)^{3/2}\left(2 - \frac{r}{a_0}\right) e^{-r/2a_0} && (2s),\\
+R_{21}(r) &= \frac{1}{2\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2}\frac{r}{a_0}\, e^{-r/2a_0} && (2p),\\
+R_{30}(r) &= \frac{2}{81\sqrt{3}}\left(\frac{1}{a_0}\right)^{3/2}\left[27 - 18\frac{r}{a_0} + 2\left(\frac{r}{a_0}\right)^2\right] e^{-r/3a_0} && (3s),\\
+R_{31}(r) &= \frac{8}{27\sqrt{6}}\left(\frac{1}{a_0}\right)^{3/2} \frac{r}{a_0} \left(1 - \frac{r}{6a_0}\right) e^{-r/3a_0} && (3p),\\
+R_{32}(r) &= \frac{4}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\frac{r}{a_0}\right)^2 e^{-r/3a_0} && (3d).
+\end{aligned}
+$$
 :::
 
 The radial wave functions are plotted in @fig-fig1c5. Let's look at them:
@@ -218,11 +210,11 @@ Together with $n$, which fixes the energy and how far from the nucleus the elect
 
 ## Orbitals and Their Pictures
 
-The complete orbital, @eq-HA6, contains all the information about the state of the electron: the radial part tells us how the probability is distributed with the distance from the nucleus, and the angular part how it is distributed among the different directions. Drawing it, however, is not easy. An orbital is a function of three coordinates, so a complete plot would need four dimensions, and, since it is complex, we would need two of them, one for the real part and one for the imaginary part. A common compromise is to show its values in a plane that contains the nucleus, as color maps, as in @fig-fig3c5 for the real parts and @fig-fig4c5 for the imaginary parts.
+The complete orbital, @eq-HA6, contains all the information about the state of the electron: the radial part tells us how the probability is distributed with the distance from the nucleus, and the angular part how it is distributed among the different directions. Drawing it, however, is not easy. An orbital is a function of three coordinates, so a complete plot would need four dimensions, and, since it is complex, we would need two of them, one for the real part and one for the imaginary part. A common compromise is to color the points of space around the nucleus by the value of the function, with a quarter of the space cut away so that we can see inside, as in @fig-fig3c5 for the real parts and @fig-fig4c5 for the imaginary parts.
 
-![Real parts of some hydrogen orbitals, as color maps in a plane that contains the nucleus (red: positive, blue: negative, white: nodes).](img/H_Re.png){#fig-fig3c5 fig-alt="Color maps in a plane through the nucleus of the real part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces." width="90%"}
+![Real parts of some hydrogen orbitals, drawn as points around the nucleus colored by the value of the function, with a quarter of the space cut away (red: positive, blue: negative, white: nodes; distances in units of $a_0$).](img/H_Re.png){#fig-fig3c5 fig-alt="Three-dimensional point clouds around the nucleus, with a quarter cut away, showing the real part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces." width="90%"}
 
-![Imaginary parts of the same hydrogen orbitals as in @fig-fig3c5 (red: positive, blue: negative, white: nodes).](img/H_Im.png){#fig-fig4c5 fig-alt="Color maps in a plane through the nucleus of the imaginary part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces." width="90%"}
+![Imaginary parts of the same hydrogen orbitals as in @fig-fig3c5 (red: positive, blue: negative, white: nodes).](img/H_Im.png){#fig-fig4c5 fig-alt="Three-dimensional point clouds around the nucleus, with a quarter cut away, showing the imaginary part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces. Orbitals with m equal to 0 have no imaginary part, so their boxes are empty." width="90%"}
 
 ### Real orbitals
 
@@ -248,7 +240,7 @@ What has a physical meaning is the probability density, $|\psi_{n\ell m_\ell}|^2
 2. **Volumetric plots**, where the color is denser where the probability is higher, as in @fig-fig6c5.
 3. **Dot-density plots**, where each dot represents one possible result of a measurement of the position of the electron, as in @fig-fig7c5. These are probably the most honest pictures of all: if we could measure the position of the electron many times, each time on a freshly prepared atom, the results would accumulate exactly like these dots.
 
-![Surfaces that enclose 80% of the probability $|\psi|^2$ for a few hydrogen orbitals. Following the usual convention, the surfaces are colored by the sign of the wave function (blue: positive, red: negative), even though the probability itself is never negative.](img/H_dens1.png){#fig-fig5c5 fig-alt="Three-dimensional surfaces enclosing 80 percent of the electron probability for several hydrogen orbitals: a sphere for s orbitals, two lobes for p orbitals, and four lobes or a lobe pair with a ring for d orbitals, colored by the sign of the wave function." width="90%"}
+![Surfaces that enclose 80% of the probability $|\psi|^2$ for a few hydrogen orbitals. Following the usual convention, the surfaces are colored by the sign of the wave function (red: positive, blue: negative), even though the probability itself is never negative.](img/H_dens1.png){#fig-fig5c5 fig-alt="Three-dimensional surfaces enclosing 80 percent of the electron probability for several hydrogen orbitals: a sphere for s orbitals, two lobes for p orbitals, and four lobes or a lobe pair with a ring for d orbitals, colored by the sign of the wave function." width="90%"}
 
 ![Volumetric plots of $|\psi|^2$ for a few hydrogen orbitals: the denser the color, the more likely the electron is to be found there. Colors give the sign of the wave function, as in @fig-fig5c5.](img/H_dens2.png){#fig-fig6c5 fig-alt="Volumetric cloud plots of several hydrogen orbitals, with denser color where the electron is more likely to be found, colored by the sign of the wave function." width="90%"}
 
@@ -258,7 +250,13 @@ All three show the same information. Notice, however, that these pictures are co
 
 ### Can we see an orbital?
 
-Since the wave function is not an observable, orbitals cannot be measured directly. What experiments can measure are quantities related to them. X-ray diffraction measures the total electron density of a molecule or a crystal, the sum of the probability densities of all its electrons. Photoelectron spectroscopy measures the energy needed to remove an electron, which is closely related to the energy of the orbital that described it (we will see how in @sec-Poly). Some modern experiments, such as scanning tunneling microscopy of single molecules, can produce images that look remarkably like the pictures of individual orbitals, but they too measure probabilities, not wave functions, and they need theory to be interpreted. Orbitals remain what they are: an extremely useful theoretical tool to describe electrons, not objects that we can observe.
+Since the wave function is not an observable, orbitals cannot be measured directly. What experiments can measure are quantities related to them:
+
+- **X-ray diffraction** measures the total electron density of a molecule or a crystal, the sum of the probability densities of all its electrons.
+- **Photoelectron spectroscopy** measures the energy needed to remove an electron, which is closely related to the energy of the orbital that described it (we will see how in @sec-Poly).
+- **Scanning tunneling microscopy** of single molecules, like other modern experiments, can produce images that look remarkably like the pictures of individual orbitals, but they too measure probabilities, not wave functions, and they need theory to be interpreted.
+
+Orbitals remain what they are: an extremely useful theoretical tool to describe electrons, not objects that we can observe.
 
 ## Chapter Review {#sec-rev5}
 ### Key Ideas
