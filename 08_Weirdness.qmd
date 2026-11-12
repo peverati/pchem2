@@ -6,66 +6,6 @@ aliases:
 # Quantum Weirdness {#sec-Weirdness}
 In this chapter, we will delve deeper into the strangeness of quantum mechanics. In particular, we will explore quantum phenomena that don't have a classical counterpart, starting from perhaps the simplest but also one of the most revealing: the double-slit experiment.
 
-## The Measurement Problem and Interpretations of Quantum Mechanics
-
-### Measurement and the collapse of the wave function
-
-In @sec-Operators, we saw that if a system is in a superposition of eigenfunctions of an operator $\hat{A}$:
-
-$$
-\Psi = \sum_i c_i \Psi_i, \qquad \hat{A}\Psi_i = a_i\Psi_i,
-$$ {#eq-collapse1}
-
-then a measurement of the observable $A$ can only give one of the eigenvalues $a_i$, with probability $|c_i|^2$. Before the measurement, we cannot predict which one we will obtain: quantum mechanics only gives us the probabilities. This raises an obvious question: what happens to the wave function *after* the measurement?
-
-The answer of quantum mechanics is that, immediately after a measurement that gives the value $a_i$, the wave function is no longer the superposition of @eq-collapse1, but the corresponding eigenfunction:
-
-$$
-\Psi \xrightarrow{\text{measurement gives } a_i} \Psi_i.
-$$ {#eq-collapse2}
-
-This sudden change is called the **collapse of the wave function**. One way of seeing that it must happen is to repeat the measurement immediately after the first one: experiments show that we always obtain the same value again, $a_i$, with certainty. This is only possible if the system is now in the eigenstate $\Psi_i$, whose coefficient is one.
-
-We have already seen the collapse at work in the sequential Stern–Gerlach experiments of @sec-Spin (@fig-Fig3c7). After the first apparatus along $z$, the atoms in the upper beam are in the state $\alpha$, and a second measurement along $z$ gives "spin up" with certainty. A measurement along $x$, however, makes the state collapse into one of the eigenstates of $\hat{S}_x$, which are superpositions of $\alpha$ and $\beta$. When we measure along $z$ again, we find both "spin up" and "spin down" with equal probability: the information about the first measurement has been erased by the second one. The measurement is not a "filter" that reveals a pre-existing property of the atom, but an act that changes its wave function.
-
-The collapse is very different from the time evolution described by the TDSEq (@sec-TimeEvolution). Time evolution is smooth, deterministic (if we know the wave function now, we can calculate it at any later time), and reversible. The collapse is sudden, random (we can only predict probabilities), and irreversible (after the collapse, we cannot reconstruct the superposition that we had before). Quantum mechanics, in its standard form, does not explain *what* exactly counts as a measurement, nor *how* or *when* the collapse happens. It only tells us that, when an interaction with a macroscopic instrument produces a definite result, the wave function must be updated accordingly. This is known as the **measurement problem**, and it is still debated by physicists and philosophers today. As we will see in this chapter, the collapse is at the heart of many of the most counterintuitive results of quantum mechanics.
-
-### Interpretations of quantum mechanics {#sec-Interpretations}
-The mathematics of quantum mechanics is not in question: it has been tested in countless experiments, and it has never failed. What is still debated is what the mathematics *means*. What is the wave function: a real physical object, or just a tool to compute probabilities? Does the collapse really happen, and if so, what causes it? Do particles have definite properties before we measure them? The different answers to these questions are called *interpretations* of quantum mechanics.
-
-In this textbook, as in most chemistry textbooks, we use the language of the **Copenhagen interpretation**, developed in the 1920s mainly by Niels Bohr and Werner Heisenberg. In this view, the wave function encodes everything that can be known about a system, it evolves according to the Schrödinger equation between measurements, and it collapses when a measurement is made, as described above. The Copenhagen interpretation is convenient for calculations, and it is the reason why we talk about "measurements" and "collapse" at all. However, it is now widely regarded as antiquated and incomplete. It divides the world into a quantum system and a classical measuring apparatus, but it never says where the boundary between the two is, nor why the apparatus, which is itself made of atoms, should not obey quantum mechanics. It adds the collapse as a separate rule, without explaining it. In other words, the Copenhagen interpretation does not solve the measurement problem; it simply declares it out of bounds.
-
-Several modern alternatives address these shortcomings. All of them reproduce the successful predictions of quantum mechanics, but they paint very different pictures of reality:
-
-- **Hidden variables.** The idea that the wave function is an incomplete description, and that additional "hidden" variables determine the outcome of each measurement, goes back to Albert Einstein, who famously disliked the randomness of quantum mechanics. In 1964, John Bell proved that any theory of this kind that is also *local* (where nothing travels faster than light) must make predictions that differ from those of quantum mechanics. Experiments, starting in the 1970s and recognized with the Nobel Prize in Physics in 2022, have confirmed the predictions of quantum mechanics and ruled out local hidden variables. Hidden variable theories are still possible, but they must be *nonlocal*.
-
-- **Bohmian mechanics** (also called the de Broglie–Bohm or *pilot-wave* theory), proposed by Louis de Broglie in 1927 and developed by David Bohm in 1952, is the best known nonlocal hidden variable theory. In this view, particles always have definite positions and follow well-defined trajectories, and the wave function is a real field that guides their motion, according to an equation derived from the Schrödinger equation. There is no collapse: a measurement simply reveals where the particles already are, and the randomness of the outcomes comes from our ignorance of their exact initial positions. Bohmian mechanics is the interpretation closest to the way chemists usually think: electrons are particles that are actually somewhere, molecules have real shapes, and nuclei and electrons move along trajectories. Its price is nonlocality: the motion of each particle depends instantaneously on the positions of all the others.
-
-- **Many worlds**, proposed by Hugh Everett in 1957, takes the opposite route: it keeps the Schrödinger equation and nothing else. There is no collapse and no special role for measurements. When a measuring device interacts with a superposition, the device, the observer, and eventually the whole universe become part of the superposition, which splits into *branches*, one for each possible outcome. Each branch contains a version of the observer who sees one definite result, and the branches cannot interact with each other because of a process called *decoherence*. Many worlds is the most mathematically and philosophically clean of all the interpretations, since it requires no additional rules beyond the equation that we already use. Its price is a reality much larger than the one we see, and the difficulty of explaining why the probabilities of the outcomes are given by $|c_i|^2$ when all of them actually happen.
-
-- **Spontaneous collapse theories**, such as the one proposed by Giancarlo Ghirardi, Alberto Rimini, and Tullio Weber in 1986, treat the collapse as a real physical process and modify the Schrödinger equation to include it. In these theories, the wave function of any particle collapses spontaneously and at random, but extremely rarely (about once every hundred million years for a single particle). A macroscopic object, however, contains so many particles that one of them collapses almost immediately, dragging the whole object with it, which explains why we never see a cat or a measuring device in a superposition. Unlike the other interpretations, these theories make predictions that differ slightly from standard quantum mechanics, and they are currently being tested in experiments.
-
-The main features of these interpretations are summarized in @tbl-tab1c8.
-
-```{=latex}
-\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
-```
-
-| Interpretation | What is the wave function? | Collapse? | Definite positions? | Deterministic? |
-|:--------------------|:------------------------|:------------------------|:------------------|:--------------|
-| Copenhagen | Tool to compute probabilities | Yes, upon measurement (not explained) | No, until measured | No |
-| Bohmian mechanics | Real field guiding the particles | No (only apparent) | Yes, always | Yes |
-| Many worlds | Real, and the only thing that exists | No (branching instead) | Yes, in each branch | Yes |
-| Spontaneous collapse | Real | Yes, as a random physical process | Only after collapse | No |
-
-: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[20,22,21,15,22]"}
-
-```{=latex}
-\endgroup
-```
-
-For the purposes of chemistry, all these interpretations give the same answers: energy levels, spectra, bond lengths, and reaction rates do not depend on which one we choose (the tiny deviations predicted by spontaneous collapse theories are far too small to affect any chemical property). This is why, in the rest of this textbook, we will keep using the convenient language of the Copenhagen interpretation. You should be aware, however, that it is a language, and not the final word on what quantum mechanics tells us about reality.
-
 ## The double-slit experiment
 
 The double-slit experiment is considered by many the seminal experiment in quantum mechanics. The reason why we see it only at this advanced point is that its interpretation is not as straightforward as it might seem from a superficial analysis. The famous physicist Richard Feynman was so fond of this experiment that he used to say that all of quantum mechanics can be understood from carefully thinking through its implications.
@@ -99,9 +39,79 @@ A second twist happens if we place particle detectors at the slits with the inte
 
 
 
-This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. The simplest interpretation of this experiment is that the wave function of the photon collapses into a deterministic position due to the interaction with the detector on the slit, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.
+This experiment illustrates that photons (and electrons) can behave as either particles or waves, but cannot be observed as both at the same time. In the language that we will introduce in the next section, the interaction with the detector on the slit makes the wave function of the particle *collapse* onto one of the two slits, and the interference pattern is therefore lost. This result also proves that in order to measure (detect) a photon, we must interact with it, an act that changes its wave function.
 
-The interpretation of the results of this experiment is not simple. As for other situations in quantum mechanics, the problem arises not because we cannot describe the experiment in mathematical terms, but because the math that we need to describe it cannot be related to the macroscopic classical world we live in. According to the math, in fact, particles in the experiment are described exclusively in probabilistic terms (given by the square of the wave function). The macroscopic world, however, is not probabilistic, and outcomes of experiments can be univocally measured. Several different ways of resolving this controversy have been proposed, including for example the possibility that quantum mechanics is incomplete (the emergence of probability is due to the ignorance of some more fundamental deterministic feature of nature), or assuming that every time a measurement is done on a quantum system, the universe splits, and every possible measurable outcome is observed in different branches of our universe (we only happen to live in one of such branches, so we observe only one non-probabilistic result).^[The interested student can read more in the [Wikipedia article on interpretations of quantum mechanics](https://en.wikipedia.org/wiki/Interpretations_of_quantum_mechanics), and in @sec-Interpretations.] The interpretation of quantum mechanics is still an unsolved problem in modern physics (luckily, it does not prevent us from using quantum mechanics in chemistry).
+The interpretation of the results of this experiment is not simple. The problem is not that we cannot describe the experiment with mathematics: the wave function predicts the interference pattern perfectly. The problem is that the wave function only gives *probabilities*, while each detector click, like every measurement in the macroscopic world, gives one definite result. How does a single, definite result come out of a wave function that describes all the possibilities at once? And why does looking at the slits change the outcome? These questions take us to the heart of what is called the **measurement problem**, the subject of the next section.
+
+## The Measurement Problem and Interpretations of Quantum Mechanics
+
+### Measurement and the collapse of the wave function
+
+The which-way experiment shows that observing a quantum system is not a passive act: finding out which slit the particle goes through destroys the interference. To understand why, we need to look more closely at what quantum mechanics says about measurements.
+
+In @sec-Operators, we saw that if a system is in a superposition of eigenfunctions of an operator $\hat{A}$:
+
+$$
+\Psi = \sum_i c_i \Psi_i, \qquad \hat{A}\Psi_i = a_i\Psi_i,
+$$ {#eq-collapse1}
+
+then a measurement of the observable $A$ can only give one of the eigenvalues $a_i$, with probability $|c_i|^2$. Before the measurement, we cannot predict which one we will obtain: quantum mechanics only gives us the probabilities. This raises an obvious question: what happens to the wave function *after* the measurement?
+
+The answer of quantum mechanics is that, immediately after a measurement that gives the value $a_i$, the wave function is no longer the superposition of @eq-collapse1, but the corresponding eigenfunction:
+
+$$
+\Psi \xrightarrow{\text{measurement gives } a_i} \Psi_i.
+$$ {#eq-collapse2}
+
+This sudden change is called the **collapse of the wave function**. One way of seeing that it must happen is to repeat the measurement immediately after the first one: experiments show that we always obtain the same value again, $a_i$, with certainty. This is only possible if the system is now in the eigenstate $\Psi_i$, whose coefficient is one.
+
+We have already seen the collapse at work in the sequential Stern–Gerlach experiments of @sec-Spin (@fig-Fig3c7). After the first apparatus along $z$, the atoms in the upper beam are in the state $\alpha$, and a second measurement along $z$ gives "spin up" with certainty. A measurement along $x$, however, makes the state collapse into one of the eigenstates of $\hat{S}_x$, which are superpositions of $\alpha$ and $\beta$. When we measure along $z$ again, we find both "spin up" and "spin down" with equal probability: the information about the first measurement has been erased by the second one. The measurement is not a "filter" that reveals a pre-existing property of the atom, but an act that changes its wave function.
+
+The collapse is very different from the time evolution described by the TDSEq (@sec-TimeEvolution). Time evolution is smooth, deterministic (if we know the wave function now, we can calculate it at any later time), and reversible. The collapse is sudden, random (we can only predict probabilities), and irreversible (after the collapse, we cannot reconstruct the superposition that we had before). Quantum mechanics, in its standard form, does not explain *what* exactly counts as a measurement, nor *how* or *when* the collapse happens. It only tells us that, when an interaction with a macroscopic instrument produces a definite result, the wave function must be updated accordingly. This is known as the **measurement problem**, and it is still debated by physicists and philosophers today. As we will see in this chapter, the collapse is at the heart of many of the most counterintuitive results of quantum mechanics.
+
+### Schrödinger's cat and decoherence
+
+In 1935, Erwin Schrödinger proposed a thought experiment to show how strange the measurement problem becomes when we take it seriously. A cat is sealed in a box together with a single radioactive atom, a detector, and a vial of poison. If the atom decays, the detector triggers the release of the poison, and the cat dies. After one half-life, the atom is in an equal superposition of "decayed" and "not decayed." If the Schrödinger equation applies to everything, including the detector, the vial, and the cat, which are made of atoms too, then the cat should end up in a superposition of "alive" and "dead," at least until someone opens the box and looks. Schrödinger did not believe in such a cat. His point was that the rules of quantum mechanics, applied blindly to a macroscopic object, lead to an absurd conclusion. Where, then, does the quantum superposition stop, and where does a definite, classical result begin?
+
+Part of the answer comes from **decoherence**. A macroscopic object is never isolated: it constantly interacts with its environment, by colliding with air molecules, absorbing and emitting photons, and so on. Each of these interactions leaves a trace of the state of the object in the environment, in the same way as the detector of the which-way experiment leaves a trace of the slit that the particle went through. Once this information has spread into the environment, the different parts of the superposition can no longer interfere with each other, and the object behaves, for all practical purposes, as if it were in one state or the other, with probabilities $|c_i|^2$. For a macroscopic object, this happens in an unimaginably short time, which is why we never see cats, or measuring devices, in superpositions. Decoherence is not an extra rule: it follows from the Schrödinger equation itself, and it has been observed in experiments, for example by watching the interference fringes of large molecules, such as fullerenes, fade away as gas is let into the interferometer. It also explains why the collapse looks irreversible: undoing it would require collecting back all the information that has been scattered into the environment.
+
+Decoherence, however, does not solve the whole measurement problem. It explains why we never see interference between macroscopic alternatives, and why the world around us looks classical. It does not explain why each experiment has a *single* outcome. After decoherence, the mathematics still contains all the possibilities, the living cat and the dead cat, only now they can no longer interfere. Why we observe only one of them, and which one, is the question that decoherence leaves open. The interpretations of quantum mechanics answer it in different ways.
+
+### Interpretations of quantum mechanics {#sec-Interpretations}
+The mathematics of quantum mechanics is not in question: it has been tested in countless experiments, and it has never failed. What is still debated is what the mathematics *means*. What is the wave function: a real physical object, or just a tool to compute probabilities? Does the collapse really happen, and if so, what causes it? Do particles have definite properties before we measure them? The different answers to these questions are called *interpretations* of quantum mechanics.
+
+In this textbook, as in most chemistry textbooks, we use the language of the **Copenhagen interpretation**, developed in the 1920s mainly by Niels Bohr and Werner Heisenberg. In this view, the wave function encodes everything that can be known about a system, it evolves according to the Schrödinger equation between measurements, and it collapses when a measurement is made, as described above. The Copenhagen interpretation is convenient for calculations, and it is the reason why we talk about "measurements" and "collapse" at all. However, it is now widely regarded as antiquated and incomplete. It divides the world into a quantum system and a classical measuring apparatus, but it never says where the boundary between the two is, nor why the apparatus, which is itself made of atoms, should not obey quantum mechanics. It adds the collapse as a separate rule, without explaining it. In other words, the Copenhagen interpretation does not solve the measurement problem; it simply declares it out of bounds.
+
+Several modern alternatives address these shortcomings. All of them reproduce the successful predictions of quantum mechanics, but they paint very different pictures of reality:
+
+- **Hidden variables.** The idea that the wave function is an incomplete description, and that additional "hidden" variables determine the outcome of each measurement, goes back to Albert Einstein, who famously disliked the randomness of quantum mechanics. In 1964, John Bell proved that any theory of this kind that is also *local* (where nothing travels faster than light) must make predictions that differ from those of quantum mechanics. Experiments, starting in the 1970s and recognized with the Nobel Prize in Physics in 2022, have confirmed the predictions of quantum mechanics and ruled out local hidden variables. Hidden variable theories are still possible, but they must be *nonlocal*.
+
+- **Bohmian mechanics** (also called the de Broglie–Bohm or *pilot-wave* theory), proposed by Louis de Broglie in 1927 and developed by David Bohm in 1952, is the best known nonlocal hidden variable theory. In this view, particles always have definite positions and follow well-defined trajectories, and the wave function is a real field that guides their motion, according to an equation derived from the Schrödinger equation. There is no collapse: a measurement simply reveals where the particles already are, and the randomness of the outcomes comes from our ignorance of their exact initial positions. Bohmian mechanics is the interpretation closest to the way chemists usually think: electrons are particles that are actually somewhere, molecules have real shapes, and nuclei and electrons move along trajectories. Its price is nonlocality: the motion of each particle depends instantaneously on the positions of all the others.
+
+- **Many worlds**, proposed by Hugh Everett in 1957, takes the opposite route: it keeps the Schrödinger equation and nothing else. There is no collapse and no special role for measurements. When a measuring device interacts with a superposition, the device, the observer, and eventually the whole universe become part of the superposition, which splits into *branches*, one for each possible outcome. Each branch contains a version of the observer who sees one definite result, and decoherence prevents the branches from interacting with each other. Many worlds is the most mathematically and philosophically clean of all the interpretations, since it requires no additional rules beyond the equation that we already use. Its price is a reality much larger than the one we see, and the difficulty of explaining why the probabilities of the outcomes are given by $|c_i|^2$ when all of them actually happen.
+
+- **Spontaneous collapse theories**, such as the one proposed by Giancarlo Ghirardi, Alberto Rimini, and Tullio Weber in 1986, treat the collapse as a real physical process and modify the Schrödinger equation to include it. In these theories, the wave function of any particle collapses spontaneously and at random, but extremely rarely (about once every hundred million years for a single particle). A macroscopic object, however, contains so many particles that one of them collapses almost immediately, dragging the whole object with it, which explains why we never see a cat or a measuring device in a superposition. Unlike the other interpretations, these theories make predictions that differ slightly from standard quantum mechanics, and they are currently being tested in experiments.
+
+The main features of these interpretations are summarized in @tbl-tab1c8.
+
+```{=latex}
+\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
+```
+
+| Interpretation | What is the wave function? | Collapse? | Definite positions? | Deterministic? |
+|:--------------------|:------------------------|:------------------------|:------------------|:--------------|
+| Copenhagen | Tool to compute probabilities | Yes, upon measurement (not explained) | No, until measured | No |
+| Bohmian mechanics | Real field guiding the particles | No (only apparent) | Yes, always | Yes |
+| Many worlds | Real, and the only thing that exists | No (branching instead) | Yes, in each branch | Yes |
+| Spontaneous collapse | Real | Yes, as a random physical process | Only after collapse | No |
+
+: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[20,22,21,15,22]"}
+
+```{=latex}
+\endgroup
+```
+
+For the purposes of chemistry, all these interpretations give the same answers: energy levels, spectra, bond lengths, and reaction rates do not depend on which one we choose (the tiny deviations predicted by spontaneous collapse theories are far too small to affect any chemical property). This is why, in the rest of this textbook, we will keep using the convenient language of the Copenhagen interpretation. You should be aware, however, that it is a language, and not the final word on what quantum mechanics tells us about reality.
 
 ## Heisenberg's Uncertainty Principle
 
@@ -122,29 +132,31 @@ where $\varphi(p)$ gives the amplitude of each plane wave in the packet. The fun
 
 ```{ojs}
 //| echo: false
-viewof sxu = Inputs.range([0.3, 2.5], {step: 0.05, value: 1, label: "width of each hump"})
+viewof sxu = Inputs.range([0.1, 10], {step: 0.05, value: 1, label: "width of each hump"})
 viewof du = Inputs.range([0, 4], {step: 0.1, value: 0, label: "separation of the two humps"})
 ```
 
 ```{ojs}
 //| echo: false
 {
-  const N = 700, L = 32, dx = L / N, xs = d3.range(N).map(i => -L / 2 + i * dx);
-  const psi = xs.map(x => Math.exp(-((x - du / 2) ** 2) / (4 * sxu * sxu)) + Math.exp(-((x + du / 2) ** 2) / (4 * sxu * sxu)));
-  const nx = psi.reduce((s, v) => s + v * v, 0) * dx;
-  const Px = psi.map(v => v * v / nx);
-  const mx = xs.reduce((s, x, i) => s + x * Px[i], 0) * dx, sx = Math.sqrt(xs.reduce((s, x, i) => s + (x - mx) ** 2 * Px[i], 0) * dx);
-  // momentum distribution by direct Fourier transform (psi is real and even, so a cosine transform is enough)
-  const M = 400, pmax = 8, dp = 2 * pmax / M, ps = d3.range(M + 1).map(j => -pmax + j * dp);
-  const phi = ps.map(p => psi.reduce((s, v, i) => s + v * Math.cos(p * xs[i]), 0) * dx);
-  const np = phi.reduce((s, v) => s + v * v, 0) * dp;
-  const Pp = phi.map(v => v * v / np);
-  const sp = Math.sqrt(ps.reduce((s, p, j) => s + p * p * Pp[j], 0) * dp);
+  // Two Gaussian humps, psi(x) = g(x - a) + g(x + a), with g(x) = exp(-x^2/(4 s^2)) and hbar = 1.
+  // Everything is analytic: phi(p) is proportional to exp(-s^2 p^2) cos(p a).
+  const s = sxu, a = du / 2, c = Math.exp(-a * a / (2 * s * s)), v = 1 / (4 * s * s);
+  const sx = Math.sqrt(s * s + a * a / (1 + c));
+  const sp = Math.sqrt(v - 4 * a * a * v * v * c / (1 + c));
+  const g2 = (x) => Math.exp(-x * x / (2 * s * s));
+  const Px = (x) => (g2(x - a) + g2(x + a) + 2 * c * g2(x)) / (Math.sqrt(2 * Math.PI) * s * (2 + 2 * c));
+  const Pp = (p) => Math.exp(-2 * s * s * p * p) * Math.cos(p * a) ** 2 / (Math.sqrt(2 * Math.PI * v) * (1 + c) / 2);
+  // fixed axes, so that the curves really get narrower or wider; extra points where the curves are sharp
+  const XM = 35, PM = 18;
+  const dense = (lo, hi, n) => d3.range(n + 1).map(k => lo + (hi - lo) * k / n);
+  const xs = [...dense(-XM, XM, 1200), ...dense(-a - 6 * s, -a + 6 * s, 300), ...dense(a - 6 * s, a + 6 * s, 300)].filter(x => Math.abs(x) <= XM).sort((m, n) => m - n);
+  const ps = [...dense(-PM, PM, 1200), ...dense(-3 / s, 3 / s, 400)].filter(p => Math.abs(p) <= PM).sort((m, n) => m - n);
   const narrow = width < 600, w = narrow ? width : Math.floor((width - 16) / 2);
-  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x"}, y: {label: "|ψ(x)|²"}, caption: `σₓ = ${sx.toFixed(2)}`,
-    marks: [Plot.areaY(xs.map((x, i) => ({x, P: Px[i]})), {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(xs.map((x, i) => ({x, P: Px[i]})), {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
-  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "momentum p"}, y: {label: "|φ(p)|²"}, caption: `σₚ = ${sp.toFixed(2)}`,
-    marks: [Plot.areaY(ps.map((p, j) => ({p, P: Pp[j]})), {x: "p", y: "P", fill: "#d62728", fillOpacity: 0.3}), Plot.line(ps.map((p, j) => ({p, P: Pp[j]})), {x: "p", y: "P", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
+  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x", domain: [-XM, XM]}, y: {label: "|ψ(x)|²"}, caption: `σₓ = ${sx.toFixed(2)}`,
+    marks: [Plot.areaY(xs.map(x => ({x, P: Px(x)})), {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(xs.map(x => ({x, P: Px(x)})), {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
+  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "momentum p", domain: [-PM, PM]}, y: {label: "|φ(p)|²"}, caption: `σₚ = ${sp.toFixed(2)}`,
+    marks: [Plot.areaY(ps.map(p => ({p, P: Pp(p)})), {x: "p", y: "P", fill: "#d62728", fillOpacity: 0.3}), Plot.line(ps.map(p => ({p, P: Pp(p)})), {x: "p", y: "P", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
   return htl.html`<div style="display: flex; flex-wrap: ${narrow ? "wrap" : "nowrap"}; gap: 16px; align-items: flex-start;"><div><div style="font-weight: 600; text-align: center;">position space</div>${p1}</div><div><div style="font-weight: 600; text-align: center;">momentum space</div>${p2}</div></div><p style="margin: 0.25rem 0 0.75rem;">σₓ σₚ = <b>${(sx * sp).toFixed(3)}</b> ℏ &nbsp; (minimum allowed: 0.500 ℏ)</p>`;
 }
 ```
@@ -339,45 +351,16 @@ where $k(\text{H})$ and $k(\text{D})$ are the rate constants for the reaction in
 ## Chapter Review {#sec-rev8}
 ### Key Ideas
 
-- A measurement gives one eigenvalue and collapses the wave function onto the corresponding eigenfunction.
-- Different interpretations of quantum mechanics disagree on what the wave function is, but they give the same predictions for chemistry.
 - In the double-slit experiment, single particles build up an interference pattern, which disappears if we find out which slit each particle goes through.
+- A measurement gives one eigenvalue and collapses the wave function onto the corresponding eigenfunction.
+- Decoherence, the interaction with the environment, explains why we never see macroscopic superpositions such as Schrödinger's cat, but not why each measurement gives a single result.
+- Different interpretations of quantum mechanics disagree on what the wave function is, but they give the same predictions for chemistry.
 - The uncertainty principle, $\sigma_x\sigma_p\geq\hbar/2$, comes from the fact that the operators do not commute, not from imperfect instruments.
 - Particles can tunnel through barriers higher than their energy. The probability decreases exponentially with the width of the barrier and with the square root of the mass, which makes tunneling important for electrons and hydrogen atoms.
 
 ### Study Questions {#sec-quest8}
 
-**1. A measurement of the observable $A$ gives the eigenvalue $a_i$. Immediately after the measurement, the wave function is:**
-
-a. the same as before the measurement  
-b. zero  
-c. the eigenfunction $\psi_i$ corresponding to $a_i$  
-d. a superposition of all the eigenfunctions of $\hat{A}$  
-e. the eigenfunction with the lowest eigenvalue  
-
----
-
-**2. If we repeat the same measurement immediately after the first one, we obtain:**
-
-a. a random result  
-b. the same result, with certainty  
-c. the expectation value  
-d. zero  
-e. the next eigenvalue  
-
----
-
-**3. The different interpretations of quantum mechanics (Copenhagen, Bohmian mechanics, many worlds, spontaneous collapse):**
-
-a. give different energy levels for atoms  
-b. have all been ruled out by experiments, except Copenhagen  
-c. disagree on the Schrödinger equation for the hydrogen atom  
-d. agree on the predictions for chemistry, but disagree on what the wave function is and on whether it collapses  
-e. are different names for the same theory  
-
----
-
-**4. In the double-slit experiment with electrons sent one at a time:**
+**1. In the double-slit experiment with electrons sent one at a time:**
 
 a. each electron splits into two halves  
 b. no pattern is ever formed  
@@ -387,13 +370,43 @@ e. each electron is detected at a single point, but many electrons build up an i
 
 ---
 
-**5. If we place detectors at the slits to find out which slit each electron goes through:**
+**2. If we place detectors at the slits to find out which slit each electron goes through:**
 
 a. the interference pattern disappears  
 b. the interference pattern becomes sharper  
 c. the electrons stop going through the slits  
 d. the electrons go through both slits and are detected twice  
 e. nothing changes  
+
+---
+
+**3. A measurement of the observable $A$ gives the eigenvalue $a_i$. Immediately after the measurement, the wave function is:**
+
+a. the same as before the measurement  
+b. zero  
+c. the eigenfunction $\psi_i$ corresponding to $a_i$  
+d. a superposition of all the eigenfunctions of $\hat{A}$  
+e. the eigenfunction with the lowest eigenvalue  
+
+---
+
+**4. If we repeat the same measurement immediately after the first one, we obtain:**
+
+a. a random result  
+b. the same result, with certainty  
+c. the expectation value  
+d. zero  
+e. the next eigenvalue  
+
+---
+
+**5. The different interpretations of quantum mechanics (Copenhagen, Bohmian mechanics, many worlds, spontaneous collapse):**
+
+a. give different energy levels for atoms  
+b. have all been ruled out by experiments, except Copenhagen  
+c. disagree on the Schrödinger equation for the hydrogen atom  
+d. agree on the predictions for chemistry, but disagree on what the wave function is and on whether it collapses  
+e. are different names for the same theory  
 
 ---
 
@@ -450,5 +463,5 @@ e. a large kinetic isotope effect and a curved Arrhenius plot
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
 
-1.c, 2.b, 3.d, 4.e, 5.a, 6.b, 7.d, 8.c, 9.a, 10.e
+1.e, 2.a, 3.c, 4.b, 5.d, 6.b, 7.d, 8.c, 9.a, 10.e
 :::
