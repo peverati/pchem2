@@ -25,15 +25,19 @@ The status of the November 2026 revision. This file is not part of the book.
 
 ## Open items
 
-- [ ] **Hidden edit/issue links.** "Edit this page" and "Report an issue" disappeared on wide screens when the right-hand column was hidden; they could go in the footer.
+- [ ] **Rewrite the preface** (the biggest item left): almost entirely, in the style of the rest of the book. Keep the full title block, the license and funding note, and the note on the use of AI.
 - [ ] **Print edition** (see `SELF_PUBLISHING_GUIDE.md`):
   - a new front cover with the print title;
-  - a print PDF profile: two-sided layout, 300-dpi figures, answers at the end of each chapter, a copyright page;
+  - a print PDF profile: two-sided layout, answers at the end of each chapter, a copyright page (the figures are already 400 dpi);
   - KDP and IngramSpark.
 - [x] **Worked examples**: one step-by-step example per chapter (Ch. 2–13), in collapsible boxes.
 - [x] **Chapter summaries**: "Key Ideas" at the start of each chapter review.
 - [x] **Older images**: the four H₂⁺/H₂ diagrams of Ch. 11 redrawn (`scripts/make_figures_h2.py`).
-- [x] **Interactive figures** (website only): hydrogen radial probability (Ch. 5) and particle-in-a-box superposition (Ch. 6), with sliders.
+- [x] **Interactive figures** (website only): wave packets (Ch. 3), hydrogen radial probability (Ch. 5), particle-in-a-box superposition (Ch. 6), uncertainty and tunneling (Ch. 8), Hückel levels (Ch. 12), rotational spectrum (Ch. 13).
+- [x] **Report a bug**: a bug icon in the top bar opens a new GitHub issue (replaces the hidden edit/issue links).
+- [x] **Figure notebooks** in `scripts/notebooks/`: all hydrogen, spherical-harmonic, and model figures redrawn for print (400 dpi, text at least 7 pt).
+- [x] **Preface**: full title block (Volume 2, *Beyond the Classical World*), AI disclosure, funding note.
+- [x] Tables 4.1 and 5.1 replaced by the full lists of spherical harmonics and radial functions, in collapsible boxes.
 
 ## Potential additions (parked: not planned; consider only on request)
 
