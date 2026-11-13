@@ -11,11 +11,11 @@ project:
 
 lang: en
 language:
-  crossref-ch-prefix: chapter
+  crossref-ch-prefix: Chapter
   crossref-tip-title: "Example"     # numbered worked examples are collapsible tip callouts (#tip-...)
-  crossref-tip-prefix: "example"
+  crossref-tip-prefix: "Example"
   callout-tip-title: "Example"       # PDF name of numbered tip callouts
-  crossref-sec-prefix: section
+  crossref-sec-prefix: Sec.
 
 book:
   title: "The Live Textbook of Physical Chemistry 2"
@@ -74,11 +74,15 @@ book:
 bibliography: book.bib
 citation-location: document
 
+filters:
+  - path: pdf-fixes.lua      # "Eq. (5.7)" in the PDF; no empty line after each answer choice
+    at: post-render
+
 crossref:
-  eq-prefix: eq.
-  fig-prefix: figure
-  tbl-prefix: table
-  sec-prefix: section
+  eq-prefix: Eq.
+  fig-prefix: Fig.
+  tbl-prefix: Table
+  sec-prefix: Sec.
 
 
 format:
@@ -98,6 +102,18 @@ format:
   pdf:
     subtitle: "Quantum Mechanics, Atoms, Molecules, and Spectra"
     documentclass: scrbook
+    pdf-engine: xelatex
+    mainfont: STIXTwoText        # STIX Two, from fonts/ (static files, so bold and italic work); one family for text, headings, and math
+    mainfontoptions: [Path=./fonts/, Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic, BoldFont=*-Bold, BoldItalicFont=*-BoldItalic]
+    mathfont: STIXTwoMath-Regular.otf
+    mathfontoptions: [Path=./fonts/]
+    indent: true                 # indented paragraphs, as in printed books (no blank line between paragraphs)
+    toc-title: Contents
+    colorlinks: true             # clickable links shown in dark blue (cross-references, URLs, citations)
+    linkcolor: "blue!55!black"
+    urlcolor: "blue!55!black"
+    citecolor: "blue!55!black"
+    filecolor: "blue!55!black"
     classoption: [oneside]
     geometry:
       - paperwidth=6in
@@ -105,16 +121,17 @@ format:
       - margin=0.75in
     fontsize: 10pt
     include-in-header:
-      text: |
-        \usepackage{cancel}
-        \usepackage{booktabs}
-        \usepackage{pdfpages}
-        \AtBeginDocument{\ifcsname c@quartocallouttipno\endcsname\counterwithin{quartocallouttipno}{chapter}\fi}  % examples numbered by chapter
-        \subject{The Live Textbook of Physical Chemistry, Volume 2}
-        \AtBeginDocument{\title{Beyond the Classical World}}  % print title (the website keeps the series name)
-        \AtBeginDocument{\subtitle{Quantum Mechanics, Atoms, Molecules, and Spectra}}  % the preface's own subtitle would otherwise replace it
-        \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
-        \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-        \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-        \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+      - file: pdf-style.tex     # headings, captions, running heads, boxes
+      - text: |
+          \usepackage{cancel}
+          \usepackage{booktabs}
+          \usepackage{pdfpages}
+          \AtBeginDocument{\ifcsname c@quartocallouttipno\endcsname\counterwithin{quartocallouttipno}{chapter}\fi}  % examples numbered by chapter
+          \subject{The Live Textbook of Physical Chemistry, Volume 2}
+          \AtBeginDocument{\title{Beyond the Classical World}}  % print title (the website keeps the series name)
+          \AtBeginDocument{\subtitle{Quantum Mechanics, Atoms, Molecules, and Spectra}}  % the preface's own subtitle would otherwise replace it
+          \AtBeginDocument{\includepdf[pages={1}]{FrontPage_6x9.pdf}}  % cover
+          \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+          \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+          \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
     fig-pos: "htbp"

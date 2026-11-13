@@ -539,7 +539,7 @@ window.Quarto = {
 </section>
 <section id="the-ultraviolet-catastrophe" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-ultraviolet-catastrophe"><span class="header-section-number">2.2</span> The Ultraviolet Catastrophe</h2>
-<p>Every object emits electromagnetic radiation, and the hotter the object, the more radiation it emits and the shorter its wavelengths. This is why a piece of metal heated in a flame first glows red, then orange, and then white. To study this radiation without having to worry about the details of a specific material, physicists use an idealized object called a <em>black body</em>, which absorbs all the radiation that hits it and emits radiation that depends only on its temperature. The radiation emitted by a black body at a few temperatures is shown in <a href="#fig-Fig1c2" class="quarto-xref">figure&nbsp;<span>2.1</span></a>.</p>
+<p>Every object emits electromagnetic radiation, and the hotter the object, the more radiation it emits and the shorter its wavelengths. This is why a piece of metal heated in a flame first glows red, then orange, and then white. To study this radiation without having to worry about the details of a specific material, physicists use an idealized object called a <em>black body</em>, which absorbs all the radiation that hits it and emits radiation that depends only on its temperature. The radiation emitted by a black body at a few temperatures is shown in <a href="#fig-Fig1c2" class="quarto-xref">Fig.&nbsp;<span>2.1</span></a>.</p>
 <div id="fig-Fig1c2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of emitted intensity versus wavelength for a black body at 5800, 4500, and 3000 kelvin. Each curve rises to a peak and falls to zero at short wavelength; hotter curves are higher and peak at shorter wavelength. The classical Rayleigh-Jeans curve rises without limit at short wavelength.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig1c2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -554,7 +554,7 @@ Figure&nbsp;2.1: Intensity of the radiation emitted by a black body at three tem
 <p><span id="eq-rjlaw"><span class="math display">\[
 I(\lambda,T)={\frac {2ck_{\mathrm{B}}T}{\lambda^{4}}},
 \tag{2.1}\]</span></span></p>
-<p>where <span class="math inline">\(I\)</span> is the intensity of the radiation (more precisely, the power emitted per unit area of the emitting surface, per unit solid angle, and per unit wavelength, a quantity called <em>spectral radiance</em>), <span class="math inline">\(c\)</span> is the speed of light, <span class="math inline">\(k_{\mathrm{B}}\)</span> is the Boltzmann constant, and <span class="math inline">\(T\)</span> is the temperature in kelvins. This formula works well at long wavelengths, but it fails dramatically at short ones (dashed line in <a href="#fig-Fig1c2" class="quarto-xref">figure&nbsp;<span>2.1</span></a>). If we take the limit for <span class="math inline">\(\lambda \rightarrow 0\)</span> in <a href="#eq-rjlaw" class="quarto-xref">eq.&nbsp;<span>2.1</span></a>, we obtain <span class="math inline">\(I \rightarrow \infty\)</span>. In other words, the shorter the wavelength (towards the UV and beyond), the more radiation the black body should emit, and the total energy emitted over all wavelengths should be infinite. This prediction is clearly absurd: if it were true, every warm object would be emitting an infinite amount of energy as UV light, X-rays, and gamma rays. This failure of classical physics is called the <strong>ultraviolet catastrophe</strong> (or Rayleigh–Jeans catastrophe).</p>
+<p>where <span class="math inline">\(I\)</span> is the intensity of the radiation (more precisely, the power emitted per unit area of the emitting surface, per unit solid angle, and per unit wavelength, a quantity called <em>spectral radiance</em>), <span class="math inline">\(c\)</span> is the speed of light, <span class="math inline">\(k_{\mathrm{B}}\)</span> is the Boltzmann constant, and <span class="math inline">\(T\)</span> is the temperature in kelvins. This formula works well at long wavelengths, but it fails dramatically at short ones (dashed line in <a href="#fig-Fig1c2" class="quarto-xref">Fig.&nbsp;<span>2.1</span></a>). If we take the limit for <span class="math inline">\(\lambda \rightarrow 0\)</span> in <a href="#eq-rjlaw" class="quarto-xref">Eq.&nbsp;<span>2.1</span></a>, we obtain <span class="math inline">\(I \rightarrow \infty\)</span>. In other words, the shorter the wavelength (towards the UV and beyond), the more radiation the black body should emit, and the total energy emitted over all wavelengths should be infinite. This prediction is clearly absurd: if it were true, every warm object would be emitting an infinite amount of energy as UV light, X-rays, and gamma rays. This failure of classical physics is called the <strong>ultraviolet catastrophe</strong> (or Rayleigh–Jeans catastrophe).</p>
 <p>Max Planck solved the problem in 1900 by making an assumption that had no justification in classical physics: the energy of the oscillating electrons that emit the radiation cannot take any value, but only integer multiples of a minimum amount proportional to the frequency <span class="math inline">\(\nu\)</span> of the radiation:</p>
 <p><span id="eq-uvcat"><span class="math display">\[
 E = n h \nu = n h \frac{c}{\lambda},
@@ -563,10 +563,10 @@ E = n h \nu = n h \frac{c}{\lambda},
 <p><span id="eq-uvcatpl"><span class="math display">\[
 I(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathrm {B} }T)}-1}}.
 \tag{2.3}\]</span></span></p>
-<p>At short wavelengths, the exponential in the denominator grows much faster than <span class="math inline">\(\lambda^5\)</span> decreases, and <span class="math inline">\(I\)</span> goes to zero as <span class="math inline">\(\lambda \rightarrow 0\)</span>, in agreement with the experiments. (At long wavelengths, instead, <span class="math inline">\(e^{x}-1\approx x\)</span>, and Planck’s law reduces to the Rayleigh–Jeans law.) Physically, quantization works because at short wavelengths the minimum quantum of energy, <span class="math inline">\(hc/\lambda\)</span>, becomes much larger than the typical thermal energy, <span class="math inline">\(k_{\mathrm{B}}T\)</span>, and the high-frequency oscillations are simply too “expensive” to be excited. By fitting <a href="#eq-uvcatpl" class="quarto-xref">eq.&nbsp;<span>2.3</span></a> to the experimental data, Planck also obtained the value of the new constant, <span class="math inline">\(h = 6.626 \times 10^{-34} \; \text{J s}\)</span>, which is now called the <em>Planck constant</em>.</p>
-<p>Let’s look at what <a href="#fig-Fig1c2" class="quarto-xref">figure&nbsp;<span>2.1</span></a> tells us:</p>
+<p>At short wavelengths, the exponential in the denominator grows much faster than <span class="math inline">\(\lambda^5\)</span> decreases, and <span class="math inline">\(I\)</span> goes to zero as <span class="math inline">\(\lambda \rightarrow 0\)</span>, in agreement with the experiments. (At long wavelengths, instead, <span class="math inline">\(e^{x}-1\approx x\)</span>, and Planck’s law reduces to the Rayleigh–Jeans law.) Physically, quantization works because at short wavelengths the minimum quantum of energy, <span class="math inline">\(hc/\lambda\)</span>, becomes much larger than the typical thermal energy, <span class="math inline">\(k_{\mathrm{B}}T\)</span>, and the high-frequency oscillations are simply too “expensive” to be excited. By fitting <a href="#eq-uvcatpl" class="quarto-xref">Eq.&nbsp;<span>2.3</span></a> to the experimental data, Planck also obtained the value of the new constant, <span class="math inline">\(h = 6.626 \times 10^{-34} \; \text{J s}\)</span>, which is now called the <em>Planck constant</em>.</p>
+<p>Let’s look at what <a href="#fig-Fig1c2" class="quarto-xref">Fig.&nbsp;<span>2.1</span></a> tells us:</p>
 <ol type="1">
-<li><p><strong>Color and temperature</strong>: as the temperature increases, the maximum of the curve moves to shorter wavelengths. The position of the maximum follows a simple rule, called <em>Wien’s displacement law</em>, which can be derived from <a href="#eq-uvcatpl" class="quarto-xref">eq.&nbsp;<span>2.3</span></a>: <span class="math inline">\(\lambda_\text{max}T = 2.898\times10^{-3}\;\text{m K}\)</span>. The surface of the Sun (<span class="math inline">\(T\approx5800\;\text{K}\)</span>) has its maximum at <span class="math inline">\(\lambda_\text{max}\approx500\;\text{nm}\)</span>, in the middle of the visible region (our eyes evolved to see the light that the Sun emits the most). An incandescent light bulb (<span class="math inline">\(T\approx3000\;\text{K}\)</span>) has its maximum at about <span class="math inline">\(970\;\text{nm}\)</span>, in the infrared, which is why it looks yellowish and why most of its energy is wasted as heat. Our bodies (<span class="math inline">\(T\approx310\;\text{K}\)</span>) emit mostly at about <span class="math inline">\(9{,}000\;\text{nm}\)</span>, in the infrared, where thermal cameras can see it.</p></li>
+<li><p><strong>Color and temperature</strong>: as the temperature increases, the maximum of the curve moves to shorter wavelengths. The position of the maximum follows a simple rule, called <em>Wien’s displacement law</em>, which can be derived from <a href="#eq-uvcatpl" class="quarto-xref">Eq.&nbsp;<span>2.3</span></a>: <span class="math inline">\(\lambda_\text{max}T = 2.898\times10^{-3}\;\text{m K}\)</span>. The surface of the Sun (<span class="math inline">\(T\approx5800\;\text{K}\)</span>) has its maximum at <span class="math inline">\(\lambda_\text{max}\approx500\;\text{nm}\)</span>, in the middle of the visible region (our eyes evolved to see the light that the Sun emits the most). An incandescent light bulb (<span class="math inline">\(T\approx3000\;\text{K}\)</span>) has its maximum at about <span class="math inline">\(970\;\text{nm}\)</span>, in the infrared, which is why it looks yellowish and why most of its energy is wasted as heat. Our bodies (<span class="math inline">\(T\approx310\;\text{K}\)</span>) emit mostly at about <span class="math inline">\(9{,}000\;\text{nm}\)</span>, in the infrared, where thermal cameras can see it.</p></li>
 <li><p><strong>Brightness and temperature</strong>: the area under each curve, which is the total power emitted, grows very quickly with temperature (as <span class="math inline">\(T^4\)</span>, a result known as the Stefan–Boltzmann law). Doubling the temperature of an object makes it emit sixteen times more energy.</p></li>
 <li><p><strong>Where classical physics fails</strong>: the classical and quantum curves agree at long wavelengths, where the quanta <span class="math inline">\(h\nu\)</span> are small compared to <span class="math inline">\(k_\mathrm{B}T\)</span> and the energy behaves as if it were continuous. They disagree completely at short wavelengths, where the quanta are large. This is a pattern that we will see again: quantum effects become important when the spacing between energy levels is large compared to the thermal energy.</p></li>
 </ol>
@@ -575,13 +575,13 @@ I(\lambda ,T)={\frac {2hc^{2}}{\lambda ^{5}}}{\frac {1}{e^{hc/(\lambda k_{\mathr
 <section id="the-photoelectric-effect" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="the-photoelectric-effect"><span class="header-section-number">2.3</span> The Photoelectric Effect</h2>
 <p>When light shines on a clean metal surface, electrons can be ejected from it. This phenomenon is called the photoelectric effect. It was first observed by Heinrich Hertz in 1887, and studied in detail by Philipp Lenard around 1900. Albert Einstein explained it in 1905, proposing that light energy is quantized into discrete particles, called photons, each with an energy proportional to its frequency.</p>
-<p>To see why an explanation was needed, let’s start from the classical prediction. As we saw at the end of <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>, in classical physics light is a continuous electromagnetic wave, and the energy that it delivers every second depends on its amplitude (its brightness, or <em>intensity</em>), and not on its frequency. If we apply this picture to the photoelectric effect, we expect the electrons in the metal to absorb energy from the wave continuously, and to be ejected when they have accumulated enough of it to escape the surface. A brighter light delivers energy faster, so the electrons should come out with more energy. In other words, the kinetic energy of the ejected electrons, <span class="math inline">\(K\)</span>, should be proportional to the intensity of the incident light, <span class="math inline">\(I_{\text{in}}\)</span>:</p>
+<p>To see why an explanation was needed, let’s start from the classical prediction. As we saw at the end of <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>, in classical physics light is a continuous electromagnetic wave, and the energy that it delivers every second depends on its amplitude (its brightness, or <em>intensity</em>), and not on its frequency. If we apply this picture to the photoelectric effect, we expect the electrons in the metal to absorb energy from the wave continuously, and to be ejected when they have accumulated enough of it to escape the surface. A brighter light delivers energy faster, so the electrons should come out with more energy. In other words, the kinetic energy of the ejected electrons, <span class="math inline">\(K\)</span>, should be proportional to the intensity of the incident light, <span class="math inline">\(I_{\text{in}}\)</span>:</p>
 <p><span id="eq-pe3"><span class="math display">\[
 K= c_{\text{PE}} \; I_{\text{in}},
 \tag{2.4}\]</span></span></p>
 <p>with <span class="math inline">\(c_{\text{PE}}\)</span> being a constant that depends on the metal and on the characteristics of the incident light. The same picture also makes two other predictions: any color of light should be able to eject electrons, provided that it is bright enough, and with a very dim light the electrons should come out only after some delay, the time necessary to accumulate enough energy.</p>
 <p>The experiments contradicted all three predictions. The kinetic energy of the ejected electrons does not depend on the intensity of the light at all (a brighter light ejects <em>more</em> electrons, but not faster ones), while it increases with the frequency of the light. Below a certain threshold frequency, which depends on the metal, no electrons are ejected, no matter how bright the light is. Above the threshold, electrons are ejected immediately, even with very dim light.</p>
-<p>Einstein explained these results by proposing that a beam of light is not a continuous wave, but a stream of discrete packets of energy, the photons. The energy of each photon is equal to the smallest possible energy quantum in Planck’s theory of the black body (corresponding to <span class="math inline">\(n=1\)</span> in <a href="#eq-uvcat" class="quarto-xref">eq.&nbsp;<span>2.2</span></a>):</p>
+<p>Einstein explained these results by proposing that a beam of light is not a continuous wave, but a stream of discrete packets of energy, the photons. The energy of each photon is equal to the smallest possible energy quantum in Planck’s theory of the black body (corresponding to <span class="math inline">\(n=1\)</span> in <a href="#eq-uvcat" class="quarto-xref">Eq.&nbsp;<span>2.2</span></a>):</p>
 <p><span id="eq-pe0"><span class="math display">\[
 E = h \nu.
 \tag{2.5}\]</span></span></p>
@@ -589,7 +589,7 @@ E = h \nu.
 <p><span id="eq-pe4"><span class="math display">\[
 K_{\text{max}} = E_{\text{in}} - \phi = h\nu_{\text{in}} - \phi,
 \tag{2.6}\]</span></span></p>
-<p>which depends on the frequency of the light, but not on its intensity, in agreement with the experiments. <a href="#eq-pe4" class="quarto-xref">Eq.&nbsp;<span>2.6</span></a> is plotted for three metals in <a href="#fig-Fig2c2" class="quarto-xref">figure&nbsp;<span>2.2</span></a>. For each metal, <span class="math inline">\(K_\text{max}\)</span> is zero up to the threshold frequency, <span class="math inline">\(\nu_0=\phi/h\)</span>, and then increases linearly with the frequency. The lines for all metals are parallel, since their slope is always the Planck constant, <span class="math inline">\(h\)</span>. In 1916, Robert Millikan measured these lines very carefully, confirming Einstein’s prediction and obtaining a value of <span class="math inline">\(h\)</span> in agreement with Planck’s. Einstein received the Nobel Prize in Physics in 1921 for this explanation.</p>
+<p>which depends on the frequency of the light, but not on its intensity, in agreement with the experiments. <a href="#eq-pe4" class="quarto-xref">Eq.&nbsp;<span>2.6</span></a> is plotted for three metals in <a href="#fig-Fig2c2" class="quarto-xref">Fig.&nbsp;<span>2.2</span></a>. For each metal, <span class="math inline">\(K_\text{max}\)</span> is zero up to the threshold frequency, <span class="math inline">\(\nu_0=\phi/h\)</span>, and then increases linearly with the frequency. The lines for all metals are parallel, since their slope is always the Planck constant, <span class="math inline">\(h\)</span>. In 1916, Robert Millikan measured these lines very carefully, confirming Einstein’s prediction and obtaining a value of <span class="math inline">\(h\)</span> in agreement with Planck’s. Einstein received the Nobel Prize in Physics in 1921 for this explanation.</p>
 <div id="fig-Fig2c2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of maximum electron kinetic energy versus light frequency for cesium, sodium, and zinc. Each is zero below a threshold frequency and then rises as a straight line; the three lines are parallel with slope equal to the Planck constant. Zinc's threshold is in the ultraviolet.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig2c2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -603,7 +603,7 @@ Figure&nbsp;2.2: Maximum kinetic energy of the electrons ejected from three meta
 <p>For example, the work function of sodium is about <span class="math inline">\(2.3\;\text{eV}\)</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The threshold wavelength is <span class="math inline">\(\lambda_0=hc/\phi\approx1240/2.3\approx540\;\text{nm}\)</span>, so green, blue, and violet light can eject electrons from sodium, but yellow and red light cannot, no matter how bright. Ultraviolet light with <span class="math inline">\(\lambda=250\;\text{nm}\)</span> carries photons of <span class="math inline">\(4.96\;\text{eV}\)</span>, and ejects electrons with a maximum kinetic energy of <span class="math inline">\(4.96-2.3\approx2.7\;\text{eV}\)</span>, corresponding to a speed of about <span class="math inline">\(10^6\;\text{m/s}\)</span>.</p>
 <section id="why-chemists-care-about-photons" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="why-chemists-care-about-photons"><span class="header-section-number">2.3.1</span> Why chemists care about photons</h3>
-<p>The energy of a single photon looks tiny in joules, but chemists usually think in terms of moles. A photon of green light (<span class="math inline">\(\lambda=500\;\text{nm}\)</span>) has an energy of <span class="math inline">\(E=hc/\lambda=3.97\times10^{-19}\;\text{J}\)</span>, or <span class="math inline">\(2.48\;\text{eV}\)</span>. A mole of such photons carries <span class="math inline">\(3.97\times10^{-19}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}\approx239\;\text{kJ/mol}\)</span>. This is the same order of magnitude as the energy of a chemical bond (a <span class="math inline">\(\mathrm{C}-\mathrm{C}\)</span> single bond is about <span class="math inline">\(350\;\text{kJ/mol}\)</span>). Ultraviolet photons (<span class="math inline">\(\lambda=250\;\text{nm}\)</span>, <span class="math inline">\(479\;\text{kJ/mol}\)</span>) carry enough energy to break chemical bonds, which is why UV light causes sunburns and can be used to sterilize surfaces, while visible photons can only excite electrons in molecules (which is how our eyes, and photosynthesis, work), and infrared photons can only make molecules vibrate. The interaction between light and molecules, one photon at a time, is the basis of spectroscopy, which we will discuss in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>.</p>
+<p>The energy of a single photon looks tiny in joules, but chemists usually think in terms of moles. A photon of green light (<span class="math inline">\(\lambda=500\;\text{nm}\)</span>) has an energy of <span class="math inline">\(E=hc/\lambda=3.97\times10^{-19}\;\text{J}\)</span>, or <span class="math inline">\(2.48\;\text{eV}\)</span>. A mole of such photons carries <span class="math inline">\(3.97\times10^{-19}\;\text{J}\times6.022\times10^{23}\;\text{mol}^{-1}\approx239\;\text{kJ/mol}\)</span>. This is the same order of magnitude as the energy of a chemical bond (a <span class="math inline">\(\mathrm{C}-\mathrm{C}\)</span> single bond is about <span class="math inline">\(350\;\text{kJ/mol}\)</span>). Ultraviolet photons (<span class="math inline">\(\lambda=250\;\text{nm}\)</span>, <span class="math inline">\(479\;\text{kJ/mol}\)</span>) carry enough energy to break chemical bonds, which is why UV light causes sunburns and can be used to sterilize surfaces, while visible photons can only excite electrons in molecules (which is how our eyes, and photosynthesis, work), and infrared photons can only make molecules vibrate. The interaction between light and molecules, one photon at a time, is the basis of spectroscopy, which we will discuss in <a href="13_Spectroscopy.html" class="quarto-xref"><span>Chapter 13</span></a>.</p>
 <div id="tip-the-photoelectric-effect-in-sodium" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -639,17 +639,17 @@ K_{\text{max}}=h\nu-\Phi=4.96\;\text{eV}-2.3\;\text{eV}=2.7\;\text{eV}.
 <p><span id="eq-rydberg"><span class="math display">\[
 \frac{1}{\lambda} = R_H\left(\frac{1}{n_1^2}-\frac{1}{n_2^2}\right), \qquad n_2 &gt; n_1,
 \tag{2.7}\]</span></span></p>
-<p>where <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> are positive integers, and <span class="math inline">\(R_H=1.0968\times10^{7}\;\text{m}^{-1}\)</span> is the <em>Rydberg constant</em> for hydrogen. The lines with <span class="math inline">\(n_1=1\)</span> are in the ultraviolet (the <em>Lyman series</em>), those with <span class="math inline">\(n_1=2\)</span> are mostly in the visible (the <em>Balmer series</em>), and those with <span class="math inline">\(n_1=3\)</span> are in the infrared (the <em>Paschen series</em>). For example, for <span class="math inline">\(n_1=2\)</span> and <span class="math inline">\(n_2=3\)</span>, <a href="#eq-rydberg" class="quarto-xref">eq.&nbsp;<span>2.7</span></a> gives <span class="math inline">\(1/\lambda=R_H\cdot\frac{5}{36}\)</span>, or <span class="math inline">\(\lambda=656\;\text{nm}\)</span>, the red line of hydrogen. The formula worked perfectly, but nobody knew why. Classical physics could not explain why atoms emit only certain wavelengths. Worse, as we mentioned at the beginning of this chapter, according to classical physics an electron orbiting a nucleus should continuously emit radiation of all wavelengths while spiraling into the nucleus.</p>
+<p>where <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> are positive integers, and <span class="math inline">\(R_H=1.0968\times10^{7}\;\text{m}^{-1}\)</span> is the <em>Rydberg constant</em> for hydrogen. The lines with <span class="math inline">\(n_1=1\)</span> are in the ultraviolet (the <em>Lyman series</em>), those with <span class="math inline">\(n_1=2\)</span> are mostly in the visible (the <em>Balmer series</em>), and those with <span class="math inline">\(n_1=3\)</span> are in the infrared (the <em>Paschen series</em>). For example, for <span class="math inline">\(n_1=2\)</span> and <span class="math inline">\(n_2=3\)</span>, <a href="#eq-rydberg" class="quarto-xref">Eq.&nbsp;<span>2.7</span></a> gives <span class="math inline">\(1/\lambda=R_H\cdot\frac{5}{36}\)</span>, or <span class="math inline">\(\lambda=656\;\text{nm}\)</span>, the red line of hydrogen. The formula worked perfectly, but nobody knew why. Classical physics could not explain why atoms emit only certain wavelengths. Worse, as we mentioned at the beginning of this chapter, according to classical physics an electron orbiting a nucleus should continuously emit radiation of all wavelengths while spiraling into the nucleus.</p>
 <p>In 1913, Niels Bohr proposed a model that explained the hydrogen spectrum by combining Rutherford’s nuclear atom with Planck’s idea of quantization. The <strong>Bohr model</strong> is based on two assumptions:</p>
 <ol type="1">
 <li>The electron moves around the nucleus only on certain circular orbits, called <em>stationary states</em>, on which it does not emit radiation. On these orbits, the angular momentum of the electron is quantized: it can only be a whole multiple of <span class="math inline">\(\hbar=h/2\pi\)</span>, <span class="math inline">\(L=n\hbar\)</span>, with <span class="math inline">\(n=1,2,3,\ldots\)</span></li>
 <li>The atom emits or absorbs light only when the electron jumps from one orbit to another. The energy of the photon is equal to the difference between the energies of the two orbits, <span class="math inline">\(h\nu=E_{n_2}-E_{n_1}\)</span>.</li>
 </ol>
-<p>Combining the first assumption with the classical laws of motion for an electron attracted by a proton (Coulomb’s law, <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>), Bohr found that the allowed energies of the electron are:</p>
+<p>Combining the first assumption with the classical laws of motion for an electron attracted by a proton (Coulomb’s law, <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>), Bohr found that the allowed energies of the electron are:</p>
 <p><span id="eq-bohr1"><span class="math display">\[
 E_n = -\frac{m_e e^4}{8\varepsilon_0^2h^2}\frac{1}{n^2} = -\frac{13.6\;\text{eV}}{n^2}, \qquad n=1,2,3,\ldots
 \tag{2.8}\]</span></span></p>
-<p>and the radius of the smallest orbit, now called the <em>Bohr radius</em>, is <span class="math inline">\(a_0=0.529\;\text{Å}\)</span>. The energy levels of <a href="#eq-bohr1" class="quarto-xref">eq.&nbsp;<span>2.8</span></a> and the transitions between them are shown in <a href="#fig-Fig3c2" class="quarto-xref">figure&nbsp;<span>2.3</span></a>.</p>
+<p>and the radius of the smallest orbit, now called the <em>Bohr radius</em>, is <span class="math inline">\(a_0=0.529\;\text{Å}\)</span>. The energy levels of <a href="#eq-bohr1" class="quarto-xref">Eq.&nbsp;<span>2.8</span></a> and the transitions between them are shown in <a href="#fig-Fig3c2" class="quarto-xref">Fig.&nbsp;<span>2.3</span></a>.</p>
 <div id="fig-Fig3c2" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram of hydrogen with levels at minus 13.6 electronvolts divided by n squared. Downward arrows show the Lyman series ending on n equals 1, the Balmer series ending on n equals 2, and the Paschen series ending on n equals 3. Below, a dark strip shows the visible Balmer lines at 656, 486, 434, 410, and 397 nanometers.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig3c2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -662,11 +662,11 @@ Figure&nbsp;2.3: Top: energy levels of the hydrogen atom according to the Bohr m
 </div>
 <p>This diagram explains three features of atomic spectra:</p>
 <ol type="1">
-<li><p><strong>Quantized energy levels explain line spectra</strong>: since the electron can only have the energies of <a href="#eq-bohr1" class="quarto-xref">eq.&nbsp;<span>2.8</span></a>, the photons emitted when it jumps from a higher level to a lower one can only have the energies <span class="math inline">\(E_{n_2}-E_{n_1}=13.6\;\text{eV}\left(\frac{1}{n_1^2}-\frac{1}{n_2^2}\right)\)</span>. Dividing by <span class="math inline">\(hc\)</span> gives exactly the Rydberg formula, <a href="#eq-rydberg" class="quarto-xref">eq.&nbsp;<span>2.7</span></a>, with <span class="math inline">\(R_H=13.6\;\text{eV}/hc=1.097\times10^{7}\;\text{m}^{-1}\)</span>, in perfect agreement with the experimental value.</p></li>
+<li><p><strong>Quantized energy levels explain line spectra</strong>: since the electron can only have the energies of <a href="#eq-bohr1" class="quarto-xref">Eq.&nbsp;<span>2.8</span></a>, the photons emitted when it jumps from a higher level to a lower one can only have the energies <span class="math inline">\(E_{n_2}-E_{n_1}=13.6\;\text{eV}\left(\frac{1}{n_1^2}-\frac{1}{n_2^2}\right)\)</span>. Dividing by <span class="math inline">\(hc\)</span> gives exactly the Rydberg formula, <a href="#eq-rydberg" class="quarto-xref">Eq.&nbsp;<span>2.7</span></a>, with <span class="math inline">\(R_H=13.6\;\text{eV}/hc=1.097\times10^{7}\;\text{m}^{-1}\)</span>, in perfect agreement with the experimental value.</p></li>
 <li><p><strong>Ionization energy</strong>: the levels get closer and closer as <span class="math inline">\(n\)</span> increases, and they converge to <span class="math inline">\(E=0\)</span>, which corresponds to the electron completely separated from the proton. The energy needed to remove the electron from the lowest level, <span class="math inline">\(13.6\;\text{eV}\)</span> (or <span class="math inline">\(1{,}312\;\text{kJ/mol}\)</span>), is the ionization energy of hydrogen, again in perfect agreement with experiments.</p></li>
 <li><p><strong>The meaning of the series</strong>: all lines of a series end on the same lower level. The Lyman series, which ends on <span class="math inline">\(n=1\)</span>, involves the largest energy jumps, and it is in the ultraviolet. The Balmer series, which ends on <span class="math inline">\(n=2\)</span>, involves smaller jumps, and its first lines are visible.</p></li>
 </ol>
-<p>Despite this spectacular success, the Bohr model has serious problems. It works only for hydrogen and for ions with a single electron (such as <span class="math inline">\(\mathrm{He}^+\)</span> and <span class="math inline">\(\mathrm{Li}^{2+}\)</span>), and it fails already for the helium atom. It cannot explain the intensities of the lines, nor why some lines split in a magnetic field. Most importantly, it does not explain <em>why</em> angular momentum should be quantized, or why an electron on an orbit should not radiate: these are assumptions made to fit the data. As we will see in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>, the Schrödinger equation gives exactly the same energies as <a href="#eq-bohr1" class="quarto-xref">eq.&nbsp;<span>2.8</span></a>, but without any of these assumptions, and with a completely different picture of the electron, which is not a particle moving on an orbit, but a wave.</p>
+<p>Despite this spectacular success, the Bohr model has serious problems. It works only for hydrogen and for ions with a single electron (such as <span class="math inline">\(\mathrm{He}^+\)</span> and <span class="math inline">\(\mathrm{Li}^{2+}\)</span>), and it fails already for the helium atom. It cannot explain the intensities of the lines, nor why some lines split in a magnetic field. Most importantly, it does not explain <em>why</em> angular momentum should be quantized, or why an electron on an orbit should not radiate: these are assumptions made to fit the data. As we will see in <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>, the Schrödinger equation gives exactly the same energies as <a href="#eq-bohr1" class="quarto-xref">Eq.&nbsp;<span>2.8</span></a>, but without any of these assumptions, and with a completely different picture of the electron, which is not a particle moving on an orbit, but a wave.</p>
 </section>
 <section id="wave-particle-duality" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="wave-particle-duality"><span class="header-section-number">2.5</span> Wave-Particle Duality</h2>
@@ -678,13 +678,13 @@ p = \frac{h}{\lambda}.
 <p><span id="eq-wp2"><span class="math display">\[
 E = \frac{h c}{\lambda}.
 \tag{2.10}\]</span></span></p>
-<p>Second, according to Einstein’s theory of relativity, the energy of a particle with no mass, such as a photon, is related to its momentum by <span class="math inline">\(E = pc\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Replacing this relation in <a href="#eq-wp2" class="quarto-xref">eq.&nbsp;<span>2.10</span></a> and solving for <span class="math inline">\(\lambda\)</span> we obtain:</p>
+<p>Second, according to Einstein’s theory of relativity, the energy of a particle with no mass, such as a photon, is related to its momentum by <span class="math inline">\(E = pc\)</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Replacing this relation in <a href="#eq-wp2" class="quarto-xref">Eq.&nbsp;<span>2.10</span></a> and solving for <span class="math inline">\(\lambda\)</span> we obtain:</p>
 <p><span id="eq-wp3"><span class="math display">\[
 \lambda = \frac{h}{p},
 \tag{2.11}\]</span></span></p>
-<p>which is equivalent to <a href="#eq-wp1" class="quarto-xref">eq.&nbsp;<span>2.9</span></a>. Light, therefore, behaves as a wave in some experiments (it can be diffracted, and it has a wavelength) and as a particle in others (it comes in packets with energy <span class="math inline">\(h \nu\)</span> and momentum <span class="math inline">\(h/\lambda\)</span>). In 1924, Louis de Broglie made the bold suggestion that this dual behavior is not unique to light, and that matter should also behave like a wave, with a wavelength given by the same <a href="#eq-wp3" class="quarto-xref">eq.&nbsp;<span>2.11</span></a>. In 1927, Clinton Davisson and Lester Germer confirmed de Broglie’s hypothesis by observing a diffraction pattern when they shot a beam of electrons at a nickel crystal, exactly as if the electrons were waves. We will discuss the wave behavior of electrons in more detail in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</p>
+<p>which is equivalent to <a href="#eq-wp1" class="quarto-xref">Eq.&nbsp;<span>2.9</span></a>. Light, therefore, behaves as a wave in some experiments (it can be diffracted, and it has a wavelength) and as a particle in others (it comes in packets with energy <span class="math inline">\(h \nu\)</span> and momentum <span class="math inline">\(h/\lambda\)</span>). In 1924, Louis de Broglie made the bold suggestion that this dual behavior is not unique to light, and that matter should also behave like a wave, with a wavelength given by the same <a href="#eq-wp3" class="quarto-xref">Eq.&nbsp;<span>2.11</span></a>. In 1927, Clinton Davisson and Lester Germer confirmed de Broglie’s hypothesis by observing a diffraction pattern when they shot a beam of electrons at a nickel crystal, exactly as if the electrons were waves. We will discuss the wave behavior of electrons in more detail in <a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>.</p>
 <p>Why don’t we notice the wave nature of everyday objects? Because <span class="math inline">\(h\)</span> is so small. A baseball with a mass of <span class="math inline">\(0.145\text{ kg}\)</span> thrown at <span class="math inline">\(40\text{ m/s}\)</span> has a de Broglie wavelength of <span class="math inline">\(\lambda = h/mv \approx 1\times10^{-34}\text{ m}\)</span>, far too small to be observed in any experiment. An electron accelerated to a speed of <span class="math inline">\(10^6\text{ m/s}\)</span>, instead, has a wavelength of about <span class="math inline">\(7\times10^{-10}\text{ m}\)</span>, comparable to the size of an atom. This is why wave behavior dominates the world of electrons, atoms, and molecules, and why chemistry needs quantum mechanics.</p>
-<p>Rewriting the previous equations in terms of the wave vector, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, and the angular frequency, <span class="math inline">\(\omega=2\pi\nu\)</span>, that we introduced in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>, we obtain the following two equations:</p>
+<p>Rewriting the previous equations in terms of the wave vector, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span>, and the angular frequency, <span class="math inline">\(\omega=2\pi\nu\)</span>, that we introduced in <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>, we obtain the following two equations:</p>
 <p><span id="eq-wp1b"><span class="math display">\[
 \begin{aligned}
 p &amp;= \hbar k \\
@@ -695,7 +695,7 @@ E &amp;= \hbar \omega,
 </section>
 <section id="summary" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="summary"><span class="header-section-number">2.6</span> Summary</h2>
-<p>The four experiments discussed in this chapter, and the new ideas that they introduced, are summarized in <a href="#tbl-tab1c2" class="quarto-xref">table&nbsp;<span>2.1</span></a>.</p>
+<p>The four experiments discussed in this chapter, and the new ideas that they introduced, are summarized in <a href="#tbl-tab1c2" class="quarto-xref">Table&nbsp;<span>2.1</span></a>.</p>
 <div id="tbl-tab1c2" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[20,26,27,27]">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1c2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -765,131 +765,91 @@ Table&nbsp;2.1: The experiments that led to quantum mechanics.
 <h3 data-number="2.7.2" class="anchored" data-anchor-id="sec-quest2"><span class="header-section-number">2.7.2</span> Study Questions</h3>
 <p><strong>1. What did classical physics (the Rayleigh–Jeans law) predict for the radiation emitted by a black body?</strong></p>
 <ol type="a">
-<li>the intensity peaks and then goes to zero at short wavelengths<br>
-</li>
-<li>the intensity grows without limit at short wavelengths<br>
-</li>
-<li>no radiation is emitted at room temperature<br>
-</li>
-<li>the intensity is the same at all wavelengths<br>
-</li>
+<li>the intensity peaks and then goes to zero at short wavelengths</li>
+<li>the intensity grows without limit at short wavelengths</li>
+<li>no radiation is emitted at room temperature</li>
+<li>the intensity is the same at all wavelengths</li>
 <li>only visible light is emitted</li>
 </ol>
 <hr>
 <p><strong>2. Which assumption did Planck introduce to explain black-body radiation?</strong></p>
 <ol type="a">
-<li>light travels faster at short wavelengths<br>
-</li>
-<li>atoms have a nucleus<br>
-</li>
-<li>energy is exchanged only in multiples of <span class="math inline">\(h\nu\)</span><br>
-</li>
-<li>electrons are waves<br>
-</li>
+<li>light travels faster at short wavelengths</li>
+<li>atoms have a nucleus</li>
+<li>energy is exchanged only in multiples of <span class="math inline">\(h\nu\)</span></li>
+<li>electrons are waves</li>
 <li>energy is not conserved in the emission of light</li>
 </ol>
 <hr>
 <p><strong>3. As the temperature of a black body increases, the maximum of its emission:</strong></p>
 <ol type="a">
-<li>moves to longer wavelengths<br>
-</li>
-<li>moves to shorter wavelengths<br>
-</li>
-<li>does not move<br>
-</li>
-<li>disappears<br>
-</li>
+<li>moves to longer wavelengths</li>
+<li>moves to shorter wavelengths</li>
+<li>does not move</li>
+<li>disappears</li>
 <li>moves to longer wavelengths and becomes weaker</li>
 </ol>
 <hr>
 <p><strong>4. Light with a frequency below the threshold frequency shines on a metal. If we increase its intensity:</strong></p>
 <ol type="a">
-<li>still no electrons are ejected<br>
-</li>
-<li>electrons are ejected with more kinetic energy<br>
-</li>
-<li>electrons are ejected after a short delay<br>
-</li>
-<li>more electrons are ejected, all with the same kinetic energy<br>
-</li>
+<li>still no electrons are ejected</li>
+<li>electrons are ejected with more kinetic energy</li>
+<li>electrons are ejected after a short delay</li>
+<li>more electrons are ejected, all with the same kinetic energy</li>
 <li>the threshold frequency decreases</li>
 </ol>
 <hr>
 <p><strong>5. In the photoelectric effect, the kinetic energy of an ejected electron is:</strong></p>
 <ol type="a">
-<li>proportional to the intensity of the light<br>
-</li>
-<li><span class="math inline">\(K=h\nu+\Phi\)</span><br>
-</li>
-<li><span class="math inline">\(K=h\nu-\Phi\)</span>, where <span class="math inline">\(\Phi\)</span> is the work function of the metal<br>
-</li>
-<li>the same for all frequencies above the threshold<br>
-</li>
+<li>proportional to the intensity of the light</li>
+<li><span class="math inline">\(K=h\nu+\Phi\)</span></li>
+<li><span class="math inline">\(K=h\nu-\Phi\)</span>, where <span class="math inline">\(\Phi\)</span> is the work function of the metal</li>
+<li>the same for all frequencies above the threshold</li>
 <li><span class="math inline">\(K=\Phi/h\nu\)</span></li>
 </ol>
 <hr>
 <p><strong>6. The energy of a single photon depends on:</strong></p>
 <ol type="a">
-<li>the intensity of the light<br>
-</li>
-<li>the number of photons in the beam<br>
-</li>
-<li>the temperature of the source<br>
-</li>
-<li>its frequency only, <span class="math inline">\(E=h\nu\)</span><br>
-</li>
+<li>the intensity of the light</li>
+<li>the number of photons in the beam</li>
+<li>the temperature of the source</li>
+<li>its frequency only, <span class="math inline">\(E=h\nu\)</span></li>
 <li>the size of the source</li>
 </ol>
 <hr>
 <p><strong>7. What do the sharp lines in the spectrum of hydrogen tell us?</strong></p>
 <ol type="a">
-<li>that the electron spirals into the nucleus<br>
-</li>
-<li>that hydrogen emits light at all wavelengths<br>
-</li>
-<li>that light is a classical wave<br>
-</li>
-<li>that the hydrogen atom has many electrons<br>
-</li>
+<li>that the electron spirals into the nucleus</li>
+<li>that hydrogen emits light at all wavelengths</li>
+<li>that light is a classical wave</li>
+<li>that the hydrogen atom has many electrons</li>
 <li>that the atom can only have certain discrete energies</li>
 </ol>
 <hr>
 <p><strong>8. Which of the following is a problem of the Bohr model?</strong></p>
 <ol type="a">
-<li>it works only for atoms with one electron, and its assumptions have no justification<br>
-</li>
-<li>it cannot explain the lines of the hydrogen spectrum<br>
-</li>
-<li>it predicts that atoms are not stable<br>
-</li>
-<li>it gives the wrong value of the ionization energy of hydrogen<br>
-</li>
+<li>it works only for atoms with one electron, and its assumptions have no justification</li>
+<li>it cannot explain the lines of the hydrogen spectrum</li>
+<li>it predicts that atoms are not stable</li>
+<li>it gives the wrong value of the ionization energy of hydrogen</li>
 <li>it does not use Planck’s constant</li>
 </ol>
 <hr>
 <p><strong>9. The de Broglie wavelength of a particle with momentum <span class="math inline">\(p\)</span> is:</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\lambda=hp\)</span><br>
-</li>
-<li><span class="math inline">\(\lambda=p/h\)</span><br>
-</li>
-<li><span class="math inline">\(\lambda=h\nu\)</span><br>
-</li>
-<li><span class="math inline">\(\lambda=c/p\)</span><br>
-</li>
+<li><span class="math inline">\(\lambda=hp\)</span></li>
+<li><span class="math inline">\(\lambda=p/h\)</span></li>
+<li><span class="math inline">\(\lambda=h\nu\)</span></li>
+<li><span class="math inline">\(\lambda=c/p\)</span></li>
 <li><span class="math inline">\(\lambda=h/p\)</span></li>
 </ol>
 <hr>
 <p><strong>10. Why don’t we observe the wave nature of a thrown baseball?</strong></p>
 <ol type="a">
-<li>because a baseball has no momentum<br>
-</li>
-<li>because only charged particles have a wavelength<br>
-</li>
-<li>because a baseball moves faster than light<br>
-</li>
-<li>because its de Broglie wavelength is far smaller than any object or opening it could interact with<br>
-</li>
+<li>because a baseball has no momentum</li>
+<li>because only charged particles have a wavelength</li>
+<li>because a baseball moves faster than light</li>
+<li>because its de Broglie wavelength is far smaller than any object or opening it could interact with</li>
 <li>because its de Broglie wavelength is too long to be measured</li>
 </ol>
 <hr>

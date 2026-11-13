@@ -566,7 +566,7 @@ window.Quarto = {
 
 
 <p>The hydrogen atom, one proton and one electron, is the most important system in this book: it is the only atom for which we can solve the TISEq exactly, and its solutions, the hydrogen orbitals, are the building blocks that we will use for every other atom and molecule. Since the proton is about <span class="math inline">\(1{,}836\)</span> times heavier than the electron, we can place it at the origin and think of the electron as moving around it (strictly speaking, the mass that enters the equations is the reduced mass of the two particles, <span class="math inline">\(\mu\)</span>, which is almost exactly the mass of the electron).</p>
-<p>The potential energy is the Coulomb attraction between the electron and the proton (<a href="01_Classical.html#eq-coulomb6" class="quarto-xref">eq.&nbsp;<span>1.16</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>):</p>
+<p>The potential energy is the Coulomb attraction between the electron and the proton (<a href="01_Classical.html#eq-coulomb6" class="quarto-xref">Eq.&nbsp;<span>1.16</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>):</p>
 <p><span id="eq-HA1"><span class="math display">\[
 V(r) = - \frac{e^2}{4 \pi \varepsilon_0 r},
 \tag{5.1}\]</span></span></p>
@@ -578,11 +578,11 @@ K = - \frac{\hbar^2}{2 \mu} \nabla^2,
 <p><span id="eq-HA2b"><span class="math display">\[
 \left(-\frac{\hbar^{2}}{2\mu}\nabla^{2}-\frac{e^{2}}{4\pi\varepsilon_{0}r}\right)\psi =E\psi.
 \tag{5.3}\]</span></span></p>
-<p>Since the potential depends only on <span class="math inline">\(r\)</span>, it is much easier to work in spherical coordinates, <span class="math inline">\((r,\theta,\phi)\)</span>, where the Laplacian becomes (<a href="A1_Math.html#sec-MathCoordinates" class="quarto-xref"><span>section A.4</span></a>):</p>
+<p>Since the potential depends only on <span class="math inline">\(r\)</span>, it is much easier to work in spherical coordinates, <span class="math inline">\((r,\theta,\phi)\)</span>, where the Laplacian becomes (<a href="A1_Math.html#sec-MathCoordinates" class="quarto-xref"><span>Sec. A.4</span></a>):</p>
 <p><span id="eq-HA3"><span class="math display">\[
 -\frac{\hbar^{2}}{2\mu}\left[\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r^{2}\frac{\partial \psi }{\partial r}\right)+\frac{1}{r^{2}\sin \theta }\frac{\partial }{\partial \theta }\left(\sin \theta \frac{\partial \psi }{\partial \theta }\right)+\frac{1}{r^{2}\sin ^{2}\theta }\frac{\partial ^{2}\psi }{\partial \phi ^{2}}\right]-\frac{e^{2}}{4\pi \varepsilon _{0}r}\psi =E\psi.
 \tag{5.4}\]</span></span></p>
-<p>This equation looks scary, but we have already met most of it. The terms with <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span> are exactly the ones of the particle on a sphere, <a href="04_Models.html#eq-RR1" class="quarto-xref">eq.&nbsp;<span>4.34</span></a> in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>, and the potential does not depend on the angles at all. This means that we can write the wave function as a product of a <em>radial</em> part, which depends only on <span class="math inline">\(r\)</span>, and an <em>angular</em> part, which is a spherical harmonic:</p>
+<p>This equation looks scary, but we have already met most of it. The terms with <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span> are exactly the ones of the particle on a sphere, <a href="04_Models.html#eq-RR1" class="quarto-xref">Eq.&nbsp;<span>4.34</span></a> in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>, and the potential does not depend on the angles at all. This means that we can write the wave function as a product of a <em>radial</em> part, which depends only on <span class="math inline">\(r\)</span>, and an <em>angular</em> part, which is a spherical harmonic:</p>
 <p><span id="eq-HA6"><span class="math display">\[
 \psi_{n\ell m_{\ell}}(r,\theta,\phi) = R_{n\ell}(r)\,Y_{\ell}^{m_{\ell}}(\theta,\phi).
 \tag{5.5}\]</span></span></p>
@@ -591,7 +591,7 @@ K = - \frac{\hbar^2}{2 \mu} \nabla^2,
 - \frac{\hbar^2}{2 \mu r^2} \frac{d}{dr} \left( r^2 \frac{dR}{dr}
 \right) + \left[\frac{\hbar^2 \ell(\ell+1)}{2 \mu r^2} + V(r) \right] R(r) = E\,R(r).
 \tag{5.6}\]</span></span></p>
-<p>Notice the extra term <span class="math inline">\(\frac{\hbar^2 \ell(\ell+1)}{2 \mu r^2}\)</span>, which acts as an additional, repulsive potential energy. It is the rotational energy of the electron, <span class="math inline">\(L^2/2I\)</span> with <span class="math inline">\(I=\mu r^2\)</span> (<a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>), and it pushes electrons with larger angular momentum away from the nucleus. Its solutions are a decaying exponential multiplied by a polynomial in <span class="math inline">\(r\)</span>, which we will look at in a moment.</p>
+<p>Notice the extra term <span class="math inline">\(\frac{\hbar^2 \ell(\ell+1)}{2 \mu r^2}\)</span>, which acts as an additional, repulsive potential energy. It is the rotational energy of the electron, <span class="math inline">\(L^2/2I\)</span> with <span class="math inline">\(I=\mu r^2\)</span> (<a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>), and it pushes electrons with larger angular momentum away from the nucleus. Its solutions are a decaying exponential multiplied by a polynomial in <span class="math inline">\(r\)</span>, which we will look at in a moment.</p>
 <p>The solutions are labeled by three quantum numbers, one for each dimension of space:</p>
 <ul>
 <li><span class="math inline">\(n=1,2,3,\ldots\)</span>, the <strong>principal quantum number</strong>, which comes from the radial equation and fixes the energy;</li>
@@ -603,11 +603,11 @@ K = - \frac{\hbar^2}{2 \mu} \nabla^2,
 <p><span id="eq-HA7"><span class="math display">\[
 E_n = - \frac{1}{n^2}\frac{e^2}{8 \pi \varepsilon_0 a_0} \quad (n=1,2,3,\ldots),
 \tag{5.7}\]</span></span></p>
-<p>where <span class="math inline">\(a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2} \approx 0.529\,\text{Å}\)</span> is the <em>Bohr radius</em>, the same length that we found with the Bohr model in <a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>. The energy depends only on <span class="math inline">\(n\)</span>, and not on <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_\ell\)</span>: all the orbitals with the same <span class="math inline">\(n\)</span> have the same energy. Some of this degeneracy comes from the rotational symmetry of the atom (the energy cannot depend on <span class="math inline">\(m_\ell\)</span>), and some from a special property of the <span class="math inline">\(1/r\)</span> potential (the energy does not depend on <span class="math inline">\(\ell\)</span> either), as we discussed in <a href="07_Spin.html#sec-CommutingH" class="quarto-xref"><span>section 7.4</span></a>. So, for example:</p>
+<p>where <span class="math inline">\(a_0 = \frac{\varepsilon_0 h^2}{\pi \mu e^2} \approx 0.529\,\text{Å}\)</span> is the <em>Bohr radius</em>, the same length that we found with the Bohr model in <a href="02_Motivation.html" class="quarto-xref"><span>Chapter 2</span></a>. The energy depends only on <span class="math inline">\(n\)</span>, and not on <span class="math inline">\(\ell\)</span> and <span class="math inline">\(m_\ell\)</span>: all the orbitals with the same <span class="math inline">\(n\)</span> have the same energy. Some of this degeneracy comes from the rotational symmetry of the atom (the energy cannot depend on <span class="math inline">\(m_\ell\)</span>), and some from a special property of the <span class="math inline">\(1/r\)</span> potential (the energy does not depend on <span class="math inline">\(\ell\)</span> either), as we discussed in <a href="07_Spin.html#sec-CommutingH" class="quarto-xref"><span>Sec. 7.4</span></a>. So, for example:</p>
 <ul>
 <li>In the hydrogen atom, the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals have the same energy.</li>
 </ul>
-<p>This is often a surprise for students, since general chemistry textbooks usually show the <span class="math inline">\(2s\)</span> orbital below the <span class="math inline">\(2p\)</span>. That splitting, however, only exists in atoms with more than one electron, as we will see in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>. (Very precise experiments show a tiny difference between <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> even in hydrogen, called the <em>Lamb shift</em>, but it comes from effects beyond the Schrödinger equation, it is less than a millionth of the energy of the level, and it has nothing to do with the splitting of general chemistry.) The energy levels of the hydrogen atom are plotted in <a href="#fig-fig0c5" class="quarto-xref">figure&nbsp;<span>5.1</span></a>.</p>
+<p>This is often a surprise for students, since general chemistry textbooks usually show the <span class="math inline">\(2s\)</span> orbital below the <span class="math inline">\(2p\)</span>. That splitting, however, only exists in atoms with more than one electron, as we will see in <a href="09_Atoms.html" class="quarto-xref"><span>Chapter 9</span></a>. (Very precise experiments show a tiny difference between <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> even in hydrogen, called the <em>Lamb shift</em>, but it comes from effects beyond the Schrödinger equation, it is less than a millionth of the energy of the level, and it has nothing to do with the splitting of general chemistry.) The energy levels of the hydrogen atom are plotted in <a href="#fig-fig0c5" class="quarto-xref">Fig.&nbsp;<span>5.1</span></a>.</p>
 <div id="fig-fig0c5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram of the hydrogen atom for n equals 1 to 5, with levels getting closer together as n increases towards the ionization limit at zero, and each level split into its degenerate orbitals.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig0c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -620,7 +620,7 @@ Figure&nbsp;5.1: Energy level diagram and degeneracy pattern for the first five 
 </div>
 <section id="sec-AtomicUnits" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="sec-AtomicUnits"><span class="header-section-number">5.1</span> Atomic Units</h2>
-<p>The hydrogen atom energies in <a href="#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.7</span></a> contain a combination of fundamental constants, <span class="math inline">\(\frac{e^2}{4\pi\varepsilon_0 a_0}\)</span>, that will appear over and over again whenever we deal with electrons in atoms and molecules. Writing <span class="math inline">\(\hbar\)</span>, <span class="math inline">\(m_e\)</span>, <span class="math inline">\(e\)</span>, and <span class="math inline">\(4\pi\varepsilon_0\)</span> in every equation quickly becomes tedious, and the numbers that come out (energies of the order of <span class="math inline">\(10^{-18}\;\text{J}\)</span>, distances of the order of <span class="math inline">\(10^{-11}\;\text{m}\)</span>) are inconvenient. For this reason, chemists and physicists who work with atoms and molecules use a set of units tailored to them, called <strong>atomic units (a.u.)</strong>. Atomic units are built by choosing the units of mass, charge, angular momentum, and permittivity so that:</p>
+<p>The hydrogen atom energies in <a href="#eq-HA7" class="quarto-xref">Eq.&nbsp;<span>5.7</span></a> contain a combination of fundamental constants, <span class="math inline">\(\frac{e^2}{4\pi\varepsilon_0 a_0}\)</span>, that will appear over and over again whenever we deal with electrons in atoms and molecules. Writing <span class="math inline">\(\hbar\)</span>, <span class="math inline">\(m_e\)</span>, <span class="math inline">\(e\)</span>, and <span class="math inline">\(4\pi\varepsilon_0\)</span> in every equation quickly becomes tedious, and the numbers that come out (energies of the order of <span class="math inline">\(10^{-18}\;\text{J}\)</span>, distances of the order of <span class="math inline">\(10^{-11}\;\text{m}\)</span>) are inconvenient. For this reason, chemists and physicists who work with atoms and molecules use a set of units tailored to them, called <strong>atomic units (a.u.)</strong>. Atomic units are built by choosing the units of mass, charge, angular momentum, and permittivity so that:</p>
 <p><span id="eq-au0"><span class="math display">\[
 \hbar = m_e = e = 4\pi\varepsilon_0 = 1.
 \tag{5.8}\]</span></span></p>
@@ -628,11 +628,11 @@ Figure&nbsp;5.1: Energy level diagram and degeneracy pattern for the first five 
 <p><span id="eq-aunits"><span class="math display">\[
 1\,E_h = \frac{e^2}{4\pi\varepsilon_0 a_0} = 27.211\text{ eV} = 2{,}625.5\text{ kJ/mol}, \qquad 1\,a_0 = 0.529\,\text{Å}.
 \tag{5.9}\]</span></span></p>
-<p>In atomic units, the energy levels of the hydrogen atom, <a href="#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.7</span></a>, take the very simple form:</p>
+<p>In atomic units, the energy levels of the hydrogen atom, <a href="#eq-HA7" class="quarto-xref">Eq.&nbsp;<span>5.7</span></a>, take the very simple form:</p>
 <p><span id="eq-HA7au"><span class="math display">\[
 E_n = -\frac{1}{2n^2}\;E_h,
 \tag{5.10}\]</span></span></p>
-<p>so the ground state is at <span class="math inline">\(-\frac{1}{2}\,E_h\)</span> (<span class="math inline">\(-13.6\;\text{eV}\)</span>, the value that we found with the Bohr model in <a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>), the first excited level at <span class="math inline">\(-\frac{1}{8}\,E_h\)</span>, and so on, as shown in <a href="#fig-fig0c5" class="quarto-xref">figure&nbsp;<span>5.1</span></a>. Similarly, the Hamiltonian of the hydrogen atom becomes <span class="math inline">\(\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}\)</span>, and the radial wave functions in the next section, which we write in terms of <span class="math inline">\(r/a_0\)</span>, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs (<span class="math inline">\(a_0\)</span>), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.</p>
+<p>so the ground state is at <span class="math inline">\(-\frac{1}{2}\,E_h\)</span> (<span class="math inline">\(-13.6\;\text{eV}\)</span>, the value that we found with the Bohr model in <a href="02_Motivation.html" class="quarto-xref"><span>Chapter 2</span></a>), the first excited level at <span class="math inline">\(-\frac{1}{8}\,E_h\)</span>, and so on, as shown in <a href="#fig-fig0c5" class="quarto-xref">Fig.&nbsp;<span>5.1</span></a>. Similarly, the Hamiltonian of the hydrogen atom becomes <span class="math inline">\(\hat{H}=-\frac{1}{2}\nabla^2-\frac{1}{r}\)</span>, and the radial wave functions in the next section, which we write in terms of <span class="math inline">\(r/a_0\)</span>, are already in atomic units. In the rest of this textbook we will often report energies in hartrees and distances in bohrs (<span class="math inline">\(a_0\)</span>), together with their values in more familiar units. Atomic units are also the units used internally by all quantum chemistry programs.</p>
 <div id="tip-the-red-line-of-hydrogen" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -646,7 +646,7 @@ Example&nbsp;5.1: The red line of hydrogen
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>What is the wavelength of the light emitted when a hydrogen atom goes from <span class="math inline">\(n=3\)</span> to <span class="math inline">\(n=2\)</span>?</p>
-<p><strong>Step 1: energy difference in atomic units.</strong> Using <a href="#eq-HA7au" class="quarto-xref">eq.&nbsp;<span>5.10</span></a>:</p>
+<p><strong>Step 1: energy difference in atomic units.</strong> Using <a href="#eq-HA7au" class="quarto-xref">Eq.&nbsp;<span>5.10</span></a>:</p>
 <p><span class="math display">\[
 \Delta E=E_3-E_2=-\frac{1}{18}\,E_h-\left(-\frac{1}{8}\,E_h\right)=\frac{5}{72}\,E_h=0.0694\,E_h.
 \]</span></p>
@@ -655,7 +655,7 @@ Example&nbsp;5.1: The red line of hydrogen
 <p><span class="math display">\[
 \lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3.03\times10^{-19}\;\text{J}}=656\;\text{nm}.
 \]</span></p>
-<p>This is the red line of the Balmer series, the brightest line in the visible spectrum of hydrogen (<a href="02_Motivation.html" class="quarto-xref"><span>chapter 2</span></a>).</p>
+<p>This is the red line of the Balmer series, the brightest line in the visible spectrum of hydrogen (<a href="02_Motivation.html" class="quarto-xref"><span>Chapter 2</span></a>).</p>
 </div>
 </div>
 </div>
@@ -693,11 +693,11 @@ R_{32}(r) &amp;= \frac{4}{81\sqrt{30}}\left(\frac{1}{a_0}\right)^{3/2} \left(\fr
 </div>
 </div>
 </div>
-<p>The radial wave functions are plotted in <a href="#fig-fig1c5" class="quarto-xref">figure&nbsp;<span>5.2</span></a>. Let’s look at them:</p>
+<p>The radial wave functions are plotted in <a href="#fig-fig1c5" class="quarto-xref">Fig.&nbsp;<span>5.2</span></a>. Let’s look at them:</p>
 <ol type="1">
 <li><strong>Nodes.</strong> <span class="math inline">\(R_{10}\)</span> (<span class="math inline">\(1s\)</span>) is always positive. <span class="math inline">\(R_{20}\)</span> (<span class="math inline">\(2s\)</span>) changes sign at <span class="math inline">\(r=2a_0\)</span>, where the polynomial <span class="math inline">\(2-r/a_0\)</span> is zero: this is a <em>radial node</em>, a sphere around the nucleus on which the wave function is zero. As for the particle in a box, higher energy means more nodes. In general, <span class="math inline">\(R_{n\ell}\)</span> has <span class="math inline">\(n-\ell-1\)</span> radial nodes.</li>
-<li><strong>The nucleus.</strong> The <span class="math inline">\(s\)</span> functions are largest at the nucleus, while all the others start at zero, because of the factor <span class="math inline">\(r^\ell\)</span>: the rotational term in <a href="#eq-HA4" class="quarto-xref">eq.&nbsp;<span>5.6</span></a> keeps electrons with angular momentum away from the nucleus.</li>
-<li><strong>Angular nodes.</strong> The radial nodes are not the only ones. The angular part, <span class="math inline">\(Y_\ell^{m_\ell}\)</span>, adds <span class="math inline">\(\ell\)</span> more (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), so that, as for all the other systems we have studied, the total number of nodes grows with the energy: <span class="math inline">\((n-\ell-1)+\ell=n-1\)</span>. For example, <span class="math inline">\(2s\)</span> has one radial node and no angular nodes, <span class="math inline">\(2p\)</span> has no radial nodes and one angular node, and <span class="math inline">\(3d\)</span> has two angular nodes. (As we saw for the particle on a sphere, the angular nodes are those of the real orbitals that we will meet below.)</li>
+<li><strong>The nucleus.</strong> The <span class="math inline">\(s\)</span> functions are largest at the nucleus, while all the others start at zero, because of the factor <span class="math inline">\(r^\ell\)</span>: the rotational term in <a href="#eq-HA4" class="quarto-xref">Eq.&nbsp;<span>5.6</span></a> keeps electrons with angular momentum away from the nucleus.</li>
+<li><strong>Angular nodes.</strong> The radial nodes are not the only ones. The angular part, <span class="math inline">\(Y_\ell^{m_\ell}\)</span>, adds <span class="math inline">\(\ell\)</span> more (<a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>), so that, as for all the other systems we have studied, the total number of nodes grows with the energy: <span class="math inline">\((n-\ell-1)+\ell=n-1\)</span>. For example, <span class="math inline">\(2s\)</span> has one radial node and no angular nodes, <span class="math inline">\(2p\)</span> has no radial nodes and one angular node, and <span class="math inline">\(3d\)</span> has two angular nodes. (As we saw for the particle on a sphere, the angular nodes are those of the real orbitals that we will meet below.)</li>
 </ol>
 <div id="fig-fig1c5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Radial wave functions of the 1s, 2s, 2p, 3s, 3p, and 3d orbitals of hydrogen versus distance from the nucleus, with radial nodes marked as dots.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -713,7 +713,7 @@ Figure&nbsp;5.2: The radial wave functions of the hydrogen atom orbitals in the 
 <p><span id="eq-HA8"><span class="math display">\[
 P(r) = r^2 |R_{n\ell}(r)|^2,
 \tag{5.12}\]</span></span></p>
-<p>(the factor <span class="math inline">\(4\pi\)</span> is taken care of by the normalization of the spherical harmonics). <span class="math inline">\(P(r)\,dr\)</span> is the probability of finding the electron between <span class="math inline">\(r\)</span> and <span class="math inline">\(r+dr\)</span>, whatever the direction, and it is plotted in <a href="#fig-fig2c5" class="quarto-xref">figure&nbsp;<span>5.3</span></a>.</p>
+<p>(the factor <span class="math inline">\(4\pi\)</span> is taken care of by the normalization of the spherical harmonics). <span class="math inline">\(P(r)\,dr\)</span> is the probability of finding the electron between <span class="math inline">\(r\)</span> and <span class="math inline">\(r+dr\)</span>, whatever the direction, and it is plotted in <a href="#fig-fig2c5" class="quarto-xref">Fig.&nbsp;<span>5.3</span></a>.</p>
 <div id="fig-fig2c5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Radial probability distributions of the 1s, 2s, 2p, 3s, 3p, and 3d orbitals of hydrogen versus distance from the nucleus. The 1s curve peaks at one Bohr radius; higher orbitals peak farther out, and s orbitals show small inner peaks separated by radial nodes.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -724,7 +724,7 @@ Figure&nbsp;5.3: The radial probability functions of the hydrogen atom orbitals 
 </figcaption>
 </figure>
 </div>
-<p>Notice how different <span class="math inline">\(P(r)\)</span> is from <span class="math inline">\(|R_{n\ell}|^2\)</span>. For the <span class="math inline">\(1s\)</span> orbital, <span class="math inline">\(|R_{10}|^2\)</span> is largest at the nucleus, but there is very little volume close to the nucleus, so <span class="math inline">\(P(r)\)</span> is zero there. Its maximum, the most probable distance of the electron from the nucleus, is at exactly <span class="math inline">\(r=a_0\)</span>, the radius of the Bohr model, although now the electron can be found at any distance. The <span class="math inline">\(2s\)</span> distribution has two maxima, at about <span class="math inline">\(0.76\,a_0\)</span> and <span class="math inline">\(5.24\,a_0\)</span>, separated by the radial node at <span class="math inline">\(2a_0\)</span>: even though the <span class="math inline">\(2s\)</span> electron is mostly found far from the nucleus, it has a small but important probability of being found close to it. We will see in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a> that this small inner maximum is what makes the <span class="math inline">\(2s\)</span> orbital lower in energy than <span class="math inline">\(2p\)</span> in atoms with more than one electron.</p>
+<p>Notice how different <span class="math inline">\(P(r)\)</span> is from <span class="math inline">\(|R_{n\ell}|^2\)</span>. For the <span class="math inline">\(1s\)</span> orbital, <span class="math inline">\(|R_{10}|^2\)</span> is largest at the nucleus, but there is very little volume close to the nucleus, so <span class="math inline">\(P(r)\)</span> is zero there. Its maximum, the most probable distance of the electron from the nucleus, is at exactly <span class="math inline">\(r=a_0\)</span>, the radius of the Bohr model, although now the electron can be found at any distance. The <span class="math inline">\(2s\)</span> distribution has two maxima, at about <span class="math inline">\(0.76\,a_0\)</span> and <span class="math inline">\(5.24\,a_0\)</span>, separated by the radial node at <span class="math inline">\(2a_0\)</span>: even though the <span class="math inline">\(2s\)</span> electron is mostly found far from the nucleus, it has a small but important probability of being found close to it. We will see in <a href="09_Atoms.html" class="quarto-xref"><span>Chapter 9</span></a> that this small inner maximum is what makes the <span class="math inline">\(2s\)</span> orbital lower in energy than <span class="math inline">\(2p\)</span> in atoms with more than one electron.</p>
 <p><strong>Try it yourself.</strong> Choose <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span> to see the radial probability distribution, <span class="math inline">\(P(r)=r^2|R_{n\ell}(r)|^2\)</span>, of any hydrogen orbital. Notice how the number of maxima, <span class="math inline">\(n-\ell\)</span>, and the most probable distance change.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="168" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 167;"><span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>viewof hn <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="dv">1</span><span class="op">,</span> <span class="dv">6</span>]<span class="op">,</span> {<span class="dt">step</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">value</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"n (principal quantum number)"</span>})</span>
@@ -779,7 +779,7 @@ Figure&nbsp;5.3: The radial probability functions of the hydrogen atom orbitals 
 </section>
 <section id="the-angular-wave-functions" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="the-angular-wave-functions"><span class="header-section-number">5.3</span> The Angular Wave Functions</h2>
-<p>The angular part of the hydrogen orbitals is given by the spherical harmonics of the particle on a sphere (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>). As we saw there and in <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>, they have a definite magnitude of the angular momentum and a definite component along <span class="math inline">\(z\)</span>, and this is what the two angular quantum numbers mean:</p>
+<p>The angular part of the hydrogen orbitals is given by the spherical harmonics of the particle on a sphere (<a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>). As we saw there and in <a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>, they have a definite magnitude of the angular momentum and a definite component along <span class="math inline">\(z\)</span>, and this is what the two angular quantum numbers mean:</p>
 <ul>
 <li><strong><span class="math inline">\(\ell\)</span></strong> fixes the <em>magnitude</em> of the angular momentum of the electron, <span class="math inline">\(|\mathbf{L}|=\hbar\sqrt{\ell(\ell+1)}\)</span>, and the number of angular nodes, <span class="math inline">\(\ell\)</span>. The letters that chemists use for the orbitals are just names for the values of <span class="math inline">\(\ell\)</span>: <span class="math inline">\(s\)</span> for <span class="math inline">\(\ell=0\)</span>, <span class="math inline">\(p\)</span> for <span class="math inline">\(\ell=1\)</span>, <span class="math inline">\(d\)</span> for <span class="math inline">\(\ell=2\)</span>, <span class="math inline">\(f\)</span> for <span class="math inline">\(\ell=3\)</span>.</li>
 <li><strong><span class="math inline">\(m_\ell\)</span></strong> fixes the <em>component</em> of the angular momentum along the <span class="math inline">\(z\)</span> axis, <span class="math inline">\(L_z=m_\ell\hbar\)</span>. Its name comes from the fact that the energy of the atom in a magnetic field along <span class="math inline">\(z\)</span> depends on it.</li>
@@ -788,7 +788,7 @@ Figure&nbsp;5.3: The radial probability functions of the hydrogen atom orbitals 
 </section>
 <section id="orbitals-and-their-pictures" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="orbitals-and-their-pictures"><span class="header-section-number">5.4</span> Orbitals and Their Pictures</h2>
-<p>The complete orbital, <a href="#eq-HA6" class="quarto-xref">eq.&nbsp;<span>5.5</span></a>, contains all the information about the state of the electron: the radial part tells us how the probability is distributed with the distance from the nucleus, and the angular part how it is distributed among the different directions. Drawing it, however, is not easy. An orbital is a function of three coordinates, so a complete plot would need four dimensions, and, since it is complex, we would need two of them, one for the real part and one for the imaginary part. A common compromise is to color the points of space around the nucleus by the value of the function, with a quarter of the space cut away so that we can see inside, as in <a href="#fig-fig3c5" class="quarto-xref">figure&nbsp;<span>5.4</span></a> for the real parts and <a href="#fig-fig4c5" class="quarto-xref">figure&nbsp;<span>5.5</span></a> for the imaginary parts.</p>
+<p>The complete orbital, <a href="#eq-HA6" class="quarto-xref">Eq.&nbsp;<span>5.5</span></a>, contains all the information about the state of the electron: the radial part tells us how the probability is distributed with the distance from the nucleus, and the angular part how it is distributed among the different directions. Drawing it, however, is not easy. An orbital is a function of three coordinates, so a complete plot would need four dimensions, and, since it is complex, we would need two of them, one for the real part and one for the imaginary part. A common compromise is to color the points of space around the nucleus by the value of the function, with a quarter of the space cut away so that we can see inside, as in <a href="#fig-fig3c5" class="quarto-xref">Fig.&nbsp;<span>5.4</span></a> for the real parts and <a href="#fig-fig4c5" class="quarto-xref">Fig.&nbsp;<span>5.5</span></a> for the imaginary parts.</p>
 <div id="fig-fig3c5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional point clouds around the nucleus, with a quarter cut away, showing the real part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig3c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -805,13 +805,13 @@ Figure&nbsp;5.4: Real parts of some hydrogen orbitals, drawn as points around th
 <img src="img/H_Im.png" class="img-fluid figure-img" style="width:90.0%" alt="Three-dimensional point clouds around the nucleus, with a quarter cut away, showing the imaginary part of several hydrogen orbitals, with red positive and blue negative regions separated by nodal surfaces. Orbitals with m equal to 0 have no imaginary part, so their boxes are empty.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig4c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.5: Imaginary parts of the same hydrogen orbitals as in <a href="#fig-fig3c5" class="quarto-xref">figure&nbsp;<span>5.4</span></a> (red: positive, blue: negative, white: nodes).
+Figure&nbsp;5.5: Imaginary parts of the same hydrogen orbitals as in <a href="#fig-fig3c5" class="quarto-xref">Fig.&nbsp;<span>5.4</span></a> (red: positive, blue: negative, white: nodes).
 </figcaption>
 </figure>
 </div>
 <section id="real-orbitals" class="level3" data-number="5.4.1">
 <h3 data-number="5.4.1" class="anchored" data-anchor-id="real-orbitals"><span class="header-section-number">5.4.1</span> Real orbitals</h3>
-<p>In chemistry, we usually do not use the complex orbitals, but real combinations of them. Since orbitals with the same <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span> have the same energy, any combination of them is still a solution of the TISEq with the same energy (<a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>). Combining the orbitals with opposite values of <span class="math inline">\(m_\ell\)</span>, we obtain, for example:</p>
+<p>In chemistry, we usually do not use the complex orbitals, but real combinations of them. Since orbitals with the same <span class="math inline">\(n\)</span> and <span class="math inline">\(\ell\)</span> have the same energy, any combination of them is still a solution of the TISEq with the same energy (<a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>). Combining the orbitals with opposite values of <span class="math inline">\(m_\ell\)</span>, we obtain, for example:</p>
 <p><span id="eq-HA9"><span class="math display">\[
 \begin{aligned}
 \psi_{2p_z} &amp;= \psi_{2,1,0}\quad\text{(already real)},\\
@@ -819,16 +819,16 @@ Figure&nbsp;5.5: Imaginary parts of the same hydrogen orbitals as in <a href="#f
 \psi_{2p_y} &amp;= \frac{i}{\sqrt{2}}\left(\psi_{2,1,-1} + \psi_{2,1,+1}\right).
 \end{aligned}
 \tag{5.13}\]</span></span></p>
-<p>These are the <span class="math inline">\(2p_x\)</span>, <span class="math inline">\(2p_y\)</span>, and <span class="math inline">\(2p_z\)</span> orbitals of general chemistry. The angular part of <span class="math inline">\(2p_x\)</span> is proportional to <span class="math inline">\(x/r\)</span>, the one of <span class="math inline">\(2p_y\)</span> to <span class="math inline">\(y/r\)</span>, and the one of <span class="math inline">\(2p_z\)</span> to <span class="math inline">\(z/r\)</span>, which is where their names come from. The real and complex orbitals are two equally valid descriptions of the same set of states, and we can use whichever is more convenient: complex orbitals have a definite <span class="math inline">\(L_z\)</span>, while real orbitals do not (they are superpositions of <span class="math inline">\(m_\ell=+1\)</span> and <span class="math inline">\(m_\ell=-1\)</span>), but they are easier to draw, and they are the natural choice when we build molecules (<a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>).</p>
+<p>These are the <span class="math inline">\(2p_x\)</span>, <span class="math inline">\(2p_y\)</span>, and <span class="math inline">\(2p_z\)</span> orbitals of general chemistry. The angular part of <span class="math inline">\(2p_x\)</span> is proportional to <span class="math inline">\(x/r\)</span>, the one of <span class="math inline">\(2p_y\)</span> to <span class="math inline">\(y/r\)</span>, and the one of <span class="math inline">\(2p_z\)</span> to <span class="math inline">\(z/r\)</span>, which is where their names come from. The real and complex orbitals are two equally valid descriptions of the same set of states, and we can use whichever is more convenient: complex orbitals have a definite <span class="math inline">\(L_z\)</span>, while real orbitals do not (they are superpositions of <span class="math inline">\(m_\ell=+1\)</span> and <span class="math inline">\(m_\ell=-1\)</span>), but they are easier to draw, and they are the natural choice when we build molecules (<a href="11_Bonds.html" class="quarto-xref"><span>Chapter 11</span></a>).</p>
 </section>
 <section id="what-the-pictures-show-and-what-they-do-not" class="level3" data-number="5.4.2">
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="what-the-pictures-show-and-what-they-do-not"><span class="header-section-number">5.4.2</span> What the pictures show, and what they do not</h3>
-<p>Pictures of orbitals such as those in <a href="#fig-fig3c5" class="quarto-xref">figure&nbsp;<span>5.4</span></a> and <a href="#fig-fig4c5" class="quarto-xref">figure&nbsp;<span>5.5</span></a> carry <strong>no direct physical significance</strong>. They plot a mathematical function, the wave function, which cannot be measured. They should never be interpreted as “regions of space” in which electrons live, or as objects with a shape. Unfortunately, such pictures are commonly presented as actual images of orbitals, and students are often led to believe that they represent a measurable, physical reality. <strong>They do not!</strong></p>
+<p>Pictures of orbitals such as those in <a href="#fig-fig3c5" class="quarto-xref">Fig.&nbsp;<span>5.4</span></a> and <a href="#fig-fig4c5" class="quarto-xref">Fig.&nbsp;<span>5.5</span></a> carry <strong>no direct physical significance</strong>. They plot a mathematical function, the wave function, which cannot be measured. They should never be interpreted as “regions of space” in which electrons live, or as objects with a shape. Unfortunately, such pictures are commonly presented as actual images of orbitals, and students are often led to believe that they represent a measurable, physical reality. <strong>They do not!</strong></p>
 <p>What has a physical meaning is the probability density, <span class="math inline">\(|\psi_{n\ell m_\ell}|^2\)</span>, which tells us how likely we are to find the electron at each point of space if we measure its position. It can be drawn in several ways:</p>
 <ol type="1">
-<li><strong>Surfaces</strong> that enclose a given fraction (for example, <span class="math inline">\(80\%\)</span>) of the probability, as in <a href="#fig-fig5c5" class="quarto-xref">figure&nbsp;<span>5.6</span></a>.</li>
-<li><strong>Volumetric plots</strong>, where the color is denser where the probability is higher, as in <a href="#fig-fig6c5" class="quarto-xref">figure&nbsp;<span>5.7</span></a>.</li>
-<li><strong>Dot-density plots</strong>, where each dot represents one possible result of a measurement of the position of the electron, as in <a href="#fig-fig7c5" class="quarto-xref">figure&nbsp;<span>5.8</span></a>. These are probably the most honest pictures of all: if we could measure the position of the electron many times, each time on a freshly prepared atom, the results would accumulate exactly like these dots.</li>
+<li><strong>Surfaces</strong> that enclose a given fraction (for example, <span class="math inline">\(80\%\)</span>) of the probability, as in <a href="#fig-fig5c5" class="quarto-xref">Fig.&nbsp;<span>5.6</span></a>.</li>
+<li><strong>Volumetric plots</strong>, where the color is denser where the probability is higher, as in <a href="#fig-fig6c5" class="quarto-xref">Fig.&nbsp;<span>5.7</span></a>.</li>
+<li><strong>Dot-density plots</strong>, where each dot represents one possible result of a measurement of the position of the electron, as in <a href="#fig-fig7c5" class="quarto-xref">Fig.&nbsp;<span>5.8</span></a>. These are probably the most honest pictures of all: if we could measure the position of the electron many times, each time on a freshly prepared atom, the results would accumulate exactly like these dots.</li>
 </ol>
 <div id="fig-fig5c5" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional surfaces enclosing 80 percent of the electron probability for several hydrogen orbitals: a sphere for s orbitals, two lobes for p orbitals, and four lobes or a lobe pair with a ring for d orbitals, colored by the sign of the wave function.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -846,7 +846,7 @@ Figure&nbsp;5.6: Surfaces that enclose 80% of the probability <span class="math 
 <img src="img/H_dens2.png" class="img-fluid figure-img" style="width:90.0%" alt="Volumetric cloud plots of several hydrogen orbitals, with denser color where the electron is more likely to be found, colored by the sign of the wave function.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig6c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.7: Volumetric plots of <span class="math inline">\(|\psi|^2\)</span> for a few hydrogen orbitals: the denser the color, the more likely the electron is to be found there. Colors give the sign of the wave function, as in <a href="#fig-fig5c5" class="quarto-xref">figure&nbsp;<span>5.6</span></a>.
+Figure&nbsp;5.7: Volumetric plots of <span class="math inline">\(|\psi|^2\)</span> for a few hydrogen orbitals: the denser the color, the more likely the electron is to be found there. Colors give the sign of the wave function, as in <a href="#fig-fig5c5" class="quarto-xref">Fig.&nbsp;<span>5.6</span></a>.
 </figcaption>
 </figure>
 </div>
@@ -856,18 +856,18 @@ Figure&nbsp;5.7: Volumetric plots of <span class="math inline">\(|\psi|^2\)</spa
 <img src="img/H_dens3.png" class="img-fluid figure-img" style="width:90.0%" alt="Dot-density plots of several hydrogen orbitals, where the density of dots is proportional to the probability of finding the electron, colored by the sign of the wave function.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig7c5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a possible result of a measurement of the position of the electron, so the dots are densest where <span class="math inline">\(|\psi|^2\)</span> is largest. Colors give the sign of the wave function, as in <a href="#fig-fig5c5" class="quarto-xref">figure&nbsp;<span>5.6</span></a>.
+Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a possible result of a measurement of the position of the electron, so the dots are densest where <span class="math inline">\(|\psi|^2\)</span> is largest. Colors give the sign of the wave function, as in <a href="#fig-fig5c5" class="quarto-xref">Fig.&nbsp;<span>5.6</span></a>.
 </figcaption>
 </figure>
 </div>
-<p>All three show the same information. Notice, however, that these pictures are colored by the <em>sign of the wave function</em>, a convention that you will find in almost every chemistry textbook. Strictly speaking, it mixes two different things, since the probability density is never negative. We keep the convention because it is everywhere and the sign of the wave function will be important when we build bonds (<a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>), but you should keep in mind what the colors mean.</p>
+<p>All three show the same information. Notice, however, that these pictures are colored by the <em>sign of the wave function</em>, a convention that you will find in almost every chemistry textbook. Strictly speaking, it mixes two different things, since the probability density is never negative. We keep the convention because it is everywhere and the sign of the wave function will be important when we build bonds (<a href="11_Bonds.html" class="quarto-xref"><span>Chapter 11</span></a>), but you should keep in mind what the colors mean.</p>
 </section>
 <section id="can-we-see-an-orbital" class="level3" data-number="5.4.3">
 <h3 data-number="5.4.3" class="anchored" data-anchor-id="can-we-see-an-orbital"><span class="header-section-number">5.4.3</span> Can we see an orbital?</h3>
 <p>Since the wave function is not an observable, orbitals cannot be measured directly. What experiments can measure are quantities related to them:</p>
 <ul>
 <li><strong>X-ray diffraction</strong> measures the total electron density of a molecule or a crystal, the sum of the probability densities of all its electrons.</li>
-<li><strong>Photoelectron spectroscopy</strong> measures the energy needed to remove an electron, which is closely related to the energy of the orbital that described it (we will see how in <a href="12_Polyatomic.html" class="quarto-xref"><span>chapter 12</span></a>).</li>
+<li><strong>Photoelectron spectroscopy</strong> measures the energy needed to remove an electron, which is closely related to the energy of the orbital that described it (we will see how in <a href="12_Polyatomic.html" class="quarto-xref"><span>Chapter 12</span></a>).</li>
 <li><strong>Scanning tunneling microscopy</strong> of single molecules, like other modern experiments, can produce images that look remarkably like the pictures of individual orbitals, but they too measure probabilities, not wave functions, and they need theory to be interpreted.</li>
 </ul>
 <p>Orbitals remain what they are: an extremely useful theoretical tool to describe electrons, not objects that we can observe.</p>
@@ -889,131 +889,91 @@ Figure&nbsp;5.8: Dot-density plots for a few hydrogen orbitals: each dot is a po
 <h3 data-number="5.5.2" class="anchored" data-anchor-id="sec-quest5"><span class="header-section-number">5.5.2</span> Study Questions</h3>
 <p><strong>1. Why can the hydrogen atom wave function be written as a product <span class="math inline">\(R_{n\ell}(r)\,Y_\ell^{m_\ell}(\theta,\phi)\)</span>?</strong></p>
 <ol type="a">
-<li>because the electron moves on a circular orbit<br>
-</li>
-<li>because the potential energy depends only on the distance <span class="math inline">\(r\)</span> from the nucleus<br>
-</li>
-<li>because the proton is much lighter than the electron<br>
-</li>
-<li>because the energy depends on <span class="math inline">\(\ell\)</span><br>
-</li>
+<li>because the electron moves on a circular orbit</li>
+<li>because the potential energy depends only on the distance <span class="math inline">\(r\)</span> from the nucleus</li>
+<li>because the proton is much lighter than the electron</li>
+<li>because the energy depends on <span class="math inline">\(\ell\)</span></li>
 <li>because the wave function is always real</li>
 </ol>
 <hr>
 <p><strong>2. For <span class="math inline">\(n=3\)</span>, which values can the quantum number <span class="math inline">\(\ell\)</span> take?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(1, 2, 3\)</span><br>
-</li>
-<li><span class="math inline">\(0, 1, 2, 3\)</span><br>
-</li>
-<li><span class="math inline">\(-2,\ldots,+2\)</span><br>
-</li>
-<li><span class="math inline">\(0, 1, 2\)</span><br>
-</li>
+<li><span class="math inline">\(1, 2, 3\)</span></li>
+<li><span class="math inline">\(0, 1, 2, 3\)</span></li>
+<li><span class="math inline">\(-2,\ldots,+2\)</span></li>
+<li><span class="math inline">\(0, 1, 2\)</span></li>
 <li>only <span class="math inline">\(3\)</span></li>
 </ol>
 <hr>
 <p><strong>3. In atomic units, the energy levels of the hydrogen atom are:</strong></p>
 <ol type="a">
-<li><span class="math inline">\(E_n=-\frac{1}{n^2}\,E_h\)</span>, so the ground state is at <span class="math inline">\(-1\,E_h=-13.6\;\text{eV}\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=\frac{n^2}{2}\,E_h\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=-\frac{1}{2n}\,E_h\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=\hbar\omega\left(n+\frac{1}{2}\right)\)</span><br>
-</li>
+<li><span class="math inline">\(E_n=-\frac{1}{n^2}\,E_h\)</span>, so the ground state is at <span class="math inline">\(-1\,E_h=-13.6\;\text{eV}\)</span></li>
+<li><span class="math inline">\(E_n=\frac{n^2}{2}\,E_h\)</span></li>
+<li><span class="math inline">\(E_n=-\frac{1}{2n}\,E_h\)</span></li>
+<li><span class="math inline">\(E_n=\hbar\omega\left(n+\frac{1}{2}\right)\)</span></li>
 <li><span class="math inline">\(E_n=-\frac{1}{2n^2}\,E_h\)</span>, so the ground state is at <span class="math inline">\(-0.5\,E_h=-13.6\;\text{eV}\)</span></li>
 </ol>
 <hr>
 <p><strong>4. In the hydrogen atom, the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals:</strong></p>
 <ol type="a">
-<li>are split, with <span class="math inline">\(2s\)</span> lower, because of penetration<br>
-</li>
-<li>have exactly the same energy (according to the Schrödinger equation)<br>
-</li>
-<li>are split, with <span class="math inline">\(2p\)</span> lower<br>
-</li>
-<li>have energies that depend on <span class="math inline">\(m_\ell\)</span><br>
-</li>
+<li>are split, with <span class="math inline">\(2s\)</span> lower, because of penetration</li>
+<li>have exactly the same energy (according to the Schrödinger equation)</li>
+<li>are split, with <span class="math inline">\(2p\)</span> lower</li>
+<li>have energies that depend on <span class="math inline">\(m_\ell\)</span></li>
 <li>are not solutions of the Schrödinger equation</li>
 </ol>
 <hr>
 <p><strong>5. How many radial nodes does the <span class="math inline">\(3s\)</span> orbital have?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(2\)</span><br>
-</li>
-<li><span class="math inline">\(0\)</span><br>
-</li>
-<li><span class="math inline">\(1\)</span><br>
-</li>
-<li><span class="math inline">\(3\)</span><br>
-</li>
+<li><span class="math inline">\(2\)</span></li>
+<li><span class="math inline">\(0\)</span></li>
+<li><span class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(3\)</span></li>
 <li><span class="math inline">\(4\)</span></li>
 </ol>
 <hr>
 <p><strong>6. Why is the radial probability distribution <span class="math inline">\(P(r)=r^2|R_{10}(r)|^2\)</span> of the <span class="math inline">\(1s\)</span> orbital zero at the nucleus?</strong></p>
 <ol type="a">
-<li>because <span class="math inline">\(R_{10}\)</span> is zero at the nucleus<br>
-</li>
-<li>because the electron cannot be found near a positive charge<br>
-</li>
-<li>because the volume of a thin spherical shell, <span class="math inline">\(4\pi r^2dr\)</span>, goes to zero at <span class="math inline">\(r=0\)</span><br>
-</li>
-<li>because of the Pauli principle<br>
-</li>
+<li>because <span class="math inline">\(R_{10}\)</span> is zero at the nucleus</li>
+<li>because the electron cannot be found near a positive charge</li>
+<li>because the volume of a thin spherical shell, <span class="math inline">\(4\pi r^2dr\)</span>, goes to zero at <span class="math inline">\(r=0\)</span></li>
+<li>because of the Pauli principle</li>
 <li>because <span class="math inline">\(1s\)</span> has a radial node at the nucleus</li>
 </ol>
 <hr>
 <p><strong>7. What does the quantum number <span class="math inline">\(\ell\)</span> tell us about an electron?</strong></p>
 <ol type="a">
-<li>the shape of the region of space in which the electron lives<br>
-</li>
-<li>the size of its circular orbit<br>
-</li>
-<li>its spin<br>
-</li>
-<li>the magnitude of its angular momentum, <span class="math inline">\(\hbar\sqrt{\ell(\ell+1)}\)</span>; <span class="math inline">\(s\)</span>, <span class="math inline">\(p\)</span>, <span class="math inline">\(d\)</span>, <span class="math inline">\(f\)</span> are names for <span class="math inline">\(\ell=0,1,2,3\)</span><br>
-</li>
+<li>the shape of the region of space in which the electron lives</li>
+<li>the size of its circular orbit</li>
+<li>its spin</li>
+<li>the magnitude of its angular momentum, <span class="math inline">\(\hbar\sqrt{\ell(\ell+1)}\)</span>; <span class="math inline">\(s\)</span>, <span class="math inline">\(p\)</span>, <span class="math inline">\(d\)</span>, <span class="math inline">\(f\)</span> are names for <span class="math inline">\(\ell=0,1,2,3\)</span></li>
 <li>its energy in the hydrogen atom</li>
 </ol>
 <hr>
 <p><strong>8. What does the magnetic quantum number <span class="math inline">\(m_\ell\)</span> tell us?</strong></p>
 <ol type="a">
-<li>the component of the angular momentum along the <span class="math inline">\(z\)</span> axis, <span class="math inline">\(L_z=m_\ell\hbar\)</span><br>
-</li>
-<li>the direction in which the orbital points<br>
-</li>
-<li>the magnetic moment of the nucleus<br>
-</li>
-<li>the number of radial nodes<br>
-</li>
+<li>the component of the angular momentum along the <span class="math inline">\(z\)</span> axis, <span class="math inline">\(L_z=m_\ell\hbar\)</span></li>
+<li>the direction in which the orbital points</li>
+<li>the magnetic moment of the nucleus</li>
+<li>the number of radial nodes</li>
 <li>the energy of the orbital in the absence of fields</li>
 </ol>
 <hr>
 <p><strong>9. The real <span class="math inline">\(2p_x\)</span> orbital is:</strong></p>
 <ol type="a">
-<li>the orbital with <span class="math inline">\(m_\ell=+1\)</span><br>
-</li>
-<li>the orbital with <span class="math inline">\(m_\ell=0\)</span><br>
-</li>
-<li>a different solution with a different energy from <span class="math inline">\(2p_z\)</span><br>
-</li>
-<li>an orbital that exists only in molecules<br>
-</li>
+<li>the orbital with <span class="math inline">\(m_\ell=+1\)</span></li>
+<li>the orbital with <span class="math inline">\(m_\ell=0\)</span></li>
+<li>a different solution with a different energy from <span class="math inline">\(2p_z\)</span></li>
+<li>an orbital that exists only in molecules</li>
 <li>a combination of the complex orbitals with <span class="math inline">\(m_\ell=+1\)</span> and <span class="math inline">\(m_\ell=-1\)</span>, so it does not have a definite <span class="math inline">\(L_z\)</span></li>
 </ol>
 <hr>
 <p><strong>10. Which of the following statements about the usual pictures of orbitals is correct?</strong></p>
 <ol type="a">
-<li>they are photographs of the regions of space in which electrons live<br>
-</li>
-<li>they show the trajectory of the electron<br>
-</li>
-<li>they plot a mathematical function that cannot be measured; what has a physical meaning is <span class="math inline">\(|\psi|^2\)</span><br>
-</li>
-<li>they show the shape of the electron<br>
-</li>
+<li>they are photographs of the regions of space in which electrons live</li>
+<li>they show the trajectory of the electron</li>
+<li>they plot a mathematical function that cannot be measured; what has a physical meaning is <span class="math inline">\(|\psi|^2\)</span></li>
+<li>they show the shape of the electron</li>
 <li>they show where the electron is with certainty</li>
 </ol>
 <hr>

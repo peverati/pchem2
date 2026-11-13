@@ -188,7 +188,8 @@ $$
  	&= \int \left[ c_a \psi_a + c_b \psi_b \right]^{*}
 \left[ a c_a \psi_a + b c_b \psi_b \right] d\mathbf{r}\\	 
  	&= a \vert c_a\vert^2 \int \psi_a^{*} \psi_a d\mathbf{r} +
-b c_a^{*} c_b \int \psi_a^{*} \psi_b d\mathbf{r} + a c_b^{*} c_a \int \psi_b^{*} \psi_a d\mathbf{r} +
+b c_a^{*} c_b \int \psi_a^{*} \psi_b d\mathbf{r} \\
+ 	&\quad + a c_b^{*} c_a \int \psi_b^{*} \psi_a d\mathbf{r} +
 b \vert c_b\vert^2 \int \psi_b^{*} \psi_b d\mathbf{r}\\ 
  	&= a \vert c_a\vert^2 + b \vert c_b\vert^2.
 \end{aligned}

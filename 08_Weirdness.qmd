@@ -95,7 +95,7 @@ Several modern alternatives address these shortcomings. All of them reproduce th
 The main features of these interpretations are summarized in @tbl-tab1c8.
 
 ```{=latex}
-\begingroup\footnotesize\hyphenpenalty=10000\exhyphenpenalty=10000
+\begingroup\small\setlength{\tabcolsep}{4pt}\hyphenpenalty=10000\exhyphenpenalty=10000
 ```
 
 | Interpretation | What is the wave function? | Collapse? | Definite positions? | Deterministic? |
@@ -105,7 +105,7 @@ The main features of these interpretations are summarized in @tbl-tab1c8.
 | Many worlds | Real, and the only thing that exists | No (branching instead) | Yes, in each branch | Yes |
 | Spontaneous collapse | Real | Yes, as a random physical process | Only after collapse | No |
 
-: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[20,22,21,15,22]"}
+: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[18,23,23,16,20]"}
 
 ```{=latex}
 \endgroup

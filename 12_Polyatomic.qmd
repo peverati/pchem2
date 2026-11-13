@@ -324,7 +324,10 @@ These orbitals should look familiar:
 
 2. **Particle in a box**: the coefficients fall exactly on the particle-in-a-box wave functions, sampled at the positions of the carbon atoms. This is not a coincidence: for a chain of $N$ atoms, the Hückel equations can be solved exactly, giving
 $$
-E_k = \alpha + 2\beta\cos\left(\frac{k\pi}{N+1}\right), \qquad c_{jk} = \sqrt{\frac{2}{N+1}}\sin\left(\frac{jk\pi}{N+1}\right), \qquad k=1,\ldots,N.
+\begin{aligned}
+E_k &= \alpha + 2\beta\cos\left(\frac{k\pi}{N+1}\right),\\
+c_{jk} &= \sqrt{\frac{2}{N+1}}\sin\left(\frac{jk\pi}{N+1}\right), \qquad k=1,\ldots,N.
+\end{aligned}
 $$ {#eq-huckel5}
 The $\pi$ electrons of a conjugated chain behave like particles in a one-dimensional box, which is why the particle in a box is a good model for the colors of conjugated molecules.
 

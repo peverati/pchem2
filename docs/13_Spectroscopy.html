@@ -589,7 +589,7 @@ h\nu = E_\text{final} - E_\text{initial}.
 <li>The population of the energy levels, which determines (together with the transition dipole moment) the <em>intensities</em> of the signals.</li>
 <li>The selection rules, which determine <em>which</em> signals are observed.</li>
 </ul>
-<p>Spectroscopy is also the most important experimental test of quantum mechanics, since it allows us to compare the energy levels that we calculate with those that nature actually has. In this chapter, we will see how the models that we studied in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> explain the rotational, vibrational, and electronic spectra of diatomic molecules.</p>
+<p>Spectroscopy is also the most important experimental test of quantum mechanics, since it allows us to compare the energy levels that we calculate with those that nature actually has. In this chapter, we will see how the models that we studied in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a> explain the rotational, vibrational, and electronic spectra of diatomic molecules.</p>
 <section id="sec-SelectionRules" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="sec-SelectionRules"><span class="header-section-number">13.1</span> Where Selection Rules Come From</h2>
 <p>Light is an electromagnetic wave, and the oscillating electric field of the wave pushes the positive and negative charges of a molecule in opposite directions. The interaction energy between the field and the molecule is proportional to the molecule’s <strong>dipole moment operator</strong>, <span class="math inline">\(\hat{\mu} = \sum_k q_k \hat{\mathbf{r}}_k\)</span>, the sum of the charges of all electrons and nuclei multiplied by their positions. Quantum mechanics shows that the probability that the light drives a transition from an initial state <span class="math inline">\(\psi_i\)</span> to a final state <span class="math inline">\(\psi_f\)</span> is proportional to the square of the <strong>transition dipole moment</strong>:</p>
@@ -600,7 +600,7 @@ h\nu = E_\text{final} - E_\text{initial}.
 <p>As an example, let’s consider the vibration of a diatomic molecule, modeled as a harmonic oscillator. Close to the equilibrium geometry, the dipole moment changes approximately linearly with the displacement <span class="math inline">\(x\)</span> from equilibrium, so <span class="math inline">\(\hat{\mu}\approx\mu_0+\left(\frac{d\mu}{dx}\right)x\)</span>. The constant <span class="math inline">\(\mu_0\)</span> does not contribute to the integral, since the wave functions of different states are orthogonal, and the transition dipole moment is proportional to <span class="math inline">\(\frac{d\mu}{dx}\int \psi_f\, x\, \psi_i\, dx\)</span>. This gives two results:</p>
 <ol type="1">
 <li><strong>The dipole moment must change during the vibration</strong> (<span class="math inline">\(\frac{d\mu}{dx}\neq0\)</span>). Homonuclear diatomics, whose dipole moment is always zero, are IR inactive.</li>
-<li><strong>Only <span class="math inline">\(\Delta v=\pm1\)</span> is allowed.</strong> The integrands for two transitions starting from <span class="math inline">\(v=0\)</span> are shown in <a href="#fig-Fig6c13" class="quarto-xref">figure&nbsp;<span>13.1</span></a>. Recall from <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> that the harmonic oscillator wave functions are alternately even (<span class="math inline">\(v=0,2,4,\ldots\)</span>) and odd (<span class="math inline">\(v=1,3,\ldots\)</span>). For <span class="math inline">\(v=0\rightarrow1\)</span>, the product <span class="math inline">\(\psi_1\,x\,\psi_0\)</span> is even (odd times odd times even), it is positive everywhere, and its integral is different from zero. For <span class="math inline">\(v=0\rightarrow2\)</span>, the product is odd, its positive and negative parts cancel exactly, and the integral is zero. Calculating the integrals for all pairs of levels shows that only neighboring levels are connected.</li>
+<li><strong>Only <span class="math inline">\(\Delta v=\pm1\)</span> is allowed.</strong> The integrands for two transitions starting from <span class="math inline">\(v=0\)</span> are shown in <a href="#fig-Fig6c13" class="quarto-xref">Fig.&nbsp;<span>13.1</span></a>. Recall from <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a> that the harmonic oscillator wave functions are alternately even (<span class="math inline">\(v=0,2,4,\ldots\)</span>) and odd (<span class="math inline">\(v=1,3,\ldots\)</span>). For <span class="math inline">\(v=0\rightarrow1\)</span>, the product <span class="math inline">\(\psi_1\,x\,\psi_0\)</span> is even (odd times odd times even), it is positive everywhere, and its integral is different from zero. For <span class="math inline">\(v=0\rightarrow2\)</span>, the product is odd, its positive and negative parts cancel exactly, and the integral is zero. Calculating the integrals for all pairs of levels shows that only neighboring levels are connected.</li>
 </ol>
 <div id="fig-Fig6c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two plots. Left: the product of the v equals 1 wave function, x, and the v equals 0 wave function is a curve with two positive bumps, with total area 0.71. Right: the product for v equals 2 has positive and negative regions of equal area that cancel, with total area zero.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -624,7 +624,7 @@ Figure&nbsp;13.1: The integrand of the transition dipole moment, <span class="ma
 <p>Rotational spectroscopy measures the energies of transitions between the quantized rotational states of molecules in the gas phase. These energies are small, and the corresponding photons are in the microwave and far-infrared regions of the electromagnetic spectrum (roughly <span class="math inline">\(1-100\; \text{cm}^{-1}\)</span>). For this reason, rotational spectroscopy is often called <em>microwave spectroscopy</em>. It is also the tool that astronomers use, with radio telescopes, to identify the molecules present in interstellar clouds.</p>
 <section id="rotation-of-diatomic-molecules" class="level3" data-number="13.2.1">
 <h3 data-number="13.2.1" class="anchored" data-anchor-id="rotation-of-diatomic-molecules"><span class="header-section-number">13.2.1</span> Rotation of diatomic molecules</h3>
-<p>The simplest model of a rotating diatomic molecule is the rigid rotor: two point masses, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>, held at a fixed distance <span class="math inline">\(d\)</span> by a rigid bond. We already solved this problem in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>, where we saw that it is equivalent to a particle of mass equal to the reduced mass, <span class="math inline">\(\mu=\frac{m_1m_2}{m_1+m_2}\)</span>, moving on the surface of a sphere. The energy levels are:</p>
+<p>The simplest model of a rotating diatomic molecule is the rigid rotor: two point masses, <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span>, held at a fixed distance <span class="math inline">\(d\)</span> by a rigid bond. We already solved this problem in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>, where we saw that it is equivalent to a particle of mass equal to the reduced mass, <span class="math inline">\(\mu=\frac{m_1m_2}{m_1+m_2}\)</span>, moving on the surface of a sphere. The energy levels are:</p>
 <p><span id="eq-rot0"><span class="math display">\[
 E_J = \frac{\hbar^2}{2I}J(J+1) \qquad J=0,1,2,\ldots
 \tag{13.3}\]</span></span></p>
@@ -632,7 +632,7 @@ E_J = \frac{\hbar^2}{2I}J(J+1) \qquad J=0,1,2,\ldots
 <p><span id="eq-rot3"><span class="math display">\[
 I=\mu d^2=\frac{m_1m_2}{m_1 +m_2}d^2.
 \tag{13.4}\]</span></span></p>
-<p>Each level is <span class="math inline">\((2J+1)\)</span>-fold degenerate, since the quantum number <span class="math inline">\(M\)</span> (the same as <span class="math inline">\(m_\ell\)</span>) can take the values <span class="math inline">\(-J, -J+1, \ldots, J\)</span>. Spectroscopists prefer to work with energies in wavenumbers, <span class="math inline">\(\tilde{\nu}=E/hc\)</span>, usually in <span class="math inline">\(\text{cm}^{-1}\)</span>. Dividing <a href="#eq-rot0" class="quarto-xref">eq.&nbsp;<span>13.3</span></a> by <span class="math inline">\(hc\)</span>, we obtain the rotational <em>term values</em>:</p>
+<p>Each level is <span class="math inline">\((2J+1)\)</span>-fold degenerate, since the quantum number <span class="math inline">\(M\)</span> (the same as <span class="math inline">\(m_\ell\)</span>) can take the values <span class="math inline">\(-J, -J+1, \ldots, J\)</span>. Spectroscopists prefer to work with energies in wavenumbers, <span class="math inline">\(\tilde{\nu}=E/hc\)</span>, usually in <span class="math inline">\(\text{cm}^{-1}\)</span>. Dividing <a href="#eq-rot0" class="quarto-xref">Eq.&nbsp;<span>13.3</span></a> by <span class="math inline">\(hc\)</span>, we obtain the rotational <em>term values</em>:</p>
 <p><span id="eq-rot1"><span class="math display">\[
 F\left(J\right)=\frac{E_J}{hc}=BJ\left(J+1\right)\qquad J=0,1,2,\ldots
 \tag{13.5}\]</span></span></p>
@@ -648,7 +648,7 @@ B=\frac{\hbar^2}{2Ihc}={\frac{h}{8\pi ^{2}cI}}.
 <p><span id="eq-rot5"><span class="math display">\[
 {\tilde  \nu }_{{J^{{\prime }}\leftarrow J^{{\prime \prime }}}}=F\left(J^{\prime\prime}+1\right)-F\left(J^{{\prime \prime }}\right)=2B\left(J^{{\prime \prime }}+1\right)\qquad J^{{\prime \prime }}=0,1,2,\ldots
 \tag{13.8}\]</span></span></p>
-<p>The rotational levels and the resulting spectrum are shown in <a href="#fig-Fig1c13" class="quarto-xref">figure&nbsp;<span>13.2</span></a>. The levels get farther apart as <span class="math inline">\(J\)</span> increases, but, since each transition connects two neighboring levels, the lines in the spectrum are equally spaced, with a separation of <span class="math inline">\(2B\)</span>. Each arrow in the top part of the figure produces one line in the spectrum below it.</p>
+<p>The rotational levels and the resulting spectrum are shown in <a href="#fig-Fig1c13" class="quarto-xref">Fig.&nbsp;<span>13.2</span></a>. The levels get farther apart as <span class="math inline">\(J\)</span> increases, but, since each transition connects two neighboring levels, the lines in the spectrum are equally spaced, with a separation of <span class="math inline">\(2B\)</span>. Each arrow in the top part of the figure produces one line in the spectrum below it.</p>
 <div id="fig-Fig1c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top: horizontal energy levels labeled J equals 0 to 6 at energies 0, 2B, 6B, 12B, 20B, 30B, and 42B, getting farther apart, with upward arrows connecting each level to the next one. Bottom: a spectrum with six equally spaced lines at 2B, 4B, 6B, 8B, 10B, and 12B.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig1c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -659,20 +659,20 @@ Figure&nbsp;13.2: Top: rotational energy levels of a rigid rotor, <span class="m
 </figcaption>
 </figure>
 </div>
-<p>The equal spacing makes it very easy to measure <span class="math inline">\(B\)</span> from a spectrum, and from <span class="math inline">\(B\)</span> we can obtain the bond length. For example, the rotational constant of carbon monoxide, <span class="math inline">\(^{12}\mathrm{C}^{16}\mathrm{O}\)</span>, is <span class="math inline">\(B=1.9313\;\text{cm}^{-1}\)</span>, so its first lines are at <span class="math inline">\(3.86\)</span>, <span class="math inline">\(7.73\)</span>, <span class="math inline">\(11.59\;\text{cm}^{-1}\)</span>, and so on. Inverting <a href="#eq-rot2" class="quarto-xref">eq.&nbsp;<span>13.6</span></a>, we obtain:</p>
+<p>The equal spacing makes it very easy to measure <span class="math inline">\(B\)</span> from a spectrum, and from <span class="math inline">\(B\)</span> we can obtain the bond length. For example, the rotational constant of carbon monoxide, <span class="math inline">\(^{12}\mathrm{C}^{16}\mathrm{O}\)</span>, is <span class="math inline">\(B=1.9313\;\text{cm}^{-1}\)</span>, so its first lines are at <span class="math inline">\(3.86\)</span>, <span class="math inline">\(7.73\)</span>, <span class="math inline">\(11.59\;\text{cm}^{-1}\)</span>, and so on. Inverting <a href="#eq-rot2" class="quarto-xref">Eq.&nbsp;<span>13.6</span></a>, we obtain:</p>
 <p><span id="eq-rot2b"><span class="math display">\[
 I = \frac{h}{8\pi^2 c B} = 1.449\times10^{-46}\;\text{kg m}^2,
 \tag{13.9}\]</span></span></p>
-<p>and, using the reduced mass of CO, <span class="math inline">\(\mu=6.856\;\text{amu}=1.1385\times10^{-26}\;\text{kg}\)</span>, <a href="#eq-rot3" class="quarto-xref">eq.&nbsp;<span>13.4</span></a> gives <span class="math inline">\(d=\sqrt{I/\mu}=1.128\times10^{-10}\;\text{m}=1.128\;\text{Å}\)</span>. This is how most of the bond lengths of small molecules that you find in tables have been measured, often with five or more significant figures.</p>
+<p>and, using the reduced mass of CO, <span class="math inline">\(\mu=6.856\;\text{amu}=1.1385\times10^{-26}\;\text{kg}\)</span>, <a href="#eq-rot3" class="quarto-xref">Eq.&nbsp;<span>13.4</span></a> gives <span class="math inline">\(d=\sqrt{I/\mu}=1.128\times10^{-10}\;\text{m}=1.128\;\text{Å}\)</span>. This is how most of the bond lengths of small molecules that you find in tables have been measured, often with five or more significant figures.</p>
 <p>The intensities of the lines depend, first of all, on how many molecules are in the initial level of each transition. At thermal equilibrium, the ratio between the number of molecules in a level with energy <span class="math inline">\(E_J\)</span> and the number in the ground level is given by the Boltzmann distribution, multiplied by the degeneracy of the level:</p>
 <p><span id="eq-rot6"><span class="math display">\[
 \frac{N_J}{N_0}=(2J+1)\exp\left[-\frac {E_J}{kT}\right]=(2J+1)\exp\left[-\frac {hcBJ(J+1)}{kT}\right],
 \tag{13.10}\]</span></span></p>
-<p>where <span class="math inline">\(k\)</span> is the Boltzmann constant and <span class="math inline">\(T\)</span> is the absolute temperature. The two factors in this expression pull in opposite directions: the degeneracy, <span class="math inline">\(2J+1\)</span>, increases with <span class="math inline">\(J\)</span>, while the exponential decreases. The result is a population that first grows and then decays, as shown in <a href="#fig-Fig5c13" class="quarto-xref">figure&nbsp;<span>13.3</span></a> for CO at room temperature:</p>
+<p>where <span class="math inline">\(k\)</span> is the Boltzmann constant and <span class="math inline">\(T\)</span> is the absolute temperature. The two factors in this expression pull in opposite directions: the degeneracy, <span class="math inline">\(2J+1\)</span>, increases with <span class="math inline">\(J\)</span>, while the exponential decreases. The result is a population that first grows and then decays, as shown in <a href="#fig-Fig5c13" class="quarto-xref">Fig.&nbsp;<span>13.3</span></a> for CO at room temperature:</p>
 <p><span id="eq-rot7"><span class="math display">\[
 \mathrm{population} \propto (2J+1)\exp\left[-\frac{E_J}{kT}\right].
 \tag{13.11}\]</span></span></p>
-<p>The most populated level is the maximum of <a href="#eq-rot7" class="quarto-xref">eq.&nbsp;<span>13.11</span></a>, at:</p>
+<p>The most populated level is the maximum of <a href="#eq-rot7" class="quarto-xref">Eq.&nbsp;<span>13.11</span></a>, at:</p>
 <p><span id="eq-rot8"><span class="math display">\[
 J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}.
 \tag{13.12}\]</span></span></p>
@@ -692,7 +692,7 @@ J_\text{max}=\sqrt{\frac{kT}{2hcB}}-\frac{1}{2}.
 <p><span class="math display">\[
 \frac{df}{dJ} = 2\,e^{-xJ(J+1)} - (2J+1)^2\,x\,e^{-xJ(J+1)} = 0 \quad\Rightarrow\quad (2J+1)^2=\frac{2}{x}=\frac{2kT}{hcB},
 \]</span></p>
-<p>which gives <a href="#eq-rot8" class="quarto-xref">eq.&nbsp;<span>13.12</span></a>.</p>
+<p>which gives <a href="#eq-rot8" class="quarto-xref">Eq.&nbsp;<span>13.12</span></a>.</p>
 </div>
 </div>
 </div>
@@ -757,7 +757,7 @@ Figure&nbsp;13.3: Left: population of the rotational levels of CO at 298 K, calc
 <p>Vibrational spectroscopy measures the energies of transitions between the quantized vibrational states of molecules. These transitions are usually found in the mid-infrared (IR) region, at approximately <span class="math inline">\(4{,}000-400\;\text{cm}^{-1}\)</span> (wavelengths of <span class="math inline">\(2.5-25\;\mu \text{m}\)</span>), and vibrational spectroscopy is therefore often called <em>IR spectroscopy</em>. Vibrational energies are much larger than rotational energies, so in the gas phase each vibrational transition is accompanied by many rotational transitions, which give the spectrum a <em>fine structure</em>. Transitions that change both the vibrational and the rotational state are called <em>rovibrational</em> transitions. As before, we will discuss the simplest case of a diatomic molecule. For polyatomic molecules, the spectra are more complicated to calculate, but they are one of the most widely used tools to identify chemical structures.</p>
 <section id="vibration-of-heteronuclear-diatomic-molecules" class="level3" data-number="13.3.1">
 <h3 data-number="13.3.1" class="anchored" data-anchor-id="vibration-of-heteronuclear-diatomic-molecules"><span class="header-section-number">13.3.1</span> Vibration of heteronuclear diatomic molecules</h3>
-<p>A diatomic molecule <span class="math inline">\(\mathrm{AB}\)</span> has only one way of vibrating: the stretching of the <span class="math inline">\(\mathrm{A}-\mathrm{B}\)</span> bond. As we saw in <a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>, close to its minimum the potential energy curve of the molecule can be approximated by a parabola, so we can use the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> as our model. In wavenumbers, the vibrational term values are:</p>
+<p>A diatomic molecule <span class="math inline">\(\mathrm{AB}\)</span> has only one way of vibrating: the stretching of the <span class="math inline">\(\mathrm{A}-\mathrm{B}\)</span> bond. As we saw in <a href="10_Molecules.html" class="quarto-xref"><span>Chapter 10</span></a>, close to its minimum the potential energy curve of the molecule can be approximated by a parabola, so we can use the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a> as our model. In wavenumbers, the vibrational term values are:</p>
 <p><span id="eq-vib1"><span class="math display">\[
 G(v) = \omega_e \left( v + \frac{1}{2} \right) \qquad v=0,1,2,\ldots,
 \tag{13.13}\]</span></span></p>
@@ -793,12 +793,12 @@ Figure&nbsp;13.4: Simulated rovibrational spectrum of the fundamental band of ca
 </figcaption>
 </figure>
 </div>
-<p>The simulated spectrum of CO is reported in <a href="#fig-Fig2c13" class="quarto-xref">figure&nbsp;<span>13.4</span></a>, and the transitions that produce it are shown in <a href="#fig-Fig3c13" class="quarto-xref">figure&nbsp;<span>13.5</span></a>. Four features of this spectrum are worth noticing:</p>
+<p>The simulated spectrum of CO is reported in <a href="#fig-Fig2c13" class="quarto-xref">Fig.&nbsp;<span>13.4</span></a>, and the transitions that produce it are shown in <a href="#fig-Fig3c13" class="quarto-xref">Fig.&nbsp;<span>13.5</span></a>. Four features of this spectrum are worth noticing:</p>
 <ol type="1">
 <li><p><strong>The missing line</strong>: there is a gap at the band center, where the forbidden Q-branch would be. The gap is <span class="math inline">\(4B\)</span> wide (twice the normal spacing), because the first line of the R-branch is at <span class="math inline">\(\tilde{\nu}_0+2B\)</span> and the first line of the P-branch is at <span class="math inline">\(\tilde{\nu}_0-2B\)</span>. Even if no line is observed there, the position of the band center can be read directly from the spectrum, and it gives the vibrational energy. For CO, <span class="math inline">\(\tilde{\nu}_0=2{,}143\;\text{cm}^{-1}\)</span>, and using <span class="math inline">\(\omega_e\approx\tilde{\nu}_0\)</span> we obtain the force constant of the bond: <span class="math inline">\(k=\mu(2\pi c\tilde{\nu}_0)^2\approx1{,}860\;\text{N/m}\)</span>, one of the stiffest bonds in chemistry.</p></li>
 <li><p><strong>The spacing</strong>: the lines in each branch are separated by about <span class="math inline">\(2B\)</span>, so the same spectrum also gives the bond length, exactly as in pure rotational spectroscopy. This makes rovibrational spectroscopy useful also for molecules whose rotational spectrum is difficult to measure.</p></li>
-<li><p><strong>The intensities</strong>: the two branches have the same envelope as the rotational populations of <a href="#fig-Fig5c13" class="quarto-xref">figure&nbsp;<span>13.3</span></a>, since the intensity of each line depends on the population of its initial rotational level.</p></li>
-<li><p><strong>The asymmetry</strong>: if you look closely, the lines in the R-branch get slightly closer to each other as <span class="math inline">\(J\)</span> increases, while those in the P-branch get slightly farther apart. This is the effect of <span class="math inline">\(B_1\)</span> being slightly smaller than <span class="math inline">\(B_0\)</span>, which we neglected in <a href="#eq-vib4" class="quarto-xref">eq.&nbsp;<span>13.16</span></a>.</p></li>
+<li><p><strong>The intensities</strong>: the two branches have the same envelope as the rotational populations of <a href="#fig-Fig5c13" class="quarto-xref">Fig.&nbsp;<span>13.3</span></a>, since the intensity of each line depends on the population of its initial rotational level.</p></li>
+<li><p><strong>The asymmetry</strong>: if you look closely, the lines in the R-branch get slightly closer to each other as <span class="math inline">\(J\)</span> increases, while those in the P-branch get slightly farther apart. This is the effect of <span class="math inline">\(B_1\)</span> being slightly smaller than <span class="math inline">\(B_0\)</span>, which we neglected in <a href="#eq-vib4" class="quarto-xref">Eq.&nbsp;<span>13.16</span></a>.</p></li>
 </ol>
 <div id="fig-Fig3c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two ladders of rotational levels, J equals 0 to 4, one for v equals 0 at the bottom and one for v equals 1 at the top. Blue upward arrows labeled P(1) to P(4) go from each J to J minus 1 in the upper ladder; red arrows labeled R(0) to R(3) go from each J to J plus 1.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -827,7 +827,7 @@ Example&nbsp;13.1: How stiff is the bond of HCl?
 <p><span class="math display">\[
 \mu=\frac{(1.008)(34.969)}{1.008+34.969}\;\text{u}=0.980\;\text{u}=1.627\times10^{-27}\;\text{kg}.
 \]</span></p>
-<p><strong>Step 2: solve for <span class="math inline">\(k\)</span>.</strong> From <span class="math inline">\(\tilde{\nu}=\frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}\)</span> (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), we get <span class="math inline">\(k=\mu\,(2\pi c\tilde{\nu})^2\)</span>. With <span class="math inline">\(c\)</span> in cm/s:</p>
+<p><strong>Step 2: solve for <span class="math inline">\(k\)</span>.</strong> From <span class="math inline">\(\tilde{\nu}=\frac{1}{2\pi c}\sqrt{\frac{k}{\mu}}\)</span> (<a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>), we get <span class="math inline">\(k=\mu\,(2\pi c\tilde{\nu})^2\)</span>. With <span class="math inline">\(c\)</span> in cm/s:</p>
 <p><span class="math display">\[
 k=(1.627\times10^{-27}\;\text{kg})\left[2\pi(2.998\times10^{10}\;\text{cm/s})(2990\;\text{cm}^{-1})\right]^2=516\;\text{N/m}.
 \]</span></p>
@@ -844,7 +844,7 @@ k=(1.627\times10^{-27}\;\text{kg})\left[2\pi(2.998\times10^{10}\;\text{cm/s})(29
 <section id="vibrations-of-polyatomic-molecules" class="level3" data-number="13.3.3">
 <h3 data-number="13.3.3" class="anchored" data-anchor-id="vibrations-of-polyatomic-molecules"><span class="header-section-number">13.3.3</span> Vibrations of polyatomic molecules</h3>
 <p>A molecule with <span class="math inline">\(N\)</span> atoms needs <span class="math inline">\(3N\)</span> coordinates to describe the positions of its nuclei. Three of them describe the translation of the whole molecule, and three describe its rotation (only two for a linear molecule, since rotation around the molecular axis does not move any nucleus). The remaining <strong><span class="math inline">\(3N-6\)</span></strong> coordinates (<span class="math inline">\(3N-5\)</span> for linear molecules) describe vibrations. For water, <span class="math inline">\(3\times3-6=3\)</span> vibrations; for carbon dioxide, which is linear, <span class="math inline">\(3\times3-5=4\)</span>.</p>
-<p>In a polyatomic molecule, the atoms do not vibrate independently. If we treat the potential energy surface as a multi-dimensional parabola around its minimum (<a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>), the vibrational motion can be separated into independent <strong>normal modes</strong>: collective motions in which all atoms move in phase, with the same frequency, each along its own direction. Each normal mode behaves like an independent harmonic oscillator, with its own frequency and its own ladder of equally spaced levels. The normal modes of water and carbon dioxide are shown in <a href="#fig-Fig7c13" class="quarto-xref">figure&nbsp;<span>13.6</span></a>.</p>
+<p>In a polyatomic molecule, the atoms do not vibrate independently. If we treat the potential energy surface as a multi-dimensional parabola around its minimum (<a href="10_Molecules.html" class="quarto-xref"><span>Chapter 10</span></a>), the vibrational motion can be separated into independent <strong>normal modes</strong>: collective motions in which all atoms move in phase, with the same frequency, each along its own direction. Each normal mode behaves like an independent harmonic oscillator, with its own frequency and its own ladder of equally spaced levels. The normal modes of water and carbon dioxide are shown in <a href="#fig-Fig7c13" class="quarto-xref">Fig.&nbsp;<span>13.6</span></a>.</p>
 <div id="fig-Fig7c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Six diagrams of atoms with arrows. Water: symmetric stretch with both hydrogens moving away from oxygen, 3657 inverse centimeters; bend with the hydrogens closing the angle, 1595; antisymmetric stretch with one hydrogen moving away and the other towards oxygen, 3756; all IR and Raman active. Carbon dioxide: symmetric stretch with both oxygens moving outward and carbon still, about 1330, Raman only; bend with carbon moving up and oxygens down, 667, IR only; antisymmetric stretch with carbon moving right and oxygens left, 2349, IR only.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig7c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -866,7 +866,7 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 <section id="electronic-spectroscopy" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="electronic-spectroscopy"><span class="header-section-number">13.4</span> Electronic Spectroscopy</h2>
 <p>Electronic spectroscopy measures the energies of transitions between different electronic states of molecules, for example when the description of one electron changes from a bonding to an antibonding orbital. These energies are much larger than vibrational energies, and electronic transitions are typically observed in the visible and ultraviolet regions, at wavelengths of approximately <span class="math inline">\(200-700\; \text{nm}\)</span> (<span class="math inline">\(50{,}000-14{,}000\; \text{cm}^{-1}\)</span>). This is the type of spectroscopy responsible for the colors that we see around us.</p>
-<p>Since electrons move much faster than nuclei, we can use the Born–Oppenheimer approximation of <a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>: each electronic state has its own potential energy curve, with its own vibrational and rotational levels, and the total energy of the molecule is approximately the sum of the electronic, vibrational, and rotational energies. An electronic transition, therefore, is always accompanied by changes in the vibrational state (giving the spectrum a <em>coarse structure</em>) and, in the gas phase, in the rotational state (giving a <em>fine structure</em>). Transitions that involve both an electronic and a vibrational change are called <em>vibronic</em> transitions. Notice that, unlike pure rotational and vibrational spectra, electronic spectra can be observed for any molecule, including homonuclear diatomics, since an electronic transition can always change the distribution of the charges. To keep track of the two electronic states, it is conventional to label the quantum numbers of the lower state with a double prime <span class="math inline">\(\left(v^{\prime\prime},J^{\prime\prime}\right)\)</span>, and those of the upper state with a single prime <span class="math inline">\(\left(v^{\prime},J^{\prime}\right)\)</span>.</p>
+<p>Since electrons move much faster than nuclei, we can use the Born–Oppenheimer approximation of <a href="10_Molecules.html" class="quarto-xref"><span>Chapter 10</span></a>: each electronic state has its own potential energy curve, with its own vibrational and rotational levels, and the total energy of the molecule is approximately the sum of the electronic, vibrational, and rotational energies. An electronic transition, therefore, is always accompanied by changes in the vibrational state (giving the spectrum a <em>coarse structure</em>) and, in the gas phase, in the rotational state (giving a <em>fine structure</em>). Transitions that involve both an electronic and a vibrational change are called <em>vibronic</em> transitions. Notice that, unlike pure rotational and vibrational spectra, electronic spectra can be observed for any molecule, including homonuclear diatomics, since an electronic transition can always change the distribution of the charges. To keep track of the two electronic states, it is conventional to label the quantum numbers of the lower state with a double prime <span class="math inline">\(\left(v^{\prime\prime},J^{\prime\prime}\right)\)</span>, and those of the upper state with a single prime <span class="math inline">\(\left(v^{\prime},J^{\prime}\right)\)</span>.</p>
 <p>In absorption, the molecule usually starts from the lowest vibrational level of the ground electronic state, <span class="math inline">\(v^{\prime\prime}=0\)</span>, since at room temperature the vibrational energy is large compared to <span class="math inline">\(kT\)</span>. It can end up in many different vibrational levels of the excited state, <span class="math inline">\(v^{\prime}=0,1,2,3,\ldots\)</span>, giving a series of bands called a <em>progression</em>. In emission, the molecule can start from different vibrational levels of the excited state, and end up in many vibrational levels of the ground state, so emission spectra are usually more complicated than absorption spectra.</p>
 <section id="electronic-spectroscopy-of-diatomic-molecules" class="level3" data-number="13.4.1">
 <h3 data-number="13.4.1" class="anchored" data-anchor-id="electronic-spectroscopy-of-diatomic-molecules"><span class="header-section-number">13.4.1</span> Electronic spectroscopy of diatomic molecules</h3>
@@ -875,7 +875,7 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 \tilde{\nu}(J^{\prime },J^{{\prime \prime }})={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+B^{\prime }J^{\prime }(J^{\prime }+1)-B^{{\prime \prime }}J^{{\prime \prime }}(J^{{\prime \prime }}+1),
 \tag{13.17}\]</span></span></p>
 <p>where <span class="math inline">\({\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}\)</span> is the position of the band center. The main difference with the IR case is that now the rotational constants of the two states, <span class="math inline">\(B^{\prime}\)</span> and <span class="math inline">\(B^{\prime\prime}\)</span>, can be very different, since the two electronic states can have very different bond lengths. Since <span class="math inline">\(B\propto 1/d^2\)</span>, and since an electronic excitation often changes the description of one electron from a bonding to an antibonding orbital, making the bond longer, usually <span class="math inline">\(B^{\prime}&lt;B^{\prime\prime}\)</span>.</p>
-<p>Each branch is obtained by replacing the selection rule in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>: <span class="math inline">\(J^{\prime}=J^{\prime\prime}-1\)</span> for the P-branch, and <span class="math inline">\(J^{\prime}=J^{\prime\prime}+1\)</span> for the R-branch. The two branches can then be combined into a single formula by introducing an index <span class="math inline">\(m\)</span>:</p>
+<p>Each branch is obtained by replacing the selection rule in <a href="#eq-elec1" class="quarto-xref">Eq.&nbsp;<span>13.17</span></a>: <span class="math inline">\(J^{\prime}=J^{\prime\prime}-1\)</span> for the P-branch, and <span class="math inline">\(J^{\prime}=J^{\prime\prime}+1\)</span> for the R-branch. The two branches can then be combined into a single formula by introducing an index <span class="math inline">\(m\)</span>:</p>
 <p><span id="eq-elec4"><span class="math display">\[
 {\tilde  \nu }_{{P,R}}={\tilde  \nu }_{{v^{\prime }-v^{{\prime \prime }}}}+(B^{\prime }+B^{{\prime \prime }})m+(B^{\prime }-B^{{\prime \prime }})m^{2},\quad m=\pm 1,\pm 2\, \ldots,
 \tag{13.18}\]</span></span></p>
@@ -892,7 +892,7 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>To find the lines of the P-branch, we replace <span class="math inline">\(J^{\prime }=J^{{\prime \prime}}-1\)</span> in <a href="#eq-elec1" class="quarto-xref">eq.&nbsp;<span>13.17</span></a>:</p>
+<p>To find the lines of the P-branch, we replace <span class="math inline">\(J^{\prime }=J^{{\prime \prime}}-1\)</span> in <a href="#eq-elec1" class="quarto-xref">Eq.&nbsp;<span>13.17</span></a>:</p>
 <p><span id="eq-elec2"><span class="math display">\[
 \begin{aligned}
 {\tilde  \nu }_{P}&amp;={\tilde  \nu}_{{v^{\prime}-v^{\prime\prime}}}+B^{\prime}(J^{\prime\prime}-1)J^{\prime\prime}-B^{\prime\prime}J^{\prime\prime}(J^{\prime\prime}+1) \\
@@ -906,11 +906,11 @@ Figure&nbsp;13.6: Normal modes of water (top) and carbon dioxide (bottom), with 
 &amp;={\tilde  \nu }_{{v^{\prime}-v^{\prime\prime}}}+(B^{\prime}+B^{\prime\prime})J^{\prime}+(B^{\prime}-B^{\prime\prime}){J^{\prime}}^{2}.
 \end{aligned}
 \tag{13.20}\]</span></span></p>
-<p>Writing <span class="math inline">\(m=-J^{\prime\prime}\)</span> in <a href="#eq-elec2" class="quarto-xref">eq.&nbsp;<span>13.19</span></a> and <span class="math inline">\(m=J^{\prime}\)</span> in <a href="#eq-elec3" class="quarto-xref">eq.&nbsp;<span>13.20</span></a> gives the same expression, <a href="#eq-elec4" class="quarto-xref">eq.&nbsp;<span>13.18</span></a>.</p>
+<p>Writing <span class="math inline">\(m=-J^{\prime\prime}\)</span> in <a href="#eq-elec2" class="quarto-xref">Eq.&nbsp;<span>13.19</span></a> and <span class="math inline">\(m=J^{\prime}\)</span> in <a href="#eq-elec3" class="quarto-xref">Eq.&nbsp;<span>13.20</span></a> gives the same expression, <a href="#eq-elec4" class="quarto-xref">Eq.&nbsp;<span>13.18</span></a>.</p>
 </div>
 </div>
 </div>
-<p>The intensities of the different vibronic bands are explained by the <strong>Franck–Condon principle</strong>. Since the electronic transition is much faster than the motion of the nuclei, the nuclei do not have time to move while the electron jumps from one state to the other. In a potential energy diagram, the transition is therefore a vertical line, as shown in <a href="#fig-Fig4c13" class="quarto-xref">figure&nbsp;<span>13.7</span></a>. The most intense transitions are those to the vibrational levels of the excited state whose wave functions overlap the most with the initial vibrational wave function. If the two states have similar bond lengths, the strongest band is <span class="math inline">\(v^{\prime}=0\leftarrow v^{\prime\prime}=0\)</span>. If the excited state has a much longer bond, the strongest bands are those to higher vibrational levels, whose wave functions have large amplitude near their classical turning points (recall the harmonic oscillator wave functions of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>).</p>
+<p>The intensities of the different vibronic bands are explained by the <strong>Franck–Condon principle</strong>. Since the electronic transition is much faster than the motion of the nuclei, the nuclei do not have time to move while the electron jumps from one state to the other. In a potential energy diagram, the transition is therefore a vertical line, as shown in <a href="#fig-Fig4c13" class="quarto-xref">Fig.&nbsp;<span>13.7</span></a>. The most intense transitions are those to the vibrational levels of the excited state whose wave functions overlap the most with the initial vibrational wave function. If the two states have similar bond lengths, the strongest band is <span class="math inline">\(v^{\prime}=0\leftarrow v^{\prime\prime}=0\)</span>. If the excited state has a much longer bond, the strongest bands are those to higher vibrational levels, whose wave functions have large amplitude near their classical turning points (recall the harmonic oscillator wave functions of <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>).</p>
 <div id="fig-Fig4c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two potential energy curves, a ground state at the bottom and an excited state above it shifted to longer bond length. Vibrational wave functions are drawn on the excited-state levels. A vertical arrow rises from the lowest ground-state level, at the ground-state bond length, to the fourth excited-state level, labeled v prime equals 3.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig4c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -924,7 +924,7 @@ Figure&nbsp;13.7: The Franck–Condon principle. The excited electronic state (r
 </section>
 <section id="fluorescence-and-phosphorescence" class="level3" data-number="13.4.2">
 <h3 data-number="13.4.2" class="anchored" data-anchor-id="fluorescence-and-phosphorescence"><span class="header-section-number">13.4.2</span> Fluorescence and phosphorescence</h3>
-<p>What happens to a molecule after it absorbs a photon and reaches an excited electronic state? The possible processes are usually summarized in a <strong>Jablonski diagram</strong>, such as the one in <a href="#fig-Fig8c13" class="quarto-xref">figure&nbsp;<span>13.8</span></a>. Following the notation of <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>, the electronic states are labeled by their multiplicity: most stable molecules have a singlet ground state (<span class="math inline">\(S_0\)</span>), with all electron spins paired, and the excited states can be singlets (<span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, …) or triplets (<span class="math inline">\(T_1\)</span>, …). As for atoms, the lowest triplet is lower in energy than the corresponding singlet, because electrons with parallel spins avoid each other and repel each other less (<a href="09_Atoms.html#sec-TermSymbols" class="quarto-xref"><span>section 9.4</span></a>).</p>
+<p>What happens to a molecule after it absorbs a photon and reaches an excited electronic state? The possible processes are usually summarized in a <strong>Jablonski diagram</strong>, such as the one in <a href="#fig-Fig8c13" class="quarto-xref">Fig.&nbsp;<span>13.8</span></a>. Following the notation of <a href="09_Atoms.html" class="quarto-xref"><span>Chapter 9</span></a>, the electronic states are labeled by their multiplicity: most stable molecules have a singlet ground state (<span class="math inline">\(S_0\)</span>), with all electron spins paired, and the excited states can be singlets (<span class="math inline">\(S_1\)</span>, <span class="math inline">\(S_2\)</span>, …) or triplets (<span class="math inline">\(T_1\)</span>, …). As for atoms, the lowest triplet is lower in energy than the corresponding singlet, because electrons with parallel spins avoid each other and repel each other less (<a href="09_Atoms.html#sec-TermSymbols" class="quarto-xref"><span>Sec. 9.4</span></a>).</p>
 <div id="fig-Fig8c13" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy diagram with the singlet states S0, S1, and S2 on the left and the triplet state T1 on the right, slightly below S1. Purple arrows go up from S0 to S1 and S2 (absorption). Gray wavy arrows go down within S2 and S1 (vibrational relaxation) and from S2 to S1 (internal conversion). A green arrow goes down from S1 to S0 (fluorescence, nanoseconds). An orange wavy arrow goes from S1 to T1 (intersystem crossing), and a red arrow goes down from T1 to S0 (phosphorescence, microseconds to seconds).">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Fig8c13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -946,14 +946,14 @@ Figure&nbsp;13.8: Jablonski diagram. Straight arrows are radiative processes (ab
 </section>
 <section id="magnetic-resonance-spectroscopy" class="level2" data-number="13.5">
 <h2 data-number="13.5" class="anchored" data-anchor-id="magnetic-resonance-spectroscopy"><span class="header-section-number">13.5</span> Magnetic Resonance Spectroscopy</h2>
-<p>All the spectroscopies that we have discussed so far use the electric field of light to drive transitions between energy levels that exist even without the light. In <strong>magnetic resonance</strong> spectroscopies, instead, the energy levels are <em>created</em> by placing the sample in a strong magnetic field, and the transitions are driven by the magnetic field of radio waves or microwaves. Both techniques are a direct application of the spin that we discussed in <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>.</p>
+<p>All the spectroscopies that we have discussed so far use the electric field of light to drive transitions between energy levels that exist even without the light. In <strong>magnetic resonance</strong> spectroscopies, instead, the energy levels are <em>created</em> by placing the sample in a strong magnetic field, and the transitions are driven by the magnetic field of radio waves or microwaves. Both techniques are a direct application of the spin that we discussed in <a href="07_Spin.html" class="quarto-xref"><span>Chapter 7</span></a>.</p>
 <section id="the-energy-of-a-spin-in-a-magnetic-field" class="level3" data-number="13.5.1">
 <h3 data-number="13.5.1" class="anchored" data-anchor-id="the-energy-of-a-spin-in-a-magnetic-field"><span class="header-section-number">13.5.1</span> The energy of a spin in a magnetic field</h3>
 <p>A particle with spin has a magnetic moment proportional to its spin. In a magnetic field <span class="math inline">\(B_0\)</span> along the <span class="math inline">\(z\)</span> axis, the energy of the particle depends on the orientation of its spin, that is, on its quantum number <span class="math inline">\(m\)</span>:</p>
 <p><span id="eq-nmr1"><span class="math display">\[
 E_m = -\gamma\hbar m B_0,
 \tag{13.21}\]</span></span></p>
-<p>where <span class="math inline">\(\gamma\)</span> is a constant, called the <em>gyromagnetic ratio</em>, which is characteristic of each type of particle. For a particle with spin <span class="math inline">\(\frac{1}{2}\)</span>, the field splits the two spin states, <span class="math inline">\(m=+\frac{1}{2}\)</span> and <span class="math inline">\(m=-\frac{1}{2}\)</span>, by an amount that grows linearly with the field, as shown in <a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>a. This splitting is called the <strong>Zeeman effect</strong>. A photon can drive a transition between the two states (the selection rule is <span class="math inline">\(\Delta m=\pm1\)</span>) if its energy matches the splitting:</p>
+<p>where <span class="math inline">\(\gamma\)</span> is a constant, called the <em>gyromagnetic ratio</em>, which is characteristic of each type of particle. For a particle with spin <span class="math inline">\(\frac{1}{2}\)</span>, the field splits the two spin states, <span class="math inline">\(m=+\frac{1}{2}\)</span> and <span class="math inline">\(m=-\frac{1}{2}\)</span>, by an amount that grows linearly with the field, as shown in <a href="#fig-Fig9c13" class="quarto-xref">Fig.&nbsp;<span>13.9</span></a>a. This splitting is called the <strong>Zeeman effect</strong>. A photon can drive a transition between the two states (the selection rule is <span class="math inline">\(\Delta m=\pm1\)</span>) if its energy matches the splitting:</p>
 <p><span id="eq-nmr2"><span class="math display">\[
 \Delta E = h\nu = \gamma\hbar B_0, \qquad \nu = \frac{\gamma B_0}{2\pi}.
 \tag{13.22}\]</span></span></p>
@@ -970,18 +970,18 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 </section>
 <section id="nuclear-magnetic-resonance-nmr" class="level3" data-number="13.5.2">
 <h3 data-number="13.5.2" class="anchored" data-anchor-id="nuclear-magnetic-resonance-nmr"><span class="header-section-number">13.5.2</span> Nuclear magnetic resonance (NMR)</h3>
-<p>Many nuclei have a spin, called <em>nuclear spin</em>, with quantum number <span class="math inline">\(I\)</span>. The most important for chemistry are <span class="math inline">\(^1\mathrm{H}\)</span> and <span class="math inline">\(^{13}\mathrm{C}\)</span>, both with <span class="math inline">\(I=\frac{1}{2}\)</span>, so their behavior in a magnetic field is exactly the one in <a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>a. For protons, <span class="math inline">\(\gamma=2.675\times10^{8}\;\text{rad s}^{-1}\,\text{T}^{-1}\)</span>, so, in the field of a typical superconducting magnet (<span class="math inline">\(B_0=9.4\;\text{T}\)</span>), <a href="#eq-nmr2" class="quarto-xref">eq.&nbsp;<span>13.22</span></a> gives a frequency of <span class="math inline">\(400\;\text{MHz}\)</span>, in the radio-frequency region. This is why NMR spectrometers are named by the proton frequency at which they operate (“a 400 MHz NMR”).</p>
-<p>The energy splitting is tiny: <span class="math inline">\(h\nu\)</span> at <span class="math inline">\(400\;\text{MHz}\)</span> is only about <span class="math inline">\(0.16\;\text{J/mol}\)</span>, thousands of times smaller than the thermal energy at room temperature. As a consequence, the two spin states are almost equally populated (<a href="#eq-rot6" class="quarto-xref">eq.&nbsp;<span>13.10</span></a>), with an excess of only about 3 nuclei per hundred thousand in the lower state. Since absorption and stimulated emission cancel each other for equally populated levels, only this small excess contributes to the signal, which is why NMR requires strong magnets and relatively concentrated samples.</p>
+<p>Many nuclei have a spin, called <em>nuclear spin</em>, with quantum number <span class="math inline">\(I\)</span>. The most important for chemistry are <span class="math inline">\(^1\mathrm{H}\)</span> and <span class="math inline">\(^{13}\mathrm{C}\)</span>, both with <span class="math inline">\(I=\frac{1}{2}\)</span>, so their behavior in a magnetic field is exactly the one in <a href="#fig-Fig9c13" class="quarto-xref">Fig.&nbsp;<span>13.9</span></a>a. For protons, <span class="math inline">\(\gamma=2.675\times10^{8}\;\text{rad s}^{-1}\,\text{T}^{-1}\)</span>, so, in the field of a typical superconducting magnet (<span class="math inline">\(B_0=9.4\;\text{T}\)</span>), <a href="#eq-nmr2" class="quarto-xref">Eq.&nbsp;<span>13.22</span></a> gives a frequency of <span class="math inline">\(400\;\text{MHz}\)</span>, in the radio-frequency region. This is why NMR spectrometers are named by the proton frequency at which they operate (“a 400 MHz NMR”).</p>
+<p>The energy splitting is tiny: <span class="math inline">\(h\nu\)</span> at <span class="math inline">\(400\;\text{MHz}\)</span> is only about <span class="math inline">\(0.16\;\text{J/mol}\)</span>, thousands of times smaller than the thermal energy at room temperature. As a consequence, the two spin states are almost equally populated (<a href="#eq-rot6" class="quarto-xref">Eq.&nbsp;<span>13.10</span></a>), with an excess of only about 3 nuclei per hundred thousand in the lower state. Since absorption and stimulated emission cancel each other for equally populated levels, only this small excess contributes to the signal, which is why NMR requires strong magnets and relatively concentrated samples.</p>
 <p>What makes NMR so powerful for chemistry are two small effects that make the frequency of each nucleus depend on its chemical environment:</p>
 <ol type="1">
-<li><strong>Chemical shift.</strong> The electrons around a nucleus respond to the external field and create a small opposing field, so each nucleus feels a slightly different field, <span class="math inline">\(B_\text{eff}=(1-\sigma)B_0\)</span>, where <span class="math inline">\(\sigma\)</span> is called the shielding constant. Nuclei in different chemical environments resonate at slightly different frequencies. These differences, of a few parts per million (ppm), are reported as the <em>chemical shift</em>, <span class="math inline">\(\delta\)</span>, measured from a reference compound. In the spectrum of ethanol (<a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>b), the protons of the <span class="math inline">\(\mathrm{CH_2}\)</span> group, close to the electronegative oxygen, are less shielded, and they appear at a larger chemical shift than those of the <span class="math inline">\(\mathrm{CH_3}\)</span> group. The area of each signal is proportional to the number of equivalent protons (3:2:1 for <span class="math inline">\(\mathrm{CH_3}\)</span>, <span class="math inline">\(\mathrm{CH_2}\)</span>, and <span class="math inline">\(\mathrm{OH}\)</span>).</li>
+<li><strong>Chemical shift.</strong> The electrons around a nucleus respond to the external field and create a small opposing field, so each nucleus feels a slightly different field, <span class="math inline">\(B_\text{eff}=(1-\sigma)B_0\)</span>, where <span class="math inline">\(\sigma\)</span> is called the shielding constant. Nuclei in different chemical environments resonate at slightly different frequencies. These differences, of a few parts per million (ppm), are reported as the <em>chemical shift</em>, <span class="math inline">\(\delta\)</span>, measured from a reference compound. In the spectrum of ethanol (<a href="#fig-Fig9c13" class="quarto-xref">Fig.&nbsp;<span>13.9</span></a>b), the protons of the <span class="math inline">\(\mathrm{CH_2}\)</span> group, close to the electronegative oxygen, are less shielded, and they appear at a larger chemical shift than those of the <span class="math inline">\(\mathrm{CH_3}\)</span> group. The area of each signal is proportional to the number of equivalent protons (3:2:1 for <span class="math inline">\(\mathrm{CH_3}\)</span>, <span class="math inline">\(\mathrm{CH_2}\)</span>, and <span class="math inline">\(\mathrm{OH}\)</span>).</li>
 <li><strong>Spin–spin coupling.</strong> The magnetic moments of neighboring nuclei interact through the bonding electrons, and each signal is split according to the spin states of the nearby nuclei. A group of protons with <span class="math inline">\(n\)</span> equivalent neighbors is split into <span class="math inline">\(n+1\)</span> lines: in ethanol, the <span class="math inline">\(\mathrm{CH_3}\)</span> signal is a triplet (split by the two <span class="math inline">\(\mathrm{CH_2}\)</span> protons), and the <span class="math inline">\(\mathrm{CH_2}\)</span> signal is a quartet (split by the three <span class="math inline">\(\mathrm{CH_3}\)</span> protons).</li>
 </ol>
 </section>
 <section id="electron-spin-resonance-esr" class="level3" data-number="13.5.3">
 <h3 data-number="13.5.3" class="anchored" data-anchor-id="electron-spin-resonance-esr"><span class="header-section-number">13.5.3</span> Electron spin resonance (ESR)</h3>
 <p>Electrons also have spin <span class="math inline">\(\frac{1}{2}\)</span>, and the same experiment can be done with electron spins. This technique is called <strong>electron spin resonance</strong> (ESR), or electron paramagnetic resonance (EPR). For electrons, the energy splitting is usually written as <span class="math inline">\(\Delta E=g\mu_B B_0\)</span>, where <span class="math inline">\(\mu_B=9.274\times10^{-24}\;\text{J/T}\)</span> is the <em>Bohr magneton</em> and <span class="math inline">\(g\approx2.0023\)</span> for a free electron. Since the magnetic moment of the electron is much larger than that of a nucleus, the resonance frequencies are much higher: in a field of <span class="math inline">\(0.34\;\text{T}\)</span>, the resonance occurs at about <span class="math inline">\(9.5\;\text{GHz}\)</span>, in the microwave region.</p>
-<p>The most important difference with NMR is that ESR is only possible for molecules with <strong>unpaired electrons</strong>. In a molecule in which all electrons are paired in singlet states, the spins of each pair cancel each other, and there is no signal. ESR is therefore the technique of choice to study radicals, transition-metal complexes, and paramagnetic molecules such as <span class="math inline">\(\mathrm{O_2}\)</span> (<a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>). As in NMR, the unpaired electron interacts with nearby magnetic nuclei, which splits the ESR signal into several lines, a pattern called <em>hyperfine structure</em>. For the methyl radical (<a href="#fig-Fig9c13" class="quarto-xref">figure&nbsp;<span>13.9</span></a>c), the unpaired electron interacts with three equivalent protons, and the spectrum shows four equally spaced lines with intensities 1:3:3:1, separated by the <em>hyperfine coupling constant</em>, <span class="math inline">\(a=2.3\;\text{mT}\)</span>. The hyperfine pattern tells us how many magnetic nuclei the unpaired electron “sees,” and how strongly, which is a direct map of the orbital that describes the unpaired electron.</p>
+<p>The most important difference with NMR is that ESR is only possible for molecules with <strong>unpaired electrons</strong>. In a molecule in which all electrons are paired in singlet states, the spins of each pair cancel each other, and there is no signal. ESR is therefore the technique of choice to study radicals, transition-metal complexes, and paramagnetic molecules such as <span class="math inline">\(\mathrm{O_2}\)</span> (<a href="11_Bonds.html" class="quarto-xref"><span>Chapter 11</span></a>). As in NMR, the unpaired electron interacts with nearby magnetic nuclei, which splits the ESR signal into several lines, a pattern called <em>hyperfine structure</em>. For the methyl radical (<a href="#fig-Fig9c13" class="quarto-xref">Fig.&nbsp;<span>13.9</span></a>c), the unpaired electron interacts with three equivalent protons, and the spectrum shows four equally spaced lines with intensities 1:3:3:1, separated by the <em>hyperfine coupling constant</em>, <span class="math inline">\(a=2.3\;\text{mT}\)</span>. The hyperfine pattern tells us how many magnetic nuclei the unpaired electron “sees,” and how strongly, which is a direct map of the orbital that describes the unpaired electron.</p>
 </section>
 </section>
 <section id="sec-rev13" class="level2" data-number="13.6">
@@ -1001,131 +1001,91 @@ Figure&nbsp;13.9: (a) Energy of the two states of a spin-<span class="math inlin
 <h3 data-number="13.6.2" class="anchored" data-anchor-id="sec-quest13"><span class="header-section-number">13.6.2</span> Study Questions</h3>
 <p><strong>1. A transition between two states is forbidden when:</strong></p>
 <ol type="a">
-<li>the two states have different energies<br>
-</li>
-<li>the light is too intense<br>
-</li>
-<li>the transition dipole moment integral between the two states is zero<br>
-</li>
-<li>the molecule has a dipole moment<br>
-</li>
+<li>the two states have different energies</li>
+<li>the light is too intense</li>
+<li>the transition dipole moment integral between the two states is zero</li>
+<li>the molecule has a dipole moment</li>
 <li>the upper state is degenerate</li>
 </ol>
 <hr>
 <p><strong>2. Which of the following molecules has a pure rotational (microwave) spectrum?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(\mathrm{N}_2\)</span><br>
-</li>
-<li><span class="math inline">\(\mathrm{H}_2\)</span><br>
-</li>
-<li><span class="math inline">\(\mathrm{O}_2\)</span><br>
-</li>
-<li><span class="math inline">\(\mathrm{CO}_2\)</span><br>
-</li>
+<li><span class="math inline">\(\mathrm{N}_2\)</span></li>
+<li><span class="math inline">\(\mathrm{H}_2\)</span></li>
+<li><span class="math inline">\(\mathrm{O}_2\)</span></li>
+<li><span class="math inline">\(\mathrm{CO}_2\)</span></li>
 <li><span class="math inline">\(\mathrm{CO}\)</span></li>
 </ol>
 <hr>
 <p><strong>3. The lines of the rotational spectrum of a rigid diatomic molecule are:</strong></p>
 <ol type="a">
-<li>equally spaced by <span class="math inline">\(2B\)</span><br>
-</li>
-<li>equally spaced by <span class="math inline">\(B\)</span><br>
-</li>
-<li>closer together as <span class="math inline">\(J\)</span> increases<br>
-</li>
-<li>all at the same frequency<br>
-</li>
+<li>equally spaced by <span class="math inline">\(2B\)</span></li>
+<li>equally spaced by <span class="math inline">\(B\)</span></li>
+<li>closer together as <span class="math inline">\(J\)</span> increases</li>
+<li>all at the same frequency</li>
 <li>farther apart as <span class="math inline">\(J\)</span> increases</li>
 </ol>
 <hr>
 <p><strong>4. At room temperature, why are many rotational levels populated, with a maximum at <span class="math inline">\(J&gt;0\)</span>?</strong></p>
 <ol type="a">
-<li>because the energy levels are degenerate in <span class="math inline">\(J\)</span><br>
-</li>
-<li>because only <span class="math inline">\(J=0\)</span> is populated<br>
-</li>
-<li>because rotational energies are larger than <span class="math inline">\(kT\)</span><br>
-</li>
-<li>because of the Pauli principle<br>
-</li>
+<li>because the energy levels are degenerate in <span class="math inline">\(J\)</span></li>
+<li>because only <span class="math inline">\(J=0\)</span> is populated</li>
+<li>because rotational energies are larger than <span class="math inline">\(kT\)</span></li>
+<li>because of the Pauli principle</li>
 <li>because the degeneracy <span class="math inline">\(2J+1\)</span> grows with <span class="math inline">\(J\)</span>, while the Boltzmann factor decreases</li>
 </ol>
 <hr>
 <p><strong>5. A vibration absorbs infrared light only if:</strong></p>
 <ol type="a">
-<li>the molecule has a permanent dipole moment<br>
-</li>
-<li>the molecule is homonuclear<br>
-</li>
-<li>the dipole moment of the molecule changes during the vibration<br>
-</li>
-<li>the vibration is very fast<br>
-</li>
+<li>the molecule has a permanent dipole moment</li>
+<li>the molecule is homonuclear</li>
+<li>the dipole moment of the molecule changes during the vibration</li>
+<li>the vibration is very fast</li>
 <li>the polarizability of the molecule is zero</li>
 </ol>
 <hr>
 <p><strong>6. The fundamental band of the infrared spectrum of CO shows:</strong></p>
 <ol type="a">
-<li>a single line<br>
-</li>
-<li>a P-branch, a Q-branch, and an R-branch<br>
-</li>
-<li>only an R-branch<br>
-</li>
-<li>a P-branch and an R-branch separated by a gap at the band center<br>
-</li>
+<li>a single line</li>
+<li>a P-branch, a Q-branch, and an R-branch</li>
+<li>only an R-branch</li>
+<li>a P-branch and an R-branch separated by a gap at the band center</li>
 <li>a continuous absorption</li>
 </ol>
 <hr>
 <p><strong>7. How many vibrational normal modes does the linear molecule <span class="math inline">\(\mathrm{CO}_2\)</span> have?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(3\)</span><br>
-</li>
-<li><span class="math inline">\(4\)</span><br>
-</li>
-<li><span class="math inline">\(5\)</span><br>
-</li>
-<li><span class="math inline">\(6\)</span><br>
-</li>
+<li><span class="math inline">\(3\)</span></li>
+<li><span class="math inline">\(4\)</span></li>
+<li><span class="math inline">\(5\)</span></li>
+<li><span class="math inline">\(6\)</span></li>
 <li><span class="math inline">\(9\)</span></li>
 </ol>
 <hr>
 <p><strong>8. According to the Franck–Condon principle, an electronic transition:</strong></p>
 <ol type="a">
-<li>is vertical, since the nuclei do not move while the electron changes state<br>
-</li>
-<li>always ends in the lowest vibrational level of the excited state<br>
-</li>
-<li>changes the bond length during the absorption<br>
-</li>
-<li>is forbidden if the bond lengths of the two states differ<br>
-</li>
+<li>is vertical, since the nuclei do not move while the electron changes state</li>
+<li>always ends in the lowest vibrational level of the excited state</li>
+<li>changes the bond length during the absorption</li>
+<li>is forbidden if the bond lengths of the two states differ</li>
 <li>happens only between states with the same vibrational quantum number</li>
 </ol>
 <hr>
 <p><strong>9. Why is phosphorescence much slower than fluorescence?</strong></p>
 <ol type="a">
-<li>because triplet states have higher energy<br>
-</li>
-<li>because the emission from <span class="math inline">\(T_1\)</span> to <span class="math inline">\(S_0\)</span> is spin-forbidden<br>
-</li>
-<li>because the molecule must first rotate<br>
-</li>
-<li>because phosphorescence involves only vibrational levels<br>
-</li>
+<li>because triplet states have higher energy</li>
+<li>because the emission from <span class="math inline">\(T_1\)</span> to <span class="math inline">\(S_0\)</span> is spin-forbidden</li>
+<li>because the molecule must first rotate</li>
+<li>because phosphorescence involves only vibrational levels</li>
 <li>because fluorescence is spin-forbidden</li>
 </ol>
 <hr>
 <p><strong>10. In NMR, the chemical shift arises because:</strong></p>
 <ol type="a">
-<li>nuclei have different masses<br>
-</li>
-<li>the nuclei vibrate<br>
-</li>
-<li>neighboring nuclei transfer electrons<br>
-</li>
-<li>the electrons around each nucleus partially shield it from the external magnetic field<br>
-</li>
+<li>nuclei have different masses</li>
+<li>the nuclei vibrate</li>
+<li>neighboring nuclei transfer electrons</li>
+<li>the electrons around each nucleus partially shield it from the external magnetic field</li>
 <li>the magnetic field is not uniform</li>
 </ol>
 <hr>

@@ -567,11 +567,11 @@ window.Quarto = {
 <p>As we saw in the previous chapter, quantum mechanics was born in two different forms: Heisenberg’s matrix mechanics and Schrödinger’s wave mechanics. The two are mathematically equivalent, and we are free to start from either one. In this textbook, we start from Schrödinger’s version, because it is written in the language of waves and differential equations, which is closer to the physics and mathematics that chemistry students already know. Schrödinger’s main idea was simple: if matter behaves as a wave, as de Broglie had proposed, there should be a wave equation that describes it.</p>
 <section id="the-time-independent-schrödinger-equation" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="the-time-independent-schrödinger-equation"><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</h2>
-<p>The Schrödinger equation cannot be derived from classical physics, since it contains new physics that classical physics does not have. We can, however, make it <em>plausible</em>, by combining the mathematical description of a classical wave with de Broglie’s relations. We start from the simplest wave that travels through space, the complex plane wave moving along <span class="math inline">\(x\)</span> that we introduced in <a href="01_Classical.html#sec-ClassicalWaves" class="quarto-xref"><span>section 1.3</span></a>:</p>
+<p>The Schrödinger equation cannot be derived from classical physics, since it contains new physics that classical physics does not have. We can, however, make it <em>plausible</em>, by combining the mathematical description of a classical wave with de Broglie’s relations. We start from the simplest wave that travels through space, the complex plane wave moving along <span class="math inline">\(x\)</span> that we introduced in <a href="01_Classical.html#sec-ClassicalWaves" class="quarto-xref"><span>Sec. 1.3</span></a>:</p>
 <p><span id="eq-sch1"><span class="math display">\[
 \psi(x,t)=\exp[i(kx-\omega t)],
 \tag{3.1}\]</span></span></p>
-<p>where <span class="math inline">\(x\)</span> is the position, <span class="math inline">\(t\)</span> is time, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span> is the wave vector, and <span class="math inline">\(\omega=2\pi\nu\)</span> is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of <a href="#eq-sch1" class="quarto-xref">eq.&nbsp;<span>3.1</span></a> with respect to the location, which are:</p>
+<p>where <span class="math inline">\(x\)</span> is the position, <span class="math inline">\(t\)</span> is time, <span class="math inline">\(k=\frac{2\pi}{\lambda}\)</span> is the wave vector, and <span class="math inline">\(\omega=2\pi\nu\)</span> is the angular frequency of the wave. If we are not concerned with the time evolution, we can consider uniquely the derivatives of <a href="#eq-sch1" class="quarto-xref">Eq.&nbsp;<span>3.1</span></a> with respect to the location, which are:</p>
 <p><span id="eq-sch2"><span class="math display">\[
 \begin{aligned}
 \frac{\partial \psi}{\partial x} &amp;=ik\exp[i(kx-\omega t)] = ik\psi, \\
@@ -579,7 +579,7 @@ window.Quarto = {
 \end{aligned}
 \tag{3.2}\]</span></span></p>
 <p>where we have used the fact that <span class="math inline">\(i^2=-1\)</span>.</p>
-<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
+<p>Assuming that particles behave as waves—as proposed by de Broglie—we can now use the first of de Broglie’s equations, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">Eq.&nbsp;<span>2.12</span></a>, to replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span> and obtain:</p>
 <p><span id="eq-sch3"><span class="math display">\[
 \frac{\partial^2 \psi}{\partial x^2} = -\frac{p^2\psi}{\hbar^2},
 \tag{3.3}\]</span></span></p>
@@ -595,7 +595,7 @@ E = \frac {p^{2}}{2m} + V(x),
 <p><span id="eq-sch6"><span class="math display">\[
 p^2 = 2m[E - V(x)],
 \tag{3.6}\]</span></span></p>
-<p>which we can then replace into <a href="#eq-sch4" class="quarto-xref">eq.&nbsp;<span>3.4</span></a> to obtain:</p>
+<p>which we can then replace into <a href="#eq-sch4" class="quarto-xref">Eq.&nbsp;<span>3.4</span></a> to obtain:</p>
 <p><span id="eq-sch7"><span class="math display">\[
 2m[E-V(x)]\psi = - \hbar^2 \frac{\partial^2 \psi}{\partial x^2},
 \tag{3.7}\]</span></span></p>
@@ -611,13 +611,13 @@ p^2 = 2m[E - V(x)],
 <p><span id="eq-born1"><span class="math display">\[
 \text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
 \tag{3.9}\]</span></span></p>
-<p>where <span class="math inline">\(|\psi(x)|^2=\psi^*(x)\psi(x)\)</span> is called the <strong>probability density</strong>. Notice that, even if <span class="math inline">\(\psi\)</span> is complex, <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative, as a probability must be. This is similar to what happens for classical waves (<a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a <em>probability amplitude</em>.</p>
+<p>where <span class="math inline">\(|\psi(x)|^2=\psi^*(x)\psi(x)\)</span> is called the <strong>probability density</strong>. Notice that, even if <span class="math inline">\(\psi\)</span> is complex, <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative, as a probability must be. This is similar to what happens for classical waves (<a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>), where the energy carried by a wave depends on the square of its amplitude, and not on the amplitude itself. For this reason, the wave function is sometimes called a <em>probability amplitude</em>.</p>
 <p>Since the particle must be found somewhere, the probabilities of finding it at all possible positions must add up to one:</p>
 <p><span id="eq-born2"><span class="math display">\[
 \int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
 \tag{3.10}\]</span></span></p>
-<p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>.</p>
-<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</p>
+<p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>.</p>
+<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in <a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>.</p>
 <div id="tip-normalizing-a-wave-function" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -651,7 +651,7 @@ Example&nbsp;3.1: Normalizing a wave function
 <p><span id="eq-TDSEq"><span class="math display">\[
 i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2 \psi(x,t)}{\partial x^2}+V(x)\psi(x,t)
 \tag{3.11}\]</span></span></p>
-<p>where <span class="math inline">\(V(x)\)</span> is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>. Replacing it into <a href="#eq-TDSEq" class="quarto-xref">eq.&nbsp;<span>3.11</span></a>, we obtain:</p>
+<p>where <span class="math inline">\(V(x)\)</span> is the potential energy of the system, which we assume does not depend on time. The TISEq is a special case of this equation. To see how, we try a wave function written as the product of a function of position and a function of time, <span class="math inline">\(\psi(x, t) = \psi(x) f(t)\)</span>. Replacing it into <a href="#eq-TDSEq" class="quarto-xref">Eq.&nbsp;<span>3.11</span></a>, we obtain:</p>
 <p><span id="eq-TDSEq2"><span class="math display">\[
 \psi(x) i \hbar \frac{df(t)}{dt} = f(t) \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x),
 \tag{3.12}\]</span></span></p>
@@ -659,7 +659,7 @@ i\hbar\frac{\partial \psi(x,t)}{\partial t}=-\frac{\hbar^2}{2m} \frac{\partial^2
 <p><span id="eq-TDSEq3"><span class="math display">\[
 \frac{i \hbar}{f(t)} \frac{df(t)}{dt} = \frac{1}{\psi(x)} \left[-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x) \right] \psi(x).
 \tag{3.13}\]</span></span></p>
-<p>The left-hand side of <a href="#eq-TDSEq3" class="quarto-xref">eq.&nbsp;<span>3.13</span></a> depends only on <span class="math inline">\(t\)</span>, and the right-hand side only on <span class="math inline">\(x\)</span>. The only way for the two to be equal for every value of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant <span class="math inline">\(E\)</span>. We have now split one partial differential equation into two ordinary differential equations:</p>
+<p>The left-hand side of <a href="#eq-TDSEq3" class="quarto-xref">Eq.&nbsp;<span>3.13</span></a> depends only on <span class="math inline">\(t\)</span>, and the right-hand side only on <span class="math inline">\(x\)</span>. The only way for the two to be equal for every value of <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> is for both of them to be equal to the same constant. The right-hand side has the dimensions of energy, so we call this constant <span class="math inline">\(E\)</span>. We have now split one partial differential equation into two ordinary differential equations:</p>
 <p><span id="eq-TDSEq4"><span class="math display">\[
 \frac{1}{f(t)} \frac{df(t)}{dt} = - \frac{i E}{\hbar}
 \tag{3.14}\]</span></span></p>
@@ -680,7 +680,7 @@ f(t) = e^{-iEt / \hbar}
 \vert \psi(x, t) \vert^2 = \psi^{*}(x, t) \psi(x, t)=
 \psi^{*}(x)\exp\left(\frac{iEt}{\hbar}\right)\psi(x)\exp\left(\frac{-iEt}{\hbar}\right)= \psi^{*}(x) \psi(x).
 \tag{3.18}\]</span></span></p>
-<p>Wave functions of the form of <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a> are called <strong>stationary states</strong>. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Wave functions of the form of <a href="#eq-TDSEq6b" class="quarto-xref">Eq.&nbsp;<span>3.17</span></a> are called <strong>stationary states</strong>. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>Sec. 3.2</span></a>, <span class="math inline">\(\vert \psi(x, t) \vert^2\)</span> is a probability density, the quantity that we can measure, so in a stationary state nothing that we can observe changes in time. This does not mean that the particle is standing still, but only that its probability distribution does not change. This is why the solutions of the TISEq are so important: they are the states with a well-defined energy, and they do not change in time. Not every solution of the TDSEq is a stationary state, but every solution can be written as a linear combination (a <em>superposition</em>) of stationary states:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><span id="eq-TDSEqsum"><span class="math display">\[
 \psi(\mathbf{r}, t) = \sum_i c_i e^{-iE_it / \hbar} \psi_i(\mathbf{r}).
 \tag{3.19}\]</span></span></p>
@@ -706,22 +706,22 @@ f(t) = e^{-iEt / \hbar}
 \frac{d^2 \psi(x)}{dx^2} &amp;= -k^2 A\exp(ikx) -k^2 B\exp(-ikx) = -k^2 \psi(x).
 \end{aligned}
 \tag{3.23}\]</span></span></p>
-<p>Comparing the second derivative in <a href="#eq-FP4" class="quarto-xref">eq.&nbsp;<span>3.23</span></a> with <a href="#eq-FP2" class="quarto-xref">eq.&nbsp;<span>3.21</span></a>, we immediately see that if we set:</p>
+<p>Comparing the second derivative in <a href="#eq-FP4" class="quarto-xref">Eq.&nbsp;<span>3.23</span></a> with <a href="#eq-FP2" class="quarto-xref">Eq.&nbsp;<span>3.21</span></a>, we immediately see that if we set:</p>
 <p><span id="eq-FP5"><span class="math display">\[
 k^2 = \frac{2mE}{\hbar^2},
 \tag{3.24}\]</span></span></p>
-<p>we solve the original differential equation. Considering de Broglie’s equation, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">eq.&nbsp;<span>2.12</span></a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
+<p>we solve the original differential equation. Considering de Broglie’s equation, <a href="02_Motivation.html#eq-wp1b" class="quarto-xref">Eq.&nbsp;<span>2.12</span></a>, we can replace <span class="math inline">\(k=\frac{p}{\hbar}\)</span>, to obtain:</p>
 <p><span id="eq-FP6"><span class="math display">\[
 E = \frac{k^2 \hbar^2}{2m} = \frac{p^2}{2m},
 \tag{3.25}\]</span></span></p>
-<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.22</span></a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of <a href="#eq-FP6" class="quarto-xref">eq.&nbsp;<span>3.25</span></a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
+<p>which is exactly the classical value of the kinetic energy of a free particle moving in one direction of space. Since the function in <a href="#eq-FP3" class="quarto-xref">Eq.&nbsp;<span>3.22</span></a> solves the Schrödinger equation for the free particle, it is called an <em>eigenfunction</em> (or <em>eigenstate</em>) of the TISEq. The energy result of <a href="#eq-FP6" class="quarto-xref">Eq.&nbsp;<span>3.25</span></a> is called an <em>eigenvalue</em> of the TISEq. Notice that, since <span class="math inline">\(k\)</span> is continuous in the eigenfunction, the energy eigenvalue is also continuous (i.e., all values of <span class="math inline">\(E\)</span> are acceptable).</p>
 <section id="what-does-the-free-particle-solution-look-like" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="what-does-the-free-particle-solution-look-like"><span class="header-section-number">3.4.1</span> What does the free-particle solution look like?</h3>
-<p>Let’s take a closer look at one of the solutions in <a href="#eq-FP3" class="quarto-xref">eq.&nbsp;<span>3.22</span></a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
+<p>Let’s take a closer look at one of the solutions in <a href="#eq-FP3" class="quarto-xref">Eq.&nbsp;<span>3.22</span></a>, for example the one with <span class="math inline">\(B=0\)</span>, which describes a particle moving to the right with momentum <span class="math inline">\(p=\hbar k\)</span>:</p>
 <p><span id="eq-FP7"><span class="math display">\[
 \psi(x) = A\, e^{ikx} = A\left[\cos(kx) + i\sin(kx)\right].
 \tag{3.26}\]</span></span></p>
-<p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in <a href="#fig-fig1c3" class="quarto-xref">figure&nbsp;<span>3.1</span></a>.</p>
+<p>Its real and imaginary parts are a cosine and a sine wave with wavelength <span class="math inline">\(\lambda=2\pi/k=h/p\)</span>, exactly as de Broglie proposed. As we saw in <a href="#sec-BornInterpretation" class="quarto-xref"><span>Sec. 3.2</span></a>, however, the quantity that has a direct physical meaning is not the wave function itself, but its square magnitude, <span class="math inline">\(|\psi(x)|^2\)</span>, which gives the probability of finding the particle at position <span class="math inline">\(x\)</span>. For a plane wave, <span class="math inline">\(|\psi(x)|^2 = |A|^2\left[\cos^2(kx)+\sin^2(kx)\right]=|A|^2\)</span>, a constant. The plane wave and its probability density are shown in <a href="#fig-fig1c3" class="quarto-xref">Fig.&nbsp;<span>3.1</span></a>.</p>
 <div id="fig-fig1c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top: a plane wave along a horizontal x axis, seen from the front. A blue cosine wave oscillates up and down in a vertical plane, and a red sine wave, shifted by a quarter wavelength, lies on a horizontal plane drawn in perspective; the areas between each curve and the axis are shaded. Bottom: the probability density is a flat horizontal band, the same at every position.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig1c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -736,7 +736,7 @@ Figure&nbsp;3.1: Top: a free-particle plane wave, <span class="math inline">\(\p
 </section>
 <section id="sec-WavePackets" class="level3" data-number="3.4.2">
 <h3 data-number="3.4.2" class="anchored" data-anchor-id="sec-WavePackets"><span class="header-section-number">3.4.2</span> Wave packets</h3>
-<p>The way out of this problem comes from the principle of superposition that we discussed for classical waves in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>. Since the Schrödinger equation is linear, any sum of plane waves with different wave vectors is also a solution. When we add waves with slightly different wavelengths, they interfere constructively in some regions and destructively in others. This is illustrated in <a href="#fig-fig2c3" class="quarto-xref">figure&nbsp;<span>3.2</span></a>.</p>
+<p>The way out of this problem comes from the principle of superposition that we discussed for classical waves in <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>. Since the Schrödinger equation is linear, any sum of plane waves with different wave vectors is also a solution. When we add waves with slightly different wavelengths, they interfere constructively in some regions and destructively in others. This is illustrated in <a href="#fig-fig2c3" class="quarto-xref">Fig.&nbsp;<span>3.2</span></a>.</p>
 <div id="fig-fig2c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three panels. Top: the sum of two plane waves shows regularly repeating beats. Middle: the sum of five waves shows sharper bunches that still repeat. Bottom: the sum of 41 waves shows a single localized bunch of oscillations, with the wave canceling to zero everywhere else.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -786,10 +786,10 @@ Figure&nbsp;3.2: Superposition of plane waves with wave vectors close to <span c
 <p><span id="eq-FP8"><span class="math display">\[
 \Psi(x,t) = \int \phi(k)\, e^{i\left(kx - \omega(k) t\right)} dk, \qquad \omega(k) = \frac{E}{\hbar} = \frac{\hbar k^2}{2m},
 \tag{3.27}\]</span></span></p>
-<p>where each plane wave evolves in time with its own frequency, as we saw in <a href="#eq-TDSEq6b" class="quarto-xref">eq.&nbsp;<span>3.17</span></a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
+<p>where each plane wave evolves in time with its own frequency, as we saw in <a href="#eq-TDSEq6b" class="quarto-xref">Eq.&nbsp;<span>3.17</span></a>. Unlike a single plane wave, a wave packet can be normalized, and it describes a particle that is localized in a region of space. A wave packet is the quantum mechanical picture of a free particle such as an electron in a beam.</p>
 <p>Wave packets teach us three important lessons:</p>
 <ol type="1">
-<li><strong>The price of localization</strong>: to build a packet that is localized in space, we need plane waves with a <em>range</em> of wave vectors, and therefore a range of momenta, <span class="math inline">\(p=\hbar k\)</span>. The more localized we want the particle to be, the wider the range of momenta that we need, as shown in <a href="#fig-fig3c3" class="quarto-xref">figure&nbsp;<span>3.3</span></a>. A plane wave is the extreme case of a perfectly defined momentum and a completely undefined position. A very narrow packet has a well-defined position, but a very uncertain momentum. For the packets in <a href="#fig-fig3c3" class="quarto-xref">figure&nbsp;<span>3.3</span></a>, the widths in position, <span class="math inline">\(\Delta x\)</span>, and in wave vector, <span class="math inline">\(\Delta k\)</span>, are related by <span class="math inline">\(\Delta x\,\Delta k = \frac{1}{2}\)</span>, or, using <span class="math inline">\(p=\hbar k\)</span>, <span class="math inline">\(\Delta x\,\Delta p = \frac{\hbar}{2}\)</span>. This is a first glimpse of the Heisenberg uncertainty principle, which we will discuss in <a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>.</li>
+<li><strong>The price of localization</strong>: to build a packet that is localized in space, we need plane waves with a <em>range</em> of wave vectors, and therefore a range of momenta, <span class="math inline">\(p=\hbar k\)</span>. The more localized we want the particle to be, the wider the range of momenta that we need, as shown in <a href="#fig-fig3c3" class="quarto-xref">Fig.&nbsp;<span>3.3</span></a>. A plane wave is the extreme case of a perfectly defined momentum and a completely undefined position. A very narrow packet has a well-defined position, but a very uncertain momentum. For the packets in <a href="#fig-fig3c3" class="quarto-xref">Fig.&nbsp;<span>3.3</span></a>, the widths in position, <span class="math inline">\(\Delta x\)</span>, and in wave vector, <span class="math inline">\(\Delta k\)</span>, are related by <span class="math inline">\(\Delta x\,\Delta k = \frac{1}{2}\)</span>, or, using <span class="math inline">\(p=\hbar k\)</span>, <span class="math inline">\(\Delta x\,\Delta p = \frac{\hbar}{2}\)</span>. This is a first glimpse of the Heisenberg uncertainty principle, which we will discuss in <a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>.</li>
 </ol>
 <div id="fig-fig3c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Two rows. Top: a narrow wave packet with few oscillations, paired with a broad distribution of wave vectors around k zero. Bottom: a wide wave packet with many oscillations, paired with a narrow distribution of wave vectors around k zero.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -802,7 +802,7 @@ Figure&nbsp;3.3: A narrow (top) and a wide (bottom) wave packet in position spac
 </figure>
 </div>
 <ol start="2" type="1">
-<li><strong>Motion</strong>: the wave packet moves, as shown in <a href="#fig-fig4c3" class="quarto-xref">figure&nbsp;<span>3.4</span></a>. Its center travels with velocity <span class="math inline">\(v=\frac{d\omega}{dk}=\frac{\hbar k_0}{m}=\frac{p_0}{m}\)</span>, which is exactly the velocity of a classical particle with momentum <span class="math inline">\(p_0\)</span>. (This velocity is called the <em>group velocity</em>. The individual crests inside the packet move at a different speed, but the packet as a whole, and with it the probability of finding the particle, moves at the classical speed.) This is how classical motion emerges from quantum mechanics: a well-localized wave packet follows the trajectory of a classical particle.</li>
+<li><strong>Motion</strong>: the wave packet moves, as shown in <a href="#fig-fig4c3" class="quarto-xref">Fig.&nbsp;<span>3.4</span></a>. Its center travels with velocity <span class="math inline">\(v=\frac{d\omega}{dk}=\frac{\hbar k_0}{m}=\frac{p_0}{m}\)</span>, which is exactly the velocity of a classical particle with momentum <span class="math inline">\(p_0\)</span>. (This velocity is called the <em>group velocity</em>. The individual crests inside the packet move at a different speed, but the packet as a whole, and with it the probability of finding the particle, moves at the classical speed.) This is how classical motion emerges from quantum mechanics: a well-localized wave packet follows the trajectory of a classical particle.</li>
 </ol>
 <div id="fig-fig4c3" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four bell-shaped probability curves at increasing times, each centered farther to the right at equal steps, showing the packet moving at constant speed. Each later curve is lower and wider than the previous one, showing the packet spreading.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -883,7 +883,7 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 </div>
 </div>
 </div>
-<p>The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>.</p>
+<p>The wave packet gives us an important lesson that we will meet again many times: in quantum mechanics, a particle with a definite position is a superposition of states with different momenta, and vice versa. The states with a definite energy, the solutions of the TISEq, are stationary and do not move. Motion requires a superposition of different stationary states, as we will see again in <a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>.</p>
 </section>
 </section>
 <section id="sec-rev3" class="level2" data-number="3.5">
@@ -902,131 +902,91 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.5.2</span> Study Questions</h3>
 <p><strong>1. Which of the following is the time-independent Schrödinger equation for a particle in one dimension?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d\psi}{dx}+V(x)\psi=E\psi\)</span><br>
-</li>
-<li><span class="math inline">\(\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=V(x)\)</span><br>
-</li>
-<li><span class="math inline">\(m\frac{d^2x}{dt^2}=-\frac{dV}{dx}\)</span><br>
-</li>
-<li><span class="math inline">\(\psi=E\,V(x)\)</span><br>
-</li>
+<li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d\psi}{dx}+V(x)\psi=E\psi\)</span></li>
+<li><span class="math inline">\(\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=V(x)\)</span></li>
+<li><span class="math inline">\(m\frac{d^2x}{dt^2}=-\frac{dV}{dx}\)</span></li>
+<li><span class="math inline">\(\psi=E\,V(x)\)</span></li>
 <li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi\)</span></li>
 </ol>
 <hr>
 <p><strong>2. How was the Schrödinger equation obtained?</strong></p>
 <ol type="a">
-<li>it cannot be derived from classical physics; we can make it plausible, and it is justified by its agreement with experiments<br>
-</li>
-<li>it was derived from Newton’s equation<br>
-</li>
-<li>it was derived from Coulomb’s law<br>
-</li>
-<li>it was obtained by measuring wave functions<br>
-</li>
+<li>it cannot be derived from classical physics; we can make it plausible, and it is justified by its agreement with experiments</li>
+<li>it was derived from Newton’s equation</li>
+<li>it was derived from Coulomb’s law</li>
+<li>it was obtained by measuring wave functions</li>
 <li>it was derived from the Bohr model</li>
 </ol>
 <hr>
 <p><strong>3. According to Born’s interpretation, <span class="math inline">\(|\psi(x)|^2dx\)</span> is:</strong></p>
 <ol type="a">
-<li>the energy of the particle at <span class="math inline">\(x\)</span><br>
-</li>
-<li>the charge of the particle<br>
-</li>
-<li>the fraction of the particle located at <span class="math inline">\(x\)</span><br>
-</li>
-<li>the probability of finding the particle between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span><br>
-</li>
+<li>the energy of the particle at <span class="math inline">\(x\)</span></li>
+<li>the charge of the particle</li>
+<li>the fraction of the particle located at <span class="math inline">\(x\)</span></li>
+<li>the probability of finding the particle between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span></li>
 <li>the velocity of the particle at <span class="math inline">\(x\)</span></li>
 </ol>
 <hr>
 <p><strong>4. Why must a wave function be normalized, <span class="math inline">\(\int|\psi|^2dx=1\)</span>?</strong></p>
 <ol type="a">
-<li>because the energy must be positive<br>
-</li>
-<li>because the particle must be found somewhere<br>
-</li>
-<li>because the wave function must be real<br>
-</li>
-<li>because the particle cannot move<br>
-</li>
+<li>because the energy must be positive</li>
+<li>because the particle must be found somewhere</li>
+<li>because the wave function must be real</li>
+<li>because the particle cannot move</li>
 <li>because <span class="math inline">\(\psi\)</span> must be zero everywhere</li>
 </ol>
 <hr>
 <p><strong>5. Why do we always use <span class="math inline">\(|\psi|^2=\psi^*\psi\)</span>, and not <span class="math inline">\(\psi\)</span> itself, to compute probabilities?</strong></p>
 <ol type="a">
-<li>because <span class="math inline">\(\psi\)</span> can be complex, while <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative<br>
-</li>
-<li>because <span class="math inline">\(\psi\)</span> is always negative<br>
-</li>
-<li>because <span class="math inline">\(\psi^*\psi\)</span> is always larger than <span class="math inline">\(\psi\)</span><br>
-</li>
-<li>because <span class="math inline">\(\psi\)</span> has no units<br>
-</li>
+<li>because <span class="math inline">\(\psi\)</span> can be complex, while <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative</li>
+<li>because <span class="math inline">\(\psi\)</span> is always negative</li>
+<li>because <span class="math inline">\(\psi^*\psi\)</span> is always larger than <span class="math inline">\(\psi\)</span></li>
+<li>because <span class="math inline">\(\psi\)</span> has no units</li>
 <li>because <span class="math inline">\(\psi^*\psi\)</span> is easier to differentiate</li>
 </ol>
 <hr>
 <p><strong>6. For a stationary state, what does not change in time?</strong></p>
 <ol type="a">
-<li>the wave function <span class="math inline">\(\psi(x,t)\)</span><br>
-</li>
-<li>the phase of the wave function<br>
-</li>
-<li>the probability density <span class="math inline">\(|\psi(x,t)|^2\)</span><br>
-</li>
-<li>the real part of the wave function<br>
-</li>
+<li>the wave function <span class="math inline">\(\psi(x,t)\)</span></li>
+<li>the phase of the wave function</li>
+<li>the probability density <span class="math inline">\(|\psi(x,t)|^2\)</span></li>
+<li>the real part of the wave function</li>
 <li>nothing: everything changes in time</li>
 </ol>
 <hr>
 <p><strong>7. A stationary state with energy <span class="math inline">\(E\)</span> evolves in time by multiplication with which factor?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(e^{-Et/\hbar}\)</span><br>
-</li>
-<li><span class="math inline">\(\cos(Et)\)</span><br>
-</li>
-<li><span class="math inline">\(e^{iEx/\hbar}\)</span><br>
-</li>
-<li><span class="math inline">\(e^{-iEt/\hbar}\)</span><br>
-</li>
+<li><span class="math inline">\(e^{-Et/\hbar}\)</span></li>
+<li><span class="math inline">\(\cos(Et)\)</span></li>
+<li><span class="math inline">\(e^{iEx/\hbar}\)</span></li>
+<li><span class="math inline">\(e^{-iEt/\hbar}\)</span></li>
 <li><span class="math inline">\(E\,t\)</span></li>
 </ol>
 <hr>
 <p><strong>8. The energy of a free particle is:</strong></p>
 <ol type="a">
-<li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, but only integer multiples of <span class="math inline">\(h\nu\)</span><br>
-</li>
-<li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, and it can take any non-negative value<br>
-</li>
-<li>always zero<br>
-</li>
-<li><span class="math inline">\(E=mc^2\)</span><br>
-</li>
+<li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, but only integer multiples of <span class="math inline">\(h\nu\)</span></li>
+<li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, and it can take any non-negative value</li>
+<li>always zero</li>
+<li><span class="math inline">\(E=mc^2\)</span></li>
 <li><span class="math inline">\(E=\frac{n^2h^2}{8ma^2}\)</span></li>
 </ol>
 <hr>
 <p><strong>9. A particle described by a single plane wave, <span class="math inline">\(\psi=e^{ikx}\)</span>, has:</strong></p>
 <ol type="a">
-<li>a perfectly defined position, but undefined momentum<br>
-</li>
-<li>a perfectly defined position and momentum<br>
-</li>
-<li>zero momentum<br>
-</li>
-<li>a probability density that oscillates with <span class="math inline">\(x\)</span><br>
-</li>
+<li>a perfectly defined position, but undefined momentum</li>
+<li>a perfectly defined position and momentum</li>
+<li>zero momentum</li>
+<li>a probability density that oscillates with <span class="math inline">\(x\)</span></li>
 <li>a perfectly defined momentum, but the same probability of being found anywhere</li>
 </ol>
 <hr>
 <p><strong>10. To describe a particle localized in a small region of space, we need:</strong></p>
 <ol type="a">
-<li>a single plane wave with a very large momentum<br>
-</li>
-<li>a single plane wave with zero momentum<br>
-</li>
-<li>a wave packet, a superposition of plane waves with a range of momenta<br>
-</li>
-<li>a wave function equal to zero everywhere<br>
-</li>
+<li>a single plane wave with a very large momentum</li>
+<li>a single plane wave with zero momentum</li>
+<li>a wave packet, a superposition of plane waves with a range of momenta</li>
+<li>a wave function equal to zero everywhere</li>
 <li>a classical trajectory</li>
 </ol>
 <hr>

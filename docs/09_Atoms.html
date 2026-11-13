@@ -563,7 +563,7 @@ window.Quarto = {
 <p><span id="eq-atom1"><span class="math display">\[
 \hat{H}(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N)=\sum_{i=1}^N \left(-{\frac {\hbar ^{2}}{2m_e }}\nabla_{i}^{2}-{\frac {Ze^{2}}{4\pi \varepsilon _{0}r_{i}}} \right)+{\frac {e^{2}}{4\pi \varepsilon _{0}}}\sum_{i&lt;j}\frac{1}{r_{ij}},
 \tag{9.1}\]</span></span></p>
-<p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m_e\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\(\mathbf{r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|\mathbf{r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|\mathbf{r}_i-\mathbf{r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using <a href="06_Operators.html#eq-scheqsimple" class="quarto-xref">eq.&nbsp;<span>6.22</span></a>.</p>
+<p>where <span class="math inline">\(Z\)</span> is the nuclear charge, <span class="math inline">\(m_e\)</span> and <span class="math inline">\(e\)</span> are respectively the mass and charge of an electron, <span class="math inline">\(\mathbf{r}_i\)</span> and <span class="math inline">\(\nabla_i^2\)</span> are the spatial coordinates and the Laplacian of each electron, <span class="math inline">\(r_{i}=|\mathbf{r}_i|\)</span>, and <span class="math inline">\(r_{{ij}}=|\mathbf{r}_i-\mathbf{r}_j|\)</span> is the distance between two electrons (all other symbols have been explained in previous chapters). The TISEq is easily written using <a href="06_Operators.html#eq-scheqsimple" class="quarto-xref">Eq.&nbsp;<span>6.22</span></a>.</p>
 <p>It is worth looking at the three pieces of this Hamiltonian one at a time:</p>
 <ol type="1">
 <li><strong>Kinetic energy</strong>: one term for each electron, identical to the one we used for the hydrogen atom.</li>
@@ -585,22 +585,22 @@ window.Quarto = {
 <li><strong>Bosons</strong> have symmetric wave functions. Photons and helium-4 atoms are examples of bosons.</li>
 <li><strong>Fermions</strong> have antisymmetric wave functions. Electrons, protons, and neutrons are fermions.</li>
 </ul>
-<p>Which family a particle belongs to is determined by its spin: particles with integer spin (<span class="math inline">\(s=0,1,2,\ldots\)</span>) are bosons, and particles with half-integer spin (<span class="math inline">\(s=\frac{1}{2},\frac{3}{2},\ldots\)</span>) are fermions. This connection is known as the <em>spin-statistics theorem</em>, and it can be proven only in the framework of relativistic quantum mechanics, so we will simply accept it here. Since electrons have <span class="math inline">\(s=\frac{1}{2}\)</span> (<a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>), they are fermions, and their wave function must be antisymmetric with respect to the exchange of any two of them:</p>
+<p>Which family a particle belongs to is determined by its spin: particles with integer spin (<span class="math inline">\(s=0,1,2,\ldots\)</span>) are bosons, and particles with half-integer spin (<span class="math inline">\(s=\frac{1}{2},\frac{3}{2},\ldots\)</span>) are fermions. This connection is known as the <em>spin-statistics theorem</em>, and it can be proven only in the framework of relativistic quantum mechanics, so we will simply accept it here. Since electrons have <span class="math inline">\(s=\frac{1}{2}\)</span> (<a href="07_Spin.html" class="quarto-xref"><span>Chapter 7</span></a>), they are fermions, and their wave function must be antisymmetric with respect to the exchange of any two of them:</p>
 <p><span id="eq-atom2"><span class="math display">\[
 \Psi\left(\mathbf{x}_1,\mathbf{x}_2,\ldots, \mathbf{x}_N\right) = - \Psi\left(\mathbf{x}_2,\mathbf{x}_1,\ldots, \mathbf{x}_N\right)
 \tag{9.3}\]</span></span></p>
-<p>This simple requirement has an enormous consequence. Suppose that we try to describe two electrons with exactly the same state, including their spin, so that <span class="math inline">\(\mathbf{x}_1=\mathbf{x}_2\)</span>. Swapping two identical things cannot change anything, so the wave function must be unchanged by the swap. At the same time, <a href="#eq-atom2" class="quarto-xref">eq.&nbsp;<span>9.3</span></a> says that it must change sign. The only number that is equal to minus itself is zero, so the wave function must vanish: two electrons can never be in the same state. This is the <strong>Pauli exclusion principle</strong>, which we will see again, in a more familiar form, when we build many-electron wave functions below. Bosons, instead, have no such restriction, and any number of them can be described by the same state. This difference is responsible for the shell structure of atoms, and therefore for the whole of chemistry: if electrons were bosons, all of them would be described by the <span class="math inline">\(1s\)</span> orbital, and atoms would not form bonds the way they do.</p>
+<p>This simple requirement has an enormous consequence. Suppose that we try to describe two electrons with exactly the same state, including their spin, so that <span class="math inline">\(\mathbf{x}_1=\mathbf{x}_2\)</span>. Swapping two identical things cannot change anything, so the wave function must be unchanged by the swap. At the same time, <a href="#eq-atom2" class="quarto-xref">Eq.&nbsp;<span>9.3</span></a> says that it must change sign. The only number that is equal to minus itself is zero, so the wave function must vanish: two electrons can never be in the same state. This is the <strong>Pauli exclusion principle</strong>, which we will see again, in a more familiar form, when we build many-electron wave functions below. Bosons, instead, have no such restriction, and any number of them can be described by the same state. This difference is responsible for the shell structure of atoms, and therefore for the whole of chemistry: if electrons were bosons, all of them would be described by the <span class="math inline">\(1s\)</span> orbital, and atoms would not form bonds the way they do.</p>
 </section>
 <section id="spin-orbitals-and-slater-determinants" class="level3" data-number="9.1.2">
 <h3 data-number="9.1.2" class="anchored" data-anchor-id="spin-orbitals-and-slater-determinants"><span class="header-section-number">9.1.2</span> Spin-orbitals and Slater determinants</h3>
-<p>A very important step in simplifying <span class="math inline">\(\Psi(\mathbf{x})\)</span> is to build it from one-electron functions. Since we need to take the spin coordinate into account as well, we define a new function, called <strong>spin-orbital</strong>, by multiplying a spatial orbital by one of the two spin functions, <span class="math inline">\(\alpha\)</span> (spin up, <span class="math inline">\(m_s=+\frac{1}{2}\)</span>) or <span class="math inline">\(\beta\)</span> (spin down, <span class="math inline">\(m_s=-\frac{1}{2}\)</span>), that we introduced in <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>:</p>
+<p>A very important step in simplifying <span class="math inline">\(\Psi(\mathbf{x})\)</span> is to build it from one-electron functions. Since we need to take the spin coordinate into account as well, we define a new function, called <strong>spin-orbital</strong>, by multiplying a spatial orbital by one of the two spin functions, <span class="math inline">\(\alpha\)</span> (spin up, <span class="math inline">\(m_s=+\frac{1}{2}\)</span>) or <span class="math inline">\(\beta\)</span> (spin down, <span class="math inline">\(m_s=-\frac{1}{2}\)</span>), that we introduced in <a href="07_Spin.html" class="quarto-xref"><span>Chapter 7</span></a>:</p>
 <p><span id="eq-atom3"><span class="math display">\[
 \begin{aligned}
 \chi(\mathbf{x}) &amp;= \psi(\mathbf{r}) \alpha(\mathbf{s}), \\
 \chi(\mathbf{x}) &amp;= \psi(\mathbf{r}) \beta(\mathbf{s}).
 \end{aligned}
 \tag{9.4}\]</span></span></p>
-<p>For a given spatial orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> we can therefore form two spin-orbitals, one with spin up and one with spin down (the spin coordinate <span class="math inline">\(\mathbf{s}\)</span> has only two possible values, as we discussed in <a href="07_Spin.html" class="quarto-xref"><span>chapter 7</span></a>). For the spatial orbitals we can use the same one-electron functions that solve the TISEq for the hydrogen atom, <span class="math inline">\(\psi_{n\ell m_{\ell}}(\mathbf{r})\)</span> (<a href="05_Hydrogen.html#eq-HA6" class="quarto-xref">eq.&nbsp;<span>5.5</span></a> in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>). Each spin-orbital then depends on four quantum numbers: the three of the spatial part, <span class="math inline">\(n,\ell,m_{\ell}\)</span>, plus the spin quantum number <span class="math inline">\(m_s\)</span>. We need to keep in mind, however, that the spin-orbitals <span class="math inline">\(\chi_{n\ell m_{\ell} m_{s}}\)</span> <em>are not</em> solutions of the many-electron TISEq, so any wave function that we build from them is an approximation, not the exact wave function of the system.</p>
+<p>For a given spatial orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> we can therefore form two spin-orbitals, one with spin up and one with spin down (the spin coordinate <span class="math inline">\(\mathbf{s}\)</span> has only two possible values, as we discussed in <a href="07_Spin.html" class="quarto-xref"><span>Chapter 7</span></a>). For the spatial orbitals we can use the same one-electron functions that solve the TISEq for the hydrogen atom, <span class="math inline">\(\psi_{n\ell m_{\ell}}(\mathbf{r})\)</span> (<a href="05_Hydrogen.html#eq-HA6" class="quarto-xref">Eq.&nbsp;<span>5.5</span></a> in <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>). Each spin-orbital then depends on four quantum numbers: the three of the spatial part, <span class="math inline">\(n,\ell,m_{\ell}\)</span>, plus the spin quantum number <span class="math inline">\(m_s\)</span>. We need to keep in mind, however, that the spin-orbitals <span class="math inline">\(\chi_{n\ell m_{\ell} m_{s}}\)</span> <em>are not</em> solutions of the many-electron TISEq, so any wave function that we build from them is an approximation, not the exact wave function of the system.</p>
 <p>Once we have spin-orbitals, we can use them as the building blocks of the many-electron wave function, making sure that the result is antisymmetric. We start from the simplest case: two electrons, with coordinates <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>, and two spin-orbitals, <span class="math inline">\(\chi_1\)</span> and <span class="math inline">\(\chi_2\)</span>. The most general wave function that we can build from products of these two spin-orbitals is:</p>
 <p><span id="eq-atom4"><span class="math display">\[
 \begin{aligned}
@@ -620,7 +620,7 @@ window.Quarto = {
 \end{aligned}
 \tag{9.7}\]</span></span></p>
 <p>where <span class="math inline">\(\alpha(1)\)</span> is short for <span class="math inline">\(\alpha(\mathbf{s}_1)\)</span>, and so on. This equation shows that we need just one spatial orbital, <span class="math inline">\(\psi_{100}\)</span>, to describe the system, while the antisymmetry is taken care of by the combination of spin functions, <span class="math inline">\(\frac{1}{\sqrt{2}} \left[ \alpha(1)\beta(2) - \beta(1)\alpha(2) \right]\)</span>. Notice that we commit a small inaccuracy when we say that “two electrons occupy one spatial orbital, one electron has spin up, and the other electron has spin down,” as is typically done in general chemistry textbooks with the configuration <span class="math inline">\([\uparrow\downarrow]\)</span>. The real spin state is more subtle: neither electron individually is “the up one”; instead, the ground state of helium is the combination <span class="math inline">\(\frac{1}{\sqrt{2}}\left[\uparrow\downarrow-\downarrow\uparrow\right]\)</span>.</p>
-<p>To go from two electrons to <span class="math inline">\(N\)</span>, we can first observe that <a href="#eq-atom5" class="quarto-xref">eq.&nbsp;<span>9.6</span></a> is exactly the determinant of a <span class="math inline">\(2\times2\)</span> matrix built from the spin-orbitals:</p>
+<p>To go from two electrons to <span class="math inline">\(N\)</span>, we can first observe that <a href="#eq-atom5" class="quarto-xref">Eq.&nbsp;<span>9.6</span></a> is exactly the determinant of a <span class="math inline">\(2\times2\)</span> matrix built from the spin-orbitals:</p>
 <p><span id="eq-atom7"><span class="math display">\[
 \Psi(\mathbf{x}_1, \mathbf{x}_2)= \frac{1}{\sqrt{2}}{\left|\begin{matrix} \chi_1(\mathbf{x}_1)&amp;\chi_2(\mathbf{x}_1)\\\chi_1(\mathbf{x}_2)&amp;\chi_2(\mathbf{x}_2)
 \end{matrix}\right|},
@@ -632,14 +632,14 @@ window.Quarto = {
 <p>where the notation <span class="math inline">\(|\cdots|\)</span> on the right is a compact shorthand for the whole determinant (including its normalization factor), in which we only list the spin-orbitals that appear on its diagonal. When a spin-orbital is used in the Slater determinant to describe an electron, we say that it is <em>occupied</em>, and orbitals that are not used are called <em>unoccupied</em> (or <em>virtual</em>). This is convenient language, and we will use it throughout the textbook, but it should not be taken literally: orbitals are not boxes that contain electrons, but mathematical functions that we use to describe them.</p>
 <p>Two properties of determinants that you may remember from linear algebra have important physical consequences here:</p>
 <ol type="1">
-<li><strong>Swapping two rows changes the sign of a determinant.</strong> Swapping two rows means swapping the coordinates of two electrons, so a Slater determinant is always antisymmetric, as required by <a href="#eq-atom2" class="quarto-xref">eq.&nbsp;<span>9.3</span></a>.</li>
+<li><strong>Swapping two rows changes the sign of a determinant.</strong> Swapping two rows means swapping the coordinates of two electrons, so a Slater determinant is always antisymmetric, as required by <a href="#eq-atom2" class="quarto-xref">Eq.&nbsp;<span>9.3</span></a>.</li>
 <li><strong>A determinant with two identical columns is zero.</strong> If we try to describe two electrons with the same spin-orbital (same <span class="math inline">\(n,\ell,m_\ell\)</span>, <em>and</em> same <span class="math inline">\(m_s\)</span>), two columns become identical and the wave function vanishes everywhere. In other words, such a state does not exist. This is the familiar form of the Pauli exclusion principle from general chemistry, “no two electrons in an atom can have the same four quantum numbers,” which here appears as a direct consequence of the antisymmetry of the wave function.</li>
 </ol>
 </section>
 </section>
 <section id="approximated-hamiltonians" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="approximated-hamiltonians"><span class="header-section-number">9.2</span> Approximated Hamiltonians</h2>
-<p>To solve the TISEq for a many-electron atom we also need to deal with the Hamiltonian, since analytic solutions of the full Hamiltonian in <a href="#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a> cannot be found. The most important tool that chemists use for this purpose is called the <em>variational method</em>.</p>
+<p>To solve the TISEq for a many-electron atom we also need to deal with the Hamiltonian, since analytic solutions of the full Hamiltonian in <a href="#eq-atom1" class="quarto-xref">Eq.&nbsp;<span>9.1</span></a> cannot be found. The most important tool that chemists use for this purpose is called the <em>variational method</em>.</p>
 <section id="variational-method" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="variational-method"><span class="header-section-number">9.2.1</span> Variational method</h3>
 <p>The idea behind the variational method is simple. We guess a “trial” wave function that contains some adjustable numbers, called <em>variational parameters</em>. We then calculate the energy of the trial function and change the parameters until this energy is as low as possible. The trial function with the lowest energy, and that energy itself, are our best approximations to the true ground-state wave function and energy.</p>
@@ -668,7 +668,7 @@ E[\Phi] \geq \mathcal{E}_0.
 <p><span id="eq-var1"><span class="math display">\[
 \Phi = \sum_i c_i \Psi_i.
 \tag{9.12}\]</span></span></p>
-<p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. Inserting it in <a href="#eq-var2" class="quarto-xref">eq.&nbsp;<span>9.10</span></a>, we obtain:</p>
+<p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. Inserting it in <a href="#eq-var2" class="quarto-xref">Eq.&nbsp;<span>9.10</span></a>, we obtain:</p>
 <p><span id="eq-var3"><span class="math display">\[
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
 \sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
@@ -678,7 +678,7 @@ E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
 \sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
 \tag{9.14}\]</span></span></p>
-<p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, <a href="06_Operators.html" class="quarto-xref"><span>chapter 6</span></a>), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
+<p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, <a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
 <p><span id="eq-var5"><span class="math display">\[
 E[\Phi] = \frac{\sum_{i} |c_i|^2 \mathcal{E}_i}{\sum_{i} |c_i|^2}.
 \tag{9.15}\]</span></span></p>
@@ -694,15 +694,15 @@ E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}
 </section>
 <section id="approximated-solution-for-the-helium-atom" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="approximated-solution-for-the-helium-atom"><span class="header-section-number">9.2.2</span> Approximated solution for the helium atom</h3>
-<p>We now have all the ingredients for the simplest approximate solution of the TISEq for a many-electron atom. We start by writing the wave function as the Slater determinant of <a href="#eq-atom8" class="quarto-xref">eq.&nbsp;<span>9.9</span></a>, in which each spatial orbital is used to describe two electrons of opposite spin:</p>
+<p>We now have all the ingredients for the simplest approximate solution of the TISEq for a many-electron atom. We start by writing the wave function as the Slater determinant of <a href="#eq-atom8" class="quarto-xref">Eq.&nbsp;<span>9.9</span></a>, in which each spatial orbital is used to describe two electrons of opposite spin:</p>
 <p><span id="eq-hf1"><span class="math display">\[
 \Psi (\mathbf{x}_{1},\mathbf{x}_{2},\ldots ,\mathbf{x}_{N})= |\chi_{1}\,\chi_{2}\cdots \chi_{N}| = |\psi_{1}\alpha\;\psi_{1}\beta\cdots \psi_{\frac{N}{2}}\alpha\;\psi_{\frac{N}{2}}\beta|,
 \tag{9.17}\]</span></span></p>
-<p>and we insert it into the TISEq for <span class="math inline">\(N\)</span> electrons. This results in a set of <span class="math inline">\(N\)</span> one-electron equations, one for each electron. When we try to solve each of them, however, we run into the problem that we identified at the beginning of this chapter: because of the electron-electron repulsion term, the potential felt by each electron does not have spherical symmetry, and the one-electron TISEq cannot be solved in spherical polar coordinates as we did for the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>. The crudest way around the problem is to neglect the electron-electron repulsion altogether (i.e., to pretend that the electrons do not interact with each other). For a two-electron atom the Hamiltonian then becomes a sum of two one-electron Hamiltonians:</p>
+<p>and we insert it into the TISEq for <span class="math inline">\(N\)</span> electrons. This results in a set of <span class="math inline">\(N\)</span> one-electron equations, one for each electron. When we try to solve each of them, however, we run into the problem that we identified at the beginning of this chapter: because of the electron-electron repulsion term, the potential felt by each electron does not have spherical symmetry, and the one-electron TISEq cannot be solved in spherical polar coordinates as we did for the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>. The crudest way around the problem is to neglect the electron-electron repulsion altogether (i.e., to pretend that the electrons do not interact with each other). For a two-electron atom the Hamiltonian then becomes a sum of two one-electron Hamiltonians:</p>
 <p><span id="eq-hf2"><span class="math display">\[
 \hat{H} =\hat{H}_1+\hat{H}_2,
 \tag{9.18}\]</span></span></p>
-<p>each of them identical to the Hamiltonian of a hydrogen-like atom with nuclear charge <span class="math inline">\(Z\)</span>. This Hamiltonian does not depend on spin, so we can drop the spin part of <a href="#eq-atom6" class="quarto-xref">eq.&nbsp;<span>9.7</span></a> and write the wave function for the ground state of helium simply as:</p>
+<p>each of them identical to the Hamiltonian of a hydrogen-like atom with nuclear charge <span class="math inline">\(Z\)</span>. This Hamiltonian does not depend on spin, so we can drop the spin part of <a href="#eq-atom6" class="quarto-xref">Eq.&nbsp;<span>9.7</span></a> and write the wave function for the ground state of helium simply as:</p>
 <p><span id="eq-hf3"><span class="math display">\[
 \Psi(\mathbf{r}_1, \mathbf{r}_2) = \psi_{100}(\mathbf{r}_1)\psi_{100}(\mathbf{r}_2).
 \tag{9.19}\]</span></span></p>
@@ -713,26 +713,26 @@ E[\Phi] - \mathcal{E}_0 = \frac{\sum_i |c_i|^2 ( \mathcal{E}_i - \mathcal{E}_0)}
 \hat{H}_2 \psi_{100}(\mathbf{r}_2) &amp;= E_2\psi_{100}(\mathbf{r}_2),
 \end{aligned}
 \tag{9.20}\]</span></span></p>
-<p>which we already know how to solve (<a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>), and whose solutions combine to give:</p>
+<p>which we already know how to solve (<a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>), and whose solutions combine to give:</p>
 <p><span id="eq-hf5"><span class="math display">\[
 E = E_1+E_2.
 \tag{9.21}\]</span></span></p>
-<p>In this approximation, the energy of the helium atom is twice the energy of a <span class="math inline">\(1s\)</span> electron in a hydrogen-like atom with <span class="math inline">\(Z=2\)</span>. The energies in <a href="05_Hydrogen.html#eq-HA7" class="quarto-xref">eq.&nbsp;<span>5.7</span></a> scale as <span class="math inline">\(Z^2\)</span> when the nuclear charge is <span class="math inline">\(Z\)</span> instead of <span class="math inline">\(1\)</span>, so the <span class="math inline">\(1s\)</span> energy is <span class="math inline">\(-\frac{Z^2}{2}E_h\)</span> and the total is <span class="math inline">\(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\)</span>, or about <span class="math inline">\(-10{,}500 \text{ kJ/mol}\)</span>,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> compared with the exact value of <span class="math inline">\(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\)</span>. The error is enormous, about <span class="math inline">\(40\%\)</span>, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the <em>average</em> repulsion between the two electrons, which for two <span class="math inline">\(1s\)</span> electrons is <span class="math inline">\(\frac{5}{8}Z\,E_h\)</span> (<span class="math inline">\(1.25\,E_h=3{,}282\text{ kJ/mol}\)</span> for helium). The result, <span class="math inline">\(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\)</span>, is already much better, with an error of about <span class="math inline">\(5\%\)</span>.</p>
+<p>In this approximation, the energy of the helium atom is twice the energy of a <span class="math inline">\(1s\)</span> electron in a hydrogen-like atom with <span class="math inline">\(Z=2\)</span>. The energies in <a href="05_Hydrogen.html#eq-HA7" class="quarto-xref">Eq.&nbsp;<span>5.7</span></a> scale as <span class="math inline">\(Z^2\)</span> when the nuclear charge is <span class="math inline">\(Z\)</span> instead of <span class="math inline">\(1\)</span>, so the <span class="math inline">\(1s\)</span> energy is <span class="math inline">\(-\frac{Z^2}{2}E_h\)</span> and the total is <span class="math inline">\(E=2\times\left(-\frac{Z^2}{2}\right)E_h=-4\,E_h\)</span>, or about <span class="math inline">\(-10{,}500 \text{ kJ/mol}\)</span>,<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> compared with the exact value of <span class="math inline">\(-2.9037\,E_h=-7{,}624 \text{ kJ/mol}\)</span>. The error is enormous, about <span class="math inline">\(40\%\)</span>, because we have neglected a large positive contribution to the energy. We can partially fix it by keeping the same orbitals and adding back the <em>average</em> repulsion between the two electrons, which for two <span class="math inline">\(1s\)</span> electrons is <span class="math inline">\(\frac{5}{8}Z\,E_h\)</span> (<span class="math inline">\(1.25\,E_h=3{,}282\text{ kJ/mol}\)</span> for helium). The result, <span class="math inline">\(-2.75\,E_h = -7{,}220 \text{ kJ/mol}\)</span>, is already much better, with an error of about <span class="math inline">\(5\%\)</span>.</p>
 <section id="optimizing-the-effective-nuclear-charge" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="optimizing-the-effective-nuclear-charge">Optimizing the effective nuclear charge</h4>
 <p>We can do better using the variational method. The two electrons do not feel the full charge of the nucleus, since each of them is partially <em>shielded</em> from it by the other. We can account for this by using, for both electrons, a <span class="math inline">\(1s\)</span> orbital with an adjustable charge <span class="math inline">\(\zeta\)</span> in place of <span class="math inline">\(Z\)</span>:</p>
 <p><span id="eq-hevar1"><span class="math display">\[
 \psi_{1s}(r) = \sqrt{\frac{\zeta^3}{\pi a_0^3}}\, e^{-\zeta r/a_0},
 \tag{9.22}\]</span></span></p>
-<p>and treat <span class="math inline">\(\zeta\)</span> as a variational parameter. Calculating the expectation value of the full Hamiltonian, <a href="#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a>, with <span class="math inline">\(\Psi=\psi_{1s}(\mathbf{r}_1)\psi_{1s}(\mathbf{r}_2)\)</span>, gives three contributions (in <span class="math inline">\(E_h\)</span>): the kinetic energy of the two electrons, <span class="math inline">\(\zeta^2\)</span>; their attraction to the nucleus of charge <span class="math inline">\(Z\)</span>, <span class="math inline">\(-2Z\zeta\)</span>; and their mutual repulsion, <span class="math inline">\(+\frac{5}{8}\zeta\)</span>. Summing them:</p>
+<p>and treat <span class="math inline">\(\zeta\)</span> as a variational parameter. Calculating the expectation value of the full Hamiltonian, <a href="#eq-atom1" class="quarto-xref">Eq.&nbsp;<span>9.1</span></a>, with <span class="math inline">\(\Psi=\psi_{1s}(\mathbf{r}_1)\psi_{1s}(\mathbf{r}_2)\)</span>, gives three contributions (in <span class="math inline">\(E_h\)</span>): the kinetic energy of the two electrons, <span class="math inline">\(\zeta^2\)</span>; their attraction to the nucleus of charge <span class="math inline">\(Z\)</span>, <span class="math inline">\(-2Z\zeta\)</span>; and their mutual repulsion, <span class="math inline">\(+\frac{5}{8}\zeta\)</span>. Summing them:</p>
 <p><span id="eq-hevar2"><span class="math display">\[
 E(\zeta) = \zeta^2 - 2Z\zeta + \frac{5}{8}\zeta.
 \tag{9.23}\]</span></span></p>
-<p>This energy is plotted in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a>. To find its minimum, we set the derivative to zero:</p>
+<p>This energy is plotted in <a href="#fig-fig1c9" class="quarto-xref">Fig.&nbsp;<span>9.1</span></a>. To find its minimum, we set the derivative to zero:</p>
 <p><span id="eq-hevar3"><span class="math display">\[
 \frac{dE}{d\zeta} = 2\zeta - 2Z + \frac{5}{8} = 0 \quad\longrightarrow\quad \zeta_{\text{min}} = Z - \frac{5}{16} = 1.6875,
 \tag{9.24}\]</span></span></p>
-<p>and replacing this value in <a href="#eq-hevar2" class="quarto-xref">eq.&nbsp;<span>9.23</span></a> gives <span class="math inline">\(E(\zeta_{\text{min}}) = -\left(Z-\frac{5}{16}\right)^2 = -2.8477\,E_h = -7{,}477 \text{ kJ/mol}\)</span>.</p>
+<p>and replacing this value in <a href="#eq-hevar2" class="quarto-xref">Eq.&nbsp;<span>9.23</span></a> gives <span class="math inline">\(E(\zeta_{\text{min}}) = -\left(Z-\frac{5}{16}\right)^2 = -2.8477\,E_h = -7{,}477 \text{ kJ/mol}\)</span>.</p>
 <div id="fig-fig1c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Plot of the variational energy of helium versus the orbital exponent zeta: a parabola with its minimum at zeta equal 1.6875, above the dotted line of the exact energy, with the unshielded value at zeta equal 2 marked higher on the curve.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -745,12 +745,12 @@ Figure&nbsp;9.1: Variational energy of the helium atom as a function of the orbi
 </div>
 <p>Let’s see what these results tell us:</p>
 <ol type="1">
-<li><p><strong>The variational theorem at work</strong>: every point of the curve in <a href="#fig-fig1c9" class="quarto-xref">figure&nbsp;<span>9.1</span></a> lies above the exact energy, as guaranteed by <a href="#eq-varprinciple" class="quarto-xref">eq.&nbsp;<span>9.11</span></a>. The minimum gets within <span class="math inline">\(147 \text{ kJ/mol}\)</span> (about <span class="math inline">\(2\%\)</span>) of the exact value, using a single adjustable number.</p></li>
+<li><p><strong>The variational theorem at work</strong>: every point of the curve in <a href="#fig-fig1c9" class="quarto-xref">Fig.&nbsp;<span>9.1</span></a> lies above the exact energy, as guaranteed by <a href="#eq-varprinciple" class="quarto-xref">Eq.&nbsp;<span>9.11</span></a>. The minimum gets within <span class="math inline">\(147 \text{ kJ/mol}\)</span> (about <span class="math inline">\(2\%\)</span>) of the exact value, using a single adjustable number.</p></li>
 <li><p><strong>Shielding</strong>: the optimal value <span class="math inline">\(\zeta_{\text{min}}=1.6875\)</span> is smaller than the real nuclear charge, <span class="math inline">\(Z=2\)</span>. We can interpret it as the <strong>effective nuclear charge</strong>, <span class="math inline">\(Z_\text{eff}\)</span>, felt by each electron. Each electron spends part of its time between the nucleus and the other electron, partially canceling the attraction that the other electron feels. The amount of shielding, <span class="math inline">\(\frac{5}{16}\approx0.31\)</span> of a proton charge, is much less than a full electron charge because the two electrons occupy the same region of space: a <span class="math inline">\(1s\)</span> electron is only rarely found “inside” the other one.</p></li>
 <li><p><strong>Orbital size</strong>: since <span class="math inline">\(\langle r\rangle \propto 1/\zeta\)</span>, a smaller effective charge means a larger orbital. The shielded <span class="math inline">\(1s\)</span> orbitals of helium are about <span class="math inline">\(2/1.6875\approx1.19\)</span> times larger than the unshielded ones.</p></li>
-<li><p><strong>What is still missing</strong>: even the best possible orbitals cannot reach the exact energy if we keep the product form of <a href="#eq-hf3" class="quarto-xref">eq.&nbsp;<span>9.19</span></a>. We will come back to this point at the end of this chapter, when we discuss electron correlation.</p></li>
+<li><p><strong>What is still missing</strong>: even the best possible orbitals cannot reach the exact energy if we keep the product form of <a href="#eq-hf3" class="quarto-xref">Eq.&nbsp;<span>9.19</span></a>. We will come back to this point at the end of this chapter, when we discuss electron correlation.</p></li>
 </ol>
-<p>The results obtained with the different approximations are summarized in <a href="#fig-fig2c9" class="quarto-xref">figure&nbsp;<span>9.2</span></a>, which also reports the Hartree–Fock limit that we will discuss in the next chapter.</p>
+<p>The results obtained with the different approximations are summarized in <a href="#fig-fig2c9" class="quarto-xref">Fig.&nbsp;<span>9.2</span></a>, which also reports the Hartree–Fock limit that we will discuss in the next chapter.</p>
 <div id="fig-fig2c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy levels of helium from different approximations: no electron repulsion near minus 10,500 kilojoules per mole, average repulsion added near minus 7,220, variational near minus 7,477, Hartree-Fock limit near minus 7,513, and exact near minus 7,624.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -772,7 +772,7 @@ Z_{\text{eff}} = Z - \sigma,
 \tag{9.25}\]</span></span></p>
 <p>where <span class="math inline">\(\sigma\)</span> is called the <strong>shielding constant</strong>, and it measures how much the other electrons screen the nucleus. In the simplest model of a many-electron atom, called the <strong>central-field approximation</strong>, each electron moves in the field of the nucleus plus the <em>spherically averaged</em> field of all other electrons. Since this effective potential depends only on <span class="math inline">\(r\)</span>, the angular part of the TISEq is the same as for hydrogen, and the orbitals keep the familiar shapes of the spherical harmonics and the labels <span class="math inline">\(n\)</span>, <span class="math inline">\(\ell\)</span>, <span class="math inline">\(m_\ell\)</span>. The radial part, however, changes, and with it the energies. What the central-field approximation does <em>not</em> include is the instantaneous repulsion between electrons: each electron feels only the average position of the others, not where they actually are at any given moment.</p>
 <p>Inner-shell electrons are very effective at shielding the outer ones, while electrons of the same shell shield each other only partially (as we saw for helium). As a result, outer electrons feel a much smaller effective charge than inner electrons, they are held less tightly, and their orbitals are more diffuse. This explains why the valence electrons of an atom are the ones involved in chemistry, while the core electrons are not.</p>
-<p>The most important consequence of shielding, however, is that it breaks the degeneracy of orbitals with the same <span class="math inline">\(n\)</span> and different <span class="math inline">\(\ell\)</span>. Recall from <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a> that in the hydrogen atom the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals have exactly the same energy. In a many-electron atom this is no longer the case. To understand why, consider the lithium atom, which has two core electrons, described by the <span class="math inline">\(1s\)</span> orbital, and one valence electron. The radial probability distributions of the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals, compared with that of the <span class="math inline">\(1s^2\)</span> core, are plotted in <a href="#fig-fig3c9" class="quarto-xref">figure&nbsp;<span>9.3</span></a>.</p>
+<p>The most important consequence of shielding, however, is that it breaks the degeneracy of orbitals with the same <span class="math inline">\(n\)</span> and different <span class="math inline">\(\ell\)</span>. Recall from <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a> that in the hydrogen atom the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals have exactly the same energy. In a many-electron atom this is no longer the case. To understand why, consider the lithium atom, which has two core electrons, described by the <span class="math inline">\(1s\)</span> orbital, and one valence electron. The radial probability distributions of the <span class="math inline">\(2s\)</span> and <span class="math inline">\(2p\)</span> orbitals, compared with that of the <span class="math inline">\(1s^2\)</span> core, are plotted in <a href="#fig-fig3c9" class="quarto-xref">Fig.&nbsp;<span>9.3</span></a>.</p>
 <div id="fig-fig3c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Radial probability of the lithium 1s core, a tall narrow peak near the nucleus, compared with the 2s and 2p orbitals farther out. The 2s orbital has a small inner lobe that overlaps the core, while the 2p orbital does not.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -783,8 +783,8 @@ Figure&nbsp;9.3: Radial probability distributions of the <span class="math inlin
 </figcaption>
 </figure>
 </div>
-<p>The <span class="math inline">\(2s\)</span> orbital has a small inner lobe, the one that we already noticed for hydrogen in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>, which places part of its probability <em>inside</em> the <span class="math inline">\(1s^2\)</span> core. When it is there, a <span class="math inline">\(2s\)</span> electron feels almost the full nuclear charge. We say that the <span class="math inline">\(2s\)</span> orbital <strong>penetrates</strong> the core. The <span class="math inline">\(2p\)</span> orbital, instead, starts at zero at the nucleus and has no inner lobe, so it is more effectively shielded by the core electrons. As a result, a <span class="math inline">\(2s\)</span> electron feels a larger <span class="math inline">\(Z_\text{eff}\)</span> than a <span class="math inline">\(2p\)</span> electron, and it is lower in energy. This is the <span class="math inline">\(2s\)</span>–<span class="math inline">\(2p\)</span> splitting that general chemistry textbooks show in their orbital energy diagrams. In general, for the same <span class="math inline">\(n\)</span>, penetration decreases as <span class="math inline">\(\ell\)</span> increases (because of the <span class="math inline">\(r^\ell\)</span> behavior of the radial functions close to the nucleus), so the energies of the orbitals follow the order <span class="math inline">\(ns &lt; np &lt; nd &lt; nf\)</span>.</p>
-<p>The effective nuclear charges felt by the <span class="math inline">\(1s\)</span>, <span class="math inline">\(2s\)</span>, and <span class="math inline">\(2p\)</span> electrons of the second-row atoms can be obtained from variational calculations similar to the one we did for helium. Some of the results are reported in <a href="#tbl-tab1c9" class="quarto-xref">table&nbsp;<span>9.1</span></a>.</p>
+<p>The <span class="math inline">\(2s\)</span> orbital has a small inner lobe, the one that we already noticed for hydrogen in <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>, which places part of its probability <em>inside</em> the <span class="math inline">\(1s^2\)</span> core. When it is there, a <span class="math inline">\(2s\)</span> electron feels almost the full nuclear charge. We say that the <span class="math inline">\(2s\)</span> orbital <strong>penetrates</strong> the core. The <span class="math inline">\(2p\)</span> orbital, instead, starts at zero at the nucleus and has no inner lobe, so it is more effectively shielded by the core electrons. As a result, a <span class="math inline">\(2s\)</span> electron feels a larger <span class="math inline">\(Z_\text{eff}\)</span> than a <span class="math inline">\(2p\)</span> electron, and it is lower in energy. This is the <span class="math inline">\(2s\)</span>–<span class="math inline">\(2p\)</span> splitting that general chemistry textbooks show in their orbital energy diagrams. In general, for the same <span class="math inline">\(n\)</span>, penetration decreases as <span class="math inline">\(\ell\)</span> increases (because of the <span class="math inline">\(r^\ell\)</span> behavior of the radial functions close to the nucleus), so the energies of the orbitals follow the order <span class="math inline">\(ns &lt; np &lt; nd &lt; nf\)</span>.</p>
+<p>The effective nuclear charges felt by the <span class="math inline">\(1s\)</span>, <span class="math inline">\(2s\)</span>, and <span class="math inline">\(2p\)</span> electrons of the second-row atoms can be obtained from variational calculations similar to the one we did for helium. Some of the results are reported in <a href="#tbl-tab1c9" class="quarto-xref">Table&nbsp;<span>9.1</span></a>.</p>
 <div id="tbl-tab1c9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab1c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -900,8 +900,8 @@ M_L = \sum_i m_{\ell,i}, \qquad M_S = \sum_i m_{s,i}.
 <section id="the-terms-of-carbon" class="level3" data-number="9.4.3">
 <h3 data-number="9.4.3" class="anchored" data-anchor-id="the-terms-of-carbon"><span class="header-section-number">9.4.3</span> The terms of carbon</h3>
 <p>When a subshell contains more than one electron, a single configuration produces several terms. To find them, we proceed in three steps: list all the possible ways of describing the electrons, sort them by <span class="math inline">\(M_L\)</span> and <span class="math inline">\(M_S\)</span>, and then group them into terms.</p>
-<p><strong>Step 1: list the microstates.</strong> Each <span class="math inline">\(2p\)</span> electron can be described by one of six spin-orbitals: three values of <span class="math inline">\(m_\ell\)</span> (<span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(-1\)</span>), each with spin up (<span class="math inline">\(\uparrow\)</span>) or down (<span class="math inline">\(\downarrow\)</span>). For two electrons, we need two <em>different</em> spin-orbitals (Pauli principle), and since electrons are indistinguishable, the order does not matter. There are <span class="math inline">\(\frac{6\times5}{2}=15\)</span> ways of choosing them, called <strong>microstates</strong>. For example, <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span> is the microstate in which one electron has <span class="math inline">\(m_\ell=+1\)</span> and spin up, and the other has <span class="math inline">\(m_\ell=0\)</span> and spin up. For each microstate, we can calculate <span class="math inline">\(M_L\)</span> and <span class="math inline">\(M_S\)</span> by adding the values of the two electrons (<a href="#eq-term1" class="quarto-xref">eq.&nbsp;<span>9.26</span></a>). For <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span>, <span class="math inline">\(M_L=+1+0=+1\)</span> and <span class="math inline">\(M_S=+\frac{1}{2}+\frac{1}{2}=+1\)</span>.</p>
-<p><strong>Step 2: sort them in a grid.</strong> We now arrange the 15 microstates in a grid, with one row for each value of <span class="math inline">\(M_L\)</span> and one column for each value of <span class="math inline">\(M_S\)</span>, as shown in <a href="#fig-fig5c9" class="quarto-xref">figure&nbsp;<span>9.4</span></a>. Notice that some cells contain more than one microstate, and that some are empty. For example, <span class="math inline">\(M_L=+2\)</span> requires both electrons to have <span class="math inline">\(m_\ell=+1\)</span>, and the Pauli principle then forces them to have opposite spins, so <span class="math inline">\(M_L=+2\)</span> is only possible with <span class="math inline">\(M_S=0\)</span>.</p>
+<p><strong>Step 1: list the microstates.</strong> Each <span class="math inline">\(2p\)</span> electron can be described by one of six spin-orbitals: three values of <span class="math inline">\(m_\ell\)</span> (<span class="math inline">\(+1\)</span>, <span class="math inline">\(0\)</span>, <span class="math inline">\(-1\)</span>), each with spin up (<span class="math inline">\(\uparrow\)</span>) or down (<span class="math inline">\(\downarrow\)</span>). For two electrons, we need two <em>different</em> spin-orbitals (Pauli principle), and since electrons are indistinguishable, the order does not matter. There are <span class="math inline">\(\frac{6\times5}{2}=15\)</span> ways of choosing them, called <strong>microstates</strong>. For example, <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span> is the microstate in which one electron has <span class="math inline">\(m_\ell=+1\)</span> and spin up, and the other has <span class="math inline">\(m_\ell=0\)</span> and spin up. For each microstate, we can calculate <span class="math inline">\(M_L\)</span> and <span class="math inline">\(M_S\)</span> by adding the values of the two electrons (<a href="#eq-term1" class="quarto-xref">Eq.&nbsp;<span>9.26</span></a>). For <span class="math inline">\((+1\uparrow, 0\uparrow)\)</span>, <span class="math inline">\(M_L=+1+0=+1\)</span> and <span class="math inline">\(M_S=+\frac{1}{2}+\frac{1}{2}=+1\)</span>.</p>
+<p><strong>Step 2: sort them in a grid.</strong> We now arrange the 15 microstates in a grid, with one row for each value of <span class="math inline">\(M_L\)</span> and one column for each value of <span class="math inline">\(M_S\)</span>, as shown in <a href="#fig-fig5c9" class="quarto-xref">Fig.&nbsp;<span>9.4</span></a>. Notice that some cells contain more than one microstate, and that some are empty. For example, <span class="math inline">\(M_L=+2\)</span> requires both electrons to have <span class="math inline">\(m_\ell=+1\)</span>, and the Pauli principle then forces them to have opposite spins, so <span class="math inline">\(M_L=+2\)</span> is only possible with <span class="math inline">\(M_S=0\)</span>.</p>
 <div id="fig-fig5c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A grid with five rows, M L from plus 2 to minus 2, and three columns, M S equal plus 1, 0, and minus 1. The cells list the microstates as pairs such as plus 1 up, 0 up. The top and bottom rows contain a single microstate in the M S equal 0 column; the rows M L equal plus 1 and minus 1 contain one, two, and one microstates; the row M L equal 0 contains one, three, and one microstates.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig5c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -912,11 +912,11 @@ Figure&nbsp;9.4: The 15 microstates of the <span class="math inline">\(2p^2\)</s
 </figcaption>
 </figure>
 </div>
-<p><strong>Step 3: group them into terms.</strong> The key idea is that each term with quantum numbers <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span> contains exactly <span class="math inline">\((2L+1)(2S+1)\)</span> states: one for each combination of <span class="math inline">\(M_L=-L,\ldots,+L\)</span> and <span class="math inline">\(M_S=-S,\ldots,+S\)</span>. In the grid, a term therefore looks like a <em>rectangle</em>: <span class="math inline">\(2L+1\)</span> rows tall and <span class="math inline">\(2S+1\)</span> columns wide, with exactly one microstate in each cell. The terms can then be found by “peeling off” rectangles from the grid, starting from the largest values of <span class="math inline">\(M_L\)</span>, as shown in <a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>:</p>
+<p><strong>Step 3: group them into terms.</strong> The key idea is that each term with quantum numbers <span class="math inline">\(L\)</span> and <span class="math inline">\(S\)</span> contains exactly <span class="math inline">\((2L+1)(2S+1)\)</span> states: one for each combination of <span class="math inline">\(M_L=-L,\ldots,+L\)</span> and <span class="math inline">\(M_S=-S,\ldots,+S\)</span>. In the grid, a term therefore looks like a <em>rectangle</em>: <span class="math inline">\(2L+1\)</span> rows tall and <span class="math inline">\(2S+1\)</span> columns wide, with exactly one microstate in each cell. The terms can then be found by “peeling off” rectangles from the grid, starting from the largest values of <span class="math inline">\(M_L\)</span>, as shown in <a href="#fig-fig6c9" class="quarto-xref">Fig.&nbsp;<span>9.5</span></a>:</p>
 <ol type="1">
-<li><p><strong>The <span class="math inline">\(^1D\)</span> term.</strong> The largest value of <span class="math inline">\(M_L\)</span> in the grid is <span class="math inline">\(+2\)</span>. A microstate with <span class="math inline">\(M_L=+2\)</span> must belong to a term with <span class="math inline">\(L=2\)</span> (a <span class="math inline">\(D\)</span> term), since a term with smaller <span class="math inline">\(L\)</span> cannot reach <span class="math inline">\(M_L=+2\)</span>. This term must also contain all the other values of <span class="math inline">\(M_L\)</span> from <span class="math inline">\(+2\)</span> down to <span class="math inline">\(-2\)</span>, so it is <span class="math inline">\(5\)</span> rows tall. Since the <span class="math inline">\(M_L=+2\)</span> row has a microstate only in the <span class="math inline">\(M_S=0\)</span> column, the term has only <span class="math inline">\(M_S=0\)</span>, so <span class="math inline">\(S=0\)</span>, and it is <span class="math inline">\(1\)</span> column wide. This is a <span class="math inline">\(^1D\)</span> term, a rectangle of <span class="math inline">\(5\times1=5\)</span> microstates, one in each row of the <span class="math inline">\(M_S=0\)</span> column (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>b).</p></li>
-<li><p><strong>The <span class="math inline">\(^3P\)</span> term.</strong> After removing the five <span class="math inline">\(^1D\)</span> states, the largest remaining value of <span class="math inline">\(M_L\)</span> is <span class="math inline">\(+1\)</span>, which now appears in all three columns, <span class="math inline">\(M_S=+1,0,-1\)</span>. This must be a term with <span class="math inline">\(L=1\)</span> (a <span class="math inline">\(P\)</span> term) and <span class="math inline">\(S=1\)</span> (since <span class="math inline">\(M_S\)</span> reaches <span class="math inline">\(+1\)</span>). It is a rectangle <span class="math inline">\(3\)</span> rows tall (<span class="math inline">\(M_L=+1,0,-1\)</span>) and <span class="math inline">\(3\)</span> columns wide: a <span class="math inline">\(^3P\)</span> term with <span class="math inline">\(3\times3=9\)</span> microstates (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>c).</p></li>
-<li><p><strong>The <span class="math inline">\(^1S\)</span> term.</strong> Only one microstate is left, with <span class="math inline">\(M_L=0\)</span> and <span class="math inline">\(M_S=0\)</span>. It is a term with <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>: a <span class="math inline">\(^1S\)</span> term with a single state (<a href="#fig-fig6c9" class="quarto-xref">figure&nbsp;<span>9.5</span></a>d).</p></li>
+<li><p><strong>The <span class="math inline">\(^1D\)</span> term.</strong> The largest value of <span class="math inline">\(M_L\)</span> in the grid is <span class="math inline">\(+2\)</span>. A microstate with <span class="math inline">\(M_L=+2\)</span> must belong to a term with <span class="math inline">\(L=2\)</span> (a <span class="math inline">\(D\)</span> term), since a term with smaller <span class="math inline">\(L\)</span> cannot reach <span class="math inline">\(M_L=+2\)</span>. This term must also contain all the other values of <span class="math inline">\(M_L\)</span> from <span class="math inline">\(+2\)</span> down to <span class="math inline">\(-2\)</span>, so it is <span class="math inline">\(5\)</span> rows tall. Since the <span class="math inline">\(M_L=+2\)</span> row has a microstate only in the <span class="math inline">\(M_S=0\)</span> column, the term has only <span class="math inline">\(M_S=0\)</span>, so <span class="math inline">\(S=0\)</span>, and it is <span class="math inline">\(1\)</span> column wide. This is a <span class="math inline">\(^1D\)</span> term, a rectangle of <span class="math inline">\(5\times1=5\)</span> microstates, one in each row of the <span class="math inline">\(M_S=0\)</span> column (<a href="#fig-fig6c9" class="quarto-xref">Fig.&nbsp;<span>9.5</span></a>b).</p></li>
+<li><p><strong>The <span class="math inline">\(^3P\)</span> term.</strong> After removing the five <span class="math inline">\(^1D\)</span> states, the largest remaining value of <span class="math inline">\(M_L\)</span> is <span class="math inline">\(+1\)</span>, which now appears in all three columns, <span class="math inline">\(M_S=+1,0,-1\)</span>. This must be a term with <span class="math inline">\(L=1\)</span> (a <span class="math inline">\(P\)</span> term) and <span class="math inline">\(S=1\)</span> (since <span class="math inline">\(M_S\)</span> reaches <span class="math inline">\(+1\)</span>). It is a rectangle <span class="math inline">\(3\)</span> rows tall (<span class="math inline">\(M_L=+1,0,-1\)</span>) and <span class="math inline">\(3\)</span> columns wide: a <span class="math inline">\(^3P\)</span> term with <span class="math inline">\(3\times3=9\)</span> microstates (<a href="#fig-fig6c9" class="quarto-xref">Fig.&nbsp;<span>9.5</span></a>c).</p></li>
+<li><p><strong>The <span class="math inline">\(^1S\)</span> term.</strong> Only one microstate is left, with <span class="math inline">\(M_L=0\)</span> and <span class="math inline">\(M_S=0\)</span>. It is a term with <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>: a <span class="math inline">\(^1S\)</span> term with a single state (<a href="#fig-fig6c9" class="quarto-xref">Fig.&nbsp;<span>9.5</span></a>d).</p></li>
 </ol>
 <div id="fig-fig6c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Four copies of a grid with rows M L from plus 2 to minus 2 and columns M S plus 1, 0, minus 1, with dots for microstates. Panel a shows 15 gray dots. Panel b outlines in green the M S equal 0 column, taking one dot from each of its five rows. Panel c outlines in blue the three-by-three block of rows plus 1 to minus 1 and all columns, taking nine dots. Panel d outlines in red the single remaining dot at M L equal 0, M S equal 0.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -928,7 +928,7 @@ Figure&nbsp;9.5: Finding the terms of the <span class="math inline">\(2p^2\)</sp
 </figcaption>
 </figure>
 </div>
-<p>Notice that, in the cells with more than one microstate, we do not need to decide <em>which</em> microstate belongs to which term: only the number of states in each cell matters. (In fact, the real states of each term are combinations of the microstates in the same cell.) The <span class="math inline">\(2p^2\)</span> configuration of carbon therefore produces three terms, <span class="math inline">\(^3P\)</span>, <span class="math inline">\(^1D\)</span>, and <span class="math inline">\(^1S\)</span>, with <span class="math inline">\(9+5+1=15\)</span> states in total. Their experimental energies are shown in <a href="#fig-fig4c9" class="quarto-xref">figure&nbsp;<span>9.6</span></a>.</p>
+<p>Notice that, in the cells with more than one microstate, we do not need to decide <em>which</em> microstate belongs to which term: only the number of states in each cell matters. (In fact, the real states of each term are combinations of the microstates in the same cell.) The <span class="math inline">\(2p^2\)</span> configuration of carbon therefore produces three terms, <span class="math inline">\(^3P\)</span>, <span class="math inline">\(^1D\)</span>, and <span class="math inline">\(^1S\)</span>, with <span class="math inline">\(9+5+1=15\)</span> states in total. Their experimental energies are shown in <a href="#fig-fig4c9" class="quarto-xref">Fig.&nbsp;<span>9.6</span></a>.</p>
 <div id="fig-fig4c9" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy diagram for carbon. On the left, a single level for the 1s2 2s2 2p2 configuration. In the middle it splits into three terms: 3P at 0, 1D near 10,200, and 1S near 21,600 inverse centimeters. On the right, 1D2 and 1S0 are unchanged, while an inset shows the 3P term split into 3P0 at 0, 3P1 at 16.4, and 3P2 at 43.4 inverse centimeters.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig4c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -942,7 +942,7 @@ Figure&nbsp;9.6: Energy levels arising from the <span class="math inline">\(1s^2
 <p>Notice three things in this diagram:</p>
 <ol type="1">
 <li><p><strong>The size of the splitting</strong>: the three terms are separated by about <span class="math inline">\(10{,}000\;\text{cm}^{-1}\)</span> (more than <span class="math inline">\(100\;\text{kJ/mol}\)</span>), comparable to the energy of chemical processes. The configuration alone, which is all that the simple orbital picture provides, is not enough to describe the atom.</p></li>
-<li><p><strong>The triplet is lowest</strong>: the term with the highest multiplicity, <span class="math inline">\(^3P\)</span>, has the lowest energy. In the triplet, the two electrons have parallel spins, and the antisymmetry of the wave function keeps electrons with the same spin away from each other (two electrons with the same spin can never be found at the same point), which reduces their repulsion. We will see this effect again in <a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a>, where it appears as the exchange term of the Fock operator.</p></li>
+<li><p><strong>The triplet is lowest</strong>: the term with the highest multiplicity, <span class="math inline">\(^3P\)</span>, has the lowest energy. In the triplet, the two electrons have parallel spins, and the antisymmetry of the wave function keeps electrons with the same spin away from each other (two electrons with the same spin can never be found at the same point), which reduces their repulsion. We will see this effect again in <a href="10_Molecules.html" class="quarto-xref"><span>Chapter 10</span></a>, where it appears as the exchange term of the Fock operator.</p></li>
 <li><p><strong>Spin–orbit coupling is much smaller</strong>: the three levels of the <span class="math inline">\(^3P\)</span> term are only a few tens of <span class="math inline">\(\text{cm}^{-1}\)</span> apart, a thousand times less than the separation between terms (see below).</p></li>
 </ol>
 </section>
@@ -954,7 +954,7 @@ Figure&nbsp;9.6: Energy levels arising from the <span class="math inline">\(1s^2
 <li>For terms with the same multiplicity, the one with the <strong>largest <span class="math inline">\(L\)</span></strong> has the lowest energy.</li>
 <li>If the open subshell has <strong>fewer than half</strong> of its maximum number of electrons, the level with the <strong>lowest <span class="math inline">\(J\)</span></strong> has the lowest energy; if it has <strong>more than half</strong>, the level with the <strong>highest <span class="math inline">\(J\)</span></strong> is lowest.</li>
 </ol>
-<p>For carbon, the first rule selects <span class="math inline">\(^3P\)</span> as the ground term, and the third rule (<span class="math inline">\(2p^2\)</span> has fewer than half of the six possible <span class="math inline">\(2p\)</span> electrons) selects <span class="math inline">\(J=0\)</span>: the ground state of carbon is <span class="math inline">\(^3P_0\)</span>, in agreement with <a href="#fig-fig4c9" class="quarto-xref">figure&nbsp;<span>9.6</span></a>. Oxygen (<span class="math inline">\(2p^4\)</span>) has the same terms as carbon, since the <span class="math inline">\(2p^4\)</span> configuration lacks two electrons with respect to the closed <span class="math inline">\(2p^6\)</span> subshell, and behaves like <span class="math inline">\(2p^2\)</span> (the two missing electrons are often called “holes”), but it has more than half of the six possible <span class="math inline">\(2p\)</span> electrons, and its ground state is <span class="math inline">\(^3P_2\)</span>. In practice, the ground term can be found quickly with the orbital diagrams of general chemistry, used here only as a bookkeeping device: we describe the electrons one at a time using the orbitals with the largest <span class="math inline">\(m_\ell\)</span> first, keeping their spins parallel as long as possible, and then reading <span class="math inline">\(S\)</span> from the number of unpaired electrons and <span class="math inline">\(L\)</span> from the sum of the <span class="math inline">\(m_\ell\)</span> values. The ground states of the first ten elements obtained in this way are reported in <a href="#tbl-tab3c9" class="quarto-xref">table&nbsp;<span>9.2</span></a>.</p>
+<p>For carbon, the first rule selects <span class="math inline">\(^3P\)</span> as the ground term, and the third rule (<span class="math inline">\(2p^2\)</span> has fewer than half of the six possible <span class="math inline">\(2p\)</span> electrons) selects <span class="math inline">\(J=0\)</span>: the ground state of carbon is <span class="math inline">\(^3P_0\)</span>, in agreement with <a href="#fig-fig4c9" class="quarto-xref">Fig.&nbsp;<span>9.6</span></a>. Oxygen (<span class="math inline">\(2p^4\)</span>) has the same terms as carbon, since the <span class="math inline">\(2p^4\)</span> configuration lacks two electrons with respect to the closed <span class="math inline">\(2p^6\)</span> subshell, and behaves like <span class="math inline">\(2p^2\)</span> (the two missing electrons are often called “holes”), but it has more than half of the six possible <span class="math inline">\(2p\)</span> electrons, and its ground state is <span class="math inline">\(^3P_2\)</span>. In practice, the ground term can be found quickly with the orbital diagrams of general chemistry, used here only as a bookkeeping device: we describe the electrons one at a time using the orbitals with the largest <span class="math inline">\(m_\ell\)</span> first, keeping their spins parallel as long as possible, and then reading <span class="math inline">\(S\)</span> from the number of unpaired electrons and <span class="math inline">\(L\)</span> from the sum of the <span class="math inline">\(m_\ell\)</span> values. The ground states of the first ten elements obtained in this way are reported in <a href="#tbl-tab3c9" class="quarto-xref">Table&nbsp;<span>9.2</span></a>.</p>
 <div id="tbl-tab3c9" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tab3c9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1041,7 +1041,7 @@ Example&nbsp;9.1: The ground state of oxygen
 <p><strong>Step 1: only the open subshell matters.</strong> Filled subshells have <span class="math inline">\(L=0\)</span> and <span class="math inline">\(S=0\)</span>, so we only need the four <span class="math inline">\(2p\)</span> electrons.</p>
 <p><strong>Step 2: maximize <span class="math inline">\(S\)</span> (first rule).</strong> The three <span class="math inline">\(2p\)</span> spin-orbitals with <span class="math inline">\(m_s=+\tfrac{1}{2}\)</span> describe three electrons, and the fourth one must have <span class="math inline">\(m_s=-\tfrac{1}{2}\)</span>: <span class="math inline">\(M_S=\tfrac{3}{2}-\tfrac{1}{2}=1\)</span>, so <span class="math inline">\(S=1\)</span> (a triplet).</p>
 <p><strong>Step 3: maximize <span class="math inline">\(L\)</span> (second rule).</strong> The fourth electron can use <span class="math inline">\(m_\ell=+1\)</span>, so <span class="math inline">\(M_L=(+1+0-1)+1=1\)</span>, and <span class="math inline">\(L=1\)</span>: a <span class="math inline">\(^3P\)</span> term.</p>
-<p><strong>Step 4: choose <span class="math inline">\(J\)</span> (third rule).</strong> <span class="math inline">\(J\)</span> can be <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(0\)</span>. The subshell is <em>more</em> than half filled (four of six electrons), so the lowest level has the largest <span class="math inline">\(J\)</span>: the ground state is <span class="math inline">\(^3P_2\)</span>, in agreement with <a href="#tbl-tab3c9" class="quarto-xref">table&nbsp;<span>9.2</span></a>.</p>
+<p><strong>Step 4: choose <span class="math inline">\(J\)</span> (third rule).</strong> <span class="math inline">\(J\)</span> can be <span class="math inline">\(2\)</span>, <span class="math inline">\(1\)</span>, or <span class="math inline">\(0\)</span>. The subshell is <em>more</em> than half filled (four of six electrons), so the lowest level has the largest <span class="math inline">\(J\)</span>: the ground state is <span class="math inline">\(^3P_2\)</span>, in agreement with <a href="#tbl-tab3c9" class="quarto-xref">Table&nbsp;<span>9.2</span></a>.</p>
 </div>
 </div>
 </div>
@@ -1054,12 +1054,12 @@ Example&nbsp;9.1: The ground state of oxygen
 </section>
 <section id="electron-correlation" class="level2" data-number="9.5">
 <h2 data-number="9.5" class="anchored" data-anchor-id="electron-correlation"><span class="header-section-number">9.5</span> Electron Correlation</h2>
-<p>Even with the best possible orbitals, a wave function built as a product of orbitals (or as a single Slater determinant) does not give the exact energy. The best energy that can be obtained in this way is called the <strong>Hartree–Fock limit</strong>, and for helium it is <span class="math inline">\(-2.8617\,E_h=-7{,}513 \text{ kJ/mol}\)</span>. This value is still <span class="math inline">\(110 \text{ kJ/mol}\)</span> above the exact energy (<a href="#fig-fig2c9" class="quarto-xref">figure&nbsp;<span>9.2</span></a>). The difference is called the <strong>correlation energy</strong>:</p>
+<p>Even with the best possible orbitals, a wave function built as a product of orbitals (or as a single Slater determinant) does not give the exact energy. The best energy that can be obtained in this way is called the <strong>Hartree–Fock limit</strong>, and for helium it is <span class="math inline">\(-2.8617\,E_h=-7{,}513 \text{ kJ/mol}\)</span>. This value is still <span class="math inline">\(110 \text{ kJ/mol}\)</span> above the exact energy (<a href="#fig-fig2c9" class="quarto-xref">Fig.&nbsp;<span>9.2</span></a>). The difference is called the <strong>correlation energy</strong>:</p>
 <p><span id="eq-ecorr"><span class="math display">\[
 E_\text{corr} = E_\text{exact} - E_\text{HF}.
 \tag{9.28}\]</span></span></p>
 <p>The origin of this error is the same approximation that is at the heart of the central-field model. In an orbital-based wave function, each electron moves in the <em>average</em> field of the others, and the probability of finding electron <span class="math inline">\(1\)</span> at some position does not depend on where electron <span class="math inline">\(2\)</span> is at that moment. Real electrons, however, repel each other and tend to stay away from each other: if electron <span class="math inline">\(1\)</span> is on one side of the nucleus, electron <span class="math inline">\(2\)</span> is more likely to be found on the other side. In other words, the motions of the electrons are <em>correlated</em>, and an orbital-based wave function misses part of this correlation. Since the correlated electrons avoid each other more effectively, their repulsion is lower, and the exact energy is lower than the Hartree–Fock limit.</p>
-<p>The correlation energy is a small fraction of the total energy (about <span class="math inline">\(1.5\%\)</span> for helium), but it is of the same order of magnitude as the energy of a chemical bond, so it can be very important for chemistry. We will see a dramatic example in <a href="11_Bonds.html" class="quarto-xref"><span>chapter 11</span></a>, when we look at the breaking of the bond in the hydrogen molecule. Methods that go beyond the Hartree–Fock limit are called <em>correlated methods</em>, and they are among the most important tools of modern quantum chemistry.</p>
+<p>The correlation energy is a small fraction of the total energy (about <span class="math inline">\(1.5\%\)</span> for helium), but it is of the same order of magnitude as the energy of a chemical bond, so it can be very important for chemistry. We will see a dramatic example in <a href="11_Bonds.html" class="quarto-xref"><span>Chapter 11</span></a>, when we look at the breaking of the bond in the hydrogen molecule. Methods that go beyond the Hartree–Fock limit are called <em>correlated methods</em>, and they are among the most important tools of modern quantum chemistry.</p>
 <p>The procedure that we used for helium can be extended to atoms with more than two electrons, and to molecules, resulting in the Hartree–Fock method. We will explain it in more detail in the next chapter, since it is also the simplest approximation that can describe the chemical bond.</p>
 </section>
 <section id="sec-rev9" class="level2" data-number="9.6">
@@ -1079,131 +1079,91 @@ E_\text{corr} = E_\text{exact} - E_\text{HF}.
 <h3 data-number="9.6.2" class="anchored" data-anchor-id="sec-quest9"><span class="header-section-number">9.6.2</span> Study Questions</h3>
 <p><strong>1. Why can the Schrödinger equation not be solved exactly for an atom with two or more electrons?</strong></p>
 <ol type="a">
-<li>because the nucleus is too heavy<br>
-</li>
-<li>because electrons have spin<br>
-</li>
-<li>because the kinetic energy operator is not Hermitian<br>
-</li>
-<li>because the electrons move too fast<br>
-</li>
+<li>because the nucleus is too heavy</li>
+<li>because electrons have spin</li>
+<li>because the kinetic energy operator is not Hermitian</li>
+<li>because the electrons move too fast</li>
 <li>because the electron–electron repulsion couples the coordinates of different electrons</li>
 </ol>
 <hr>
 <p><strong>2. Electrons are fermions. This means that the total wave function of a system of electrons:</strong></p>
 <ol type="a">
-<li>does not change when we swap two electrons<br>
-</li>
-<li>changes sign when we swap the coordinates (including spin) of two electrons<br>
-</li>
-<li>is always real<br>
-</li>
-<li>is zero for more than two electrons<br>
-</li>
+<li>does not change when we swap two electrons</li>
+<li>changes sign when we swap the coordinates (including spin) of two electrons</li>
+<li>is always real</li>
+<li>is zero for more than two electrons</li>
 <li>does not depend on spin</li>
 </ol>
 <hr>
 <p><strong>3. What happens to a Slater determinant if two electrons are described by the same spin-orbital?</strong></p>
 <ol type="a">
-<li>it becomes zero, which is the Pauli exclusion principle<br>
-</li>
-<li>it doubles<br>
-</li>
-<li>it changes sign<br>
-</li>
-<li>it describes an excited state<br>
-</li>
+<li>it becomes zero, which is the Pauli exclusion principle</li>
+<li>it doubles</li>
+<li>it changes sign</li>
+<li>it describes an excited state</li>
 <li>nothing: it remains a valid wave function</li>
 </ol>
 <hr>
 <p><strong>4. According to the variational theorem, the energy calculated with any trial wave function is:</strong></p>
 <ol type="a">
-<li>always equal to the exact ground-state energy<br>
-</li>
-<li>greater than or equal to the exact ground-state energy<br>
-</li>
-<li>always lower than the exact ground-state energy<br>
-</li>
-<li>always positive<br>
-</li>
+<li>always equal to the exact ground-state energy</li>
+<li>greater than or equal to the exact ground-state energy</li>
+<li>always lower than the exact ground-state energy</li>
+<li>always positive</li>
 <li>equal to the energy of the first excited state</li>
 </ol>
 <hr>
 <p><strong>5. In the variational treatment of helium, the optimal orbital exponent is <span class="math inline">\(\zeta=1.6875\)</span>, smaller than the nuclear charge <span class="math inline">\(Z=2\)</span>. This is because:</strong></p>
 <ol type="a">
-<li>the nucleus of helium has a charge of <span class="math inline">\(1.6875\)</span><br>
-</li>
-<li>the electrons have spin<br>
-</li>
-<li>the variational method always underestimates charges<br>
-</li>
-<li>each electron is partially shielded from the nucleus by the other electron<br>
-</li>
+<li>the nucleus of helium has a charge of <span class="math inline">\(1.6875\)</span></li>
+<li>the electrons have spin</li>
+<li>the variational method always underestimates charges</li>
+<li>each electron is partially shielded from the nucleus by the other electron</li>
 <li>the two electrons attract each other</li>
 </ol>
 <hr>
 <p><strong>6. In atoms with more than one electron, why is the <span class="math inline">\(2s\)</span> orbital lower in energy than <span class="math inline">\(2p\)</span>?</strong></p>
 <ol type="a">
-<li>because <span class="math inline">\(2s\)</span> has a smaller principal quantum number<br>
-</li>
-<li>because <span class="math inline">\(2p\)</span> has a radial node<br>
-</li>
-<li>because the <span class="math inline">\(2s\)</span> electron penetrates the <span class="math inline">\(1s^2\)</span> core and feels a larger effective nuclear charge<br>
-</li>
-<li>because of spin–orbit coupling<br>
-</li>
+<li>because <span class="math inline">\(2s\)</span> has a smaller principal quantum number</li>
+<li>because <span class="math inline">\(2p\)</span> has a radial node</li>
+<li>because the <span class="math inline">\(2s\)</span> electron penetrates the <span class="math inline">\(1s^2\)</span> core and feels a larger effective nuclear charge</li>
+<li>because of spin–orbit coupling</li>
 <li>because <span class="math inline">\(2s\)</span> has more angular momentum</li>
 </ol>
 <hr>
 <p><strong>7. What are the values of <span class="math inline">\(S\)</span>, <span class="math inline">\(L\)</span>, and <span class="math inline">\(J\)</span> for an atomic state with term symbol <span class="math inline">\(^3P_2\)</span>?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(S=1\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span><br>
-</li>
-<li><span class="math inline">\(S=3\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span><br>
-</li>
-<li><span class="math inline">\(S=1\)</span>, <span class="math inline">\(L=2\)</span>, <span class="math inline">\(J=3\)</span><br>
-</li>
-<li><span class="math inline">\(S=\frac{3}{2}\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span><br>
-</li>
+<li><span class="math inline">\(S=1\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span></li>
+<li><span class="math inline">\(S=3\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span></li>
+<li><span class="math inline">\(S=1\)</span>, <span class="math inline">\(L=2\)</span>, <span class="math inline">\(J=3\)</span></li>
+<li><span class="math inline">\(S=\frac{3}{2}\)</span>, <span class="math inline">\(L=1\)</span>, <span class="math inline">\(J=2\)</span></li>
 <li><span class="math inline">\(S=1\)</span>, <span class="math inline">\(L=0\)</span>, <span class="math inline">\(J=2\)</span></li>
 </ol>
 <hr>
 <p><strong>8. According to Hund’s first rule, among the terms of a configuration, the lowest in energy is:</strong></p>
 <ol type="a">
-<li>the one with the largest <span class="math inline">\(L\)</span><br>
-</li>
-<li>the one with the smallest <span class="math inline">\(S\)</span><br>
-</li>
-<li>the one with the largest <span class="math inline">\(J\)</span><br>
-</li>
-<li>the one with the largest total spin <span class="math inline">\(S\)</span><br>
-</li>
+<li>the one with the largest <span class="math inline">\(L\)</span></li>
+<li>the one with the smallest <span class="math inline">\(S\)</span></li>
+<li>the one with the largest <span class="math inline">\(J\)</span></li>
+<li>the one with the largest total spin <span class="math inline">\(S\)</span></li>
 <li>the one with the most microstates</li>
 </ol>
 <hr>
 <p><strong>9. What is the ground-state term symbol of the carbon atom (<span class="math inline">\(1s^2 2s^2 2p^2\)</span>)?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(^1D_2\)</span><br>
-</li>
-<li><span class="math inline">\(^1S_0\)</span><br>
-</li>
-<li><span class="math inline">\(^3P_2\)</span><br>
-</li>
-<li><span class="math inline">\(^2P_{1/2}\)</span><br>
-</li>
+<li><span class="math inline">\(^1D_2\)</span></li>
+<li><span class="math inline">\(^1S_0\)</span></li>
+<li><span class="math inline">\(^3P_2\)</span></li>
+<li><span class="math inline">\(^2P_{1/2}\)</span></li>
 <li><span class="math inline">\(^3P_0\)</span></li>
 </ol>
 <hr>
 <p><strong>10. The correlation energy is:</strong></p>
 <ol type="a">
-<li>the energy of the electron–electron repulsion<br>
-</li>
-<li>the energy needed to remove an electron from the atom<br>
-</li>
-<li>the difference between the exact energy and the best energy obtainable from a single Slater determinant (the Hartree–Fock limit)<br>
-</li>
-<li>the difference between the energies of two terms<br>
-</li>
+<li>the energy of the electron–electron repulsion</li>
+<li>the energy needed to remove an electron from the atom</li>
+<li>the difference between the exact energy and the best energy obtainable from a single Slater determinant (the Hartree–Fock limit)</li>
+<li>the difference between the energies of two terms</li>
 <li>the energy of spin–orbit coupling</li>
 </ol>
 <hr>
@@ -1238,7 +1198,7 @@ Kramida, A., Yu. Ralchenko, J. Reader, and NIST ASD Team. n.d. <em><span>NIST</s
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p><span class="math inline">\(E_h\)</span> is the hartree, the atomic unit of energy that we introduced in <a href="05_Hydrogen.html#sec-AtomicUnits" class="quarto-xref"><span>section 5.1</span></a>: <span class="math inline">\(1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><span class="math inline">\(E_h\)</span> is the hartree, the atomic unit of energy that we introduced in <a href="05_Hydrogen.html#sec-AtomicUnits" class="quarto-xref"><span>Sec. 5.1</span></a>: <span class="math inline">\(1\,E_h = 27.211\text{ eV} = 2{,}625.5 \text{ kJ/mol}\)</span>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 

@@ -548,7 +548,7 @@ window.Quarto = {
 \hat{V}_{{ee}} &amp;= \sum _{i}\sum _{{j&gt;i}}{\frac  {e^{2}}{4\pi \varepsilon _{0}\left|{\mathbf  {r}}_{i}-{\mathbf  {r}}_{j}\right|}},
 \end{aligned}
 \tag{10.2}\]</span></span></p>
-<p>where <span class="math inline">\(M_i\)</span>, <span class="math inline">\(Z_i\)</span>, and <span class="math inline">\(\mathbf{R}_i\)</span> are the mass, atomic number, and coordinates of nucleus <span class="math inline">\(i\)</span>, respectively, and all other symbols are the same as those used in <a href="09_Atoms.html#eq-atom1" class="quarto-xref">eq.&nbsp;<span>9.1</span></a> for the many-electron atom Hamiltonian. Notice that the two potential energy terms between like particles (<span class="math inline">\(\hat{V}_{NN}\)</span> and <span class="math inline">\(\hat{V}_{ee}\)</span>) are positive (repulsive), while the term between electrons and nuclei is negative (attractive). The chemical bond is the result of a delicate balance between these three terms and the kinetic energy.</p>
+<p>where <span class="math inline">\(M_i\)</span>, <span class="math inline">\(Z_i\)</span>, and <span class="math inline">\(\mathbf{R}_i\)</span> are the mass, atomic number, and coordinates of nucleus <span class="math inline">\(i\)</span>, respectively, and all other symbols are the same as those used in <a href="09_Atoms.html#eq-atom1" class="quarto-xref">Eq.&nbsp;<span>9.1</span></a> for the many-electron atom Hamiltonian. Notice that the two potential energy terms between like particles (<span class="math inline">\(\hat{V}_{NN}\)</span> and <span class="math inline">\(\hat{V}_{ee}\)</span>) are positive (repulsive), while the term between electrons and nuclei is negative (attractive). The chemical bond is the result of a delicate balance between these three terms and the kinetic energy.</p>
 <section id="small-terms-in-the-molecular-hamiltonian" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="small-terms-in-the-molecular-hamiltonian"><span class="header-section-number">10.1.1</span> Small terms in the molecular Hamiltonian</h3>
 <p><a href="#eq-molham1" class="quarto-xref">Eq.&nbsp;<span>10.1</span></a> is often called the “exact” non-relativistic Hamiltonian of a molecule, but it is worth remembering what it leaves out. The first missing piece is relativity. The valence electrons of light atoms move at a small fraction of the speed of light (less than 1% for the electron in the hydrogen atom), but the inner electrons of heavy atoms are pulled so strongly by the nucleus that relativistic effects become important. The second missing piece is the coupling between the spin of each electron and its orbital motion. We can picture it by sitting on the electron: from its point of view, the charged nucleus is the one that moves around it, and this moving charge creates a magnetic field proportional to the orbital angular momentum, <span class="math inline">\(\mathbf{L}\)</span>. The electron carries its own magnetic moment, proportional to its spin, <span class="math inline">\(\mathbf{S}\)</span>, and the interaction between the two gives an energy term proportional to <span class="math inline">\(\mathbf{L} \cdot \mathbf{S}\)</span>, called <em>spin–orbit coupling</em>. Both effects grow quickly with the nuclear charge, so they are small for the molecules made of first- and second-row atoms that we discuss in this textbook, and we will neglect them from now on.</p>
@@ -591,7 +591,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Can we use this trick to separate the electrons from the nuclei in <a href="#eq-molham1" class="quarto-xref">eq.&nbsp;<span>10.1</span></a>? Not exactly, because the electron–nucleus attraction, <span class="math inline">\(\hat{V}_{eN}\)</span>, depends on the coordinates of both electrons and nuclei at the same time. However, nuclei are much heavier than electrons (a proton is about <span class="math inline">\(1{,}836\)</span> times heavier than an electron), so they move much more slowly. From the point of view of the electrons, the nuclei are almost standing still; from the point of view of the nuclei, the electrons adjust almost instantaneously to any change in their positions. This suggests that we can write the total wave function, approximately, as:</p>
+<p>Can we use this trick to separate the electrons from the nuclei in <a href="#eq-molham1" class="quarto-xref">Eq.&nbsp;<span>10.1</span></a>? Not exactly, because the electron–nucleus attraction, <span class="math inline">\(\hat{V}_{eN}\)</span>, depends on the coordinates of both electrons and nuclei at the same time. However, nuclei are much heavier than electrons (a proton is about <span class="math inline">\(1{,}836\)</span> times heavier than an electron), so they move much more slowly. From the point of view of the electrons, the nuclei are almost standing still; from the point of view of the nuclei, the electrons adjust almost instantaneously to any change in their positions. This suggests that we can write the total wave function, approximately, as:</p>
 <p><span id="eq-molham7"><span class="math display">\[
 \psi(\mathbf{r}, \mathbf{R}) \approx \psi_e(\mathbf{r}; \mathbf{R}) \psi_N(\mathbf{R}),
 \tag{10.6}\]</span></span></p>
@@ -606,7 +606,7 @@ window.Quarto = {
 <p><span id="eq-molham9"><span class="math display">\[
 \hat{H}_{e} \psi_e \left(\mathbf{r}; \mathbf{R_a} \right) = E_{e}(\mathbf{R_a}) \psi_e \left(\mathbf{r}; \mathbf{R_a} \right),
 \tag{10.8}\]</span></span></p>
-<p>which is the equation that we will use to explain the chemical bond in the next chapter. Notice that <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.8</span></a> is not the total TISEq of the system, since it says nothing about the motion of the nuclei. As is customary in quantum chemistry, in the remainder of this textbook we will use the term “total energy” for the “total energy at fixed geometry,” which is <span class="math inline">\(E_{e}\)</span> of <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.8</span></a> plus the constant nuclear–nuclear repulsion, <span class="math inline">\(V_{NN}(\mathbf{R_a})\)</span> (i.e., everything except the nuclear kinetic energy).</p>
+<p>which is the equation that we will use to explain the chemical bond in the next chapter. Notice that <a href="#eq-molham9" class="quarto-xref">Eq.&nbsp;<span>10.8</span></a> is not the total TISEq of the system, since it says nothing about the motion of the nuclei. As is customary in quantum chemistry, in the remainder of this textbook we will use the term “total energy” for the “total energy at fixed geometry,” which is <span class="math inline">\(E_{e}\)</span> of <a href="#eq-molham9" class="quarto-xref">Eq.&nbsp;<span>10.8</span></a> plus the constant nuclear–nuclear repulsion, <span class="math inline">\(V_{NN}(\mathbf{R_a})\)</span> (i.e., everything except the nuclear kinetic energy).</p>
 <section id="potential-energy-surfaces" class="level3" data-number="10.2.1">
 <h3 data-number="10.2.1" class="anchored" data-anchor-id="potential-energy-surfaces"><span class="header-section-number">10.2.1</span> Potential energy surfaces</h3>
 <p>The Born–Oppenheimer approximation has a very important consequence. If we repeat the electronic calculation for many different arrangements of the nuclei, we obtain the total energy at fixed geometry as a function of the nuclear coordinates:</p>
@@ -614,7 +614,7 @@ window.Quarto = {
 U(\mathbf{R}) = E_e(\mathbf{R}) + V_{NN}(\mathbf{R}).
 \tag{10.9}\]</span></span></p>
 <p>This function is called the <strong>potential energy surface (PES)</strong>, and it is the potential energy that the nuclei feel when they move. The motion of the nuclei (vibrations, rotations, and chemical reactions) can then be described by solving a second TISEq for the nuclei, with the PES playing the role of the potential: <span class="math inline">\(\left[\hat{K}_N + U(\mathbf{R})\right]\psi_N(\mathbf{R}) = E\,\psi_N(\mathbf{R})\)</span>.</p>
-<p>For a diatomic molecule, the only coordinate that matters is the internuclear distance, <span class="math inline">\(R\)</span>, and the PES reduces to a curve. The potential energy curve of the hydrogen molecule is plotted in <a href="#fig-fig1c10" class="quarto-xref">figure&nbsp;<span>10.1</span></a>.</p>
+<p>For a diatomic molecule, the only coordinate that matters is the internuclear distance, <span class="math inline">\(R\)</span>, and the PES reduces to a curve. The potential energy curve of the hydrogen molecule is plotted in <a href="#fig-fig1c10" class="quarto-xref">Fig.&nbsp;<span>10.1</span></a>.</p>
 <div id="fig-fig1c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Potential energy curve of the hydrogen molecule versus internuclear distance: a steep wall at short distance, a minimum at 1.4 bohr about 458 kilojoules per mole deep, and a flat approach to zero at large distance. A parabola fits only near the minimum, and horizontal lines mark vibrational levels that get closer together near the top.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig1c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -628,10 +628,10 @@ Figure&nbsp;10.1: Potential energy curve of the hydrogen molecule (blue), compar
 <p>This single curve contains a lot of chemistry:</p>
 <ol type="1">
 <li><p><strong>Equilibrium geometry</strong>: the minimum of the curve, at <span class="math inline">\(R_e=1.40\,a_0=0.74\,\text{Å}\)</span>, is the equilibrium bond distance of the molecule. For larger molecules, minima of the PES correspond to stable structures, and finding them is called <em>geometry optimization</em>.</p></li>
-<li><p><strong>Bond energy</strong>: the depth of the well, <span class="math inline">\(D_e=458\text{ kJ/mol}\)</span>, is the energy needed to separate the two atoms starting from the bottom of the well. The molecule, however, can never sit exactly at the bottom: even in its lowest vibrational level it has a zero-point energy, as we saw for the harmonic oscillator in <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>. The experimentally measurable dissociation energy, <span class="math inline">\(D_0=D_e-\text{ZPE}=432\text{ kJ/mol}\)</span>, is measured from the lowest vibrational level.</p></li>
-<li><p><strong>Vibrations</strong>: close to the minimum, the curve looks like a parabola, and the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a> is a good model, with force constant equal to the curvature of the PES at the minimum, <span class="math inline">\(k=\left.\frac{d^2U}{dR^2}\right|_{R_e}\)</span>. As the energy increases, the real curve becomes wider than the parabola, and it flattens out towards the dissociation limit. As a consequence, the vibrational levels get closer to each other as they approach dissociation, unlike the equally spaced levels of the harmonic oscillator. We will see how these features show up in experiments in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>.</p></li>
+<li><p><strong>Bond energy</strong>: the depth of the well, <span class="math inline">\(D_e=458\text{ kJ/mol}\)</span>, is the energy needed to separate the two atoms starting from the bottom of the well. The molecule, however, can never sit exactly at the bottom: even in its lowest vibrational level it has a zero-point energy, as we saw for the harmonic oscillator in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>. The experimentally measurable dissociation energy, <span class="math inline">\(D_0=D_e-\text{ZPE}=432\text{ kJ/mol}\)</span>, is measured from the lowest vibrational level.</p></li>
+<li><p><strong>Vibrations</strong>: close to the minimum, the curve looks like a parabola, and the harmonic oscillator of <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a> is a good model, with force constant equal to the curvature of the PES at the minimum, <span class="math inline">\(k=\left.\frac{d^2U}{dR^2}\right|_{R_e}\)</span>. As the energy increases, the real curve becomes wider than the parabola, and it flattens out towards the dissociation limit. As a consequence, the vibrational levels get closer to each other as they approach dissociation, unlike the equally spaced levels of the harmonic oscillator. We will see how these features show up in experiments in <a href="13_Spectroscopy.html" class="quarto-xref"><span>Chapter 13</span></a>.</p></li>
 </ol>
-<p>For a molecule with <span class="math inline">\(N_{\text{at}}\)</span> atoms, the PES depends on <span class="math inline">\(3N_{\text{at}}-6\)</span> internal coordinates (<span class="math inline">\(3N_{\text{at}}-5\)</span> for linear molecules), and it is a surface in many dimensions. We cannot draw it, but we can get a feeling for its features using a model surface in two dimensions, such as the one in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>.</p>
+<p>For a molecule with <span class="math inline">\(N_{\text{at}}\)</span> atoms, the PES depends on <span class="math inline">\(3N_{\text{at}}-6\)</span> internal coordinates (<span class="math inline">\(3N_{\text{at}}-5\)</span> for linear molecules), and it is a surface in many dimensions. We cannot draw it, but we can get a feeling for its features using a model surface in two dimensions, such as the one in <a href="#fig-fig2c10" class="quarto-xref">Fig.&nbsp;<span>10.2</span></a>.</p>
 <div id="fig-fig2c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Left: a contour map of an energy surface with three valleys labeled A, B, and C, connected by a dashed path that passes over two saddle points labeled TS1 and TS2. Right: the energy along the dashed path, starting low at A, rising to a high peak at TS1, dropping to a shallow valley at B, crossing a small peak at TS2, and ending at C. An arrow marks the activation energy from A to TS1.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -643,7 +643,7 @@ Figure&nbsp;10.2: (a) Contour plot of a model two-dimensional potential energy s
 </figure>
 </div>
 <p>Each minimum (A, B, and C) corresponds to a stable structure of the molecule, such as a reactant, a product, or an intermediate. To go from one minimum to another, the molecule must pass over a mountain pass, called a <strong>saddle point</strong>: a point that is a maximum along the path that connects the two minima, but a minimum along every other direction. In chemistry, these saddle points are the <strong>transition states</strong> of chemical reactions, and the energy difference between a minimum and the transition state is the activation energy of the reaction.</p>
-<p>If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the <strong>minimum energy path</strong>, and it is shown as a dashed line in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>a. The distance traveled along this path, measured from the starting minimum, is called the <strong>reaction coordinate</strong>. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in <a href="#fig-fig2c10" class="quarto-xref">figure&nbsp;<span>10.2</span></a>b, the many-dimensional surface reduces to the familiar one-dimensional <em>reaction profile</em> of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates <span class="math inline">\(q_1\)</span> or <span class="math inline">\(q_2\)</span>, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.</p>
+<p>If we want to go from one minimum to another, there are infinitely many possible paths on the surface, but the most important one is the path of lowest energy, which follows the bottom of the valleys and crosses each mountain pass exactly at the saddle point. This path is called the <strong>minimum energy path</strong>, and it is shown as a dashed line in <a href="#fig-fig2c10" class="quarto-xref">Fig.&nbsp;<span>10.2</span></a>a. The distance traveled along this path, measured from the starting minimum, is called the <strong>reaction coordinate</strong>. It is a single number that tells us how far the reaction has progressed, even though, in a real molecule, moving along it may require changing many bond lengths and angles at the same time. If we plot the energy along the reaction coordinate, as in <a href="#fig-fig2c10" class="quarto-xref">Fig.&nbsp;<span>10.2</span></a>b, the many-dimensional surface reduces to the familiar one-dimensional <em>reaction profile</em> of general chemistry and kinetics courses: reactants and products are minima, the transition state is the maximum between them, and the height of the barrier is the activation energy. Notice that the reaction profile hides most of the information contained in the surface: the reaction coordinate is not one of the nuclear coordinates <span class="math inline">\(q_1\)</span> or <span class="math inline">\(q_2\)</span>, but a curved path through both of them. The PES is therefore the bridge between quantum mechanics and chemical reactivity: structures, vibrational frequencies, reaction paths, and activation energies are all properties of the PES.</p>
 <div id="tip-bond-energy-and-zero-point-energy-of-H" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -657,7 +657,7 @@ Example&nbsp;10.1: Bond energy and zero-point energy of H<span class="math inlin
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The depth of the potential energy curve of <span class="math inline">\(\mathrm{H}_2\)</span> is <span class="math inline">\(D_e=458\;\text{kJ/mol}\)</span>, and its vibrational wavenumber is <span class="math inline">\(\tilde{\nu}=4401\;\text{cm}^{-1}\)</span>. How much energy is actually needed to break the bond?</p>
-<p><strong>Step 1: the molecule is never at the bottom of the well.</strong> As we saw for the harmonic oscillator (<a href="04_Models.html" class="quarto-xref"><span>chapter 4</span></a>), the lowest vibrational level is the zero-point energy, <span class="math inline">\(E_0=\tfrac{1}{2}h\nu=\tfrac{1}{2}hc\tilde{\nu}\)</span>, above the minimum.</p>
+<p><strong>Step 1: the molecule is never at the bottom of the well.</strong> As we saw for the harmonic oscillator (<a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>), the lowest vibrational level is the zero-point energy, <span class="math inline">\(E_0=\tfrac{1}{2}h\nu=\tfrac{1}{2}hc\tilde{\nu}\)</span>, above the minimum.</p>
 <p><strong>Step 2: compute the zero-point energy.</strong></p>
 <p><span class="math display">\[
 E_0=\tfrac{1}{2}(6.626\times10^{-34}\;\text{J s})(2.998\times10^{10}\;\text{cm/s})(4401\;\text{cm}^{-1})=4.37\times10^{-20}\;\text{J},
@@ -671,18 +671,18 @@ E_0=\tfrac{1}{2}(6.626\times10^{-34}\;\text{J s})(2.998\times10^{10}\;\text{cm/s
 </section>
 <section id="solving-the-electronic-eigenvalue-problem" class="level2" data-number="10.3">
 <h2 data-number="10.3" class="anchored" data-anchor-id="solving-the-electronic-eigenvalue-problem"><span class="header-section-number">10.3</span> Solving the Electronic Eigenvalue Problem</h2>
-<p>Once we have invoked the Born–Oppenheimer approximation, we can try to solve the electronic TISEq in <a href="#eq-molham9" class="quarto-xref">eq.&nbsp;<span>10.8</span></a>. For any molecule with more than one electron (i.e., all molecules except <span class="math inline">\(\mathrm{H}_2^+\)</span> and a few exotic ions), we need to keep in mind the antisymmetry of the wave function, so we write the electronic wave function as a Slater determinant, as we did for atoms in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>. Then we need to approximate the Hamiltonian, since the electron-electron repulsion term does not allow an analytic solution. Similarly to the many-electron atom case, the simplest approximation is to use the variational method and to treat the electron-electron repulsion only in an average way, as we did for the helium atom in the previous chapter. This approximation is called the Hartree–Fock method.</p>
+<p>Once we have invoked the Born–Oppenheimer approximation, we can try to solve the electronic TISEq in <a href="#eq-molham9" class="quarto-xref">Eq.&nbsp;<span>10.8</span></a>. For any molecule with more than one electron (i.e., all molecules except <span class="math inline">\(\mathrm{H}_2^+\)</span> and a few exotic ions), we need to keep in mind the antisymmetry of the wave function, so we write the electronic wave function as a Slater determinant, as we did for atoms in <a href="09_Atoms.html" class="quarto-xref"><span>Chapter 9</span></a>. Then we need to approximate the Hamiltonian, since the electron-electron repulsion term does not allow an analytic solution. Similarly to the many-electron atom case, the simplest approximation is to use the variational method and to treat the electron-electron repulsion only in an average way, as we did for the helium atom in the previous chapter. This approximation is called the Hartree–Fock method.</p>
 <section id="the-hartreefock-method" class="level3" data-number="10.3.1">
 <h3 data-number="10.3.1" class="anchored" data-anchor-id="the-hartreefock-method"><span class="header-section-number">10.3.1</span> The Hartree–Fock Method</h3>
 <p>The main difference when we apply the variational principle to a molecular Slater determinant is that we need orbitals (one-electron wave functions) that extend over the entire molecule. We can build them by assuming that, close to each nucleus, a molecular orbital looks similar to the orbitals of the corresponding atom. The molecular orbital can then be written as a linear combination of atomic contributions. This method is called <strong>linear combination of atomic orbitals (LCAO)</strong>. In practice, we expand each molecular orbital <span class="math inline">\(\psi(\mathbf{r})\)</span> as a linear combination of suitable basis functions <span class="math inline">\(f_i(\mathbf{r})\)</span> centered on the atoms:</p>
 <p><span id="eq-molham10"><span class="math display">\[
 \psi(\mathbf{r}) = \sum_i^m c_{i} f_i(\mathbf{r}).
 \tag{10.10}\]</span></span></p>
-<p>A consequence of the LCAO method is that basis functions on two different atoms are not orthogonal to each other, so the simplification that we used to go from <a href="09_Atoms.html#eq-var4" class="quarto-xref">eq.&nbsp;<span>9.14</span></a> to <a href="09_Atoms.html#eq-var5" class="quarto-xref">eq.&nbsp;<span>9.15</span></a> is not possible anymore. Using the following notation for the integrals:</p>
+<p>A consequence of the LCAO method is that basis functions on two different atoms are not orthogonal to each other, so the simplification that we used to go from <a href="09_Atoms.html#eq-var4" class="quarto-xref">Eq.&nbsp;<span>9.14</span></a> to <a href="09_Atoms.html#eq-var5" class="quarto-xref">Eq.&nbsp;<span>9.15</span></a> is not possible anymore. Using the following notation for the integrals:</p>
 <p><span id="eq-molham11"><span class="math display">\[
 \displaystyle H_{ij} = \int f_i^* {\hat H} f_j d\mathbf{\tau}\;, \qquad \displaystyle S_{ij} = \int f_i^* f_j d\mathbf{\tau},
 \tag{10.11}\]</span></span></p>
-<p>the variational energy of <a href="09_Atoms.html#eq-var2" class="quarto-xref">eq.&nbsp;<span>9.10</span></a> becomes:</p>
+<p>the variational energy of <a href="09_Atoms.html#eq-var2" class="quarto-xref">Eq.&nbsp;<span>9.10</span></a> becomes:</p>
 <p><span id="eq-molham11b"><span class="math display">\[
 E[\Phi] = \frac{\sum_{ij} c_i^* c_j H_{ij}}{\sum_{ij} c_i^* c_j S_{ij}}.
 \tag{10.12}\]</span></span></p>
@@ -698,7 +698,7 @@ H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
 <p>where <span class="math inline">\(m\)</span> is the number of basis functions. Expanding the determinant gives a polynomial of degree <span class="math inline">\(m\)</span> in <span class="math inline">\(E\)</span>, whose <span class="math inline">\(m\)</span> roots are the energies of the molecular orbitals. For each root, the linear equations give the corresponding coefficients. We will solve this problem explicitly for the simplest molecules in the next chapter.</p>
 <section id="the-fock-operator" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="the-fock-operator">The Fock operator</h4>
-<p>What Hamiltonian should we use in <a href="#eq-molham11" class="quarto-xref">eq.&nbsp;<span>10.11</span></a>? For a one-electron molecule, such as <span class="math inline">\(\mathrm{H}_2^+\)</span>, it is simply the electronic Hamiltonian of <a href="#eq-molham8" class="quarto-xref">eq.&nbsp;<span>10.7</span></a>. For more than one electron, the Hartree–Fock method replaces the true many-electron problem with a set of one-electron problems, one for each occupied spin-orbital <span class="math inline">\(\chi_i\)</span>:</p>
+<p>What Hamiltonian should we use in <a href="#eq-molham11" class="quarto-xref">Eq.&nbsp;<span>10.11</span></a>? For a one-electron molecule, such as <span class="math inline">\(\mathrm{H}_2^+\)</span>, it is simply the electronic Hamiltonian of <a href="#eq-molham8" class="quarto-xref">Eq.&nbsp;<span>10.7</span></a>. For more than one electron, the Hartree–Fock method replaces the true many-electron problem with a set of one-electron problems, one for each occupied spin-orbital <span class="math inline">\(\chi_i\)</span>:</p>
 <p><span id="eq-hfeq1"><span class="math display">\[
 \hat{f}\, \chi_i = \varepsilon_i\, \chi_i,
 \tag{10.14}\]</span></span></p>
@@ -709,14 +709,14 @@ H_{m1}-ES_{m1}   &amp; H_{m2}-ES_{m2}   &amp; \cdots &amp; H_{mm}-ES_{mm}
 <p>Each piece of <span class="math inline">\(\hat{f}\)</span> has a clear physical meaning:</p>
 <ol type="1">
 <li><span class="math inline">\(\hat{h}\)</span> is the <strong>core Hamiltonian</strong>: the kinetic energy of one electron plus its attraction to all nuclei. This is all there is in a one-electron molecule.</li>
-<li><span class="math inline">\(\hat{J}_j\)</span> is the <strong>Coulomb operator</strong>: the repulsion felt by an electron because of the <em>average</em> charge distribution, <span class="math inline">\(|\chi_j|^2\)</span>, of the electron described by orbital <span class="math inline">\(\chi_j\)</span>. This is the “average repulsion” that we added back for the helium atom in <a href="09_Atoms.html" class="quarto-xref"><span>chapter 9</span></a>.</li>
+<li><span class="math inline">\(\hat{J}_j\)</span> is the <strong>Coulomb operator</strong>: the repulsion felt by an electron because of the <em>average</em> charge distribution, <span class="math inline">\(|\chi_j|^2\)</span>, of the electron described by orbital <span class="math inline">\(\chi_j\)</span>. This is the “average repulsion” that we added back for the helium atom in <a href="09_Atoms.html" class="quarto-xref"><span>Chapter 9</span></a>.</li>
 <li><span class="math inline">\(\hat{K}_j\)</span> is the <strong>exchange operator</strong>. It has no classical analog, and it appears because the wave function is a Slater determinant. It acts only between electrons with the same spin, and it lowers their repulsion, since the antisymmetry of the wave function keeps same-spin electrons away from each other (two electrons with the same spin can never be found at the same point, as a consequence of the Pauli exclusion principle).</li>
 </ol>
-<p><a href="#eq-hfeq1" class="quarto-xref">Eq.&nbsp;<span>10.14</span></a> are called the <strong>Hartree–Fock equations</strong>. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through <span class="math inline">\(\hat{J}_j\)</span> and <span class="math inline">\(\hat{K}_j\)</span>, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, <a href="#eq-molham10" class="quarto-xref">eq.&nbsp;<span>10.10</span></a>, the Hartree–Fock equations take the form of the secular determinant in <a href="#eq-molham12" class="quarto-xref">eq.&nbsp;<span>10.13</span></a>, with the integrals <span class="math inline">\(H_{ij}\)</span> replaced by the matrix elements of the Fock operator, <span class="math inline">\(F_{ij} = \int f_i^* \hat{f} f_j\, d\mathbf{\tau}\)</span>.</p>
+<p><a href="#eq-hfeq1" class="quarto-xref">Eq.&nbsp;<span>10.14</span></a> are called the <strong>Hartree–Fock equations</strong>. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through <span class="math inline">\(\hat{J}_j\)</span> and <span class="math inline">\(\hat{K}_j\)</span>, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, <a href="#eq-molham10" class="quarto-xref">Eq.&nbsp;<span>10.10</span></a>, the Hartree–Fock equations take the form of the secular determinant in <a href="#eq-molham12" class="quarto-xref">Eq.&nbsp;<span>10.13</span></a>, with the integrals <span class="math inline">\(H_{ij}\)</span> replaced by the matrix elements of the Fock operator, <span class="math inline">\(F_{ij} = \int f_i^* \hat{f} f_j\, d\mathbf{\tau}\)</span>.</p>
 </section>
 <section id="the-self-consistent-field-procedure" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="the-self-consistent-field-procedure">The self-consistent-field procedure</h4>
-<p>Since the Fock operator and its solutions depend on each other, the Hartree–Fock equations cannot be solved in one step. Instead, they are solved iteratively, using a cycle called the <strong>self-consistent-field (SCF) procedure</strong>, which is summarized in <a href="#fig-fig3c10" class="quarto-xref">figure&nbsp;<span>10.3</span></a>. Starting from an initial guess of the coefficients, we build the Fock operator, solve the secular determinant, and obtain new coefficients. These are used to build an improved Fock operator, and the cycle is repeated until neither the orbitals nor the energy change anymore (within a chosen threshold). At that point, the orbitals are “consistent” with the field that they generate, and the energy of the molecule can be calculated from them.</p>
+<p>Since the Fock operator and its solutions depend on each other, the Hartree–Fock equations cannot be solved in one step. Instead, they are solved iteratively, using a cycle called the <strong>self-consistent-field (SCF) procedure</strong>, which is summarized in <a href="#fig-fig3c10" class="quarto-xref">Fig.&nbsp;<span>10.3</span></a>. Starting from an initial guess of the coefficients, we build the Fock operator, solve the secular determinant, and obtain new coefficients. These are used to build an improved Fock operator, and the cycle is repeated until neither the orbitals nor the energy change anymore (within a chosen threshold). At that point, the orbitals are “consistent” with the field that they generate, and the energy of the molecule can be calculated from them.</p>
 <div id="fig-fig3c10" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Flowchart of the self-consistent-field procedure: choose basis and geometry, compute integrals, guess coefficients, build the Fock operator, solve the secular determinant, then a decision diamond asks whether the result has converged. Yes leads down to the final energy and orbitals; No loops back to building the Fock operator with the updated orbitals.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig3c10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -747,131 +747,91 @@ Figure&nbsp;10.3: Flowchart of the self-consistent-field (SCF) procedure used to
 <h3 data-number="10.4.2" class="anchored" data-anchor-id="sec-quest10"><span class="header-section-number">10.4.2</span> Study Questions</h3>
 <p><strong>1. What justifies the Born–Oppenheimer approximation?</strong></p>
 <ol type="a">
-<li>electrons and nuclei have the same mass<br>
-</li>
-<li>nuclei are much heavier than electrons, so they move much more slowly<br>
-</li>
-<li>nuclei do not interact with electrons<br>
-</li>
-<li>electrons are fermions<br>
-</li>
+<li>electrons and nuclei have the same mass</li>
+<li>nuclei are much heavier than electrons, so they move much more slowly</li>
+<li>nuclei do not interact with electrons</li>
+<li>electrons are fermions</li>
 <li>the molecule is always at its equilibrium geometry</li>
 </ol>
 <hr>
 <p><strong>2. A potential energy surface is:</strong></p>
 <ol type="a">
-<li>the surface of the molecule<br>
-</li>
-<li>the probability density of the electrons<br>
-</li>
-<li>the kinetic energy of the nuclei<br>
-</li>
-<li>the electronic energy of a molecule as a function of the positions of its nuclei<br>
-</li>
+<li>the surface of the molecule</li>
+<li>the probability density of the electrons</li>
+<li>the kinetic energy of the nuclei</li>
+<li>the electronic energy of a molecule as a function of the positions of its nuclei</li>
 <li>the energy of a molecule as a function of temperature</li>
 </ol>
 <hr>
 <p><strong>3. The minimum of the potential energy curve of a diatomic molecule corresponds to:</strong></p>
 <ol type="a">
-<li>the dissociated atoms<br>
-</li>
-<li>the transition state<br>
-</li>
-<li>the equilibrium bond length<br>
-</li>
-<li>the zero-point energy<br>
-</li>
+<li>the dissociated atoms</li>
+<li>the transition state</li>
+<li>the equilibrium bond length</li>
+<li>the zero-point energy</li>
 <li>the ionization energy</li>
 </ol>
 <hr>
 <p><strong>4. The depth of the well of the potential energy curve of <span class="math inline">\(\mathrm{H}_2\)</span> is:</strong></p>
 <ol type="a">
-<li>the energy needed to remove an electron<br>
-</li>
-<li>the zero-point energy<br>
-</li>
-<li>the energy of the first excited state<br>
-</li>
-<li>the energy needed to separate the two atoms (the bond energy)<br>
-</li>
+<li>the energy needed to remove an electron</li>
+<li>the zero-point energy</li>
+<li>the energy of the first excited state</li>
+<li>the energy needed to separate the two atoms (the bond energy)</li>
 <li>the kinetic energy of the nuclei</li>
 </ol>
 <hr>
 <p><strong>5. On a potential energy surface, the transition state of a reaction is:</strong></p>
 <ol type="a">
-<li>the deepest minimum<br>
-</li>
-<li>the point where the energy is zero<br>
-</li>
-<li>the geometry of the products<br>
-</li>
-<li>any point with a high energy<br>
-</li>
+<li>the deepest minimum</li>
+<li>the point where the energy is zero</li>
+<li>the geometry of the products</li>
+<li>any point with a high energy</li>
 <li>a saddle point, the highest point along the minimum energy path between reactants and products</li>
 </ol>
 <hr>
 <p><strong>6. How many internal coordinates are needed to describe the geometry of a water molecule?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(1\)</span><br>
-</li>
-<li><span class="math inline">\(6\)</span><br>
-</li>
-<li><span class="math inline">\(3\)</span><br>
-</li>
-<li><span class="math inline">\(9\)</span><br>
-</li>
+<li><span class="math inline">\(1\)</span></li>
+<li><span class="math inline">\(6\)</span></li>
+<li><span class="math inline">\(3\)</span></li>
+<li><span class="math inline">\(9\)</span></li>
 <li><span class="math inline">\(4\)</span></li>
 </ol>
 <hr>
 <p><strong>7. In the LCAO method, each molecular orbital is written as:</strong></p>
 <ol type="a">
-<li>a product of atomic orbitals<br>
-</li>
-<li>a linear combination of basis functions centered on the atoms<br>
-</li>
-<li>a single atomic orbital<br>
-</li>
-<li>a Slater determinant of atomic orbitals<br>
-</li>
+<li>a product of atomic orbitals</li>
+<li>a linear combination of basis functions centered on the atoms</li>
+<li>a single atomic orbital</li>
+<li>a Slater determinant of atomic orbitals</li>
 <li>the sum of all the atomic orbitals of the molecule, with equal coefficients</li>
 </ol>
 <hr>
 <p><strong>8. The overlap integral <span class="math inline">\(S_{ij}=\int f_i^*f_j\,d\mathbf{r}\)</span> between two basis functions on different atoms:</strong></p>
 <ol type="a">
-<li>measures how much the two functions share the same region of space, and is in general not zero<br>
-</li>
-<li>is always zero, because basis functions are orthogonal<br>
-</li>
-<li>is always equal to one<br>
-</li>
-<li>is the energy of the bond<br>
-</li>
+<li>measures how much the two functions share the same region of space, and is in general not zero</li>
+<li>is always zero, because basis functions are orthogonal</li>
+<li>is always equal to one</li>
+<li>is the energy of the bond</li>
 <li>is negative for bonding orbitals</li>
 </ol>
 <hr>
 <p><strong>9. The exchange operator <span class="math inline">\(\hat{K}\)</span> in the Fock operator:</strong></p>
 <ol type="a">
-<li>describes the attraction of the electrons to the nuclei<br>
-</li>
-<li>describes the kinetic energy of the electrons<br>
-</li>
-<li>is the classical repulsion between two charge distributions<br>
-</li>
-<li>describes the repulsion between nuclei<br>
-</li>
+<li>describes the attraction of the electrons to the nuclei</li>
+<li>describes the kinetic energy of the electrons</li>
+<li>is the classical repulsion between two charge distributions</li>
+<li>describes the repulsion between nuclei</li>
 <li>has no classical analog, and it appears because the wave function is a Slater determinant</li>
 </ol>
 <hr>
 <p><strong>10. Why must the Hartree–Fock equations be solved iteratively, with the SCF procedure?</strong></p>
 <ol type="a">
-<li>because the Fock operator depends on the orbitals that are the solutions of the equations<br>
-</li>
-<li>because computers cannot solve linear equations directly<br>
-</li>
-<li>because the nuclei move during the calculation<br>
-</li>
-<li>because the basis set changes at each step<br>
-</li>
+<li>because the Fock operator depends on the orbitals that are the solutions of the equations</li>
+<li>because computers cannot solve linear equations directly</li>
+<li>because the nuclei move during the calculation</li>
+<li>because the basis set changes at each step</li>
 <li>because the energy is not variational</li>
 </ol>
 <hr>

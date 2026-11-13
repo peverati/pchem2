@@ -86,6 +86,7 @@ Every image needs `fig-alt` (accessibility). The writing style and content rules
 - `_quarto.yml`: book settings (title, chapter list, website theme, PDF layout).
 - `quarto.css`, `punctuation.html`, `sidebar-toc.html`, `header-pin.html`: website tweaks (top bar with the title, a "Report an issue" link, and the group logo in light/dark versions, always visible on wide screens, caption contrast, scrollable equations, no line breaks before punctuation after math, expandable chapter sections in the sidebar; `scripts/sidebar_sections.py` collects the sections after each render).
 - **Interactive figures** (website only, Observable JS inside the chapters): building a wave packet and its spreading (Ch. 3), hydrogen radial probabilities (Ch. 5), a particle-in-a-box superposition (Ch. 6), the uncertainty principle and a tunneling simulation (Ch. 8), Hückel π levels (Ch. 12), rotational populations and spectra (Ch. 13). They are hidden in the PDF, which keeps the static figures.
+- `pdf-style.tex`, `pdf-fixes.lua`, `fonts/`: PDF look. The PDF is built with XeLaTeX in STIX Two (text, headings, and math), with the static font files in `fonts/` (SIL Open Font License, `fonts/OFL.txt`). `pdf-style.tex` sets the headings, captions, running heads, and gray boxes; `pdf-fixes.lua` writes equation references as "Eq. (5.7)" (on the website, `quarto.css` does it) and removes the empty line after each answer choice.
 - `scripts/`: Python scripts for the computed figures (e.g., `make_figures_h2.py` for the Ch. 11 diagrams); `scripts/notebooks/` holds the Jupyter notebooks for the hydrogen orbitals, spherical harmonics, and model figures (its README says which cell makes which image).
 - `_quarto-typst.yml`: optional Typst PDF, `quarto render --profile typst --to typst` (output in `_book-typst/`, not published).
 - `_bookdown-archive/`: the former bookdown sources and the conversion script, for reference only.
@@ -99,5 +100,6 @@ Old bookdown page names (e.g. `Models.html`) redirect to the new pages (`04_Mode
 
 - **Book text and figures:** [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/), see `LICENSE`. You may share and adapt the book for non-commercial purposes, with attribution, under the same license. Commercial reproduction or resale requires the author's permission.
 - **Python scripts in `scripts/`:** MIT License, see `scripts/LICENSE`.
+- **STIX Two fonts in `fonts/`:** SIL Open Font License 1.1, see `fonts/OFL.txt` (from the STIX project, github.com/stipub/stixfonts, v2.13).
 
 This licensing applies from 10 November 2026 (commit after `3b5f684`). Earlier versions of the book remain under the license they were released with (CC BY 4.0 in `LICENSE`; the preface stated CC BY-SA 4.0).

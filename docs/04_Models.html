@@ -552,7 +552,7 @@ window.Quarto = {
 <p><span id="eq-PIB3"><span class="math display">\[
 \psi(x) = A e^{ikx} + B e^{-ikx},
 \tag{4.3}\]</span></span></p>
-<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants. Using the two constraints in <a href="#eq-PIB2" class="quarto-xref">eq.&nbsp;<span>4.2</span></a>, we get at <span class="math inline">\(x=0\)</span>:</p>
+<p>where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are constants. Using the two constraints in <a href="#eq-PIB2" class="quarto-xref">Eq.&nbsp;<span>4.2</span></a>, we get at <span class="math inline">\(x=0\)</span>:</p>
 <p><span id="eq-PIB4"><span class="math display">\[
 \psi(0) = A + B = 0 \implies B = -A
 \tag{4.4}\]</span></span></p>
@@ -560,7 +560,7 @@ window.Quarto = {
 <p><span id="eq-PIB5"><span class="math display">\[
 \psi(a) = A e^{ika} + B e^{-ika} = 0.
 \tag{4.5}\]</span></span></p>
-<p>Replacing <a href="#eq-PIB4" class="quarto-xref">eq.&nbsp;<span>4.4</span></a> into <a href="#eq-PIB5" class="quarto-xref">eq.&nbsp;<span>4.5</span></a> gives:</p>
+<p>Replacing <a href="#eq-PIB4" class="quarto-xref">Eq.&nbsp;<span>4.4</span></a> into <a href="#eq-PIB5" class="quarto-xref">Eq.&nbsp;<span>4.5</span></a> gives:</p>
 <p><span id="eq-PIB6"><span class="math display">\[
 A e^{ika} - A e^{-ika} = 0
 \tag{4.6}\]</span></span></p>
@@ -580,7 +580,7 @@ e^{i2ka} &amp;= 1.
 k_n = \frac{n\pi}{a} \quad (n = 1, 2, 3,\dots,\infty),
 \tag{4.9}\]</span></span></p>
 <p>which represents an infinite set of functions, <span class="math inline">\(\psi_n(x)\)</span>, determined by a positive integer number <span class="math inline">\(n\)</span>, called <em>quantum number</em>. Since these functions solve the TISEq, they are also called <em>eigenfunctions</em>, but they are not a continuous set, unlike in the previous case.</p>
-<p>Using <a href="#eq-PIB4" class="quarto-xref">eq.&nbsp;<span>4.4</span></a>, the wave functions become:</p>
+<p>Using <a href="#eq-PIB4" class="quarto-xref">Eq.&nbsp;<span>4.4</span></a>, the wave functions become:</p>
 <p><span id="eq-PIB10"><span class="math display">\[
 \psi_n(x) = A \left(e^{i\frac{n\pi x}{a}} - e^{-i\frac{n\pi x}{a}}\right),
 \tag{4.10}\]</span></span></p>
@@ -589,7 +589,7 @@ k_n = \frac{n\pi}{a} \quad (n = 1, 2, 3,\dots,\infty),
 \psi_n(x) = 2iA \frac{e^{i\frac{n\pi x}{a}} - e^{-i\frac{n\pi x}{a}}}{2i} = C \sin\left(\frac{n\pi x}{a}\right)
 \tag{4.11}\]</span></span></p>
 <p>where <span class="math inline">\(C = 2iA\)</span> is a complex constant.</p>
-<p>To calculate the energy eigenvalues, we can replace <a href="#eq-PIB11" class="quarto-xref">eq.&nbsp;<span>4.11</span></a> into <a href="#eq-PIB1" class="quarto-xref">eq.&nbsp;<span>4.1</span></a>, to obtain:</p>
+<p>To calculate the energy eigenvalues, we can replace <a href="#eq-PIB11" class="quarto-xref">Eq.&nbsp;<span>4.11</span></a> into <a href="#eq-PIB1" class="quarto-xref">Eq.&nbsp;<span>4.1</span></a>, to obtain:</p>
 <p><span id="eq-PIB12"><span class="math display">\[
 E_n = n^2 \frac{\pi^2 \hbar^2 }{2 m a^2} = \frac{n^2 h^2}{8 m a^2} \quad (n=1,2,\ldots,\infty).
 \tag{4.12}\]</span></span></p>
@@ -597,29 +597,32 @@ E_n = n^2 \frac{\pi^2 \hbar^2 }{2 m a^2} = \frac{n^2 h^2}{8 m a^2} \quad (n=1,2,
 <p><span id="eq-PIB13"><span class="math display">\[
 E_1 = \frac{\pi^2 \hbar^2 }{2 m a^2}\neq 0.
 \tag{4.13}\]</span></span></p>
-<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we have not determined the constant <span class="math inline">\(C\)</span> yet. We will do so in a moment, using the normalization condition of <a href="03_Schrodinger.html" class="quarto-xref"><span>chapter 3</span></a>.</p>
-<p>The most profound physical insight from the particle in a box solution comes from applying Born’s interpretation of the wave function (<a href="03_Schrodinger.html#sec-BornInterpretation" class="quarto-xref"><span>section 3.2</span></a>). The probability of finding the particle in state <span class="math inline">\(n\)</span> between positions <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span> is <span class="math inline">\(|\psi_n(x)|^2 dx\)</span>, so the probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> tell us where the particle is likely to be found inside the box.</p>
-<p>Since the particle must be somewhere inside the box, the probability of finding it anywhere between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> must be equal to one. This is the normalization condition, <a href="03_Schrodinger.html#eq-born2" class="quarto-xref">eq.&nbsp;<span>3.10</span></a>, with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant <span class="math inline">\(C\)</span>:</p>
+<p>This value is called <em>zero-point energy (ZPE)</em>, and is a purely quantum mechanical effect. Notice that we have not determined the constant <span class="math inline">\(C\)</span> yet. We will do so in a moment, using the normalization condition of <a href="03_Schrodinger.html" class="quarto-xref"><span>Chapter 3</span></a>.</p>
+<p>The most profound physical insight from the particle in a box solution comes from applying Born’s interpretation of the wave function (<a href="03_Schrodinger.html#sec-BornInterpretation" class="quarto-xref"><span>Sec. 3.2</span></a>). The probability of finding the particle in state <span class="math inline">\(n\)</span> between positions <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span> is <span class="math inline">\(|\psi_n(x)|^2 dx\)</span>, so the probability densities <span class="math inline">\(|\psi_n(x)|^2\)</span> tell us where the particle is likely to be found inside the box.</p>
+<p>Since the particle must be somewhere inside the box, the probability of finding it anywhere between <span class="math inline">\(x=0\)</span> and <span class="math inline">\(x=a\)</span> must be equal to one. This is the normalization condition, <a href="03_Schrodinger.html#eq-born2" class="quarto-xref">Eq.&nbsp;<span>3.10</span></a>, with the integral limited to the inside of the box (outside, the wave function is zero), and it is exactly what we need to determine the constant <span class="math inline">\(C\)</span>:</p>
 <p><span id="eq-PIBnorm1"><span class="math display">\[
 \int_0^a |\psi_n(x)|^2\, dx = |C|^2 \int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = 1.
 \tag{4.14}\]</span></span></p>
 <p>Using the trigonometric identity <span class="math inline">\(\sin^2\theta = \frac{1 - \cos(2\theta)}{2}\)</span>, the integral becomes:</p>
 <p><span id="eq-PIBnorm2"><span class="math display">\[
-\int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx = \frac{1}{2}\int_0^a dx - \frac{1}{2}\int_0^a \cos\left(\frac{2n\pi x}{a}\right) dx = \frac{a}{2} - \frac{a}{4n\pi}\Big[\sin\left(\frac{2n\pi x}{a}\right)\Big]_0^a = \frac{a}{2},
+\begin{aligned}
+\int_0^a \sin^2\left(\frac{n\pi x}{a}\right) dx &amp;= \frac{1}{2}\int_0^a dx - \frac{1}{2}\int_0^a \cos\left(\frac{2n\pi x}{a}\right) dx \\
+&amp;= \frac{a}{2} - \frac{a}{4n\pi}\Big[\sin\left(\frac{2n\pi x}{a}\right)\Big]_0^a = \frac{a}{2},
+\end{aligned}
 \tag{4.15}\]</span></span></p>
-<p>since the sine vanishes at both limits. Replacing this result into <a href="#eq-PIBnorm1" class="quarto-xref">eq.&nbsp;<span>4.14</span></a> gives <span class="math inline">\(|C|^2\frac{a}{2}=1\)</span>, or <span class="math inline">\(|C|=\sqrt{\frac{2}{a}}\)</span>. Only the magnitude of <span class="math inline">\(C\)</span> is fixed by this condition, and we can choose it to be real and positive. The normalized eigenfunctions of the particle in a box are therefore:</p>
+<p>since the sine vanishes at both limits. Replacing this result into <a href="#eq-PIBnorm1" class="quarto-xref">Eq.&nbsp;<span>4.14</span></a> gives <span class="math inline">\(|C|^2\frac{a}{2}=1\)</span>, or <span class="math inline">\(|C|=\sqrt{\frac{2}{a}}\)</span>. Only the magnitude of <span class="math inline">\(C\)</span> is fixed by this condition, and we can choose it to be real and positive. The normalized eigenfunctions of the particle in a box are therefore:</p>
 <p><span id="eq-PIBnorm3"><span class="math display">\[
 \psi_n(x) = \sqrt{\frac{2}{a}}\sin\left(\frac{n\pi x}{a}\right) \quad (n=1,2,\ldots,\infty).
 \tag{4.16}\]</span></span></p>
 <p>Notice that the normalization constant is the same for every <span class="math inline">\(n\)</span>, and that it depends only on the size of the box: the larger the box, the more the probability is spread out, and the smaller the amplitude of the wave function. The same condition applies to any system: since the probability of finding the particle somewhere in space must be one, every acceptable wave function must satisfy <span class="math inline">\(\int |\psi|^2\, d\tau = 1\)</span>, where the integral runs over all the coordinates of the system. The probabilistic interpretation also puts some restrictions on what an acceptable wave function can look like. It must be <em>single-valued</em>, since the probability of finding the particle at a given point cannot have two different values. It must be <em>continuous</em> (and, where the potential is finite, so must be its first derivative), since the TISEq contains its second derivative. And it must be <em>finite</em> everywhere, and go to zero at large distances fast enough for the normalization integral to exist. We already used these conditions when we required the wave function to vanish at the walls of the box, and we will use them again for every system in this textbook.</p>
-<p>For the particle in a box eigenfunctions in <a href="#eq-PIB11" class="quarto-xref">eq.&nbsp;<span>4.11</span></a>, the probability density is:</p>
+<p>For the particle in a box eigenfunctions in <a href="#eq-PIB11" class="quarto-xref">Eq.&nbsp;<span>4.11</span></a>, the probability density is:</p>
 <p><span id="eq-PIB14"><span class="math display">\[
 |\psi_n(x)|^2 = |C|^2 \sin^2\left(\frac{n\pi x}{a}\right).
 \tag{4.17}\]</span></span></p>
 <p>This function tells us where the particle is <em>most likely</em> to be found if we measure its position.</p>
 <section id="wave-function-analysis" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="wave-function-analysis"><span class="header-section-number">4.1.1</span> Wave function analysis</h3>
-<p>The main results of the solution of the TISEq for the particle in a box are reported in <a href="#fig-fig1c4" class="quarto-xref">figure&nbsp;<span>4.1</span></a>. In this picture, the first five eigenfunctions are plotted together with their probability densities and spaced according to their energy levels. The non-trivial nodes are also reported.</p>
+<p>The main results of the solution of the TISEq for the particle in a box are reported in <a href="#fig-fig1c4" class="quarto-xref">Fig.&nbsp;<span>4.1</span></a>. In this picture, the first five eigenfunctions are plotted together with their probability densities and spaced according to their energy levels. The non-trivial nodes are also reported.</p>
 <div id="fig-fig1c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first five particle-in-a-box wave functions drawn at heights equal to their energies, which get farther apart as n increases. Each wave function is a sine wave with n minus 1 nodes inside the box, shown with its probability density.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig1c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -630,9 +633,9 @@ Figure&nbsp;4.1: The first five eigenfunctions and energy levels of a particle c
 </figcaption>
 </figure>
 </div>
-<p>Let’s look at <a href="#fig-fig1c4" class="quarto-xref">figure&nbsp;<span>4.1</span></a> and see what it tells us.</p>
+<p>Let’s look at <a href="#fig-fig1c4" class="quarto-xref">Fig.&nbsp;<span>4.1</span></a> and see what it tells us.</p>
 <ol type="1">
-<li><p><strong>Standing waves.</strong> The wave functions are exactly the standing waves of a guitar string (<a href="01_Classical.html#eq-standing4" class="quarto-xref">eq.&nbsp;<span>1.25</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>chapter 1</span></a>). This is not a coincidence: in both cases, a wave is confined between two points where it must vanish, and only the waves that “fit” between them are allowed. For the string, this quantizes the frequency. For the particle, it quantizes the energy.</p></li>
+<li><p><strong>Standing waves.</strong> The wave functions are exactly the standing waves of a guitar string (<a href="01_Classical.html#eq-standing4" class="quarto-xref">Eq.&nbsp;<span>1.25</span></a> in <a href="01_Classical.html" class="quarto-xref"><span>Chapter 1</span></a>). This is not a coincidence: in both cases, a wave is confined between two points where it must vanish, and only the waves that “fit” between them are allowed. For the string, this quantizes the frequency. For the particle, it quantizes the energy.</p></li>
 <li><p><strong>The levels get farther apart.</strong> Since <span class="math inline">\(E_n\propto n^2\)</span>, the gap between two neighboring levels, <span class="math inline">\(E_{n+1}-E_n\propto 2n+1\)</span>, grows with <span class="math inline">\(n\)</span>. The lowest levels are the closest together.</p></li>
 <li><p><strong>Nodes.</strong> The wave function <span class="math inline">\(\psi_n\)</span> is zero, and so is the probability of finding the particle, at <span class="math inline">\(n-1\)</span> points <em>inside</em> the box (the purple dots in the figure). The walls are also zero points, but they are imposed by the boundary conditions, so we do not count them as nodes. The rule “more energy, more nodes” is one that we will meet again in every system in this book.</p></li>
 <li><p><strong>Where is the particle?</strong> The probability density, <span class="math inline">\(|\psi_n|^2\)</span>, is largest halfway between the nodes. In the ground state, the particle is most likely to be found at the center of the box, <span class="math inline">\(x=a/2\)</span>. In the first excited state, instead, the center is a node: the particle is <em>never</em> found there, and it is most likely to be found at <span class="math inline">\(x=a/4\)</span> or <span class="math inline">\(x=3a/4\)</span>.</p></li>
@@ -657,12 +660,18 @@ Example&nbsp;4.1: An electron in a 1 nm box
 <p>An electron is confined in a one-dimensional box of length <span class="math inline">\(a=1.0\;\text{nm}\)</span>, roughly the length of a conjugated molecule such as hexatriene. What are its two lowest energies, and what wavelength of light would it absorb going from <span class="math inline">\(n=1\)</span> to <span class="math inline">\(n=2\)</span>?</p>
 <p><strong>Step 1: the ground state.</strong> With <span class="math inline">\(m_e=9.109\times10^{-31}\;\text{kg}\)</span>:</p>
 <p><span class="math display">\[
-E_1=\frac{h^2}{8m_ea^2}=\frac{(6.626\times10^{-34}\;\text{J s})^2}{8(9.109\times10^{-31}\;\text{kg})(1.0\times10^{-9}\;\text{m})^2}=6.02\times10^{-20}\;\text{J}=0.376\;\text{eV}.
+\begin{aligned}
+E_1=\frac{h^2}{8m_ea^2}&amp;=\frac{(6.626\times10^{-34}\;\text{J s})^2}{8(9.109\times10^{-31}\;\text{kg})(1.0\times10^{-9}\;\text{m})^2}\\
+&amp;=6.02\times10^{-20}\;\text{J}=0.376\;\text{eV}.
+\end{aligned}
 \]</span></p>
 <p><strong>Step 2: the first excited state.</strong> Since <span class="math inline">\(E_n\propto n^2\)</span>, <span class="math inline">\(E_2=4E_1=1.50\;\text{eV}\)</span>.</p>
 <p><strong>Step 3: the transition.</strong> <span class="math inline">\(\Delta E=E_2-E_1=3E_1=1.13\;\text{eV}\)</span>, and the corresponding wavelength is:</p>
 <p><span class="math display">\[
-\lambda=\frac{hc}{\Delta E}=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3\times6.02\times10^{-20}\;\text{J}}=1.10\times10^{-6}\;\text{m}=1100\;\text{nm},
+\begin{aligned}
+\lambda=\frac{hc}{\Delta E}&amp;=\frac{(6.626\times10^{-34}\;\text{J s})(2.998\times10^{8}\;\text{m/s})}{3\times6.02\times10^{-20}\;\text{J}}\\
+&amp;=1.10\times10^{-6}\;\text{m}=1100\;\text{nm},
+\end{aligned}
 \]</span></p>
 <p>in the near infrared. Notice how strongly the result depends on the size of the box: since <span class="math inline">\(E\propto1/a^2\)</span>, a box twice as long would absorb at a wavelength four times longer.</p>
 </div>
@@ -676,7 +685,7 @@ E_1=\frac{h^2}{8m_ea^2}=\frac{(6.626\times10^{-34}\;\text{J s})^2}{8(9.109\times
 <p><span id="eq-PIB3D1"><span class="math display">\[
 -\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\psi(x,y,z) = E\,\psi(x,y,z).
 \tag{4.19}\]</span></span></p>
-<p>Each term of the Hamiltonian acts on only one coordinate. This suggests that we try a wave function written as a product of three functions, each depending on one coordinate only, <span class="math inline">\(\psi(x,y,z)=X(x)Y(y)Z(z)\)</span>. Replacing it in <a href="#eq-PIB3D1" class="quarto-xref">eq.&nbsp;<span>4.19</span></a> and dividing by <span class="math inline">\(XYZ\)</span>, the equation splits into three independent one-dimensional equations, one for each direction, each identical to the one that we just solved. This technique is called <strong>separation of variables</strong>, and we will use it again for the particle on a sphere and for the hydrogen atom. The solutions are products of the one-dimensional solutions, and the energies are sums of the one-dimensional energies:</p>
+<p>Each term of the Hamiltonian acts on only one coordinate. This suggests that we try a wave function written as a product of three functions, each depending on one coordinate only, <span class="math inline">\(\psi(x,y,z)=X(x)Y(y)Z(z)\)</span>. Replacing it in <a href="#eq-PIB3D1" class="quarto-xref">Eq.&nbsp;<span>4.19</span></a> and dividing by <span class="math inline">\(XYZ\)</span>, the equation splits into three independent one-dimensional equations, one for each direction, each identical to the one that we just solved. This technique is called <strong>separation of variables</strong>, and we will use it again for the particle on a sphere and for the hydrogen atom. The solutions are products of the one-dimensional solutions, and the energies are sums of the one-dimensional energies:</p>
 <p><span id="eq-PIB3D2"><span class="math display">\[
 \begin{aligned}
 \psi_{n_x n_y n_z} &amp;= \sqrt{\frac{8}{abc}}\,\sin\frac{n_x\pi x}{a}\,\sin\frac{n_y\pi y}{b}\,\sin\frac{n_z\pi z}{c}, \\
@@ -693,7 +702,7 @@ E_{n_x n_y n_z} &amp;= \frac{h^2}{8m}\left(\frac{n_x^2}{a^2}+\frac{n_y^2}{b^2}+\
 <p><span id="eq-PIB0"><span class="math display">\[
 \frac{d^2\psi(x)}{dx^2} = \frac{1}{r^2} \frac{d^2\psi(\phi)}{d\phi^2},
 \tag{4.21}\]</span></span></p>
-<p>and the time-independent Schrödinger equation can be obtained directly from <a href="#eq-PIB1" class="quarto-xref">eq.&nbsp;<span>4.1</span></a> as:</p>
+<p>and the time-independent Schrödinger equation can be obtained directly from <a href="#eq-PIB1" class="quarto-xref">Eq.&nbsp;<span>4.1</span></a> as:</p>
 <p><span id="eq-PIR1"><span class="math display">\[
 -\frac{\hbar^2}{2m r^2}\frac{d^2\psi(\phi)}{d\phi^2} = E\psi(\phi).
 \tag{4.22}\]</span></span></p>
@@ -731,7 +740,7 @@ E=\frac{L_z^2}{2I},
 <p><span id="eq-PIR8"><span class="math display">\[
 E_{m_\ell} = \frac{\hbar^2 m_\ell^2}{2mr^2} = \frac{\hbar^2 m_\ell^2}{2I}.
 \tag{4.30}\]</span></span></p>
-<p>The energy levels of the particle on a ring are plotted for the first five levels in <a href="#fig-fig5c4" class="quarto-xref">figure&nbsp;<span>4.2</span></a>.</p>
+<p>The energy levels of the particle on a ring are plotted for the first five levels in <a href="#fig-fig5c4" class="quarto-xref">Fig.&nbsp;<span>4.2</span></a>.</p>
 <div id="fig-fig5c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram for the particle on a ring: a single level for m equals 0 and doubly degenerate levels for plus and minus m above it, each drawn with small polar plots of the real and imaginary parts of the wave function.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig5c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -742,7 +751,7 @@ Figure&nbsp;4.2: Energy level diagram and degeneracy pattern for the particle-on
 </figcaption>
 </figure>
 </div>
-<p>Using the definition of kinetic energy for a classical system in <a href="#eq-PIR1b" class="quarto-xref">eq.&nbsp;<span>4.23</span></a>, we get:</p>
+<p>Using the definition of kinetic energy for a classical system in <a href="#eq-PIR1b" class="quarto-xref">Eq.&nbsp;<span>4.23</span></a>, we get:</p>
 <p><span id="eq-PIR9"><span class="math display">\[
 \frac{L_z^2}{2I} = \frac{\hbar^2 m_\ell^2}{2I},
 \tag{4.31}\]</span></span></p>
@@ -750,15 +759,15 @@ Figure&nbsp;4.2: Energy level diagram and degeneracy pattern for the particle-on
 <p><span id="eq-PIR10"><span class="math display">\[
 L_z = \hbar m_\ell \quad (m_\ell = 0, \pm1, \pm2, \ldots, \pm\infty).
 \tag{4.32}\]</span></span></p>
-<p>A rotating charged particle orbiting the ring generates a magnetic moment <span class="math inline">\(\boldsymbol{\mu} \propto \mathbf{L}\)</span>. Thus <a href="#eq-PIR10" class="quarto-xref">eq.&nbsp;<span>4.32</span></a>, which quantizes <span class="math inline">\(L_z\)</span>, explains why <span class="math inline">\(m_\ell\)</span> is called the <strong>magnetic quantum number</strong>. Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (<span class="math inline">\(m_\ell = 0\)</span>), each energy level is doubly degenerate: the states with <span class="math inline">\(m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span> have the same energy. This makes physical sense because rotation in the positive and negative directions (counter-clockwise and clockwise) should have the same energy. Third, the energy does not depend on the sign of <span class="math inline">\(m_\ell\)</span>, which is a consequence of the fact that energy depends on <span class="math inline">\(L_z^2\)</span>, and <span class="math inline">\((-m_\ell)^2 = (m_\ell)^2\)</span>. This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).</p>
+<p>A rotating charged particle orbiting the ring generates a magnetic moment <span class="math inline">\(\boldsymbol{\mu} \propto \mathbf{L}\)</span>. Thus <a href="#eq-PIR10" class="quarto-xref">Eq.&nbsp;<span>4.32</span></a>, which quantizes <span class="math inline">\(L_z\)</span>, explains why <span class="math inline">\(m_\ell\)</span> is called the <strong>magnetic quantum number</strong>. Several important observations can be made from these results. First, the energy eigenvalues form a discrete set, as expected for a confined system. Second, except for the ground state (<span class="math inline">\(m_\ell = 0\)</span>), each energy level is doubly degenerate: the states with <span class="math inline">\(m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span> have the same energy. This makes physical sense because rotation in the positive and negative directions (counter-clockwise and clockwise) should have the same energy. Third, the energy does not depend on the sign of <span class="math inline">\(m_\ell\)</span>, which is a consequence of the fact that energy depends on <span class="math inline">\(L_z^2\)</span>, and <span class="math inline">\((-m_\ell)^2 = (m_\ell)^2\)</span>. This is the first instance we have seen of a degeneracy arising from the symmetry of the system itself (rotational symmetry).</p>
 <section id="wave-function-analysis-1" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="wave-function-analysis-1"><span class="header-section-number">4.3.1</span> Wave function analysis</h3>
-<p>The eigenfunctions in <a href="#eq-PIR5" class="quarto-xref">eq.&nbsp;<span>4.27</span></a> are complex, and this makes them harder to picture than the sines of the particle in a box. Let’s start from the most important property, the probability density:</p>
+<p>The eigenfunctions in <a href="#eq-PIR5" class="quarto-xref">Eq.&nbsp;<span>4.27</span></a> are complex, and this makes them harder to picture than the sines of the particle in a box. Let’s start from the most important property, the probability density:</p>
 <p><span id="eq-PIR11"><span class="math display">\[
 |\psi_{m_\ell}(\phi)|^2 = \psi_{m_\ell}^*\psi_{m_\ell} = \frac{1}{2\pi}e^{-im_\ell\phi}e^{im_\ell\phi} = \frac{1}{2\pi},
 \tag{4.33}\]</span></span></p>
 <p>which is the same everywhere on the ring. In other words, a particle with a definite angular momentum is equally likely to be found anywhere on the ring. This makes sense: if the particle has no preferred position, it has no reason to prefer one point of the ring over another. Notice also that, since <span class="math inline">\(|\psi|^2\)</span> is never zero, <strong>the wave function itself has no nodes</strong>.</p>
-<p>To see what the wave functions look like, we need to draw their real and imaginary parts separately, <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span> and <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. The particle moves along a circle, so the most natural picture draws each part as a height above or below the ring, as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>. Going once around the ring, each part oscillates <span class="math inline">\(|m_\ell|\)</span> times, and it crosses zero <span class="math inline">\(2|m_\ell|\)</span> times. These zero crossings are the nodes of the <em>real and imaginary parts</em>. They are not points where the particle cannot be found, since where one part is zero the other one is not.</p>
+<p>To see what the wave functions look like, we need to draw their real and imaginary parts separately, <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\cos(m_\ell\phi)\)</span> and <span class="math inline">\(\frac{1}{\sqrt{2\pi}}\sin(m_\ell\phi)\)</span>. The particle moves along a circle, so the most natural picture draws each part as a height above or below the ring, as in <a href="#fig-fig2c4" class="quarto-xref">Fig.&nbsp;<span>4.3</span></a>. Going once around the ring, each part oscillates <span class="math inline">\(|m_\ell|\)</span> times, and it crosses zero <span class="math inline">\(2|m_\ell|\)</span> times. These zero crossings are the nodes of the <em>real and imaginary parts</em>. They are not points where the particle cannot be found, since where one part is zero the other one is not.</p>
 <div id="fig-fig2c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional plots of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2. The real and imaginary parts are drawn as heights above and below a circle, oscillating around it with 2 times the absolute value of m nodes.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig2c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -769,14 +778,14 @@ Figure&nbsp;4.3: Real (left) and imaginary (right) parts of the particle-on-a-ri
 </figcaption>
 </figure>
 </div>
-<p>The same information can be shown as a color map on the ring, seen from above (<a href="#fig-fig3c4" class="quarto-xref">figure&nbsp;<span>4.4</span></a>), with red for positive values and blue for negative ones, or as a polar plot (<a href="#fig-fig4c4" class="quarto-xref">figure&nbsp;<span>4.5</span></a>), where the distance from the center is the value of the function at each angle. Polar plots look a lot like the orbital pictures of general chemistry, so let’s be careful: the “lobes” are not regions where the particle is more likely to be. The particle is always on the ring, and it is equally likely to be anywhere on it. The lobes are just another way of drawing how the real and imaginary parts change with the angle.</p>
+<p>The same information can be shown as a color map on the ring, seen from above (<a href="#fig-fig3c4" class="quarto-xref">Fig.&nbsp;<span>4.4</span></a>), with red for positive values and blue for negative ones, or as a polar plot (<a href="#fig-fig4c4" class="quarto-xref">Fig.&nbsp;<span>4.5</span></a>), where the distance from the center is the value of the function at each angle. Polar plots look a lot like the orbital pictures of general chemistry, so let’s be careful: the “lobes” are not regions where the particle is more likely to be. The particle is always on the ring, and it is equally likely to be anywhere on it. The lobes are just another way of drawing how the real and imaginary parts change with the angle.</p>
 <div id="fig-fig3c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/PIR_top.png" class="img-fluid figure-img" style="width:50.0%" alt="Top-down color maps of particle-on-a-ring wave functions for m equals 0, plus and minus 1, and plus and minus 2, real parts on the left and imaginary parts on the right, with positive and negative regions alternating around the ring.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fig3c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.4: The same wave functions as in <a href="#fig-fig2c4" class="quarto-xref">figure&nbsp;<span>4.3</span></a>, seen from above as color maps on the ring (red: positive, blue: negative, white: zero).
+Figure&nbsp;4.4: The same wave functions as in <a href="#fig-fig2c4" class="quarto-xref">Fig.&nbsp;<span>4.3</span></a>, seen from above as color maps on the ring (red: positive, blue: negative, white: zero).
 </figcaption>
 </figure>
 </div>
@@ -794,8 +803,8 @@ Figure&nbsp;4.5: Polar plots of the real (left) and imaginary (right) parts of t
 </section>
 <section id="the-particle-on-a-sphere" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="the-particle-on-a-sphere"><span class="header-section-number">4.4</span> The Particle on a Sphere</h2>
-<p>Let’s now move from a circle to the surface of a sphere: a particle free to move anywhere on a sphere of radius <span class="math inline">\(r\)</span>, but never closer to or farther from the center. This model describes, for example, a rotating diatomic molecule (the <em>rigid rotor</em>, two masses at a fixed distance, which we will use in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>), and, as we will see in the next chapter, it gives the angular part of the hydrogen atom.</p>
-<p>On a sphere, the natural coordinates are two angles: <span class="math inline">\(\theta\)</span>, measured down from the north pole (<span class="math inline">\(0\le\theta\le\pi\)</span>), and <span class="math inline">\(\phi\)</span>, measured around the <span class="math inline">\(z\)</span> axis (<span class="math inline">\(0\le\phi&lt;2\pi\)</span>), exactly as on the ring (spherical coordinates are reviewed in <a href="A1_Math.html#sec-MathCoordinates" class="quarto-xref"><span>section A.4</span></a>). Since <span class="math inline">\(r\)</span> is fixed, only the angular part of the kinetic energy remains, and the TISEq is:</p>
+<p>Let’s now move from a circle to the surface of a sphere: a particle free to move anywhere on a sphere of radius <span class="math inline">\(r\)</span>, but never closer to or farther from the center. This model describes, for example, a rotating diatomic molecule (the <em>rigid rotor</em>, two masses at a fixed distance, which we will use in <a href="13_Spectroscopy.html" class="quarto-xref"><span>Chapter 13</span></a>), and, as we will see in the next chapter, it gives the angular part of the hydrogen atom.</p>
+<p>On a sphere, the natural coordinates are two angles: <span class="math inline">\(\theta\)</span>, measured down from the north pole (<span class="math inline">\(0\le\theta\le\pi\)</span>), and <span class="math inline">\(\phi\)</span>, measured around the <span class="math inline">\(z\)</span> axis (<span class="math inline">\(0\le\phi&lt;2\pi\)</span>), exactly as on the ring (spherical coordinates are reviewed in <a href="A1_Math.html#sec-MathCoordinates" class="quarto-xref"><span>Sec. A.4</span></a>). Since <span class="math inline">\(r\)</span> is fixed, only the angular part of the kinetic energy remains, and the TISEq is:</p>
 <p><span id="eq-RR1"><span class="math display">\[
 - \frac{\hbar^2}{2I} \left[ \frac{1}{\sin \theta}
 \frac{\partial}{\partial \theta} \left(\sin\theta\frac{\partial}{\partial \theta} \right) + \frac{1}{\sin^2 \theta} \frac{\partial^2}{\partial \phi^2} \right] \psi(\theta,\phi) = E \psi(\theta,\phi),
@@ -811,7 +820,7 @@ E_{\ell} = \frac{\hbar^2}{2I} \ell(\ell+1)\quad (\ell=0,1,2,\ldots).
 <p>Two things are new compared with the ring:</p>
 <ol type="1">
 <li><strong>Two quantum numbers.</strong> The particle on a sphere has two degrees of freedom, so it needs two quantum numbers: <span class="math inline">\(\ell=0,1,2,\ldots\)</span> and <span class="math inline">\(m_\ell=-\ell,\ldots,+\ell\)</span>. The first one fixes the <em>magnitude</em> of the angular momentum, <span class="math inline">\(|\mathbf{L}|=\hbar\sqrt{\ell(\ell+1)}\)</span>, and therefore the energy. The second one fixes its <em>component along <span class="math inline">\(z\)</span></em>, <span class="math inline">\(L_z=m_\ell\hbar\)</span>, as for the ring.</li>
-<li><strong>Degeneracy.</strong> The energy depends only on <span class="math inline">\(\ell\)</span>. Since the sphere looks the same in every direction, the energy cannot depend on how the angular momentum is oriented, that is, on <span class="math inline">\(m_\ell\)</span> (we will come back to this idea in <a href="07_Spin.html#sec-CommutingH" class="quarto-xref"><span>section 7.4</span></a>). Each level is therefore <span class="math inline">\((2\ell+1)\)</span>-fold degenerate, as shown in <a href="#fig-fig5bc4" class="quarto-xref">figure&nbsp;<span>4.6</span></a>.</li>
+<li><strong>Degeneracy.</strong> The energy depends only on <span class="math inline">\(\ell\)</span>. Since the sphere looks the same in every direction, the energy cannot depend on how the angular momentum is oriented, that is, on <span class="math inline">\(m_\ell\)</span> (we will come back to this idea in <a href="07_Spin.html#sec-CommutingH" class="quarto-xref"><span>Sec. 7.4</span></a>). Each level is therefore <span class="math inline">\((2\ell+1)\)</span>-fold degenerate, as shown in <a href="#fig-fig5bc4" class="quarto-xref">Fig.&nbsp;<span>4.6</span></a>.</li>
 </ol>
 <div id="fig-fig5bc4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Energy level diagram for the particle on a sphere, with one level for l equals 0, three degenerate levels for l equals 1, and five for l equals 2, each level farther from the previous one.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -860,7 +869,7 @@ Y_2^{2}(\theta,\phi) &amp;= \frac{1}{4}\sqrt{\frac{15}{2\pi}}\, e^{2i\phi} \sin^
 </div>
 </div>
 </div>
-<p>As for the ring, the functions with <span class="math inline">\(m_\ell\neq0\)</span> are complex, so we draw their real and imaginary parts separately. The most faithful picture is a color map on the sphere itself (<a href="#fig-fig6c4" class="quarto-xref">figure&nbsp;<span>4.7</span></a> for the real parts and <a href="#fig-fig7c4" class="quarto-xref">figure&nbsp;<span>4.8</span></a> for the imaginary parts): red where the function is positive, blue where it is negative, and white where it is zero. These zero lines are the angular nodes. Each real or imaginary part has <span class="math inline">\(\ell\)</span> of them, the same rule “more energy, more nodes” that we found for the box and the ring.</p>
+<p>As for the ring, the functions with <span class="math inline">\(m_\ell\neq0\)</span> are complex, so we draw their real and imaginary parts separately. The most faithful picture is a color map on the sphere itself (<a href="#fig-fig6c4" class="quarto-xref">Fig.&nbsp;<span>4.7</span></a> for the real parts and <a href="#fig-fig7c4" class="quarto-xref">Fig.&nbsp;<span>4.8</span></a> for the imaginary parts): red where the function is positive, blue where it is negative, and white where it is zero. These zero lines are the angular nodes. Each real or imaginary part has <span class="math inline">\(\ell\)</span> of them, the same rule “more energy, more nodes” that we found for the box and the ring.</p>
 <div id="fig-fig6c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Color maps on spheres of the real part of the spherical harmonics for l equals 0, 1, and 2, with red positive and blue negative regions separated by nodal lines whose number equals l.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig6c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -881,7 +890,7 @@ Figure&nbsp;4.8: Imaginary parts of the spherical harmonics for <span class="mat
 </figcaption>
 </figure>
 </div>
-<p>The probability of finding the particle at each point of the sphere is <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span>, shown in <a href="#fig-fig8c4" class="quarto-xref">figure&nbsp;<span>4.9</span></a>. Unlike the ring, this probability is <strong>not</strong> uniform. The formulas in the box above make this easy to see:</p>
+<p>The probability of finding the particle at each point of the sphere is <span class="math inline">\(|Y_\ell^{m_\ell}|^2\)</span>, shown in <a href="#fig-fig8c4" class="quarto-xref">Fig.&nbsp;<span>4.9</span></a>. Unlike the ring, this probability is <strong>not</strong> uniform. The formulas in the box above make this easy to see:</p>
 <ul>
 <li><span class="math inline">\(Y_0^0\)</span> is a constant, so the particle is equally likely to be anywhere on the sphere.</li>
 <li><span class="math inline">\(|Y_1^0|^2\propto\cos^2\theta\)</span> is largest at the poles and zero on the equator.</li>
@@ -897,7 +906,7 @@ Figure&nbsp;4.9: Probability density <span class="math inline">\(|Y_\ell^{m_\ell
 </figcaption>
 </figure>
 </div>
-<p>Finally, the spherical harmonics are often drawn as in <a href="#fig-fig9c4" class="quarto-xref">figure&nbsp;<span>4.10</span></a> and <a href="#fig-fig10c4" class="quarto-xref">figure&nbsp;<span>4.11</span></a>: each point of the sphere is pushed outward by an amount proportional to the absolute value of the real (or imaginary) part, and colored by its sign. These are the three-dimensional versions of the polar plots of the ring, and they show the nodes as flat planes (or cones, as for <span class="math inline">\(Y_2^0\)</span>). They also look very much like the “orbital pictures” of general chemistry, so the same warning applies here: <strong>the lobes are not where the particle is.</strong> The particle is always on the surface of the sphere. The lobes are just a way of drawing the angular function, and their size has nothing to do with the size of anything physical. We will meet the same warning again, and for the same reason, when we discuss the orbitals of the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>chapter 5</span></a>.</p>
+<p>Finally, the spherical harmonics are often drawn as in <a href="#fig-fig9c4" class="quarto-xref">Fig.&nbsp;<span>4.10</span></a> and <a href="#fig-fig10c4" class="quarto-xref">Fig.&nbsp;<span>4.11</span></a>: each point of the sphere is pushed outward by an amount proportional to the absolute value of the real (or imaginary) part, and colored by its sign. These are the three-dimensional versions of the polar plots of the ring, and they show the nodes as flat planes (or cones, as for <span class="math inline">\(Y_2^0\)</span>). They also look very much like the “orbital pictures” of general chemistry, so the same warning applies here: <strong>the lobes are not where the particle is.</strong> The particle is always on the surface of the sphere. The lobes are just a way of drawing the angular function, and their size has nothing to do with the size of anything physical. We will meet the same warning again, and for the same reason, when we discuss the orbitals of the hydrogen atom in <a href="05_Hydrogen.html" class="quarto-xref"><span>Chapter 5</span></a>.</p>
 <div id="fig-fig9c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Three-dimensional lobe shapes of the real part of the spherical harmonics for l equals 0, 1, and 2: a sphere, dumbbell shapes, and four-lobed and ring shapes, colored red where positive and blue where negative, with nodal surfaces marked.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fig9c4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -926,7 +935,7 @@ Figure&nbsp;4.11: Imaginary parts of the spherical harmonics drawn as deformed s
 <p><span id="eq-HO1"><span class="math display">\[
 V(x) = - \int (-kx)\, dx = \frac{1}{2} kx^2,
 \tag{4.37}\]</span></span></p>
-<p>where we have chosen <span class="math inline">\(V=0\)</span> at the equilibrium position. This simple parabola is more important than it looks: close to the bottom of <em>any</em> potential energy well, the potential looks like a parabola. This is why the harmonic oscillator is the starting point for describing the vibrations of molecules (<a href="10_Molecules.html" class="quarto-xref"><span>chapter 10</span></a> and <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>), where <span class="math inline">\(\mu\)</span> is the reduced mass of the vibrating atoms. The TISEq is:</p>
+<p>where we have chosen <span class="math inline">\(V=0\)</span> at the equilibrium position. This simple parabola is more important than it looks: close to the bottom of <em>any</em> potential energy well, the potential looks like a parabola. This is why the harmonic oscillator is the starting point for describing the vibrations of molecules (<a href="10_Molecules.html" class="quarto-xref"><span>Chapter 10</span></a> and <a href="13_Spectroscopy.html" class="quarto-xref"><span>Chapter 13</span></a>), where <span class="math inline">\(\mu\)</span> is the reduced mass of the vibrating atoms. The TISEq is:</p>
 <p><span id="eq-HO2"><span class="math display">\[
 - \frac{\hbar^2}{2 \mu} \frac{d^2\psi}{dx^2} + \frac{1}{2} kx^2 \psi(x) = E \psi(x).
 \tag{4.38}\]</span></span></p>
@@ -946,7 +955,7 @@ E_n = \hbar \omega \left(n + \frac{1}{2} \right), \qquad \omega = \sqrt{\frac{k}
 <p><span id="eq-zpeH"><span class="math display">\[
 E_0 = \frac{1}{2} \hbar \omega \neq 0.
 \tag{4.42}\]</span></span></p>
-<p>This means that a quantum oscillator can never be completely at rest at the bottom of the well. Even at absolute zero, the atoms of a molecule keep vibrating. This zero-point vibration is real and measurable: for example, it is the main reason why bonds to deuterium are slightly stronger than bonds to hydrogen (<a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>).</p>
+<p>This means that a quantum oscillator can never be completely at rest at the bottom of the well. Even at absolute zero, the atoms of a molecule keep vibrating. This zero-point vibration is real and measurable: for example, it is the main reason why bonds to deuterium are slightly stronger than bonds to hydrogen (<a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>).</p>
 <section id="wave-function-analysis-3" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="wave-function-analysis-3"><span class="header-section-number">4.5.1</span> Wave function analysis</h3>
 <div id="fig-fig11c4" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The first five harmonic oscillator wave functions drawn inside a parabolic potential at heights equal to their equally spaced energies, each with n nodes and its probability density.">
@@ -959,11 +968,11 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 </figcaption>
 </figure>
 </div>
-<p>Let’s look at <a href="#fig-fig11c4" class="quarto-xref">figure&nbsp;<span>4.12</span></a>:</p>
+<p>Let’s look at <a href="#fig-fig11c4" class="quarto-xref">Fig.&nbsp;<span>4.12</span></a>:</p>
 <ol type="1">
-<li><strong>Equally spaced levels.</strong> Unlike the particle in a box, the levels of the harmonic oscillator are all separated by the same amount, <span class="math inline">\(\hbar\omega\)</span>. As we will see in <a href="13_Spectroscopy.html" class="quarto-xref"><span>chapter 13</span></a>, this is why a vibrating molecule absorbs light at one main frequency.</li>
+<li><strong>Equally spaced levels.</strong> Unlike the particle in a box, the levels of the harmonic oscillator are all separated by the same amount, <span class="math inline">\(\hbar\omega\)</span>. As we will see in <a href="13_Spectroscopy.html" class="quarto-xref"><span>Chapter 13</span></a>, this is why a vibrating molecule absorbs light at one main frequency.</li>
 <li><strong>Nodes.</strong> The ground state (<span class="math inline">\(n=0\)</span>) is a Gaussian with no nodes, and each level adds one node: <span class="math inline">\(\psi_n\)</span> has <span class="math inline">\(n\)</span> nodes, the same rule “more energy, more nodes” that we found for all the other systems.</li>
-<li><strong>Beyond the classical limits.</strong> A classical oscillator with energy <span class="math inline">\(E\)</span> can never go beyond the points where <span class="math inline">\(V(x)=E\)</span>, called the <em>classical turning points</em>: there, all its energy is potential energy, and it turns back. The quantum wave functions, instead, do not stop at the turning points. They decay quickly but smoothly, so there is a small probability of finding the particle in the classically forbidden region. This is the same effect that allows a particle to tunnel through a barrier (<a href="08_Weirdness.html" class="quarto-xref"><span>chapter 8</span></a>).</li>
+<li><strong>Beyond the classical limits.</strong> A classical oscillator with energy <span class="math inline">\(E\)</span> can never go beyond the points where <span class="math inline">\(V(x)=E\)</span>, called the <em>classical turning points</em>: there, all its energy is potential energy, and it turns back. The quantum wave functions, instead, do not stop at the turning points. They decay quickly but smoothly, so there is a small probability of finding the particle in the classically forbidden region. This is the same effect that allows a particle to tunnel through a barrier (<a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>).</li>
 <li><strong>The classical limit again.</strong> For large <span class="math inline">\(n\)</span>, the probability density is largest near the turning points. This is what we expect classically: a mass on a spring moves slowest near the turning points, so it spends most of its time there.</li>
 </ol>
 </section>
@@ -984,131 +993,91 @@ Figure&nbsp;4.12: The first five eigenfunctions and energy levels of a particle 
 <h3 data-number="4.6.2" class="anchored" data-anchor-id="sec-quest4"><span class="header-section-number">4.6.2</span> Study Questions</h3>
 <p><strong>1. The energy levels of a particle of mass <span class="math inline">\(m\)</span> in a one-dimensional box of length <span class="math inline">\(a\)</span> are:</strong></p>
 <ol type="a">
-<li><span class="math inline">\(E_n=\frac{nh^2}{8ma^2}\)</span>, with <span class="math inline">\(n=0,1,2,\ldots\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=\hbar\omega(n+\frac{1}{2})\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=\frac{n^2h^2}{8ma^2}\)</span>, with <span class="math inline">\(n=1,2,3,\ldots\)</span><br>
-</li>
-<li><span class="math inline">\(E_n=-\frac{1}{2n^2}E_h\)</span><br>
-</li>
+<li><span class="math inline">\(E_n=\frac{nh^2}{8ma^2}\)</span>, with <span class="math inline">\(n=0,1,2,\ldots\)</span></li>
+<li><span class="math inline">\(E_n=\hbar\omega(n+\frac{1}{2})\)</span></li>
+<li><span class="math inline">\(E_n=\frac{n^2h^2}{8ma^2}\)</span>, with <span class="math inline">\(n=1,2,3,\ldots\)</span></li>
+<li><span class="math inline">\(E_n=-\frac{1}{2n^2}E_h\)</span></li>
 <li>any non-negative value</li>
 </ol>
 <hr>
 <p><strong>2. Why is the lowest energy of the particle in a box not zero?</strong></p>
 <ol type="a">
-<li>because the walls repel the particle<br>
-</li>
-<li>because the particle always moves at the speed of light<br>
-</li>
-<li>because energy is never zero in classical physics<br>
-</li>
-<li>because <span class="math inline">\(n=0\)</span> would give a wave function equal to zero everywhere, that is, no particle<br>
-</li>
+<li>because the walls repel the particle</li>
+<li>because the particle always moves at the speed of light</li>
+<li>because energy is never zero in classical physics</li>
+<li>because <span class="math inline">\(n=0\)</span> would give a wave function equal to zero everywhere, that is, no particle</li>
 <li>because of the Coulomb attraction to the walls</li>
 </ol>
 <hr>
 <p><strong>3. How many nodes inside the box does the particle-in-a-box wave function <span class="math inline">\(\psi_n\)</span> have?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(n-1\)</span><br>
-</li>
-<li><span class="math inline">\(n\)</span><br>
-</li>
-<li><span class="math inline">\(n+1\)</span><br>
-</li>
-<li><span class="math inline">\(2n\)</span><br>
-</li>
+<li><span class="math inline">\(n-1\)</span></li>
+<li><span class="math inline">\(n\)</span></li>
+<li><span class="math inline">\(n+1\)</span></li>
+<li><span class="math inline">\(2n\)</span></li>
 <li>none, for every <span class="math inline">\(n\)</span></li>
 </ol>
 <hr>
 <p><strong>4. For the first excited state of the particle in a box (<span class="math inline">\(n=2\)</span>), the probability of finding the particle at the center of the box is:</strong></p>
 <ol type="a">
-<li>the largest in the box<br>
-</li>
-<li>the same as anywhere else in the box<br>
-</li>
-<li>one<br>
-</li>
-<li>zero<br>
-</li>
+<li>the largest in the box</li>
+<li>the same as anywhere else in the box</li>
+<li>one</li>
+<li>zero</li>
 <li>negative</li>
 </ol>
 <hr>
 <p><strong>5. In a cubic box, the states <span class="math inline">\((n_x,n_y,n_z)=(1,1,2)\)</span>, <span class="math inline">\((1,2,1)\)</span>, and <span class="math inline">\((2,1,1)\)</span>:</strong></p>
 <ol type="a">
-<li>have different energies<br>
-</li>
-<li>are not allowed<br>
-</li>
-<li>have the same energy, because the three directions of the cube are equivalent<br>
-</li>
-<li>have zero energy<br>
-</li>
+<li>have different energies</li>
+<li>are not allowed</li>
+<li>have the same energy, because the three directions of the cube are equivalent</li>
+<li>have zero energy</li>
 <li>are the same state</li>
 </ol>
 <hr>
 <p><strong>6. For a particle on a ring, the energy levels with <span class="math inline">\(m_\ell\neq0\)</span> are:</strong></p>
 <ol type="a">
-<li>not degenerate<br>
-</li>
-<li>triply degenerate<br>
-</li>
-<li>all at zero energy<br>
-</li>
-<li>equally spaced<br>
-</li>
+<li>not degenerate</li>
+<li>triply degenerate</li>
+<li>all at zero energy</li>
+<li>equally spaced</li>
 <li>doubly degenerate, since <span class="math inline">\(+m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span> (rotation in opposite directions) have the same energy</li>
 </ol>
 <hr>
 <p><strong>7. For a particle on a ring in a state with definite angular momentum, the probability density is:</strong></p>
 <ol type="a">
-<li>largest at <span class="math inline">\(\phi=0\)</span><br>
-</li>
-<li>the same everywhere on the ring, and the wave function has no nodes<br>
-</li>
-<li>zero at <span class="math inline">\(2|m_\ell|\)</span> points<br>
-</li>
-<li>largest at the center of the ring<br>
-</li>
+<li>largest at <span class="math inline">\(\phi=0\)</span></li>
+<li>the same everywhere on the ring, and the wave function has no nodes</li>
+<li>zero at <span class="math inline">\(2|m_\ell|\)</span> points</li>
+<li>largest at the center of the ring</li>
 <li>different for <span class="math inline">\(+m_\ell\)</span> and <span class="math inline">\(-m_\ell\)</span></li>
 </ol>
 <hr>
 <p><strong>8. How many states have the same energy <span class="math inline">\(E_\ell\)</span> for a particle on a sphere?</strong></p>
 <ol type="a">
-<li><span class="math inline">\(2\ell+1\)</span><br>
-</li>
-<li><span class="math inline">\(\ell\)</span><br>
-</li>
-<li><span class="math inline">\(2\ell\)</span><br>
-</li>
-<li><span class="math inline">\(\ell^2\)</span><br>
-</li>
+<li><span class="math inline">\(2\ell+1\)</span></li>
+<li><span class="math inline">\(\ell\)</span></li>
+<li><span class="math inline">\(2\ell\)</span></li>
+<li><span class="math inline">\(\ell^2\)</span></li>
 <li>one</li>
 </ol>
 <hr>
 <p><strong>9. The energy levels of the harmonic oscillator are:</strong></p>
 <ol type="a">
-<li>equally spaced by <span class="math inline">\(\hbar\omega\)</span>, with the lowest one at zero<br>
-</li>
-<li>farther apart as <span class="math inline">\(n\)</span> increases<br>
-</li>
-<li>closer together as <span class="math inline">\(n\)</span> increases<br>
-</li>
-<li>continuous<br>
-</li>
+<li>equally spaced by <span class="math inline">\(\hbar\omega\)</span>, with the lowest one at zero</li>
+<li>farther apart as <span class="math inline">\(n\)</span> increases</li>
+<li>closer together as <span class="math inline">\(n\)</span> increases</li>
+<li>continuous</li>
 <li>equally spaced by <span class="math inline">\(\hbar\omega\)</span>, with the lowest one at <span class="math inline">\(\frac{1}{2}\hbar\omega\)</span></li>
 </ol>
 <hr>
 <p><strong>10. Can a quantum harmonic oscillator be found beyond its classical turning points?</strong></p>
 <ol type="a">
-<li>no, the wave function is exactly zero there<br>
-</li>
-<li>yes, with a small probability, since the wave function decays smoothly beyond them<br>
-</li>
-<li>yes, with the same probability as near the center<br>
-</li>
-<li>only in the ground state<br>
-</li>
+<li>no, the wave function is exactly zero there</li>
+<li>yes, with a small probability, since the wave function decays smoothly beyond them</li>
+<li>yes, with the same probability as near the center</li>
+<li>only in the ground state</li>
 <li>only if its energy is larger than the potential</li>
 </ol>
 <hr>
