@@ -82,30 +82,32 @@ The mathematics of quantum mechanics is not in question: it has been tested in c
 
 In this textbook, as in most chemistry textbooks, we use the language of the **Copenhagen interpretation**, developed in the 1920s mainly by Niels Bohr and Werner Heisenberg. In this view, the wave function encodes everything that can be known about a system, it evolves according to the Schrödinger equation between measurements, and it collapses when a measurement is made, as described above. The Copenhagen interpretation is convenient for calculations, and it is the reason why we talk about "measurements" and "collapse" at all. However, it is now widely regarded as antiquated and incomplete. It divides the world into a quantum system and a classical measuring apparatus, but it never says where the boundary between the two is, nor why the apparatus, which is itself made of atoms, should not obey quantum mechanics. It adds the collapse as a separate rule, without explaining it. In other words, the Copenhagen interpretation does not solve the measurement problem; it simply declares it out of bounds.
 
-Several modern alternatives address these shortcomings. All of them reproduce the successful predictions of quantum mechanics, but they paint very different pictures of reality:
+Many physicists, and even more chemists, are happy to stop here. The theory works, its predictions have never failed, and every interpretation gives the same numbers, so why worry about what the wave function "really" is? This pragmatic attitude is often summarized as **"shut up and calculate,"** a phrase coined by the physicist David Mermin in 1989 (and often wrongly attributed to Richard Feynman). It is a perfectly reasonable way to *use* quantum mechanics, and it is, in practice, the attitude of most working scientists and of this textbook. It does not, however, answer any of the questions above: it only decides not to ask them. The physicists and philosophers who do ask them have proposed many alternatives to the Copenhagen interpretation. All of them reproduce the successful predictions of quantum mechanics, but they paint very different pictures of reality. We can group them into four broad classes:
 
-- **Hidden variables.** The idea that the wave function is an incomplete description, and that additional "hidden" variables determine the outcome of each measurement, goes back to Albert Einstein, who famously disliked the randomness of quantum mechanics. In 1964, John Bell proved that any theory of this kind that is also *local* (where nothing travels faster than light) must make predictions that differ from those of quantum mechanics. Experiments, starting in the 1970s and recognized with the Nobel Prize in Physics in 2022, have confirmed the predictions of quantum mechanics and ruled out local hidden variables. Hidden variable theories are still possible, but they must be *nonlocal*.
+- **Hidden variables.** The idea that the wave function is an incomplete description, and that additional "hidden" variables determine the outcome of each measurement, goes back to Albert Einstein, who famously disliked the randomness of quantum mechanics. In 1964, John Bell proved that any theory of this kind that is also *local* (where nothing travels faster than light) must make predictions that differ from those of quantum mechanics. Experiments, starting in the 1970s and recognized with the Nobel Prize in Physics in 2022, have confirmed the predictions of quantum mechanics and ruled out local hidden variables. Hidden variable theories are still possible, but they must be *nonlocal*. The best known one is **Bohmian mechanics** (also called the de Broglie–Bohm or *pilot-wave* theory), proposed by Louis de Broglie in 1927 and developed by David Bohm in 1952. In this view, particles always have definite positions and follow well-defined trajectories, and the wave function is a real field that guides their motion. There is no collapse: a measurement simply reveals where the particles already are, and the randomness of the outcomes comes from our ignorance of their exact initial positions. This is the picture closest to the way chemists usually think: electrons are particles that are actually somewhere, and molecules have real shapes. Its price is nonlocality: the motion of each particle depends instantaneously on the positions of all the others.
 
-- **Bohmian mechanics** (also called the de Broglie–Bohm or *pilot-wave* theory), proposed by Louis de Broglie in 1927 and developed by David Bohm in 1952, is the best known nonlocal hidden variable theory. In this view, particles always have definite positions and follow well-defined trajectories, and the wave function is a real field that guides their motion, according to an equation derived from the Schrödinger equation. There is no collapse: a measurement simply reveals where the particles already are, and the randomness of the outcomes comes from our ignorance of their exact initial positions. Bohmian mechanics is the interpretation closest to the way chemists usually think: electrons are particles that are actually somewhere, molecules have real shapes, and nuclei and electrons move along trajectories. Its price is nonlocality: the motion of each particle depends instantaneously on the positions of all the others.
-
-- **Many worlds**, proposed by Hugh Everett in 1957, takes the opposite route: it keeps the Schrödinger equation and nothing else. There is no collapse and no special role for measurements. When a measuring device interacts with a superposition, the device, the observer, and eventually the whole universe become part of the superposition, which splits into *branches*, one for each possible outcome. Each branch contains a version of the observer who sees one definite result, and decoherence prevents the branches from interacting with each other. Many worlds is the most mathematically and philosophically clean of all the interpretations, since it requires no additional rules beyond the equation that we already use. Its price is a reality much larger than the one we see, and the difficulty of explaining why the probabilities of the outcomes are given by $|c_i|^2$ when all of them actually happen.
+- **Many worlds**, proposed by Hugh Everett in 1957, takes the opposite route: it keeps the Schrödinger equation and nothing else. There is no collapse and no special role for measurements. When a measuring device interacts with a superposition, the device, the observer, and eventually the whole universe become part of the superposition, which splits into *branches*, one for each possible outcome. Each branch contains a version of the observer who sees one definite result, and decoherence prevents the branches from interacting with each other. Many worlds is the most mathematically clean of all the interpretations, since it requires no additional rules beyond the equation that we already use. Its price is a reality much larger than the one we see, and the difficulty of explaining why the probabilities of the outcomes are given by $|c_i|^2$ when all of them actually happen.
 
 - **Spontaneous collapse theories**, such as the one proposed by Giancarlo Ghirardi, Alberto Rimini, and Tullio Weber in 1986, treat the collapse as a real physical process and modify the Schrödinger equation to include it. In these theories, the wave function of any particle collapses spontaneously and at random, but extremely rarely (about once every hundred million years for a single particle). A macroscopic object, however, contains so many particles that one of them collapses almost immediately, dragging the whole object with it, which explains why we never see a cat or a measuring device in a superposition. Unlike the other interpretations, these theories make predictions that differ slightly from standard quantum mechanics, and they are currently being tested in experiments.
 
-The main features of these interpretations are summarized in @tbl-tab1c8.
+- **Other interpretations.** Several more interpretations have a smaller, but active, following. *Neo-Copenhagen* views update Bohr's ideas, often by treating the wave function as a description of the information that we have about a system rather than of the system itself. *QBism* (quantum Bayesianism), developed by Christopher Fuchs, Rüdiger Schack, and others, goes further: the wave function expresses the personal degrees of belief of the agent who uses it, and the collapse is simply the agent updating those beliefs after seeing a result. *Relational quantum mechanics*, proposed by Carlo Rovelli in 1996, holds that the properties of a system are not absolute, but only defined relative to the other systems that interact with it. Other proposals include *consistent histories* (Robert Griffiths, Roland Omnès, Murray Gell-Mann, and James Hartle) and the *transactional interpretation* (John Cramer). The idea, suggested by John von Neumann and Eugene Wigner, that the collapse is caused by the consciousness of the observer, is now largely abandoned.
+
+The main features of the Copenhagen interpretation and of the three main classes of alternatives are summarized in @tbl-tab1c8.
 
 ```{=latex}
 \begingroup\small\setlength{\tabcolsep}{4pt}\hyphenpenalty=10000\exhyphenpenalty=10000
 ```
 
-| Interpretation | What is the wave function? | Collapse? | Definite positions? | Deterministic? |
-|:--------------------|:------------------------|:------------------------|:------------------|:--------------|
-| Copenhagen | Tool to compute probabilities | Yes, upon measurement (not explained) | No, until measured | No |
-| Bohmian mechanics | Real field guiding the particles | No (only apparent) | Yes, always | Yes |
-| Many worlds | Real, and the only thing that exists | No (branching instead) | Yes, in each branch | Yes |
-| Spontaneous collapse | Real | Yes, as a random physical process | Only after collapse | No |
+| | Copenhagen | Hidden variables | Many worlds | Spontaneous collapse |
+|:-----------|:---------------|:---------------|:---------------|:---------------|
+| **What is the wave function?** | A tool to compute probabilities | A real field that guides the particles | Real, and the only thing that exists | Real |
+| **Collapse?** | Yes, upon measurement (not explained) | No (only apparent) | No (branching instead) | Yes, as a random physical process |
+| **Definite positions?** | No, until measured | Yes, always | Yes, in each branch | Only after a collapse |
+| **Deterministic?** | No | Yes | Yes | No |
+| **Pros** | Simple and practical; the language of most textbooks | Particles are really somewhere, close to the chemist's intuition | Only the Schrödinger equation, with no extra rules | Explains the collapse and the classical world; can be tested |
+| **Cons** | Does not say what a measurement is; collapse added by hand | Nonlocal; the hidden positions can never be observed | A huge, unobservable reality; the origin of the probabilities is unclear | Modifies the Schrödinger equation with new constants |
 
-: Comparison of some interpretations of quantum mechanics. {#tbl-tab1c8 tbl-colwidths="[18,23,23,16,20]"}
+: Comparison of the Copenhagen interpretation with the three main classes of alternatives. The other interpretations are not included, since the answers depend on the details of each one. {#tbl-tab1c8 tbl-colwidths="[22,19,20,19,20]"}
 
 ```{=latex}
 \endgroup
@@ -132,7 +134,7 @@ where $\varphi(p)$ gives the amplitude of each plane wave in the packet. The fun
 
 ```{ojs}
 //| echo: false
-viewof sxu = Inputs.range([0.1, 10], {step: 0.05, value: 1, label: "width of each hump"})
+viewof sxu = Inputs.range([1, 5], {step: 0.05, value: 1, label: "width of each hump"})
 viewof du = Inputs.range([0, 4], {step: 0.1, value: 0, label: "separation of the two humps"})
 ```
 
@@ -148,13 +150,15 @@ viewof du = Inputs.range([0, 4], {step: 0.1, value: 0, label: "separation of the
   const Px = (x) => (g2(x - a) + g2(x + a) + 2 * c * g2(x)) / (Math.sqrt(2 * Math.PI) * s * (2 + 2 * c));
   const Pp = (p) => Math.exp(-2 * s * s * p * p) * Math.cos(p * a) ** 2 / (Math.sqrt(2 * Math.PI * v) * (1 + c) / 2);
   // fixed axes, so that the curves really get narrower or wider; extra points where the curves are sharp
-  const XM = 35, PM = 18;
+  const XM = 20, PM = 2.5;
   const dense = (lo, hi, n) => d3.range(n + 1).map(k => lo + (hi - lo) * k / n);
   const xs = [...dense(-XM, XM, 1200), ...dense(-a - 6 * s, -a + 6 * s, 300), ...dense(a - 6 * s, a + 6 * s, 300)].filter(x => Math.abs(x) <= XM).sort((m, n) => m - n);
   const ps = [...dense(-PM, PM, 1200), ...dense(-3 / s, 3 / s, 400)].filter(p => Math.abs(p) <= PM).sort((m, n) => m - n);
-  // y axes: from 0 to 10% above the highest point of each curve, so the peak always reaches about 90% of the height
+  // fixed y axes, so that we can see the probability spread out as the packet gets wider:
+  // in position, the tallest curve (one hump of width 1) peaks at 0.40; in momentum, the tallest
+  // (two humps of width 5) peaks at 4.16, and one hump of width 5 at 3.99
   const datX = xs.map(x => ({x, P: Px(x)})), datP = ps.map(p => ({p, P: Pp(p)}));
-  const yX = 1.1 * d3.max(datX, d => d.P), yP = 1.1 * d3.max(datP, d => d.P);
+  const yX = 0.42, yP = 4.4;
   const narrow = width < 600, w = narrow ? width : Math.floor((width - 16) / 2);
   const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x", domain: [-XM, XM]}, y: {label: "|ψ(x)|²", domain: [0, yX], nice: false}, caption: `σₓ = ${sx.toFixed(2)}`,
     marks: [Plot.areaY(datX, {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(datX, {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
@@ -403,7 +407,7 @@ e. the next eigenvalue
 
 ---
 
-**5. The different interpretations of quantum mechanics (Copenhagen, Bohmian mechanics, many worlds, spontaneous collapse):**
+**5. The different interpretations of quantum mechanics (Copenhagen, hidden variables, many worlds, spontaneous collapse):**
 
 a. give different energy levels for atoms  
 b. have all been ruled out by experiments, except Copenhagen  
