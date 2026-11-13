@@ -152,11 +152,14 @@ viewof du = Inputs.range([0, 4], {step: 0.1, value: 0, label: "separation of the
   const dense = (lo, hi, n) => d3.range(n + 1).map(k => lo + (hi - lo) * k / n);
   const xs = [...dense(-XM, XM, 1200), ...dense(-a - 6 * s, -a + 6 * s, 300), ...dense(a - 6 * s, a + 6 * s, 300)].filter(x => Math.abs(x) <= XM).sort((m, n) => m - n);
   const ps = [...dense(-PM, PM, 1200), ...dense(-3 / s, 3 / s, 400)].filter(p => Math.abs(p) <= PM).sort((m, n) => m - n);
+  // y axes: from 0 to 10% above the highest point of each curve, so the peak always reaches about 90% of the height
+  const datX = xs.map(x => ({x, P: Px(x)})), datP = ps.map(p => ({p, P: Pp(p)}));
+  const yX = 1.1 * d3.max(datX, d => d.P), yP = 1.1 * d3.max(datP, d => d.P);
   const narrow = width < 600, w = narrow ? width : Math.floor((width - 16) / 2);
-  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x", domain: [-XM, XM]}, y: {label: "|ψ(x)|²"}, caption: `σₓ = ${sx.toFixed(2)}`,
-    marks: [Plot.areaY(xs.map(x => ({x, P: Px(x)})), {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(xs.map(x => ({x, P: Px(x)})), {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
-  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "momentum p", domain: [-PM, PM]}, y: {label: "|φ(p)|²"}, caption: `σₚ = ${sp.toFixed(2)}`,
-    marks: [Plot.areaY(ps.map(p => ({p, P: Pp(p)})), {x: "p", y: "P", fill: "#d62728", fillOpacity: 0.3}), Plot.line(ps.map(p => ({p, P: Pp(p)})), {x: "p", y: "P", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
+  const p1 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "position x", domain: [-XM, XM]}, y: {label: "|ψ(x)|²", domain: [0, yX], nice: false}, caption: `σₓ = ${sx.toFixed(2)}`,
+    marks: [Plot.areaY(datX, {x: "x", y: "P", fill: "#1f77b4", fillOpacity: 0.3}), Plot.line(datX, {x: "x", y: "P", stroke: "#1f77b4", strokeWidth: 2}), Plot.ruleY([0])]});
+  const p2 = Plot.plot({style: {fontSize: "14px", color: "var(--bs-body-color)", background: "transparent"}, marginLeft: 60, marginBottom: 45, marginTop: 35, width: w, height: 250, grid: true, x: {label: "momentum p", domain: [-PM, PM]}, y: {label: "|φ(p)|²", domain: [0, yP], nice: false}, caption: `σₚ = ${sp.toFixed(2)}`,
+    marks: [Plot.areaY(datP, {x: "p", y: "P", fill: "#d62728", fillOpacity: 0.3}), Plot.line(datP, {x: "p", y: "P", stroke: "#d62728", strokeWidth: 2}), Plot.ruleY([0])]});
   return htl.html`<div style="display: flex; flex-wrap: ${narrow ? "wrap" : "nowrap"}; gap: 16px; align-items: flex-start;"><div><div style="font-weight: 600; text-align: center;">position space</div>${p1}</div><div><div style="font-weight: 600; text-align: center;">momentum space</div>${p2}</div></div><p style="margin: 0.25rem 0 0.75rem;">σₓ σₚ = <b>${(sx * sp).toFixed(3)}</b> ℏ &nbsp; (minimum allowed: 0.500 ℏ)</p>`;
 }
 ```
