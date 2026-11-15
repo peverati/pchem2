@@ -5,6 +5,7 @@
 -- 2. All formats: drop the line break at the end of each answer choice of the study
 --    questions (the two trailing spaces); in the PDF it added an empty line after each choice.
 -- 3. Study questions: hanging indent for questions that wrap (see below).
+-- 4. PDF: less space around the answer choices (see below).
 
 function RawInline(el)
   if el.format == "latex" then
@@ -40,11 +41,33 @@ function Para(el)
     for k = 2, #first.content do rest[#rest + 1] = first.content[k] end
     while #rest > 0 and (rest[1].t == "Space" or rest[1].t == "SoftBreak") do table.remove(rest, 1) end
     local inl = {pandoc.RawInline("latex",
-      "\\par\\medskip\\noindent\\hangindent=" .. QW .. "\\hangafter=1\\makebox[" .. QW .. "][l]{\\textbf{" .. num.text .. "}}"),
+      "\\par\\smallskip\\noindent\\hangindent=" .. QW .. "\\hangafter=1\\makebox[" .. QW .. "][l]{\\textbf{" .. num.text .. "}}"),
       pandoc.Strong(rest)}
     for k = 2, #el.content do inl[#inl + 1] = el.content[k] end
     return pandoc.Para(inl)
   elseif FORMAT:match("html") then
     return pandoc.Div({el}, pandoc.Attr("", {"question"}))
   end
+end
+
+-- 4. PDF: tighter spacing around the answer choices that follow each study question
+--    (about a quarter of a line above and below the list, instead of LaTeX's default list space).
+function Blocks(blocks)
+  if not FORMAT:match("latex") then return nil end
+  local out, changed = {}, false
+  for k, b in ipairs(blocks) do
+    local prev = blocks[k - 1]
+    local is_choices = b.t == "OrderedList" and prev and prev.t == "Para" and prev.content[1]
+      and prev.content[1].t == "RawInline" and prev.content[1].text:find("hangindent", 1, true)
+    if is_choices then
+      out[#out + 1] = pandoc.RawBlock("latex",
+        "\\begingroup\\expandafter\\def\\csname @listi\\endcsname{\\leftmargin\\leftmargini\\topsep 2.5pt\\partopsep 0pt\\parsep 0pt\\itemsep 0pt}")
+      out[#out + 1] = b
+      out[#out + 1] = pandoc.RawBlock("latex", "\\endgroup")
+      changed = true
+    else
+      out[#out + 1] = b
+    end
+  end
+  if changed then return out end
 end
