@@ -178,7 +178,7 @@ This is why the free-particle solutions of @sec-Schrodinger, the plane waves $e^
 
 Inside a box, the particle is still free, but the walls break the symmetry: if we shift the system, the walls move, and the problem changes. As a consequence, $\hat{p}$ no longer commutes with $\hat{H}$, and momentum is not a good quantum number. We can check this directly: the eigenfunctions of the particle in a box, $\sin(n\pi x/a)$, are not eigenfunctions of $\hat{p}=-i\hbar\frac{d}{dx}$, since the derivative turns a sine into a cosine. (Using Euler's formula, each sine is a combination of two plane waves, one moving to the right and one to the left, with opposite momenta. A measurement of momentum would give either one, but the state does not have a definite momentum.)
 
-Some symmetry, however, survives. If we place the box symmetrically, between $-a/2$ and $+a/2$, the system looks the same when we reflect it through its center, $x\rightarrow-x$. The operator that performs this reflection is called the **parity operator**, $\hat{\Pi}$:
+Some symmetry, however, survives. To see it, let's place the box symmetrically, between $-a/2$ and $+a/2$. This is the same box as in @sec-Models, only shifted so that its center is at $x=0$. Moving the origin changes neither the energies nor the shapes of the wave functions, but it makes the symmetry easy to see: the system now looks the same when we reflect it through its center, $x\rightarrow-x$. The operator that performs this reflection is called the **parity operator**, $\hat{\Pi}$:
 
 $$
 \hat{\Pi}\,\psi(x) = \psi(-x).

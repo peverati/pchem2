@@ -52,6 +52,10 @@
 % examples and answers (tip): dark gray frame; proofs and details (note): light gray frame
 \usepackage[skins,breakable]{tcolorbox}
 \tcbset{boxrule=0.4pt, fonttitle=\bfseries, leftrule/.style={}}  % ignore Quarto's thick left rule
+% boxes that break across pages: each piece gets its full frame (no open "jigsaw" edges), and the
+% piece on the next page starts with the same title followed by "(continued)"
+\tcbset{enhanced jigsaw/.style={enhanced}, opacityback/.style={}, opacitybacktitle/.style={},
+  title/.append code={\gdef\pchemboxtitle{#1}\tcbset{title after break={\pchemboxtitle\ \textmd{\itshape(continued)}}}}}
 \AtBeginDocument{%
   \definecolor{quarto-callout-tip-color}{HTML}{000000}%
   \definecolor{quarto-callout-tip-color-frame}{HTML}{595959}%

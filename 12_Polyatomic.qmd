@@ -13,15 +13,15 @@ For a minimal representation of the two hydrogen atoms, we need two $1s$ functio
 
 $$
 \begin{aligned}
-\displaystyle K_{ij} &= \int \phi_i^* {\hat K} \phi_j\; d\mathbf{\tau}=\int \phi_i^* {\left(-\frac{1}{2}\nabla^2\right)} \phi_j\; d\mathbf{\tau} \\
-\displaystyle V_{ij} &= \int \phi_i^* {\hat V} \phi_j\;d\mathbf{\tau} = \int \phi_i^* {\left(-\sum_k^{\mathrm{nuclei}}\frac{Z_k}{r_k}\right)} \phi_j\; d\mathbf{\tau} ,
+\displaystyle K_{ij} &= \int \phi_i^* {\hat K} \phi_j\; d\tau=\int \phi_i^* {\left(-\frac{1}{2}\nabla^2\right)} \phi_j\; d\tau \\
+\displaystyle V_{ij} &= \int \phi_i^* {\hat V} \phi_j\;d\tau = \int \phi_i^* {\left(-\sum_k^{\mathrm{nuclei}}\frac{Z_k}{r_k}\right)} \phi_j\; d\tau ,
 \end{aligned}
 $$ {#eq-oneelint}
 
 as well as two-electron integrals describing the Coulomb repulsion between electrons:
 
 $$
-V_{ijkl} = \iint \phi_i^* \phi_j^* {\hat r}_{12}^{-1} \phi_k \phi_l\; d\mathbf{\tau_1}d\mathbf{\tau_2}=\iint \phi_i^* \phi_j^* \left(\frac{1}{r_{12}}\right) \phi_k \phi_l\; d\mathbf{\tau_1}d\mathbf{\tau_2}.
+V_{ijkl} = \iint \phi_i^* \phi_j^* {\hat r}_{12}^{-1} \phi_k \phi_l\; d\tau_1\,d\tau_2=\iint \phi_i^* \phi_j^* \left(\frac{1}{r_{12}}\right) \phi_k \phi_l\; d\tau_1\,d\tau_2.
 $$ {#eq-twoelint}
 
 Even with such a small basis set, the number of integrals that we need is large, since each of the indices $i$, $j$, $k$, and $l$ can be any of the 7 basis functions. There are $7\times7=49$ kinetic energy integrals, and $49$ nuclear attraction integrals for each of the three nuclei, $7\times 7 \times 3 = 147$, for a total of 196 one-electron integrals. For the two-electron integrals, there are $7 \times 7 \times 7 \times 7 = 2{,}401$ combinations. In total, we need almost $2{,}600$ integrals for a very simple calculation on a very small molecule.^[These numbers assume that each basis function is a single function. In real calculations, each basis function is itself a fixed combination of simpler gaussian functions, called *primitives*. In the simplest case, the STO-3G basis set, each basis function is made of 3 primitives, so each one-electron integral requires $3 \times 3 = 9$ integrals over primitives, for a total of $9 \times 196 = 1{,}764$. Each two-electron integral requires $3^4 = 81$ integrals over primitives, for a total of $81 \times 2{,}401 = 194{,}481$. Notice how the two-electron integrals dominate the cost of the calculation, and how their number grows as the fourth power of the size of the basis set. A similar discussion of the minimal-basis calculation on water can be found in [Prof. C.J. Cramer's lecture notes](http://pollux.chem.umn.edu/4502/3502_lecture_29.pdf).]

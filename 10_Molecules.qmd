@@ -155,7 +155,7 @@ $$ {#eq-molham10}
 A consequence of the LCAO method is that basis functions on two different atoms are not orthogonal to each other, so the simplification that we used to go from @eq-var4 to @eq-var5 is not possible anymore. Using the following notation for the integrals:
 
 $$
-\displaystyle H_{ij} = \int f_i^* {\hat H} f_j d\mathbf{\tau}\;, \qquad \displaystyle S_{ij} = \int f_i^* f_j d\mathbf{\tau},
+\displaystyle H_{ij} = \int f_i^* {\hat H} f_j d\tau\;, \qquad \displaystyle S_{ij} = \int f_i^* f_j d\tau,
 $$ {#eq-molham11}
 
 the variational energy of @eq-var2 becomes:
@@ -196,7 +196,7 @@ Each piece of $\hat{f}$ has a clear physical meaning:
 2. $\hat{J}_j$ is the **Coulomb operator**: the repulsion felt by an electron because of the *average* charge distribution, $|\chi_j|^2$, of the electron described by orbital $\chi_j$. This is the "average repulsion" that we added back for the helium atom in @sec-Atoms.
 3. $\hat{K}_j$ is the **exchange operator**. It has no classical analog, and it appears because the wave function is a Slater determinant. It acts only between electrons with the same spin, and it lowers their repulsion, since the antisymmetry of the wave function keeps same-spin electrons away from each other (two electrons with the same spin can never be found at the same point, as a consequence of the Pauli exclusion principle).
 
-@Eq-hfeq1 are called the **Hartree–Fock equations**. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through $\hat{J}_j$ and $\hat{K}_j$, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, @eq-molham10, the Hartree–Fock equations take the form of the secular determinant in @eq-molham12, with the integrals $H_{ij}$ replaced by the matrix elements of the Fock operator, $F_{ij} = \int f_i^* \hat{f} f_j\, d\mathbf{\tau}$.
+@Eq-hfeq1 are called the **Hartree–Fock equations**. They look like ordinary one-electron TISEqs, but there is a catch: the Fock operator depends, through $\hat{J}_j$ and $\hat{K}_j$, on the occupied orbitals, which are the solutions we are looking for. The equations are coupled with each other, since every orbital affects the operator that determines all other orbitals. When we expand the orbitals using the LCAO method, @eq-molham10, the Hartree–Fock equations take the form of the secular determinant in @eq-molham12, with the integrals $H_{ij}$ replaced by the matrix elements of the Fock operator, $F_{ij} = \int f_i^* \hat{f} f_j\, d\tau$.
 
 #### The self-consistent-field procedure {.unnumbered}
 Since the Fock operator and its solutions depend on each other, the Hartree–Fock equations cannot be solved in one step. Instead, they are solved iteratively, using a cycle called the **self-consistent-field (SCF) procedure**, which is summarized in @fig-fig3c10. Starting from an initial guess of the coefficients, we build the Fock operator, solve the secular determinant, and obtain new coefficients. These are used to build an improved Fock operator, and the cycle is repeated until neither the orbitals nor the energy change anymore (within a chosen threshold). At that point, the orbitals are "consistent" with the field that they generate, and the energy of the molecule can be calculated from them.

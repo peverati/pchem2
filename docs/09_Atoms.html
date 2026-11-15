@@ -645,9 +645,9 @@ window.Quarto = {
 <p>The idea behind the variational method is simple. We guess a “trial” wave function that contains some adjustable numbers, called <em>variational parameters</em>. We then calculate the energy of the trial function and change the parameters until this energy is as low as possible. The trial function with the lowest energy, and that energy itself, are our best approximations to the true ground-state wave function and energy.</p>
 <p>Why should the lowest energy be the best answer? The energy of a trial function <span class="math inline">\(\Phi\)</span> is the expectation value of the Hamiltonian:</p>
 <p><span id="eq-var2"><span class="math display">\[
-E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
+E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\tau}{\int \Phi^* \Phi d\tau},
 \tag{9.10}\]</span></span></p>
-<p>where <span class="math inline">\(\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)\)</span> collects the spatial coordinates of all electrons, so the integrals are <span class="math inline">\(3N\)</span>-dimensional. The denominator takes care of normalization, so <span class="math inline">\(\Phi\)</span> does not need to be normalized. The justification of the method is the <strong>variational theorem</strong>: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, <span class="math inline">\(\mathcal{E}_0\)</span>:</p>
+<p>where <span class="math inline">\(\tau=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)\)</span> collects the spatial coordinates of all electrons, so the integrals are <span class="math inline">\(3N\)</span>-dimensional. The denominator takes care of normalization, so <span class="math inline">\(\Phi\)</span> does not need to be normalized. The justification of the method is the <strong>variational theorem</strong>: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, <span class="math inline">\(\mathcal{E}_0\)</span>:</p>
 <p><span id="eq-varprinciple"><span class="math display">\[
 E[\Phi] \geq \mathcal{E}_0.
 \tag{9.11}\]</span></span></p>
@@ -670,13 +670,13 @@ E[\Phi] \geq \mathcal{E}_0.
 \tag{9.12}\]</span></span></p>
 <p>We never need to know the <span class="math inline">\(\Psi_i\)</span> or the <span class="math inline">\(c_i\)</span>; the expansion is only a tool for the proof. Inserting it in <a href="#eq-var2" class="quarto-xref">Eq.&nbsp;<span>9.10</span></a>, we obtain:</p>
 <p><span id="eq-var3"><span class="math display">\[
-E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
-\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\tau}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\tau}.
 \tag{9.13}\]</span></span></p>
 <p>Since each <span class="math inline">\(\Psi_j\)</span> is an eigenfunction of <span class="math inline">\({\hat H}\)</span>, we can replace <span class="math inline">\({\hat H} \Psi_j\)</span> with <span class="math inline">\(\mathcal{E}_j \Psi_j\)</span>:</p>
 <p><span id="eq-var4"><span class="math display">\[
-E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
-\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\tau}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\tau}.
 \tag{9.14}\]</span></span></p>
 <p>The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, <a href="06_Operators.html" class="quarto-xref"><span>Chapter 6</span></a>), so all integrals with <span class="math inline">\(i\neq j\)</span> vanish and those with <span class="math inline">\(i=j\)</span> are equal to one:</p>
 <p><span id="eq-var5"><span class="math display">\[

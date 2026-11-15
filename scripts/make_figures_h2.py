@@ -12,7 +12,7 @@ plt.rcParams.update({"font.family": "serif", "mathtext.fontset": "cm", "font.siz
 C = plt.rcParams["axes.prop_cycle"].by_key()["color"]
 
 
-def geometry(two_electrons, name, title):
+def geometry(two_electrons, name):
     fig, ax = plt.subplots(figsize=(8, 5))
     A, B = (0.0, 0.0), (6.0, 0.0)
     ax.plot([A[0], B[0]], [A[1], B[1]], color="k", lw=2)
@@ -38,7 +38,6 @@ def geometry(two_electrons, name, title):
                                               (e2, A, "$r_{2A}$", (-0.2, 0.35)), (e2, B, "$r_{2B}$", (0.25, 0))):
             ax.plot([ex, nx], [ey, ny], ls="--", color="0.55", lw=1.2)
             ax.text((ex + nx) / 2 + off[0], (ey + ny) / 2 + off[1], lab, fontsize=16)
-    ax.set_title(title, fontsize=20)
     ax.set_xlim(-1.2, 7.2); ax.set_ylim(-1.3, 3.8); ax.set_aspect("equal"); ax.axis("off")
     fig.savefig(f"{OUT}/{name}", dpi=150, bbox_inches="tight")
     plt.close(fig)
@@ -72,14 +71,17 @@ def mo_diagram(n_el, name, title, lab_b, lab_a):
     ax.set_title(title, fontsize=20)
     ax.set_xlim(-1.0, 7.0); ax.set_ylim(-2.6, 3.0)
     ax.set_xticks([]); ax.set_yticks([])
-    for sp in ("top", "right", "bottom"):
+    for sp in ("top", "right", "bottom", "left"):
         ax.spines[sp].set_visible(False)
+    # energy axis (arbitrary units) drawn as an arrow, so that it reads as an axis
+    ax.annotate("", xy=(0, 1.0), xycoords="axes fraction", xytext=(0, 0), textcoords="axes fraction",
+                arrowprops=dict(arrowstyle="-|>", lw=1.5, color="k", mutation_scale=20))
     fig.savefig(f"{OUT}/{name}", dpi=150, bbox_inches="tight")
     plt.close(fig)
 
 
-geometry(False, "H2p_geometry.png", r"$\mathrm{H}_2^+$")
-geometry(True, "H2_geometry.png", r"$\mathrm{H}_2$")
+geometry(False, "H2p_geometry.png")
+geometry(True, "H2_geometry.png")
 mo_diagram(1, "H2p_MO.png", r"$\mathrm{H}_2^+$", r"$\varphi_+$", r"$\varphi_-$")
 mo_diagram(2, "H2_MO.png", r"$\mathrm{H}_2$", r"$\sigma_g$", r"$\sigma_u^*$")
 print("done")

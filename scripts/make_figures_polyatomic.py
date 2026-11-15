@@ -200,6 +200,7 @@ ax.set_xlim(0, 6.6)
 ax.set_ylim(-1.55, 0.95)
 ax.set_xticks([])
 ax.set_ylabel(r"Orbital energy ($E_h$)")
+ax.set_title(r"$\mathrm{H_2O}$", fontsize=22)
 for sp in ("top", "right"):
     ax.spines[sp].set_visible(False)
 fig.tight_layout()

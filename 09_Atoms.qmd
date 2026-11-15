@@ -116,10 +116,10 @@ The idea behind the variational method is simple. We guess a "trial" wave functi
 Why should the lowest energy be the best answer? The energy of a trial function $\Phi$ is the expectation value of the Hamiltonian:
 
 $$
-E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\mathbf{\tau}}{\int \Phi^* \Phi d\mathbf{\tau}},
+E[\Phi] = \frac{\int \Phi^* {\hat H} \Phi d\tau}{\int \Phi^* \Phi d\tau},
 $$ {#eq-var2}
 
-where $\mathbf{\tau}=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)$ collects the spatial coordinates of all electrons, so the integrals are $3N$-dimensional. The denominator takes care of normalization, so $\Phi$ does not need to be normalized. The justification of the method is the **variational theorem**: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, $\mathcal{E}_0$:
+where $\tau=\left(\mathbf{r}_1,\mathbf{r}_2,\ldots,\mathbf{r}_N\right)$ collects the spatial coordinates of all electrons, so the integrals are $3N$-dimensional. The denominator takes care of normalization, so $\Phi$ does not need to be normalized. The justification of the method is the **variational theorem**: the energy calculated from any trial wave function is always greater than or equal to the exact ground-state energy, $\mathcal{E}_0$:
 
 $$
 E[\Phi] \geq \mathcal{E}_0.
@@ -139,15 +139,15 @@ $$ {#eq-var1}
 We never need to know the $\Psi_i$ or the $c_i$; the expansion is only a tool for the proof. Inserting it in @eq-var2, we obtain:
 
 $$
-E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\mathbf{\tau}}{
-\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\mathbf{\tau}}.
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \int \Psi_i^* {\hat H} \Psi_jd\tau}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_jd\tau}.
 $$ {#eq-var3}
 
 Since each $\Psi_j$ is an eigenfunction of ${\hat H}$, we can replace ${\hat H} \Psi_j$ with $\mathcal{E}_j \Psi_j$:
 
 $$
-E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}{
-\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\mathbf{\tau}}.
+E[\Phi] = \frac{\sum_{ij} c_i^* c_j \mathcal{E}_j \int \Psi_i^* \Psi_j d\tau}{
+\sum_{ij} c_i^* c_j \int \Psi_i^* \Psi_j d\tau}.
 $$ {#eq-var4}
 
 The eigenfunctions of a Hermitian operator are orthonormal (or can be chosen to be, @sec-Operators), so all integrals with $i\neq j$ vanish and those with $i=j$ are equal to one:
