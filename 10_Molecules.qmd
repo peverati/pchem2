@@ -226,8 +226,6 @@ c. nuclei do not interact with electrons
 d. electrons are fermions  
 e. the molecule is always at its equilibrium geometry  
 
----
-
 **2. A potential energy surface is:**
 
 a. the surface of the molecule  
@@ -235,8 +233,6 @@ b. the probability density of the electrons
 c. the kinetic energy of the nuclei  
 d. the electronic energy of a molecule as a function of the positions of its nuclei  
 e. the energy of a molecule as a function of temperature  
-
----
 
 **3. The minimum of the potential energy curve of a diatomic molecule corresponds to:**
 
@@ -246,8 +242,6 @@ c. the equilibrium bond length
 d. the zero-point energy  
 e. the ionization energy  
 
----
-
 **4. The depth of the well of the potential energy curve of $\mathrm{H}_2$ is:**
 
 a. the energy needed to remove an electron  
@@ -255,8 +249,6 @@ b. the zero-point energy
 c. the energy of the first excited state  
 d. the energy needed to separate the two atoms (the bond energy)  
 e. the kinetic energy of the nuclei  
-
----
 
 **5. On a potential energy surface, the transition state of a reaction is:**
 
@@ -266,8 +258,6 @@ c. the geometry of the products
 d. any point with a high energy  
 e. a saddle point, the highest point along the minimum energy path between reactants and products  
 
----
-
 **6. How many internal coordinates are needed to describe the geometry of a water molecule?**
 
 a. $1$  
@@ -275,8 +265,6 @@ b. $6$
 c. $3$  
 d. $9$  
 e. $4$  
-
----
 
 **7. In the LCAO method, each molecular orbital is written as:**
 
@@ -286,8 +274,6 @@ c. a single atomic orbital
 d. a Slater determinant of atomic orbitals  
 e. the sum of all the atomic orbitals of the molecule, with equal coefficients  
 
----
-
 **8. The overlap integral $S_{ij}=\int f_i^*f_j\,d\mathbf{r}$ between two basis functions on different atoms:**
 
 a. measures how much the two functions share the same region of space, and is in general not zero  
@@ -295,8 +281,6 @@ b. is always zero, because basis functions are orthogonal
 c. is always equal to one  
 d. is the energy of the bond  
 e. is negative for bonding orbitals  
-
----
 
 **9. The exchange operator $\hat{K}$ in the Fock operator:**
 
@@ -306,8 +290,6 @@ c. is the classical repulsion between two charge distributions
 d. describes the repulsion between nuclei  
 e. has no classical analog, and it appears because the wave function is a Slater determinant  
 
----
-
 **10. Why must the Hartree–Fock equations be solved iteratively, with the SCF procedure?**
 
 a. because the Fock operator depends on the orbitals that are the solutions of the equations  
@@ -315,8 +297,6 @@ b. because computers cannot solve linear equations directly
 c. because the nuclei move during the calculation  
 d. because the basis set changes at each step  
 e. because the energy is not variational  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

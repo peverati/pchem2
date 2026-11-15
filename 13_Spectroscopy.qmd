@@ -402,8 +402,6 @@ c. the transition dipole moment integral between the two states is zero
 d. the molecule has a dipole moment  
 e. the upper state is degenerate  
 
----
-
 **2. Which of the following molecules has a pure rotational (microwave) spectrum?**
 
 a. $\mathrm{N}_2$  
@@ -411,8 +409,6 @@ b. $\mathrm{H}_2$
 c. $\mathrm{O}_2$  
 d. $\mathrm{CO}_2$  
 e. $\mathrm{CO}$  
-
----
 
 **3. The lines of the rotational spectrum of a rigid diatomic molecule are:**
 
@@ -422,8 +418,6 @@ c. closer together as $J$ increases
 d. all at the same frequency  
 e. farther apart as $J$ increases  
 
----
-
 **4. At room temperature, why are many rotational levels populated, with a maximum at $J>0$?**
 
 a. because the energy levels are degenerate in $J$  
@@ -431,8 +425,6 @@ b. because only $J=0$ is populated
 c. because rotational energies are larger than $kT$  
 d. because of the Pauli principle  
 e. because the degeneracy $2J+1$ grows with $J$, while the Boltzmann factor decreases  
-
----
 
 **5. A vibration absorbs infrared light only if:**
 
@@ -442,8 +434,6 @@ c. the dipole moment of the molecule changes during the vibration
 d. the vibration is very fast  
 e. the polarizability of the molecule is zero  
 
----
-
 **6. The fundamental band of the infrared spectrum of CO shows:**
 
 a. a single line  
@@ -451,8 +441,6 @@ b. a P-branch, a Q-branch, and an R-branch
 c. only an R-branch  
 d. a P-branch and an R-branch separated by a gap at the band center  
 e. a continuous absorption  
-
----
 
 **7. How many vibrational normal modes does the linear molecule $\mathrm{CO}_2$ have?**
 
@@ -462,8 +450,6 @@ c. $5$
 d. $6$  
 e. $9$  
 
----
-
 **8. According to the Franck–Condon principle, an electronic transition:**
 
 a. is vertical, since the nuclei do not move while the electron changes state  
@@ -471,8 +457,6 @@ b. always ends in the lowest vibrational level of the excited state
 c. changes the bond length during the absorption  
 d. is forbidden if the bond lengths of the two states differ  
 e. happens only between states with the same vibrational quantum number  
-
----
 
 **9. Why is phosphorescence much slower than fluorescence?**
 
@@ -482,8 +466,6 @@ c. because the molecule must first rotate
 d. because phosphorescence involves only vibrational levels  
 e. because fluorescence is spin-forbidden  
 
----
-
 **10. In NMR, the chemical shift arises because:**
 
 a. nuclei have different masses  
@@ -491,8 +473,6 @@ b. the nuclei vibrate
 c. neighboring nuclei transfer electrons  
 d. the electrons around each nucleus partially shield it from the external magnetic field  
 e. the magnetic field is not uniform  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

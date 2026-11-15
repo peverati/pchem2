@@ -526,7 +526,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#the-time-independent-schrödinger-equation" id="toc-the-time-independent-schrödinger-equation" class="nav-link active" data-scroll-target="#the-time-independent-schrödinger-equation"><span class="header-section-number">3.1</span> The Time-Independent Schrödinger Equation</a></li>
-  <li><a href="#sec-BornInterpretation" id="toc-sec-BornInterpretation" class="nav-link" data-scroll-target="#sec-BornInterpretation"><span class="header-section-number">3.2</span> The Meaning of the Wave Function</a></li>
+  <li><a href="#sec-BornInterpretation" id="toc-sec-BornInterpretation" class="nav-link" data-scroll-target="#sec-BornInterpretation"><span class="header-section-number">3.2</span> What Does the Wave Function Mean?</a></li>
   <li><a href="#the-time-dependent-schrödinger-equation" id="toc-the-time-dependent-schrödinger-equation" class="nav-link" data-scroll-target="#the-time-dependent-schrödinger-equation"><span class="header-section-number">3.3</span> The Time-Dependent Schrödinger Equation</a></li>
   <li><a href="#solution-for-the-free-particle" id="toc-solution-for-the-free-particle" class="nav-link" data-scroll-target="#solution-for-the-free-particle"><span class="header-section-number">3.4</span> Solution for the Free Particle</a>
   <ul class="collapse">
@@ -606,7 +606,7 @@ p^2 = 2m[E - V(x)],
 <p>Remember that we did not <em>prove</em> this equation: we only showed that it is consistent with a plane wave and with de Broglie’s relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass <span class="math inline">\(m\)</span>. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace <span class="math inline">\(m\)</span> with the <em>reduced mass</em> of the two particles, <span class="math inline">\(\mu = \frac{m_1 m_2}{m_1+m_2}\)</span>.</p>
 </section>
 <section id="sec-BornInterpretation" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="sec-BornInterpretation"><span class="header-section-number">3.2</span> The Meaning of the Wave Function</h2>
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-BornInterpretation"><span class="header-section-number">3.2</span> What Does the Wave Function Mean?</h2>
 <p>We now have an equation for the wave function, but we have not yet said what the wave function <em>is</em>. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as <strong>Born’s interpretation</strong>: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along <span class="math inline">\(x\)</span>:</p>
 <p><span id="eq-born1"><span class="math display">\[
 \text{probability of finding the particle between } x \text{ and } x+dx = |\psi(x)|^2\,dx,
@@ -617,7 +617,7 @@ p^2 = 2m[E - V(x)],
 \int_{-\infty}^{\infty} |\psi(x)|^2\,dx = 1.
 \tag{3.10}\]</span></span></p>
 <p>This requirement is called the <strong>normalization condition</strong>, and a wave function that satisfies it is said to be <em>normalized</em>. For a particle moving in three dimensions, the integral runs over all three coordinates, <span class="math inline">\(\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1\)</span>. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in <a href="04_Models.html" class="quarto-xref"><span>Chapter 4</span></a>.</p>
-<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in <a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>.</p>
+<p>The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how <em>likely</em> it is to be found at each position. Born’s interpretation tells us how to <em>use</em> the wave function, and its predictions have never failed. What the wave function <em>is</em>, however, is still debated by physicists and philosophers, and we will come back to this question in <a href="08_Weirdness.html" class="quarto-xref"><span>Chapter 8</span></a>.</p>
 <div id="tip-normalizing-a-wave-function" class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -900,7 +900,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 </section>
 <section id="sec-quest3" class="level3" data-number="3.5.2">
 <h3 data-number="3.5.2" class="anchored" data-anchor-id="sec-quest3"><span class="header-section-number">3.5.2</span> Study Questions</h3>
+<div class="question">
 <p><strong>1. Which of the following is the time-independent Schrödinger equation for a particle in one dimension?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d\psi}{dx}+V(x)\psi=E\psi\)</span></li>
 <li><span class="math inline">\(\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=V(x)\)</span></li>
@@ -908,8 +910,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li><span class="math inline">\(\psi=E\,V(x)\)</span></li>
 <li><span class="math inline">\(-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi\)</span></li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>2. How was the Schrödinger equation obtained?</strong></p>
+</div>
 <ol type="a">
 <li>it cannot be derived from classical physics; we can make it plausible, and it is justified by its agreement with experiments</li>
 <li>it was derived from Newton’s equation</li>
@@ -917,8 +920,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>it was obtained by measuring wave functions</li>
 <li>it was derived from the Bohr model</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>3. According to Born’s interpretation, <span class="math inline">\(|\psi(x)|^2dx\)</span> is:</strong></p>
+</div>
 <ol type="a">
 <li>the energy of the particle at <span class="math inline">\(x\)</span></li>
 <li>the charge of the particle</li>
@@ -926,8 +930,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>the probability of finding the particle between <span class="math inline">\(x\)</span> and <span class="math inline">\(x+dx\)</span></li>
 <li>the velocity of the particle at <span class="math inline">\(x\)</span></li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>4. Why must a wave function be normalized, <span class="math inline">\(\int|\psi|^2dx=1\)</span>?</strong></p>
+</div>
 <ol type="a">
 <li>because the energy must be positive</li>
 <li>because the particle must be found somewhere</li>
@@ -935,8 +940,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>because the particle cannot move</li>
 <li>because <span class="math inline">\(\psi\)</span> must be zero everywhere</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>5. Why do we always use <span class="math inline">\(|\psi|^2=\psi^*\psi\)</span>, and not <span class="math inline">\(\psi\)</span> itself, to compute probabilities?</strong></p>
+</div>
 <ol type="a">
 <li>because <span class="math inline">\(\psi\)</span> can be complex, while <span class="math inline">\(\psi^*\psi\)</span> is always real and never negative</li>
 <li>because <span class="math inline">\(\psi\)</span> is always negative</li>
@@ -944,8 +950,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>because <span class="math inline">\(\psi\)</span> has no units</li>
 <li>because <span class="math inline">\(\psi^*\psi\)</span> is easier to differentiate</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>6. For a stationary state, what does not change in time?</strong></p>
+</div>
 <ol type="a">
 <li>the wave function <span class="math inline">\(\psi(x,t)\)</span></li>
 <li>the phase of the wave function</li>
@@ -953,8 +960,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>the real part of the wave function</li>
 <li>nothing: everything changes in time</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>7. A stationary state with energy <span class="math inline">\(E\)</span> evolves in time by multiplication with which factor?</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(e^{-Et/\hbar}\)</span></li>
 <li><span class="math inline">\(\cos(Et)\)</span></li>
@@ -962,8 +970,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li><span class="math inline">\(e^{-iEt/\hbar}\)</span></li>
 <li><span class="math inline">\(E\,t\)</span></li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>8. The energy of a free particle is:</strong></p>
+</div>
 <ol type="a">
 <li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, but only integer multiples of <span class="math inline">\(h\nu\)</span></li>
 <li><span class="math inline">\(E=\frac{p^2}{2m}\)</span>, and it can take any non-negative value</li>
@@ -971,8 +980,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li><span class="math inline">\(E=mc^2\)</span></li>
 <li><span class="math inline">\(E=\frac{n^2h^2}{8ma^2}\)</span></li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>9. A particle described by a single plane wave, <span class="math inline">\(\psi=e^{ikx}\)</span>, has:</strong></p>
+</div>
 <ol type="a">
 <li>a perfectly defined position, but undefined momentum</li>
 <li>a perfectly defined position and momentum</li>
@@ -980,8 +990,9 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>a probability density that oscillates with <span class="math inline">\(x\)</span></li>
 <li>a perfectly defined momentum, but the same probability of being found anywhere</li>
 </ol>
-<hr>
+<div class="question">
 <p><strong>10. To describe a particle localized in a small region of space, we need:</strong></p>
+</div>
 <ol type="a">
 <li>a single plane wave with a very large momentum</li>
 <li>a single plane wave with zero momentum</li>
@@ -989,7 +1000,6 @@ Figure&nbsp;3.4: Probability density of a free-particle wave packet at four diff
 <li>a wave function equal to zero everywhere</li>
 <li>a classical trajectory</li>
 </ol>
-<hr>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">

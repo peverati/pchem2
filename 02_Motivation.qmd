@@ -234,8 +234,6 @@ c. no radiation is emitted at room temperature
 d. the intensity is the same at all wavelengths  
 e. only visible light is emitted  
 
----
-
 **2. Which assumption did Planck introduce to explain black-body radiation?**
 
 a. light travels faster at short wavelengths  
@@ -243,8 +241,6 @@ b. atoms have a nucleus
 c. energy is exchanged only in multiples of $h\nu$  
 d. electrons are waves  
 e. energy is not conserved in the emission of light  
-
----
 
 **3. As the temperature of a black body increases, the maximum of its emission:**
 
@@ -254,8 +250,6 @@ c. does not move
 d. disappears  
 e. moves to longer wavelengths and becomes weaker  
 
----
-
 **4. Light with a frequency below the threshold frequency shines on a metal. If we increase its intensity:**
 
 a. still no electrons are ejected  
@@ -263,8 +257,6 @@ b. electrons are ejected with more kinetic energy
 c. electrons are ejected after a short delay  
 d. more electrons are ejected, all with the same kinetic energy  
 e. the threshold frequency decreases  
-
----
 
 **5. In the photoelectric effect, the kinetic energy of an ejected electron is:**
 
@@ -274,8 +266,6 @@ c. $K=h\nu-\Phi$, where $\Phi$ is the work function of the metal
 d. the same for all frequencies above the threshold  
 e. $K=\Phi/h\nu$  
 
----
-
 **6. The energy of a single photon depends on:**
 
 a. the intensity of the light  
@@ -283,8 +273,6 @@ b. the number of photons in the beam
 c. the temperature of the source  
 d. its frequency only, $E=h\nu$  
 e. the size of the source  
-
----
 
 **7. What do the sharp lines in the spectrum of hydrogen tell us?**
 
@@ -294,8 +282,6 @@ c. that light is a classical wave
 d. that the hydrogen atom has many electrons  
 e. that the atom can only have certain discrete energies  
 
----
-
 **8. Which of the following is a problem of the Bohr model?**
 
 a. it works only for atoms with one electron, and its assumptions have no justification  
@@ -303,8 +289,6 @@ b. it cannot explain the lines of the hydrogen spectrum
 c. it predicts that atoms are not stable  
 d. it gives the wrong value of the ionization energy of hydrogen  
 e. it does not use Planck's constant  
-
----
 
 **9. The de Broglie wavelength of a particle with momentum $p$ is:**
 
@@ -314,8 +298,6 @@ c. $\lambda=h\nu$
 d. $\lambda=c/p$  
 e. $\lambda=h/p$  
 
----
-
 **10. Why don't we observe the wave nature of a thrown baseball?**
 
 a. because a baseball has no momentum  
@@ -323,8 +305,6 @@ b. because only charged particles have a wavelength
 c. because a baseball moves faster than light  
 d. because its de Broglie wavelength is far smaller than any object or opening it could interact with  
 e. because its de Broglie wavelength is too long to be measured  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

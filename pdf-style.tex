@@ -38,6 +38,16 @@
 \renewcommand*{\chapterpagestyle}{plain.scrheadings}
 \cfoot[\pagemark]{}
 
+% ---- Figures: let large figures share a page with text instead of getting a page of their own
+% (LaTeX's defaults send any figure taller than half a page that doesn't fit to a separate "float page")
+\renewcommand{\topfraction}{0.9}       % a figure may fill up to 90% of the top of a page
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}     % a page needs only 7% of text
+\renewcommand{\floatpagefraction}{0.8} % a page of figures only, when they fill at least 80% of it
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+
 % ---- Tables: a little more air between rows
 \renewcommand{\arraystretch}{1.15}
 % center the text of each cell vertically in its row (Pandoc writes the columns as p{...}, which align to the top)

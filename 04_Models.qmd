@@ -476,8 +476,6 @@ c. $E_n=\frac{n^2h^2}{8ma^2}$, with $n=1,2,3,\ldots$
 d. $E_n=-\frac{1}{2n^2}E_h$  
 e. any non-negative value  
 
----
-
 **2. Why is the lowest energy of the particle in a box not zero?**
 
 a. because the walls repel the particle  
@@ -485,8 +483,6 @@ b. because the particle always moves at the speed of light
 c. because energy is never zero in classical physics  
 d. because $n=0$ would give a wave function equal to zero everywhere, that is, no particle  
 e. because of the Coulomb attraction to the walls  
-
----
 
 **3. How many nodes inside the box does the particle-in-a-box wave function $\psi_n$ have?**
 
@@ -496,8 +492,6 @@ c. $n+1$
 d. $2n$  
 e. none, for every $n$  
 
----
-
 **4. For the first excited state of the particle in a box ($n=2$), the probability of finding the particle at the center of the box is:**
 
 a. the largest in the box  
@@ -505,8 +499,6 @@ b. the same as anywhere else in the box
 c. one  
 d. zero  
 e. negative  
-
----
 
 **5. In a cubic box, the states $(n_x,n_y,n_z)=(1,1,2)$, $(1,2,1)$, and $(2,1,1)$:**
 
@@ -516,8 +508,6 @@ c. have the same energy, because the three directions of the cube are equivalent
 d. have zero energy  
 e. are the same state  
 
----
-
 **6. For a particle on a ring, the energy levels with $m_\ell\neq0$ are:**
 
 a. not degenerate  
@@ -525,8 +515,6 @@ b. triply degenerate
 c. all at zero energy  
 d. equally spaced  
 e. doubly degenerate, since $+m_\ell$ and $-m_\ell$ (rotation in opposite directions) have the same energy  
-
----
 
 **7. For a particle on a ring in a state with definite angular momentum, the probability density is:**
 
@@ -536,8 +524,6 @@ c. zero at $2|m_\ell|$ points
 d. largest at the center of the ring  
 e. different for $+m_\ell$ and $-m_\ell$  
 
----
-
 **8. How many states have the same energy $E_\ell$ for a particle on a sphere?**
 
 a. $2\ell+1$  
@@ -545,8 +531,6 @@ b. $\ell$
 c. $2\ell$  
 d. $\ell^2$  
 e. one  
-
----
 
 **9. The energy levels of the harmonic oscillator are:**
 
@@ -556,8 +540,6 @@ c. closer together as $n$ increases
 d. continuous  
 e. equally spaced by $\hbar\omega$, with the lowest one at $\frac{1}{2}\hbar\omega$  
 
----
-
 **10. Can a quantum harmonic oscillator be found beyond its classical turning points?**
 
 a. no, the wave function is exactly zero there  
@@ -565,8 +547,6 @@ b. yes, with a small probability, since the wave function decays smoothly beyond
 c. yes, with the same probability as near the center  
 d. only in the ground state  
 e. only if its energy is larger than the potential  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

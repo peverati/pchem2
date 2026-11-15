@@ -427,8 +427,6 @@ c. because the kinetic energy operator is not Hermitian
 d. because the electrons move too fast  
 e. because the electron–electron repulsion couples the coordinates of different electrons  
 
----
-
 **2. Electrons are fermions. This means that the total wave function of a system of electrons:**
 
 a. does not change when we swap two electrons  
@@ -436,8 +434,6 @@ b. changes sign when we swap the coordinates (including spin) of two electrons
 c. is always real  
 d. is zero for more than two electrons  
 e. does not depend on spin  
-
----
 
 **3. What happens to a Slater determinant if two electrons are described by the same spin-orbital?**
 
@@ -447,8 +443,6 @@ c. it changes sign
 d. it describes an excited state  
 e. nothing: it remains a valid wave function  
 
----
-
 **4. According to the variational theorem, the energy calculated with any trial wave function is:**
 
 a. always equal to the exact ground-state energy  
@@ -456,8 +450,6 @@ b. greater than or equal to the exact ground-state energy
 c. always lower than the exact ground-state energy  
 d. always positive  
 e. equal to the energy of the first excited state  
-
----
 
 **5. In the variational treatment of helium, the optimal orbital exponent is $\zeta=1.6875$, smaller than the nuclear charge $Z=2$. This is because:**
 
@@ -467,8 +459,6 @@ c. the variational method always underestimates charges
 d. each electron is partially shielded from the nucleus by the other electron  
 e. the two electrons attract each other  
 
----
-
 **6. In atoms with more than one electron, why is the $2s$ orbital lower in energy than $2p$?**
 
 a. because $2s$ has a smaller principal quantum number  
@@ -476,8 +466,6 @@ b. because $2p$ has a radial node
 c. because the $2s$ electron penetrates the $1s^2$ core and feels a larger effective nuclear charge  
 d. because of spin–orbit coupling  
 e. because $2s$ has more angular momentum  
-
----
 
 **7. What are the values of $S$, $L$, and $J$ for an atomic state with term symbol $^3P_2$?**
 
@@ -487,8 +475,6 @@ c. $S=1$, $L=2$, $J=3$
 d. $S=\frac{3}{2}$, $L=1$, $J=2$  
 e. $S=1$, $L=0$, $J=2$  
 
----
-
 **8. According to Hund's first rule, among the terms of a configuration, the lowest in energy is:**
 
 a. the one with the largest $L$  
@@ -496,8 +482,6 @@ b. the one with the smallest $S$
 c. the one with the largest $J$  
 d. the one with the largest total spin $S$  
 e. the one with the most microstates  
-
----
 
 **9. What is the ground-state term symbol of the carbon atom ($1s^2 2s^2 2p^2$)?**
 
@@ -507,8 +491,6 @@ c. $^3P_2$
 d. $^2P_{1/2}$  
 e. $^3P_0$  
 
----
-
 **10. The correlation energy is:**
 
 a. the energy of the electron–electron repulsion  
@@ -516,8 +498,6 @@ b. the energy needed to remove an electron from the atom
 c. the difference between the exact energy and the best energy obtainable from a single Slater determinant (the Hartree–Fock limit)  
 d. the difference between the energies of two terms  
 e. the energy of spin–orbit coupling  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

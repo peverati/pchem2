@@ -277,8 +277,6 @@ c. because the proton is much lighter than the electron
 d. because the energy depends on $\ell$  
 e. because the wave function is always real  
 
----
-
 **2. For $n=3$, which values can the quantum number $\ell$ take?**
 
 a. $1, 2, 3$  
@@ -286,8 +284,6 @@ b. $0, 1, 2, 3$
 c. $-2,\ldots,+2$  
 d. $0, 1, 2$  
 e. only $3$  
-
----
 
 **3. In atomic units, the energy levels of the hydrogen atom are:**
 
@@ -297,8 +293,6 @@ c. $E_n=-\frac{1}{2n}\,E_h$
 d. $E_n=\hbar\omega\left(n+\frac{1}{2}\right)$  
 e. $E_n=-\frac{1}{2n^2}\,E_h$, so the ground state is at $-0.5\,E_h=-13.6\;\text{eV}$  
 
----
-
 **4. In the hydrogen atom, the $2s$ and $2p$ orbitals:**
 
 a. are split, with $2s$ lower, because of penetration  
@@ -306,8 +300,6 @@ b. have exactly the same energy (according to the Schrödinger equation)
 c. are split, with $2p$ lower  
 d. have energies that depend on $m_\ell$  
 e. are not solutions of the Schrödinger equation  
-
----
 
 **5. How many radial nodes does the $3s$ orbital have?**
 
@@ -317,8 +309,6 @@ c. $1$
 d. $3$  
 e. $4$  
 
----
-
 **6. Why is the radial probability distribution $P(r)=r^2|R_{10}(r)|^2$ of the $1s$ orbital zero at the nucleus?**
 
 a. because $R_{10}$ is zero at the nucleus  
@@ -326,8 +316,6 @@ b. because the electron cannot be found near a positive charge
 c. because the volume of a thin spherical shell, $4\pi r^2dr$, goes to zero at $r=0$  
 d. because of the Pauli principle  
 e. because $1s$ has a radial node at the nucleus  
-
----
 
 **7. What does the quantum number $\ell$ tell us about an electron?**
 
@@ -337,8 +325,6 @@ c. its spin
 d. the magnitude of its angular momentum, $\hbar\sqrt{\ell(\ell+1)}$; $s$, $p$, $d$, $f$ are names for $\ell=0,1,2,3$  
 e. its energy in the hydrogen atom  
 
----
-
 **8. What does the magnetic quantum number $m_\ell$ tell us?**
 
 a. the component of the angular momentum along the $z$ axis, $L_z=m_\ell\hbar$  
@@ -346,8 +332,6 @@ b. the direction in which the orbital points
 c. the magnetic moment of the nucleus  
 d. the number of radial nodes  
 e. the energy of the orbital in the absence of fields  
-
----
 
 **9. The real $2p_x$ orbital is:**
 
@@ -357,8 +341,6 @@ c. a different solution with a different energy from $2p_z$
 d. an orbital that exists only in molecules  
 e. a combination of the complex orbitals with $m_\ell=+1$ and $m_\ell=-1$, so it does not have a definite $L_z$  
 
----
-
 **10. Which of the following statements about the usual pictures of orbitals is correct?**
 
 a. they are photographs of the regions of space in which electrons live  
@@ -366,8 +348,6 @@ b. they show the trajectory of the electron
 c. they plot a mathematical function that cannot be measured; what has a physical meaning is $|\psi|^2$  
 d. they show the shape of the electron  
 e. they show where the electron is with certainty  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

@@ -64,7 +64,7 @@ $$ {#eq-TISEq}
 Remember that we did not *prove* this equation: we only showed that it is consistent with a plane wave and with de Broglie's relations. Its real justification is that its predictions agree with experiments, as we will see in the following chapters. Notice also that the equation describes a single particle of mass $m$. If we want to describe the relative motion of two particles, such as the two atoms in a diatomic molecule or the electron and the proton in a hydrogen atom, we can use the same equation, as long as we replace $m$ with the *reduced mass* of the two particles, $\mu = \frac{m_1 m_2}{m_1+m_2}$.
 
 
-## The Meaning of the Wave Function {#sec-BornInterpretation}
+## What Does the Wave Function Mean? {#sec-BornInterpretation}
 We now have an equation for the wave function, but we have not yet said what the wave function *is*. Unlike the displacement of a guitar string or the electric field of a light wave, the wave function of a particle is not something that we can measure directly. It is, in general, a complex function, so it cannot itself be a measurable quantity. Its physical meaning was proposed by Max Born in 1926, and it is known as **Born's interpretation**: the square magnitude of the wave function gives the probability of finding the particle at a given position. More precisely, for a particle moving along $x$:
 
 $$
@@ -81,7 +81,7 @@ $$ {#eq-born2}
 
 This requirement is called the **normalization condition**, and a wave function that satisfies it is said to be *normalized*. For a particle moving in three dimensions, the integral runs over all three coordinates, $\int |\psi(\mathbf{r})|^2\,d\mathbf{r}=1$. If we multiply a solution of the Schrödinger equation by any constant, we still have a solution, so the normalization condition is what fixes the overall size of the wave function. We will see how this works in practice for the particle in a box in @sec-Models.
 
-The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how *likely* it is to be found at each position. We will come back to the consequences of this idea, which still puzzle physicists and philosophers, in @sec-Weirdness.
+The probabilistic interpretation is one of the most radical departures of quantum mechanics from classical physics. A classical particle has a definite position at every moment; a quantum particle, instead, is described by a wave function that tells us only how *likely* it is to be found at each position. Born's interpretation tells us how to *use* the wave function, and its predictions have never failed. What the wave function *is*, however, is still debated by physicists and philosophers, and we will come back to this question in @sec-Weirdness.
 
 ::: {#tip-normalizing-a-wave-function .callout-tip collapse="true" icon="false"}
 ## Normalizing a wave function
@@ -350,8 +350,6 @@ c. $m\frac{d^2x}{dt^2}=-\frac{dV}{dx}$
 d. $\psi=E\,V(x)$  
 e. $-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V(x)\psi=E\psi$  
 
----
-
 **2. How was the Schrödinger equation obtained?**
 
 a. it cannot be derived from classical physics; we can make it plausible, and it is justified by its agreement with experiments  
@@ -359,8 +357,6 @@ b. it was derived from Newton's equation
 c. it was derived from Coulomb's law  
 d. it was obtained by measuring wave functions  
 e. it was derived from the Bohr model  
-
----
 
 **3. According to Born's interpretation, $|\psi(x)|^2dx$ is:**
 
@@ -370,8 +366,6 @@ c. the fraction of the particle located at $x$
 d. the probability of finding the particle between $x$ and $x+dx$  
 e. the velocity of the particle at $x$  
 
----
-
 **4. Why must a wave function be normalized, $\int|\psi|^2dx=1$?**
 
 a. because the energy must be positive  
@@ -379,8 +373,6 @@ b. because the particle must be found somewhere
 c. because the wave function must be real  
 d. because the particle cannot move  
 e. because $\psi$ must be zero everywhere  
-
----
 
 **5. Why do we always use $|\psi|^2=\psi^*\psi$, and not $\psi$ itself, to compute probabilities?**
 
@@ -390,8 +382,6 @@ c. because $\psi^*\psi$ is always larger than $\psi$
 d. because $\psi$ has no units  
 e. because $\psi^*\psi$ is easier to differentiate  
 
----
-
 **6. For a stationary state, what does not change in time?**
 
 a. the wave function $\psi(x,t)$  
@@ -399,8 +389,6 @@ b. the phase of the wave function
 c. the probability density $|\psi(x,t)|^2$  
 d. the real part of the wave function  
 e. nothing: everything changes in time  
-
----
 
 **7. A stationary state with energy $E$ evolves in time by multiplication with which factor?**
 
@@ -410,8 +398,6 @@ c. $e^{iEx/\hbar}$
 d. $e^{-iEt/\hbar}$  
 e. $E\,t$  
 
----
-
 **8. The energy of a free particle is:**
 
 a. $E=\frac{p^2}{2m}$, but only integer multiples of $h\nu$  
@@ -419,8 +405,6 @@ b. $E=\frac{p^2}{2m}$, and it can take any non-negative value
 c. always zero  
 d. $E=mc^2$  
 e. $E=\frac{n^2h^2}{8ma^2}$  
-
----
 
 **9. A particle described by a single plane wave, $\psi=e^{ikx}$, has:**
 
@@ -430,8 +414,6 @@ c. zero momentum
 d. a probability density that oscillates with $x$  
 e. a perfectly defined momentum, but the same probability of being found anywhere  
 
----
-
 **10. To describe a particle localized in a small region of space, we need:**
 
 a. a single plane wave with a very large momentum  
@@ -439,8 +421,6 @@ b. a single plane wave with zero momentum
 c. a wave packet, a superposition of plane waves with a range of momenta  
 d. a wave function equal to zero everywhere  
 e. a classical trajectory  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

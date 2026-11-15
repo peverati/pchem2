@@ -88,3 +88,6 @@ body.quarto-dark svg[class^="plot-"] [aria-label$="grid"] { stroke-opacity: 0.25
 /* equation references as "Eq. (5.7)", like the equation numbers and the PDF (pdf-fixes.lua) */
 a.quarto-xref[href*="#eq-"] > span::before { content: "("; }
 a.quarto-xref[href*="#eq-"] > span::after { content: ")"; }
+
+/* study questions: a question that wraps to a second line is aligned with the text after its number (pdf-fixes.lua) */
+.question > p { padding-left: 1.7em; text-indent: -1.7em; }

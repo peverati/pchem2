@@ -375,8 +375,6 @@ c. the electrons form two bright lines behind the slits, as classical particles
 d. each electron is detected as a wave spread over the whole screen  
 e. each electron is detected at a single point, but many electrons build up an interference pattern  
 
----
-
 **2. If we place detectors at the slits to find out which slit each electron goes through:**
 
 a. the interference pattern disappears  
@@ -384,8 +382,6 @@ b. the interference pattern becomes sharper
 c. the electrons stop going through the slits  
 d. the electrons go through both slits and are detected twice  
 e. nothing changes  
-
----
 
 **3. A measurement of the observable $A$ gives the eigenvalue $a_i$. Immediately after the measurement, the wave function is:**
 
@@ -395,8 +391,6 @@ c. the eigenfunction $\psi_i$ corresponding to $a_i$
 d. a superposition of all the eigenfunctions of $\hat{A}$  
 e. the eigenfunction with the lowest eigenvalue  
 
----
-
 **4. If we repeat the same measurement immediately after the first one, we obtain:**
 
 a. a random result  
@@ -404,8 +398,6 @@ b. the same result, with certainty
 c. the expectation value  
 d. zero  
 e. the next eigenvalue  
-
----
 
 **5. The different interpretations of quantum mechanics (Copenhagen, hidden variables, many worlds, spontaneous collapse):**
 
@@ -415,8 +407,6 @@ c. disagree on the Schrödinger equation for the hydrogen atom
 d. agree on the predictions for chemistry, but disagree on what the wave function is and on whether it collapses  
 e. are different names for the same theory  
 
----
-
 **6. Heisenberg's uncertainty principle for position and momentum states that:**
 
 a. $\sigma_x\sigma_p=0$  
@@ -424,8 +414,6 @@ b. $\sigma_x\sigma_p\geq\frac{\hbar}{2}$
 c. $\sigma_x+\sigma_p\geq\hbar$  
 d. $\sigma_x\sigma_p\leq\frac{\hbar}{2}$  
 e. $\sigma_x=\sigma_p$  
-
----
 
 **7. What is the origin of the uncertainty principle?**
 
@@ -435,8 +423,6 @@ c. the particle moves too fast
 d. the operators of the two observables do not commute  
 e. the Schrödinger equation is only an approximation  
 
----
-
 **8. A particle tunnels through a barrier with transmission probability $T\approx e^{-2\alpha l}$. If the width $l$ of the barrier doubles:**
 
 a. $T$ doubles  
@@ -444,8 +430,6 @@ b. $T$ halves
 c. $T$ becomes the square of its previous value, which is much smaller  
 d. $T$ does not change  
 e. $T$ becomes one  
-
----
 
 **9. Why do electrons tunnel much more easily than protons through the same barrier?**
 
@@ -455,8 +439,6 @@ c. because protons have no wave function
 d. because electrons have more energy than the barrier  
 e. because tunneling does not conserve energy  
 
----
-
 **10. Which experimental evidence suggests that hydrogen tunneling is important in a chemical reaction?**
 
 a. a kinetic isotope effect close to one  
@@ -464,8 +446,6 @@ b. a reaction rate that does not depend on the isotope
 c. a linear Arrhenius plot  
 d. a very high activation energy  
 e. a large kinetic isotope effect and a curved Arrhenius plot  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers

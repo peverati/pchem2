@@ -339,8 +339,6 @@ c. there is a node between the nuclei
 d. the energy is higher than that of the separated atoms  
 e. the two atomic orbitals add up in phase, and the probability between the nuclei increases  
 
----
-
 **2. Compared with the energy of a hydrogen $1s$ orbital, the antibonding orbital of $\mathrm{H}_2^+$ is:**
 
 a. pushed up exactly as much as the bonding orbital is pushed down  
@@ -348,8 +346,6 @@ b. pushed down
 c. at the same energy  
 d. pushed up more than the bonding orbital is pushed down  
 e. pushed up less than the bonding orbital is pushed down  
-
----
 
 **3. Which integral is mainly responsible for the formation of the bond in $\mathrm{H}_2^+$?**
 
@@ -359,8 +355,6 @@ c. the nuclear repulsion
 d. the kinetic energy of the proton  
 e. the resonance integral $H_{ab}$, which is negative  
 
----
-
 **4. Why does the Hartree–Fock wave function give the wrong energy when the $\mathrm{H}_2$ molecule is dissociated?**
 
 a. because the Hamiltonian is wrong at large distances  
@@ -368,8 +362,6 @@ b. because the basis set is too large
 c. because the electrons have the same spin  
 d. because it contains equal amounts of covalent and ionic ($\mathrm{H}^+\mathrm{H}^-$) terms at all distances  
 e. because the variational theorem does not apply to molecules  
-
----
 
 **5. How can the wave function of $\mathrm{H}_2$ be improved at large distances?**
 
@@ -379,8 +371,6 @@ c. by mixing in a second Slater determinant (configuration interaction)
 d. by neglecting electron–electron repulsion  
 e. by fixing the nuclei closer together  
 
----
-
 **6. Two atomic orbitals interact strongly to form molecular orbitals only if:**
 
 a. they are on the same atom  
@@ -388,8 +378,6 @@ b. they have similar energies and the same symmetry with respect to the bond axi
 c. they have different symmetries  
 d. they have very different energies  
 e. they are both core orbitals  
-
----
 
 **7. What is the bond order of $\mathrm{N}_2$?**
 
@@ -399,8 +387,6 @@ c. $3$
 d. $2.5$  
 e. $0$  
 
----
-
 **8. Why is $\mathrm{O}_2$ paramagnetic?**
 
 a. because its last two electrons are described by two degenerate $\pi^*$ orbitals with parallel spins  
@@ -408,8 +394,6 @@ b. because it has a triple bond
 c. because its bond order is zero  
 d. because oxygen nuclei are magnetic  
 e. because all its electrons are paired  
-
----
 
 **9. In hydrogen fluoride, the bonding molecular orbital:**
 
@@ -419,8 +403,6 @@ c. has equal contributions from the two atoms
 d. is made only of fluorine core orbitals  
 e. does not exist, because the energies are too different  
 
----
-
 **10. Why does carbon monoxide bind to metal atoms through carbon, not through oxygen?**
 
 a. because its highest occupied orbital, $5\sigma$, is mostly a carbon orbital pointing away from oxygen  
@@ -428,8 +410,6 @@ b. because carbon is more electronegative than oxygen
 c. because oxygen has no lone pairs  
 d. because the dipole moment of CO is large  
 e. because CO has a single bond  
-
----
 
 ::: {.callout-tip collapse="true" icon="false"}
 ## Answers
