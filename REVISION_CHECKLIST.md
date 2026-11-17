@@ -25,7 +25,7 @@ The status of the November 2026 revision. This file is not part of the book.
 
 ## Open items
 
-- [ ] **Rewrite the preface** (the biggest item left): almost entirely, in the style of the rest of the book. Keep the full title block, the license and funding note, and the note on the use of AI.
+- [x] **Preface rewritten**: opening, history of the book, organization, how to use the book, notation and units, license and acknowledgments, note on the use of AI.
 - [ ] **Print edition** (see `SELF_PUBLISHING_GUIDE.md`):
   - a new front cover with the print title;
   - a print PDF profile: two-sided layout, answers at the end of each chapter, a copyright page (the figures are already 400 dpi);

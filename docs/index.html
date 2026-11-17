@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Roberto Peverati">
-<meta name="dcterms.date" content="2026-11-15">
+<meta name="dcterms.date" content="2026-11-17">
 <meta name="description" content="Quantum Mechanics, Atoms, Molecules, and Spectra">
 
 <title>The Live Textbook of Physical Chemistry 2</title>
@@ -462,7 +462,11 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
-  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to use this book</a></li>
+  <li><a href="#how-this-book-is-organized" id="toc-how-this-book-is-organized" class="nav-link" data-scroll-target="#how-this-book-is-organized">How This Book Is Organized</a></li>
+  <li><a href="#how-to-use-this-book" id="toc-how-to-use-this-book" class="nav-link" data-scroll-target="#how-to-use-this-book">How to Use This Book</a></li>
+  <li><a href="#a-note-on-notation-and-units" id="toc-a-note-on-notation-and-units" class="nav-link" data-scroll-target="#a-note-on-notation-and-units">A Note on Notation and Units</a></li>
+  <li><a href="#a-note-on-the-use-of-ai" id="toc-a-note-on-the-use-of-ai" class="nav-link" data-scroll-target="#a-note-on-the-use-of-ai">A Note on the Use of AI</a></li>
+  <li><a href="#license-and-acknowledgments" id="toc-license-and-acknowledgments" class="nav-link" data-scroll-target="#license-and-acknowledgments">License and Acknowledgments</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/peverati/pchem2/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -496,7 +500,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">15 November 2026</p>
+      <p class="date">17 November 2026</p>
     </div>
   </div>
   
@@ -511,22 +515,48 @@ ul.task-list li input[type="checkbox"] {
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
 <p><img src="img/OEP_Figures.000.jpeg" class="img-fluid" style="width:80.0%" alt="Book cover: a large Greek letter psi, labeled wave function, over a black background filled with ball-and-stick models of small organic molecules."></p>
-<p>This textbook is the official textbook for the Physical Chemistry 2 Course (CHM 3002) at Florida Tech.</p>
-<p>The instructor for this course and author of this textbook is Dr.&nbsp;Roberto Peverati.</p>
-<p><strong>Contacts</strong>: <a href="mailto:rpeverati@fit.edu">rpeverati@fit.edu</a>, Office: OPS 333, (321) 674-7735</p>
-<p>Chemistry Program, Department of Chemistry and Chemical Engineering Florida Institute of Technology, Melbourne, FL.</p>
-<blockquote class="blockquote">
-<p>This live open textbook is distributed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. The Python scripts that generate the figures are available under the <a href="https://opensource.org/license/mit">MIT License</a>. The first version of the book was funded in 2021 by the Florida Tech Open Educational Resources Grant Program, a collaboration of the Teaching Council, eEducation, and the Evans Library. That grant planted the seed; the current edition has since grown well beyond it, with a new structure, new chapters and sections, and new figures throughout.</p>
-</blockquote>
+<p>Why do atoms absorb and emit light only at very specific wavelengths? Why does the periodic table have the shape that it has? Why do chemical bonds form? Classical physics, which works so well for cannonballs and planets, cannot answer any of these questions. At the beginning of the twentieth century, it became clear that the world of atoms and molecules follows a different set of rules, and the theory that describes them, quantum mechanics, is the foundation of everything that a modern chemist knows about structure, bonding, and spectra.</p>
+<p>This book is a gentle introduction to quantum mechanics written for chemistry students. We will start from the experiments that broke classical physics, build the theory one step at a time, and then use it to understand atoms, chemical bonds, and the spectra that we measure in the laboratory. The book is the textbook for the second semester of physical chemistry (CHM 3002) at Florida Tech, but it is written for any undergraduate student who meets quantum mechanics for the first time. The companion volume, <em>The Live Textbook of Physical Chemistry 1</em>, covers thermodynamics and kinetics, but you do not need it to read this one.</p>
+<p>This book was never really finished, and that was the plan from the start. In 2021, I started writing the first edition with a grant from the Florida Tech Open Educational Resources Grant Program, a collaboration between eEducation and Florida Tech’s Evans Library and Teaching Council. That first edition was meant as a companion website for the notes of the Physical Chemistry 2 course that I have taught since Spring 2017. I chose the title “Live Textbook of Physical Chemistry” to emphasize the constantly evolving nature of the document: it was a live website more than a static textbook. Over the years, the notes were corrected, expanded, and reorganized, and the book slowly took shape. In 2024, I redesigned most of the figures and diagrams, with the help of the first coding agent that I had access to (Google Gemini in Google Colab).</p>
+<p>By 2026, I was getting ready to teach the Physical Chemistry 2 course for the tenth time, and the book was already in its fifth revision. Five generations of chemistry students had seen it, used it, cried over it, and ultimately contributed to its evolution. It was about time to give the book a significant upgrade, both for its electronic version and for a new printed one. To do that, I tied up the last loose threads, reorganized the structure once more, and rewrote or added a few parts with the help of Claude Code (Opus 5.5). What started as a simple website with lecture material and instructor’s notes has now become a fully-fledged open textbook: the book that you have in front of you.</p>
+<section id="how-this-book-is-organized" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="how-this-book-is-organized">How This Book Is Organized</h2>
+<p>The thirteen chapters follow a path from the failure of classical physics to the interpretation of molecular spectra:</p>
+<ul>
+<li><strong>Chapters 1–3, the foundations</strong>, review the classical physics that we need, show the experiments that classical physics cannot explain, and introduce the Schrödinger equation and the meaning of the wave function.</li>
+<li><strong>Chapters 4–5, the solvable models</strong>, solve the Schrödinger equation exactly for the particle in a box, on a ring, and on a sphere, for the harmonic oscillator, and for the hydrogen atom. These few models are the building blocks of everything that follows.</li>
+<li><strong>Chapters 6–8, the structure of the theory</strong>, introduce operators and measurements, spin, and the strange features of quantum mechanics that still puzzle physicists and philosophers: superpositions, the uncertainty principle, tunneling, and the measurement problem.</li>
+<li><strong>Chapters 9–12, atoms and molecules</strong>, move from one electron to many: many-electron atoms, the Born–Oppenheimer approximation, the chemical bond in diatomic molecules, and the electronic structure of polyatomic molecules, up to a Hartree–Fock calculation for water and Hückel theory.</li>
+<li><strong>Chapter 13, spectroscopy</strong>, brings the theory back to the laboratory and shows how the models of chapter 4 explain the rotational, vibrational, and electronic spectra of molecules.</li>
+</ul>
+<p>The appendices review the mathematical tools that we use (<a href="A1_Math.html" class="quarto-xref"><span>Appendix A — Mathematical Toolkit</span></a>), collect physical constants and unit conversions (<a href="A2_Constants.html" class="quarto-xref"><span>Appendix B — Physical Constants and Unit Conversions</span></a>), and suggest further reading for when you want a second explanation or more depth (<a href="A3_References.html" class="quarto-xref"><span>Appendix C — Further Reading and References</span></a>).</p>
+</section>
 <section id="how-to-use-this-book" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to use this book</h2>
-<p>If you have taken P-Chem 1 at Florida Tech, you should already be familiar with this format. Everything we did with the Live Textbook of P-Chem 1 will be happening this semester with P-Chem 2. Please read this book carefully, since everything that will be in your exams is explained here. Since this book is specifically tailored for the CHM 3002 course at Florida Tech, there are no superfluous parts. In other words, everything in it might be subject to question in the quizzes and the final exam.</p>
-<blockquote class="blockquote">
-<p>Definitions and exercises are usually numbered and are highlighted in the text in this format (lighter grey, indented, and following a grey vertical bar). Please study the definitions carefully since they are fundamental concepts that will be used several times in the remainder of the text, and they will be subject to quizzes and exams. Exercises are essential for cementing the concepts, and you should attempt to execute them first without looking at the solution. Even if you were able to solve an exercise on your own, always read the solution after, since it might contain additional explanations expanding the main concepts in the text.</p>
-</blockquote>
-<p>Navigating the book should be straightforward. On each page, there is a useful sidebar on the left that gives you an overview of all chapters, and a toolbar at the top with important tools. Arrows to shift between chapters might also be present, depending on your browser. If you are old-school and prefer a pdf, you can download a printout by clicking on the toolbar’s corresponding icon. If you are <em>really</em> old-school and prefer a printed book, the best solution is to download the pdf and print it yourself. It is a LaTeX book, and I can promise you it will look good on paper. However, I cannot provide physical copies to each student. In the toolbar, you will find a useful search box that is capable of searching the entire book. The most adventurous will find in the toolbar a link to the raw GitHub source code. Feel free to head on <a href="https://github.com/peverati/PChem2">over there</a> and fork the book.</p>
-<p>The appendices at the end of the book review the mathematical tools that we use (<a href="A1_Math.html" class="quarto-xref"><span>Appendix A — Mathematical Toolkit</span></a>), collect physical constants and unit conversions (<a href="A2_Constants.html" class="quarto-xref"><span>Appendix B — Physical Constants and Unit Conversions</span></a>), and suggest further reading for when you want a second explanation or more depth (<a href="A3_References.html" class="quarto-xref"><span>Appendix C — Further Reading and References</span></a>).</p>
-<p><strong>A note on the use of AI.</strong> The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic’s Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching quantum chemistry are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed and interactive figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.</p>
+<h2 class="unnumbered anchored" data-anchor-id="how-to-use-this-book">How to Use This Book</h2>
+<p>Quantum mechanics is a mathematical theory, and there is no way around it: you will need calculus, including derivatives, integrals, and simple differential equations, and a few ideas about complex numbers. If some of these tools are rusty, <a href="A1_Math.html" class="quarto-xref"><span>Appendix A — Mathematical Toolkit</span></a> reviews everything that we use, and each section points to the chapter where the tool is first needed.</p>
+<p>Besides the main text, every chapter contains a few types of boxes:</p>
+<ul>
+<li><strong>Worked examples</strong>, numbered (Example 4.1, Example 4.2, …), solve a problem step by step. Try the problem on your own first, then read the solution, since it often contains explanations that complete the main text.</li>
+<li><strong>Proofs, derivations, and details</strong> contain the mathematical steps behind a result. You can skip them on a first reading and come back to them once the main ideas are clear.</li>
+</ul>
+<p>Every chapter ends with a review: a short list of <strong>Key Ideas</strong>, followed by ten <strong>study questions</strong> with their answers. Use them to check your understanding before moving on to the next chapter.</p>
+<p>The book comes in three formats. The <strong>website</strong> is the main one: it has a search box, a sidebar with all chapters, and <strong>interactive figures</strong> that let you play with wave packets, orbitals, energy levels, and spectra. The <strong>PDF</strong>, which you can download from the website for free, contains the same text, with static versions of the interactive figures and with the worked examples open. A low-cost <strong>printed edition</strong> is also available for those who prefer paper. If you spot a mistake, please use the “Report an issue” link at the top of the website.</p>
+</section>
+<section id="a-note-on-notation-and-units" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-note-on-notation-and-units">A Note on Notation and Units</h2>
+<p>We use SI units throughout the book, with one exception. Starting from the hydrogen atom, it is convenient to measure lengths in bohrs and energies in hartrees, the so-called atomic units (<a href="05_Hydrogen.html#sec-AtomicUnits" class="quarto-xref"><span>Atomic Units</span></a>), which remove most of the fundamental constants from the equations. The conversion factors are collected in <a href="A2_Constants.html" class="quarto-xref"><span>Appendix B — Physical Constants and Unit Conversions</span></a>.</p>
+<p>We write wave functions and integrals in the explicit notation of functions and integrals. More advanced texts use a compact notation introduced by Dirac, which you will meet in many of the books listed in <a href="A3_References.html" class="quarto-xref"><span>Appendix C — Further Reading and References</span></a>. It is elegant, but it is not needed at this level.</p>
+</section>
+<section id="a-note-on-the-use-of-ai" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="a-note-on-the-use-of-ai">A Note on the Use of AI</h2>
+<p>The November 2026 revision of this book was prepared with the help of Claude Code (Anthropic’s Claude Opus 5.5), an AI assistant. The book, its structure, its scope, and its approach to teaching quantum chemistry are my own, developed over several years of teaching this course. In the revision, I used the AI as an assistant: to proofread the text, to rephrase passages, to draft new sections, figures, examples, and review questions following my outline and instructions, and to write the code for the computed and interactive figures. Every change was reviewed, corrected or rewritten, and approved by me, and I take full responsibility for the content of the book, including any remaining errors.</p>
+</section>
+<section id="license-and-acknowledgments" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="license-and-acknowledgments">License and Acknowledgments</h2>
+<p>This live open textbook is distributed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 License</a>. The Python scripts that generate the figures are available under the <a href="https://opensource.org/license/mit">MIT License</a>, and the source of the book is on <a href="https://github.com/peverati/pchem2">GitHub</a>.</p>
+<p>I thank the students of CHM 3002, whose questions over the years shaped how every chapter is written. I am also grateful for the support of Florida Tech’s Evans Library, and in particular of William Bowman. Finally, this book is dedicated to Marina and Stella. Marina, it is perhaps a cliché, but the book would not have been possible without your constant love and support. Stella, this book is as old as you are, and I hope that one day you will read it and perhaps even understand a little of what all those crazy symbols that you kept looking at over the years mean.</p>
+<p>Roberto Peverati<br>
+Florida Institute of Technology, Melbourne, FL</p>
 
 
 </section>
