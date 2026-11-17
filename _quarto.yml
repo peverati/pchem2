@@ -53,19 +53,27 @@ book:
     center: "Text and figures: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) · Figure scripts: [MIT](https://github.com/peverati/pchem2/blob/master/scripts/LICENSE)"
   chapters:
     - index.qmd
-    - 01_Classical.qmd
-    - 02_Motivation.qmd
-    - 03_Schrodinger.qmd
-    - 04_Models.qmd
-    - 05_Hydrogen.qmd
-    - 06_Operators.qmd
-    - 07_Spin.qmd
-    - 08_Weirdness.qmd
-    - 09_Atoms.qmd
-    - 10_Molecules.qmd
-    - 11_Bonds.qmd
-    - 12_Polyatomic.qmd
-    - 13_Spectroscopy.qmd
+    - part: "The Birth of Quantum Mechanics"
+      chapters:
+        - 01_Classical.qmd
+        - 02_Motivation.qmd
+        - 03_Schrodinger.qmd
+    - part: "Solvable Models"
+      chapters:
+        - 04_Models.qmd
+        - 05_Hydrogen.qmd
+    - part: "The Structure of Quantum Mechanics"
+      chapters:
+        - 06_Operators.qmd
+        - 07_Spin.qmd
+        - 08_Weirdness.qmd
+    - part: "Atoms, Molecules, and Spectra"
+      chapters:
+        - 09_Atoms.qmd
+        - 10_Molecules.qmd
+        - 11_Bonds.qmd
+        - 12_Polyatomic.qmd
+        - 13_Spectroscopy.qmd
   appendices:
     - A1_Math.qmd
     - A2_Constants.qmd

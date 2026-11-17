@@ -15,13 +15,12 @@ This book was never really finished, and that was the plan from the start. In 20
 By 2026, I was getting ready to teach the Physical Chemistry 2 course for the tenth time, and the book was already in its fifth revision. Five generations of chemistry students had seen it, used it, cried over it, and ultimately contributed to its evolution. It was about time to give the book a significant upgrade, both for its electronic version and for a new printed one. To do that, I tied up the last loose threads, reorganized the structure once more, and rewrote or added a few parts with the help of Claude Code (Opus 5.5). What started as a simple website with lecture material and instructor's notes has now become a fully-fledged open textbook: the book that you have in front of you.
 
 ## How This Book Is Organized {.unnumbered}
-The thirteen chapters follow a path from the failure of classical physics to the interpretation of molecular spectra:
+The book is divided into four parts:
 
-- **Chapters 1–3, the foundations**, review the classical physics that we need, show the experiments that classical physics cannot explain, and introduce the Schrödinger equation and the meaning of the wave function.
-- **Chapters 4–5, the solvable models**, solve the Schrödinger equation exactly for the particle in a box, on a ring, and on a sphere, for the harmonic oscillator, and for the hydrogen atom. These few models are the building blocks of everything that follows.
-- **Chapters 6–8, the structure of the theory**, introduce operators and measurements, spin, and the strange features of quantum mechanics that still puzzle physicists and philosophers: superpositions, the uncertainty principle, tunneling, and the measurement problem.
-- **Chapters 9–12, atoms and molecules**, move from one electron to many: many-electron atoms, the Born–Oppenheimer approximation, the chemical bond in diatomic molecules, and the electronic structure of polyatomic molecules, up to a Hartree–Fock calculation for water and Hückel theory.
-- **Chapter 13, spectroscopy**, brings the theory back to the laboratory and shows how the models of chapter 4 explain the rotational, vibrational, and electronic spectra of molecules.
+- **Part I, The Birth of Quantum Mechanics** (chapters 1–3), reviews the classical physics that we need, shows the experiments that classical physics cannot explain, and introduces the Schrödinger equation and the meaning of the wave function.
+- **Part II, Solvable Models** (chapters 4–5), solves the Schrödinger equation exactly for the particle in a box, on a ring, and on a sphere, for the harmonic oscillator, and for the hydrogen atom. These few models are the building blocks of everything that follows.
+- **Part III, The Structure of Quantum Mechanics** (chapters 6–8), introduces operators and measurements, spin, and the strange features of quantum mechanics that still puzzle physicists and philosophers: superpositions, the uncertainty principle, tunneling, and the measurement problem.
+- **Part IV, Atoms, Molecules, and Spectra** (chapters 9–13), moves from one electron to many: many-electron atoms, the Born–Oppenheimer approximation, the chemical bond in diatomic molecules, and the electronic structure of polyatomic molecules, up to a Hartree–Fock calculation for water and Hückel theory. Part IV ends by bringing the theory back to the laboratory, showing how the models of Part II explain the rotational, vibrational, and electronic spectra of molecules.
 
 The appendices review the mathematical tools that we use (@sec-MathToolkit), collect physical constants and unit conversions (@sec-Constants), and suggest further reading for when you want a second explanation or more depth (@sec-FurtherReading).
 

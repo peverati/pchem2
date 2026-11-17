@@ -21,7 +21,7 @@ The previous bookdown version is preserved on the branch `bookdown`.
 ### 1. Edit
 
 - Chapters are `01_Classical.qmd` … `13_Spectroscopy.qmd`; the preface is `index.qmd`.
-- The chapter order is the `chapters:` list in `_quarto.yml`.
+- The chapter order is the `chapters:` list in `_quarto.yml`, grouped into four parts (`- part:` entries).
 - New figures go in `img/`. The computed figures are made by the Python scripts in `scripts/` (run them from this folder, e.g. `python3 scripts/make_figures_ch3.py img`).
 
 ### 2. Preview while writing
